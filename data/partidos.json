@@ -3364,6 +3364,460 @@
      1
     ]
    ]
+  },
+  "5": {
+   "grupos": {
+    "Grupo 1": {
+     "tras": "Jornada 8",
+     "filas": [
+      [
+       "cd-lugo",
+       8,
+       7,
+       1,
+       0,
+       15,
+       4,
+       22,
+       "CD Lugo"
+      ],
+      [
+       "ud-logrones",
+       8,
+       5,
+       2,
+       1,
+       17,
+       11,
+       17,
+       "UD Logroñés"
+      ],
+      [
+       "racing-ferrol",
+       8,
+       5,
+       1,
+       2,
+       9,
+       5,
+       16,
+       "Racing Ferrol"
+      ],
+      [
+       "merida",
+       8,
+       4,
+       0,
+       4,
+       15,
+       12,
+       12,
+       "Mérida"
+      ],
+      [
+       "bilbao-athletic",
+       8,
+       3,
+       3,
+       2,
+       13,
+       10,
+       12,
+       "Bilbao Athletic"
+      ],
+      [
+       "zamora",
+       8,
+       3,
+       3,
+       2,
+       10,
+       8,
+       12,
+       "Zamora"
+      ],
+      [
+       "cultural-leonesa",
+       8,
+       3,
+       3,
+       2,
+       9,
+       7,
+       12,
+       "Cultural Leonesa"
+      ],
+      [
+       "cp-cacereno",
+       8,
+       3,
+       3,
+       2,
+       7,
+       5,
+       12,
+       "CP Cacereño"
+      ],
+      [
+       "ponferradina",
+       8,
+       3,
+       3,
+       2,
+       6,
+       6,
+       12,
+       "Ponferradina"
+      ],
+      [
+       "real-aviles-industrial",
+       8,
+       3,
+       2,
+       3,
+       14,
+       10,
+       11,
+       "Real Avilés Industrial"
+      ],
+      [
+       "pontevedra",
+       8,
+       3,
+       2,
+       3,
+       10,
+       10,
+       11,
+       "Pontevedra"
+      ],
+      [
+       "mirandes",
+       8,
+       3,
+       2,
+       3,
+       10,
+       10,
+       11,
+       "Mirandés"
+      ],
+      [
+       "real-union",
+       8,
+       2,
+       4,
+       2,
+       15,
+       13,
+       10,
+       "Real Unión"
+      ],
+      [
+       "cd-extremadura",
+       8,
+       3,
+       1,
+       4,
+       11,
+       10,
+       10,
+       "CD Extremadura"
+      ],
+      [
+       "barakaldo-cf",
+       8,
+       2,
+       3,
+       3,
+       8,
+       10,
+       9,
+       "Barakaldo CF"
+      ],
+      [
+       "deportivo-fabril",
+       8,
+       2,
+       2,
+       4,
+       8,
+       11,
+       8,
+       "Deportivo Fabril"
+      ],
+      [
+       "cd-coria",
+       8,
+       2,
+       2,
+       4,
+       12,
+       16,
+       8,
+       "CD Coria"
+      ],
+      [
+       "unionistas-de-salamanca",
+       8,
+       2,
+       1,
+       5,
+       10,
+       14,
+       7,
+       "Unionistas de Salamanca"
+      ],
+      [
+       "ud-ourense",
+       8,
+       1,
+       2,
+       5,
+       3,
+       13,
+       5,
+       "UD Ourense"
+      ],
+      [
+       "arenas-club",
+       8,
+       0,
+       2,
+       6,
+       5,
+       22,
+       2,
+       "Arenas Club"
+      ]
+     ]
+    },
+    "Grupo 2": {
+     "tras": "Jornada 8",
+     "filas": [
+      [
+       "villarreal-b",
+       8,
+       5,
+       2,
+       1,
+       17,
+       9,
+       17,
+       "Villarreal B"
+      ],
+      [
+       "real-zaragoza",
+       8,
+       5,
+       2,
+       1,
+       16,
+       10,
+       17,
+       "Real Zaragoza"
+      ],
+      [
+       "real-murcia",
+       8,
+       5,
+       1,
+       2,
+       11,
+       7,
+       16,
+       "Real Murcia"
+      ],
+      [
+       "cartagena",
+       8,
+       4,
+       3,
+       1,
+       13,
+       5,
+       15,
+       "Cartagena"
+      ],
+      [
+       "real-jaen",
+       8,
+       4,
+       3,
+       1,
+       12,
+       8,
+       15,
+       "Real Jaén"
+      ],
+      [
+       "alcorcon",
+       8,
+       3,
+       4,
+       1,
+       14,
+       6,
+       13,
+       "Alcorcón"
+      ],
+      [
+       "ud-ibiza",
+       8,
+       4,
+       1,
+       3,
+       11,
+       10,
+       13,
+       "UD Ibiza"
+      ],
+      [
+       "hercules",
+       8,
+       4,
+       1,
+       3,
+       6,
+       7,
+       13,
+       "Hércules"
+      ],
+      [
+       "real-madrid-castilla",
+       8,
+       3,
+       3,
+       2,
+       11,
+       9,
+       12,
+       "Real Madrid Castilla"
+      ],
+      [
+       "sd-huesca",
+       8,
+       2,
+       5,
+       1,
+       10,
+       10,
+       11,
+       "SD Huesca"
+      ],
+      [
+       "gimnastic-de-tarragona",
+       8,
+       3,
+       2,
+       3,
+       11,
+       12,
+       11,
+       "Gimnàstic de Tarragona"
+      ],
+      [
+       "antequera",
+       8,
+       2,
+       4,
+       2,
+       13,
+       12,
+       10,
+       "Antequera"
+      ],
+      [
+       "algeciras-cf",
+       8,
+       3,
+       1,
+       4,
+       11,
+       13,
+       10,
+       "Algeciras CF"
+      ],
+      [
+       "ue-sant-andreu",
+       8,
+       2,
+       3,
+       3,
+       9,
+       10,
+       9,
+       "UE Sant Andreu"
+      ],
+      [
+       "atletico-madrileno",
+       8,
+       2,
+       3,
+       3,
+       16,
+       14,
+       9,
+       "Atlético Madrileño"
+      ],
+      [
+       "ce-europa",
+       8,
+       2,
+       1,
+       5,
+       6,
+       14,
+       7,
+       "CE Europa"
+      ],
+      [
+       "aguilas-fc",
+       8,
+       1,
+       3,
+       4,
+       8,
+       14,
+       6,
+       "Águilas FC"
+      ],
+      [
+       "cd-teruel",
+       8,
+       1,
+       2,
+       5,
+       3,
+       14,
+       5,
+       "CD Teruel"
+      ],
+      [
+       "rayo-majadahonda",
+       8,
+       1,
+       1,
+       6,
+       5,
+       9,
+       4,
+       "Rayo Majadahonda"
+      ],
+      [
+       "juventud-torremolinos",
+       8,
+       0,
+       3,
+       5,
+       10,
+       20,
+       3,
+       "Juventud Torremolinos"
+      ]
+     ]
+    }
+   }
   }
  }
 }
