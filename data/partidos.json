@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T00:10:00+02:00",
+ "actualizado": "2026-10-21T00:30:00+02:00",
  "partidos": [
   {
    "id": "2627-4-fase-liga-j3-como-manchester-united",
@@ -169,11 +169,13 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "RUN",
    "visitanteAbbr": "LUG",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 1"
   },
   {
    "id": "2627-2-11-gra-vll",
@@ -223,11 +225,32 @@
      "dial": "TDT",
      "how": "Gratis en la TDT de Cataluña y en 3Cat."
     },
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "EUR",
    "visitanteAbbr": "ZAR",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-5-9-deportivo-fabril-cd-extremadura",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T13:00:00+02:00",
+   "local": "Deportivo Fabril",
+   "localId": "deportivo-fabril",
+   "visitante": "CD Extremadura",
+   "visitanteId": "cd-extremadura",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "FAB",
+   "visitanteAbbr": "EXT",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
    "id": "2627-5-9-juventud-torremolinos-real-murcia",
@@ -241,11 +264,13 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "TOR",
    "visitanteAbbr": "MUR",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-1-10-ray-elc",
@@ -273,6 +298,44 @@
    "localId": "cor",
    "visitante": "SD Eibar",
    "visitanteId": "eib"
+  },
+  {
+   "id": "2627-5-9-arenas-club-ud-ourense",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T16:00:00+02:00",
+   "local": "Arenas Club",
+   "localId": "arenas-club",
+   "visitante": "UD Ourense",
+   "visitanteId": "ud-ourense",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "ARE",
+   "visitanteAbbr": "OUR",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-9-rayo-majadahonda-ue-sant-andreu",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T16:00:00+02:00",
+   "local": "Rayo Majadahonda",
+   "localId": "rayo-majadahonda",
+   "visitante": "UE Sant Andreu",
+   "visitanteId": "ue-sant-andreu",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "MAJ",
+   "visitanteAbbr": "SAN",
+   "provisional": false,
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
    "id": "2627-1-10-rac-esp",
@@ -321,11 +384,13 @@
      "dial": "TDT",
      "how": "Gratis en la TDT de Galicia y en la web de la CRTVG."
     },
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "MIR",
    "visitanteAbbr": "RFE",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 1"
   },
   {
    "id": "2627-5-9-sd-huesca-antequera",
@@ -344,12 +409,14 @@
      "dial": "TDT",
      "how": "Gratis en la TDT de Aragón y en Aragón Play."
     },
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "HUE",
    "visitanteAbbr": "ANT",
    "provisional": false,
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: en abierto solo lo emite Aragón TV. También en FANPLAY TV."
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Aragón TV; completo, en FANPLAY TV y FootballClub."
   },
   {
    "id": "2627-1-10-val-vil",
@@ -395,6 +462,63 @@
    "visitanteId": "rsb"
   },
   {
+   "id": "2627-5-9-cd-teruel-aguilas-fc",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T18:45:00+02:00",
+   "local": "CD Teruel",
+   "localId": "cd-teruel",
+   "visitante": "Águilas FC",
+   "visitanteId": "aguilas-fc",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "TER",
+   "visitanteAbbr": "AGU",
+   "provisional": false,
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-9-cp-cacereno-zamora",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T18:45:00+02:00",
+   "local": "CP Cacereño",
+   "localId": "cp-cacereno",
+   "visitante": "Zamora",
+   "visitanteId": "zamora",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "CAC",
+   "visitanteAbbr": "ZAM",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-9-ponferradina-barakaldo-cf",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T18:45:00+02:00",
+   "local": "Ponferradina",
+   "localId": "ponferradina",
+   "visitante": "Barakaldo CF",
+   "visitanteId": "barakaldo-cf",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "PFR",
+   "visitanteAbbr": "BAR",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
    "id": "2627-5-9-real-aviles-industrial-ud-logrones",
    "liga": 5,
    "jornada": "9",
@@ -406,11 +530,32 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "AVI",
    "visitanteAbbr": "LOG",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-5-9-unionistas-de-salamanca-bilbao-athletic",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T18:45:00+02:00",
+   "local": "Unionistas de Salamanca",
+   "localId": "unionistas-de-salamanca",
+   "visitante": "Bilbao Athletic",
+   "visitanteId": "bilbao-athletic",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "UNI",
+   "visitanteAbbr": "BIL",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
    "id": "2627-1-10-atm-dep",
@@ -455,11 +600,32 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "CUL",
    "visitanteAbbr": "PON",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-5-9-alcorcon-ud-ibiza",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-25T12:00:00+01:00",
+   "local": "Alcorcón",
+   "localId": "alcorcon",
+   "visitante": "UD Ibiza",
+   "visitanteId": "ud-ibiza",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "ALC",
+   "visitanteAbbr": "IBI",
+   "provisional": false,
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
    "id": "2627-5-9-atletico-madrileno-real-jaen",
@@ -473,11 +639,13 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "ATM",
    "visitanteAbbr": "JAE",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-1-10-ath-get",
@@ -518,11 +686,13 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "VIB",
    "visitanteAbbr": "CAR",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-1-10-cel-bet",
@@ -579,11 +749,13 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "ALG",
    "visitanteAbbr": "RMC",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-1-10-rso-lev",
@@ -625,11 +797,32 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "NAS",
    "visitanteAbbr": "HER",
-   "provisional": false
+   "provisional": false,
+   "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-5-9-merida-cd-coria",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-25T18:45:00+01:00",
+   "local": "Mérida",
+   "localId": "merida",
+   "visitante": "CD Coria",
+   "visitanteId": "cd-coria",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "MER",
+   "visitanteAbbr": "COR",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
    "id": "2627-1-10-bar-rma",
@@ -1221,7 +1414,9 @@
    "localId": "xerez-cd",
    "visitante": "Cádiz",
    "visitanteId": "cad",
-   "canales": [],
+   "canales": [
+    "fanplay"
+   ],
    "localAbbr": "XER"
   },
   {
@@ -1433,11 +1628,104 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "ATM",
    "visitanteAbbr": "ALC",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 2",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
+  },
+  {
+   "id": "2627-5-10-ud-ibiza-ce-europa",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-10-30T21:00:00+01:00",
+   "local": "UD Ibiza",
+   "localId": "ud-ibiza",
+   "visitante": "CE Europa",
+   "visitanteId": "ce-europa",
+   "canales": [
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "IBI",
+   "visitanteAbbr": "EUR",
+   "provisional": false,
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Esport3; completo, en FANPLAY TV y FootballClub."
+  },
+  {
+   "id": "2627-5-10-ue-sant-andreu-cd-teruel",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-10-31T16:00:00+01:00",
+   "local": "UE Sant Andreu",
+   "localId": "ue-sant-andreu",
+   "visitante": "CD Teruel",
+   "visitanteId": "cd-teruel",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "SAN",
+   "visitanteAbbr": "TER",
+   "provisional": false,
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-10-bilbao-athletic-cp-cacereno",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-10-31T16:30:00+01:00",
+   "local": "Bilbao Athletic",
+   "localId": "bilbao-athletic",
+   "visitante": "CP Cacereño",
+   "visitanteId": "cp-cacereno",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "BIL",
+   "visitanteAbbr": "CAC",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-10-racing-ferrol-ponferradina",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-10-31T16:30:00+01:00",
+   "local": "Racing Ferrol",
+   "localId": "racing-ferrol",
+   "visitante": "Ponferradina",
+   "visitanteId": "ponferradina",
+   "canales": [
+    {
+     "name": "TVG",
+     "short": "TVG",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Galicia y en la web de la CRTVG."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "RFE",
+   "visitanteAbbr": "PFR",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub."
   },
   {
    "id": "2627-5-10-ud-logrones-mirandes",
@@ -1451,11 +1739,14 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "LOG",
    "visitanteAbbr": "MIR",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 1",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
   },
   {
    "id": "2627-5-10-real-madrid-castilla-cartagena",
@@ -1469,11 +1760,40 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    {
+     "name": "La 7 TV",
+     "short": "LA7",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de la Región de Murcia y en su web."
+    },
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "RMC",
    "visitanteAbbr": "CAR",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 2",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
+  },
+  {
+   "id": "2627-5-10-real-union-real-aviles-industrial",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-10-31T18:45:00+01:00",
+   "local": "Real Unión",
+   "localId": "real-union",
+   "visitante": "Real Avilés Industrial",
+   "visitanteId": "real-aviles-industrial",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "RUN",
+   "visitanteAbbr": "AVI",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
    "id": "2627-5-10-real-zaragoza-villarreal-b",
@@ -1487,11 +1807,21 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    {
+     "name": "Aragón TV",
+     "short": "ARA",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Aragón y en Aragón Play."
+    },
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "ZAR",
    "visitanteAbbr": "VIB",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 2",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
   },
   {
    "id": "2627-5-10-antequera-real-murcia",
@@ -1505,11 +1835,71 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "ANT",
    "visitanteAbbr": "MUR",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 2",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
+  },
+  {
+   "id": "2627-5-10-barakaldo-cf-pontevedra",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-01T12:00:00+01:00",
+   "local": "Barakaldo CF",
+   "localId": "barakaldo-cf",
+   "visitante": "Pontevedra",
+   "visitanteId": "pontevedra",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "BAR",
+   "visitanteAbbr": "PON",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-10-juventud-torremolinos-aguilas-fc",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-01T16:00:00+01:00",
+   "local": "Juventud Torremolinos",
+   "localId": "juventud-torremolinos",
+   "visitante": "Águilas FC",
+   "visitanteId": "aguilas-fc",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "TOR",
+   "visitanteAbbr": "AGU",
+   "provisional": false,
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-10-cd-coria-arenas-club",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-01T16:30:00+01:00",
+   "local": "CD Coria",
+   "localId": "cd-coria",
+   "visitante": "Arenas Club",
+   "visitanteId": "arenas-club",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "COR",
+   "visitanteAbbr": "ARE",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
    "id": "2627-5-10-ud-ourense-cultural-leonesa",
@@ -1523,11 +1913,14 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "OUR",
    "visitanteAbbr": "CUL",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 1",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
   },
   {
    "id": "2627-5-10-cd-lugo-merida",
@@ -1541,11 +1934,52 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "LUG",
    "visitanteAbbr": "MER",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 1",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
+  },
+  {
+   "id": "2627-5-10-zamora-deportivo-fabril",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-01T18:45:00+01:00",
+   "local": "Zamora",
+   "localId": "zamora",
+   "visitante": "Deportivo Fabril",
+   "visitanteId": "deportivo-fabril",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "ZAM",
+   "visitanteAbbr": "FAB",
+   "provisional": false,
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-10-hercules-rayo-majadahonda",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-01T20:30:00+01:00",
+   "local": "Hércules",
+   "localId": "hercules",
+   "visitante": "Rayo Majadahonda",
+   "visitanteId": "rayo-majadahonda",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "localAbbr": "HER",
+   "visitanteAbbr": "MAJ",
+   "provisional": false,
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
    "id": "2627-5-10-cd-extremadura-unionistas-de-salamanca",
@@ -1559,11 +1993,14 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "EXT",
    "visitanteAbbr": "UNI",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 1",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
   },
   {
    "id": "2627-5-10-real-jaen-algeciras-cf",
@@ -1577,11 +2014,14 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "JAE",
    "visitanteAbbr": "ALG",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 2",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
   },
   {
    "id": "2627-5-10-sd-huesca-gimnastic-de-tarragona",
@@ -1595,11 +2035,14 @@
    "canales": [
     "rfef",
     "daznrfef",
-    "fanplay"
+    "fanplay",
+    "fclub"
    ],
    "localAbbr": "HUE",
    "visitanteAbbr": "NAS",
-   "provisional": true
+   "provisional": true,
+   "etiqueta": "Grupo 2",
+   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará."
   },
   {
    "id": "2627-4-fase-liga-j4-galatasaray-stuttgart",
