@@ -72,7 +72,11 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .kick{display:flex;flex-direction:column;align-items:center;gap:2px;border-right:1px dashed var(--line);padding-right:10px;text-align:center}
 .kick b{font-family:var(--f-display);font-weight:800;font-size:24px;line-height:1;font-variant-numeric:tabular-nums}
 .kick span{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.kick span.live{color:var(--live)} .kick span.done{color:var(--done)}
+.kick span.live{color:var(--live)} .kick span.done{color:var(--done)} .kick span.off{color:var(--warn)}
+.kick b.sc{font-size:22px;letter-spacing:0;white-space:nowrap}
+.vs .mid.score{font-size:40px;color:var(--ink);line-height:1;display:flex;gap:6px;align-items:center;font-variant-numeric:tabular-nums}
+.vs .mid.score i{font-style:normal;color:var(--muted);font-size:26px}
+.vs .mid.score.live{color:var(--live)}
 .teams{display:flex;flex-direction:column;gap:6px;min-width:0}
 .team{display:flex;align-items:center;gap:8px;min-width:0;font-weight:600}
 .team .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -265,14 +269,24 @@ function chOf(c){
   if(typeof c==="string")return CH[c]||{name:c,short:c.slice(0,3).toUpperCase(),op:"dazn",dial:"",how:""};
   return {short:(c.name||"TV").slice(0,3).toUpperCase(),op:"dazn",dial:"",how:"",...c};
 }
+/* Resultados: el partido puede traer "marcador":[local,visitante], "estado":"final"|"directo"|"aplazado"|"suspendido" y "minuto". */
+const tieneMarcador=m=>Array.isArray(m.marcador)&&m.marcador.length===2;
+const marcadorTxt=m=>tieneMarcador(m)?m.marcador[0]+"-"+m.marcador[1]:"";
 function status(m,now){
+  if(m.estado==="final")return "done";
+  if(m.estado==="directo")return "live";
+  if(m.estado==="aplazado"||m.estado==="suspendido")return "off";
   const k=new Date(m.inicio).getTime();
   if(now<k)return null;
   return now<k+115*60e3?"live":"done";
 }
 function countdown(m,now){
   const d=new Date(m.inicio).getTime()-now;
-  if(d<=0)return status(m,now)==="live"?"Se está jugando ahora":"Partido terminado";
+  const st=status(m,now);
+  if(st==="off")return m.estado==="suspendido"?"Partido suspendido":"Partido aplazado";
+  if(st==="done"&&tieneMarcador(m))return "Resultado final";
+  if(st==="live"&&m.minuto)return "En juego · "+m.minuto;
+  if(d<=0)return st==="live"?"Se está jugando ahora":"Partido terminado";
   const days=Math.floor(d/864e5),hrs=Math.floor(d%864e5/36e5),min=Math.floor(d%36e5/6e4);
   if(days>0)return `Empieza en ${days} d ${hrs} h`;
   if(hrs>0)return `Empieza en ${hrs} h ${min} min`;
@@ -323,7 +337,7 @@ function render(){
     <section class="day"><h2>${cap(fDay.format(new Date(g[0].inicio)))}</h2><div class="list">
     ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];return `
       <button class="match${st==="done"?" past":""}" data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
-        <span class="kick"><b>${m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b><span class="${st||""}">${st==="live"?"En juego":st==="done"?"Final":m.etiqueta?esc(m.etiqueta):"h"}</span></span>
+        <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b><span class="${st||""}">${st==="live"?(m.minuto?esc(m.minuto):"En juego"):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
         <span class="teams">
           <span class="team">${crest(h)}<span class="nm">${esc(h.name)}</span></span>
           <span class="team">${crest(a)}<span class="nm">${esc(a.name)}</span></span>
@@ -344,6 +358,7 @@ function textoPartido(m){
   const d=new Date(m.inicio),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=(m.canales||[]).map(chOf);
   const dial=c=>c.dial&&c.dial!=="TDT"?` (dial ${c.dial})`:c.orange?` (Orange ${c.orange})`:"";
   const tv=ch.length?"📺 "+ch[0].name+dial(ch[0])+(ch[1]?" · también "+ch[1].name+dial(ch[1]):""):m.sinTV?"Sin televisión":"Canal por confirmar";
+  if(tieneMarcador(m)&&(m.estado==="final"||m.estado==="directo"))return `⚽ ${h.name} ${m.marcador[0]}-${m.marcador[1]} ${a.name}${m.estado==="directo"?" (en juego"+(m.minuto?", "+m.minuto:"")+")":" (final)"}\n${(COMP[m.liga]||{}).name||""}\n${enlace(m)}`;
   return `⚽ ${h.name} – ${a.name}\n${(COMP[m.liga]||{}).name||""}\n🗓 ${cap(fDay.format(d))}${m.horaPendiente?" · hora por fijar":" · "+fTime.format(d)+" h"}\n${tv}\n${enlace(m)}`;
 }
 async function compartir(m){
@@ -384,7 +399,7 @@ function open(id){
     <div class="sh-head"><span class="comp">${(COMP[m.liga]||{}).name||""} · ${esc(jornLabel(m.jornada))}</span><button class="close" id="close" aria-label="Cerrar">×</button></div>
     <div class="vs">
       <div class="side">${crest(h,1)}<b id="sh-title">${esc(h.name)}</b></div>
-      <div class="mid">VS</div>
+      ${tieneMarcador(m)&&(status(m,now)==="live"||status(m,now)==="done")?`<div class="mid score${status(m,now)==="live"?" live":""}">${m.marcador[0]}<i>–</i>${m.marcador[1]}</div>`:`<div class="mid">VS</div>`}
       <div class="side">${crest(a,1)}<b>${esc(a.name)}</b></div>
     </div>
     <div>

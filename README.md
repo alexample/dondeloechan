@@ -10,7 +10,7 @@ App de Android que dice el día, la hora y el canal exacto (con su dial) de cada
 
 ## Cómo se actualiza la guía
 
-- `data/partidos.json` es la guía de partidos. Una tarea programada de Claude la revisa los martes y viernes por la mañana (horarios de LALIGA y señal exacta en la guía de Movistar Plus+) y la sube aquí.
+- `data/partidos.json` es la guía de partidos. Una tarea programada de Claude la revisa cada mañana (horarios, señal exacta en la guía de Movistar Plus+ y resultados de los partidos jugados) y la sube aquí.
 - La app descarga ese archivo al abrirse y lo guarda para funcionar sin conexión. No hace falta reinstalar nada.
 - El repositorio debe ser **público** para que la app pueda leer el archivo.
 
