@@ -164,6 +164,34 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .aviso{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:40;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:14px;font-weight:600;transition:opacity .2s,transform .2s;pointer-events:none;max-width:calc(100% - 32px)}
 .aviso.on{opacity:1;transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){.sheet,.scrim,.match{transition:none}.skel::after{animation:none}}
+/* ---------- Escritorio: cabecera en una línea, lista a la izquierda y ficha fija a la derecha ---------- */
+.match{scroll-margin-top:calc(var(--cab,0px) + 12px)}
+.panel-vacio{display:flex;flex-direction:column;gap:10px;align-items:flex-start;padding:28px 4px;color:var(--muted)}
+.panel-vacio b{font-family:var(--f-display);font-size:22px;text-transform:uppercase;color:var(--ink)}
+.panel-vacio kbd{font-family:var(--f-mono);font-size:12px;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 6px;color:var(--ink)}
+@media (min-width:1024px){
+  :root{--panel:520px;--cont:min(1320px,calc(100vw - 48px))}
+  .wrap{max-width:1320px;padding-left:24px;padding-right:24px}
+  header.top .wrap{display:grid;grid-template-columns:auto minmax(0,1fr) 300px;align-items:center;gap:24px;padding-block:14px}
+  .brand{gap:16px;align-items:center}
+  .brand h1{font-size:28px;white-space:nowrap}
+  .tabs{background:transparent;padding:0;gap:6px}
+  .tabs button{flex:0 0 auto;padding:8px 14px;background:rgba(255,255,255,.08)}
+  .tabs button:hover{background:rgba(255,255,255,.16)}
+  .tabs button[aria-selected="true"]:hover{background:var(--pitch-ink)}
+  main .wrap{padding-right:calc(var(--panel) + 48px);padding-block:8px 60px}
+  .day h2{position:sticky;top:var(--cab,0px);z-index:2;background:var(--bg);margin:0;padding:12px 0 8px}
+  .match{grid-template-columns:72px 1fr}
+  .match:hover{border-color:var(--pitch)}
+  .match.sel{border-color:var(--pitch);box-shadow:0 0 0 2px var(--pitch) inset}
+  .match.ahora.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent) inset}
+  .scrim{display:none!important}
+  .sheet{left:auto;right:calc((100vw - var(--cont))/2);top:calc(var(--cab,96px) + 16px);bottom:16px;width:var(--panel);max-height:none;border-radius:16px;border:1px solid var(--line);transform:none!important;transition:none;box-shadow:0 10px 30px rgba(20,32,26,.10);padding-bottom:0}
+  .sheet .wrap{padding:22px 26px 26px;max-width:none}
+  .grab{display:none}
+  .hoy{left:calc((100vw - var(--cont))/2 + (var(--cont) - var(--panel) - 24px)/2)}
+}
+
 </style>
 <script src="config.js"></script>
 </body>
@@ -392,12 +420,19 @@ function render(){
           ${league===0?`<span class="compl">${esc((COMP[m.liga]||{}).name||"")}</span>`:""}
           <span class="team">${crest(h)}<span class="nm">${FAV.has(m.localId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(h.name)}</span></span>
           <span class="team">${crest(a)}<span class="nm">${FAV.has(m.visitanteId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(a.name)}</span></span>
-          <span class="chips">${ch.length?ch.slice(0,2).map(chip).join(""):m.sinTV?`<span class="chip pend">Sin TV</span>`:`<span class="chip pend">Canal por confirmar</span>`}${ch.length>2?`<span class="chip op-dazn" style="padding-left:8px">+${ch.length-2}</span>`:""}${m.provisional&&ch.length?`<span class="chip pend">Provisional</span>`:""}</span>
+          <span class="chips">${ch.length?ch.slice(0,esEscritorio()?4:2).map(chip).join(""):m.sinTV?`<span class="chip pend">Sin TV</span>`:`<span class="chip pend">Canal por confirmar</span>`}${ch.length>(esEscritorio()?4:2)?`<span class="chip op-dazn" style="padding-left:8px">+${ch.length-(esEscritorio()?4:2)}</span>`:""}${m.provisional&&ch.length?`<span class="chip pend">Provisional</span>`:""}</span>
         </span>
       </button>`}).join("")}
     </div></section>`}).join("")+foot();
   if(irPendiente&&!q){irPendiente=false;tocado=false;requestAnimationFrame(()=>irAhora(false))}
   requestAnimationFrame(botonHoy);
+  medirCabecera();
+  if(actual)marcarSel(actual._id);
+  if(esEscritorio()&&!panelIniciado&&matches){
+    panelIniciado=true;
+    const a=document.getElementById("ahora");
+    if(!actual){if(a)open(a.dataset.id);else panelVacio()}
+  }
 }
 /* ---------- Colocar la lista en el presente ---------- */
 let irPendiente=true,tocado=false;
@@ -580,14 +615,47 @@ function open(id){
   actual=m;
   if(conComentariosAqui())cargarComentarios(m);
   marcar("p-"+m._id);
+  marcarSel(m._id);
+  sheet.scrollTop=0;
+  if(esEscritorio()){scrim.hidden=true;sheet.hidden=false;sheet.classList.add("on");return}
   lastFocus=document.activeElement;
   scrim.hidden=false;sheet.hidden=false;
   requestAnimationFrame(()=>{scrim.classList.add("on");sheet.classList.add("on")});
-  sheet.scrollTop=0;
   document.getElementById("close").focus();
 }
+/* ---------- Escritorio ---------- */
+const ESC=matchMedia("(min-width:1024px)");
+const esEscritorio=()=>ESC.matches;
+let panelIniciado=false;
+function marcarSel(id){
+  document.querySelectorAll("#app .match.sel").forEach(x=>x.classList.remove("sel"));
+  if(!id)return;
+  const b=[...document.querySelectorAll("#app .match")].find(x=>x.dataset.id===id);
+  if(b)b.classList.add("sel");
+}
+function panelVacio(){
+  sheet.innerHTML=`<div class="wrap"><div class="panel-vacio"><b>Elige un partido</b><span>Pulsa cualquier partido de la lista para ver el día, la hora y el canal exacto donde verlo.</span><span>Con las flechas <kbd>↑</kbd> <kbd>↓</kbd> del teclado pasas de un partido a otro.</span></div></div>`;
+  scrim.hidden=true;sheet.hidden=false;sheet.classList.add("on");
+}
+function medirCabecera(){try{document.documentElement.style.setProperty("--cab",Math.round(altoCabecera())+"px")}catch(e){}}
+addEventListener("resize",medirCabecera);
+ESC.addEventListener&&ESC.addEventListener("change",()=>{
+  medirCabecera();
+  if(esEscritorio()){scrim.classList.remove("on");scrim.hidden=true;if(actual)open(actual._id);else{panelIniciado=false;render()}}
+  else{if(actual)open(actual._id);else{sheet.classList.remove("on");sheet.hidden=true}}
+});
+document.addEventListener("keydown",e=>{
+  if(!esEscritorio()||e.altKey||e.ctrlKey||e.metaKey)return;
+  if(e.target&&e.target.closest&&e.target.closest("input,textarea,select"))return;
+  if(e.key!=="ArrowDown"&&e.key!=="ArrowUp")return;
+  const bs=[...document.querySelectorAll("#app .match")];if(!bs.length)return;
+  let i=bs.findIndex(b=>b.classList.contains("sel"));
+  i=i<0?0:Math.min(bs.length-1,Math.max(0,i+(e.key==="ArrowDown"?1:-1)));
+  e.preventDefault();open(bs[i].dataset.id);bs[i].scrollIntoView({block:"nearest"});
+});
 function close(){
-  actual=null;marcar("");
+  actual=null;marcar("");marcarSel(null);
+  if(esEscritorio()){panelVacio();return}
   scrim.classList.remove("on");sheet.classList.remove("on");
   setTimeout(()=>{scrim.hidden=true;sheet.hidden=true},230);
   if(lastFocus)lastFocus.focus();
@@ -603,7 +671,7 @@ function botonFav(id,nombre){if(!id)return "";const on=FAV.has(id);return `<butt
 scrim.addEventListener("click",close);
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!sheet.hidden)close()});
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
-  league=+b.dataset.l;try{localStorage.setItem("dle-league",String(league))}catch(e){}irPendiente=true;render()}));
+  league=+b.dataset.l;try{localStorage.setItem("dle-league",String(league))}catch(e){}irPendiente=true;if(esEscritorio()){actual=null;panelIniciado=false}render()}));
 document.getElementById("q").addEventListener("input",e=>{const antes=query.trim();query=e.target.value;if(antes&&!query.trim())irPendiente=true;else if(query.trim())window.scrollTo(0,0);render()});
 document.getElementById("hoy").addEventListener("click",()=>irAhora(true));
 addEventListener("scroll",botonHoy,{passive:true});addEventListener("resize",botonHoy);
@@ -642,7 +710,7 @@ async function actualizar(){
 let ultima=0;
 window.alVolver=()=>{if(Date.now()-ultima>10*60e3){ultima=Date.now();actualizar()}else render()};
 window.abrirPartido=id=>{if(!matches)return;const m=matches.find(x=>x._id===id);if(m){league=m.liga;render();open(id)}};
-window.atras=()=>{if(!sheet.hidden){close();return true}return false};
+window.atras=()=>{if(esEscritorio()){if(actual){close();return true}return false}if(!sheet.hidden){close();return true}return false};
 
 (async()=>{
   try{const r=await fetch("escudos/lista.json");if(r.ok)ESCUDOS=new Set(await r.json())}catch(e){}
