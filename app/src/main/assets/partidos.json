@@ -1,6 +1,612 @@
 {
- "actualizado": "2026-10-21T00:30:00+02:00",
+ "actualizado": "2026-10-21T00:40:00+02:00",
  "partidos": [
+  {
+   "id": "2627-2-10-leg-cor",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-16T20:30:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "CD Leganés",
+   "localId": "leg",
+   "visitante": "Córdoba CF",
+   "visitanteId": "cor"
+  },
+  {
+   "id": "2627-1-9-dep-lev",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-16T21:00:00+02:00",
+   "canales": [
+    "mliga",
+    "daznfree"
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "RC Deportivo",
+   "localId": "dep",
+   "visitante": "Levante UD",
+   "visitanteId": "lev"
+  },
+  {
+   "id": "2627-1-9-esp-atm",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-17T14:00:00+02:00",
+   "canales": [
+    "daznll"
+   ],
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "RCD Espanyol",
+   "localId": "esp",
+   "visitante": "Atlético de Madrid",
+   "visitanteId": "atm"
+  },
+  {
+   "id": "2627-2-10-rsb-alm",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-17T14:00:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    2,
+    4
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Real Sociedad B",
+   "localId": "rsb",
+   "visitante": "UD Almería",
+   "visitanteId": "alm"
+  },
+  {
+   "id": "2627-1-9-vil-elc",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-17T16:15:00+02:00",
+   "canales": [
+    "daznll"
+   ],
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Villarreal CF",
+   "localId": "vil",
+   "visitante": "Elche CF",
+   "visitanteId": "elc"
+  },
+  {
+   "id": "2627-2-10-eib-mll",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-17T16:15:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "SD Eibar",
+   "localId": "eib",
+   "visitante": "RCD Mallorca",
+   "visitanteId": "mll"
+  },
+  {
+   "id": "2627-1-9-bet-bar",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-17T18:30:00+02:00",
+   "canales": [
+    "daznll"
+   ],
+   "marcador": [
+    2,
+    5
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Real Betis",
+   "localId": "bet",
+   "visitante": "FC Barcelona",
+   "visitanteId": "bar"
+  },
+  {
+   "id": "2627-2-10-spo-alb",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-17T18:30:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Real Sporting",
+   "localId": "spo",
+   "visitante": "Albacete BP",
+   "visitanteId": "alb"
+  },
+  {
+   "id": "2627-1-9-val-ath",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-17T21:00:00+02:00",
+   "canales": [
+    "mliga",
+    "mplus7",
+    "orange1"
+   ],
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Valencia CF",
+   "localId": "val",
+   "visitante": "Athletic Club",
+   "visitanteId": "ath"
+  },
+  {
+   "id": "2627-2-10-lpa-cas",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-17T21:00:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "UD Las Palmas",
+   "localId": "lpa",
+   "visitante": "CD Castellón",
+   "visitanteId": "cas"
+  },
+  {
+   "id": "2627-1-9-osa-rac",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-18T14:00:00+02:00",
+   "canales": [
+    "mliga"
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "CA Osasuna",
+   "localId": "osa",
+   "visitante": "Real Racing Club",
+   "visitanteId": "rac"
+  },
+  {
+   "id": "2627-2-10-ceu-ovi",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-18T14:00:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "AD Ceuta FC",
+   "localId": "ceu",
+   "visitante": "Real Oviedo",
+   "visitanteId": "ovi"
+  },
+  {
+   "id": "2627-1-9-cel-ala",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-18T16:15:00+02:00",
+   "canales": [
+    "daznll"
+   ],
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "RC Celta",
+   "localId": "cel",
+   "visitante": "Deportivo Alavés",
+   "visitanteId": "ala"
+  },
+  {
+   "id": "2627-2-10-gra-cad",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-18T16:15:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Granada CF",
+   "localId": "gra",
+   "visitante": "Cádiz CF",
+   "visitanteId": "cad"
+  },
+  {
+   "id": "2627-1-9-mal-rso",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-18T18:30:00+02:00",
+   "canales": [
+    "mliga"
+   ],
+   "marcador": [
+    2,
+    5
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Málaga CF",
+   "localId": "mal",
+   "visitante": "Real Sociedad",
+   "visitanteId": "rso"
+  },
+  {
+   "id": "2627-2-10-gir-and",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-18T18:30:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Girona FC",
+   "localId": "gir",
+   "visitante": "FC Andorra",
+   "visitanteId": "and"
+  },
+  {
+   "id": "2627-2-10-vll-eld",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-18T18:30:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Real Valladolid",
+   "localId": "vll",
+   "visitante": "CD Eldense",
+   "visitanteId": "eld"
+  },
+  {
+   "id": "2627-1-9-rma-sev",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-18T21:00:00+02:00",
+   "canales": [
+    "mliga"
+   ],
+   "marcador": [
+    4,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Real Madrid",
+   "localId": "rma",
+   "visitante": "Sevilla FC",
+   "visitanteId": "sev"
+  },
+  {
+   "id": "2627-2-10-bur-sab",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-18T21:00:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Burgos CF",
+   "localId": "bur",
+   "visitante": "CE Sabadell",
+   "visitanteId": "sab"
+  },
+  {
+   "id": "2627-2-10-clb-ten",
+   "liga": 2,
+   "jornada": "10",
+   "inicio": "2026-10-19T20:30:00+02:00",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Celta Fortuna",
+   "localId": "clb",
+   "visitante": "CD Tenerife",
+   "visitanteId": "ten"
+  },
+  {
+   "id": "2627-1-9-get-ray",
+   "liga": 1,
+   "jornada": "9",
+   "inicio": "2026-10-19T21:00:00+02:00",
+   "canales": [
+    "daznll"
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Getafe CF",
+   "localId": "get",
+   "visitante": "Rayo Vallecano",
+   "visitanteId": "ray"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-fenerbahce-slavia-praga",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-20T18:45:00+02:00",
+   "canales": [
+    "mlc2"
+   ],
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Fenerbahçe",
+   "localId": "fenerbahce",
+   "localAbbr": "FEN",
+   "visitante": "Slavia Praga",
+   "visitanteId": "slavia-praga",
+   "visitanteAbbr": "SLA"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-sabah-borussia-dortmund",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-20T18:45:00+02:00",
+   "canales": [
+    "mlc3"
+   ],
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Sabah",
+   "localId": "sabah",
+   "localAbbr": "SBH",
+   "visitante": "Borussia Dortmund",
+   "visitanteId": "borussia-dortmund",
+   "visitanteAbbr": "BVB"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-liverpool-vil",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-20T21:00:00+02:00",
+   "canales": [
+    "mlc3",
+    "mlcmulti"
+   ],
+   "marcador": [
+    4,
+    3
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Liverpool",
+   "localId": "liverpool",
+   "localAbbr": "LIV",
+   "visitante": "Villarreal CF",
+   "visitanteId": "vil"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-manchester-city-aek-atenas",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-20T21:00:00+02:00",
+   "canales": [
+    "mlc7",
+    "mlcmulti"
+   ],
+   "marcador": [
+    5,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Manchester City",
+   "localId": "manchester-city",
+   "localAbbr": "MCI",
+   "visitante": "AEK Atenas",
+   "visitanteId": "aek-atenas",
+   "visitanteAbbr": "AEK"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-napoli-bod-glimt",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-20T21:00:00+02:00",
+   "canales": [
+    "mlc8",
+    "mlcmulti"
+   ],
+   "marcador": [
+    4,
+    3
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Napoli",
+   "localId": "napoli",
+   "localAbbr": "NAP",
+   "visitante": "Bodø/Glimt",
+   "visitanteId": "bod-glimt",
+   "visitanteAbbr": "BOD"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-porto-psv",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-20T21:00:00+02:00",
+   "canales": [
+    "mlc6",
+    "mlcmulti"
+   ],
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Porto",
+   "localId": "porto",
+   "localAbbr": "POR",
+   "visitante": "PSV",
+   "visitanteId": "psv",
+   "visitanteAbbr": "PSV"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-psg-bar",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-20T21:00:00+02:00",
+   "canales": [
+    "mlc",
+    "mlcmulti"
+   ],
+   "marcador": [
+    4,
+    2
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "PSG",
+   "localId": "psg",
+   "localAbbr": "PSG",
+   "visitante": "FC Barcelona",
+   "visitanteId": "bar"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-roma-slovan-bratislava",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-20T21:00:00+02:00",
+   "canales": [
+    "mlc5",
+    "mlcmulti"
+   ],
+   "marcador": [
+    4,
+    0
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Roma",
+   "localId": "roma",
+   "localAbbr": "ROM",
+   "visitante": "Slovan Bratislava",
+   "visitanteId": "slovan-bratislava",
+   "visitanteAbbr": "SLO"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-stuttgart-atm",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-20T21:00:00+02:00",
+   "canales": [
+    "mlc2",
+    "mlcmulti"
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "provisional": false,
+   "local": "Stuttgart",
+   "localId": "stuttgart",
+   "localAbbr": "STU",
+   "visitante": "Atlético de Madrid",
+   "visitanteId": "atm"
+  },
   {
    "id": "2627-4-fase-liga-j3-como-manchester-united",
    "liga": 4,
