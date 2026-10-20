@@ -70,7 +70,13 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .match{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:center;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;font:inherit;color:inherit;transition:transform .12s ease,border-color .12s}
 .match:hover{border-color:var(--muted)}
 .match:active{transform:scale(.99)}
-.match.past{opacity:.6}
+.match.past{opacity:.72}
+.day.pasado h2{opacity:.65}
+.day h2 .hoyd{font-style:normal;color:var(--accent);letter-spacing:.06em}
+.match.ahora{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.hoy{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:15;display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;padding:10px 18px;background:var(--pitch);color:var(--pitch-ink);font:inherit;font-weight:700;font-size:14px;box-shadow:var(--shadow);cursor:pointer}
+[hidden]{display:none!important}
+.hoy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .kick{display:flex;flex-direction:column;align-items:center;gap:2px;border-right:1px dashed var(--line);padding-right:10px;text-align:center}
 .kick b{font-family:var(--f-display);font-weight:800;font-size:24px;line-height:1;font-variant-numeric:tabular-nums}
 .kick span{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
@@ -186,6 +192,7 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
   </div>
 </div></main>
 
+<button class="hoy" id="hoy" type="button" hidden>Volver a hoy</button>
 <div class="scrim" id="scrim" hidden></div>
 <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title" hidden></section>
 
@@ -340,10 +347,14 @@ function render(){
   }
   const groups={};
   list.forEach(m=>{const k=fKey.format(new Date(m.inicio));(groups[k]=groups[k]||[]).push(m)});
-  app.innerHTML=Object.values(groups).map(g=>`
-    <section class="day"><h2>${cap(fDay.format(new Date(g[0].inicio)))}</h2><div class="list">
+  // El "presente": el primer partido que no ha terminado (en juego o por jugar).
+  let ia=list.findIndex(m=>{const s=status(m,now);return s!=="done"&&!(s==="off"&&new Date(m.inicio).getTime()<now)});
+  if(ia<0)ia=list.length-1;
+  const ahoraId=list[ia]&&list[ia]._id, hoyKey=fKey.format(new Date(now));
+  app.innerHTML=Object.values(groups).map(g=>{const pas=g.every(m=>status(m,now)==="done");return `
+    <section class="day${pas?" pasado":""}"><h2>${cap(fDay.format(new Date(g[0].inicio)))}${fKey.format(new Date(g[0].inicio))===hoyKey?' · <em class="hoyd">Hoy</em>':""}</h2><div class="list">
     ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];return `
-      <button class="match${st==="done"?" past":""}" data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
+      <button class="match${st==="done"?" past":""}${m._id===ahoraId&&!q?" ahora":""}"${m._id===ahoraId?' id="ahora"':""} data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
         <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b><span class="${st||""}">${st==="live"?(m.minuto?esc(m.minuto):"En juego"):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
         <span class="teams">
           <span class="team">${crest(h)}<span class="nm">${esc(h.name)}</span></span>
@@ -351,7 +362,33 @@ function render(){
           <span class="chips">${ch.length?ch.slice(0,2).map(chip).join(""):m.sinTV?`<span class="chip pend">Sin TV</span>`:`<span class="chip pend">Canal por confirmar</span>`}${ch.length>2?`<span class="chip op-dazn" style="padding-left:8px">+${ch.length-2}</span>`:""}${m.provisional&&ch.length?`<span class="chip pend">Provisional</span>`:""}</span>
         </span>
       </button>`}).join("")}
-    </div></section>`).join("")+foot();
+    </div></section>`}).join("")+foot();
+  if(irPendiente&&!q){irPendiente=false;tocado=false;requestAnimationFrame(()=>irAhora(false))}
+  requestAnimationFrame(botonHoy);
+}
+/* ---------- Colocar la lista en el presente ---------- */
+let irPendiente=true,tocado=false;
+// Cuando terminan de cargar las letras cambia la altura de la lista: recolocar si el usuario no se ha movido.
+try{document.fonts&&document.fonts.ready.then(()=>{if(!tocado&&matches)irAhora(false);botonHoy()})}catch(e){}
+["touchstart","wheel","keydown"].forEach(ev=>addEventListener(ev,()=>{tocado=true},{passive:true}));
+function altoCabecera(){const h=document.querySelector("header.top");return h?h.getBoundingClientRect().bottom:0}
+function objetivoAhora(){
+  const el=document.getElementById("ahora");if(!el)return null;
+  const sec=el.closest(".day");
+  return sec&&sec.querySelector(".match")===el?sec:el;
+}
+function irAhora(suave){
+  const t=objetivoAhora();if(!t)return;
+  const y=t.getBoundingClientRect().top+window.scrollY-altoCabecera()-6;
+  try{window.scrollTo({top:Math.max(0,y),behavior:suave&&!matchMedia("(prefers-reduced-motion: reduce)").matches?"smooth":"auto"})}catch(e){window.scrollTo(0,Math.max(0,y))}
+}
+function botonHoy(){
+  const b=document.getElementById("hoy"),el=document.getElementById("ahora");if(!b)return;
+  if(!el||query.trim()){b.hidden=true;return}
+  const r=el.getBoundingClientRect(),top=altoCabecera();
+  const fuera=r.bottom<top||r.top>window.innerHeight;
+  b.hidden=!fuera;
+  b.textContent=r.top>window.innerHeight?"Volver a hoy ↓":"Volver a hoy ↑";
 }
 function foot(){return `<p class="foot">Horarios oficiales de LALIGA, RFEF y UEFA; canal exacto según la guía de Movistar Plus+, DAZN, RTVE y las teles autonómicas. Hora peninsular. Pueden cambiar a última hora: si es un partido importante, mira la ficha el mismo día.</p>`}
 
@@ -527,8 +564,10 @@ sheet.addEventListener("click",e=>{if(e.target.id==="close")close();else if(e.ta
 scrim.addEventListener("click",close);
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!sheet.hidden)close()});
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
-  league=+b.dataset.l;try{localStorage.setItem("dle-league",String(league))}catch(e){}render();window.scrollTo(0,0)}));
-document.getElementById("q").addEventListener("input",e=>{query=e.target.value;render()});
+  league=+b.dataset.l;try{localStorage.setItem("dle-league",String(league))}catch(e){}irPendiente=true;render()}));
+document.getElementById("q").addEventListener("input",e=>{const antes=query.trim();query=e.target.value;if(antes&&!query.trim())irPendiente=true;else if(query.trim())window.scrollTo(0,0);render()});
+document.getElementById("hoy").addEventListener("click",()=>irAhora(true));
+addEventListener("scroll",botonHoy,{passive:true});addEventListener("resize",botonHoy);
 (()=>{const t=document.querySelector(".tabs");const f=()=>t.classList.toggle("mas",t.scrollLeft+t.clientWidth<t.scrollWidth-4);t.addEventListener("scroll",f,{passive:true});addEventListener("resize",f);setTimeout(f,50)})();
 
 /* ---------- Datos ----------
