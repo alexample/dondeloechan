@@ -6,6 +6,6 @@ window.DATOS_URL = "https://raw.githubusercontent.com/Alexample/dondeloechan/mai
 window.GISCUS = {
   repo: "Alexample/dondeloechan",
   repoId: "R_kgDOVRZ6Lg",
-  category: "Comentarios",
-  categoryId: ""
+  category: "Announcements",
+  categoryId: "DIC_kwDOVRZ6Ls4DJM5l"
 };
