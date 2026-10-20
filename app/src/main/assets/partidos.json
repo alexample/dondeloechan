@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-20T22:55:00+02:00",
+ "actualizado": "2026-10-21T00:10:00+02:00",
  "partidos": [
   {
    "id": "2627-4-fase-liga-j3-como-manchester-united",
@@ -158,6 +158,23 @@
    "visitanteAbbr": "LAS"
   },
   {
+   "id": "2627-5-9-real-union-cd-lugo",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-23T19:00:00+02:00",
+   "local": "Real Unión",
+   "localId": "real-union",
+   "visitante": "CD Lugo",
+   "visitanteId": "cd-lugo",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "RUN",
+   "visitanteAbbr": "LUG",
+   "provisional": false
+  },
+  {
    "id": "2627-2-11-gra-vll",
    "canales": [
     "hyper",
@@ -185,6 +202,47 @@
    "nota": "Se puede ver gratis en la app de DAZN creando una cuenta.",
    "visitante": "Málaga CF",
    "visitanteId": "mal"
+  },
+  {
+   "id": "2627-5-9-ce-europa-real-zaragoza",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-23T21:15:00+02:00",
+   "local": "CE Europa",
+   "localId": "ce-europa",
+   "visitante": "Real Zaragoza",
+   "visitanteId": "real-zaragoza",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    }
+   ],
+   "localAbbr": "EUR",
+   "visitanteAbbr": "ZAR",
+   "provisional": false
+  },
+  {
+   "id": "2627-5-9-juventud-torremolinos-real-murcia",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T13:00:00+02:00",
+   "local": "Juventud Torremolinos",
+   "localId": "juventud-torremolinos",
+   "visitante": "Real Murcia",
+   "visitanteId": "real-murcia",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "TOR",
+   "visitanteAbbr": "MUR",
+   "provisional": false
   },
   {
    "id": "2627-1-10-ray-elc",
@@ -242,6 +300,53 @@
    "visitanteId": "mll"
   },
   {
+   "id": "2627-5-9-mirandes-racing-ferrol",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T16:30:00+02:00",
+   "local": "Mirandés",
+   "localId": "mirandes",
+   "visitante": "Racing Ferrol",
+   "visitanteId": "racing-ferrol",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    {
+     "name": "TVG",
+     "short": "TVG",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Galicia y en la web de la CRTVG."
+    }
+   ],
+   "localAbbr": "MIR",
+   "visitanteAbbr": "RFE",
+   "provisional": false
+  },
+  {
+   "id": "2627-5-9-sd-huesca-antequera",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T16:30:00+02:00",
+   "local": "SD Huesca",
+   "localId": "sd-huesca",
+   "visitante": "Antequera",
+   "visitanteId": "antequera",
+   "canales": [
+    {
+     "name": "Aragón TV",
+     "short": "ARA",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Aragón y en Aragón Play."
+    }
+   ],
+   "localAbbr": "HUE",
+   "visitanteAbbr": "ANT",
+   "provisional": false,
+   "nota": "Este partido no está entre los 10 de Movistar Plus+ y DAZN: solo lo emite Aragón TV."
+  },
+  {
    "id": "2627-1-10-val-vil",
    "canales": [
     "mliga"
@@ -285,6 +390,23 @@
    "visitanteId": "rsb"
   },
   {
+   "id": "2627-5-9-real-aviles-industrial-ud-logrones",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T18:45:00+02:00",
+   "local": "Real Avilés Industrial",
+   "localId": "real-aviles-industrial",
+   "visitante": "UD Logroñés",
+   "visitanteId": "ud-logrones",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "AVI",
+   "visitanteAbbr": "LOG",
+   "provisional": false
+  },
+  {
    "id": "2627-1-10-atm-dep",
    "canales": [
     "mliga",
@@ -316,6 +438,40 @@
    "visitanteId": "ovi"
   },
   {
+   "id": "2627-5-9-cultural-leonesa-pontevedra",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-24T21:00:00+02:00",
+   "local": "Cultural Leonesa",
+   "localId": "cultural-leonesa",
+   "visitante": "Pontevedra",
+   "visitanteId": "pontevedra",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "CUL",
+   "visitanteAbbr": "PON",
+   "provisional": false
+  },
+  {
+   "id": "2627-5-9-atletico-madrileno-real-jaen",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-25T12:00:00+01:00",
+   "local": "Atlético Madrileño",
+   "localId": "atletico-madrileno",
+   "visitante": "Real Jaén",
+   "visitanteId": "real-jaen",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "ATM",
+   "visitanteAbbr": "JAE",
+   "provisional": false
+  },
+  {
    "id": "2627-1-10-ath-get",
    "canales": [
     "daznll"
@@ -341,6 +497,23 @@
    "localId": "sab",
    "visitante": "CD Tenerife",
    "visitanteId": "ten"
+  },
+  {
+   "id": "2627-5-9-villarreal-b-cartagena",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-25T14:15:00+01:00",
+   "local": "Villarreal B",
+   "localId": "villarreal-b",
+   "visitante": "Cartagena",
+   "visitanteId": "cartagena",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "VIB",
+   "visitanteAbbr": "CAR",
+   "provisional": false
   },
   {
    "id": "2627-1-10-cel-bet",
@@ -386,6 +559,23 @@
    "visitanteId": "ceu"
   },
   {
+   "id": "2627-5-9-algeciras-cf-real-madrid-castilla",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-25T16:30:00+01:00",
+   "local": "Algeciras CF",
+   "localId": "algeciras-cf",
+   "visitante": "Real Madrid Castilla",
+   "visitanteId": "real-madrid-castilla",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "ALG",
+   "visitanteAbbr": "RMC",
+   "provisional": false
+  },
+  {
    "id": "2627-1-10-rso-lev",
    "canales": [
     "mliga"
@@ -412,6 +602,23 @@
    "localId": "cas",
    "visitante": "Real Sporting",
    "visitanteId": "spo"
+  },
+  {
+   "id": "2627-5-9-gimnastic-de-tarragona-hercules",
+   "liga": 5,
+   "jornada": "9",
+   "inicio": "2026-10-25T18:45:00+01:00",
+   "local": "Gimnàstic de Tarragona",
+   "localId": "gimnastic-de-tarragona",
+   "visitante": "Hércules",
+   "visitanteId": "hercules",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "NAS",
+   "visitanteAbbr": "HER",
+   "provisional": false
   },
   {
    "id": "2627-1-10-bar-rma",
@@ -1201,6 +1408,176 @@
     "mcopa"
    ],
    "localAbbr": "HOR",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-atletico-madrileno-alcorcon",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-10-30T21:00:00+01:00",
+   "local": "Atlético Madrileño",
+   "localId": "atletico-madrileno",
+   "visitante": "Alcorcón",
+   "visitanteId": "alcorcon",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "ATM",
+   "visitanteAbbr": "ALC",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-ud-logrones-mirandes",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-10-31T16:30:00+01:00",
+   "local": "UD Logroñés",
+   "localId": "ud-logrones",
+   "visitante": "Mirandés",
+   "visitanteId": "mirandes",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "LOG",
+   "visitanteAbbr": "MIR",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-real-madrid-castilla-cartagena",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-10-31T18:45:00+01:00",
+   "local": "Real Madrid Castilla",
+   "localId": "real-madrid-castilla",
+   "visitante": "Cartagena",
+   "visitanteId": "cartagena",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "RMC",
+   "visitanteAbbr": "CAR",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-real-zaragoza-villarreal-b",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-10-31T21:00:00+01:00",
+   "local": "Real Zaragoza",
+   "localId": "real-zaragoza",
+   "visitante": "Villarreal B",
+   "visitanteId": "villarreal-b",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "ZAR",
+   "visitanteAbbr": "VIB",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-antequera-real-murcia",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-01T12:00:00+01:00",
+   "local": "Antequera",
+   "localId": "antequera",
+   "visitante": "Real Murcia",
+   "visitanteId": "real-murcia",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "ANT",
+   "visitanteAbbr": "MUR",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-ud-ourense-cultural-leonesa",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-01T16:30:00+01:00",
+   "local": "UD Ourense",
+   "localId": "ud-ourense",
+   "visitante": "Cultural Leonesa",
+   "visitanteId": "cultural-leonesa",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "OUR",
+   "visitanteAbbr": "CUL",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-cd-lugo-merida",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-01T18:45:00+01:00",
+   "local": "CD Lugo",
+   "localId": "cd-lugo",
+   "visitante": "Mérida",
+   "visitanteId": "merida",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "LUG",
+   "visitanteAbbr": "MER",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-cd-extremadura-unionistas-de-salamanca",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-01T21:00:00+01:00",
+   "local": "CD Extremadura",
+   "localId": "cd-extremadura",
+   "visitante": "Unionistas de Salamanca",
+   "visitanteId": "unionistas-de-salamanca",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "EXT",
+   "visitanteAbbr": "UNI",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-real-jaen-algeciras-cf",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-02T18:15:00+01:00",
+   "local": "Real Jaén",
+   "localId": "real-jaen",
+   "visitante": "Algeciras CF",
+   "visitanteId": "algeciras-cf",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "JAE",
+   "visitanteAbbr": "ALG",
+   "provisional": true
+  },
+  {
+   "id": "2627-5-10-sd-huesca-gimnastic-de-tarragona",
+   "liga": 5,
+   "jornada": "10",
+   "inicio": "2026-11-02T20:30:00+01:00",
+   "local": "SD Huesca",
+   "localId": "sd-huesca",
+   "visitante": "Gimnàstic de Tarragona",
+   "visitanteId": "gimnastic-de-tarragona",
+   "canales": [
+    "rfef",
+    "daznrfef"
+   ],
+   "localAbbr": "HUE",
+   "visitanteAbbr": "NAS",
    "provisional": true
   },
   {

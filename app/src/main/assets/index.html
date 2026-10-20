@@ -46,9 +46,11 @@ header.top .wrap{padding-block:14px 12px;display:flex;flex-direction:column;gap:
 .brand h1{margin:0;font-family:var(--f-display);font-weight:800;font-size:30px;letter-spacing:.01em;text-transform:uppercase;line-height:1}
 .brand h1 span{color:var(--accent)}
 .brand .jor{white-space:nowrap;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;text-align:right}
-.tabs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr) minmax(0,.85fr) minmax(0,1.3fr);background:rgba(255,255,255,.08);border-radius:10px;padding:3px;gap:3px}
-.tabs button{appearance:none;border:0;background:transparent;color:inherit;font-family:var(--f-display);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0;padding:7px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:8px;cursor:pointer;line-height:1.1}
-.tabs button small{display:block;font-family:var(--f-body);font-weight:500;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:none;letter-spacing:0;opacity:.75}
+.tabs{display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;background:rgba(255,255,255,.08);border-radius:10px;padding:3px;gap:3px}
+.tabs button{appearance:none;border:0;background:transparent;color:inherit;font-family:var(--f-display);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0;padding:7px 9px;white-space:nowrap;flex:1 0 auto;border-radius:8px;cursor:pointer;line-height:1.1}
+.tabs::-webkit-scrollbar{display:none}
+.tabs.mas{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+.tabs button small{display:block;font-family:var(--f-body);font-weight:500;font-size:9.5px;white-space:nowrap;text-transform:none;letter-spacing:0;opacity:.75}
 .tabs button[aria-selected="true"]{background:var(--pitch-ink);color:var(--pitch)}
 .tabs button:focus-visible,.match:focus-visible,.close:focus-visible,.search input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .search{position:relative}
@@ -166,6 +168,7 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
     <div class="tabs" role="tablist">
       <button role="tab" id="tab-1" aria-selected="true" data-l="1">Primera<small>1ª División</small></button>
       <button role="tab" id="tab-2" aria-selected="false" data-l="2">Segunda<small>2ª División</small></button>
+      <button role="tab" id="tab-5" aria-selected="false" data-l="5">1ª RFEF<small>Primera Fed.</small></button>
       <button role="tab" id="tab-3" aria-selected="false" data-l="3">Copa<small>Copa del Rey</small></button>
       <button role="tab" id="tab-4" aria-selected="false" data-l="4">Champions<small>Liga Campeones</small></button>
     </div>
@@ -217,6 +220,9 @@ const CH = {
   mcopa:   {name:"Movistar Plus+",          short:"M+",   op:"m",      dial:"",    logo:"", how:"Partido de Copa en Movistar Plus+. El canal exacto se publica unos días antes."},
   la1:     {name:"La 1",                    short:"La1",  op:"free",   dial:"TDT", logo:"", how:"Gratis en la TDT y en RTVE Play."},
   rtveplay:{name:"RTVE Play",               short:"RTVE", op:"free",   dial:"",    logo:"", how:"Gratis en la web y la app de RTVE Play."},
+  rfef:    {name:"PRIMERA FEDERACIÓN",      short:"1ªF",  op:"m",      dial:"53",  logo:"", how:"Canal de Primera Federación de Movistar Plus+: 10 partidos por jornada."},
+  daznrfef:{name:"DAZN",                    short:"DAZN", op:"dazn",   dial:"",    logo:"", how:"Canal de Primera Federación en DAZN, con los partidos destacados de la jornada."},
+  fclub:   {name:"FootballClub",            short:"FC",   op:"dazn",   dial:"",    logo:"", how:"Plataforma de pago por internet con los 20 partidos de cada jornada."},
   daznhm:  {name:"DAZN",                    short:"DAZN", op:"dazn",   dial:"",    logo:"", how:"App de DAZN y operadores que integran su paquete (Vodafone, Orange, Digi, Yoigo…)."}
 };
 
@@ -233,7 +239,7 @@ const T = {};
  ["cas","CD Castellón","CAS"],["spo","Real Sporting","SPO"],["and","FC Andorra","AND"],["bur","Burgos CF","BUR"]
 ].forEach(([id,name,abbr])=>T[id]={id,name,abbr});
 const CANARY=new Set(["lpa","ten","paso"]);
-const COMP={1:{short:"Primera",name:"LALIGA EA SPORTS"},2:{short:"Segunda",name:"LALIGA HYPERMOTION"},3:{short:"la Copa",name:"COPA DEL REY"},4:{short:"la Champions",name:"UEFA CHAMPIONS LEAGUE"}};
+const COMP={1:{short:"Primera",name:"LALIGA EA SPORTS"},2:{short:"Segunda",name:"LALIGA HYPERMOTION"},5:{short:"Primera Federación",name:"PRIMERA FEDERACIÓN"},3:{short:"la Copa",name:"COPA DEL REY"},4:{short:"la Champions",name:"UEFA CHAMPIONS LEAGUE"}};
 const jornLabel=j=>/^\d+$/.test(String(j))?"Jornada "+j:String(j||"");
 const PREF=new Set(["cd","ud","sd","cf","fc","rcd","ad","ce","ue","rsd","sc","cda","ub","rc","club","de","del","la","el","real","atlético","atletico","sporting","deportivo","ca","sad","cp","as","ac","afc","rb","ss","sv"]);
 function siglas(n){const w=String(n).split(/[\s\-\/]+/).filter(x=>x.length>2&&!PREF.has(x.toLowerCase()));return ((w[0]||String(n)).replace(/[^A-Za-zÁÉÍÓÚÑÜÇáéíóúñüç]/g,"").slice(0,3)||"?").toUpperCase()}
@@ -302,7 +308,7 @@ function ago(iso){
 
 /* ---------- Estado ---------- */
 let league=1, query="", matches=null, meta=null, dbState="loading";
-try{const v=+localStorage.getItem("dle-league");if(v>=1&&v<=4)league=v}catch(e){}
+try{const v=+localStorage.getItem("dle-league");if(v>=1&&v<=5)league=v}catch(e){}
 
 function renderFresh(){
   const el=document.getElementById("fresh"),t=document.getElementById("fresh-t");
@@ -314,7 +320,7 @@ function renderFresh(){
 function render(){
   renderFresh();
   if(matches&&!hashHecho){hashHecho=true;setTimeout(abrirHash,0)}
-  document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",String(+b.dataset.l===league)));
+  document.querySelectorAll(".tabs button").forEach(b=>{const on=+b.dataset.l===league;b.setAttribute("aria-selected",String(on));if(on&&b.scrollIntoView)try{b.scrollIntoView({block:"nearest",inline:"nearest"})}catch(e){}});
   const app=document.getElementById("app");
   if(matches===null){
     return;
@@ -346,7 +352,7 @@ function render(){
       </button>`}).join("")}
     </div></section>`).join("")+foot();
 }
-function foot(){return `<p class="foot">Horarios oficiales de LALIGA, RFEF y UEFA; canal exacto según la guía de Movistar Plus+, DAZN y RTVE. Hora peninsular. Pueden cambiar a última hora: si es un partido importante, mira la ficha el mismo día.</p>`}
+function foot(){return `<p class="foot">Horarios oficiales de LALIGA, RFEF y UEFA; canal exacto según la guía de Movistar Plus+, DAZN, RTVE y las teles autonómicas. Hora peninsular. Pueden cambiar a última hora: si es un partido importante, mira la ficha el mismo día.</p>`}
 
 /* ---------- Compartir, enlaces y comentarios ---------- */
 const WEB="https://alexample.github.io/dondeloechan/";
@@ -522,6 +528,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!sheet.hidden)close
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
   league=+b.dataset.l;try{localStorage.setItem("dle-league",String(league))}catch(e){}render();window.scrollTo(0,0)}));
 document.getElementById("q").addEventListener("input",e=>{query=e.target.value;render()});
+(()=>{const t=document.querySelector(".tabs");const f=()=>t.classList.toggle("mas",t.scrollLeft+t.clientWidth<t.scrollWidth-4);t.addEventListener("scroll",f,{passive:true});addEventListener("resize",f);setTimeout(f,50)})();
 
 /* ---------- Datos ----------
    1) Última guía guardada en el móvil, para abrir al instante y sin conexión.

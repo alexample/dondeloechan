@@ -1,6 +1,6 @@
 # Dónde lo Echan
 
-App de Android que dice el día, la hora y el canal exacto (con su dial) de cada partido de Primera, Segunda, Copa del Rey y Champions League.
+App de Android que dice el día, la hora y el canal exacto (con su dial) de cada partido de Primera, Segunda, Primera Federación, Copa del Rey y Champions League.
 
 ## Instalar en el móvil
 
