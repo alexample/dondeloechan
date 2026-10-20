@@ -25,3 +25,9 @@ La app usa monogramas. Para poner escudos con permiso de uso, mira `app/src/main
 ## Google Play
 
 Antes de publicar en Play, sustituye la clave de `keystore/` por una privada guardada como secreto de GitHub y genera un `.aab` (`gradle :app:bundleRelease`).
+
+## Web
+
+La misma guía se publica como web en **https://alexample.github.io/dondeloechan/** (workflow `Publicar web`).
+Se vuelve a publicar sola cada vez que cambia `data/partidos.json`. Desde el móvil se puede añadir a la pantalla de inicio.
+Para activarla la primera vez: Settings → Pages → Source: **GitHub Actions**.

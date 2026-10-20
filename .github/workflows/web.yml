@@ -1,0 +1,67 @@
+name: Publicar web
+
+# Publica la guía como web en GitHub Pages (alexample.github.io/dondeloechan).
+# Usa la misma página que la app y se vuelve a publicar cada vez que cambia la guía de partidos.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "app/src/main/assets/**"
+      - "data/**"
+      - "web/**"
+      - ".github/workflows/web.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  web:
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Montar la web
+        run: |
+          mkdir -p site
+          cp -r app/src/main/assets/. site/
+          cp web/* site/
+          cp data/partidos.json site/partidos.json
+          # En la web, la guía se lee del propio sitio.
+          echo 'window.DATOS_URL = "partidos.json";' > site/config.js
+          # Icono, color y "añadir a pantalla de inicio".
+          python3 - <<'PY'
+          p = "site/index.html"
+          s = open(p, encoding="utf-8").read()
+          extra = ('<meta name="theme-color" content="#1F5E3B">\n'
+                   '<meta name="description" content="Día, hora y canal exacto de cada partido de Primera, Segunda, Copa del Rey y Champions.">\n'
+                   '<link rel="manifest" href="manifest.webmanifest">\n'
+                   '<link rel="icon" href="icon.svg" type="image/svg+xml">\n'
+                   '<link rel="apple-touch-icon" href="apple-touch-icon.png">\n'
+                   '<meta name="apple-mobile-web-app-capable" content="yes">\n'
+                   '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">\n'
+                   '<meta name="apple-mobile-web-app-title" content="Dónde lo Echan">\n')
+          s = s.replace("<title>", extra + "<title>", 1)
+          s = s.replace('content="width=device-width,initial-scale=1"', 'content="width=device-width,initial-scale=1,viewport-fit=cover"', 1)
+          open(p, "w", encoding="utf-8").write(s)
+          PY
+          touch site/.nojekyll
+          ls -la site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
