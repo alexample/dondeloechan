@@ -37,7 +37,7 @@ jobs:
           cp web/* site/
           cp data/partidos.json site/partidos.json
           # En la web, la guía se lee del propio sitio.
-          echo 'window.DATOS_URL = "partidos.json";' > site/config.js
+          echo 'window.DATOS_URL = "partidos.json";' >> site/config.js
           # Icono, color y "añadir a pantalla de inicio".
           python3 - <<'PY'
           p = "site/index.html"

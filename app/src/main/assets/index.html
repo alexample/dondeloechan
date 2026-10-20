@@ -138,6 +138,14 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .ch .tag{align-self:flex-start;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:1px 6px;border-radius:4px;border:1px solid currentColor}
 .note{font-size:13px;color:var(--muted);background:var(--bg);border-radius:10px;padding:10px 12px;margin:0}
 .note.warn{background:var(--warn-bg);color:var(--warn)}
+.acciones{display:flex;flex-wrap:wrap;gap:8px}
+.btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:12px;border:0;background:var(--pitch);color:var(--pitch-ink);font:inherit;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;flex:1 1 auto}
+.btn.sec{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#comentarios{min-height:0}
+#comentarios:not(:empty){border-top:1px solid var(--line);padding-top:14px}
+.aviso{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:40;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:14px;font-weight:600;transition:opacity .2s,transform .2s;pointer-events:none;max-width:calc(100% - 32px)}
+.aviso.on{opacity:1;transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){.sheet,.scrim,.match{transition:none}.skel::after{animation:none}}
 </style>
 <script src="config.js"></script>
@@ -291,6 +299,7 @@ function renderFresh(){
 }
 function render(){
   renderFresh();
+  if(matches&&!hashHecho){hashHecho=true;setTimeout(abrirHash,0)}
   document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",String(+b.dataset.l===league)));
   const app=document.getElementById("app");
   if(matches===null){
@@ -325,6 +334,44 @@ function render(){
 }
 function foot(){return `<p class="foot">Horarios oficiales de LALIGA, RFEF y UEFA; canal exacto según la guía de Movistar Plus+, DAZN y RTVE. Hora peninsular. Pueden cambiar a última hora: si es un partido importante, mira la ficha el mismo día.</p>`}
 
+/* ---------- Compartir, enlaces y comentarios ---------- */
+const WEB="https://alexample.github.io/dondeloechan/";
+let actual=null,hashHecho=false;
+const enlace=m=>WEB+"#p-"+m._id;
+function marcar(h){try{if(!/github\.io$/.test(location.hostname))return;history.replaceState(null,"",h?"#"+h:location.pathname)}catch(e){}}
+function aviso(t){let el=document.getElementById("aviso");if(!el){el=document.createElement("div");el.id="aviso";el.className="aviso";el.setAttribute("role","status");document.body.appendChild(el)}el.textContent=t;el.classList.add("on");clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove("on"),2600)}
+function textoPartido(m){
+  const d=new Date(m.inicio),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=(m.canales||[]).map(chOf);
+  const dial=c=>c.dial&&c.dial!=="TDT"?` (dial ${c.dial})`:c.orange?` (Orange ${c.orange})`:"";
+  const tv=ch.length?"📺 "+ch[0].name+dial(ch[0])+(ch[1]?" · también "+ch[1].name+dial(ch[1]):""):m.sinTV?"Sin televisión":"Canal por confirmar";
+  return `⚽ ${h.name} – ${a.name}\n${(COMP[m.liga]||{}).name||""}\n🗓 ${cap(fDay.format(d))}${m.horaPendiente?" · hora por fijar":" · "+fTime.format(d)+" h"}\n${tv}\n${enlace(m)}`;
+}
+async function compartir(m){
+  const t=textoPartido(m);
+  try{if(window.AndroidApp&&window.AndroidApp.compartir){window.AndroidApp.compartir(t);return}}catch(e){}
+  if(navigator.share){try{await navigator.share({text:t});return}catch(e){if(e&&e.name==="AbortError")return}}
+  try{await navigator.clipboard.writeText(t);aviso("Copiado. Pégalo en WhatsApp o donde quieras.")}
+  catch(e){aviso("No se ha podido copiar el partido.")}
+}
+function abrirHash(){
+  let h="";try{h=decodeURIComponent(location.hash.slice(1))}catch(e){}
+  if(!h.startsWith("p-")||!matches)return;
+  const m=matches.find(x=>x._id===h.slice(2));
+  if(m){league=m.liga;render();open(m._id)}
+}
+const G=()=>window.GISCUS&&window.GISCUS.categoryId?window.GISCUS:null;
+const conComentariosAqui=()=>!!G()&&!window.AndroidApp&&/github\.io$/.test(location.hostname);
+const conComentariosFuera=()=>!!G()&&!!window.AndroidApp;
+function cargarComentarios(m){
+  const g=G(),box=document.getElementById("comentarios");if(!g||!box)return;
+  const s=document.createElement("script");
+  s.src="https://giscus.app/client.js";s.async=true;s.crossOrigin="anonymous";
+  const at={repo:g.repo,"repo-id":g.repoId,category:g.category,"category-id":g.categoryId,mapping:"specific",term:m._id,strict:"1",
+    "reactions-enabled":"1","emit-metadata":"0","input-position":"top",theme:"preferred_color_scheme",lang:"es",loading:"lazy"};
+  for(const k in at)s.setAttribute("data-"+k,at[k]);
+  box.appendChild(s);
+}
+
 /* ---------- Ficha ---------- */
 const sheet=document.getElementById("sheet"),scrim=document.getElementById("scrim");
 let lastFocus=null;
@@ -358,9 +405,17 @@ function open(id){
                   :`<span class="dialbox"><small>Vía</small><b style="font-size:14px">App</b></span>`}
         </div>`}).join(""):m.sinTV?`<p class="note warn">Este partido no se emite por televisión.</p>`:`<p class="note warn">El canal de este partido aún no se ha publicado. La guía lo añadirá en su próxima comprobación.</p>`}
     </div>
-    ${m.provisional?`<p class="note warn">Canal provisional: La señal exacta (M+ LALIGA 2, Liga de Campeones 3…) suele confirmarse unos días antes del partido.</p>`:""}
+    ${m.provisional?`<p class="note warn">Canal provisional: la señal exacta (M+ LALIGA 2, Liga de Campeones 3…) suele confirmarse unos días antes del partido.</p>`:""}
     ${m.nota?`<p class="note">${esc(m.nota)}</p>`:""}
+    <div class="acciones">
+      <button class="btn" id="compartir" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/></svg>Compartir partido</button>
+      ${conComentariosFuera()?`<a class="btn sec" href="${esc(enlace(m))}" target="_blank" rel="noopener">Comentarios</a>`:""}
+    </div>
+    ${conComentariosAqui()?`<div><h3 class="sec-t">Comentarios</h3><div id="comentarios"></div></div>`:""}
   </div>`;
+  actual=m;
+  if(conComentariosAqui())cargarComentarios(m);
+  marcar("p-"+m._id);
   lastFocus=document.activeElement;
   scrim.hidden=false;sheet.hidden=false;
   requestAnimationFrame(()=>{scrim.classList.add("on");sheet.classList.add("on")});
@@ -368,12 +423,13 @@ function open(id){
   document.getElementById("close").focus();
 }
 function close(){
+  actual=null;marcar("");
   scrim.classList.remove("on");sheet.classList.remove("on");
   setTimeout(()=>{scrim.hidden=true;sheet.hidden=true},230);
   if(lastFocus)lastFocus.focus();
 }
 document.getElementById("app").addEventListener("click",e=>{const b=e.target.closest(".match");if(b)open(b.dataset.id)});
-sheet.addEventListener("click",e=>{if(e.target.id==="close")close()});
+sheet.addEventListener("click",e=>{if(e.target.id==="close")close();else if(e.target.closest("#compartir")&&actual)compartir(actual)});
 scrim.addEventListener("click",close);
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!sheet.hidden)close()});
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{

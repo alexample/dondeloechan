@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
@@ -86,6 +87,9 @@ public class MainActivity extends Activity {
             }
         });
 
+        // "Compartir partido": la página llama a AndroidApp.compartir(texto) y se abre el menú de compartir de Android.
+        web.addJavascriptInterface(new Puente(), "AndroidApp");
+
         if (savedInstanceState != null) web.restoreState(savedInstanceState);
         else web.loadUrl(START);
     }
@@ -110,5 +114,18 @@ public class MainActivity extends Activity {
         web.evaluateJavascript("window.atras ? window.atras() : false", value -> {
             if (!"true".equals(value)) MainActivity.super.onBackPressed();
         });
+    }
+
+    /** Lo único que la página puede pedir a Android: compartir un texto. */
+    private class Puente {
+        @JavascriptInterface
+        public void compartir(final String texto) {
+            runOnUiThread(() -> {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_TEXT, texto);
+                try { startActivity(Intent.createChooser(i, "Compartir partido")); } catch (Exception ignored) { }
+            });
+        }
     }
 }
