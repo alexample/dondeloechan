@@ -45,10 +45,10 @@ header.top .wrap{padding-block:14px 12px;display:flex;flex-direction:column;gap:
 .brand{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
 .brand h1{margin:0;font-family:var(--f-display);font-weight:800;font-size:30px;letter-spacing:.01em;text-transform:uppercase;line-height:1}
 .brand h1 span{color:var(--accent)}
-.brand .jor{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;text-align:right}
-.tabs{display:grid;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.08);border-radius:10px;padding:3px;gap:3px}
-.tabs button{appearance:none;border:0;background:transparent;color:inherit;font-family:var(--f-display);font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:.03em;padding:8px 6px;border-radius:8px;cursor:pointer;line-height:1.1}
-.tabs button small{display:block;font-family:var(--f-body);font-weight:500;font-size:11px;text-transform:none;letter-spacing:0;opacity:.75}
+.brand .jor{white-space:nowrap;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;text-align:right}
+.tabs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr) minmax(0,.85fr) minmax(0,1.3fr);background:rgba(255,255,255,.08);border-radius:10px;padding:3px;gap:3px}
+.tabs button{appearance:none;border:0;background:transparent;color:inherit;font-family:var(--f-display);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0;padding:7px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:8px;cursor:pointer;line-height:1.1}
+.tabs button small{display:block;font-family:var(--f-body);font-weight:500;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:none;letter-spacing:0;opacity:.75}
 .tabs button[aria-selected="true"]{background:var(--pitch-ink);color:var(--pitch)}
 .tabs button:focus-visible,.match:focus-visible,.close:focus-visible,.search input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .search{position:relative}
@@ -78,7 +78,7 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .team .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
 
-.crest{flex:none;width:26px;height:26px;border-radius:50% 50% 46% 46%/42% 42% 58% 58%;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:10px;letter-spacing:.02em;color:#fff;position:relative;overflow:hidden}
+.crest{flex:none;width:26px;height:26px;border-radius:50% 50% 46% 46%/42% 42% 58% 58%;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:9px;letter-spacing:0;color:#fff;position:relative;overflow:hidden}
 .crest img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--surface)}
 .crest.lg{width:64px;height:64px;font-size:20px}
 
@@ -152,8 +152,10 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
       <div class="jor" id="jor"></div>
     </div>
     <div class="tabs" role="tablist">
-      <button role="tab" id="tab-1" aria-selected="true" data-l="1">Primera<small>LALIGA EA SPORTS</small></button>
-      <button role="tab" id="tab-2" aria-selected="false" data-l="2">Segunda<small>LALIGA HYPERMOTION</small></button>
+      <button role="tab" id="tab-1" aria-selected="true" data-l="1">Primera<small>1ª División</small></button>
+      <button role="tab" id="tab-2" aria-selected="false" data-l="2">Segunda<small>2ª División</small></button>
+      <button role="tab" id="tab-3" aria-selected="false" data-l="3">Copa<small>Copa del Rey</small></button>
+      <button role="tab" id="tab-4" aria-selected="false" data-l="4">Champions<small>Liga Campeones</small></button>
     </div>
     <label class="search">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -191,6 +193,18 @@ const CH = {
   hyper:   {name:"LALIGA TV HYPERMOTION",   short:"HM",   op:"m",      dial:"56",  orange:"120", logo:"", how:"Movistar Plus+ y Orange TV."},
   hyper2:  {name:"LALIGA TV HYPERMOTION 2", short:"HM2",  op:"m",      dial:"59",  logo:"", how:"Señal paralela de Movistar Plus+ cuando coinciden partidos de Segunda."},
   hyper3:  {name:"LALIGA TV HYPERMOTION 3", short:"HM3",  op:"m",      dial:"",    logo:"", how:"Señal paralela de Movistar Plus+; búscala en la guía o en la app."},
+  mlc:     {name:"M+ LIGA DE CAMPEONES",    short:"LC",   op:"m",      dial:"60",  logo:"", how:"Movistar Plus+, que emite en exclusiva toda la Champions."},
+  mlc2:    {name:"M+ LIGA DE CAMPEONES 2",  short:"LC2",  op:"m",      dial:"61",  logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlc3:    {name:"M+ LIGA DE CAMPEONES 3",  short:"LC3",  op:"m",      dial:"62",  logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlcmulti:{name:"Multichampions",          short:"LC4",  op:"m",      dial:"180", logo:"", how:"M+ Liga de Campeones 4: todos los partidos de las 21:00 a la vez, con los goles en directo."},
+  mlc5:    {name:"M+ LIGA DE CAMPEONES 5",  short:"LC5",  op:"m",      dial:"181", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlc6:    {name:"M+ LIGA DE CAMPEONES 6",  short:"LC6",  op:"m",      dial:"182", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlc7:    {name:"M+ LIGA DE CAMPEONES 7",  short:"LC7",  op:"m",      dial:"183", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlc8:    {name:"M+ LIGA DE CAMPEONES 8",  short:"LC8",  op:"m",      dial:"184", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlcpend: {name:"M+ Liga de Campeones",    short:"LC",   op:"m",      dial:"60–62", logo:"", how:"Toda la Champions va por Movistar Plus+. La señal exacta se publica unos días antes."},
+  mcopa:   {name:"Movistar Plus+",          short:"M+",   op:"m",      dial:"",    logo:"", how:"Partido de Copa en Movistar Plus+. El canal exacto se publica unos días antes."},
+  la1:     {name:"La 1",                    short:"La1",  op:"free",   dial:"TDT", logo:"", how:"Gratis en la TDT y en RTVE Play."},
+  rtveplay:{name:"RTVE Play",               short:"RTVE", op:"free",   dial:"",    logo:"", how:"Gratis en la web y la app de RTVE Play."},
   daznhm:  {name:"DAZN",                    short:"DAZN", op:"dazn",   dial:"",    logo:"", how:"App de DAZN y operadores que integran su paquete (Vodafone, Orange, Digi, Yoigo…)."}
 };
 
@@ -206,7 +220,11 @@ const T = {};
  ["sab","CE Sabadell","SAB"],["ten","CD Tenerife","TEN"],["cad","Cádiz CF","CAD"],["ceu","AD Ceuta FC","CEU"],["alb","Albacete BP","ALB"],["eld","CD Eldense","ELD"],
  ["cas","CD Castellón","CAS"],["spo","Real Sporting","SPO"],["and","FC Andorra","AND"],["bur","Burgos CF","BUR"]
 ].forEach(([id,name,abbr])=>T[id]={id,name,abbr});
-const CANARY=new Set(["lpa","ten"]);
+const CANARY=new Set(["lpa","ten","paso"]);
+const COMP={1:{short:"Primera",name:"LALIGA EA SPORTS"},2:{short:"Segunda",name:"LALIGA HYPERMOTION"},3:{short:"la Copa",name:"COPA DEL REY"},4:{short:"la Champions",name:"UEFA CHAMPIONS LEAGUE"}};
+const jornLabel=j=>/^\d+$/.test(String(j))?"Jornada "+j:String(j||"");
+const PREF=new Set(["cd","ud","sd","cf","fc","rcd","ad","ce","ue","rsd","sc","cda","ub","rc","club","de","del","la","el","real","atlético","atletico","sporting","deportivo","ca","sad","cp","as","ac","afc","rb","ss","sv"]);
+function siglas(n){const w=String(n).split(/[\s\-\/]+/).filter(x=>x.length>2&&!PREF.has(x.toLowerCase()));return ((w[0]||String(n)).replace(/[^A-Za-zÁÉÍÓÚÑÜÇáéíóúñüç]/g,"").slice(0,3)||"?").toUpperCase()}
 /* Escudos: lista de ids con imagen en assets/escudos/ (escudos/lista.json). */
 let ESCUDOS=new Set();
 
@@ -223,11 +241,11 @@ const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 const norm=s=>String(s).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
 const hue=str=>{let h=0;for(const c of str)h=(h*31+c.charCodeAt(0))%360;return h};
 
-function teamOf(id,name){
+function teamOf(id,name,ab){
   const t=T[id];
   if(t)return t;
   const n=name||id||"?";
-  return {id:id||"",name:n,abbr:n.replace(/[^A-Za-zÁÉÍÓÚÑ]/g,"").slice(0,3).toUpperCase()};
+  return {id:id||"",name:n,abbr:ab||siglas(n)};
 }
 function crest(t,big){
   const h=hue(t.name);
@@ -262,7 +280,7 @@ function ago(iso){
 
 /* ---------- Estado ---------- */
 let league=1, query="", matches=null, meta=null, dbState="loading";
-try{if(localStorage.getItem("dle-league")==="2")league=2}catch(e){}
+try{const v=+localStorage.getItem("dle-league");if(v>=1&&v<=4)league=v}catch(e){}
 
 function renderFresh(){
   const el=document.getElementById("fresh"),t=document.getElementById("fresh-t");
@@ -280,13 +298,13 @@ function render(){
   }
   const now=Date.now();
   const all=matches.filter(m=>m.liga===league);
-  const jors=[...new Set(all.filter(m=>!status(m,now)||status(m,now)==="live").map(m=>m.jornada))].filter(j=>/^\d+$/.test(String(j)));
-  document.getElementById("jor").innerHTML=jors.length?`Jornada ${jors.join(" y ")}`:"";
+  const jors=[...new Set(all.filter(m=>!status(m,now)||status(m,now)==="live").map(m=>m.jornada))].filter(j=>j&&j!=="Partido aplazado");
+  document.getElementById("jor").textContent=jors.length?jornLabel(jors[0]):"";
   const q=norm(query.trim());
   const list=all.filter(m=>!q||norm(m.local+" "+m.visitante).includes(q)).sort((a,b)=>new Date(a.inicio)-new Date(b.inicio));
   if(!list.length){
     app.innerHTML=(q
-      ?`<div class="empty"><b>Sin partidos de “${esc(query)}”</b><span>No juega en ${league===1?"Primera":"Segunda"} en las próximas jornadas cargadas.</span></div>`
+      ?`<div class="empty"><b>Sin partidos de “${esc(query)}”</b><span>No juega en ${COMP[league].short} en los próximos días cargados.</span></div>`
       :`<div class="empty"><b>Aún no hay partidos cargados</b><span>La guía se rellena sola cuando LALIGA publica los horarios.</span></div>`)+foot();
     return;
   }
@@ -294,29 +312,29 @@ function render(){
   list.forEach(m=>{const k=fKey.format(new Date(m.inicio));(groups[k]=groups[k]||[]).push(m)});
   app.innerHTML=Object.values(groups).map(g=>`
     <section class="day"><h2>${cap(fDay.format(new Date(g[0].inicio)))}</h2><div class="list">
-    ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local),a=teamOf(m.visitanteId,m.visitante),ch=m.canales||[];return `
+    ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];return `
       <button class="match${st==="done"?" past":""}" data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
         <span class="kick"><b>${m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b><span class="${st||""}">${st==="live"?"En juego":st==="done"?"Final":m.etiqueta?esc(m.etiqueta):"h"}</span></span>
         <span class="teams">
           <span class="team">${crest(h)}<span class="nm">${esc(h.name)}</span></span>
           <span class="team">${crest(a)}<span class="nm">${esc(a.name)}</span></span>
-          <span class="chips">${ch.length?ch.slice(0,2).map(chip).join(""):`<span class="chip pend">Canal por confirmar</span>`}${ch.length>2?`<span class="chip op-dazn" style="padding-left:8px">+${ch.length-2}</span>`:""}${m.provisional&&ch.length?`<span class="chip pend">Provisional</span>`:""}</span>
+          <span class="chips">${ch.length?ch.slice(0,2).map(chip).join(""):m.sinTV?`<span class="chip pend">Sin TV</span>`:`<span class="chip pend">Canal por confirmar</span>`}${ch.length>2?`<span class="chip op-dazn" style="padding-left:8px">+${ch.length-2}</span>`:""}${m.provisional&&ch.length?`<span class="chip pend">Provisional</span>`:""}</span>
         </span>
       </button>`}).join("")}
     </div></section>`).join("")+foot();
 }
-function foot(){return `<p class="foot">Horarios oficiales de LALIGA; canal exacto según la guía de Movistar Plus+ y DAZN. Hora peninsular. Pueden cambiar a última hora: si es un partido importante, mira la ficha el mismo día.</p>`}
+function foot(){return `<p class="foot">Horarios oficiales de LALIGA, RFEF y UEFA; canal exacto según la guía de Movistar Plus+, DAZN y RTVE. Hora peninsular. Pueden cambiar a última hora: si es un partido importante, mira la ficha el mismo día.</p>`}
 
 /* ---------- Ficha ---------- */
 const sheet=document.getElementById("sheet"),scrim=document.getElementById("scrim");
 let lastFocus=null;
 function open(id){
   const m=matches&&matches.find(x=>x._id===id); if(!m)return;
-  const d=new Date(m.inicio),now=Date.now(),h=teamOf(m.localId,m.local),a=teamOf(m.visitanteId,m.visitante),ch=m.canales||[];
+  const d=new Date(m.inicio),now=Date.now(),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];
   const canary=CANARY.has(m.localId);
   sheet.innerHTML=`<div class="wrap">
     <div class="grab"></div>
-    <div class="sh-head"><span class="comp">${m.liga===1?"LALIGA EA SPORTS":"LALIGA HYPERMOTION"} · ${/^\d+$/.test(String(m.jornada))?"Jornada "+esc(m.jornada):esc(m.jornada)}</span><button class="close" id="close" aria-label="Cerrar">×</button></div>
+    <div class="sh-head"><span class="comp">${(COMP[m.liga]||{}).name||""} · ${esc(jornLabel(m.jornada))}</span><button class="close" id="close" aria-label="Cerrar">×</button></div>
     <div class="vs">
       <div class="side">${crest(h,1)}<b id="sh-title">${esc(h.name)}</b></div>
       <div class="mid">VS</div>
@@ -338,9 +356,9 @@ function open(id){
           ${k.dial?`<span class="dialbox"><small>${k.dial==="TDT"?"Vía":"Dial M+"}</small><b>${esc(k.dial)}</b>${k.orange?`<em>Orange ${esc(k.orange)}</em>`:""}</span>`
                   :k.orange?`<span class="dialbox"><small>Dial Orange</small><b>${esc(k.orange)}</b></span>`
                   :`<span class="dialbox"><small>Vía</small><b style="font-size:14px">App</b></span>`}
-        </div>`}).join(""):`<p class="note warn">El canal de este partido aún no se ha publicado. La guía lo añadirá en su próxima comprobación.</p>`}
+        </div>`}).join(""):m.sinTV?`<p class="note warn">Este partido no se emite por televisión.</p>`:`<p class="note warn">El canal de este partido aún no se ha publicado. La guía lo añadirá en su próxima comprobación.</p>`}
     </div>
-    ${m.provisional?`<p class="note warn">Canal provisional: Movistar suele confirmar la señal exacta (M+ LALIGA 2, Hypermotion 2…) unos días antes del partido.</p>`:""}
+    ${m.provisional?`<p class="note warn">Canal provisional: La señal exacta (M+ LALIGA 2, Liga de Campeones 3…) suele confirmarse unos días antes del partido.</p>`:""}
     ${m.nota?`<p class="note">${esc(m.nota)}</p>`:""}
   </div>`;
   lastFocus=document.activeElement;

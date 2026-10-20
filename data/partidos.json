@@ -1,6 +1,36 @@
 {
- "actualizado": "2026-10-20T20:45:00+02:00",
+ "actualizado": "2026-10-20T22:55:00+02:00",
  "partidos": [
+  {
+   "id": "2627-4-fase-liga-j3-como-manchester-united",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-21T18:45:00+02:00",
+   "local": "Como",
+   "localId": "como",
+   "visitante": "Manchester United",
+   "visitanteId": "manchester-united",
+   "canales": [
+    "mlc2"
+   ],
+   "localAbbr": "COM",
+   "visitanteAbbr": "MUN"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-lille-galatasaray",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-21T18:45:00+02:00",
+   "local": "Lille",
+   "localId": "lille",
+   "visitante": "Galatasaray",
+   "visitanteId": "galatasaray",
+   "canales": [
+    "mlc3"
+   ],
+   "localAbbr": "LIL",
+   "visitanteAbbr": "GAL"
+  },
   {
    "id": "2627-1-apl-lev-ath",
    "canales": [
@@ -13,6 +43,119 @@
    "localId": "lev",
    "visitante": "Athletic Club",
    "visitanteId": "ath"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-aston-villa-viking",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-21T21:00:00+02:00",
+   "local": "Aston Villa",
+   "localId": "aston-villa",
+   "visitante": "Viking",
+   "visitanteId": "viking",
+   "canales": [
+    "mlc5",
+    "mlcmulti"
+   ],
+   "localAbbr": "AVL",
+   "visitanteAbbr": "VIK"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-bayern-munich-arsenal",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-21T21:00:00+02:00",
+   "local": "Bayern Múnich",
+   "localId": "bayern-munich",
+   "visitante": "Arsenal",
+   "visitanteId": "arsenal",
+   "canales": [
+    "mlc3",
+    "mlcmulti"
+   ],
+   "localAbbr": "BAY",
+   "visitanteAbbr": "ARS"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-bet-feyenoord",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-21T21:00:00+02:00",
+   "local": "Betis",
+   "localId": "bet",
+   "visitante": "Feyenoord",
+   "visitanteId": "feyenoord",
+   "canales": [
+    "mlc2",
+    "mlcmulti"
+   ],
+   "visitanteAbbr": "FEY"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-club-brugge-rc-lens",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-21T21:00:00+02:00",
+   "local": "Club Brugge",
+   "localId": "club-brugge",
+   "visitante": "RC Lens",
+   "visitanteId": "rc-lens",
+   "canales": [
+    "mlc6",
+    "mlcmulti"
+   ],
+   "localAbbr": "BRU",
+   "visitanteAbbr": "LEN"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-inter-shakhtar-donetsk",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-21T21:00:00+02:00",
+   "local": "Inter",
+   "localId": "inter",
+   "visitante": "Shakhtar Donetsk",
+   "visitanteId": "shakhtar-donetsk",
+   "canales": [
+    "mlc7",
+    "mlcmulti"
+   ],
+   "localAbbr": "INT",
+   "visitanteAbbr": "SHA"
+  },
+  {
+   "id": "2627-4-fase-liga-j3-rma-rb-leipzig",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-21T21:00:00+02:00",
+   "local": "Real Madrid",
+   "localId": "rma",
+   "visitante": "RB Leipzig",
+   "visitanteId": "rb-leipzig",
+   "canales": [
+    "mlc",
+    "mplus7",
+    "orange1",
+    "mlcmulti"
+   ],
+   "visitanteAbbr": "RBL",
+   "nota": "También en abierto para clientes de Movistar Plus+ en el dial 7."
+  },
+  {
+   "id": "2627-4-fase-liga-j3-sporting-cp-lask",
+   "liga": 4,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-10-21T21:00:00+02:00",
+   "local": "Sporting CP",
+   "localId": "sporting-cp",
+   "visitante": "LASK",
+   "visitanteId": "lask",
+   "canales": [
+    "mlc8",
+    "mlcmulti"
+   ],
+   "localAbbr": "SCP",
+   "visitanteAbbr": "LAS"
   },
   {
    "id": "2627-2-11-gra-vll",
@@ -310,6 +453,1038 @@
    "localId": "sev",
    "visitante": "CA Osasuna",
    "visitanteId": "osa"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-cuarte-gir",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T18:30:00+01:00",
+   "local": "CD Cuarte",
+   "localId": "cd-cuarte",
+   "visitante": "Girona",
+   "visitanteId": "gir",
+   "canales": [],
+   "localAbbr": "CUA"
+  },
+  {
+   "id": "2627-3-primera-ronda-calamocha-ce-europa",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T19:00:00+01:00",
+   "local": "Calamocha",
+   "localId": "calamocha",
+   "visitante": "CE Europa",
+   "visitanteId": "ce-europa",
+   "canales": [],
+   "localAbbr": "CAL",
+   "visitanteAbbr": "EUR"
+  },
+  {
+   "id": "2627-3-primera-ronda-sestao-river-esp",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T19:00:00+01:00",
+   "local": "Sestao River",
+   "localId": "sestao-river",
+   "visitante": "RCD Espanyol",
+   "visitanteId": "esp",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "SES",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-ud-pinatar-elc",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T19:00:00+01:00",
+   "local": "UD Pinatar",
+   "localId": "ud-pinatar",
+   "visitante": "Elche",
+   "visitanteId": "elc",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "PIN",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-ce-manresa-ue-sant-andreu",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T19:30:00+01:00",
+   "local": "CE Manresa",
+   "localId": "ce-manresa",
+   "visitante": "UE Sant Andreu",
+   "visitanteId": "ue-sant-andreu",
+   "canales": [],
+   "localAbbr": "MAN",
+   "visitanteAbbr": "SAN"
+  },
+  {
+   "id": "2627-3-primera-ronda-ud-castellonense-alm",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T19:45:00+01:00",
+   "local": "UD Castellonense",
+   "localId": "ud-castellonense",
+   "visitante": "UD Almería",
+   "visitanteId": "alm",
+   "canales": [],
+   "localAbbr": "CAS"
+  },
+  {
+   "id": "2627-3-primera-ronda-atletico-tordesillas-mirandes",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T20:00:00+01:00",
+   "local": "Atlético Tordesillas",
+   "localId": "atletico-tordesillas",
+   "visitante": "Mirandés",
+   "visitanteId": "mirandes",
+   "canales": [],
+   "localAbbr": "TOR",
+   "visitanteAbbr": "MIR"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-atletico-paso-cor",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T20:00:00+01:00",
+   "local": "CD Atlético Paso",
+   "localId": "cd-atletico-paso",
+   "visitante": "Córdoba",
+   "visitanteId": "cor",
+   "canales": [],
+   "localAbbr": "PAS",
+   "nota": "Se juega en La Palma: en Canarias, una hora menos."
+  },
+  {
+   "id": "2627-3-primera-ronda-ciudad-de-lucena-rayo-majadahonda",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T20:00:00+01:00",
+   "local": "Ciudad de Lucena",
+   "localId": "ciudad-de-lucena",
+   "visitante": "Rayo Majadahonda",
+   "visitanteId": "rayo-majadahonda",
+   "canales": [],
+   "localAbbr": "CIU",
+   "visitanteAbbr": "MAJ"
+  },
+  {
+   "id": "2627-3-primera-ronda-gimnastica-segoviana-cultural-leonesa",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T20:00:00+01:00",
+   "local": "Gimnástica Segoviana",
+   "localId": "gimnastica-segoviana",
+   "visitante": "Cultural Leonesa",
+   "visitanteId": "cultural-leonesa",
+   "canales": [],
+   "localAbbr": "SEG",
+   "visitanteAbbr": "CUL"
+  },
+  {
+   "id": "2627-3-primera-ronda-rsd-alcala-lpa",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T20:00:00+01:00",
+   "local": "RSD Alcalá",
+   "localId": "rsd-alcala",
+   "visitante": "Las Palmas",
+   "visitanteId": "lpa",
+   "canales": [],
+   "localAbbr": "ALC"
+  },
+  {
+   "id": "2627-3-primera-ronda-ud-llanera-ponferradina",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T20:00:00+01:00",
+   "local": "UD Llanera",
+   "localId": "ud-llanera",
+   "visitante": "Ponferradina",
+   "visitanteId": "ponferradina",
+   "canales": [],
+   "localAbbr": "LLA",
+   "visitanteAbbr": "PON"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-don-benito-cd-extremadura",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T20:30:00+01:00",
+   "local": "CD Don Benito",
+   "localId": "cd-don-benito",
+   "visitante": "CD Extremadura",
+   "visitanteId": "cd-extremadura",
+   "canales": [],
+   "localAbbr": "DON",
+   "visitanteAbbr": "EXT"
+  },
+  {
+   "id": "2627-3-primera-ronda-arosa-sc-pontevedra",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T21:00:00+01:00",
+   "local": "Arosa SC",
+   "localId": "arosa-sc",
+   "visitante": "Pontevedra",
+   "visitanteId": "pontevedra",
+   "canales": [],
+   "localAbbr": "ARO",
+   "visitanteAbbr": "PON"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-manacor-vil",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T21:00:00+01:00",
+   "local": "CD Manacor",
+   "localId": "cd-manacor",
+   "visitante": "Villarreal",
+   "visitanteId": "vil",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "MAN",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-recreativo-huelva-ray",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T21:00:00+01:00",
+   "local": "Recreativo Huelva",
+   "localId": "recreativo-huelva",
+   "visitante": "Rayo Vallecano",
+   "visitanteId": "ray",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "REC",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-sporting-de-alcazar-mal",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T21:00:00+01:00",
+   "local": "Sporting de Alcázar",
+   "localId": "sporting-de-alcazar",
+   "visitante": "Málaga",
+   "visitanteId": "mal",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "ALC",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-tudelano-real-zaragoza",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-27T21:00:00+01:00",
+   "local": "Tudelano",
+   "localId": "tudelano",
+   "visitante": "Real Zaragoza",
+   "visitanteId": "real-zaragoza",
+   "canales": [],
+   "localAbbr": "TUD",
+   "visitanteAbbr": "ZAR"
+  },
+  {
+   "id": "2627-3-primera-ronda-anaitasuna-ala",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T19:00:00+01:00",
+   "local": "Anaitasuna",
+   "localId": "anaitasuna",
+   "visitante": "Alavés",
+   "visitanteId": "ala",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "ANA",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-pamplona-eib",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T19:00:00+01:00",
+   "local": "CD Pamplona",
+   "localId": "cd-pamplona",
+   "visitante": "SD Eibar",
+   "visitanteId": "eib",
+   "canales": [],
+   "localAbbr": "PAM"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-tarancon-lev",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T19:00:00+01:00",
+   "local": "CD Tarancón",
+   "localId": "cd-tarancon",
+   "visitante": "Levante",
+   "visitanteId": "lev",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "TAR",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-coruxo-zamora",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T19:00:00+01:00",
+   "local": "Coruxo",
+   "localId": "coruxo",
+   "visitante": "Zamora",
+   "visitanteId": "zamora",
+   "canales": [],
+   "localAbbr": "COR",
+   "visitanteAbbr": "ZAM"
+  },
+  {
+   "id": "2627-3-primera-ronda-pena-sport-fc-sd-huesca",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T19:00:00+01:00",
+   "local": "Peña Sport FC",
+   "localId": "pena-sport-fc",
+   "visitante": "SD Huesca",
+   "visitanteId": "sd-huesca",
+   "canales": [],
+   "localAbbr": "PEÑ",
+   "visitanteAbbr": "HUE"
+  },
+  {
+   "id": "2627-3-primera-ronda-portugalete-real-union",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T19:00:00+01:00",
+   "local": "Portugalete",
+   "localId": "portugalete",
+   "visitante": "Real Unión",
+   "visitanteId": "real-union",
+   "canales": [],
+   "localAbbr": "POR",
+   "visitanteAbbr": "RUN"
+  },
+  {
+   "id": "2627-3-primera-ronda-ud-poblense-ceu",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T19:00:00+01:00",
+   "local": "UD Poblense",
+   "localId": "ud-poblense",
+   "visitante": "AD Ceuta",
+   "visitanteId": "ceu",
+   "canales": [],
+   "localAbbr": "POB"
+  },
+  {
+   "id": "2627-3-primera-ronda-utebo-sab",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T19:00:00+01:00",
+   "local": "Utebo",
+   "localId": "utebo",
+   "visitante": "CE Sabadell",
+   "visitanteId": "sab",
+   "canales": [],
+   "localAbbr": "UTE"
+  },
+  {
+   "id": "2627-3-primera-ronda-alcoyano-mll",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:00:00+01:00",
+   "local": "Alcoyano",
+   "localId": "alcoyano",
+   "visitante": "RCD Mallorca",
+   "visitanteId": "mll",
+   "canales": [],
+   "localAbbr": "ALC"
+  },
+  {
+   "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:00:00+01:00",
+   "local": "Calvo Sotelo Puertollano",
+   "localId": "calvo-sotelo-puertollano",
+   "visitante": "Albacete",
+   "visitanteId": "alb",
+   "canales": [],
+   "localAbbr": "CSP"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-badajoz-ten",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:00:00+01:00",
+   "local": "CD Badajoz",
+   "localId": "cd-badajoz",
+   "visitante": "Tenerife",
+   "visitanteId": "ten",
+   "canales": [],
+   "localAbbr": "BAD"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-covadonga-vll",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:00:00+01:00",
+   "local": "CD Covadonga",
+   "localId": "cd-covadonga",
+   "visitante": "Real Valladolid",
+   "visitanteId": "vll",
+   "canales": [],
+   "localAbbr": "COV"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-numancia-ovi",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:00:00+01:00",
+   "local": "CD Numancia",
+   "localId": "cd-numancia",
+   "visitante": "Real Oviedo",
+   "visitanteId": "ovi",
+   "canales": [],
+   "localAbbr": "NUM"
+  },
+  {
+   "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:00:00+01:00",
+   "local": "CP Mijas Las Lagunas",
+   "localId": "cp-mijas-las-lagunas",
+   "visitante": "Real Jaén",
+   "visitanteId": "real-jaen",
+   "canales": [],
+   "localAbbr": "MIJ",
+   "visitanteAbbr": "JAE"
+  },
+  {
+   "id": "2627-3-primera-ronda-sd-amorebieta-ud-logrones",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:00:00+01:00",
+   "local": "SD Amorebieta",
+   "localId": "sd-amorebieta",
+   "visitante": "UD Logroñés",
+   "visitanteId": "ud-logrones",
+   "canales": [],
+   "localAbbr": "AMO",
+   "visitanteAbbr": "LOG"
+  },
+  {
+   "id": "2627-3-primera-ronda-trival-valderas-leg",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:00:00+01:00",
+   "local": "Trival Valderas",
+   "localId": "trival-valderas",
+   "visitante": "Leganés",
+   "visitanteId": "leg",
+   "canales": [],
+   "localAbbr": "TRI"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-cieza-gra",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:30:00+01:00",
+   "local": "CD Cieza",
+   "localId": "cd-cieza",
+   "visitante": "Granada",
+   "visitanteId": "gra",
+   "canales": [],
+   "localAbbr": "CIE"
+  },
+  {
+   "id": "2627-3-primera-ronda-deportiva-minera-cartagena",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:30:00+01:00",
+   "local": "Deportiva Minera",
+   "localId": "deportiva-minera",
+   "visitante": "Cartagena",
+   "visitanteId": "cartagena",
+   "canales": [],
+   "localAbbr": "MIN",
+   "visitanteAbbr": "CAR"
+  },
+  {
+   "id": "2627-3-primera-ronda-gimnastica-torrelavega-ud-ourense",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:30:00+01:00",
+   "local": "Gimnástica Torrelavega",
+   "localId": "gimnastica-torrelavega",
+   "visitante": "UD Ourense",
+   "visitanteId": "ud-ourense",
+   "canales": [],
+   "localAbbr": "GIM",
+   "visitanteAbbr": "OUR"
+  },
+  {
+   "id": "2627-3-primera-ronda-reus-fc-reddis-barakaldo-cf",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T20:30:00+01:00",
+   "local": "Reus FC Reddis",
+   "localId": "reus-fc-reddis",
+   "visitante": "Barakaldo CF",
+   "visitanteId": "barakaldo-cf",
+   "canales": [],
+   "localAbbr": "REU",
+   "visitanteAbbr": "BAR"
+  },
+  {
+   "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T21:00:00+01:00",
+   "local": "CDA Navalcarnero",
+   "localId": "cda-navalcarnero",
+   "visitante": "Betis",
+   "visitanteId": "bet",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "NAV",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-salamanca-uds-cel",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T21:00:00+01:00",
+   "local": "Salamanca UDS",
+   "localId": "salamanca-uds",
+   "visitante": "Celta de Vigo",
+   "visitanteId": "cel",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "SAL",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-ue-tavernes-val",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T21:00:00+01:00",
+   "local": "UE Tavernes",
+   "localId": "ue-tavernes",
+   "visitante": "Valencia CF",
+   "visitanteId": "val",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "TAV",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-xerez-cd-cad",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-28T21:00:00+01:00",
+   "local": "Xerez CD",
+   "localId": "xerez-cd",
+   "visitante": "Cádiz",
+   "visitanteId": "cad",
+   "canales": [],
+   "localAbbr": "XER"
+  },
+  {
+   "id": "2627-3-primera-ronda-atletico-baleares-eld",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T19:00:00+01:00",
+   "local": "Atlético Baleares",
+   "localId": "atletico-baleares",
+   "visitante": "Eldense",
+   "visitanteId": "eld",
+   "canales": [],
+   "localAbbr": "ATB"
+  },
+  {
+   "id": "2627-3-primera-ronda-atletico-calatayud-osa",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T19:00:00+01:00",
+   "local": "Atlético Calatayud",
+   "localId": "atletico-calatayud",
+   "visitante": "Osasuna",
+   "visitanteId": "osa",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "CAL",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-lebrijana-get",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T19:00:00+01:00",
+   "local": "Lebrijana",
+   "localId": "lebrijana",
+   "visitante": "Getafe",
+   "visitanteId": "get",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "LEB",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-ub-conquense-cas",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T19:00:00+01:00",
+   "local": "UB Conquense",
+   "localId": "ub-conquense",
+   "visitante": "Castellón",
+   "visitanteId": "cas",
+   "canales": [],
+   "localAbbr": "CON"
+  },
+  {
+   "id": "2627-3-primera-ronda-ud-sanse-cd-coria",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T19:00:00+01:00",
+   "local": "UD Sanse",
+   "localId": "ud-sanse",
+   "visitante": "CD Coria",
+   "visitanteId": "cd-coria",
+   "canales": [],
+   "localAbbr": "SAN",
+   "visitanteAbbr": "COR"
+  },
+  {
+   "id": "2627-3-primera-ronda-antequera-aguilas-fc",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T20:00:00+01:00",
+   "local": "Antequera",
+   "localId": "antequera",
+   "visitante": "Águilas FC",
+   "visitanteId": "aguilas-fc",
+   "canales": [],
+   "localAbbr": "ANT",
+   "visitanteAbbr": "ÁGU"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-guijuelo-spo",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T20:00:00+01:00",
+   "local": "CD Guijuelo",
+   "localId": "cd-guijuelo",
+   "visitante": "Sporting Gijón",
+   "visitanteId": "spo",
+   "canales": [
+    {
+     "name": "TPA",
+     "short": "TPA",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Televisión del Principado de Asturias: gratis en la TDT asturiana y en su web."
+    }
+   ],
+   "localAbbr": "GUI"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-laredo-bur",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T20:00:00+01:00",
+   "local": "CD Laredo",
+   "localId": "cd-laredo",
+   "visitante": "Burgos",
+   "visitanteId": "bur",
+   "canales": [],
+   "localAbbr": "LAR"
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-varea-and",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T20:00:00+01:00",
+   "local": "CD Varea",
+   "localId": "cd-varea",
+   "visitante": "FC Andorra",
+   "visitanteId": "and",
+   "canales": [],
+   "localAbbr": "VAR"
+  },
+  {
+   "id": "2627-3-primera-ronda-real-avila-unionistas-de-salamanca",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T20:00:00+01:00",
+   "local": "Real Ávila",
+   "localId": "real-avila",
+   "visitante": "Unionistas de Salamanca",
+   "visitanteId": "unionistas-de-salamanca",
+   "canales": [],
+   "localAbbr": "AVI",
+   "visitanteAbbr": "UNI",
+   "sinTV": true
+  },
+  {
+   "id": "2627-3-primera-ronda-ae-prat-ath",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T21:00:00+01:00",
+   "local": "AE Prat",
+   "localId": "ae-prat",
+   "visitante": "Athletic",
+   "visitanteId": "ath",
+   "canales": [
+    "tdp"
+   ],
+   "localAbbr": "PRA"
+  },
+  {
+   "id": "2627-3-primera-ronda-auriense-dep",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T21:00:00+01:00",
+   "local": "Auriense",
+   "localId": "auriense",
+   "visitante": "Deportivo",
+   "visitanteId": "dep",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "AUR",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-ribadesella-cf-rac",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T21:00:00+01:00",
+   "local": "Ribadesella CF",
+   "localId": "ribadesella-cf",
+   "visitante": "Racing de Santander",
+   "visitanteId": "rac",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "RIB",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-sporting-hortaleza-sev",
+   "liga": 3,
+   "jornada": "Primera ronda",
+   "inicio": "2026-10-29T21:00:00+01:00",
+   "local": "Sporting Hortaleza",
+   "localId": "sporting-hortaleza",
+   "visitante": "Sevilla",
+   "visitanteId": "sev",
+   "canales": [
+    "mcopa"
+   ],
+   "localAbbr": "HOR",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-galatasaray-stuttgart",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-03T18:45:00+01:00",
+   "local": "Galatasaray",
+   "localId": "galatasaray",
+   "visitante": "Stuttgart",
+   "visitanteId": "stuttgart",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "GAL",
+   "visitanteAbbr": "STU",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-shakhtar-donetsk-sporting-cp",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-03T18:45:00+01:00",
+   "local": "Shakhtar Donetsk",
+   "localId": "shakhtar-donetsk",
+   "visitante": "Sporting CP",
+   "visitanteId": "sporting-cp",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "SHA",
+   "visitanteAbbr": "SCP",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-atm-bayern-munich",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-03T21:00:00+01:00",
+   "local": "Atlético de Madrid",
+   "localId": "atm",
+   "visitante": "Bayern Múnich",
+   "visitanteId": "bayern-munich",
+   "canales": [
+    "mlcpend"
+   ],
+   "visitanteAbbr": "BAY",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-bar-aston-villa",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-03T21:00:00+01:00",
+   "local": "FC Barcelona",
+   "localId": "bar",
+   "visitante": "Aston Villa",
+   "visitanteId": "aston-villa",
+   "canales": [
+    "mlcpend"
+   ],
+   "visitanteAbbr": "AVL",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-bod-glimt-lille",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-03T21:00:00+01:00",
+   "local": "Bodø/Glimt",
+   "localId": "bod-glimt",
+   "visitante": "Lille",
+   "visitanteId": "lille",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "BOD",
+   "visitanteAbbr": "LIL",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-feyenoord-inter",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-03T21:00:00+01:00",
+   "local": "Feyenoord",
+   "localId": "feyenoord",
+   "visitante": "Inter",
+   "visitanteId": "inter",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "FEY",
+   "visitanteAbbr": "INT",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-lask-slovan-bratislava",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-03T21:00:00+01:00",
+   "local": "LASK",
+   "localId": "lask",
+   "visitante": "Slovan Bratislava",
+   "visitanteId": "slovan-bratislava",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "LAS",
+   "visitanteAbbr": "SLO",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-manchester-united-roma",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-03T21:00:00+01:00",
+   "local": "Manchester United",
+   "localId": "manchester-united",
+   "visitante": "Roma",
+   "visitanteId": "roma",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "MUN",
+   "visitanteAbbr": "ROM",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-vil-psg",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-03T21:00:00+01:00",
+   "local": "Villarreal",
+   "localId": "vil",
+   "visitante": "PSG",
+   "visitanteId": "psg",
+   "canales": [
+    "mlcpend"
+   ],
+   "visitanteAbbr": "PSG",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-aek-atenas-rma",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-04T18:45:00+01:00",
+   "local": "AEK Atenas",
+   "localId": "aek-atenas",
+   "visitante": "Real Madrid",
+   "visitanteId": "rma",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "AEK",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-fenerbahce-liverpool",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-04T18:45:00+01:00",
+   "local": "Fenerbahçe",
+   "localId": "fenerbahce",
+   "visitante": "Liverpool",
+   "visitanteId": "liverpool",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "FEN",
+   "visitanteAbbr": "LIV",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-borussia-dortmund-bet",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-04T21:00:00+01:00",
+   "local": "Borussia Dortmund",
+   "localId": "borussia-dortmund",
+   "visitante": "Betis",
+   "visitanteId": "bet",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "BVB",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-porto-napoli",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-04T21:00:00+01:00",
+   "local": "Porto",
+   "localId": "porto",
+   "visitante": "Napoli",
+   "visitanteId": "napoli",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "POR",
+   "visitanteAbbr": "NAP",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-psv-club-brugge",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-04T21:00:00+01:00",
+   "local": "PSV",
+   "localId": "psv",
+   "visitante": "Club Brugge",
+   "visitanteId": "club-brugge",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "PSV",
+   "visitanteAbbr": "BRU",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-rb-leipzig-manchester-city",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-04T21:00:00+01:00",
+   "local": "RB Leipzig",
+   "localId": "rb-leipzig",
+   "visitante": "Manchester City",
+   "visitanteId": "manchester-city",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "RBL",
+   "visitanteAbbr": "MCI",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-rc-lens-como",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-04T21:00:00+01:00",
+   "local": "RC Lens",
+   "localId": "rc-lens",
+   "visitante": "Como",
+   "visitanteId": "como",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "LEN",
+   "visitanteAbbr": "COM",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-slavia-praga-arsenal",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-04T21:00:00+01:00",
+   "local": "Slavia Praga",
+   "localId": "slavia-praga",
+   "visitante": "Arsenal",
+   "visitanteId": "arsenal",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "SLA",
+   "visitanteAbbr": "ARS",
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j4-viking-sabah",
+   "liga": 4,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-04T21:00:00+01:00",
+   "local": "Viking",
+   "localId": "viking",
+   "visitante": "Sabah",
+   "visitanteId": "sabah",
+   "canales": [
+    "mlcpend"
+   ],
+   "localAbbr": "VIK",
+   "visitanteAbbr": "SBH",
+   "provisional": true
   }
  ]
 }
