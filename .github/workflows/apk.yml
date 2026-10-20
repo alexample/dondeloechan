@@ -18,16 +18,25 @@ permissions:
 
 jobs:
   apk:
-    runs-on: ubuntu-latest
+    # Ubuntu 24.04 ya trae el SDK de Android instalado (ubuntu-latest está migrando a 26).
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
 
-      - uses: android-actions/setup-android@v3
+      - name: SDK de Android
+        run: |
+          SDK="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
+          echo "SDK en: $SDK"
+          ls "$SDK" || { echo "No hay SDK de Android en la máquina"; exit 1; }
+          echo "sdk.dir=$SDK" > local.properties
+          SM=$(ls "$SDK"/cmdline-tools/*/bin/sdkmanager 2>/dev/null | head -1)
+          yes | "$SM" --licenses > /dev/null || true
+          "$SM" "platforms;android-35" "build-tools;35.0.0" > /dev/null
 
       - uses: gradle/actions/setup-gradle@v4
         with:
