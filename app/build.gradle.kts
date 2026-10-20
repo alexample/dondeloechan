@@ -45,4 +45,5 @@ android {
 dependencies {
     implementation("androidx.webkit:webkit:1.12.1")
     implementation("androidx.core:core:1.13.1")
+    implementation("androidx.work:work-runtime:2.9.1")
 }

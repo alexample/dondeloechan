@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Icono pequeño de la notificación: televisor con balón, en blanco -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <path android:strokeColor="#FFFFFFFF" android:strokeWidth="1.6" android:strokeLineCap="round"
+        android:pathData="M9.5,5 L7.5,2.5 M14.5,5 L16.5,2.5" />
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M5,5.5h14a2.5,2.5 0 0 1 2.5,2.5v9a2.5,2.5 0 0 1 -2.5,2.5h-14a2.5,2.5 0 0 1 -2.5,-2.5v-9a2.5,2.5 0 0 1 2.5,-2.5zM5,7.5v10h14v-10z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M12,10a2.5,2.5 0 1 1 0,5a2.5,2.5 0 1 1 0,-5z" />
+</vector>

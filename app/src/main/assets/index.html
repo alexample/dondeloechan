@@ -329,10 +329,23 @@ try{FAV=new Set(JSON.parse(localStorage.getItem("dle-favs")||"[]"))}catch(e){}
 const esFav=m=>FAV.has(m.localId)||FAV.has(m.visitanteId);
 function alternarFav(id,nombre){
   if(!id)return;
+  const app=!!(window.AndroidApp&&window.AndroidApp.guardarFavs);
   if(FAV.has(id)){FAV.delete(id);aviso(nombre+" ya no está en Mis equipos.")}
-  else{FAV.add(id);aviso("★ "+nombre+" añadido a Mis equipos.")}
+  else{FAV.add(id);aviso("★ "+nombre+" añadido a Mis equipos."+(app?" Te avisaremos cuando se confirme el canal de sus partidos.":""));
+    try{if(app&&window.AndroidApp.permisoAvisos)window.AndroidApp.permisoAvisos()}catch(e){}}
   try{localStorage.setItem("dle-favs",JSON.stringify([...FAV]))}catch(e){}
+  sincronizarAvisos();
 }
+/* En la app de Android: pasar favoritos y catálogo de canales a los avisos en segundo plano. */
+function sincronizarAvisos(){
+  try{
+    if(!(window.AndroidApp&&window.AndroidApp.guardarFavs))return;
+    window.AndroidApp.guardarFavs(JSON.stringify([...FAV]));
+    const cat={};for(const k in CH)cat[k]={name:CH[k].name,dial:CH[k].dial||"",orange:CH[k].orange||""};
+    window.AndroidApp.guardarCanales(JSON.stringify(cat));
+  }catch(e){}
+}
+sincronizarAvisos();
 
 function renderFresh(){
   const el=document.getElementById("fresh"),t=document.getElementById("fresh-t");
@@ -628,6 +641,7 @@ async function actualizar(){
 }
 let ultima=0;
 window.alVolver=()=>{if(Date.now()-ultima>10*60e3){ultima=Date.now();actualizar()}else render()};
+window.abrirPartido=id=>{if(!matches)return;const m=matches.find(x=>x._id===id);if(m){league=m.liga;render();open(id)}};
 window.atras=()=>{if(!sheet.hidden){close();return true}return false};
 
 (async()=>{

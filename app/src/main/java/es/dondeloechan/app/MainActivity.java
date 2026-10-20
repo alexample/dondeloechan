@@ -1,10 +1,14 @@
 package es.dondeloechan.app;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -97,8 +101,23 @@ public class MainActivity extends Activity {
         // "Compartir partido": la página llama a AndroidApp.compartir(texto) y se abre el menú de compartir de Android.
         web.addJavascriptInterface(new Puente(), "AndroidApp");
 
+        AvisosWorker.crearCanal(this);
+        AvisosWorker.programar(this);
+
+        String partido = getIntent() != null ? getIntent().getStringExtra("partido") : null;
         if (savedInstanceState != null) web.restoreState(savedInstanceState);
-        else web.loadUrl(START);
+        else web.loadUrl(partido != null ? START + "#p-" + partido : START);
+    }
+
+    /** Al tocar una notificación con la app ya abierta: ir a ese partido. */
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        String partido = intent.getStringExtra("partido");
+        if (partido != null) {
+            web.evaluateJavascript("window.abrirPartido && window.abrirPartido(" + JSONObject.quote(partido) + ")", null);
+        }
     }
 
     @Override
@@ -112,6 +131,7 @@ public class MainActivity extends Activity {
         super.onResume();
         // Al volver a la app, la página comprueba si hay guía nueva.
         web.evaluateJavascript("window.alVolver && window.alVolver()", null);
+        AvisosWorker.revisarYa(this);
     }
 
     @Override
@@ -123,8 +143,36 @@ public class MainActivity extends Activity {
         });
     }
 
-    /** Lo que la página puede pedir a Android: compartir un texto y consultar marcadores. */
+    /** Lo que la página puede pedir a Android: compartir, consultar marcadores y los avisos de canal. */
     private class Puente {
+        /** Lista de equipos favoritos (ids) para los avisos de canal confirmado. */
+        @JavascriptInterface
+        public void guardarFavs(String json) {
+            getSharedPreferences(AvisosWorker.PREFS, Context.MODE_PRIVATE).edit().putString("favs", json).apply();
+            AvisosWorker.revisarYa(MainActivity.this);
+        }
+
+        /** Catálogo de canales (nombre y dial) para escribir el aviso. */
+        @JavascriptInterface
+        public void guardarCanales(String json) {
+            getSharedPreferences(AvisosWorker.PREFS, Context.MODE_PRIVATE).edit().putString("canales", json).apply();
+        }
+
+        /** Pide permiso de notificaciones (Android 13 o superior). */
+        @JavascriptInterface
+        public void permisoAvisos() {
+            if (Build.VERSION.SDK_INT >= 33 && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                runOnUiThread(() -> requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 7));
+            }
+        }
+
+        @JavascriptInterface
+        public boolean avisosActivos() {
+            return Build.VERSION.SDK_INT < 33 || checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)
+                    == PackageManager.PERMISSION_GRANTED;
+        }
+
         @JavascriptInterface
         public void compartir(final String texto) {
             runOnUiThread(() -> {
