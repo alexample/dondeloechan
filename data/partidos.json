@@ -168,7 +168,8 @@
    "visitanteId": "cd-lugo",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "RUN",
    "visitanteAbbr": "LUG",
@@ -221,7 +222,8 @@
      "op": "free",
      "dial": "TDT",
      "how": "Gratis en la TDT de Cataluña y en 3Cat."
-    }
+    },
+    "fanplay"
    ],
    "localAbbr": "EUR",
    "visitanteAbbr": "ZAR",
@@ -238,7 +240,8 @@
    "visitanteId": "real-murcia",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "TOR",
    "visitanteAbbr": "MUR",
@@ -317,7 +320,8 @@
      "op": "free",
      "dial": "TDT",
      "how": "Gratis en la TDT de Galicia y en la web de la CRTVG."
-    }
+    },
+    "fanplay"
    ],
    "localAbbr": "MIR",
    "visitanteAbbr": "RFE",
@@ -339,12 +343,13 @@
      "op": "free",
      "dial": "TDT",
      "how": "Gratis en la TDT de Aragón y en Aragón Play."
-    }
+    },
+    "fanplay"
    ],
    "localAbbr": "HUE",
    "visitanteAbbr": "ANT",
    "provisional": false,
-   "nota": "Este partido no está entre los 10 de Movistar Plus+ y DAZN: solo lo emite Aragón TV."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: en abierto solo lo emite Aragón TV. También en FANPLAY TV."
   },
   {
    "id": "2627-1-10-val-vil",
@@ -400,7 +405,8 @@
    "visitanteId": "ud-logrones",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "AVI",
    "visitanteAbbr": "LOG",
@@ -448,7 +454,8 @@
    "visitanteId": "pontevedra",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "CUL",
    "visitanteAbbr": "PON",
@@ -465,7 +472,8 @@
    "visitanteId": "real-jaen",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "ATM",
    "visitanteAbbr": "JAE",
@@ -509,7 +517,8 @@
    "visitanteId": "cartagena",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "VIB",
    "visitanteAbbr": "CAR",
@@ -569,7 +578,8 @@
    "visitanteId": "real-madrid-castilla",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "ALG",
    "visitanteAbbr": "RMC",
@@ -614,7 +624,8 @@
    "visitanteId": "hercules",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "NAS",
    "visitanteAbbr": "HER",
@@ -1421,7 +1432,8 @@
    "visitanteId": "alcorcon",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "ATM",
    "visitanteAbbr": "ALC",
@@ -1438,7 +1450,8 @@
    "visitanteId": "mirandes",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "LOG",
    "visitanteAbbr": "MIR",
@@ -1455,7 +1468,8 @@
    "visitanteId": "cartagena",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "RMC",
    "visitanteAbbr": "CAR",
@@ -1472,7 +1486,8 @@
    "visitanteId": "villarreal-b",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "ZAR",
    "visitanteAbbr": "VIB",
@@ -1489,7 +1504,8 @@
    "visitanteId": "real-murcia",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "ANT",
    "visitanteAbbr": "MUR",
@@ -1506,7 +1522,8 @@
    "visitanteId": "cultural-leonesa",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "OUR",
    "visitanteAbbr": "CUL",
@@ -1523,7 +1540,8 @@
    "visitanteId": "merida",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "LUG",
    "visitanteAbbr": "MER",
@@ -1540,7 +1558,8 @@
    "visitanteId": "unionistas-de-salamanca",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "EXT",
    "visitanteAbbr": "UNI",
@@ -1557,7 +1576,8 @@
    "visitanteId": "algeciras-cf",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "JAE",
    "visitanteAbbr": "ALG",
@@ -1574,7 +1594,8 @@
    "visitanteId": "gimnastic-de-tarragona",
    "canales": [
     "rfef",
-    "daznrfef"
+    "daznrfef",
+    "fanplay"
    ],
    "localAbbr": "HUE",
    "visitanteAbbr": "NAS",
