@@ -8,6 +8,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.JavascriptInterface;
+
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
@@ -116,7 +123,7 @@ public class MainActivity extends Activity {
         });
     }
 
-    /** Lo único que la página puede pedir a Android: compartir un texto. */
+    /** Lo que la página puede pedir a Android: compartir un texto y consultar marcadores. */
     private class Puente {
         @JavascriptInterface
         public void compartir(final String texto) {
@@ -126,6 +133,37 @@ public class MainActivity extends Activity {
                 i.putExtra(Intent.EXTRA_TEXT, texto);
                 try { startActivity(Intent.createChooser(i, "Compartir partido")); } catch (Exception ignored) { }
             });
+        }
+
+        /** Consulta de marcadores (solo a api.football-data.org); responde a window.__resp[id](estado, cuerpo). */
+        @JavascriptInterface
+        public void pedir(final String id, final String url, final String cabecera, final String valor) {
+            new Thread(() -> {
+                int estado = 0;
+                String cuerpo = "";
+                try {
+                    URL u = new URL(url);
+                    if ("https".equals(u.getProtocol()) && "api.football-data.org".equals(u.getHost())) {
+                        HttpURLConnection c = (HttpURLConnection) u.openConnection();
+                        c.setConnectTimeout(10000);
+                        c.setReadTimeout(10000);
+                        c.setRequestProperty(cabecera, valor);
+                        estado = c.getResponseCode();
+                        InputStream in = estado < 400 ? c.getInputStream() : c.getErrorStream();
+                        if (in != null) {
+                            ByteArrayOutputStream out = new ByteArrayOutputStream();
+                            byte[] buf = new byte[8192];
+                            int n;
+                            while ((n = in.read(buf)) > 0) out.write(buf, 0, n);
+                            cuerpo = out.toString("UTF-8");
+                        }
+                        c.disconnect();
+                    }
+                } catch (Exception ignored) { }
+                final String js = "window.__resp&&window.__resp[" + JSONObject.quote(id) + "]&&window.__resp["
+                        + JSONObject.quote(id) + "](" + estado + "," + JSONObject.quote(cuerpo) + ")";
+                runOnUiThread(() -> web.evaluateJavascript(js, null));
+            }).start();
         }
     }
 }

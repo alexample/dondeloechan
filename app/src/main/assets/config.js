@@ -9,3 +9,9 @@ window.GISCUS = {
   category: "Announcements",
   categoryId: "DIC_kwDOVRZ6Ls4DJM5l"
 };
+
+// Marcadores de football-data.org (plan gratuito: Primera y Champions, con unos minutos de retraso).
+window.MARCADORES = {
+  clave: "fapi_Z9ggUSXFMeZhtN7oAsmLujAJaEoXVeLk",
+  competiciones: { 1: "PD", 4: "CL" }
+};

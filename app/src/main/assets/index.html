@@ -387,6 +387,77 @@ function cargarComentarios(m){
   box.appendChild(s);
 }
 
+/* ---------- Marcadores (football-data.org, plan gratuito: con algunos minutos de retraso) ----------
+   config.js define window.MARCADORES = {clave, competiciones:{1:"PD",4:"CL"}}. Sin eso no se consulta nada. */
+const VIVO={};               // _id -> {marcador, estado, minuto}
+let vivoTimer=null, vivoUltimo=0, vivoFuente=false;
+const FD_ESTADO={IN_PLAY:"directo",PAUSED:"directo",FINISHED:"final",AWARDED:"final",POSTPONED:"aplazado",SUSPENDED:"suspendido",CANCELLED:"aplazado"};
+const QUITAR=new Set(["fc","cf","cd","ud","sd","rcd","ad","ce","club","de","del","la","el","real","sad","ac","as","afc","sc","sv","vfb","fk","ssc","rc","bv","sport","balompie","futbol","calcio","1."]);
+function toks(n){return String(n||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9 ]+/g," ").split(/\s+/).filter(w=>w.length>2&&!QUITAR.has(w))}
+function parecido(nuestro,fd){
+  const a=toks(nuestro.name), b=new Set([...toks(fd.name),...toks(fd.shortName)]);
+  if(fd.tla&&nuestro.abbr&&fd.tla.toUpperCase()===nuestro.abbr.toUpperCase())return true;
+  return a.some(w=>b.has(w)||[...b].some(x=>x.startsWith(w)||w.startsWith(x)));
+}
+function enVentana(m,now){const k=new Date(m.inicio).getTime();return now>k-15*60e3&&now<k+3*36e5}
+function necesitaMarcador(now){
+  const cfg=window.MARCADORES;if(!cfg||!cfg.clave||!matches)return false;
+  return matches.some(m=>cfg.competiciones[m.liga]&&m.estado!=="final"&&now>new Date(m.inicio).getTime()-15*60e3&&now<new Date(m.inicio).getTime()+20*36e5);
+}
+async function pedirJSON(url,clave){
+  try{
+    const r=await fetch(url,{headers:{"X-Auth-Token":clave},cache:"no-store"});
+    if(!r.ok)throw new Error("HTTP "+r.status);
+    return await r.json();
+  }catch(e){
+    // En la app, si el navegador interno no deja la consulta, la hace Android.
+    if(window.AndroidApp&&window.AndroidApp.pedir)return await new Promise((ok,ko)=>{
+      const id="r"+Date.now()+Math.random().toString(36).slice(2);
+      window.__resp=window.__resp||{};
+      window.__resp[id]=(st,body)=>{delete window.__resp[id];if(st>=200&&st<300){try{ok(JSON.parse(body))}catch(x){ko(x)}}else ko(new Error("HTTP "+st))};
+      window.AndroidApp.pedir(id,url,"X-Auth-Token",clave);
+      setTimeout(()=>{if(window.__resp[id]){delete window.__resp[id];ko(new Error("timeout"))}},15000);
+    });
+    throw e;
+  }
+}
+async function actualizarMarcadores(){
+  const cfg=window.MARCADORES,now=Date.now();
+  if(!necesitaMarcador(now))return;
+  if(now-vivoUltimo<55e3)return;
+  vivoUltimo=now;
+  const dia=t=>new Date(t).toISOString().slice(0,10);
+  const codes=[...new Set(Object.values(cfg.competiciones))].join(",");
+  const url=`https://api.football-data.org/v4/matches?competitions=${codes}&dateFrom=${dia(now-864e5)}&dateTo=${dia(now+864e5)}`;
+  let d;try{d=await pedirJSON(url,cfg.clave)}catch(e){return}
+  vivoFuente=true;
+  const porLiga={};for(const k in cfg.competiciones)porLiga[cfg.competiciones[k]]=+k;
+  for(const x of d.matches||[]){
+    const liga=porLiga[x.competition&&x.competition.code];if(!liga)continue;
+    const t=new Date(x.utcDate).getTime();
+    const m=matches.find(m=>m.liga===liga&&Math.abs(new Date(m.inicio).getTime()-t)<3*36e5
+      &&parecido(teamOf(m.localId,m.local,m.localAbbr),x.homeTeam||{})&&parecido(teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),x.awayTeam||{}));
+    if(!m)continue;
+    const est=FD_ESTADO[x.status];if(!est)continue;
+    const sc=x.score&&x.score.fullTime||{};
+    const v={estado:est};
+    if(sc.home!=null&&sc.away!=null)v.marcador=[sc.home,sc.away];
+    if(x.status==="PAUSED")v.minuto="Descanso";else if(x.minute)v.minuto=x.minute+"'";
+    VIVO[m._id]=v;
+  }
+  aplicarVivo();render();
+}
+function aplicarVivo(){
+  if(!matches)return;
+  for(const m of matches){const v=VIVO[m._id];if(!v||m.estado==="final"&&!v.marcador)continue;Object.assign(m,v)}
+}
+function programarMarcadores(){
+  clearInterval(vivoTimer);
+  if(!window.MARCADORES)return;
+  actualizarMarcadores();
+  vivoTimer=setInterval(actualizarMarcadores,60e3);
+}
+
 /* ---------- Ficha ---------- */
 const sheet=document.getElementById("sheet"),scrim=document.getElementById("scrim");
 let lastFocus=null;
@@ -422,6 +493,7 @@ function open(id){
     </div>
     ${m.provisional?`<p class="note warn">Canal provisional: la señal exacta (M+ LALIGA 2, Liga de Campeones 3…) suele confirmarse unos días antes del partido.</p>`:""}
     ${m.nota?`<p class="note">${esc(m.nota)}</p>`:""}
+    ${VIVO[m._id]&&m.estado==="directo"?`<p class="note">Marcador de football-data.org, con unos minutos de retraso.</p>`:""}
     <div class="acciones">
       <button class="btn" id="compartir" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/></svg>Compartir partido</button>
       ${conComentariosFuera()?`<a class="btn sec" href="${esc(enlace(m))}" target="_blank" rel="noopener">Comentarios</a>`:""}
@@ -460,7 +532,9 @@ function aplicar(d,origen){
   matches=d.partidos.map(p=>({_id:p.id,...p})).filter(m=>m.inicio);
   meta={actualizado:d.actualizado};
   if(origen)dbState=origen;
-  render();return true;
+  aplicarVivo();render();
+  if(!vivoTimer)programarMarcadores();
+  return true;
 }
 function guardada(){try{return JSON.parse(localStorage.getItem("dle-guia")||"null")}catch(e){return null}}
 async function actualizar(){
