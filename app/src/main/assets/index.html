@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dónde lo Echan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: listing guide de jornada — cabecera tipo marcador, partidos agrupados por día, ficha inferior al tocar */
+:root{
+  --bg:#F2F4EF; --surface:#FFFFFF; --ink:#14201A; --muted:#5E6B63; --line:#DCE2DA;
+  --accent:#D9480F; --pitch:#1F5E3B; --pitch-ink:#F2F4EF;
+  --live:#C92A2A; --done:#8A958E; --warn:#9A6700; --warn-bg:#FBF1D9;
+  --op-m:#1C4E80; --op-m-bg:#E3ECF5; --op-dazn:#262626; --op-dazn-bg:#ECECEA;
+  --op-free:#2B7A3D; --op-free-bg:#E2F0E4; --op-orange:#A14A00; --op-orange-bg:#F7E9DC;
+  --shadow:0 18px 40px rgba(20,32,26,.18);
+  --f-display:"Saira Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0D1511; --surface:#16211B; --ink:#E9EFE9; --muted:#9AA79F; --line:#26332B;
+  --accent:#FF7A3D; --pitch:#123A25; --pitch-ink:#E9EFE9;
+  --live:#FF6B6B; --done:#6E7B73; --warn:#F2C25B; --warn-bg:#3A2E10;
+  --op-m:#9CC3EC; --op-m-bg:#1A2A3A; --op-dazn:#E8E8E4; --op-dazn-bg:#2A2D2B;
+  --op-free:#8DD69C; --op-free-bg:#183222; --op-orange:#FFB577; --op-orange-bg:#3A2614;
+  --shadow:0 18px 40px rgba(0,0,0,.5); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1511; --surface:#16211B; --ink:#E9EFE9; --muted:#9AA79F; --line:#26332B;
+  --accent:#FF7A3D; --pitch:#123A25; --pitch-ink:#E9EFE9;
+  --live:#FF6B6B; --done:#6E7B73; --warn:#F2C25B; --warn-bg:#3A2E10;
+  --op-m:#9CC3EC; --op-m-bg:#1A2A3A; --op-dazn:#E8E8E4; --op-dazn-bg:#2A2D2B;
+  --op-free:#8DD69C; --op-free-bg:#183222; --op-orange:#FFB577; --op-orange-bg:#3A2614;
+  --shadow:0 18px 40px rgba(0,0,0,.5); color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{-webkit-tap-highlight-color:transparent;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.45}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--pitch)}
+.wrap{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+header.top{background:var(--pitch);color:var(--pitch-ink);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header.top .wrap{padding-block:14px 12px;display:flex;flex-direction:column;gap:12px}
+.brand{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.brand h1{margin:0;font-family:var(--f-display);font-weight:800;font-size:30px;letter-spacing:.01em;text-transform:uppercase;line-height:1}
+.brand h1 span{color:var(--accent)}
+.brand .jor{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;text-align:right}
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.08);border-radius:10px;padding:3px;gap:3px}
+.tabs button{appearance:none;border:0;background:transparent;color:inherit;font-family:var(--f-display);font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:.03em;padding:8px 6px;border-radius:8px;cursor:pointer;line-height:1.1}
+.tabs button small{display:block;font-family:var(--f-body);font-weight:500;font-size:11px;text-transform:none;letter-spacing:0;opacity:.75}
+.tabs button[aria-selected="true"]{background:var(--pitch-ink);color:var(--pitch)}
+.tabs button:focus-visible,.match:focus-visible,.close:focus-visible,.search input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.search{position:relative}
+.search input{width:100%;border:0;border-radius:10px;padding:10px 12px 10px 36px;font:inherit;font-size:15px;background:rgba(255,255,255,.12);color:var(--pitch-ink)}
+.search input::placeholder{color:var(--pitch-ink);opacity:.6}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:.7}
+
+.fresh{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);padding-top:12px}
+.fresh .dot{width:8px;height:8px;border-radius:50%;background:var(--op-free);flex:none}
+.fresh.stale .dot{background:var(--warn)}
+
+main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
+.day h2{margin:12px 0 8px;font-family:var(--f-display);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);display:flex;align-items:center;gap:10px}
+.day h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.list{display:flex;flex-direction:column;gap:8px}
+
+.match{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:center;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;font:inherit;color:inherit;transition:transform .12s ease,border-color .12s}
+.match:hover{border-color:var(--muted)}
+.match:active{transform:scale(.99)}
+.match.past{opacity:.6}
+.kick{display:flex;flex-direction:column;align-items:center;gap:2px;border-right:1px dashed var(--line);padding-right:10px;text-align:center}
+.kick b{font-family:var(--f-display);font-weight:800;font-size:24px;line-height:1;font-variant-numeric:tabular-nums}
+.kick span{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.kick span.live{color:var(--live)} .kick span.done{color:var(--done)}
+.teams{display:flex;flex-direction:column;gap:6px;min-width:0}
+.team{display:flex;align-items:center;gap:8px;min-width:0;font-weight:600}
+.team .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+
+.crest{flex:none;width:26px;height:26px;border-radius:50% 50% 46% 46%/42% 42% 58% 58%;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:10px;letter-spacing:.02em;color:#fff;position:relative;overflow:hidden}
+.crest img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--surface)}
+.crest.lg{width:64px;height:64px;font-size:20px}
+
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:3px 8px 3px 4px;border-radius:999px;line-height:1.2;white-space:nowrap}
+.chip .lg{display:inline-grid;place-items:center;min-width:20px;height:16px;padding:0 4px;border-radius:4px;font-family:var(--f-display);font-weight:800;font-size:10px;letter-spacing:.02em}
+.chip .dial{font-family:var(--f-mono);font-weight:500;opacity:.8}
+.chip.pend{background:var(--warn-bg);color:var(--warn);padding-left:8px}
+.op-m{background:var(--op-m-bg);color:var(--op-m)} .op-m .lg{background:var(--op-m);color:var(--op-m-bg)}
+.op-dazn{background:var(--op-dazn-bg);color:var(--op-dazn)} .op-dazn .lg{background:var(--op-dazn);color:var(--op-dazn-bg)}
+.op-free{background:var(--op-free-bg);color:var(--op-free)} .op-free .lg{background:var(--op-free);color:var(--op-free-bg)}
+.op-orange{background:var(--op-orange-bg);color:var(--op-orange)} .op-orange .lg{background:var(--op-orange);color:var(--op-orange-bg)}
+
+.empty{padding:40px 8px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:6px;align-items:center}
+.empty b{color:var(--ink);font-size:16px}
+.skel{height:92px;border-radius:12px;background:var(--surface);border:1px solid var(--line);position:relative;overflow:hidden}
+.skel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--line),transparent);animation:sh 1.2s infinite}
+@keyframes sh{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+.foot{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+
+/* Ficha del partido */
+.scrim{position:fixed;inset:0;background:rgba(10,16,12,.5);z-index:20;opacity:0;transition:opacity .2s}
+.scrim.on{opacity:1}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;background:var(--surface);border-radius:20px 20px 0 0;box-shadow:var(--shadow);max-height:88%;overflow:auto;transform:translateY(100%);transition:transform .25s cubic-bezier(.2,.8,.2,1);padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}
+.sheet.on{transform:none}
+.sheet .wrap{display:flex;flex-direction:column;gap:18px;padding-block:10px 0}
+.grab{width:40px;height:4px;border-radius:2px;background:var(--line);margin:0 auto}
+.sh-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sh-head .comp{font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.close{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);width:34px;height:34px;border-radius:50%;font-size:18px;cursor:pointer;line-height:1}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;text-align:center}
+.vs .side{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}
+.vs .side b{font-family:var(--f-display);font-weight:700;font-size:20px;line-height:1.05;text-transform:uppercase;text-wrap:balance}
+.vs .mid{font-family:var(--f-display);font-weight:800;font-size:15px;color:var(--muted)}
+.when{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.when div{padding:12px;display:flex;flex-direction:column;gap:2px}
+.when div+div{border-left:1px solid var(--line)}
+.when small{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.when b{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1.05;font-variant-numeric:tabular-nums}
+.when em{font-style:normal;font-size:13px;color:var(--muted)}
+.count{font-size:13px;font-weight:600;color:var(--accent)}
+.sec-t{margin:0 0 8px;font-family:var(--f-display);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+.ch{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:12px;border-radius:12px;margin-bottom:8px}
+.ch .logo{width:48px;height:36px;border-radius:7px;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:14px;letter-spacing:.02em;overflow:hidden}
+.ch .logo img{width:100%;height:100%;object-fit:contain}
+.ch .info{min-width:0;display:flex;flex-direction:column;gap:2px}
+.ch .info b{font-size:15px}
+.ch .info span{font-size:12.5px;opacity:.85}
+.ch .dialbox{text-align:center;font-family:var(--f-mono);line-height:1.1}
+.ch .dialbox small{display:block;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.ch .dialbox b{font-size:22px}
+.ch .dialbox em{display:block;font-style:normal;font-size:10px;opacity:.75;margin-top:3px}
+.ch.op-m .logo{background:var(--op-m);color:var(--op-m-bg)}
+.ch.op-dazn .logo{background:var(--op-dazn);color:var(--op-dazn-bg)}
+.ch.op-free .logo{background:var(--op-free);color:var(--op-free-bg)}
+.ch.op-orange .logo{background:var(--op-orange);color:var(--op-orange-bg)}
+.ch.main{outline:2px solid currentColor;outline-offset:-2px}
+.ch .tag{align-self:flex-start;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:1px 6px;border-radius:4px;border:1px solid currentColor}
+.note{font-size:13px;color:var(--muted);background:var(--bg);border-radius:10px;padding:10px 12px;margin:0}
+.note.warn{background:var(--warn-bg);color:var(--warn)}
+@media (prefers-reduced-motion:reduce){.sheet,.scrim,.match{transition:none}.skel::after{animation:none}}
+</style>
+<script src="config.js"></script>
+</body>
+</html>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1>Dónde lo <span>echan</span></h1>
+      <div class="jor" id="jor"></div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-1" aria-selected="true" data-l="1">Primera<small>LALIGA EA SPORTS</small></button>
+      <button role="tab" id="tab-2" aria-selected="false" data-l="2">Segunda<small>LALIGA HYPERMOTION</small></button>
+    </div>
+    <label class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Busca tu equipo" autocomplete="off" aria-label="Buscar equipo">
+    </label>
+  </div>
+</header>
+
+<main><div class="wrap">
+  <p class="fresh" id="fresh"><span class="dot"></span><span id="fresh-t">Cargando la guía…</span></p>
+  <div id="app" style="display:flex;flex-direction:column;gap:20px">
+    <div class="list"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
+  </div>
+</div></main>
+
+<div class="scrim" id="scrim" hidden></div>
+<section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title" hidden></section>
+
+<script>
+/* ---------- Catálogo de canales ----------
+   Diales de Movistar Plus+ (reordenación de febrero de 2026). "orange": dial en Orange TV cuando se conoce.
+   logo: URL o data: URI del logotipo oficial cuando tengas licencia; vacío = placa con siglas. */
+const CH = {
+  mliga:   {name:"M+ LALIGA",               short:"M+",   op:"m",      dial:"54",  orange:"110", logo:"", how:"Movistar Plus+ y Orange TV. En 4K/HDR: M+ LALIGA HDR (dial 440)."},
+  mliga2:  {name:"M+ LALIGA 2",             short:"M+2",  op:"m",      dial:"57",  logo:"", how:"Señal paralela de Movistar Plus+ cuando coinciden partidos."},
+  mliga3:  {name:"M+ LALIGA 3",             short:"M+3",  op:"m",      dial:"",    logo:"", how:"Señal paralela de Movistar Plus+; búscala en la guía o en la app."},
+  mliga4:  {name:"M+ LALIGA 4",             short:"M+4",  op:"m",      dial:"",    logo:"", how:"Señal paralela de Movistar Plus+; búscala en la guía o en la app."},
+  daznll:  {name:"DAZN LALIGA",             short:"DAZN", op:"dazn",   dial:"55",  orange:"113", logo:"", how:"App de DAZN, o dial 55 en Movistar Plus+. También en Orange TV."},
+  daznll2: {name:"DAZN LALIGA 2",           short:"DZ2",  op:"dazn",   dial:"58",  logo:"", how:"Señal paralela de DAZN LALIGA. En la app de DAZN aparece como evento propio."},
+  daznfree:{name:"DAZN en abierto",         short:"DAZN", op:"free",   dial:"",    logo:"", how:"Gratis en la app de DAZN con solo registrarte."},
+  mplus7:  {name:"Movistar Plus+",          short:"M+",   op:"free",   dial:"7",   logo:"", how:"Canal incluido en todos los paquetes de Movistar Plus+ (dial 7)."},
+  tdp:     {name:"Teledeporte",             short:"TDP",  op:"free",   dial:"TDT", logo:"", how:"Gratis en la TDT y en RTVE Play."},
+  orange1: {name:"Orange Fútbol 1",         short:"OR",   op:"orange", dial:"",    orange:"107", logo:"", how:"Clientes de Orange TV con fútbol."},
+  orange2: {name:"Orange Fútbol 2",         short:"OR",   op:"orange", dial:"",    orange:"108", logo:"", how:"Clientes de Orange TV con fútbol."},
+  hyper:   {name:"LALIGA TV HYPERMOTION",   short:"HM",   op:"m",      dial:"56",  orange:"120", logo:"", how:"Movistar Plus+ y Orange TV."},
+  hyper2:  {name:"LALIGA TV HYPERMOTION 2", short:"HM2",  op:"m",      dial:"59",  logo:"", how:"Señal paralela de Movistar Plus+ cuando coinciden partidos de Segunda."},
+  hyper3:  {name:"LALIGA TV HYPERMOTION 3", short:"HM3",  op:"m",      dial:"",    logo:"", how:"Señal paralela de Movistar Plus+; búscala en la guía o en la app."},
+  daznhm:  {name:"DAZN",                    short:"DAZN", op:"dazn",   dial:"",    logo:"", how:"App de DAZN y operadores que integran su paquete (Vodafone, Orange, Digi, Yoigo…)."}
+};
+
+/* ---------- Catálogo de equipos ----------
+   crest: URL o data: URI del escudo oficial cuando tengas licencia; vacío = monograma. */
+const T = {};
+[["ala","Deportivo Alavés","ALA"],["ath","Athletic Club","ATH"],["atm","Atlético de Madrid","ATM"],["bar","FC Barcelona","BAR"],
+ ["bet","Real Betis","BET"],["cel","RC Celta","CEL"],["dep","RC Deportivo","DEP"],["elc","Elche CF","ELC"],["esp","RCD Espanyol","ESP"],
+ ["get","Getafe CF","GET"],["lev","Levante UD","LEV"],["mal","Málaga CF","MAL"],["osa","CA Osasuna","OSA"],["rac","Real Racing Club","RAC"],
+ ["ray","Rayo Vallecano","RAY"],["rma","Real Madrid","RMA"],["rso","Real Sociedad","RSO"],["sev","Sevilla FC","SEV"],["val","Valencia CF","VAL"],["vil","Villarreal CF","VIL"],
+ ["gra","Granada CF","GRA"],["vll","Real Valladolid","VLL"],["cor","Córdoba CF","COR"],["eib","SD Eibar","EIB"],["leg","CD Leganés","LEG"],["mll","RCD Mallorca","MLL"],
+ ["lpa","UD Las Palmas","LPA"],["rsb","Real Sociedad B","RSB"],["gir","Girona FC","GIR"],["clb","Celta Fortuna","CLB"],["alm","UD Almería","ALM"],["ovi","Real Oviedo","OVI"],
+ ["sab","CE Sabadell","SAB"],["ten","CD Tenerife","TEN"],["cad","Cádiz CF","CAD"],["ceu","AD Ceuta FC","CEU"],["alb","Albacete BP","ALB"],["eld","CD Eldense","ELD"],
+ ["cas","CD Castellón","CAS"],["spo","Real Sporting","SPO"],["and","FC Andorra","AND"],["bur","Burgos CF","BUR"]
+].forEach(([id,name,abbr])=>T[id]={id,name,abbr});
+const CANARY=new Set(["lpa","ten"]);
+/* Escudos: lista de ids con imagen en assets/escudos/ (escudos/lista.json). */
+let ESCUDOS=new Set();
+
+/* ---------- Utilidades ---------- */
+const TZ="Europe/Madrid";
+const fDay=new Intl.DateTimeFormat("es-ES",{timeZone:TZ,weekday:"long",day:"numeric",month:"long"});
+const fDayShort=new Intl.DateTimeFormat("es-ES",{timeZone:TZ,weekday:"short",day:"numeric",month:"short"});
+const fTime=new Intl.DateTimeFormat("es-ES",{timeZone:TZ,hour:"2-digit",minute:"2-digit"});
+const fTimeCan=new Intl.DateTimeFormat("es-ES",{timeZone:"Atlantic/Canary",hour:"2-digit",minute:"2-digit"});
+const fKey=new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"});
+const fStamp=new Intl.DateTimeFormat("es-ES",{timeZone:TZ,weekday:"long",day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"});
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>String(s).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const hue=str=>{let h=0;for(const c of str)h=(h*31+c.charCodeAt(0))%360;return h};
+
+function teamOf(id,name){
+  const t=T[id];
+  if(t)return t;
+  const n=name||id||"?";
+  return {id:id||"",name:n,abbr:n.replace(/[^A-Za-zÁÉÍÓÚÑ]/g,"").slice(0,3).toUpperCase()};
+}
+function crest(t,big){
+  const h=hue(t.name);
+  const bg=`linear-gradient(160deg,hsl(${h} 45% 38%) 0 55%,hsl(${(h+40)%360} 40% 28%) 55%)`;
+  return `<span class="crest${big?" lg":""}" style="background:${bg}" aria-hidden="true">${esc(t.abbr)}${t.id&&ESCUDOS.has(t.id)?`<img src="escudos/${esc(t.id)}.png" alt="">`:""}</span>`;
+}
+/* Un canal puede venir como clave del catálogo ("hyper2") o como objeto {name, dial, how, op}. */
+function chOf(c){
+  if(typeof c==="string")return CH[c]||{name:c,short:c.slice(0,3).toUpperCase(),op:"dazn",dial:"",how:""};
+  return {short:(c.name||"TV").slice(0,3).toUpperCase(),op:"dazn",dial:"",how:"",...c};
+}
+function status(m,now){
+  const k=new Date(m.inicio).getTime();
+  if(now<k)return null;
+  return now<k+115*60e3?"live":"done";
+}
+function countdown(m,now){
+  const d=new Date(m.inicio).getTime()-now;
+  if(d<=0)return status(m,now)==="live"?"Se está jugando ahora":"Partido terminado";
+  const days=Math.floor(d/864e5),hrs=Math.floor(d%864e5/36e5),min=Math.floor(d%36e5/6e4);
+  if(days>0)return `Empieza en ${days} d ${hrs} h`;
+  if(hrs>0)return `Empieza en ${hrs} h ${min} min`;
+  return `Empieza en ${min} min`;
+}
+function chip(c){const k=chOf(c);return `<span class="chip op-${k.op}"><span class="lg">${esc(k.short)}</span>${esc(k.name)}${k.dial?` <span class="dial">${esc(k.dial)}</span>`:""}</span>`}
+function ago(iso){
+  const d=(Date.now()-new Date(iso).getTime())/36e5;
+  if(d<1)return "hace menos de una hora";
+  if(d<24)return `hace ${Math.round(d)} h`;
+  return `el ${fStamp.format(new Date(iso))}`;
+}
+
+/* ---------- Estado ---------- */
+let league=1, query="", matches=null, meta=null, dbState="loading";
+try{if(localStorage.getItem("dle-league")==="2")league=2}catch(e){}
+
+function renderFresh(){
+  const el=document.getElementById("fresh"),t=document.getElementById("fresh-t");
+  if(!meta||!meta.actualizado){el.className="fresh";t.textContent=dbState==="loading"?"Cargando la guía…":"Guía sin datos todavía.";return}
+  const old=(Date.now()-new Date(meta.actualizado).getTime())>4*864e5;
+  el.className="fresh"+(old||dbState==="offline"?" stale":"");
+  t.textContent=(dbState==="offline"?"Sin conexión. Guía guardada, comprobada ":"Canales comprobados ")+ago(meta.actualizado)+".";
+}
+function render(){
+  renderFresh();
+  document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",String(+b.dataset.l===league)));
+  const app=document.getElementById("app");
+  if(matches===null){
+    return;
+  }
+  const now=Date.now();
+  const all=matches.filter(m=>m.liga===league);
+  const jors=[...new Set(all.filter(m=>!status(m,now)||status(m,now)==="live").map(m=>m.jornada))].filter(j=>/^\d+$/.test(String(j)));
+  document.getElementById("jor").innerHTML=jors.length?`Jornada ${jors.join(" y ")}`:"";
+  const q=norm(query.trim());
+  const list=all.filter(m=>!q||norm(m.local+" "+m.visitante).includes(q)).sort((a,b)=>new Date(a.inicio)-new Date(b.inicio));
+  if(!list.length){
+    app.innerHTML=(q
+      ?`<div class="empty"><b>Sin partidos de “${esc(query)}”</b><span>No juega en ${league===1?"Primera":"Segunda"} en las próximas jornadas cargadas.</span></div>`
+      :`<div class="empty"><b>Aún no hay partidos cargados</b><span>La guía se rellena sola cuando LALIGA publica los horarios.</span></div>`)+foot();
+    return;
+  }
+  const groups={};
+  list.forEach(m=>{const k=fKey.format(new Date(m.inicio));(groups[k]=groups[k]||[]).push(m)});
+  app.innerHTML=Object.values(groups).map(g=>`
+    <section class="day"><h2>${cap(fDay.format(new Date(g[0].inicio)))}</h2><div class="list">
+    ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local),a=teamOf(m.visitanteId,m.visitante),ch=m.canales||[];return `
+      <button class="match${st==="done"?" past":""}" data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
+        <span class="kick"><b>${m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b><span class="${st||""}">${st==="live"?"En juego":st==="done"?"Final":m.etiqueta?esc(m.etiqueta):"h"}</span></span>
+        <span class="teams">
+          <span class="team">${crest(h)}<span class="nm">${esc(h.name)}</span></span>
+          <span class="team">${crest(a)}<span class="nm">${esc(a.name)}</span></span>
+          <span class="chips">${ch.length?ch.slice(0,2).map(chip).join(""):`<span class="chip pend">Canal por confirmar</span>`}${ch.length>2?`<span class="chip op-dazn" style="padding-left:8px">+${ch.length-2}</span>`:""}${m.provisional&&ch.length?`<span class="chip pend">Provisional</span>`:""}</span>
+        </span>
+      </button>`}).join("")}
+    </div></section>`).join("")+foot();
+}
+function foot(){return `<p class="foot">Horarios oficiales de LALIGA; canal exacto según la guía de Movistar Plus+ y DAZN. Hora peninsular. Pueden cambiar a última hora: si es un partido importante, mira la ficha el mismo día.</p>`}
+
+/* ---------- Ficha ---------- */
+const sheet=document.getElementById("sheet"),scrim=document.getElementById("scrim");
+let lastFocus=null;
+function open(id){
+  const m=matches&&matches.find(x=>x._id===id); if(!m)return;
+  const d=new Date(m.inicio),now=Date.now(),h=teamOf(m.localId,m.local),a=teamOf(m.visitanteId,m.visitante),ch=m.canales||[];
+  const canary=CANARY.has(m.localId);
+  sheet.innerHTML=`<div class="wrap">
+    <div class="grab"></div>
+    <div class="sh-head"><span class="comp">${m.liga===1?"LALIGA EA SPORTS":"LALIGA HYPERMOTION"} · ${/^\d+$/.test(String(m.jornada))?"Jornada "+esc(m.jornada):esc(m.jornada)}</span><button class="close" id="close" aria-label="Cerrar">×</button></div>
+    <div class="vs">
+      <div class="side">${crest(h,1)}<b id="sh-title">${esc(h.name)}</b></div>
+      <div class="mid">VS</div>
+      <div class="side">${crest(a,1)}<b>${esc(a.name)}</b></div>
+    </div>
+    <div>
+      <div class="when">
+        <div><small>Día</small><b>${cap(fDayShort.format(d)).replace(".","")}</b><em>${cap(fDay.format(d))}</em></div>
+        <div><small>Hora</small><b>${m.horaPendiente?"Por fijar":fTime.format(d)}</b><em>${canary?"En Canarias: "+fTimeCan.format(d):"Hora peninsular"}</em></div>
+      </div>
+      ${m.horaPendiente?"":`<p class="count" style="margin:8px 0 0">${countdown(m,now)}</p>`}
+    </div>
+    <div>
+      <h3 class="sec-t">Dónde verlo</h3>
+      ${ch.length?ch.map((c,i)=>{const k=chOf(c);return `
+        <div class="ch op-${k.op}${i===0?" main":""}">
+          <span class="logo">${k.logo?`<img src="${esc(k.logo)}" alt="">`:esc(k.short)}</span>
+          <span class="info">${i===0?'<span class="tag">Canal principal</span>':""}<b>${esc(k.name)}</b><span>${esc(k.how)}</span></span>
+          ${k.dial?`<span class="dialbox"><small>${k.dial==="TDT"?"Vía":"Dial M+"}</small><b>${esc(k.dial)}</b>${k.orange?`<em>Orange ${esc(k.orange)}</em>`:""}</span>`
+                  :k.orange?`<span class="dialbox"><small>Dial Orange</small><b>${esc(k.orange)}</b></span>`
+                  :`<span class="dialbox"><small>Vía</small><b style="font-size:14px">App</b></span>`}
+        </div>`}).join(""):`<p class="note warn">El canal de este partido aún no se ha publicado. La guía lo añadirá en su próxima comprobación.</p>`}
+    </div>
+    ${m.provisional?`<p class="note warn">Canal provisional: Movistar suele confirmar la señal exacta (M+ LALIGA 2, Hypermotion 2…) unos días antes del partido.</p>`:""}
+    ${m.nota?`<p class="note">${esc(m.nota)}</p>`:""}
+  </div>`;
+  lastFocus=document.activeElement;
+  scrim.hidden=false;sheet.hidden=false;
+  requestAnimationFrame(()=>{scrim.classList.add("on");sheet.classList.add("on")});
+  sheet.scrollTop=0;
+  document.getElementById("close").focus();
+}
+function close(){
+  scrim.classList.remove("on");sheet.classList.remove("on");
+  setTimeout(()=>{scrim.hidden=true;sheet.hidden=true},230);
+  if(lastFocus)lastFocus.focus();
+}
+document.getElementById("app").addEventListener("click",e=>{const b=e.target.closest(".match");if(b)open(b.dataset.id)});
+sheet.addEventListener("click",e=>{if(e.target.id==="close")close()});
+scrim.addEventListener("click",close);
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!sheet.hidden)close()});
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
+  league=+b.dataset.l;try{localStorage.setItem("dle-league",String(league))}catch(e){}render();window.scrollTo(0,0)}));
+document.getElementById("q").addEventListener("input",e=>{query=e.target.value;render()});
+
+/* ---------- Datos ----------
+   1) Última guía guardada en el móvil, para abrir al instante y sin conexión.
+   2) Si no hay, la copia que viene dentro de la app (partidos.json).
+   3) Después, la guía actualizada del repositorio de GitHub (config.js → DATOS_URL). */
+function aplicar(d,origen){
+  if(!d||!Array.isArray(d.partidos))return false;
+  matches=d.partidos.map(p=>({_id:p.id,...p})).filter(m=>m.inicio);
+  meta={actualizado:d.actualizado};
+  if(origen)dbState=origen;
+  render();return true;
+}
+function guardada(){try{return JSON.parse(localStorage.getItem("dle-guia")||"null")}catch(e){return null}}
+async function actualizar(){
+  const url=window.DATOS_URL;
+  if(!url){if(dbState==="loading"){dbState="ok";render()}return}
+  const ctl=new AbortController(),t=setTimeout(()=>ctl.abort(),10000);
+  try{
+    const r=await fetch(url+(url.includes("?")?"&":"?")+"t="+Date.now(),{cache:"no-store",signal:ctl.signal});
+    if(!r.ok)throw new Error(r.status);
+    const d=await r.json();
+    const g=guardada();
+    if(!g||new Date(d.actualizado)>=new Date(g.actualizado||0)){
+      try{localStorage.setItem("dle-guia",JSON.stringify(d))}catch(e){}
+      aplicar(d,"ok");
+    }else{dbState="ok";renderFresh()}
+  }catch(e){dbState="offline";renderFresh()}
+  finally{clearTimeout(t)}
+}
+let ultima=0;
+window.alVolver=()=>{if(Date.now()-ultima>10*60e3){ultima=Date.now();actualizar()}else render()};
+window.atras=()=>{if(!sheet.hidden){close();return true}return false};
+
+(async()=>{
+  try{const r=await fetch("escudos/lista.json");if(r.ok)ESCUDOS=new Set(await r.json())}catch(e){}
+  if(!aplicar(guardada())){
+    try{const r=await fetch("partidos.json");if(r.ok)aplicar(await r.json())}catch(e){}
+  }
+  ultima=Date.now();
+  actualizar();
+})();
+setInterval(render,60e3);
+</script>
+</body>
+</html>

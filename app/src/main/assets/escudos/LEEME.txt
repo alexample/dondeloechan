@@ -1,0 +1,13 @@
+Escudos de los equipos
+======================
+
+La app muestra un monograma con las siglas de cada club. Si tienes las imágenes
+de los escudos con permiso para usarlas, puedes añadirlas tú:
+
+1. Guarda cada escudo como PNG cuadrado (256x256 o más), fondo transparente,
+   en esta carpeta, con el id del equipo como nombre: atm.png, bar.png, rma.png...
+2. Añade esos ids a lista.json, por ejemplo: ["atm","bar","rma"]
+3. Sube los cambios a GitHub: se compilará una APK nueva con los escudos.
+
+Ids de Primera: ala ath atm bar bet cel dep elc esp get lev mal osa rac ray rma rso sev val vil
+Ids de Segunda: gra vll cor eib leg mll lpa rsb gir clb alm ovi sab ten cad ceu alb eld cas spo and bur

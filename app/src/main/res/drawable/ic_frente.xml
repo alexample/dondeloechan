@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- antenas -->
+    <path android:strokeColor="@color/blanco" android:strokeWidth="3.5" android:strokeLineCap="round"
+        android:pathData="M46,33 L39,24 M62,33 L69,24" />
+    <!-- pantalla -->
+    <path android:fillColor="@color/blanco"
+        android:pathData="M34,34 h40 a8,8 0 0 1 8,8 v24 a8,8 0 0 1 -8,8 h-40 a8,8 0 0 1 -8,-8 v-24 a8,8 0 0 1 8,-8 z" />
+    <path android:fillColor="@color/verde"
+        android:pathData="M37,39 h34 a4,4 0 0 1 4,4 v22 a4,4 0 0 1 -4,4 h-34 a4,4 0 0 1 -4,-4 v-22 a4,4 0 0 1 4,-4 z" />
+    <!-- línea de medio campo y punto -->
+    <path android:strokeColor="@color/blanco" android:strokeWidth="1.6" android:pathData="M54,39 V69" />
+    <path android:fillColor="@color/naranja"
+        android:pathData="M54,47 a7,7 0 1 1 0,14 a7,7 0 1 1 0,-14 z" />
+    <!-- patas -->
+    <path android:strokeColor="@color/blanco" android:strokeWidth="3.5" android:strokeLineCap="round"
+        android:pathData="M44,78 L42,83 M64,78 L66,83" />
+</vector>

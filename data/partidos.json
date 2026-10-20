@@ -1,0 +1,315 @@
+{
+ "actualizado": "2026-10-20T20:45:00+02:00",
+ "partidos": [
+  {
+   "id": "2627-1-apl-lev-ath",
+   "canales": [
+    "mliga"
+   ],
+   "inicio": "2026-10-21T20:00:00+02:00",
+   "jornada": "Partido aplazado",
+   "liga": 1,
+   "local": "Levante UD",
+   "localId": "lev",
+   "visitante": "Athletic Club",
+   "visitanteId": "ath"
+  },
+  {
+   "id": "2627-2-11-gra-vll",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "inicio": "2026-10-23T20:30:00+02:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "Granada CF",
+   "localId": "gra",
+   "visitante": "Real Valladolid",
+   "visitanteId": "vll"
+  },
+  {
+   "id": "2627-1-10-ala-mal",
+   "canales": [
+    "daznll",
+    "daznfree"
+   ],
+   "inicio": "2026-10-23T21:00:00+02:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "Deportivo Alavés",
+   "localId": "ala",
+   "nota": "Se puede ver gratis en la app de DAZN creando una cuenta.",
+   "visitante": "Málaga CF",
+   "visitanteId": "mal"
+  },
+  {
+   "id": "2627-1-10-ray-elc",
+   "canales": [
+    "mliga"
+   ],
+   "inicio": "2026-10-24T14:00:00+02:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "Rayo Vallecano",
+   "localId": "ray",
+   "visitante": "Elche CF",
+   "visitanteId": "elc"
+  },
+  {
+   "id": "2627-2-11-cor-eib",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "inicio": "2026-10-24T14:00:00+02:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "Córdoba CF",
+   "localId": "cor",
+   "visitante": "SD Eibar",
+   "visitanteId": "eib"
+  },
+  {
+   "id": "2627-1-10-rac-esp",
+   "canales": [
+    "daznll"
+   ],
+   "inicio": "2026-10-24T16:15:00+02:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "Real Racing Club",
+   "localId": "rac",
+   "visitante": "RCD Espanyol",
+   "visitanteId": "esp"
+  },
+  {
+   "id": "2627-2-11-leg-mll",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "inicio": "2026-10-24T16:15:00+02:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "CD Leganés",
+   "localId": "leg",
+   "visitante": "RCD Mallorca",
+   "visitanteId": "mll"
+  },
+  {
+   "id": "2627-1-10-val-vil",
+   "canales": [
+    "mliga"
+   ],
+   "inicio": "2026-10-24T18:30:00+02:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "Valencia CF",
+   "localId": "val",
+   "visitante": "Villarreal CF",
+   "visitanteId": "vil"
+  },
+  {
+   "id": "2627-2-11-gir-clb",
+   "canales": [
+    "hyper2",
+    "daznhm"
+   ],
+   "inicio": "2026-10-24T18:30:00+02:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "Girona FC",
+   "localId": "gir",
+   "nota": "Coincide con Las Palmas–Real Sociedad B, que va por el canal principal (dial 56).",
+   "visitante": "Celta Fortuna",
+   "visitanteId": "clb"
+  },
+  {
+   "id": "2627-2-11-lpa-rsb",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "inicio": "2026-10-24T18:30:00+02:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "UD Las Palmas",
+   "localId": "lpa",
+   "nota": "Coincide con Girona–Celta Fortuna, que va por LALIGA TV HYPERMOTION 2 (dial 59).",
+   "visitante": "Real Sociedad B",
+   "visitanteId": "rsb"
+  },
+  {
+   "id": "2627-1-10-atm-dep",
+   "canales": [
+    "mliga",
+    "mplus7",
+    "orange1"
+   ],
+   "inicio": "2026-10-24T21:00:00+02:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "Atlético de Madrid",
+   "localId": "atm",
+   "nota": "Partido elegido para el canal Movistar Plus+ (dial 7), incluido en todos los paquetes de Movistar Plus+.",
+   "visitante": "RC Deportivo",
+   "visitanteId": "dep"
+  },
+  {
+   "id": "2627-2-11-alm-ovi",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "inicio": "2026-10-24T21:00:00+02:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "UD Almería",
+   "localId": "alm",
+   "visitante": "Real Oviedo",
+   "visitanteId": "ovi"
+  },
+  {
+   "id": "2627-1-10-ath-get",
+   "canales": [
+    "daznll"
+   ],
+   "inicio": "2026-10-25T14:00:00+01:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "Athletic Club",
+   "localId": "ath",
+   "visitante": "Getafe CF",
+   "visitanteId": "get"
+  },
+  {
+   "id": "2627-2-11-sab-ten",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "inicio": "2026-10-25T14:00:00+01:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "CE Sabadell",
+   "localId": "sab",
+   "visitante": "CD Tenerife",
+   "visitanteId": "ten"
+  },
+  {
+   "id": "2627-1-10-cel-bet",
+   "canales": [
+    "daznll"
+   ],
+   "inicio": "2026-10-25T16:15:00+01:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "RC Celta",
+   "localId": "cel",
+   "visitante": "Real Betis",
+   "visitanteId": "bet"
+  },
+  {
+   "id": "2627-2-11-alb-eld",
+   "canales": [
+    "hyper2",
+    "daznhm"
+   ],
+   "inicio": "2026-10-25T16:15:00+01:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "Albacete BP",
+   "localId": "alb",
+   "nota": "Coincide con Cádiz–Ceuta, que va por el canal principal (dial 56).",
+   "visitante": "CD Eldense",
+   "visitanteId": "eld"
+  },
+  {
+   "id": "2627-2-11-cad-ceu",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "inicio": "2026-10-25T16:15:00+01:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "Cádiz CF",
+   "localId": "cad",
+   "nota": "Coincide con Albacete–Eldense, que va por LALIGA TV HYPERMOTION 2 (dial 59).",
+   "visitante": "AD Ceuta FC",
+   "visitanteId": "ceu"
+  },
+  {
+   "id": "2627-1-10-rso-lev",
+   "canales": [
+    "mliga"
+   ],
+   "inicio": "2026-10-25T18:30:00+01:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "Real Sociedad",
+   "localId": "rso",
+   "visitante": "Levante UD",
+   "visitanteId": "lev"
+  },
+  {
+   "id": "2627-2-11-cas-spo",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "inicio": "2026-10-25T18:30:00+01:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "CD Castellón",
+   "localId": "cas",
+   "visitante": "Real Sporting",
+   "visitanteId": "spo"
+  },
+  {
+   "id": "2627-1-10-bar-rma",
+   "canales": [
+    "daznll"
+   ],
+   "etiqueta": "Clásico",
+   "inicio": "2026-10-25T21:00:00+01:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "FC Barcelona",
+   "localId": "bar",
+   "visitante": "Real Madrid",
+   "visitanteId": "rma"
+  },
+  {
+   "id": "2627-2-11-and-bur",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "inicio": "2026-10-26T20:30:00+01:00",
+   "jornada": "11",
+   "liga": 2,
+   "local": "FC Andorra",
+   "localId": "and",
+   "visitante": "Burgos CF",
+   "visitanteId": "bur"
+  },
+  {
+   "id": "2627-1-10-sev-osa",
+   "canales": [
+    "mliga"
+   ],
+   "inicio": "2026-10-26T21:00:00+01:00",
+   "jornada": "10",
+   "liga": 1,
+   "local": "Sevilla FC",
+   "localId": "sev",
+   "visitante": "CA Osasuna",
+   "visitanteId": "osa"
+  }
+ ]
+}
