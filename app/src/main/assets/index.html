@@ -425,7 +425,7 @@ function alternarFav(id,nombre){
   if(!id)return;
   const app=!!(window.AndroidApp&&window.AndroidApp.guardarFavs);
   if(FAV.has(id)){FAV.delete(id);aviso(nombre+" ya no está en Mis equipos.")}
-  else{FAV.add(id);aviso("★ "+nombre+" añadido a Mis equipos."+(app?" Te avisaremos cuando se confirme el canal de sus partidos.":""));
+  else{FAV.add(id);aviso("★ "+nombre+" añadido a Mis equipos."+(app?" Te avisaremos cuando se confirme el canal y 15 minutos antes de cada partido.":""));
     try{if(app&&window.AndroidApp.permisoAvisos)window.AndroidApp.permisoAvisos()}catch(e){}}
   try{localStorage.setItem("dle-favs",JSON.stringify([...FAV]))}catch(e){}
   sincronizarAvisos();

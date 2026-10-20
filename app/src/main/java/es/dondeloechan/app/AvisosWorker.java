@@ -1,6 +1,7 @@
 package es.dondeloechan.app;
 
 import android.Manifest;
+import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -50,17 +51,19 @@ public class AvisosWorker extends Worker {
 
     static final String PREFS = "avisos";
     static final String CANAL_AVISOS = "canales_confirmados";
+    static final String CANAL_PREVIA = "recordatorio_15min";
+    static final long ANTES = 15 * 60 * 1000L;
     static final String URL_GUIA = "https://raw.githubusercontent.com/Alexample/dondeloechan/main/data/partidos.json";
     private static final String TRABAJO = "revisar-canales";
 
     public AvisosWorker(@NonNull Context c, @NonNull WorkerParameters p) { super(c, p); }
 
-    /** Revisión periódica cada 3 horas (Android puede retrasarla un poco para ahorrar batería). */
+    /** Revisión periódica cada hora (Android puede retrasarla un poco para ahorrar batería). */
     static void programar(Context c) {
         Constraints red = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
-        PeriodicWorkRequest req = new PeriodicWorkRequest.Builder(AvisosWorker.class, 3, TimeUnit.HOURS)
+        PeriodicWorkRequest req = new PeriodicWorkRequest.Builder(AvisosWorker.class, 1, TimeUnit.HOURS)
                 .setConstraints(red).build();
-        WorkManager.getInstance(c).enqueueUniquePeriodicWork(TRABAJO, ExistingPeriodicWorkPolicy.KEEP, req);
+        WorkManager.getInstance(c).enqueueUniquePeriodicWork(TRABAJO, ExistingPeriodicWorkPolicy.UPDATE, req);
     }
 
     /** Revisión inmediata (al abrir la app o al cambiar de favoritos). */
@@ -75,8 +78,11 @@ public class AvisosWorker extends Worker {
             NotificationChannel ch = new NotificationChannel(CANAL_AVISOS, "Canal confirmado de mis equipos",
                     NotificationManager.IMPORTANCE_DEFAULT);
             ch.setDescription("Aviso cuando se confirma por qué canal se emite un partido de tus equipos.");
+            NotificationChannel pr = new NotificationChannel(CANAL_PREVIA, "15 minutos antes del partido",
+                    NotificationManager.IMPORTANCE_HIGH);
+            pr.setDescription("Recordatorio 15 minutos antes de que empiece un partido de tus equipos, con su canal.");
             NotificationManager nm = c.getSystemService(NotificationManager.class);
-            if (nm != null) nm.createNotificationChannel(ch);
+            if (nm != null) { nm.createNotificationChannel(ch); nm.createNotificationChannel(pr); }
         }
     }
 
@@ -90,7 +96,17 @@ public class AvisosWorker extends Worker {
             JSONArray a = new JSONArray(p.getString("favs", "[]"));
             for (int i = 0; i < a.length(); i++) favs.add(a.getString(i));
         } catch (Exception ignored) { }
-        if (favs.isEmpty()) return Result.success();
+        Set<String> favsAntes = new HashSet<>();
+        try {
+            JSONArray a = new JSONArray(p.getString("favs_prev", "[]"));
+            for (int i = 0; i < a.length(); i++) favsAntes.add(a.getString(i));
+        } catch (Exception ignored) { }
+        Set<String> alarmasAntes = new HashSet<>(p.getStringSet("alarmas", new HashSet<>()));
+        if (favs.isEmpty()) {
+            for (String id : alarmasAntes) cancelarRecordatorio(c, id);
+            p.edit().putStringSet("alarmas", new HashSet<>()).putString("favs_prev", "[]").apply();
+            return Result.success();
+        }
 
         JSONObject catalogo;
         try { catalogo = new JSONObject(p.getString("canales", "{}")); } catch (Exception e) { catalogo = new JSONObject(); }
@@ -105,6 +121,7 @@ public class AvisosWorker extends Worker {
         SharedPreferences.Editor ed = p.edit();
         crearCanal(c);
         int avisados = 0;
+        Set<String> alarmas = new HashSet<>();
 
         for (int i = 0; i < partidos.length(); i++) {
             JSONObject m = partidos.optJSONObject(i);
@@ -113,21 +130,92 @@ public class AvisosWorker extends Worker {
             if (!favs.contains(local) && !favs.contains(visit)) continue;
             long inicio = fecha(m.optString("inicio"));
             if (inicio <= ahora) continue;
+            String estado = m.optString("estado", "");
+            boolean anulado = estado.equals("aplazado") || estado.equals("suspendido") || estado.equals("final");
 
             JSONArray canales = m.optJSONArray("canales");
+
+            // Recordatorio 15 minutos antes (si la hora está fijada y no se ha avisado ya para esta hora).
+            String mid = m.optString("id");
+            if (!anulado && !m.optBoolean("horaPendiente", false) && inicio - ANTES > ahora - 60000
+                    && p.getLong("rec_" + mid, 0) != inicio) {
+                programarRecordatorio(c, m, canales, catalogo, inicio);
+                alarmas.add(mid);
+            }
+            if (anulado) continue;
             boolean confirmado = !m.optBoolean("provisional", false) && canales != null && canales.length() > 0;
             String firma = canales == null ? "" : canales.toString();
             String clave = "st_" + m.optString("id");
             String antes = p.getString(clave, null);
             String ahoraEstado = (confirmado ? "C|" : "P|") + firma;
 
-            boolean avisar = confirmado && antes != null
-                    && (antes.startsWith("P|") || !antes.equals(ahoraEstado));
+            // Avisa al confirmarse el canal (o si cambia). Un partido nuevo que ya llega confirmado
+            // también avisa, salvo que el equipo se acabe de añadir a favoritos (para no llenar de avisos).
+            boolean equipoYaSeguido = favsAntes.contains(local) || favsAntes.contains(visit);
+            boolean avisar = confirmado && (antes != null
+                    ? (antes.startsWith("P|") || !antes.equals(ahoraEstado))
+                    : equipoYaSeguido);
             if (avisar && notificar(c, m, canales, catalogo, inicio)) avisados++;
             ed.putString(clave, ahoraEstado);
         }
+        for (String id : alarmasAntes) if (!alarmas.contains(id)) cancelarRecordatorio(c, id);
+        ed.putStringSet("alarmas", alarmas);
+        ed.putString("favs_prev", new JSONArray(favs).toString());
         ed.apply();
         return Result.success();
+    }
+
+    private static PendingIntent intentoRecordatorio(Context c, String id, Intent datos, int flags) {
+        Intent i = datos != null ? datos : new Intent(c, Recordatorio.class);
+        i.setClass(c, Recordatorio.class).setAction("es.dondeloechan.app.RECORDATORIO").setData(
+                android.net.Uri.parse("dondeloechan://recordatorio/" + id));
+        return PendingIntent.getBroadcast(c, id.hashCode(), i, flags | PendingIntent.FLAG_IMMUTABLE);
+    }
+
+    /** Programa (o reprograma, si cambió la hora o el canal) la alarma de 15 minutos antes. */
+    private static void programarRecordatorio(Context c, JSONObject m, JSONArray canales, JSONObject catalogo, long inicio) {
+        AlarmManager am = (AlarmManager) c.getSystemService(Context.ALARM_SERVICE);
+        if (am == null) return;
+        String canal;
+        if (m.optBoolean("sinTV", false)) canal = "Sin emisión por TV";
+        else if (canales == null || canales.length() == 0) canal = "Canal aún sin confirmar";
+        else {
+            canal = describirCanal(canales.opt(0), catalogo);
+            if (canales.length() > 1) canal += " · también " + nombreCanal(canales.opt(1), catalogo);
+        }
+        SimpleDateFormat f = new SimpleDateFormat("HH:mm", Locale.ROOT);
+        f.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
+        Intent datos = new Intent()
+                .putExtra("id", m.optString("id"))
+                .putExtra("titulo", m.optString("local") + " – " + m.optString("visitante"))
+                .putExtra("canal", canal)
+                .putExtra("hora", f.format(new Date(inicio)))
+                .putExtra("inicio", inicio);
+        PendingIntent pi = intentoRecordatorio(c, m.optString("id"), datos, PendingIntent.FLAG_UPDATE_CURRENT);
+        long cuando = Math.max(inicio - ANTES, System.currentTimeMillis() + 1000);
+        try {
+            if (Build.VERSION.SDK_INT >= 31 && !am.canScheduleExactAlarms()) {
+                am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
+            } else if (Build.VERSION.SDK_INT >= 23) {
+                am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
+            } else {
+                am.setExact(AlarmManager.RTC_WAKEUP, cuando, pi);
+            }
+        } catch (SecurityException e) {
+            am.set(AlarmManager.RTC_WAKEUP, cuando, pi);
+        }
+    }
+
+    private static void cancelarRecordatorio(Context c, String id) {
+        AlarmManager am = (AlarmManager) c.getSystemService(Context.ALARM_SERVICE);
+        PendingIntent pi = intentoRecordatorio(c, id, null, PendingIntent.FLAG_NO_CREATE);
+        if (am != null && pi != null) { am.cancel(pi); pi.cancel(); }
+    }
+
+    static boolean puedeNotificar(Context c) {
+        if (Build.VERSION.SDK_INT >= 33 && ContextCompat.checkSelfPermission(c, Manifest.permission.POST_NOTIFICATIONS)
+                != PackageManager.PERMISSION_GRANTED) return false;
+        return NotificationManagerCompat.from(c).areNotificationsEnabled();
     }
 
     private boolean notificar(Context c, JSONObject m, JSONArray canales, JSONObject catalogo, long inicio) {
@@ -165,13 +253,13 @@ public class AvisosWorker extends Worker {
         }
     }
 
-    private static String nombreCanal(Object canal, JSONObject catalogo) {
+    static String nombreCanal(Object canal, JSONObject catalogo) {
         if (canal instanceof JSONObject) return ((JSONObject) canal).optString("name", "TV");
         JSONObject k = catalogo.optJSONObject(String.valueOf(canal));
         return k != null ? k.optString("name", String.valueOf(canal)) : String.valueOf(canal);
     }
 
-    private static String describirCanal(Object canal, JSONObject catalogo) {
+    static String describirCanal(Object canal, JSONObject catalogo) {
         JSONObject k = canal instanceof JSONObject ? (JSONObject) canal : catalogo.optJSONObject(String.valueOf(canal));
         String nombre = nombreCanal(canal, catalogo);
         if (k == null) return nombre;
