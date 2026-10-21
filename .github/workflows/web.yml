@@ -40,6 +40,7 @@ jobs:
           echo 'window.DATOS_URL = "partidos.json";' >> site/config.js
           # Icono, color y "añadir a pantalla de inicio".
           python3 - <<'PY'
+          import re
           p = "site/index.html"
           s = open(p, encoding="utf-8").read()
           extra = ('<meta name="theme-color" content="#1F5E3B">\n'
@@ -51,6 +52,9 @@ jobs:
                    '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">\n'
                    '<meta name="apple-mobile-web-app-title" content="Dónde lo Echan">\n')
           s = s.replace("<title>", extra + "<title>", 1)
+          # En la web, Google Fonts solo se carga si se acepta el aviso de cookies (lo hace la propia página).
+          s = re.sub(r'<link rel="preconnect" href="https://fonts.googleapis.com">\s*', "", s, count=1)
+          s = re.sub(r'<link rel="stylesheet" href="https://fonts.googleapis.com/css2[^"]*">\s*', "", s, count=1)
           s = s.replace('content="width=device-width,initial-scale=1"', 'content="width=device-width,initial-scale=1,viewport-fit=cover"', 1)
           open(p, "w", encoding="utf-8").write(s)
           PY

@@ -220,7 +220,15 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .hist li:last-child{border-bottom:0}
 .hist li b{flex:none;width:92px;font-weight:600;font-variant-numeric:tabular-nums}
 .hist li span{color:var(--muted);line-height:1.35} .hist li em{font-style:normal;color:var(--warn)}
-.menu-info a{color:var(--accent);font-weight:600}
+.menu-info a,.menu-info .enlace{color:var(--accent);font-weight:600}
+.menu-info .enlace{appearance:none;border:0;background:none;padding:0;font:inherit;text-align:left;cursor:pointer;text-decoration:underline}
+.cookies{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:45;width:min(560px,calc(100% - 24px));background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+.cookies p{margin:0;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.cookies p b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+.cookies a{color:var(--accent);font-weight:600}
+.ck-b{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ck-b .btn{min-height:42px;font-size:14.5px}
+@media (min-width:1024px){.cookies{left:24px;transform:none;width:420px}}
 @media (prefers-reduced-motion:reduce){.menu,.menu-scrim{transition:none}}
 .brand h1{white-space:nowrap}
 @media (max-width:420px){.brand h1{font-size:25px}.brand .jor{font-size:10px}}
@@ -564,6 +572,7 @@ function pintarMenu(){
       <span>Horarios de LALIGA, RFEF y UEFA; canales según Movistar Plus+, DAZN, RTVE y las teles autonómicas.</span>
       ${app?`<a href="https://alexample.github.io/dondeloechan/" target="_blank" rel="noopener">Abrir la versión web</a>`:""}
       <a href="https://alexample.github.io/dondeloechan/privacidad.html" target="_blank" rel="noopener">Privacidad y cookies</a>
+      ${ES_WEB?`<button type="button" class="enlace" id="ck-pref">Cambiar preferencias de cookies</button>`:""}
     </section>`;
 }
 /* Estadística de las pasadas del robot de datos (data/partidos.json → "robot"). */
@@ -635,6 +644,7 @@ menuEl.addEventListener("change",e=>{
 });
 menuEl.addEventListener("click",e=>{
   if(e.target.id==="menu-cerrar"){cerrarMenu();return}
+  if(e.target.id==="ck-pref"){cerrarMenu();setTimeout(mostrarBanner,250);return}
   if(e.target.id==="aj-permiso"){try{window.AndroidApp.permisoAvisos()}catch(_){}setTimeout(pintarMenu,1500);return}
   const mb=e.target.closest("[data-min]");
   if(mb&&!mb.disabled){AJ.min=+mb.dataset.min;guardarAjustes();pintarMenu();aviso("Te avisaremos "+(AJ.min===60?"1 hora":AJ.min+" minutos")+" antes.");return}
@@ -816,6 +826,11 @@ const conComentariosAqui=()=>!!G()&&!window.AndroidApp&&/github\.io$/.test(locat
 const conComentariosFuera=()=>!!G()&&!!window.AndroidApp;
 function cargarComentarios(m){
   const g=G(),box=document.getElementById("comentarios");if(!g||!box)return;
+  if(!terceros()){
+    box.innerHTML=`<p class="note">Los comentarios funcionan con giscus y GitHub, que pueden instalar sus propias cookies.<br><button class="btn sec" id="ck-coment" type="button" style="margin-top:8px">Activar comentarios</button></p>`;
+    return;
+  }
+  box.innerHTML="";
   const s=document.createElement("script");
   s.src="https://giscus.app/client.js";s.async=true;s.crossOrigin="anonymous";
   const at={repo:g.repo,"repo-id":g.repoId,category:g.category,"category-id":g.categoryId,mapping:"specific",term:m._id,strict:"1",
@@ -823,6 +838,36 @@ function cargarComentarios(m){
   for(const k in at)s.setAttribute("data-"+k,at[k]);
   box.appendChild(s);
 }
+
+/* ---------- Aviso de cookies (solo en la web; en la app no hace falta) ----------
+   Imprescindible: preferencias en localStorage. Opcional (con permiso): Google Fonts y comentarios de giscus/GitHub. */
+const ES_WEB=!window.AndroidApp&&/^https?:$/.test(location.protocol)&&!/androidplatform/.test(location.hostname);
+const FUENTES_URL="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap";
+let CONSENT=null;
+try{CONSENT=JSON.parse(localStorage.getItem("dle-consent")||"null")}catch(e){}
+const terceros=()=>!ES_WEB||!!(CONSENT&&CONSENT.terceros);
+function cargarFuentes(){
+  if(document.querySelector('link[href^="https://fonts.googleapis.com/css2"]'))return;
+  const l=document.createElement("link");l.rel="stylesheet";l.href=FUENTES_URL;document.head.appendChild(l);
+  try{document.fonts&&document.fonts.ready.then(()=>{medirCabecera();if(!tocado&&matches)irAhora(false)})}catch(e){}
+}
+function guardarConsent(si){
+  const antes=CONSENT&&CONSENT.terceros;
+  CONSENT={v:1,terceros:!!si,fecha:new Date().toISOString()};
+  try{localStorage.setItem("dle-consent",JSON.stringify(CONSENT))}catch(e){}
+  const b=document.getElementById("cookies");if(b)b.remove();
+  if(si){cargarFuentes();if(actual&&conComentariosAqui())cargarComentarios(actual)}
+  else if(antes){location.reload()}   // quitar lo que ya se había cargado
+}
+function mostrarBanner(){
+  if(!ES_WEB||document.getElementById("cookies"))return;
+  const d=document.createElement("div");d.id="cookies";d.className="cookies";d.setAttribute("role","dialog");d.setAttribute("aria-label","Cookies y privacidad");
+  d.innerHTML=`<p><b>Cookies y privacidad</b>Guardamos tus preferencias (equipos, ajustes) solo en este dispositivo; eso es imprescindible. Con tu permiso cargamos además las tipografías de Google Fonts y los comentarios de giscus/GitHub, que pueden usar sus propias cookies. <a href="privacidad.html">Más información</a></p>
+    <div class="ck-b"><button type="button" class="btn sec" id="ck-no">Rechazar</button><button type="button" class="btn sec" id="ck-si">Aceptar</button></div>`;
+  d.addEventListener("click",e=>{if(e.target.id==="ck-si")guardarConsent(true);if(e.target.id==="ck-no")guardarConsent(false)});
+  document.body.appendChild(d);
+}
+if(ES_WEB){if(!CONSENT)mostrarBanner();else if(CONSENT.terceros)cargarFuentes()}
 
 /* ---------- Marcadores (football-data.org, plan gratuito: con algunos minutos de retraso) ----------
    config.js define window.MARCADORES = {clave, competiciones:{1:"PD",4:"CL"}}. Sin eso no se consulta nada. */
@@ -991,6 +1036,7 @@ document.getElementById("app").addEventListener("click",e=>{const b=e.target.clo
 sheet.addEventListener("click",e=>{
   if(e.target.id==="close"){close();return}
   if(e.target.closest("#compartir")&&actual){compartir(actual);return}
+  if(e.target.id==="ck-coment"){guardarConsent(true);return}
   if(e.target.closest("#vertabla")&&actual){verTabla=!verTabla;const tb=document.getElementById("tabla");if(tb){const y=tb.getBoundingClientRect().top;tb.outerHTML=tablaHTML(actual);const nt=document.getElementById("tabla");if(nt){sheet.scrollTop+=nt.getBoundingClientRect().top-y;const b=document.getElementById("vertabla");if(b)b.focus()}}return}
   const f=e.target.closest(".fav");
   if(f){alternarFav(f.dataset.team,f.dataset.nombre);const on=FAV.has(f.dataset.team);f.setAttribute("aria-pressed",String(on));f.textContent=on?"★ Siguiendo":"☆ Seguir";render()}
