@@ -114,6 +114,7 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .skel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--line),transparent);animation:sh 1.2s infinite}
 @keyframes sh{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
 .foot{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+.foot a{color:var(--accent);font-weight:600}
 
 /* Clasificación en la ficha */
 .tabla{--z1:#2F8A57;--z2:#8DBF9F;--z3:var(--live)}
@@ -562,6 +563,7 @@ function pintarMenu(){
       <span>${meta&&meta.actualizado?"Guía actualizada "+esc(ago(meta.actualizado))+".":"Guía sin datos todavía."}</span>
       <span>Horarios de LALIGA, RFEF y UEFA; canales según Movistar Plus+, DAZN, RTVE y las teles autonómicas.</span>
       ${app?`<a href="https://alexample.github.io/dondeloechan/" target="_blank" rel="noopener">Abrir la versión web</a>`:""}
+      <a href="https://alexample.github.io/dondeloechan/privacidad.html" target="_blank" rel="noopener">Privacidad y cookies</a>
     </section>`;
 }
 /* Estadística de las pasadas del robot de datos (data/partidos.json → "robot"). */
@@ -781,7 +783,7 @@ function botonHoy(){
   b.hidden=!fuera;
   b.textContent=r.top>window.innerHeight?"Volver a hoy ↓":"Volver a hoy ↑";
 }
-function foot(){return `<p class="foot">Horarios oficiales de LALIGA, RFEF y UEFA; canal exacto según la guía de Movistar Plus+, DAZN, RTVE y las teles autonómicas. Hora peninsular. Pueden cambiar a última hora: si es un partido importante, mira la ficha el mismo día.</p>`}
+function foot(){return `<p class="foot">Horarios oficiales de LALIGA, RFEF y UEFA; canal exacto según la guía de Movistar Plus+, DAZN, RTVE y las teles autonómicas. Hora peninsular. Pueden cambiar a última hora: si es un partido importante, mira la ficha el mismo día. <a href="https://alexample.github.io/dondeloechan/privacidad.html" target="_blank" rel="noopener">Privacidad y cookies</a>.</p>`}
 
 /* ---------- Compartir, enlaces y comentarios ---------- */
 const WEB="https://alexample.github.io/dondeloechan/";
