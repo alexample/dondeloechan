@@ -5,14 +5,17 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - run: |
-          curl -sI https://alexample.github.io/dondeloechan/ | grep -i -E "cache-control|last-modified|age:" || true
-          N=$(curl -s https://alexample.github.io/dondeloechan/index.html | grep -c "/marcadores?" || true)
-          google-chrome --headless=new --no-sandbox --virtual-time-budget=20000 --dump-dom "https://alexample.github.io/dondeloechan/" > dom.html 2>/dev/null || true
-          python3 - "$N" <<'PY'
-          import re,sys,html
-          s=open('dom.html',encoding='utf-8').read()
-          bloques=re.findall(r'<button[^>]*class="match[^"]*"[^>]*>(.*?)</button>',s,re.S)
-          t=[re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',b))).strip() for b in bloques]
-          vivos=[x for x in t if 'EN JUEGO' in x or "'" in x or 'FINAL' in x][:8]
-          print(f"::notice::index con proxy={sys.argv[1]} · partidos en DOM={len(t)} · tabs vivo={s.count('envivo')} · "+" | ".join(vivos))
-          PY
+          npm i -s puppeteer-core@23 >/dev/null 2>&1
+          cat > t.js <<'JS'
+          const pp=require('puppeteer-core');
+          (async()=>{const b=await pp.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});const p=await b.newPage();
+          const red=[];p.on('response',r=>{if(/workers.dev|football-data/.test(r.url()))red.push(r.status()+' '+r.url().slice(0,70))});
+          const errs=[];p.on('console',m=>{if(m.type()==='error')errs.push(m.text().slice(0,120))});
+          await p.goto('https://alexample.github.io/dondeloechan/',{waitUntil:'networkidle2'});
+          await p.click('#tab-4');await new Promise(r=>setTimeout(r,4000));
+          const tabs=await p.$$eval('.tabs button',x=>x.map(y=>y.innerText.replace(/\s+/g,' ')).join(' / '));
+          const vivos=await p.$$eval('#app .match',x=>x.map(y=>y.innerText.replace(/\s+/g,' ')).filter(t=>/EN JUEGO|'|Descanso/i.test(t)).slice(0,10));
+          console.log('::notice::TABS: '+tabs+' ## RED: '+red.join(' ; ')+' ## VIVO: '+vivos.join(' | ')+' ## ERR: '+errs.join(' ; '));
+          await b.close()})();
+          JS
+          node t.js
