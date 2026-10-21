@@ -140,6 +140,18 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .tb-ver{appearance:none;border:0;background:none;color:var(--accent);font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;padding:4px 0}
 .tb-ver:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 
+/* Filtro por equipo en Mis equipos */
+.favbar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:-2px 0 0}
+.favbar::-webkit-scrollbar{display:none}
+.favbar button{appearance:none;flex:none;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.18);background:transparent;color:var(--pitch-ink);border-radius:999px;padding:4px 12px 4px 4px;font:inherit;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;min-height:34px}
+.favbar button.todos{padding-left:12px}
+.favbar button .crest{width:24px;height:24px;font-size:8.5px}
+.favbar button[aria-pressed="true"]{background:var(--pitch-ink);color:var(--pitch);border-color:var(--pitch-ink)}
+.favbar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eq-l button.ir{appearance:none;border:0;background:none;padding:0;color:var(--ink);font:inherit;font-weight:600;font-size:14.5px;text-align:left;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+.eq-l button.ir:hover{color:var(--accent)}
+@media (min-width:1024px){header.top .wrap .favbar{grid-row:2;grid-column:1/-1;margin-top:-4px}}
+
 /* Menú lateral */
 .brand-l{display:flex;align-items:center;gap:10px;min-width:0}
 .burger{appearance:none;border:0;background:rgba(255,255,255,.12);color:var(--pitch-ink);width:36px;height:36px;border-radius:10px;display:grid;place-items:center;cursor:pointer;flex:none}
@@ -296,6 +308,7 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
       <button role="tab" id="tab-3" aria-selected="false" data-l="3">Copa<small>Copa del Rey</small></button>
       <button role="tab" id="tab-4" aria-selected="false" data-l="4">Champions<small>Liga Campeones</small></button>
     </div>
+    <div class="favbar" id="favbar" role="group" aria-label="Filtrar por equipo" hidden></div>
     <label class="search">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input id="q" type="search" placeholder="Busca tu equipo" autocomplete="off" aria-label="Buscar equipo">
@@ -525,8 +538,8 @@ function pintarMenu(){
         <input class="sw" type="checkbox" data-aj="antes" aria-label="Aviso antes del partido"${AJ.antes?" checked":""}${dis}></div>
     </section>
     <section>
-      <h3>Mis equipos</h3>
-      ${favs.length?`<div class="eq-l">${favs.map(f=>`<div><b>★ ${esc(f.n)}</b><button type="button" data-quitar="${esc(f.id)}" data-nombre="${esc(f.n)}">Quitar</button></div>`).join("")}</div>`
+      <h3>Mis equipos</h3>${favs.length?`<p class="note" style="margin-bottom:6px">Toca un equipo para ver solo sus partidos.</p>`:""}
+      ${favs.length?`<div class="eq-l">${favs.map(f=>`<div><button type="button" class="ir" data-ver="${esc(f.id)}" title="Ver sus partidos">★ ${esc(f.n)}</button><button type="button" data-quitar="${esc(f.id)}" data-nombre="${esc(f.n)}">Quitar</button></div>`).join("")}</div>`
         :`<p class="note">Aún no sigues a ningún equipo. Abre un partido y toca <b>☆ Seguir</b>.</p>`}
     </section>
     ${seccionActualizaciones()}
@@ -594,6 +607,8 @@ menuEl.addEventListener("click",e=>{
   if(e.target.id==="aj-permiso"){try{window.AndroidApp.permisoAvisos()}catch(_){}setTimeout(pintarMenu,1500);return}
   const mb=e.target.closest("[data-min]");
   if(mb&&!mb.disabled){AJ.min=+mb.dataset.min;guardarAjustes();pintarMenu();aviso("Te avisaremos "+(AJ.min===60?"1 hora":AJ.min+" minutos")+" antes.");return}
+  const ver=e.target.closest("[data-ver]");
+  if(ver){league=0;try{localStorage.setItem("dle-league","0")}catch(_){}cerrarMenu();elegirEquipo(ver.dataset.ver);return}
   const q=e.target.closest("[data-quitar]");
   if(q){alternarFav(q.dataset.quitar,q.dataset.nombre);pintarMenu();render();if(actual&&!sheet.hidden&&!esEscritorio())open(actual._id);else if(actual&&esEscritorio())open(actual._id)}
 });
@@ -631,7 +646,9 @@ function render(){
     return;
   }
   const now=Date.now();
-  const all=league===0?matches.filter(esFav):matches.filter(m=>m.liga===league);
+  if(favSel&&!FAV.has(favSel))favSel=null;
+  pintarFavbar();
+  const all=league===0?matches.filter(m=>favSel?(m.localId===favSel||m.visitanteId===favSel):esFav(m)):matches.filter(m=>m.liga===league);
   const jors=[...new Set(all.filter(m=>!status(m,now)||status(m,now)==="live").map(m=>m.jornada))].filter(j=>j&&j!=="Partido aplazado");
   document.getElementById("jor").textContent=league===0?(FAV.size?FAV.size+(FAV.size===1?" equipo":" equipos"):""):jors.length?jornLabel(jors[0]):"";
   const q=norm(query.trim());
@@ -639,6 +656,7 @@ function render(){
   if(!list.length){
     app.innerHTML=(league===0&&!FAV.size
       ?`<div class="empty"><b>Aún no sigues a ningún equipo</b><span>Abre cualquier partido y toca <b>☆ Seguir</b> junto al equipo. Aquí verás todos sus partidos, de cualquier competición.</span></div>`
+      :league===0&&!q&&favSel?`<div class="empty"><b>${esc(nombreEquipo(favSel))} no tiene partidos cargados</b><span>Aparecerán aquí en cuanto se publiquen sus horarios.</span></div>`
       :league===0&&!q?`<div class="empty"><b>Tus equipos no tienen partidos cargados</b><span>Aparecerán aquí en cuanto se publiquen sus horarios.</span></div>`
       :q
       ?`<div class="empty"><b>Sin partidos de “${esc(query)}”</b><span>No juega en ${league===0?"tus equipos":COMP[league].short} en los días cargados.</span></div>`
@@ -674,6 +692,38 @@ function render(){
     if(!actual){if(a)open(a.dataset.id);else panelVacio()}
   }
 }
+/* ---------- Filtro por equipo dentro de Mis equipos ---------- */
+let favSel=null;
+try{favSel=localStorage.getItem("dle-favsel")||null}catch(e){}
+function nombreEquipo(id){
+  if(T[id])return T[id].name;
+  if(matches){const m=matches.find(x=>x.localId===id||x.visitanteId===id);if(m)return m.localId===id?m.local:m.visitante}
+  return id;
+}
+function equipoDe(id){
+  if(T[id])return T[id];
+  const m=matches&&matches.find(x=>x.localId===id||x.visitanteId===id);
+  return m?(m.localId===id?teamOf(id,m.local,m.localAbbr):teamOf(id,m.visitante,m.visitanteAbbr)):teamOf(id,id);
+}
+function pintarFavbar(){
+  const bar=document.getElementById("favbar");if(!bar)return;
+  const ver=league===0&&FAV.size>1;
+  if(!ver){if(!bar.hidden){bar.hidden=true;bar.innerHTML="";medirCabecera()}return}
+  const ids=[...FAV].sort((a,b)=>nombreEquipo(a).localeCompare(nombreEquipo(b),"es"));
+  const html=`<button type="button" class="todos" data-fsel="" aria-pressed="${!favSel}">Todos</button>`+
+    ids.map(id=>{const t=equipoDe(id);const corto=t.name.replace(/^(CD|UD|SD|CF|FC|RC|RCD|CA|AD|CE|UE|CP|Real Club|Club)\s+/i,"");return `<button type="button" data-fsel="${esc(id)}" aria-pressed="${favSel===id}">${crest(t)}${esc(corto)}</button>`}).join("");
+  if(bar.innerHTML!==html){bar.innerHTML=html}
+  if(bar.hidden){bar.hidden=false;medirCabecera()}
+  const on=bar.querySelector('[aria-pressed="true"]');if(on&&on.scrollIntoView)try{on.scrollIntoView({block:"nearest",inline:"nearest"})}catch(e){}
+}
+function elegirEquipo(id){
+  favSel=id||null;
+  try{if(favSel)localStorage.setItem("dle-favsel",favSel);else localStorage.removeItem("dle-favsel")}catch(e){}
+  irPendiente=true;if(esEscritorio()){actual=null;panelIniciado=false}
+  render();
+}
+document.getElementById("favbar").addEventListener("click",e=>{const b=e.target.closest("[data-fsel]");if(b)elegirEquipo(b.dataset.fsel)});
+
 /* ---------- Colocar la lista en el presente ---------- */
 let irPendiente=true,tocado=false;
 // Cuando terminan de cargar las letras cambia la altura de la lista: recolocar si el usuario no se ha movido.
