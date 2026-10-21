@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T11:09:35+02:00",
+ "actualizado": "2026-10-21T12:09:52+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -733,9 +733,9 @@
    "id": "2627-4-fase-liga-j3-rma-rb-leipzig",
    "canales": [
     "mlc",
+    "mlcmulti",
     "mplus7",
-    "orange1",
-    "mlcmulti"
+    "orange1"
    ],
    "inicio": "2026-10-21T21:00:00+02:00",
    "jornada": "Fase liga · J3",
@@ -745,7 +745,8 @@
    "nota": "También en abierto para clientes de Movistar Plus+ en el dial 7.",
    "visitante": "RB Leipzig",
    "visitanteAbbr": "RBL",
-   "visitanteId": "rb-leipzig"
+   "visitanteId": "rb-leipzig",
+   "provisional": false
   },
   {
    "id": "2627-4-fase-liga-j3-sporting-cp-lask",
@@ -1027,7 +1028,8 @@
   {
    "id": "2627-1-10-val-vil",
    "canales": [
-    "mliga"
+    "mliga",
+    "mliga2"
    ],
    "inicio": "2026-10-24T18:30:00+02:00",
    "jornada": "10",
@@ -1035,7 +1037,8 @@
    "local": "Valencia CF",
    "localId": "val",
    "visitante": "Villarreal CF",
-   "visitanteId": "vil"
+   "visitanteId": "vil",
+   "provisional": false
   },
   {
    "id": "2627-2-11-gir-clb",
@@ -1272,6 +1275,13 @@
     "hyper",
     "daznhm",
     {
+     "name": "Replay",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
+    },
+    {
      "dial": "TDT",
      "how": "Gratis en la TDT de Cataluña y en 3Cat.",
      "name": "Esport3",
@@ -1292,7 +1302,8 @@
    "local": "CE Sabadell",
    "localId": "sab",
    "visitante": "CD Tenerife",
-   "visitanteId": "ten"
+   "visitanteId": "ten",
+   "provisional": false
   },
   {
    "id": "2627-5-9-villarreal-b-cartagena",
@@ -1564,6 +1575,28 @@
    "visitanteId": "elc"
   },
   {
+   "id": "2627-3-primera-ronda-ce-manresa-ue-sant-andreu",
+   "canales": [
+    {
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat.",
+     "name": "Esport3",
+     "op": "free",
+     "short": "E3"
+    }
+   ],
+   "inicio": "2026-10-27T19:30:00+01:00",
+   "jornada": "Primera ronda",
+   "liga": 3,
+   "local": "CE Manresa",
+   "localAbbr": "MAN",
+   "localId": "ce-manresa",
+   "nota": "Hora oficial de la RFEF (20:30); algunas guías lo anuncian a las 19:30.",
+   "visitante": "UE Sant Andreu",
+   "visitanteAbbr": "SAN",
+   "visitanteId": "ue-sant-andreu"
+  },
+  {
    "id": "2627-3-primera-ronda-ud-castellonense-alm",
    "canales": [],
    "inicio": "2026-10-27T19:45:00+01:00",
@@ -1659,28 +1692,6 @@
    "visitante": "CD Extremadura",
    "visitanteAbbr": "EXT",
    "visitanteId": "cd-extremadura"
-  },
-  {
-   "id": "2627-3-primera-ronda-ce-manresa-ue-sant-andreu",
-   "canales": [
-    {
-     "dial": "TDT",
-     "how": "Gratis en la TDT de Cataluña y en 3Cat.",
-     "name": "Esport3",
-     "op": "free",
-     "short": "E3"
-    }
-   ],
-   "inicio": "2026-10-27T20:30:00+01:00",
-   "jornada": "Primera ronda",
-   "liga": 3,
-   "local": "CE Manresa",
-   "localAbbr": "MAN",
-   "localId": "ce-manresa",
-   "nota": "Hora oficial de la RFEF (20:30); algunas guías lo anuncian a las 19:30.",
-   "visitante": "UE Sant Andreu",
-   "visitanteAbbr": "SAN",
-   "visitanteId": "ue-sant-andreu"
   },
   {
    "id": "2627-3-primera-ronda-arosa-sc-pontevedra",
@@ -2577,6 +2588,20 @@
     "hyper",
     "daznhm",
     {
+     "name": "Replay",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
+    },
+    {
+     "name": "Replay YouTube",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
+    },
+    {
      "dial": "TDT",
      "how": "Gratis en la TDT de Galicia y en la web de la CRTVG.",
      "name": "TVG",
@@ -2643,7 +2668,9 @@
   {
    "id": "2627-1-11-bar-ala",
    "canales": [
-    "mliga"
+    "mliga",
+    "mplus7",
+    "orange1"
    ],
    "inicio": "2026-10-31T21:00:00+01:00",
    "jornada": "11",
@@ -3813,6 +3840,7 @@
    "tras": "Jornada 10"
   },
   "4": {
+   "tras": "Jornada 3",
    "filas": [
     [
      "psg",
@@ -3866,7 +3894,8 @@
      1,
      11,
      6,
-     6
+     6,
+     "FC Barcelona"
     ],
     [
      "manchester-city",
@@ -3909,7 +3938,8 @@
      0,
      6,
      4,
-     6
+     6,
+     "Real Madrid"
     ],
     [
      "bet",
@@ -3919,7 +3949,8 @@
      0,
      6,
      4,
-     6
+     6,
+     "Real Betis"
     ],
     [
      "borussia-dortmund",
@@ -3973,7 +4004,8 @@
      1,
      4,
      3,
-     4
+     4,
+     "Atlético de Madrid"
     ],
     [
      "psv",
@@ -4016,7 +4048,8 @@
      2,
      8,
      8,
-     3
+     3,
+     "Villarreal CF"
     ],
     [
      "club-brugge",
@@ -4205,12 +4238,12 @@
      0,
      "Slovan Bratislava"
     ]
-   ],
-   "tras": "Jornada 3 (partidos del martes 20)"
+   ]
   },
   "5": {
    "grupos": {
     "Grupo 1": {
+     "tras": "Jornada 8",
      "filas": [
       [
        "cd-lugo",
@@ -4432,10 +4465,10 @@
        2,
        "Arenas Club"
       ]
-     ],
-     "tras": "Jornada 8"
+     ]
     },
     "Grupo 2": {
+     "tras": "Jornada 8",
      "filas": [
       [
        "villarreal-b",
@@ -4504,17 +4537,6 @@
        "Alcorcón"
       ],
       [
-       "ud-ibiza",
-       8,
-       4,
-       1,
-       3,
-       11,
-       10,
-       13,
-       "UD Ibiza"
-      ],
-      [
        "hercules",
        8,
        4,
@@ -4524,6 +4546,17 @@
        7,
        13,
        "Hércules"
+      ],
+      [
+       "ud-ibiza",
+       8,
+       4,
+       1,
+       3,
+       11,
+       10,
+       13,
+       "UD Ibiza"
       ],
       [
        "real-madrid-castilla",
@@ -4657,8 +4690,7 @@
        3,
        "Juventud Torremolinos"
       ]
-     ],
-     "tras": "Jornada 8"
+     ]
     }
    }
   }
