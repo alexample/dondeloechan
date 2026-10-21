@@ -1,7 +1,7 @@
 name: Explorar fuentes (temporal)
 on: workflow_dispatch
 permissions:
-  contents: read
+  contents: write
 jobs:
   explorar:
     runs-on: ubuntu-24.04
@@ -38,7 +38,9 @@ jobs:
             sleep 7
           done
           ls -la
-      - uses: actions/upload-artifact@v4
-        with:
-          name: muestras
-          path: muestras
+      - name: Guardar en la rama muestras
+        run: |
+          cd muestras
+          git init -q -b muestras && git add -A
+          git -c user.name=robot -c user.email=robot@users.noreply.github.com commit -qm muestras
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" muestras
