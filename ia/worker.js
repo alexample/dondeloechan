@@ -100,6 +100,38 @@ async function historialFD(request, env, ctx, origen) {
     { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
 }
 
+// Marcadores en tiempo real (marcador, minuto y parte) del marcador público de ESPN. Caché de 20 s para todos.
+const ESPN_LIGAS = new Set(["esp.1", "esp.2", "esp.copa_del_rey", "uefa.champions"]);
+async function vivo(request, env, ctx, origen) {
+  const u = new URL(request.url);
+  const ligas = (u.searchParams.get("ligas") || "").split(",").filter(l => ESPN_LIGAS.has(l)).slice(0, 4);
+  const fechas = (u.searchParams.get("fechas") || "").split(",").filter(f => /^\d{8}$/.test(f)).slice(0, 2);
+  if (!ligas.length || !fechas.length) return json({ error: "Parámetros no válidos." }, 400, origen);
+  const cache = caches.default, out = [];
+  await Promise.all(ligas.flatMap(liga => fechas.map(async fecha => {
+    const url = `https://site.api.espn.com/apis/site/v2/sports/soccer/${liga}/scoreboard?dates=${fecha}`;
+    const clave = new Request("https://cache.dondeloechan/espn/" + liga + "/" + fecha);
+    let r = await cache.match(clave), d;
+    if (r) d = await r.json();
+    else {
+      const x = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0 (DondeLoEchan)" } });
+      if (!x.ok) return;
+      d = await x.json();
+      ctx.waitUntil(cache.put(clave, new Response(JSON.stringify(d), { headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=20" } })));
+    }
+    for (const ev of d.events || []) {
+      const c = (ev.competitions || [])[0]; if (!c) continue;
+      const eq = l => (c.competitors || []).find(t => t.homeAway === l) || {};
+      const h = eq("home"), a = eq("away"), st = ev.status || {}, ty = st.type || {};
+      const team = t => ({ name: (t.team || {}).displayName || "", shortName: (t.team || {}).shortDisplayName || "", tla: (t.team || {}).abbreviation || "" });
+      out.push({ liga, utcDate: ev.date, homeTeam: team(h), awayTeam: team(a),
+        gl: h.score != null ? +h.score : null, gv: a.score != null ? +a.score : null,
+        estado: ty.state || "", detalle: ty.name || "", reloj: st.displayClock || "", parte: st.period || 0 });
+    }
+  })));
+  return new Response(JSON.stringify({ fuente: "ESPN", partidos: out }), { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
+}
+
 const uso = new Map();     // ip -> {min, tMin, dia, tDia}  (memoria del worker: freno básico contra abusos)
 
 function cors(origen) {
@@ -172,6 +204,11 @@ export default {
   async fetch(request, env, ctx) {
     const origen = request.headers.get("Origin") || "";
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });
+    if (request.method === "GET" && new URL(request.url).pathname === "/vivo") {
+      if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+      try { return await vivo(request, env, ctx, origen); }
+      catch (e) { return json({ error: "No hay marcadores ahora mismo." }, 502, origen); }
+    }
     if (request.method === "GET" && new URL(request.url).pathname === "/historial") {
       if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
       try { return await historialFD(request, env, ctx, origen); }

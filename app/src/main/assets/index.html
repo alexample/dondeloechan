@@ -551,6 +551,12 @@ function status(m,now){
 function tiempo(m,now){
   if(status(m,now)!=="live")return null;
   if(m.minuto==="Descanso")return {c:"Descanso",l:"Descanso"};
+  if(m.minuto==="Penaltis")return {c:"Penaltis",l:"Tanda de penaltis"};
+  if(m.minuto&&m.parte){
+    const txt=String(m.minuto).replace(/'\+/,"+");
+    if(m.parte>=3)return {c:`${txt} · Pró.`,l:`Prórroga · minuto ${txt.replace(/'$/,"")}`};
+    return {c:`${txt} · ${m.parte}ª`,l:`${m.parte===1?"Primera":"Segunda"} parte · minuto ${txt.replace(/'$/,"")}`};
+  }
   const e=Math.floor((now-new Date(m.inicio).getTime())/60e3);
   let n=null,aprox=false;
   const mm=String(m.minuto||"").match(/^(\d+)/);if(mm)n=+mm[1];
@@ -1114,7 +1120,7 @@ let vivoTimer=null, vivoUltimo=0, vivoFuente=false, vivoOk=0, vivoFallo="";
 function notaVivo(){
   const s=vivoOk?Math.max(0,Math.round((Date.now()-vivoOk)/1000)):null;
   const cuando=s==null?"":s<60?` · comprobado hace ${s} s`:` · comprobado hace ${Math.round(s/60)} min`;
-  return "Marcador de football-data.org (va unos minutos por detrás de la tele)"+cuando+(vivoFallo&&Date.now()-vivoOk>150e3?" · ahora mismo no responde, se reintenta cada minuto":"");
+  return (vivoFuente==="ESPN"?"Marcador en directo de ESPN":"Marcador de football-data.org (va unos minutos por detrás de la tele)")+cuando+(vivoFallo&&Date.now()-vivoOk>150e3?" · ahora mismo no responde, se reintenta cada minuto":"");
 }
 const FD_ESTADO={IN_PLAY:"directo",PAUSED:"directo",FINISHED:"final",AWARDED:"final",POSTPONED:"aplazado",SUSPENDED:"suspendido",CANCELLED:"aplazado"};
 const QUITAR=new Set(["fc","cf","cd","ud","sd","rcd","ad","ce","club","de","del","la","el","real","sad","ac","as","afc","sc","sv","vfb","fk","ssc","rc","bv","sport","balompie","futbol","calcio","1."]);
@@ -1125,9 +1131,48 @@ function parecido(nuestro,fd){
   return a.some(w=>b.has(w)||[...b].some(x=>x.startsWith(w)||w.startsWith(x)));
 }
 function enVentana(m,now){const k=new Date(m.inicio).getTime();return now>k-15*60e3&&now<k+3*36e5}
+/* Fuente principal del directo: marcador público de ESPN (a través del worker, caché de 20 s): marcador, minuto y parte al momento.
+   Respaldo: football-data.org (solo Primera y Champions, con unos minutos de retraso). */
+const VIVO_ESPN={1:"esp.1",2:"esp.2",3:"esp.copa_del_rey",4:"uefa.champions"};
+const enJuegoPosible=(m,now)=>m.estado!=="final"&&now>new Date(m.inicio).getTime()-15*60e3&&now<new Date(m.inicio).getTime()+4*36e5;
 function necesitaMarcador(now){
-  const cfg=window.MARCADORES;if(!cfg||!cfg.clave||!matches)return false;
-  return matches.some(m=>cfg.competiciones[m.liga]&&m.estado!=="final"&&now>new Date(m.inicio).getTime()-15*60e3&&now<new Date(m.inicio).getTime()+20*36e5);
+  if(!matches)return false;
+  const cfg=window.MARCADORES;
+  return matches.some(m=>(VIVO_ESPN[m.liga]||(cfg&&cfg.competiciones&&cfg.competiciones[m.liga]))&&enJuegoPosible(m,now));
+}
+const fechaEspn=iso=>fechaMad(iso).replace(/-/g,"");
+async function marcadoresEspn(now){
+  if(!window.IA_URL)return false;
+  const lista=matches.filter(m=>VIVO_ESPN[m.liga]&&enJuegoPosible(m,now));
+  if(!lista.length)return false;
+  const ligas=[...new Set(lista.map(m=>VIVO_ESPN[m.liga]))],fechas=[...new Set(lista.map(m=>fechaEspn(m.inicio)))].slice(0,2);
+  const ctl=new AbortController(),t=setTimeout(()=>ctl.abort(),12000);
+  let d;
+  try{const r=await fetch(window.IA_URL.replace(/\/$/,"")+"/vivo?ligas="+ligas.join(",")+"&fechas="+fechas.join(","),{cache:"no-store",signal:ctl.signal});if(!r.ok)return false;d=await r.json()}
+  catch(e){return false}finally{clearTimeout(t)}
+  const porLiga={};for(const k in VIVO_ESPN)porLiga[VIVO_ESPN[k]]=+k;
+  for(const x of d.partidos||[]){
+    const liga=porLiga[x.liga];if(!liga)continue;
+    const tt=new Date(x.utcDate).getTime();
+    const m=matches.find(m=>m.liga===liga&&Math.abs(new Date(m.inicio).getTime()-tt)<3*36e5
+      &&parecido(teamOf(m.localId,m.local,m.localAbbr),x.homeTeam||{})&&parecido(teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),x.awayTeam||{}));
+    if(!m)continue;
+    let v=null;
+    if(x.estado==="in"){
+      v={estado:"directo",enJuego:true,parte:x.parte||0,minuto:/HALFTIME/.test(x.detalle)?"Descanso":(x.reloj||null)};
+      if(/PENALT|SHOOTOUT/.test(x.detalle)||x.parte===5)v.minuto="Penaltis";
+    }else if(x.estado==="post"){
+      if(/POSTPONED|CANCELED|CANCELLED/.test(x.detalle))v={estado:"aplazado",minuto:null};
+      else if(/SUSPENDED|ABANDONED/.test(x.detalle))v={estado:"suspendido",minuto:null};
+      else v={estado:"final",minuto:null,enJuego:false,parte:0};
+    }else if(/POSTPONED/.test(x.detalle))v={estado:"aplazado",minuto:null};
+    if(!v)continue;
+    if(x.estado!=="pre"&&x.gl!=null&&x.gv!=null)v.marcador=[x.gl,x.gv];
+    VIVO[m._id]=v;
+  }
+  vivoFuente="ESPN";vivoOk=Date.now();vivoFallo="";
+  aplicarVivo();render();refrescarFicha();
+  return true;
 }
 async function pedirJSON(url,clave){
   // 1) A través del worker de Cloudflare (sirve para la web, que no puede consultar football-data directamente,
@@ -1155,16 +1200,20 @@ async function pedirJSON(url,clave){
     throw e;
   }
 }
+let fdUltimo=0;
 async function actualizarMarcadores(){
   const cfg=window.MARCADORES,now=Date.now();
   if(!necesitaMarcador(now))return;
-  if(now-vivoUltimo<55e3)return;
+  if(now-vivoUltimo<25e3)return;
   vivoUltimo=now;
+  if(await marcadoresEspn(now))return;
+  if(!cfg||!cfg.clave||now-fdUltimo<55e3)return;
+  fdUltimo=now;
   const dia=t=>new Date(t).toISOString().slice(0,10);
   const codes=[...new Set(Object.values(cfg.competiciones))].join(",");
   const url=`https://api.football-data.org/v4/matches?competitions=${codes}&dateFrom=${dia(now-864e5)}&dateTo=${dia(now+864e5)}`;
   let d;try{d=await pedirJSON(url,cfg.clave)}catch(e){vivoFallo=String(e&&e.message||e);const n=document.getElementById("vivo-nota");if(n)n.textContent=notaVivo();return}
-  vivoFuente=true;vivoOk=Date.now();vivoFallo="";
+  vivoFuente="football-data.org";vivoOk=Date.now();vivoFallo="";
   const porLiga={};for(const k in cfg.competiciones)porLiga[cfg.competiciones[k]]=+k;
   for(const x of d.matches||[]){
     const liga=porLiga[x.competition&&x.competition.code];if(!liga)continue;
@@ -1325,7 +1374,7 @@ function open(id){
     </div>
     ${m.provisional?`<p class="note warn">Canal provisional: la señal exacta (M+ LALIGA 2, Liga de Campeones 3…) suele confirmarse unos días antes del partido.</p>`:""}
     ${m.nota?`<p class="note">${esc(m.nota)}</p>`:""}
-    ${VIVO[m._id]&&m.estado==="directo"?`<p class="note" id="vivo-nota">${notaVivo()}</p>`:""}
+    ${VIVO[m._id]&&(m.estado==="directo"||status(m,now)==="live")?`<p class="note" id="vivo-nota">${notaVivo()}</p>`:""}
     ${tablaHTML(m)}
     ${[1,2,3,4,5].includes(m.liga)&&m.localId&&m.visitanteId&&window.H2H_URL?`<div id="h2h"><h3 class="sec-t">Historial y forma</h3><p class="h2h-fuente" style="margin:0">Cargando…</p></div>`:""}
     <div class="acciones">
@@ -1474,9 +1523,9 @@ function refrescar(forzar){
   if(forzar||now-ultima>=cadaCuanto()||(tocaRobot(now)&&now-ultima>=2*60e3)){ultima=now;actualizar()}
   actualizarMarcadores();
 }
-setInterval(()=>refrescar(false),60e3);
+setInterval(()=>refrescar(false),30e3);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){refrescar(Date.now()-ultima>Math.min(cadaCuanto(),5*60e3));render()}});
-const firmaFicha=x=>JSON.stringify([x.marcador,x.estado,x.minuto,x.canales,x.inicio,x.horaPendiente,x.provisional]);
+const firmaFicha=x=>JSON.stringify([x.marcador,x.estado,x.canales,x.inicio,x.horaPendiente,x.provisional]);
 let fichaPintada="";
 /* Si la ficha de un partido está abierta y cambia su marcador, estado o canal, se repinta sin moverla. */
 function refrescarFicha(){

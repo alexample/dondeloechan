@@ -1,0 +1,25 @@
+name: Prueba web (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          npm i -s puppeteer-core@23 >/dev/null 2>&1
+          cat > t.js <<'JS'
+          const pp=require('puppeteer-core');
+          (async()=>{const b=await pp.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});const p=await b.newPage();await p.setViewport({width:390,height:844});
+          await p.evaluateOnNewDocument(()=>{localStorage.setItem('dle-consent',JSON.stringify({v:1,terceros:false}));localStorage.setItem('dle-league','4')});
+          const red=[];p.on('response',r=>{if(/workers.dev\/(vivo|marcadores)/.test(r.url()))red.push(r.url().split('/')[3].slice(0,8)+':'+r.status())});
+          await p.goto('https://alexample.github.io/dondeloechan/',{waitUntil:'networkidle2'});await new Promise(r=>setTimeout(r,4000));
+          const f=async()=>(await p.$$eval('#app .match',x=>x.map(y=>y.innerText.replace(/\s+/g,' ')).filter(t=>/EN JUEGO|'|Descanso|FINAL/i.test(t)&&/21 de octubre|Brugge|Madrid|Betis|Bayern|Inter|Villa|Sporting|Como|Lille/.test(t)).slice(-9).map(t=>t.split(' LC')[0]))).join(' | ');
+          console.log('::notice::T0 '+await f()+' · red '+red.join(','));
+          await new Promise(r=>setTimeout(r,65000));
+          console.log('::notice::T+65s '+await f()+' · red '+red.join(','));
+          await b.close()})();
+          JS
+          node t.js
+          python3 -c "
+          import json,urllib.request
+          e=json.loads(urllib.request.urlopen(urllib.request.Request('https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261021',headers={'User-Agent':'Mozilla/5.0'})).read())
+          print('::notice::ESPN '+' | '.join(f\"{[c for c in ev['competitions'][0]['competitors'] if c['homeAway']=='home'][0]['team']['shortDisplayName']} {[c for c in ev['competitions'][0]['competitors'] if c['homeAway']=='home'][0]['score']}-{[c for c in ev['competitions'][0]['competitors'] if c['homeAway']=='away'][0]['score']} {ev['status']['displayClock']}\" for ev in e['events']))"
