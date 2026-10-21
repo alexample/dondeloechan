@@ -1082,17 +1082,16 @@ async function actualizarMarcadores(){
     if(x.status==="PAUSED")v.minuto="Descanso";else if(x.minute)v.minuto=x.minute+"'";
     VIVO[m._id]=v;
   }
-  aplicarVivo();render();
+  aplicarVivo();render();refrescarFicha();
 }
 function aplicarVivo(){
   if(!matches)return;
   for(const m of matches){const v=VIVO[m._id];if(!v||m.estado==="final"&&!v.marcador)continue;Object.assign(m,v)}
 }
 function programarMarcadores(){
-  clearInterval(vivoTimer);
   if(!window.MARCADORES)return;
+  vivoTimer=true;          // el reloj de cada minuto está en refrescar()
   actualizarMarcadores();
-  vivoTimer=setInterval(actualizarMarcadores,60e3);
 }
 
 /* ---------- Ficha ---------- */
@@ -1216,7 +1215,7 @@ function aplicar(d,origen){
   meta={actualizado:d.actualizado,robot:d.robot||null};
   CLAS=d.clasificacion||null;
   if(origen)dbState=origen;
-  aplicarVivo();render();
+  aplicarVivo();render();refrescarFicha();
   if(!vivoTimer)programarMarcadores();
   return true;
 }
@@ -1237,8 +1236,31 @@ async function actualizar(){
   }catch(e){dbState="offline";renderFresh()}
   finally{clearTimeout(t)}
 }
+/* Con la app abierta, los resultados se refrescan solos:
+   - Primera y Champions: marcador de football-data cada minuto (actualizarMarcadores).
+   - Todo lo demás (Hypermotion, 1ª RFEF, Copa, clasificaciones): se vuelve a leer la guía
+     cada 3 min si hay algún partido en juego y cada 15 min si no. En segundo plano no se gasta nada. */
 let ultima=0;
-window.alVolver=()=>{if(Date.now()-ultima>10*60e3){ultima=Date.now();actualizar()}else render()};
+function hayJuego(now){return !!matches&&matches.some(m=>{const k=new Date(m.inicio).getTime();return m.estado!=="final"&&now>k-15*60e3&&now<k+3*36e5})}
+function cadaCuanto(){return hayJuego(Date.now())?3*60e3:15*60e3}
+function refrescar(forzar){
+  if(document.hidden)return;
+  const now=Date.now();
+  if(forzar||now-ultima>=cadaCuanto()){ultima=now;actualizar()}
+  actualizarMarcadores();
+}
+setInterval(()=>refrescar(false),60e3);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden){refrescar(Date.now()-ultima>Math.min(cadaCuanto(),5*60e3));render()}});
+/* Si la ficha de un partido está abierta y cambia su marcador, estado o canal, se repinta sin moverla. */
+function refrescarFicha(){
+  if(!actual||sheet.hidden||!matches)return;
+  const m=matches.find(x=>x._id===actual._id);if(!m)return;
+  const firma=x=>JSON.stringify([x.marcador,x.estado,x.minuto,x.canales,x.inicio,x.horaPendiente,x.provisional]);
+  if(m===actual||firma(m)===firma(actual)){actual=m;return}
+  const y=sheet.scrollTop,lf=lastFocus,foco=document.activeElement;
+  open(m._id);sheet.scrollTop=y;lastFocus=lf;try{foco&&foco.focus({preventScroll:true})}catch(e){}
+}
+window.alVolver=()=>refrescar(Date.now()-ultima>Math.min(cadaCuanto(),5*60e3));
 window.abrirPartido=id=>{if(!matches)return;const m=matches.find(x=>x._id===id);if(m){league=m.liga;render();open(id)}};
 window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cerrarMenu();return true}if(esEscritorio()){if(actual){close();return true}return false}if(!sheet.hidden){close();return true}return false};
 
