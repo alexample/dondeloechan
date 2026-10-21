@@ -66,7 +66,9 @@ public class MainActivity extends Activity {
         ViewCompat.setOnApplyWindowInsetsListener(root, (v, insets) -> {
             Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars()
                     | WindowInsetsCompat.Type.displayCutout());
-            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            Insets teclado = insets.getInsets(WindowInsetsCompat.Type.ime());
+            // Con el teclado abierto, la web se encoge para que la caja de texto quede a la vista.
+            v.setPadding(bars.left, bars.top, bars.right, Math.max(bars.bottom, teclado.bottom));
             return WindowInsetsCompat.CONSUMED;
         });
 

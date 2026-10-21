@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,interactive-widget=resizes-content">
 <title>Dónde lo Echan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
@@ -172,6 +172,7 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .ia-pen{display:inline-flex;gap:4px} .ia-pen i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:iapen 1s infinite} .ia-pen i:nth-child(2){animation-delay:.15s} .ia-pen i:nth-child(3){animation-delay:.3s}
 @keyframes iapen{50%{opacity:.25}}
 .ia-sug{display:flex;flex-wrap:wrap;gap:6px}
+.ia-sug small{flex-basis:100%;font-size:11.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
 .ia-sug button{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;text-align:left}
 .ia-form{display:flex;gap:8px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
 .ia-form input{flex:1;min-width:0;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:15px;background:var(--bg);color:var(--ink)}
@@ -848,12 +849,50 @@ function iaPintarInicio(){
   const sug=["¿Qué partidos hay hoy y dónde los echan?",fav?`¿Cuándo juega el ${nombreEquipo(fav)} y en qué canal?`:"¿Cuándo juega el Real Madrid y en qué canal?","¿Qué echan este fin de semana en abierto?","¿Cómo va la clasificación de Primera?","¿Qué resultados hubo ayer?"];
   iaMsgs.innerHTML=`<div class="ia-m el"><p>Hola. Pregúntame por horarios, canales, resultados o clasificaciones de la guía.</p></div><div class="ia-sug">${sug.map(x=>`<button type="button" data-sug="${esc(x)}">${esc(x)}</button>`).join("")}</div>`;
 }
+/* Teclado: el panel ocupa solo la zona visible para que la caja de texto no quede tapada */
+function iaAjustar(){
+  const vv=window.visualViewport;if(!vv||iaEl.hidden)return;
+  const tapado=window.innerHeight-vv.height>80;
+  iaEl.style.top=tapado?vv.offsetTop+"px":"";iaEl.style.height=tapado?vv.height+"px":"";iaEl.style.bottom=tapado?"auto":"";
+  if(tapado)iaMsgs.scrollTop=iaMsgs.scrollHeight;
+}
+if(window.visualViewport){visualViewport.addEventListener("resize",iaAjustar);visualViewport.addEventListener("scroll",iaAjustar)}
+addEventListener("resize",()=>{if(!iaEl.hidden)iaMsgs.scrollTop=iaMsgs.scrollHeight});
+document.getElementById("ia-q").addEventListener("focus",()=>setTimeout(()=>{iaAjustar();iaMsgs.scrollTop=iaMsgs.scrollHeight},300));
+/* Ideas para seguir preguntando: las que propone la IA + otras sobre el partido del que se habla */
+function iaSepararSug(t){
+  const sug=[];
+  const limpio=String(t).replace(/\n?\s*\**SUGERENCIAS\**\s*:\s*([^\n]*)\s*$/i,(x,l)=>{l.split("|").forEach(q=>{q=q.replace(/^[\s\-•*"«]+|[\s"»]+$/g,"");if(q.length>4&&q.length<120)sug.push(/[?¿]/.test(q)?q:"¿"+q.replace(/[.?]$/,"")+"?")});return ""}).trim();
+  return {texto:limpio,sug};
+}
+function iaIdeas(texto,q,deIA){
+  const ids=[...(String(texto)+"\n"+iaHist.filter(h=>h.rol==="asistente").map(h=>h.texto).reverse().join("\n")).matchAll(/\[\[([^\]]+)\]\]/g)].map(x=>x[1].trim());
+  const m=matches&&ids.map(id=>matches.find(z=>z._id===id)).find(Boolean);
+  const ideas=[...deIA.slice(0,3)];
+  if(m){
+    const now=Date.now(),st=status(m,now),dia=fDay.format(new Date(m.inicio));
+    const L=nombreEquipo(m.localId)||m.local,V=nombreEquipo(m.visitanteId)||m.visitante;
+    if(st==="done"||m.estado==="final")ideas.push(`¿Cuándo vuelve a jugar el ${L}?`,`¿Y el próximo partido del ${V}?`);
+    else ideas.push(`¿Cómo llegan ${L} y ${V} en la clasificación?`,`¿Qué resultado sacó el ${V} en su último partido?`);
+    ideas.push(`¿Qué más partidos hay el ${dia}?`,`¿Hay algún partido en abierto ese día?`);
+  }
+  ideas.push("¿Cuál es el partido más interesante de esta jornada?","¿Qué echan en abierto este fin de semana?","¿Quién va líder en Hypermotion?");
+  const vistos=new Set([q.toLowerCase(),...iaHist.filter(h=>h.rol==="usuario").map(h=>h.texto.toLowerCase())]),out=[];
+  for(const x of ideas){const k=x.toLowerCase();if(!vistos.has(k)){vistos.add(k);out.push(x)}if(out.length>=3)break}
+  return out;
+}
+function iaPintarIdeas(lista){
+  if(!lista.length)return;
+  const d=document.createElement("div");d.className="ia-sug";
+  d.innerHTML="<small>Puedes preguntar</small>"+lista.map(x=>`<button type="button" data-sug="${esc(x)}">${esc(x)}</button>`).join("");
+  iaMsgs.appendChild(d);
+}
 function iaAbrir(){if(!iaActivo())return;iaPintarInicio();iaEl.hidden=false;requestAnimationFrame(()=>iaEl.classList.add("on"));setTimeout(()=>document.getElementById("ia-q").focus(),260)}
-function iaCerrar(){if(iaEl.hidden)return;iaEl.classList.remove("on");setTimeout(()=>{iaEl.hidden=true},230)}
+function iaCerrar(){if(iaEl.hidden)return;iaEl.style.top=iaEl.style.height=iaEl.style.bottom="";document.getElementById("ia-q").blur();iaEl.classList.remove("on");setTimeout(()=>{iaEl.hidden=true},230)}
 function iaAgregar(clase,html){const d=document.createElement("div");d.className="ia-m "+clase;d.innerHTML=html;iaMsgs.appendChild(d);iaMsgs.scrollTop=iaMsgs.scrollHeight;return d}
 async function iaPreguntar(q){
   q=String(q||"").trim();if(!q||iaOcupado)return;
-  const sug=iaMsgs.querySelector(".ia-sug");if(sug)sug.remove();
+  iaMsgs.querySelectorAll(".ia-sug").forEach(x=>x.remove());
   iaAgregar("yo",esc(q));
   const pen=iaAgregar("el",'<span class="ia-pen"><i></i><i></i><i></i></span>');
   iaOcupado=true;
@@ -865,8 +904,11 @@ async function iaPreguntar(q){
     clearTimeout(t);
     const d=await r.json().catch(()=>({}));
     if(!r.ok||!d.respuesta)throw new Error(d.error||"No he podido responder ahora mismo.");
-    pen.innerHTML=iaFormato(d.respuesta);
-    iaHist.push({rol:"usuario",texto:q},{rol:"asistente",texto:d.respuesta});
+    const {texto,sug}=iaSepararSug(d.respuesta);
+    pen.innerHTML=iaFormato(texto);
+    const ideas=iaIdeas(texto,q,sug);
+    iaHist.push({rol:"usuario",texto:q},{rol:"asistente",texto});
+    iaPintarIdeas(ideas);
   }catch(e){
     pen.classList.add("err");
     pen.textContent=e&&e.name==="AbortError"?"La IA está tardando demasiado. Inténtalo otra vez.":(navigator.onLine===false?"Sin conexión: el asistente necesita internet.":(e.message||"No he podido responder ahora mismo."));
