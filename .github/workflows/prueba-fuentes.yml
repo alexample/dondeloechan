@@ -1,0 +1,16 @@
+name: Prueba fuentes (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import json,urllib.request
+          e=json.loads(urllib.request.urlopen(urllib.request.Request('https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261021',headers={'User-Agent':'Mozilla/5.0'})).read())
+          ev=[x for x in e['events'] if 'Como' in x['name'] or 'Lille' in x['name']][0]
+          c=ev['competitions'][0]
+          print('::notice::COMP '+json.dumps({t['homeAway']:t['team']['id'] for t in c['competitors']}))
+          print('::notice::DET '+json.dumps(c.get('details',[])[:3],ensure_ascii=False)[:1800])
+          print('::notice::STATUS '+json.dumps(ev['status'],ensure_ascii=False)[:500])
+          PY
