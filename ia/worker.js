@@ -18,13 +18,39 @@ const MAX_CONTEXTO = 60000;
 const LIMITE_MIN = 6;      // preguntas por minuto y persona (IP)
 const LIMITE_DIA = 60;     // preguntas por día y persona (IP)
 
+// Marcadores en directo (football-data.org, plan gratuito: 10 consultas/minuto por clave).
+// La web no puede consultarlo directamente (el navegador lo bloquea), así que pasa por aquí.
+// Se guarda 50 s en la caché de Cloudflare: da igual cuánta gente mire, se hace como mucho ~1 consulta por minuto.
+const FD_CLAVE = "2e0b52f50c68465084f4da6f3c3c7613";   // la misma que ya va en config.js (pública)
+const FD_COMP = new Set(["PD", "CL", "SD", "CDR"]);
+
+async function marcadores(request, env, ctx, origen) {
+  const u = new URL(request.url);
+  const comp = (u.searchParams.get("competitions") || "").split(",").filter(c => FD_COMP.has(c)).join(",");
+  const desde = u.searchParams.get("dateFrom") || "", hasta = u.searchParams.get("dateTo") || "";
+  if (!comp || !/^\d{4}-\d{2}-\d{2}$/.test(desde) || !/^\d{4}-\d{2}-\d{2}$/.test(hasta))
+    return json({ error: "Parámetros no válidos." }, 400, origen);
+  const destino = `https://api.football-data.org/v4/matches?competitions=${comp}&dateFrom=${desde}&dateTo=${hasta}`;
+  const clave = new Request("https://cache.dondeloechan/marcadores?" + comp + desde + hasta);
+  const cache = caches.default;
+  let r = await cache.match(clave);
+  if (!r) {
+    const fd = await fetch(destino, { headers: { "X-Auth-Token": env.FD_CLAVE || FD_CLAVE } });
+    const cuerpo = await fd.text();
+    if (!fd.ok) return json({ error: "football-data " + fd.status }, 502, origen);
+    r = new Response(cuerpo, { headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "public, max-age=50" } });
+    ctx.waitUntil(cache.put(clave, r.clone()));
+  }
+  return new Response(r.body, { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
+}
+
 const uso = new Map();     // ip -> {min, tMin, dia, tDia}  (memoria del worker: freno básico contra abusos)
 
 function cors(origen) {
   const ok = ORIGENES.includes(origen);
   return {
     "Access-Control-Allow-Origin": ok ? origen : ORIGENES[0],
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Max-Age": "86400",
     "Vary": "Origin",
@@ -86,9 +112,14 @@ export default {
     console.log("Aviso al robot de GitHub:", r.status, r.status === 204 ? "OK" : await r.text());
   },
 
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const origen = request.headers.get("Origin") || "";
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });
+    if (request.method === "GET" && new URL(request.url).pathname === "/marcadores") {
+      if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+      try { return await marcadores(request, env, ctx, origen); }
+      catch (e) { return json({ error: "No hay marcadores ahora mismo." }, 502, origen); }
+    }
     if (request.method !== "POST") return json({ error: "Usa POST." }, 405, origen);
     if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
     if (!env.AI) return json({ error: "Falta conectar Workers AI (variable AI) en los ajustes del worker." }, 500, origen);

@@ -1061,6 +1061,15 @@ function necesitaMarcador(now){
   return matches.some(m=>cfg.competiciones[m.liga]&&m.estado!=="final"&&now>new Date(m.inicio).getTime()-15*60e3&&now<new Date(m.inicio).getTime()+20*36e5);
 }
 async function pedirJSON(url,clave){
+  // 1) A través del worker de Cloudflare (sirve para la web, que no puede consultar football-data directamente,
+  //    y guarda la respuesta un minuto para todos, así no se agota el límite gratuito).
+  if(window.IA_URL){
+    try{
+      const q=url.split("?")[1],ctl=new AbortController(),t=setTimeout(()=>ctl.abort(),12000);
+      const r=await fetch(window.IA_URL.replace(/\/$/,"")+"/marcadores?"+q,{cache:"no-store",signal:ctl.signal});clearTimeout(t);
+      if(r.ok)return await r.json();
+    }catch(e){}
+  }
   try{
     const r=await fetch(url,{headers:{"X-Auth-Token":clave},cache:"no-store"});
     if(!r.ok)throw new Error("HTTP "+r.status);

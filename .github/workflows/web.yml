@@ -55,7 +55,7 @@ jobs:
           # En la web, Google Fonts solo se carga si se acepta el aviso de cookies (lo hace la propia página).
           s = re.sub(r'<link rel="preconnect" href="https://fonts.googleapis.com">\s*', "", s, count=1)
           s = re.sub(r'<link rel="stylesheet" href="https://fonts.googleapis.com/css2[^"]*">\s*', "", s, count=1)
-          s = s.replace('content="width=device-width,initial-scale=1"', 'content="width=device-width,initial-scale=1,viewport-fit=cover"', 1)
+          s = s.replace('content="width=device-width,initial-scale=1', 'content="width=device-width,initial-scale=1,viewport-fit=cover', 1)
           open(p, "w", encoding="utf-8").write(s)
           PY
           touch site/.nojekyll
