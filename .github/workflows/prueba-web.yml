@@ -1,0 +1,30 @@
+name: Prueba web (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          npm i -s puppeteer-core@23 >/dev/null 2>&1
+          cat > t.js <<'JS'
+          const pp=require('puppeteer-core');
+          (async()=>{const b=await pp.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});const p=await b.newPage();await p.setViewport({width:390,height:844});
+          await p.evaluateOnNewDocument(()=>localStorage.setItem('dle-consent',JSON.stringify({v:1,terceros:false})));
+          await p.goto('https://alexample.github.io/dondeloechan/',{waitUntil:'networkidle2'});
+          const id=await p.evaluate(()=>{const m=matches.find(x=>x.liga===1&&x.localId==='cel'&&x.visitanteId==='bet')||matches.find(x=>x.liga===1&&new Date(x.inicio)>Date.now());return m._id});
+          await p.evaluate(id=>window.abrirPartido(id),id);await new Promise(r=>setTimeout(r,2500));
+          const h=await p.$eval('#h2h',e=>e.innerText.replace(/\s+/g,' ').slice(0,160)).catch(()=>'SIN H2H');
+          const out=['H2H: '+h];
+          for(const q of ['¿Cómo quedó el partido de ida?','Estadísticas del último enfrentamiento']){
+            await p.evaluate(()=>{const b=document.getElementById('ia-partido');b&&b.click()});await new Promise(r=>setTimeout(r,600));
+            await p.evaluate(q=>{document.getElementById('ia-q').value=q;document.getElementById('ia-form').requestSubmit()},q);
+            await p.waitForFunction(()=>!document.querySelector('.ia-pen'),{timeout:60000}).catch(()=>{});
+            await new Promise(r=>setTimeout(r,500));
+            const r=await p.$$eval('.ia-m.el',x=>x[x.length-1].innerText.replace(/\s+/g,' '));
+            const s=await p.$$eval('.ia-sug button',x=>x.map(y=>y.textContent).join(' / '));
+            out.push('P: '+q+' ## R: '+r.slice(0,600)+' ## SUG: '+s);
+          }
+          for(const o of out)console.log('::notice::'+o);
+          await b.close()})();
+          JS
+          node t.js
