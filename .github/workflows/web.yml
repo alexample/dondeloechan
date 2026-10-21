@@ -42,7 +42,7 @@ jobs:
           python3 - <<'PY'
           p = "site/index.html"
           s = open(p, encoding="utf-8").read()
-          extra = ('<meta name="theme-color" content="#000000">\n'
+          extra = ('<meta name="theme-color" content="#1F5E3B">\n'
                    '<meta name="description" content="Día, hora y canal exacto de cada partido de Primera, Segunda, Copa del Rey y Champions.">\n'
                    '<link rel="manifest" href="manifest.webmanifest">\n'
                    '<link rel="icon" href="icon.svg" type="image/svg+xml">\n'
@@ -51,10 +51,6 @@ jobs:
                    '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">\n'
                    '<meta name="apple-mobile-web-app-title" content="Dónde lo Echan">\n')
           s = s.replace("<title>", extra + "<title>", 1)
-          # Tema «teletexto», solo en la web (la app conserva su diseño).
-          s = s.replace("</head>", '<link rel="stylesheet" href="teletexto.css">\n</head>', 1)
-          i = s.rfind("</body>")
-          s = s[:i] + '<script src="teletexto.js"></script>\n' + s[i:]
           s = s.replace('content="width=device-width,initial-scale=1"', 'content="width=device-width,initial-scale=1,viewport-fit=cover"', 1)
           open(p, "w", encoding="utf-8").write(s)
           PY
