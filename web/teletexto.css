@@ -216,3 +216,35 @@ main{padding-bottom:58px}
   .tt-logo{font-size:28px}
   .team{font-size:25px}
 }
+
+/* ---------- Más aire entre partidos y bloques ---------- */
+body{line-height:1.22}
+main .wrap,#app{gap:30px!important}
+.tt{margin:16px 0 8px}
+.tt-banda{margin-top:10px}
+.tt-jor{margin:28px 0 22px}
+.tt-idx{gap:5px}
+.tt-idx div{padding:3px 12px 1px}
+.tt-flash{margin-top:12px;padding:4px 12px 2px}
+.day h2{margin:0 0 12px;padding:4px 12px 2px}
+.list{gap:12px}
+.match{padding:12px 8px 14px;border-bottom:1px solid rgba(10,30,230,.45)}
+.list .match:last-child{border-bottom:0}
+.match.ahora{padding-left:16px}
+.teams{gap:4px 18px}
+.teams .compl{margin-bottom:2px}
+.chips{margin-top:10px;gap:8px}
+.chip{padding:3px 9px 1px}
+.kick span{margin-top:4px}
+.foot{margin-top:6px}
+.sheet .wrap{gap:24px}
+.ch{margin-bottom:10px;padding:10px 12px}
+.tabla td{padding:3px 6px 1px}
+@media (min-width:1024px){
+  .match.sel{padding-left:16px}
+}
+/* En el móvil los nombres completos no caben en dos columnas: uno debajo de otro */
+@media (max-width:560px){
+  .teams{grid-template-columns:1fr;gap:4px}
+  .team{font-size:26px}
+}
