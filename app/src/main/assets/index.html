@@ -937,7 +937,7 @@ document.getElementById("ia-q").addEventListener("focus",()=>setTimeout(()=>{iaA
 /* Ideas para seguir preguntando: las que propone la IA + otras sobre el partido del que se habla */
 function iaSepararSug(t){
   const sug=[];
-  const limpio=String(t).replace(/\n?\s*\**SUGERENCIAS\**\s*:\s*([^\n]*)\s*$/i,(x,l)=>{l.split("|").forEach(q=>{q=q.replace(/^[\s\-•*"«]+|[\s"»]+$/g,"");if(q.length>4&&q.length<120)sug.push(/[?¿]/.test(q)?q:"¿"+q.replace(/[.?]$/,"")+"?")});return ""}).trim();
+  const limpio=String(t).replace(/\n?\s*\**SUGERENCIAS\**\s*:\s*([^\n]*)\s*$/i,(x,l)=>{l.split("|").forEach(q=>{q=q.replace(/^[\s\-•*"«]+|[\s"»]+$/g,"");if(q.length>4&&q.length<120){q=/[?¿]/.test(q)?q:"¿"+q.replace(/[.?]$/,"")+"?";q=q.replace(/^(¿?)(\p{Ll})/u,(x,a,c)=>a+c.toUpperCase());sug.push(q)}});return ""}).trim();
   return {texto:limpio,sug};
 }
 function iaIdeas(texto,q,deIA){
