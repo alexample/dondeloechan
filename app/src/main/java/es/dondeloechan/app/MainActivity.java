@@ -131,6 +131,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        web.evaluateJavascript("window.__oculta=true", null);
         web.onPause();   // la página pasa a «oculta»: deja de refrescar resultados en segundo plano
     }
 
@@ -138,6 +139,7 @@ public class MainActivity extends Activity {
     protected void onResume() {
         super.onResume();
         web.onResume();
+        web.evaluateJavascript("window.__oculta=false", null);
         // Al volver a la app, la página comprueba si hay guía nueva.
         web.evaluateJavascript("window.alVolver && window.alVolver()", null);
         AvisosWorker.revisarYa(this);

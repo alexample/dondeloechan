@@ -1065,7 +1065,12 @@ if(ES_WEB){if(!CONSENT)mostrarBanner();else if(CONSENT.terceros)cargarFuentes()}
 /* ---------- Marcadores (football-data.org, plan gratuito: con algunos minutos de retraso) ----------
    config.js define window.MARCADORES = {clave, competiciones:{1:"PD",4:"CL"}}. Sin eso no se consulta nada. */
 const VIVO={};               // _id -> {marcador, estado, minuto}
-let vivoTimer=null, vivoUltimo=0, vivoFuente=false;
+let vivoTimer=null, vivoUltimo=0, vivoFuente=false, vivoOk=0, vivoFallo="";
+function notaVivo(){
+  const s=vivoOk?Math.max(0,Math.round((Date.now()-vivoOk)/1000)):null;
+  const cuando=s==null?"":s<60?` · comprobado hace ${s} s`:` · comprobado hace ${Math.round(s/60)} min`;
+  return "Marcador de football-data.org (va unos minutos por detrás de la tele)"+cuando+(vivoFallo&&Date.now()-vivoOk>150e3?" · ahora mismo no responde, se reintenta cada minuto":"");
+}
 const FD_ESTADO={IN_PLAY:"directo",PAUSED:"directo",FINISHED:"final",AWARDED:"final",POSTPONED:"aplazado",SUSPENDED:"suspendido",CANCELLED:"aplazado"};
 const QUITAR=new Set(["fc","cf","cd","ud","sd","rcd","ad","ce","club","de","del","la","el","real","sad","ac","as","afc","sc","sv","vfb","fk","ssc","rc","bv","sport","balompie","futbol","calcio","1."]);
 function toks(n){return String(n||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9 ]+/g," ").split(/\s+/).filter(w=>w.length>2&&!QUITAR.has(w))}
@@ -1113,8 +1118,8 @@ async function actualizarMarcadores(){
   const dia=t=>new Date(t).toISOString().slice(0,10);
   const codes=[...new Set(Object.values(cfg.competiciones))].join(",");
   const url=`https://api.football-data.org/v4/matches?competitions=${codes}&dateFrom=${dia(now-864e5)}&dateTo=${dia(now+864e5)}`;
-  let d;try{d=await pedirJSON(url,cfg.clave)}catch(e){return}
-  vivoFuente=true;
+  let d;try{d=await pedirJSON(url,cfg.clave)}catch(e){vivoFallo=String(e&&e.message||e);const n=document.getElementById("vivo-nota");if(n)n.textContent=notaVivo();return}
+  vivoFuente=true;vivoOk=Date.now();vivoFallo="";
   const porLiga={};for(const k in cfg.competiciones)porLiga[cfg.competiciones[k]]=+k;
   for(const x of d.matches||[]){
     const liga=porLiga[x.competition&&x.competition.code];if(!liga)continue;
@@ -1177,7 +1182,7 @@ function open(id){
     </div>
     ${m.provisional?`<p class="note warn">Canal provisional: la señal exacta (M+ LALIGA 2, Liga de Campeones 3…) suele confirmarse unos días antes del partido.</p>`:""}
     ${m.nota?`<p class="note">${esc(m.nota)}</p>`:""}
-    ${VIVO[m._id]&&m.estado==="directo"?`<p class="note">Marcador de football-data.org, con unos minutos de retraso.</p>`:""}
+    ${VIVO[m._id]&&m.estado==="directo"?`<p class="note" id="vivo-nota">${notaVivo()}</p>`:""}
     ${tablaHTML(m)}
     <div class="acciones">
       <button class="btn" id="compartir" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/></svg>Compartir partido</button>
@@ -1185,7 +1190,7 @@ function open(id){
     </div>
     ${conComentariosAqui()?`<div><h3 class="sec-t">Comentarios</h3><div id="comentarios"></div></div>`:""}
   </div>`;
-  actual=m;
+  actual=m;fichaPintada=firmaFicha(m);
   if(conComentariosAqui())cargarComentarios(m);
   marcar("p-"+m._id);
   marcarSel(m._id);
@@ -1288,6 +1293,8 @@ async function actualizar(){
    - Todo lo demás (Hypermotion, 1ª RFEF, Copa, clasificaciones): se vuelve a leer la guía
      cada 3 min si hay algún partido en juego y cada 15 min si no. En segundo plano no se gasta nada. */
 let ultima=0;
+// En la app, Android avisa de cuándo está en primer plano (window.__oculta); en la web, el navegador (document.hidden).
+const oculta=()=>window.AndroidApp?window.__oculta===true:document.hidden;
 function hayJuego(now){return !!matches&&matches.some(m=>{const k=new Date(m.inicio).getTime();return m.estado!=="final"&&now>k-15*60e3&&now<k+3*36e5})}
 function cadaCuanto(){return hayJuego(Date.now())?3*60e3:15*60e3}
 /* Web: si se ha publicado una versión nueva y el navegador sigue con la vieja guardada, recargar
@@ -1307,7 +1314,7 @@ async function comprobarVersion(){
   }catch(e){}
 }
 function refrescar(forzar){
-  if(document.hidden)return;
+  if(oculta())return;
   comprobarVersion();
   const now=Date.now();
   if(forzar||now-ultima>=cadaCuanto()){ultima=now;actualizar()}
@@ -1315,12 +1322,14 @@ function refrescar(forzar){
 }
 setInterval(()=>refrescar(false),60e3);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){refrescar(Date.now()-ultima>Math.min(cadaCuanto(),5*60e3));render()}});
+const firmaFicha=x=>JSON.stringify([x.marcador,x.estado,x.minuto,x.canales,x.inicio,x.horaPendiente,x.provisional]);
+let fichaPintada="";
 /* Si la ficha de un partido está abierta y cambia su marcador, estado o canal, se repinta sin moverla. */
 function refrescarFicha(){
   if(!actual||sheet.hidden||!matches)return;
   const m=matches.find(x=>x._id===actual._id);if(!m)return;
-  const firma=x=>JSON.stringify([x.marcador,x.estado,x.minuto,x.canales,x.inicio,x.horaPendiente,x.provisional]);
-  if(m===actual||firma(m)===firma(actual)){actual=m;return}
+  // Se compara con lo que se pintó (el marcador en directo cambia el mismo objeto, no basta con mirar si es otro).
+  if(firmaFicha(m)===fichaPintada){actual=m;return}
   const y=sheet.scrollTop,lf=lastFocus,foco=document.activeElement;
   open(m._id);sheet.scrollTop=y;lastFocus=lf;try{foco&&foco.focus({preventScroll:true})}catch(e){}
 }
@@ -1338,7 +1347,7 @@ window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cer
 })();
 setInterval(render,60e3);
 // La ficha abierta de un partido en juego actualiza su minuto.
-setInterval(()=>{if(actual&&!sheet.hidden&&status(actual,Date.now())==="live"){const c=sheet.querySelector(".count");if(c)c.textContent=countdown(actual,Date.now())}},30e3);
+setInterval(()=>{if(actual&&!sheet.hidden&&status(actual,Date.now())==="live"){const c=sheet.querySelector(".count");if(c)c.textContent=countdown(actual,Date.now());const n=document.getElementById("vivo-nota");if(n)n.textContent=notaVivo()}},15e3);
 </script>
 </body>
 </html>
