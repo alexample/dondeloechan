@@ -1,0 +1,46 @@
+name: Historial de enfrentamientos
+
+# Actualiza data/h2h/*.json (historial entre equipos y forma reciente) desde football-data.co.uk.
+# Una vez al día basta: la fuente publica los resultados de la jornada a los pocos días.
+on:
+  schedule:
+    - cron: "41 5 * * *"
+  workflow_dispatch:
+    inputs:
+      seco:
+        description: "Solo probar (no guardar cambios)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: robot
+  cancel-in-progress: false
+
+jobs:
+  historial:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Descargar y montar el historial
+        run: python3 robot/historial.py ${{ inputs.seco && '--seco' || '' }}
+      - name: Guardar cambios
+        id: guardar
+        if: ${{ !inputs.seco }}
+        run: |
+          git add -A data/h2h
+          if git diff --cached --quiet; then echo "Sin cambios."; echo "hay=no" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git config user.name "Robot de datos"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "Historial actualizado $(TZ=Europe/Madrid date '+%Y-%m-%d') (robot)"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin main && break; sleep 5; done
+          echo "hay=si" >> "$GITHUB_OUTPUT"
+      - name: Volver a publicar la web
+        if: ${{ steps.guardar.outputs.hay == 'si' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run web.yml --ref main
