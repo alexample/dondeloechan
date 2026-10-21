@@ -1,0 +1,18 @@
+name: Prueba web en directo (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          curl -sI https://alexample.github.io/dondeloechan/ | grep -i -E "cache-control|last-modified|age:" || true
+          N=$(curl -s https://alexample.github.io/dondeloechan/index.html | grep -c "/marcadores?" || true)
+          google-chrome --headless=new --no-sandbox --virtual-time-budget=20000 --dump-dom "https://alexample.github.io/dondeloechan/" > dom.html 2>/dev/null || true
+          python3 - "$N" <<'PY'
+          import re,sys,html
+          s=open('dom.html',encoding='utf-8').read()
+          bloques=re.findall(r'<button[^>]*class="match[^"]*"[^>]*>(.*?)</button>',s,re.S)
+          t=[re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',b))).strip() for b in bloques]
+          vivos=[x for x in t if 'EN JUEGO' in x or "'" in x or 'FINAL' in x][:8]
+          print(f"::notice::index con proxy={sys.argv[1]} · partidos en DOM={len(t)} · tabs vivo={s.count('envivo')} · "+" | ".join(vivos))
+          PY
