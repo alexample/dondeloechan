@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T21:17:52+02:00",
+ "actualizado": "2026-10-21T22:07:21+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -658,7 +658,12 @@
    "local": "Levante UD",
    "localId": "lev",
    "visitante": "Athletic Club",
-   "visitanteId": "ath"
+   "visitanteId": "ath",
+   "marcador": [
+    3,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j3-aston-villa-viking",
@@ -3529,8 +3534,8 @@
      2,
      4,
      3,
-     14,
-     16,
+     15,
+     17,
      10
     ],
     [
@@ -3549,8 +3554,8 @@
      2,
      3,
      3,
-     7,
      8,
+     9,
      9
     ],
     [
@@ -4707,9 +4712,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-21T21:17:52+02:00",
-  "cambio": "2026-10-21T21:17:52+02:00",
+  "comprobado": "2026-10-21T22:07:21+02:00",
+  "cambio": "2026-10-21T22:07:21+02:00",
   "historial": [
+   {
+    "hora": "2026-10-21T22:07:21+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 1,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Resultado: Levante UD 3-1 Athletic Club"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-apl-lev-ath",
+       "t": "Levante UD 3-1 Athletic Club"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-21T21:17:52+02:00",
     "nuevos": 0,
