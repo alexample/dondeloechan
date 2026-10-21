@@ -153,6 +153,33 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .eq-l button.ir:hover{color:var(--accent)}
 @media (min-width:1024px){header.top .wrap .favbar{grid-row:2;grid-column:1/-1;margin-top:-4px}}
 
+/* Asistente con IA */
+.ia-fab{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:16;display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:12px 16px;background:var(--accent);color:#fff;font:inherit;font-weight:700;font-size:14.5px;box-shadow:var(--shadow);cursor:pointer}
+.ia-fab:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.ia{position:fixed;top:0;bottom:0;right:0;z-index:32;width:min(440px,100vw);background:var(--surface);box-shadow:var(--shadow);transform:translateX(102%);transition:transform .25s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.ia.on{transform:none}
+.ia-cab{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.ia-cab b{display:block;font-family:var(--f-display);font-weight:800;font-size:20px;text-transform:uppercase;line-height:1.1}
+.ia-cab small{display:block;font-size:11.5px;color:var(--muted);margin-top:2px}
+.ia-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.ia-m{max-width:88%;padding:10px 13px;border-radius:14px;font-size:14.5px;line-height:1.45;word-wrap:break-word}
+.ia-m.yo{align-self:flex-end;background:var(--pitch);color:var(--pitch-ink);border-bottom-right-radius:4px}
+.ia-m.el{align-self:flex-start;background:var(--bg);border-bottom-left-radius:4px}
+.ia-m.el p{margin:0 0 6px} .ia-m.el p:last-child{margin:0}
+.ia-m.el ul{margin:4px 0;padding-left:18px}
+.ia-m.err{background:var(--warn-bg);color:var(--warn)}
+.ia-ref{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--accent);border-radius:999px;padding:1px 9px;font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;margin:0 2px;white-space:nowrap}
+.ia-pen{display:inline-flex;gap:4px} .ia-pen i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:iapen 1s infinite} .ia-pen i:nth-child(2){animation-delay:.15s} .ia-pen i:nth-child(3){animation-delay:.3s}
+@keyframes iapen{50%{opacity:.25}}
+.ia-sug{display:flex;flex-wrap:wrap;gap:6px}
+.ia-sug button{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;text-align:left}
+.ia-form{display:flex;gap:8px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+.ia-form input{flex:1;min-width:0;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:15px;background:var(--bg);color:var(--ink)}
+.ia-form input:focus{outline:2px solid var(--pitch);outline-offset:0}
+.ia-form .btn{flex:none;min-height:42px;width:48px;padding:0;font-size:18px}
+@media (min-width:1024px){.ia-fab{right:auto;left:calc((100vw - var(--cont))/2 + 24px)}}
+@media (prefers-reduced-motion:reduce){.ia{transition:none}.ia-pen i{animation:none}}
+
 /* Menú lateral */
 .brand-l{display:flex;align-items:center;gap:10px;min-width:0}
 .burger{appearance:none;border:0;background:rgba(255,255,255,.12);color:var(--pitch-ink);width:36px;height:36px;border-radius:10px;display:grid;place-items:center;cursor:pointer;flex:none}
@@ -348,6 +375,12 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 
 <button class="hoy" id="hoy" type="button" hidden>Volver a hoy</button>
 <div class="menu-scrim" id="menu-scrim" hidden></div>
+<button class="ia-fab" id="ia-fab" type="button" aria-label="Pregúntale a la guía" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 10h6M9 14h4"/></svg><span>Pregunta</span></button>
+<section class="ia" id="ia" role="dialog" aria-label="Pregúntale a la guía" hidden>
+  <div class="ia-cab"><div><b>Pregúntale a la guía</b><small>IA abierta (Llama) con los datos de la guía · puede equivocarse</small></div><button class="close" id="ia-cerrar" type="button" aria-label="Cerrar">×</button></div>
+  <div class="ia-msgs" id="ia-msgs" aria-live="polite"></div>
+  <form class="ia-form" id="ia-form"><input id="ia-q" type="text" placeholder="¿Dónde echan el Betis el domingo?" autocomplete="off" maxlength="500" aria-label="Tu pregunta"><button type="submit" class="btn" aria-label="Enviar">➤</button></form>
+</section>
 <nav class="menu" id="menu" aria-label="Menú" hidden></nav>
 <div class="scrim" id="scrim" hidden></div>
 <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title" hidden></section>
@@ -769,6 +802,86 @@ function elegirEquipo(id){
 }
 document.getElementById("favbar").addEventListener("click",e=>{const b=e.target.closest("[data-fsel]");if(b)elegirEquipo(b.dataset.fsel)});
 
+/* ---------- Asistente con IA abierta (Cloudflare Workers AI; config.js → window.IA_URL) ---------- */
+const iaEl=document.getElementById("ia"),iaMsgs=document.getElementById("ia-msgs"),iaFab=document.getElementById("ia-fab");
+let iaHist=[],iaOcupado=false;
+const iaActivo=()=>!!window.IA_URL;
+if(iaActivo())iaFab.hidden=false;
+function iaContexto(){
+  if(!matches)return "";
+  const now=Date.now(),desde=now-5*864e5,hasta=now+10*864e5,L=[];
+  const lista=matches.filter(m=>{const t=new Date(m.inicio).getTime();return t>=desde&&t<=hasta}).sort((a,b)=>new Date(a.inicio)-new Date(b.inicio));
+  for(const m of lista){
+    const d=new Date(m.inicio),st=status(m,now);
+    const can=(m.canales||[]).map(c=>{const k=chOf(c);return k.name+(k.dial&&k.dial!=="TDT"?" (dial "+k.dial+(k.orange?", Orange "+k.orange:"")+")":k.dial==="TDT"?" (TDT gratis)":k.orange?" (Orange "+k.orange+")":"")}).join(", ")||(m.sinTV?"sin TV":"canal por confirmar");
+    const v=VIVO[m._id];
+    const est=st==="done"||m.estado==="final"?"FINAL "+(tieneMarcador(m)?marcadorTxt(m):""):st==="live"?"EN JUEGO "+(tieneMarcador(m)?marcadorTxt(m):"")+(m.minuto?" min "+m.minuto:""):m.estado==="aplazado"?"APLAZADO":m.estado==="suspendido"?"SUSPENDIDO":"por jugar";
+    L.push([m._id,((COMP[m.liga]||{}).name||"")+" "+jornLabel(m.jornada)+(m.etiqueta?" "+m.etiqueta:""),cap(fDay.format(d))+" "+(m.horaPendiente?"hora por fijar":fTime.format(d)),m.local+" – "+m.visitante,can+(m.provisional&&(m.canales||[]).length?" [provisional]":"")+(m.nota?" · nota: "+m.nota:""),est].join(" | "));
+  }
+  if(CLAS){
+    const tabla=(nombre,t)=>{if(!t||!t.filas)return;L.push("");L.push("CLASIFICACIÓN "+nombre+(t.tras?" (tras "+String(t.tras).toLowerCase()+")":"")+": "+t.filas.map((r,i)=>`${i+1}. ${teamOf(r[0],r[8]).name} ${r[7]} pts (${r[1]} PJ, ${r[2]}G ${r[3]}E ${r[4]}P, ${r[5]}-${r[6]})`).join("; "))};
+    for(const k of ["1","2","4"])if(CLAS[k])tabla((COMP[k]||{}).name||k,CLAS[k]);
+    if(CLAS["5"]&&CLAS["5"].grupos)for(const g in CLAS["5"].grupos)tabla("PRIMERA FEDERACIÓN "+g,CLAS["5"].grupos[g]);
+  }
+  if(FAV.size)L.push("","EQUIPOS QUE SIGUE EL USUARIO («mis equipos»): "+[...FAV].map(nombreEquipo).join(", "));
+  return L.join("\n");
+}
+function iaFormato(t){
+  let h=esc(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>");
+  h=h.replace(/\[\[([^\]]+)\]\]/g,(x,id)=>{const m=matches&&matches.find(z=>z._id===id.trim());return m?`<button type="button" class="ia-ref" data-abrir="${esc(m._id)}">${esc(teamOf(m.localId,m.local,m.localAbbr).abbr+"–"+teamOf(m.visitanteId,m.visitante,m.visitanteAbbr).abbr)} ›</button>`:""});
+  const out=[];let lista=null,parr=[];
+  const cerrarP=()=>{if(parr.length){out.push("<p>"+parr.join("<br>")+"</p>");parr=[]}};
+  for(const l of h.split("\n")){
+    const mm=l.match(/^\s*(?:[-•*]|\d+[.)])\s+(.*)$/);
+    if(mm){cerrarP();if(!lista){lista=[];}lista.push("<li>"+mm[1]+"</li>");continue}
+    if(lista){out.push("<ul>"+lista.join("")+"</ul>");lista=null}
+    if(!l.trim()){cerrarP();continue}
+    parr.push(l);
+  }
+  if(lista)out.push("<ul>"+lista.join("")+"</ul>");
+  cerrarP();
+  return out.join("");
+}
+function iaPintarInicio(){
+  if(iaMsgs.children.length)return;
+  const fav=[...FAV][0];
+  const sug=["¿Qué partidos hay hoy y dónde los echan?",fav?`¿Cuándo juega el ${nombreEquipo(fav)} y en qué canal?`:"¿Cuándo juega el Real Madrid y en qué canal?","¿Qué echan este fin de semana en abierto?","¿Cómo va la clasificación de Primera?","¿Qué resultados hubo ayer?"];
+  iaMsgs.innerHTML=`<div class="ia-m el"><p>Hola. Pregúntame por horarios, canales, resultados o clasificaciones de la guía.</p></div><div class="ia-sug">${sug.map(x=>`<button type="button" data-sug="${esc(x)}">${esc(x)}</button>`).join("")}</div>`;
+}
+function iaAbrir(){if(!iaActivo())return;iaPintarInicio();iaEl.hidden=false;requestAnimationFrame(()=>iaEl.classList.add("on"));setTimeout(()=>document.getElementById("ia-q").focus(),260)}
+function iaCerrar(){if(iaEl.hidden)return;iaEl.classList.remove("on");setTimeout(()=>{iaEl.hidden=true},230)}
+function iaAgregar(clase,html){const d=document.createElement("div");d.className="ia-m "+clase;d.innerHTML=html;iaMsgs.appendChild(d);iaMsgs.scrollTop=iaMsgs.scrollHeight;return d}
+async function iaPreguntar(q){
+  q=String(q||"").trim();if(!q||iaOcupado)return;
+  const sug=iaMsgs.querySelector(".ia-sug");if(sug)sug.remove();
+  iaAgregar("yo",esc(q));
+  const pen=iaAgregar("el",'<span class="ia-pen"><i></i><i></i><i></i></span>');
+  iaOcupado=true;
+  const ahoraTxt=cap(fStamp.format(new Date()));
+  try{
+    const ctl=new AbortController(),t=setTimeout(()=>ctl.abort(),45000);
+    const r=await fetch(window.IA_URL,{method:"POST",headers:{"Content-Type":"application/json"},signal:ctl.signal,
+      body:JSON.stringify({pregunta:q,historial:iaHist.slice(-6),contexto:iaContexto(),hoy:ahoraTxt})});
+    clearTimeout(t);
+    const d=await r.json().catch(()=>({}));
+    if(!r.ok||!d.respuesta)throw new Error(d.error||"No he podido responder ahora mismo.");
+    pen.innerHTML=iaFormato(d.respuesta);
+    iaHist.push({rol:"usuario",texto:q},{rol:"asistente",texto:d.respuesta});
+  }catch(e){
+    pen.classList.add("err");
+    pen.textContent=e&&e.name==="AbortError"?"La IA está tardando demasiado. Inténtalo otra vez.":(navigator.onLine===false?"Sin conexión: el asistente necesita internet.":(e.message||"No he podido responder ahora mismo."));
+  }finally{iaOcupado=false;iaMsgs.scrollTop=iaMsgs.scrollHeight}
+}
+iaFab.addEventListener("click",iaAbrir);
+document.getElementById("ia-cerrar").addEventListener("click",iaCerrar);
+document.getElementById("ia-form").addEventListener("submit",e=>{e.preventDefault();const i=document.getElementById("ia-q");const q=i.value;i.value="";iaPreguntar(q)});
+iaMsgs.addEventListener("click",e=>{
+  const s=e.target.closest("[data-sug]");if(s){iaPreguntar(s.dataset.sug);return}
+  const a=e.target.closest("[data-abrir]");
+  if(a){const m=matches&&matches.find(x=>x._id===a.dataset.abrir);if(m){iaCerrar();league=m.liga;try{localStorage.setItem("dle-league",String(league))}catch(_){}render();open(m._id)}}
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!iaEl.hidden){e.stopImmediatePropagation();iaCerrar()}},true);
+
 /* ---------- Colocar la lista en el presente ---------- */
 let irPendiente=true,tocado=false;
 // Cuando terminan de cargar las letras cambia la altura de la lista: recolocar si el usuario no se ha movido.
@@ -1085,7 +1198,7 @@ async function actualizar(){
 let ultima=0;
 window.alVolver=()=>{if(Date.now()-ultima>10*60e3){ultima=Date.now();actualizar()}else render()};
 window.abrirPartido=id=>{if(!matches)return;const m=matches.find(x=>x._id===id);if(m){league=m.liga;render();open(id)}};
-window.atras=()=>{if(!menuEl.hidden){cerrarMenu();return true}if(esEscritorio()){if(actual){close();return true}return false}if(!sheet.hidden){close();return true}return false};
+window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cerrarMenu();return true}if(esEscritorio()){if(actual){close();return true}return false}if(!sheet.hidden){close();return true}return false};
 
 (async()=>{
   try{const r=await fetch("escudos/lista.json");if(r.ok)ESCUDOS=new Set(await r.json())}catch(e){}
