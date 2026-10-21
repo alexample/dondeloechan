@@ -1,10 +1,10 @@
 name: Robot de datos
 
 # Actualiza data/partidos.json leyendo laliga.com, futbolenlatv.es y VAVEL.
-# Corre cada 3 horas; también se puede lanzar a mano desde la pestaña Actions.
+# Corre cada hora; también se puede lanzar a mano desde la pestaña Actions.
 on:
   schedule:
-    - cron: "17 */3 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       seco:
