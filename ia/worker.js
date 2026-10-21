@@ -6,6 +6,7 @@
  *   2. Edit code → borra todo, pega este archivo → Deploy.
  *   3. Settings → Bindings → Add → Workers AI → nombre de la variable: AI → Deploy.
  *
+ * Se despliega solo desde GitHub (Cloudflare Workers Builds, carpeta ia/).
  * La app y la web envían: {pregunta, historial:[{rol,texto}], contexto:"…guía en texto…", hoy:"…"}
  * El worker responde: {respuesta:"…"}. No guarda nada.
  */
