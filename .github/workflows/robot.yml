@@ -36,14 +36,14 @@ jobs:
         id: guardar
         if: ${{ !inputs.seco }}
         run: |
-          if git diff --quiet data/partidos.json; then
+          git add data/partidos.json data/h2h/rfef.json 2>/dev/null || git add data/partidos.json
+          if git diff --cached --quiet; then
             echo "Sin cambios."
             echo "hay=no" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "Robot de datos"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/partidos.json
           git commit -q -m "Guía actualizada $(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M') (robot)"
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin main && break; sleep 5; done
           echo "hay=si" >> "$GITHUB_OUTPUT"

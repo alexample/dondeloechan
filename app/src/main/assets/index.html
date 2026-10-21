@@ -903,7 +903,8 @@ function iaSugPartido(m){
   if(st==="live")s.push("¿Cómo va el partido?");
   else if(st!=="done")s.push("¿A qué hora es y dónde lo echan?");
   s.push("¿Cómo quedó el partido de ida?","¿Quién ha ganado más veces entre ellos?",`¿Cómo llegan ${L} y ${V}?`,"Estadísticas del último enfrentamiento");
-  if(m.liga!==1&&m.liga!==2&&m.liga!==3)return [st==="live"?"¿Cómo va el partido?":"¿A qué hora es y dónde lo echan?",`¿Cómo va el ${L} en la clasificación?`,`¿Y el ${V}?`];
+  if(m.liga===4)return [s[0],"¿Se han enfrentado antes? ¿Cómo quedaron?",`¿Cómo llegan ${L} y ${V}?`,`¿Cómo va el ${L} en la fase liga?`];
+  if(m.liga===5)return [s[0],"¿Cómo quedó la ida esta temporada?",`¿Cómo llegan ${L} y ${V}?`,`¿Cómo van en la clasificación del grupo?`];
   return s;
 }
 function iaPintarCab(){
@@ -1200,11 +1201,51 @@ function h2hDe(id){
 const nomCorto=id=>{const t=T[id];return t?t.name:nombreEquipo(id)};
 const fCorta=iso=>{const [y,m,d]=iso.split("-");return `${+d}/${+m}/${y.slice(2)}`};
 function resLetra(gf,gc){return gf>gc?"G":gf===gc?"E":"P"}
+/* Tres fuentes según la competición:
+   - Primera, Segunda y Copa entre equipos de ambas: CSV de football-data.co.uk (liga desde 2000, con estadísticas).
+   - 1ª RFEF: resultados de esta temporada (VAVEL, los guarda el robot en h2h/rfef.json).
+   - Champions: football-data.org a través del worker (enfrentamientos oficiales y forma en todas las competiciones). */
+const H2H_REMOTO={};
+const fechaMad=iso=>new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Madrid",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date(iso));
 async function datosH2H(m){
   if(!m.localId||!m.visitanteId)return null;
-  const [a,b]=await Promise.all([h2hDe(m.localId),h2hDe(m.visitanteId)]);
-  if(!a&&!b)return null;
-  return {a,b,vs:a&&a.rivales&&a.rivales[m.visitanteId]||null};
+  if(m.liga===5)return rfefH2H(m);
+  if(m.liga===1||m.liga===2||m.liga===3){
+    const [a,b]=await Promise.all([h2hDe(m.localId),h2hDe(m.visitanteId)]);
+    if(a&&b)return {a,b,vs:a.rivales&&a.rivales[m.visitanteId]||null,
+      alcance:`partidos de liga desde ${a.desde||2000}`,sinDuelos:"No se han enfrentado en Primera ni en Segunda desde 2000.",
+      fuente:"football-data.co.uk",pie:"Liga (Primera y Segunda). Forma: últimos 5 partidos de liga, el más reciente a la derecha. Fuente: football-data.co.uk."};
+    if(m.liga!==3)return a||b?{a:a||{},b:b||{},vs:null,alcance:"",sinDuelos:"Sin historial entre ambos.",fuente:"football-data.co.uk",pie:"Fuente: football-data.co.uk."}:null;
+    return null;
+  }
+  if(m.liga===4)return remotoH2H(m,"CL");
+  return null;
+}
+async function rfefH2H(m){
+  const d=await h2hDe("rfef");if(!d||!d.resultados)return null;
+  const R=d.resultados,de=id=>R.filter(r=>r[3]===id||r[4]===id);
+  const forma=id=>de(id).slice().sort((x,y)=>y[0].localeCompare(x[0])).slice(0,5).map(r=>{const c=r[3]===id;return [r[0],c?r[4]:r[3],c?"C":"F",c?r[5]:r[6],c?r[6]:r[5],"1ª RFEF"]});
+  const vs={pj:0,g:0,e:0,p:0,gf:0,gc:0,ult:[]};
+  for(const r of R.filter(r=>(r[3]===m.localId&&r[4]===m.visitanteId)||(r[3]===m.visitanteId&&r[4]===m.localId)).sort((x,y)=>y[0].localeCompare(x[0]))){
+    const c=r[3]===m.localId,gf=c?r[5]:r[6],gc=c?r[6]:r[5];
+    vs.pj++;vs.gf+=gf;vs.gc+=gc;vs[gf>gc?"g":gf===gc?"e":"p"]++;
+    vs.ult.push([r[0],(d.temporada||"").replace("-","/"),"1ª RFEF",r[3],r[4],r[5],r[6],null,null,null]);
+  }
+  return {a:{forma:forma(m.localId)},b:{forma:forma(m.visitanteId)},vs,alcance:"partidos esta temporada",
+    sinDuelos:"Aún no se han enfrentado esta temporada.",fuente:"VAVEL",
+    pie:"1ª RFEF, temporada actual (no hay historial gratuito de temporadas anteriores). Forma: últimos 5 partidos, el más reciente a la derecha. Fuente: VAVEL."};
+}
+function remotoH2H(m,comp){
+  if(!window.IA_URL)return Promise.resolve(null);
+  if(!H2H_REMOTO[m._id]){
+    const q=new URLSearchParams({comp,fecha:fechaMad(m.inicio),local:m.local,visitante:m.visitante});
+    H2H_REMOTO[m._id]=fetch(window.IA_URL.replace(/\/$/,"")+"/historial?"+q,{cache:"no-store"}).then(r=>r.ok?r.json():null).then(x=>x&&x.vs?{
+      a:{forma:x.formaL||[]},b:{forma:x.formaV||[]},vs:x.vs.pj?x.vs:null,alcance:"partidos oficiales entre ambos (últimos 10)",
+      sinDuelos:"No se han enfrentado nunca en partido oficial (según football-data.org).",fuente:"football-data.org",
+      pie:"Enfrentamientos oficiales en cualquier competición. Forma: últimos 5 partidos de cualquier competición, el más reciente a la derecha. Fuente: football-data.org."}:null).catch(()=>null);
+    H2H_REMOTO[m._id].then(x=>{if(!x)delete H2H_REMOTO[m._id]});
+  }
+  return H2H_REMOTO[m._id];
 }
 async function pintarH2H(m){
   const el=document.getElementById("h2h");if(!el)return;
@@ -1218,12 +1259,12 @@ async function pintarH2H(m){
     const x=d.vs,pc=n=>(100*n/x.pj).toFixed(1)+"%";
     h+=`<div class="h2h-cifras"><span><b>${x.g}</b> ${esc(L)}</span><span><b>${x.e}</b> empates</span><span><b>${x.p}</b> ${esc(V)}</span></div>
       <div class="h2h-res" aria-hidden="true"><i class="g" style="width:${pc(x.g)}"></i><i class="e" style="width:${pc(x.e)}"></i><i class="p" style="width:${pc(x.p)}"></i></div>
-      <div class="h2h-cifras"><span>${x.pj} partidos de liga desde ${esc(d.a.desde||"2000")}</span><span>Goles ${x.gf}–${x.gc}</span></div>
+      <div class="h2h-cifras"><span>${x.pj} ${esc(d.alcance)}</span><span>Goles ${x.gf}–${x.gc}</span></div>
       <ul class="h2h-lista">${x.ult.slice(0,5).map(u=>`<li><small>${fCorta(u[0])}<br>${esc(u[2])} ${esc(u[1])}</small><span>${esc(nomCorto(u[3]))} – ${esc(nomCorto(u[4]))}</span><b>${u[5]}–${u[6]}</b></li>`).join("")}</ul>`;
-  }else h+=`<p class="h2h-fuente" style="margin:0">No se han enfrentado en Primera ni en Segunda desde 2000.</p>`;
+  }else h+=`<p class="h2h-fuente" style="margin:0">${esc(d.sinDuelos)}</p>`;
   const forma=(f,nom)=>f&&f.forma&&f.forma.length?`<div class="forma"><span>${esc(nom)}</span>${f.forma.slice(0,5).reverse().map(r=>{const k=resLetra(r[3],r[4]);return `<i class="${k}" title="${esc(fCorta(r[0])+" "+(r[2]==="C"?"vs ":"en ")+nomCorto(r[1])+" "+r[3]+"–"+r[4])}">${k}</i>`}).join("")}</div>`:"";
   h+=forma(d.a,L)+forma(d.b,V);
-  box.innerHTML=`<h3 class="sec-t">Historial y forma</h3>${h}<p class="h2h-fuente">Liga (Primera y Segunda). Forma: últimos 5 partidos de liga, el más reciente a la derecha. Fuente: football-data.co.uk.</p>`;
+  box.innerHTML=`<h3 class="sec-t">Historial y forma</h3>${h}<p class="h2h-fuente">${esc(d.pie)}</p>`;
 }
 /* Texto para la IA con el partido que se está viendo */
 async function iaContextoPartido(m){
@@ -1232,17 +1273,17 @@ async function iaContextoPartido(m){
   const out=[`PARTIDO SELECCIONADO (el usuario está viendo su ficha; si la pregunta no dice otra cosa, se refiere a este): ${m._id} | ${(COMP[m.liga]||{}).name||""} ${jornLabel(m.jornada)} | ${cap(fDay.format(new Date(m.inicio)))} ${m.horaPendiente?"hora por fijar":fTime.format(new Date(m.inicio))} | ${m.local} – ${m.visitante}`+(tieneMarcador(m)&&(st==="live"||st==="done")?` | ${st==="live"?"EN JUEGO":"FINAL"} ${marcadorTxt(m)}${t?" ("+t.l+")":""}`:"")];
   const d=await datosH2H(m);
   if(d){
-    out.push(`Temporada actual: 2026/27. «Ida» = el enfrentamiento anterior entre ambos en esta misma temporada (si no lo hay, dilo y da el último que hubo).`);
+    out.push(`Temporada actual: 2026/27. «Ida» = el enfrentamiento anterior entre ambos en esta misma temporada (si no lo hay, dilo y da el último que hubo). En Champions, la fase liga es a partido único: no hay ida y vuelta salvo en eliminatorias.`);
     if(d.vs&&d.vs.pj){
       const x=d.vs;
-      out.push(`HISTORIAL ${L} vs ${V} en liga (Primera y Segunda desde ${d.a.desde||2000}, fuente football-data.co.uk): ${x.pj} partidos; ganó ${L} ${x.g}, empates ${x.e}, ganó ${V} ${x.p}; goles ${L} ${x.gf} – ${x.gc} ${V}.`);
+      out.push(`HISTORIAL ${L} vs ${V} (${d.alcance}, fuente ${d.fuente}): ${x.pj} partidos; ganó ${L} ${x.g}, empates ${x.e}, ganó ${V} ${x.p}; goles ${L} ${x.gf} – ${x.gc} ${V}.`);
       out.push("ÚLTIMOS ENFRENTAMIENTOS (el más reciente primero):");
       for(const u of x.ult){
         const s=u[9],st2=s?[s.t&&`tiros ${s.t[0]}–${s.t[1]}`,s.p&&`a puerta ${s.p[0]}–${s.p[1]}`,s.c&&`córners ${s.c[0]}–${s.c[1]}`,s.a&&`amarillas ${s.a[0]}–${s.a[1]}`,s.r&&`rojas ${s.r[0]}–${s.r[1]}`].filter(Boolean).join(", "):"";
-        out.push(`- ${u[0]} · temporada ${u[1]} · ${u[2]==="1ª"?"Primera":"Segunda"} · ${nomCorto(u[3])} ${u[5]}–${u[6]} ${nomCorto(u[4])}`+(u[7]!=null?` (descanso ${u[7]}–${u[8]})`:"")+(st2?` · ${st2}`:""));
+        out.push(`- ${u[0]} · temporada ${u[1]} · ${u[2]==="1ª"?"Primera":u[2]==="2ª"?"Segunda":u[2]} · ${nomCorto(u[3])} ${u[5]}–${u[6]} ${nomCorto(u[4])}`+(u[7]!=null?` (descanso ${u[7]}–${u[8]})`:"")+(st2?` · ${st2}`:""));
       }
-    }else out.push(`HISTORIAL: ${L} y ${V} no se han enfrentado en Primera ni en Segunda desde 2000.`);
-    for(const [f,nom] of [[d.a,L],[d.b,V]])if(f&&f.forma)out.push(`FORMA ${nom} (últimos partidos de liga, el más reciente primero): `+f.forma.map(r=>`${r[0]} ${r[2]==="C"?"en casa vs":"fuera vs"} ${nomCorto(r[1])} ${r[3]}–${r[4]} (${resLetra(r[3],r[4])==="G"?"ganó":resLetra(r[3],r[4])==="E"?"empató":"perdió"})`).join("; "));
+    }else out.push(`HISTORIAL: ${d.sinDuelos}`);
+    for(const [f,nom] of [[d.a,L],[d.b,V]])if(f&&f.forma&&f.forma.length)out.push(`FORMA ${nom} (últimos partidos, el más reciente primero): `+f.forma.map(r=>`${r[0]} ${r[5]&&!/^[12]ª$/.test(r[5])?r[5]+" ":""}${r[2]==="C"?"en casa vs":"fuera vs"} ${nomCorto(r[1])} ${r[3]}–${r[4]} (${resLetra(r[3],r[4])==="G"?"ganó":resLetra(r[3],r[4])==="E"?"empató":"perdió"})`).join("; "));
   }
   return out.join("\n")+"\n\n";
 }
@@ -1285,7 +1326,7 @@ function open(id){
     ${m.nota?`<p class="note">${esc(m.nota)}</p>`:""}
     ${VIVO[m._id]&&m.estado==="directo"?`<p class="note" id="vivo-nota">${notaVivo()}</p>`:""}
     ${tablaHTML(m)}
-    ${(m.liga===1||m.liga===2||m.liga===3)&&m.localId&&m.visitanteId&&window.H2H_URL?`<div id="h2h"><h3 class="sec-t">Historial y forma</h3><p class="h2h-fuente" style="margin:0">Cargando…</p></div>`:""}
+    ${[1,2,3,4,5].includes(m.liga)&&m.localId&&m.visitanteId&&window.H2H_URL?`<div id="h2h"><h3 class="sec-t">Historial y forma</h3><p class="h2h-fuente" style="margin:0">Cargando…</p></div>`:""}
     <div class="acciones">
       ${iaActivo()?`<button class="btn btn-ia" id="ia-partido" type="button">Pregunta sobre este partido</button>`:""}
       <button class="btn" id="compartir" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/></svg>Compartir partido</button>

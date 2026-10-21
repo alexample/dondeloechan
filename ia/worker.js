@@ -44,6 +44,62 @@ async function marcadores(request, env, ctx, origen) {
   return new Response(r.body, { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
 }
 
+// Historial y forma para partidos sin CSV (Champions): football-data.org, guardado en la caché de Cloudflare.
+async function fdGet(ruta, env, ctx, segundos) {
+  const clave = new Request("https://cache.dondeloechan/fd" + ruta);
+  const cache = caches.default;
+  let r = await cache.match(clave);
+  if (r) return r.json();
+  const fd = await fetch("https://api.football-data.org/v4" + ruta, { headers: { "X-Auth-Token": env.FD_CLAVE || FD_CLAVE } });
+  if (!fd.ok) throw new Error("football-data " + fd.status);
+  const texto = await fd.text();
+  ctx.waitUntil(cache.put(clave, new Response(texto, { headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=" + segundos } })));
+  return JSON.parse(texto);
+}
+const QUITAR = new Set(["fc", "cf", "cd", "ud", "sd", "rcd", "ad", "ce", "club", "de", "del", "la", "el", "real", "sad", "ac", "as", "afc", "sc", "sv", "vfb", "fk", "ssc", "rc", "bv", "sport", "balompie", "futbol", "calcio", "1."]);
+const toks = n => String(n || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter(w => w.length > 2 && !QUITAR.has(w));
+function parecido(nuestro, eq) {
+  const a = toks(nuestro), b = new Set([...toks(eq.name), ...toks(eq.shortName), ...toks(eq.tla)]);
+  if (!a.length) return false;
+  return a.some(w => b.has(w) || [...b].some(x => x.length > 3 && (x.startsWith(w) || w.startsWith(x))));
+}
+const temporadaDe = f => { const y = +f.slice(0, 4), m = +f.slice(5, 7); const i = m >= 7 ? y : y - 1; return `${i}/${String((i + 1) % 100).padStart(2, "0")}`; };
+const COMP_NOMBRE = { CL: "Champions", PD: "Primera", SD: "Segunda", CDR: "Copa", EL: "Europa League", ECL: "Conference", BL1: "Bundesliga", PL: "Premier", SA: "Serie A", FL1: "Ligue 1", DED: "Eredivisie", PPL: "Liga Portugal" };
+
+async function historial(request, env, ctx, origen) {
+  const u = new URL(request.url);
+  const comp = (u.searchParams.get("comp") || "CL").toUpperCase(), fecha = u.searchParams.get("fecha") || "";
+  const local = (u.searchParams.get("local") || "").slice(0, 60), visitante = (u.searchParams.get("visitante") || "").slice(0, 60);
+  if (!FD_COMP.has(comp) || !/^\d{4}-\d{2}-\d{2}$/.test(fecha) || !local || !visitante) return json({ error: "Parámetros no válidos." }, 400, origen);
+  const dia = n => { const d = new Date(fecha + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+  const lista = await fdGet(`/matches?competitions=${comp}&dateFrom=${dia(-1)}&dateTo=${dia(1)}`, env, ctx, 3600);
+  const m = (lista.matches || []).find(x => parecido(local, x.homeTeam) && parecido(visitante, x.awayTeam));
+  if (!m) return json({ error: "Partido no encontrado." }, 404, origen);
+  const [h, fl, fv] = await Promise.all([
+    fdGet(`/matches/${m.id}/head2head?limit=10`, env, ctx, 43200),
+    fdGet(`/teams/${m.homeTeam.id}/matches?status=FINISHED&limit=5`, env, ctx, 10800).catch(() => null),
+    fdGet(`/teams/${m.awayTeam.id}/matches?status=FINISHED&limit=5`, env, ctx, 10800).catch(() => null),
+  ]);
+  const idL = m.homeTeam.id, nom = t => t.id === idL ? local : t.id === m.awayTeam.id ? visitante : (t.shortName || t.name);
+  const vs = { pj: 0, g: 0, e: 0, p: 0, gf: 0, gc: 0, ult: [] };
+  const jugados = (h.matches || []).filter(x => x.status === "FINISHED" && x.score && x.score.fullTime && x.score.fullTime.home != null)
+    .sort((a, b) => b.utcDate.localeCompare(a.utcDate));
+  for (const x of jugados) {
+    const ft = x.score.fullTime, ht = x.score.halfTime || {}, casa = x.homeTeam.id === idL;
+    const gf = casa ? ft.home : ft.away, gc = casa ? ft.away : ft.home;
+    vs.pj++; vs.gf += gf; vs.gc += gc; vs[gf > gc ? "g" : gf === gc ? "e" : "p"]++;
+    const f = x.utcDate.slice(0, 10);
+    vs.ult.push([f, temporadaDe(f), COMP_NOMBRE[x.competition && x.competition.code] || (x.competition && x.competition.name) || "", nom(x.homeTeam), nom(x.awayTeam), ft.home, ft.away, ht.home ?? null, ht.away ?? null, null]);
+  }
+  const forma = (d, id) => !d ? [] : (d.matches || []).filter(x => x.score && x.score.fullTime && x.score.fullTime.home != null)
+    .sort((a, b) => b.utcDate.localeCompare(a.utcDate)).slice(0, 5).map(x => {
+      const casa = x.homeTeam.id === id, ft = x.score.fullTime;
+      return [x.utcDate.slice(0, 10), casa ? (x.awayTeam.shortName || x.awayTeam.name) : (x.homeTeam.shortName || x.homeTeam.name), casa ? "C" : "F", casa ? ft.home : ft.away, casa ? ft.away : ft.home, COMP_NOMBRE[x.competition && x.competition.code] || ""];
+    });
+  return new Response(JSON.stringify({ fuente: "football-data.org", vs, formaL: forma(fl, idL), formaV: forma(fv, m.awayTeam.id) }),
+    { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
+}
+
 const uso = new Map();     // ip -> {min, tMin, dia, tDia}  (memoria del worker: freno básico contra abusos)
 
 function cors(origen) {
@@ -116,6 +172,11 @@ export default {
   async fetch(request, env, ctx) {
     const origen = request.headers.get("Origin") || "";
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });
+    if (request.method === "GET" && new URL(request.url).pathname === "/historial") {
+      if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+      try { return await historial(request, env, ctx, origen); }
+      catch (e) { return json({ error: "No hay historial ahora mismo.", detalle: String(e.message || e).slice(0, 120) }, 502, origen); }
+    }
     if (request.method === "GET" && new URL(request.url).pathname === "/marcadores") {
       if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
       try { return await marcadores(request, env, ctx, origen); }

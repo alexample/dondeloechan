@@ -314,8 +314,12 @@ MESES = {m: i + 1 for i, m in enumerate(["enero", "febrero", "marzo", "abril", "
                                           "septiembre", "octubre", "noviembre", "diciembre"])}
 
 
-def leer_vavel_partidos(texto):
-    """Resultados o calendario de VAVEL: [(jornada, local, visitante, marcador|None, estado_txt)]."""
+MESES = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6, "julio": 7, "agosto": 8,
+         "septiembre": 9, "setiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12}
+
+
+def leer_vavel_partidos(texto, con_fecha=False):
+    """Resultados o calendario de VAVEL: [(jornada, local, visitante, marcador|None, estado_txt)] (+ fecha AAAA-MM-DD si con_fecha)."""
     salida = []
     if not texto:
         return salida
@@ -324,14 +328,17 @@ def leer_vavel_partidos(texto):
         cab = html.unescape(partes[k])
         jm = re.search(r"·\s*(.+)$", cab)
         jornada = jm.group(1).strip() if jm else ""
+        fm = re.search(r"(\d{1,2}) de (\w+) de (\d{4})", cab)
+        fecha = f"{fm.group(3)}-{MESES.get(norm(fm.group(2)), 0):02d}-{int(fm.group(1)):02d}" if fm and norm(fm.group(2)) in MESES else None
         for tr in re.findall(r'<tr class="fx[^"]*">(.*?)</tr>', partes[k + 1], re.S):
             h = re.search(r'class="h[^"]*"[^>]*>([^<]+)<', tr)
             a = re.search(r'class="a[^"]*"[^>]*>([^<]+)<', tr)
             sc = re.search(r'<span class="sc">\s*(\d+)\s*-\s*(\d+)\s*</span>', tr)
             wt = re.search(r'<span class="wt">([^<]+)</span>', tr)
             if h and a:
-                salida.append((jornada, html.unescape(h.group(1)).strip(), html.unescape(a.group(1)).strip(),
-                               [int(sc.group(1)), int(sc.group(2))] if sc else None, (wt.group(1) if wt else "").strip()))
+                fila = (jornada, html.unescape(h.group(1)).strip(), html.unescape(a.group(1)).strip(),
+                        [int(sc.group(1)), int(sc.group(2))] if sc else None, (wt.group(1) if wt else "").strip())
+                salida.append(fila + (fecha,) if con_fecha else fila)
     return salida
 
 
@@ -366,6 +373,31 @@ def tabla_valida(filas, n):
 
 
 # ---------------------------------------------------------------- principal
+RFEF = os.path.join(RAIZ, "data", "h2h", "rfef.json")
+
+
+def guardar_rfef(filas):
+    """data/h2h/rfef.json: [[fecha, jornada, grupo, localId, visitanteId, gl, gv], ...] de la temporada en curso."""
+    if not filas:
+        log("⚠ 1ª RFEF: sin resultados de VAVEL, se deja el historial anterior")
+        return
+    filas = sorted({tuple(f) for f in filas}, key=lambda f: (f[0], f[2], f[3]))
+    viejo = []
+    if os.path.exists(RFEF):
+        try:
+            viejo = json.load(open(RFEF, encoding="utf-8")).get("resultados", [])
+        except Exception:  # noqa: BLE001
+            viejo = []
+    if len(filas) < len(viejo) * 0.8:
+        log(f"⚠ 1ª RFEF: VAVEL da {len(filas)} resultados y antes había {len(viejo)}; se deja el anterior")
+        return
+    nuevo = {"temporada": temporada_txt(ahora()), "resultados": [list(f) for f in filas]}
+    if nuevo.get("resultados") != viejo and not SECO:
+        os.makedirs(os.path.dirname(RFEF), exist_ok=True)
+        json.dump(nuevo, open(RFEF, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+        log(f"1ª RFEF: {len(filas)} resultados de la temporada guardados")
+
+
 def main():
     datos = json.load(open(DATOS, encoding="utf-8"))
     partidos = datos["partidos"]
@@ -555,13 +587,17 @@ def main():
     # ---- 2. Canales exactos y horarios de futbolenlatv.es (todas las competiciones)
     FEL = {1: "la-liga", 2: "segunda-division-espana", 5: "primera-division-rfef", 3: "copa-del-rey", 4: "liga-campeones"}
     vavel_jornadas = {}
+    rfef = []   # resultados de la temporada de 1ª RFEF: historial («ida») y forma en la ficha
     for liga, grupo_urls in ((5, ["primera-federacion-grupo-1", "primera-federacion-grupo-2"]), (4, ["champions-league"])):
         for g in grupo_urls:
             for tipo in ("calendario", "resultados"):
-                for (jor, h, a, sc, wt) in leer_vavel_partidos(get(f"https://www.vavel.com/es/data/{g}/{tipo}/", f"vv_{g}_{tipo}.html")):
+                for (jor, h, a, sc, wt, fe) in leer_vavel_partidos(get(f"https://www.vavel.com/es/data/{g}/{tipo}/", f"vv_{g}_{tipo}.html"), con_fecha=True):
                     li, vi = eq.buscar(h, liga, crear=False), eq.buscar(a, liga, crear=False)
                     if li and vi:
                         vavel_jornadas[(liga, li, vi)] = (jor, g, sc, wt)
+                        if liga == 5 and tipo == "resultados" and sc and fe and "final" in norm(wt or "final"):
+                            rfef.append([fe, re.sub(r"\D", "", jor) or jor, g[-1], li, vi, sc[0], sc[1]])
+    guardar_rfef(rfef)
     for liga, ruta in FEL.items():
         filas = leer_fel(get(f"https://www.futbolenlatv.es/competicion/{ruta}", f"fel_{ruta}.html"), liga)
         if not filas:
