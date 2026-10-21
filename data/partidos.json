@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T23:07:22+02:00",
+ "actualizado": "2026-10-22T00:07:21+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -679,7 +679,12 @@
    "localId": "aston-villa",
    "visitante": "Viking",
    "visitanteAbbr": "VIK",
-   "visitanteId": "viking"
+   "visitanteId": "viking",
+   "marcador": [
+    3,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j3-bayern-munich-arsenal",
@@ -695,7 +700,12 @@
    "localId": "bayern-munich",
    "visitante": "Arsenal",
    "visitanteAbbr": "ARS",
-   "visitanteId": "arsenal"
+   "visitanteId": "arsenal",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j3-bet-feyenoord",
@@ -710,7 +720,12 @@
    "localId": "bet",
    "visitante": "Feyenoord",
    "visitanteAbbr": "FEY",
-   "visitanteId": "feyenoord"
+   "visitanteId": "feyenoord",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j3-club-brugge-rc-lens",
@@ -726,7 +741,12 @@
    "localId": "club-brugge",
    "visitante": "RC Lens",
    "visitanteAbbr": "LEN",
-   "visitanteId": "rc-lens"
+   "visitanteId": "rc-lens",
+   "marcador": [
+    3,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j3-inter-shakhtar-donetsk",
@@ -742,7 +762,12 @@
    "localId": "inter",
    "visitante": "Shakhtar Donetsk",
    "visitanteAbbr": "SHA",
-   "visitanteId": "shakhtar-donetsk"
+   "visitanteId": "shakhtar-donetsk",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j3-rma-rb-leipzig",
@@ -761,7 +786,12 @@
    "visitante": "RB Leipzig",
    "visitanteAbbr": "RBL",
    "visitanteId": "rb-leipzig",
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    4,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j3-sporting-cp-lask",
@@ -777,7 +807,12 @@
    "localId": "sporting-cp",
    "visitante": "LASK",
    "visitanteAbbr": "LAS",
-   "visitanteId": "lask"
+   "visitanteId": "lask",
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-5-9-real-union-cd-lugo",
@@ -4712,9 +4747,62 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-21T23:07:22+02:00",
-  "cambio": "2026-10-21T23:07:22+02:00",
+  "comprobado": "2026-10-22T00:07:21+02:00",
+  "cambio": "2026-10-22T00:07:21+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T00:07:21+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 7,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Sporting CP 2-3 LASK",
+     "Resultado: Aston Villa 3-1 Viking",
+     "Resultado: Betis 1-0 Feyenoord",
+     "Resultado: Real Madrid 4-1 RB Leipzig",
+     "Resultado: Club Brugge 3-0 RC Lens",
+     "Resultado: Inter 1-0 Shakhtar Donetsk",
+     "Resultado: Bayern Múnich 2-2 Arsenal"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-4-fase-liga-j3-sporting-cp-lask",
+       "t": "Sporting CP 2-3 LASK"
+      },
+      {
+       "id": "2627-4-fase-liga-j3-aston-villa-viking",
+       "t": "Aston Villa 3-1 Viking"
+      },
+      {
+       "id": "2627-4-fase-liga-j3-bet-feyenoord",
+       "t": "Betis 1-0 Feyenoord"
+      },
+      {
+       "id": "2627-4-fase-liga-j3-rma-rb-leipzig",
+       "t": "Real Madrid 4-1 RB Leipzig"
+      },
+      {
+       "id": "2627-4-fase-liga-j3-club-brugge-rc-lens",
+       "t": "Club Brugge 3-0 RC Lens"
+      },
+      {
+       "id": "2627-4-fase-liga-j3-inter-shakhtar-donetsk",
+       "t": "Inter 1-0 Shakhtar Donetsk"
+      },
+      {
+       "id": "2627-4-fase-liga-j3-bayern-munich-arsenal",
+       "t": "Bayern Múnich 2-2 Arsenal"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-21T23:07:22+02:00",
     "nuevos": 0,
