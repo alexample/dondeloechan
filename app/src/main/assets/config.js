@@ -12,6 +12,6 @@ window.GISCUS = {
 
 // Marcadores de football-data.org (plan gratuito: Primera y Champions, con unos minutos de retraso).
 window.MARCADORES = {
-  clave: "fapi_Z9ggUSXFMeZhtN7oAsmLujAJaEoXVeLk",
+  clave: "2e0b52f50c68465084f4da6f3c3c7613",
   competiciones: { 1: "PD", 4: "CL" }
 };
