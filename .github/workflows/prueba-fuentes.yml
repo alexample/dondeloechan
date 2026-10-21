@@ -1,0 +1,39 @@
+name: Prueba fuentes (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          cat > t.py <<'PY'
+          import json,urllib.request,re,html,time
+          K="2e0b52f50c68465084f4da6f3c3c7613"
+          def fd(path):
+              r=urllib.request.Request("https://api.football-data.org/v4"+path,headers={"X-Auth-Token":K})
+              try:
+                  with urllib.request.urlopen(r,timeout=30) as x: return x.status,json.loads(x.read())
+              except urllib.error.HTTPError as e: return e.code,e.read()[:200]
+          st,d=fd("/matches?competitions=CL&dateFrom=2026-10-21&dateTo=2026-10-22")
+          m=[x for x in d["matches"] if "Real Madrid" in x["homeTeam"]["name"] or "Betis" in x["homeTeam"]["name"]] or d["matches"]
+          m=m[0]
+          st2,h=fd(f"/matches/{m['id']}/head2head?limit=10")
+          if st2==200:
+              ag=h.get("aggregates",{});ms=h.get("matches",[])
+              txt=f"agg={json.dumps(ag)[:300]} n={len(ms)} ej="+" | ".join(f"{x['utcDate'][:10]} {x['competition']['code']} {x['homeTeam']['shortName']} {x['score']['fullTime']['home']}-{x['score']['fullTime']['away']} {x['awayTeam']['shortName']}" for x in ms[:5])
+          else: txt=str(h)
+          print(f"::notice::H2H {m['homeTeam']['shortName']}-{m['awayTeam']['shortName']} id={m['id']} HTTP {st2} {txt}")
+          tid=m['homeTeam']['id']
+          st3,t=fd(f"/teams/{tid}/matches?status=FINISHED&limit=5")
+          print(f"::notice::FORMA team {tid} HTTP {st3} "+(" | ".join(f"{x['utcDate'][:10]} {x['competition']['code']} {x['homeTeam']['shortName']} {x['score']['fullTime']['home']}-{x['score']['fullTime']['away']} {x['awayTeam']['shortName']}" for x in t.get('matches',[])[:5]) if st3==200 else str(t)))
+          st4,s=fd("/competitions/CL/matches?season=2025")
+          print(f"::notice::CL temporada anterior HTTP {st4} n={len(s.get('matches',[])) if st4==200 else s}")
+          for g in ["primera-federacion-grupo-1"]:
+              req=urllib.request.Request(f"https://www.vavel.com/es/data/{g}/resultados/",headers={"User-Agent":"Mozilla/5.0"})
+              tx=urllib.request.urlopen(req,timeout=30).read().decode()
+              cabs=re.findall(r'<h2 class="mo">([^<]+)</h2>',tx)
+              n=len(re.findall(r'<tr class="fx',tx))
+              fechas=re.findall(r'datetime="([^"]+)"',tx)[:3]
+              tr=re.findall(r'<tr class="fx[^"]*">(.*?)</tr>',tx,re.S)
+              print(f"::notice::VAVEL {g}: {len(cabs)} bloques {cabs[:3]}…{cabs[-2:]} · {n} filas · fechas {fechas} · fila0 {html.unescape(re.sub(r'<[^>]+>',' ',tr[0]))[:200] if tr else ''}")
+          PY
+          python3 t.py
