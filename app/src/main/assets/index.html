@@ -49,6 +49,11 @@ header.top .wrap{padding-block:14px 12px;display:flex;flex-direction:column;gap:
 .tabs{display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;background:rgba(255,255,255,.08);border-radius:10px;padding:3px;gap:3px}
 .tabs button{appearance:none;border:0;background:transparent;color:inherit;font-family:var(--f-display);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0;padding:7px 9px;white-space:nowrap;flex:1 0 auto;border-radius:8px;cursor:pointer;line-height:1.1}
 .tabs::-webkit-scrollbar{display:none}
+.tabs button.vivo{box-shadow:inset 0 0 0 1.5px #FF6B6B}
+.tabs button .envivo{display:flex;width:max-content;align-items:center;gap:4px;margin:2px auto 0;padding:1px 6px 1px 5px;border-radius:999px;background:#D92D2D;color:#fff;font-family:var(--f-body);font-weight:700;font-size:9.5px;line-height:1.35;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
+.tabs button .envivo i{width:6px;height:6px;border-radius:50%;background:#fff;animation:latido 1.4s ease-in-out infinite}
+@keyframes latido{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.tabs button .envivo i{animation:none}}
 .tabs.mas{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
 .tabs button small{display:block;font-family:var(--f-body);font-weight:500;font-size:9.5px;white-space:nowrap;text-transform:none;letter-spacing:0;opacity:.75}
 .tabs button[aria-selected="true"]{background:var(--pitch-ink);color:var(--pitch)}
@@ -716,9 +721,23 @@ function renderFresh(){
   }
   t.textContent=(dbState==="offline"?"Sin conexión. Guía guardada, comprobada ":"Canales comprobados ")+ago(meta.actualizado)+".";
 }
+/* Pestañas con partidos en juego ahora mismo: borde rojo y «● En juego N» en lugar del subtítulo */
+function pintarVivoTabs(){
+  const now=Date.now(),n={};
+  if(matches)for(const m of matches){if(status(m,now)!=="live")continue;n[m.liga]=(n[m.liga]||0)+1;if(FAV.size&&(FAV.has(m.localId)||FAV.has(m.visitanteId)))n[0]=(n[0]||0)+1}
+  document.querySelectorAll(".tabs button").forEach(b=>{
+    const k=n[+b.dataset.l]||0,sm=b.querySelector("small");if(!sm)return;
+    if(!b.dataset.sub)b.dataset.sub=sm.textContent;
+    b.classList.toggle("vivo",k>0);
+    const base=b.dataset.base||(b.dataset.base=b.getAttribute("aria-label")||b.firstChild.textContent.trim()+" "+b.dataset.sub);
+    if(k>0){sm.className="envivo";sm.innerHTML="<i></i>En juego"+(k>1?" "+k:"");b.setAttribute("aria-label",base+", "+k+(k>1?" partidos":" partido")+" en juego")}
+    else if(sm.className){sm.className="";sm.textContent=b.dataset.sub;b.setAttribute("aria-label",base)}
+  });
+}
 function render(){
   renderFresh();
   if(matches&&!hashHecho){hashHecho=true;setTimeout(abrirHash,0)}
+  pintarVivoTabs();
   document.querySelectorAll(".tabs button").forEach(b=>{const on=+b.dataset.l===league;b.setAttribute("aria-selected",String(on));if(on&&b.scrollIntoView)try{b.scrollIntoView({block:"nearest",inline:"nearest"})}catch(e){}});
   const app=document.getElementById("app");
   if(matches===null){
