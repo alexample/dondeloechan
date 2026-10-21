@@ -15,3 +15,6 @@ window.MARCADORES = {
   clave: "2e0b52f50c68465084f4da6f3c3c7613",
   competiciones: { 1: "PD", 4: "CL" }
 };
+
+/* Asistente «Pregúntale a la guía» (Cloudflare Workers AI, código en ia/worker.js). */
+window.IA_URL = "https://dondeloechan-ia.alexample.workers.dev/";
