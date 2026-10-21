@@ -1271,8 +1271,25 @@ async function actualizar(){
 let ultima=0;
 function hayJuego(now){return !!matches&&matches.some(m=>{const k=new Date(m.inicio).getTime();return m.estado!=="final"&&now>k-15*60e3&&now<k+3*36e5})}
 function cadaCuanto(){return hayJuego(Date.now())?3*60e3:15*60e3}
+/* Web: si se ha publicado una versión nueva y el navegador sigue con la vieja guardada, recargar
+   (solo si no hay nada abierto, para no cortar a nadie). */
+let versionVista=0;
+async function comprobarVersion(){
+  if(!ES_WEB||!window.VERSION_WEB||Date.now()-versionVista<5*60e3)return;
+  versionVista=Date.now();
+  try{
+    const r=await fetch("version.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;
+    const d=await r.json();
+    if(!d.v||d.v===window.VERSION_WEB||!iaEl.hidden||!menuEl.hidden||(!esEscritorio()&&!sheet.hidden))return;
+    let ya="";try{ya=sessionStorage.getItem("dle-recarga")||""}catch(e){}
+    if(ya===d.v)return;              // ya se recargó por esta versión: no entrar en bucle si el navegador insiste en la vieja
+    try{sessionStorage.setItem("dle-recarga",d.v)}catch(e){}
+    location.reload();
+  }catch(e){}
+}
 function refrescar(forzar){
   if(document.hidden)return;
+  comprobarVersion();
   const now=Date.now();
   if(forzar||now-ultima>=cadaCuanto()){ultima=now;actualizar()}
   actualizarMarcadores();

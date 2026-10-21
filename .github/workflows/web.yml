@@ -38,6 +38,9 @@ jobs:
           cp data/partidos.json site/partidos.json
           # En la web, la guía se lee del propio sitio.
           echo 'window.DATOS_URL = "partidos.json";' >> site/config.js
+          # Versión publicada: si el navegador tiene guardada una anterior, la página se recarga sola.
+          echo "window.VERSION_WEB = \"$GITHUB_SHA\";" >> site/config.js
+          echo "{\"v\":\"$GITHUB_SHA\"}" > site/version.json
           # Icono, color y "añadir a pantalla de inicio".
           python3 - <<'PY'
           import re
