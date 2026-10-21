@@ -1,0 +1,25 @@
+name: Prueba fuentes (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          cat > t.py <<'PY'
+          import json,urllib.request,datetime
+          now=datetime.datetime.now(datetime.timezone.utc).strftime("%H:%M:%S")
+          def g(u,h={}):
+              r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0",**h})
+              with urllib.request.urlopen(r,timeout=30) as x: return json.loads(x.read())
+          d=g("https://dondeloechan-ia.alexample.workers.dev/marcadores?competitions=PD,CL&dateFrom=2026-10-21&dateTo=2026-10-22",{"Origin":"https://alexample.github.io"})
+          fd=" | ".join(f"{m['homeTeam']['shortName']} {m['score']['fullTime']['home']}-{m['score']['fullTime']['away']} {m['awayTeam']['shortName']} {m['status']} upd={m.get('lastUpdated','')[11:19]}" for m in d['matches'] if m['utcDate']>='2026-10-21T18:30')
+          print(f"::notice::AHORA {now} UTC · FD(worker): {fd}")
+          for lg in ["uefa.champions","esp.1"]:
+              e=g(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg}/scoreboard?dates=20261021")
+              s=[]
+              for ev in e.get("events",[]):
+                  c=ev["competitions"][0];t=c["competitors"];h=[x for x in t if x["homeAway"]=="home"][0];a=[x for x in t if x["homeAway"]=="away"][0]
+                  st=ev["status"];s.append(f"{h['team']['shortDisplayName']} {h.get('score')}-{a.get('score')} {a['team']['shortDisplayName']} [{st['type']['name']} {st.get('displayClock')} p{st.get('period')}]")
+              print(f"::notice::ESPN {lg}: "+" | ".join(s))
+          PY
+          python3 t.py
