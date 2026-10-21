@@ -377,6 +377,13 @@ def main():
     temp = temporada_txt(hoy)
     cambios = {"nuevos": [], "horas": 0, "canales": 0, "resultados": 0, "tablas": [], "detalle": []}
 
+    items = {"resultados": [], "canales": [], "horas": [], "nuevos": []}
+
+    def apuntar(tipo, m, texto):
+        lista = items[tipo]
+        if len(lista) < 60 and not any(x["id"] == m["id"] for x in lista):
+            lista.append({"id": m["id"], "t": texto})
+
     def nota_cambio(texto):
         if len(cambios["detalle"]) < 30 and texto not in cambios["detalle"]:
             cambios["detalle"].append(texto)
@@ -408,6 +415,7 @@ def main():
         partidos.append(m)
         por_clave[(liga, li, vi)] = m
         cambios["nuevos"].append(f"{(COMP.get(liga))}: {m['local']} – {m['visitante']}")
+        apuntar("nuevos", m, f"{m['local']} – {m['visitante']} ({COMP.get(liga)})")
         return m
 
     def poner_hora(m, inicio, pendiente=False):
@@ -423,6 +431,7 @@ def main():
             m.pop("horaPendiente", None)
             cambios["horas"] += 1
             nota_cambio(f"Nueva hora: {m['local']} – {m['visitante']}, {inicio.astimezone(MAD).strftime('%d/%m %H:%M')}")
+            apuntar("horas", m, f"{m['local']} – {m['visitante']}: {inicio.astimezone(MAD).strftime('%d/%m a las %H:%M')}")
 
     def poner_canales(m, canales, exacto):
         if m.get("estado") == "final" or not canales:
@@ -470,6 +479,7 @@ def main():
             m["provisional"] = prov
             if not prov and not antes_conf:
                 nota_cambio(f"Canal confirmado: {m['local']} – {m['visitante']}")
+            apuntar("canales", m, f"{m['local']} – {m['visitante']}" + (" · confirmado" if not prov and not antes_conf else ""))
             if not prov and m.get("nota", "").startswith("Anunciado en Movistar"):
                 m.pop("nota", None)
             cambios["canales"] += 1
@@ -481,6 +491,7 @@ def main():
             m.pop("minuto", None)
             cambios["resultados"] += 1
             nota_cambio(f"Resultado: {m['local']} {marcador[0]}-{marcador[1]} {m['visitante']}")
+            apuntar("resultados", m, f"{m['local']} {marcador[0]}-{marcador[1]} {m['visitante']}")
         elif estado in ("aplazado", "suspendido") and m.get("estado") != estado and not m.get("marcador"):
             m["estado"] = estado
             cambios["resultados"] += 1
@@ -677,7 +688,7 @@ def main():
     entrada = {"hora": iso_mad(hoy), "nuevos": len(cambios["nuevos"]), "horas": cambios["horas"],
                "canales": cambios["canales"], "resultados": cambios["resultados"], "tablas": cambios["tablas"],
                "detalle": [f"Nuevo partido: {x.split(': ', 1)[-1]}" for x in cambios["nuevos"][:10]] + cambios["detalle"][:20],
-               "avisos": len([x for x in LOG if x.startswith("⚠")])}
+               "avisos": len([x for x in LOG if x.startswith("⚠")]), "items": items}
     hist.insert(0, entrada)
     datos["robot"] = {"comprobado": iso_mad(hoy), "cambio": iso_mad(hoy) if hubo else rb.get("cambio"), "historial": hist[:24]}
     if hubo:
