@@ -4696,9 +4696,19 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-21T12:25:39+02:00",
+  "comprobado": "2026-10-21T12:26:22+02:00",
   "cambio": "2026-10-21T12:25:39+02:00",
   "historial": [
+   {
+    "hora": "2026-10-21T12:26:22+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0
+   },
    {
     "hora": "2026-10-21T12:25:39+02:00",
     "nuevos": 0,
