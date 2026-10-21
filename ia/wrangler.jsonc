@@ -4,5 +4,7 @@
   "main": "worker.js",
   "compatibility_date": "2025-09-01",
   "workers_dev": true,
-  "ai": { "binding": "AI" }
+  "ai": { "binding": "AI" },
+  // Cada hora, a los :07, el worker avisa a GitHub para que pase el robot de datos (más puntual que el horario de GitHub).
+  "triggers": { "crons": ["7 * * * *"] }
 }

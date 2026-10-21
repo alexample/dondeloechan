@@ -66,6 +66,24 @@ GUÍA (formato por línea: ID | competición | fecha y hora | local – visitant
 ${contexto}`;
 
 export default {
+  /** Cada hora (wrangler.jsonc → triggers.crons): pide a GitHub que pase el robot de datos.
+   *  Necesita el secreto GH_TOKEN (llave de GitHub con permiso «Contents: Read and write» sobre dondeloechan). */
+  async scheduled(evento, env, ctx) {
+    if (!env.GH_TOKEN) { console.log("Falta el secreto GH_TOKEN: no se puede avisar al robot."); return; }
+    const r = await fetch("https://api.github.com/repos/alexample/dondeloechan/dispatches", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + env.GH_TOKEN,
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "dondeloechan-ia",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ event_type: "robot" }),
+    });
+    console.log("Aviso al robot de GitHub:", r.status, r.status === 204 ? "OK" : await r.text());
+  },
+
   async fetch(request, env) {
     const origen = request.headers.get("Origin") || "";
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });

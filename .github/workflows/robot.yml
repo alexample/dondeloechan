@@ -5,6 +5,8 @@ name: Robot de datos
 on:
   schedule:
     - cron: "16 * * * *"
+  repository_dispatch:
+    types: [robot]
   workflow_dispatch:
     inputs:
       seco:
