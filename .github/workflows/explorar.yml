@@ -12,31 +12,16 @@ jobs:
           mkdir -p muestras && cd muestras
           UA="Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Mobile Safari/537.36"
           g(){ curl -sSL -A "$UA" -H "Accept-Language: es-ES,es;q=0.9" --max-time 40 -o "$1" -w "$1 %{http_code} %{size_download}\n" "$2" || echo "$1 FALLO"; }
-          g fel_home.html https://www.futbolenlatv.es/
-          g fel_rfef.html https://www.futbolenlatv.es/competicion/primera-division-rfef
-          g fel_segunda.html https://www.futbolenlatv.es/competicion/segunda-division-espana
-          g fel_copa.html https://www.futbolenlatv.es/competicion/copa-del-rey
-          g fel_laliga.html https://www.futbolenlatv.es/competicion/laliga-ea-sports
-          g fel_primera.html https://www.futbolenlatv.es/competicion/primera-division-espana
-          g fel_champions.html https://www.futbolenlatv.es/competicion/champions-league
-          g fel_champions2.html https://www.futbolenlatv.es/competicion/liga-de-campeones
-          g fel_dazn.html https://www.futbolenlatv.es/canal/dazn-spain
-          g mov_mliga.html https://www.movistarplus.es/programacion-tv/mliga/2026-10-24
-          g mov_mcopa.html https://www.movistarplus.es/programacion-tv/mcopa/2026-10-24
-          g pdh_laliga.html https://www.partidos-de-hoy.com/futbol/donde-ver-laliga-ea-sports.html
-          g pdh_rfef.html https://www.partidos-de-hoy.com/futbol/donde-ver-primera-federacion.html
-          g vavel_g1.html https://www.vavel.com/es/data/primera-federacion-grupo-1/clasificacion/
-          g vavel_g2.html https://www.vavel.com/es/data/primera-federacion-grupo-2/clasificacion/
-          g vavel_segunda.html https://www.vavel.com/es/data/laliga-hypermotion/clasificacion/
-          g vavel_g1_res.html https://www.vavel.com/es/data/primera-federacion-grupo-1/resultados/
-          g laliga_clas.html https://www.laliga.com/laliga-hypermotion/clasificacion
-          g laliga_res.html https://www.laliga.com/laliga-hypermotion/resultados
-          KEY=$(grep -o 'fapi_[A-Za-z0-9]*' ../app/src/main/assets/config.js | head -1)
-          for c in PD CL SD; do
-            curl -sS -H "X-Auth-Token: $KEY" --max-time 30 -o fd_${c}_matches.json -w "fd_${c}_matches %{http_code}\n" "https://api.football-data.org/v4/competitions/$c/matches?dateFrom=2026-10-15&dateTo=2026-10-31"
-            curl -sS -H "X-Auth-Token: $KEY" --max-time 30 -o fd_${c}_standings.json -w "fd_${c}_standings %{http_code}\n" "https://api.football-data.org/v4/competitions/$c/standings"
-            sleep 7
-          done
+          g fel_laliga.html https://www.futbolenlatv.es/competicion/la-liga
+          g fel_ucl.html https://www.futbolenlatv.es/competicion/liga-campeones
+          g ll1_clas.html https://www.laliga.com/laliga-easports/clasificacion
+          g ll1_res.html https://www.laliga.com/laliga-easports/resultados
+          g ll1_j9.html https://www.laliga.com/laliga-easports/resultados/2026-27/jornada-9
+          g ll2_j10.html https://www.laliga.com/laliga-hypermotion/resultados/2026-27/jornada-10
+          for v in laliga laliga-ea-sports la-liga primera-division laliga-2 segunda-division laliga-hypermotion-2 champions-league uefa-champions-league liga-de-campeones copa-del-rey; do g vv_$v.html https://www.vavel.com/es/data/$v/resultados/; done
+          g vv_en_ucl.html https://www.vavel.com/en-us/data/champions-league/standings/
+          g vv_en_ucl_res.html https://www.vavel.com/en-us/data/champions-league/results/
+          g vv_g1_cal.html https://www.vavel.com/es/data/primera-federacion-grupo-1/calendario/
           ls -la
       - name: Guardar en la rama muestras
         run: |
