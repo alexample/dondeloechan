@@ -1,0 +1,12 @@
+name: Probar clave football-data (temporal)
+on: workflow_dispatch
+jobs:
+  probar:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          for c in PD CL; do
+            R=$(curl -sS -m 30 -H "X-Auth-Token: 2e0b52f50c68465084f4da6f3c3c7613" "https://api.football-data.org/v4/competitions/$c/matches?dateFrom=2026-10-16&dateTo=2026-10-21")
+            echo "::notice title=$c::$(echo "$R" | python3 -c 'import json,sys;d=json.load(sys.stdin);print(d.get("message") or str(len(d.get("matches",[])))+" partidos; ejemplo: "+(lambda m:m["homeTeam"]["name"]+" "+str(m["score"]["fullTime"])+" "+m["awayTeam"]["name"])(d["matches"][0]) if d.get("matches") else d)')"
+            sleep 7
+          done
