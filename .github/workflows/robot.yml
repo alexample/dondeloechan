@@ -1,0 +1,53 @@
+name: Robot de datos
+
+# Actualiza data/partidos.json leyendo laliga.com, futbolenlatv.es y VAVEL.
+# Corre cada 3 horas; también se puede lanzar a mano desde la pestaña Actions.
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      seco:
+        description: "Solo probar (no guardar cambios)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: robot
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Leer las fuentes y actualizar la guía
+        run: python3 robot/actualizar.py ${{ inputs.seco && '--seco' || '' }}
+
+      - name: Guardar cambios
+        id: guardar
+        if: ${{ !inputs.seco }}
+        run: |
+          if git diff --quiet data/partidos.json; then
+            echo "Sin cambios."
+            echo "hay=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "Robot de datos"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/partidos.json
+          git commit -q -m "Guía actualizada $(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M') (robot)"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin main && break; sleep 5; done
+          echo "hay=si" >> "$GITHUB_OUTPUT"
+
+      - name: Volver a publicar la web
+        if: ${{ steps.guardar.outputs.hay == 'si' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run web.yml --ref main
