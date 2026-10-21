@@ -124,9 +124,17 @@ async function vivo(request, env, ctx, origen) {
       const eq = l => (c.competitors || []).find(t => t.homeAway === l) || {};
       const h = eq("home"), a = eq("away"), st = ev.status || {}, ty = st.type || {};
       const team = t => ({ name: (t.team || {}).displayName || "", shortName: (t.team || {}).shortDisplayName || "", tla: (t.team || {}).abbreviation || "" });
+      const idL = String((h.team || {}).id || ""), idV = String((a.team || {}).id || "");
+      // Goles y expulsiones: minuto, jugador y equipo (L = local, V = visitante).
+      const eventos = (c.details || []).filter(e => !e.shootout && (e.scoringPlay || e.redCard)).map(e => {
+        const eqId = String((e.team || {}).id || ""), j = (e.athletesInvolved || [])[0] || {};
+        return { t: e.scoringPlay ? "g" : "r", min: (e.clock || {}).displayValue || "", seg: (e.clock || {}).value || 0,
+          j: j.displayName || j.shortName || "", lado: eqId === idL ? "L" : eqId === idV ? "V" : "",
+          pen: !!e.penaltyKick, pp: !!e.ownGoal };
+      }).filter(e => e.lado);
       out.push({ liga, utcDate: ev.date, homeTeam: team(h), awayTeam: team(a),
         gl: h.score != null ? +h.score : null, gv: a.score != null ? +a.score : null,
-        estado: ty.state || "", detalle: ty.name || "", reloj: st.displayClock || "", parte: st.period || 0 });
+        estado: ty.state || "", detalle: ty.name || "", reloj: st.displayClock || "", parte: st.period || 0, eventos });
     }
   })));
   return new Response(JSON.stringify({ fuente: "ESPN", partidos: out }), { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });

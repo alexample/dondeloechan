@@ -307,6 +307,23 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .note{font-size:13px;color:var(--muted);background:var(--bg);border-radius:10px;padding:10px 12px;margin:0}
 .note.warn{background:var(--warn-bg);color:var(--warn)}
 .acciones{display:flex;flex-wrap:wrap;gap:8px}
+.kprog{display:block;width:44px;height:4px;border-radius:99px;background:var(--line);margin:4px auto 2px;overflow:hidden}
+.kprog i{display:block;height:100%;background:var(--live);border-radius:99px}
+.partido-vivo{margin-top:-6px}
+.tbar{position:relative;height:10px;border-radius:99px;background:var(--line);margin:10px 0 4px}
+.tbar .tb-fill{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--live);transition:width .6s}
+.tbar .tb-fill.fin{background:var(--done)}
+.tbar .tb-ht{position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;background:var(--surface);transform:translateX(-1px)}
+.tbar .ev{position:absolute;top:50%;width:12px;height:12px;border-radius:50%;transform:translate(-50%,-50%);border:2px solid var(--surface);background:var(--ink)}
+.tbar .ev.g.L{background:var(--pitch)} .tbar .ev.g.V{background:var(--accent)} .tbar .ev.r{border-radius:2px;width:8px;height:11px;background:#D92D2D}
+.tb-ejes{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.goles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.goles ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;font-size:13.5px}
+.goles li{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.goles ul.v{text-align:right;align-items:flex-end}
+.goles b{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:600}
+.goles small{color:var(--muted)}
+.ico-roja{display:inline-block;width:9px;height:12px;border-radius:2px;background:#D92D2D;vertical-align:-1px}
 .h2h-res{display:flex;height:8px;border-radius:99px;overflow:hidden;background:var(--line);margin:6px 0 4px}
 .h2h-res i{display:block} .h2h-res .g{background:var(--pitch)} .h2h-res .e{background:var(--done)} .h2h-res .p{background:var(--accent)}
 .h2h-cifras{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)} .h2h-cifras b{color:var(--ink)}
@@ -571,6 +588,30 @@ function tiempo(m,now){
   const parte=n>45?2:1,mins=n>90?"90+":String(n);
   return {c:`${mins}' · ${parte}ª`,l:`${parte===1?"Primera":"Segunda"} parte · minuto ${mins}${aprox?" (aprox.)":""}`};
 }
+/* Barra de tiempo: 0–90 min (120 con prórroga); el descanso está en la mitad. */
+function progreso(m,now){
+  const st=status(m,now);
+  if(st==="done")return {pct:100,fin:true};
+  if(st!=="live")return null;
+  const t=tiempo(m,now);if(!t)return null;
+  if(/^Descanso/.test(t.c))return {pct:50,desc:true};
+  if(/^Penaltis/.test(t.c))return {pct:100};
+  const n=parseInt(t.c,10);if(isNaN(n))return null;
+  const escala=(m.parte||0)>=3?120:90;
+  return {pct:Math.max(1,Math.min(100,100*n/escala)),escala};
+}
+const nomJug=s=>String(s||"").trim();
+function eventosHTML(m,now){
+  const ev=(m.eventos||[]).slice().sort((a,b)=>a.seg-b.seg);
+  const p=progreso(m,now);
+  if(!p&&!ev.length)return "";
+  const escala=p&&p.escala||90;
+  const marca=e=>{const n=parseInt(e.min,10)||0;return `<i class="ev ${e.t} ${e.lado}" style="left:${Math.min(100,100*n/escala)}%" title="${esc((e.t==="g"?"Gol ":"Roja ")+e.j+" "+e.min)}"></i>`};
+  const barra=p?`<div class="tbar" role="img" aria-label="${esc(p.fin?"Partido terminado":(tiempo(m,now)||{}).l||"")}"><span class="tb-fill${p.fin?" fin":""}" style="width:${p.pct}%"></span><span class="tb-ht"></span>${ev.map(marca).join("")}</div><div class="tb-ejes"><span>0'</span><span>Descanso</span><span>${escala}'</span></div>`:"";
+  const lado=l=>ev.filter(e=>e.lado===l).map(e=>`<li>${e.t==="g"?'<span class="ico-gol" aria-label="Gol">⚽</span>':'<span class="ico-roja" aria-label="Roja"></span>'} ${esc(nomJug(e.j))} <b>${esc(e.min)}</b>${e.pen?" <small>(pen.)</small>":""}${e.pp?" <small>(p.p.)</small>":""}</li>`).join("");
+  const lista=ev.length?`<div class="goles"><ul>${lado("L")}</ul><ul class="v">${lado("V")}</ul></div>`:"";
+  return `<div class="partido-vivo">${barra}${lista}</div>`;
+}
 function countdown(m,now){
   const d=new Date(m.inicio).getTime()-now;
   const st=status(m,now);
@@ -812,7 +853,7 @@ function render(){
     <section class="day${pas?" pasado":""}"><h2>${cap(fDay.format(new Date(g[0].inicio)))}${fKey.format(new Date(g[0].inicio))===hoyKey?' · <em class="hoyd">Hoy</em>':""}</h2><div class="list">
     ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];return `
       <button class="match${st==="done"?" past":""}${m._id===ahoraId&&!q?" ahora":""}"${m._id===ahoraId?' id="ahora"':""} data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
-        <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b><span class="${st||""}">${st==="live"?esc((tiempo(m,now)||{c:"En juego"}).c):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
+        <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b>${st==="live"&&progreso(m,now)?`<i class="kprog"><i style="width:${progreso(m,now).pct}%"></i></i>`:""}<span class="${st||""}">${st==="live"?esc((tiempo(m,now)||{c:"En juego"}).c):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
         <span class="teams">
           ${league===0?`<span class="compl">${esc((COMP[m.liga]||{}).name||"")}</span>`:""}
           <span class="team">${crest(h)}<span class="nm">${FAV.has(m.localId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(h.name)}</span></span>
@@ -1168,6 +1209,7 @@ async function marcadoresEspn(now){
     }else if(/POSTPONED/.test(x.detalle))v={estado:"aplazado",minuto:null};
     if(!v)continue;
     if(x.estado!=="pre"&&x.gl!=null&&x.gv!=null)v.marcador=[x.gl,x.gv];
+    if(Array.isArray(x.eventos))v.eventos=x.eventos;
     VIVO[m._id]=v;
   }
   vivoFuente="ESPN";vivoOk=Date.now();vivoFallo="";
@@ -1320,6 +1362,7 @@ async function iaContextoPartido(m){
   if(!m)return "";
   const now=Date.now(),L=nomCorto(m.localId)||m.local,V=nomCorto(m.visitanteId)||m.visitante,st=status(m,now),t=tiempo(m,now);
   const out=[`PARTIDO SELECCIONADO (el usuario está viendo su ficha; si la pregunta no dice otra cosa, se refiere a este): ${m._id} | ${(COMP[m.liga]||{}).name||""} ${jornLabel(m.jornada)} | ${cap(fDay.format(new Date(m.inicio)))} ${m.horaPendiente?"hora por fijar":fTime.format(new Date(m.inicio))} | ${m.local} – ${m.visitante}`+(tieneMarcador(m)&&(st==="live"||st==="done")?` | ${st==="live"?"EN JUEGO":"FINAL"} ${marcadorTxt(m)}${t?" ("+t.l+")":""}`:"")];
+  if((m.eventos||[]).length)out.push("GOLES Y EXPULSIONES DE ESTE PARTIDO: "+m.eventos.map(e=>`${e.min} ${e.t==="g"?"gol":"roja"} de ${e.j} (${e.lado==="L"?m.local:m.visitante})${e.pen?" de penalti":""}${e.pp?" en propia puerta":""}`).join("; "));
   const d=await datosH2H(m);
   if(!d)out.push("HISTORIAL: no disponible para este partido. Si te preguntan por enfrentamientos anteriores, estadísticas o la ida, di que la guía no tiene ese dato; NO lo inventes ni lo saques de tu memoria.");
   if(d){
@@ -1354,6 +1397,7 @@ function open(id){
       ${tieneMarcador(m)&&(status(m,now)==="live"||status(m,now)==="done")?`<div class="mid score${status(m,now)==="live"?" live":""}">${m.marcador[0]}<i>–</i>${m.marcador[1]}</div>`:`<div class="mid">VS</div>`}
       <div class="side">${crest(a,1)}<b>${esc(a.name)}</b>${botonFav(m.visitanteId,a.name)}</div>
     </div>
+    ${eventosHTML(m,now)}
     <div>
       <div class="when">
         <div><small>Día</small><b>${cap(fDayShort.format(d)).replace(".","")}</b><em>${cap(fDay.format(d))}</em></div>
@@ -1525,7 +1569,7 @@ function refrescar(forzar){
 }
 setInterval(()=>refrescar(false),30e3);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){refrescar(Date.now()-ultima>Math.min(cadaCuanto(),5*60e3));render()}});
-const firmaFicha=x=>JSON.stringify([x.marcador,x.estado,x.canales,x.inicio,x.horaPendiente,x.provisional]);
+const firmaFicha=x=>JSON.stringify([x.marcador,x.estado,(x.eventos||[]).length,x.canales,x.inicio,x.horaPendiente,x.provisional]);
 let fichaPintada="";
 /* Si la ficha de un partido está abierta y cambia su marcador, estado o canal, se repinta sin moverla. */
 function refrescarFicha(){
@@ -1550,7 +1594,7 @@ window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cer
 })();
 setInterval(render,60e3);
 // La ficha abierta de un partido en juego actualiza su minuto.
-setInterval(()=>{if(actual&&!sheet.hidden&&status(actual,Date.now())==="live"){const c=sheet.querySelector(".count");if(c)c.textContent=countdown(actual,Date.now());const n=document.getElementById("vivo-nota");if(n)n.textContent=notaVivo()}},15e3);
+setInterval(()=>{if(actual&&!sheet.hidden&&status(actual,Date.now())==="live"){const c=sheet.querySelector(".count");if(c)c.textContent=countdown(actual,Date.now());const pv=sheet.querySelector(".partido-vivo");if(pv){const h=eventosHTML(actual,Date.now());if(h)pv.outerHTML=h}const n=document.getElementById("vivo-nota");if(n)n.textContent=notaVivo()}},15e3);
 </script>
 </body>
 </html>
