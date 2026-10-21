@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T12:09:52+02:00",
+ "actualizado": "2026-10-21T12:24:29+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -2595,18 +2595,18 @@
      "how": "Gratis por internet, en su web o aplicación."
     },
     {
-     "name": "Replay YouTube",
-     "short": "REP",
-     "op": "free",
-     "dial": "",
-     "how": "Gratis por internet, en su web o aplicación."
-    },
-    {
      "dial": "TDT",
      "how": "Gratis en la TDT de Galicia y en la web de la CRTVG.",
      "name": "TVG",
      "op": "free",
      "short": "TVG"
+    },
+    {
+     "name": "Replay YouTube",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
     }
    ],
    "inicio": "2026-10-31T18:30:00+01:00",
@@ -4694,5 +4694,21 @@
     }
    }
   }
+ },
+ "robot": {
+  "comprobado": "2026-10-21T12:24:29+02:00",
+  "cambio": "2026-10-21T12:24:29+02:00",
+  "historial": [
+   {
+    "hora": "2026-10-21T12:24:29+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0
+   }
+  ]
  }
 }
