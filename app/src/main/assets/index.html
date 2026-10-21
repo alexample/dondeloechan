@@ -1268,6 +1268,7 @@ function aplicar(d,origen){
   CLAS=d.clasificacion||null;
   if(origen)dbState=origen;
   aplicarVivo();render();refrescarFicha();
+  if(!menuEl.hidden){const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y}
   if(!vivoTimer)programarMarcadores();
   return true;
 }
@@ -1313,11 +1314,18 @@ async function comprobarVersion(){
     location.reload();
   }catch(e){}
 }
+/* El robot pasa cada hora hacia el minuto 7 y tarda 1–3 min: entre el 9 y el 16 se mira cada 2 min,
+   y también si la última comprobación del robot tiene más de una hora. */
+function tocaRobot(now){
+  const mi=new Date(now).getMinutes();
+  const rb=meta&&meta.robot&&meta.robot.comprobado?new Date(meta.robot.comprobado).getTime():0;
+  return (mi>=9&&mi<=16)||(rb&&now-rb>63*60e3);
+}
 function refrescar(forzar){
   if(oculta())return;
   comprobarVersion();
   const now=Date.now();
-  if(forzar||now-ultima>=cadaCuanto()){ultima=now;actualizar()}
+  if(forzar||now-ultima>=cadaCuanto()||(tocaRobot(now)&&now-ultima>=2*60e3)){ultima=now;actualizar()}
   actualizarMarcadores();
 }
 setInterval(()=>refrescar(false),60e3);
