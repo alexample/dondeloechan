@@ -152,6 +152,16 @@ public class MainActivity extends Activity {
             AvisosWorker.revisarYa(MainActivity.this);
         }
 
+        /** Ajustes del menú: {"canal":bool,"cambio":bool,"antes":bool,"min":int}. */
+        @JavascriptInterface
+        public void guardarAjustes(String json) {
+            String antes = getSharedPreferences(AvisosWorker.PREFS, Context.MODE_PRIVATE).getString("ajustes", "");
+            if (json.equals(antes)) return;
+            getSharedPreferences(AvisosWorker.PREFS, Context.MODE_PRIVATE).edit().putString("ajustes", json).apply();
+            try { if (!new JSONObject(json).optBoolean("antes", true)) AvisosWorker.cancelarTodos(MainActivity.this); } catch (Exception ignored) { }
+            AvisosWorker.revisarYa(MainActivity.this);
+        }
+
         /** Catálogo de canales (nombre y dial) para escribir el aviso. */
         @JavascriptInterface
         public void guardarCanales(String json) {

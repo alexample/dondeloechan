@@ -52,7 +52,7 @@ public class AvisosWorker extends Worker {
     static final String PREFS = "avisos";
     static final String CANAL_AVISOS = "canales_confirmados";
     static final String CANAL_PREVIA = "recordatorio_15min";
-    static final long ANTES = 15 * 60 * 1000L;
+    static final int MIN_DEF = 15;
     static final String URL_GUIA = "https://raw.githubusercontent.com/Alexample/dondeloechan/main/data/partidos.json";
     private static final String TRABAJO = "revisar-canales";
 
@@ -78,9 +78,9 @@ public class AvisosWorker extends Worker {
             NotificationChannel ch = new NotificationChannel(CANAL_AVISOS, "Canal confirmado de mis equipos",
                     NotificationManager.IMPORTANCE_DEFAULT);
             ch.setDescription("Aviso cuando se confirma por qué canal se emite un partido de tus equipos.");
-            NotificationChannel pr = new NotificationChannel(CANAL_PREVIA, "15 minutos antes del partido",
+            NotificationChannel pr = new NotificationChannel(CANAL_PREVIA, "Antes del partido",
                     NotificationManager.IMPORTANCE_HIGH);
-            pr.setDescription("Recordatorio 15 minutos antes de que empiece un partido de tus equipos, con su canal.");
+            pr.setDescription("Recordatorio antes de que empiece un partido de tus equipos, con su canal (los minutos se eligen en el menú de la app).");
             NotificationManager nm = c.getSystemService(NotificationManager.class);
             if (nm != null) { nm.createNotificationChannel(ch); nm.createNotificationChannel(pr); }
         }
@@ -107,6 +107,16 @@ public class AvisosWorker extends Worker {
             p.edit().putStringSet("alarmas", new HashSet<>()).putString("favs_prev", "[]").apply();
             return Result.success();
         }
+
+        // Ajustes del menú de la app.
+        JSONObject aj;
+        try { aj = new JSONObject(p.getString("ajustes", "{}")); } catch (Exception e) { aj = new JSONObject(); }
+        boolean avisoCanal = aj.optBoolean("canal", true);
+        boolean avisoCambio = aj.optBoolean("cambio", true);
+        boolean avisoAntes = aj.optBoolean("antes", true);
+        int minAntes = aj.optInt("min", MIN_DEF);
+        if (minAntes < 1 || minAntes > 180) minAntes = MIN_DEF;
+        final long ANTES = minAntes * 60 * 1000L;
 
         JSONObject catalogo;
         try { catalogo = new JSONObject(p.getString("canales", "{}")); } catch (Exception e) { catalogo = new JSONObject(); }
@@ -137,9 +147,9 @@ public class AvisosWorker extends Worker {
 
             // Recordatorio 15 minutos antes (si la hora está fijada y no se ha avisado ya para esta hora).
             String mid = m.optString("id");
-            if (!anulado && !m.optBoolean("horaPendiente", false) && inicio - ANTES > ahora - 60000
+            if (avisoAntes && !anulado && !m.optBoolean("horaPendiente", false) && inicio - ANTES > ahora - 60000
                     && p.getLong("rec_" + mid, 0) != inicio) {
-                programarRecordatorio(c, m, canales, catalogo, inicio);
+                programarRecordatorio(c, m, canales, catalogo, inicio, ANTES);
                 alarmas.add(mid);
             }
             if (anulado) continue;
@@ -152,9 +162,9 @@ public class AvisosWorker extends Worker {
             // Avisa al confirmarse el canal (o si cambia). Un partido nuevo que ya llega confirmado
             // también avisa, salvo que el equipo se acabe de añadir a favoritos (para no llenar de avisos).
             boolean equipoYaSeguido = favsAntes.contains(local) || favsAntes.contains(visit);
-            boolean avisar = confirmado && (antes != null
-                    ? (antes.startsWith("P|") || !antes.equals(ahoraEstado))
-                    : equipoYaSeguido);
+            boolean pasoAConfirmado = antes != null ? antes.startsWith("P|") : equipoYaSeguido;
+            boolean cambio = antes != null && antes.startsWith("C|") && !antes.equals(ahoraEstado);
+            boolean avisar = avisoCanal && confirmado && (pasoAConfirmado || (avisoCambio && cambio));
             if (avisar && notificar(c, m, canales, catalogo, inicio)) avisados++;
             ed.putString(clave, ahoraEstado);
         }
@@ -173,7 +183,7 @@ public class AvisosWorker extends Worker {
     }
 
     /** Programa (o reprograma, si cambió la hora o el canal) la alarma de 15 minutos antes. */
-    private static void programarRecordatorio(Context c, JSONObject m, JSONArray canales, JSONObject catalogo, long inicio) {
+    private static void programarRecordatorio(Context c, JSONObject m, JSONArray canales, JSONObject catalogo, long inicio, long ANTES) {
         AlarmManager am = (AlarmManager) c.getSystemService(Context.ALARM_SERVICE);
         if (am == null) return;
         String canal;
@@ -204,6 +214,13 @@ public class AvisosWorker extends Worker {
         } catch (SecurityException e) {
             am.set(AlarmManager.RTC_WAKEUP, cuando, pi);
         }
+    }
+
+    /** Al desactivar el aviso previo en el menú: quita ya todas las alarmas programadas, aunque no haya red. */
+    static void cancelarTodos(Context c) {
+        SharedPreferences p = c.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+        for (String id : p.getStringSet("alarmas", new HashSet<>())) cancelarRecordatorio(c, id);
+        p.edit().putStringSet("alarmas", new HashSet<>()).apply();
     }
 
     private static void cancelarRecordatorio(Context c, String id) {

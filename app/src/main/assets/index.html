@@ -140,6 +140,46 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .tb-ver{appearance:none;border:0;background:none;color:var(--accent);font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;padding:4px 0}
 .tb-ver:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 
+/* Menú lateral */
+.brand-l{display:flex;align-items:center;gap:10px;min-width:0}
+.burger{appearance:none;border:0;background:rgba(255,255,255,.12);color:var(--pitch-ink);width:36px;height:36px;border-radius:10px;display:grid;place-items:center;cursor:pointer;flex:none}
+.burger:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.menu-scrim{position:fixed;inset:0;background:rgba(10,16,12,.5);z-index:30;opacity:0;transition:opacity .2s}
+.menu-scrim.on{opacity:1}
+.menu{position:fixed;top:0;bottom:0;left:0;z-index:31;width:min(340px,88vw);background:var(--surface);box-shadow:var(--shadow);transform:translateX(-102%);transition:transform .25s cubic-bezier(.2,.8,.2,1);overflow:auto;padding:calc(18px + env(safe-area-inset-top,0px)) 20px calc(24px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:22px}
+.menu.on{transform:none}
+.menu-cab{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.menu-cab b{font-family:var(--f-display);font-weight:800;font-size:24px;text-transform:uppercase;line-height:1}
+.menu-cab b span{color:var(--accent)}
+.menu h3{margin:0 0 6px;font-family:var(--f-display);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+.opc{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.opc:last-child{border-bottom:0}
+.opc span{display:flex;flex-direction:column;gap:2px;min-width:0}
+.opc span b{font-weight:600;font-size:15px}
+.opc span small{font-size:12.5px;color:var(--muted);line-height:1.35}
+.sw{appearance:none;flex:none;width:44px;height:26px;border-radius:999px;background:var(--line);position:relative;cursor:pointer;transition:background .15s;margin-top:2px}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .15s}
+.sw:checked{background:var(--pitch)}
+.sw:checked::after{transform:translateX(18px)}
+.sw:disabled{opacity:.45;cursor:default}
+.sw:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.opc span.mins{display:flex;flex-direction:row;gap:6px;flex-wrap:wrap;margin-top:8px}
+.mins button{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:5px 11px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.mins button[aria-pressed="true"]{background:var(--pitch);border-color:var(--pitch);color:var(--pitch-ink)}
+.mins button:disabled{opacity:.45;cursor:default}
+.menu .note{font-size:12.5px}
+.menu .note .btn{margin-top:8px;min-height:36px;font-size:14px;padding:6px 12px}
+.eq-l{display:flex;flex-direction:column}
+.eq-l div{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.eq-l div:last-child{border-bottom:0}
+.eq-l div b{flex:1;font-weight:600;font-size:14.5px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eq-l button{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:4px 10px;font:inherit;font-size:12.5px;cursor:pointer}
+.menu-info{font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.menu-info a{color:var(--accent);font-weight:600}
+@media (prefers-reduced-motion:reduce){.menu,.menu-scrim{transition:none}}
+.brand h1{white-space:nowrap}
+@media (max-width:420px){.brand h1{font-size:25px}.brand .jor{font-size:10px}}
+
 /* Ficha del partido */
 .scrim{position:fixed;inset:0;background:rgba(10,16,12,.5);z-index:20;opacity:0;transition:opacity .2s}
 .scrim.on{opacity:1}
@@ -226,7 +266,8 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 <header class="top">
   <div class="wrap">
     <div class="brand">
-      <h1>Dónde lo <span>echan</span></h1>
+      <div class="brand-l"><button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <h1>Dónde lo <span>echan</span></h1></div>
       <div class="jor" id="jor"></div>
     </div>
     <div class="tabs" role="tablist">
@@ -252,6 +293,8 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 </div></main>
 
 <button class="hoy" id="hoy" type="button" hidden>Volver a hoy</button>
+<div class="menu-scrim" id="menu-scrim" hidden></div>
+<nav class="menu" id="menu" aria-label="Menú" hidden></nav>
 <div class="scrim" id="scrim" hidden></div>
 <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-title" hidden></section>
 
@@ -425,11 +468,89 @@ function alternarFav(id,nombre){
   if(!id)return;
   const app=!!(window.AndroidApp&&window.AndroidApp.guardarFavs);
   if(FAV.has(id)){FAV.delete(id);aviso(nombre+" ya no está en Mis equipos.")}
-  else{FAV.add(id);aviso("★ "+nombre+" añadido a Mis equipos."+(app?" Te avisaremos cuando se confirme el canal y 15 minutos antes de cada partido.":""));
+  else{FAV.add(id);aviso("★ "+nombre+" añadido a Mis equipos."+(app?textoAvisos():""));
     try{if(app&&window.AndroidApp.permisoAvisos)window.AndroidApp.permisoAvisos()}catch(e){}}
   try{localStorage.setItem("dle-favs",JSON.stringify([...FAV]))}catch(e){}
   sincronizarAvisos();
 }
+/* ---------- Ajustes de avisos (menú lateral) ----------
+   Se guardan en el navegador y, en la app, se pasan a Android para los avisos en segundo plano. */
+const AJ_DEF={canal:true,cambio:true,antes:true,min:15};
+let AJ={...AJ_DEF};
+try{AJ={...AJ_DEF,...JSON.parse(localStorage.getItem("dle-ajustes")||"{}")}}catch(e){}
+const enApp=()=>!!(window.AndroidApp&&window.AndroidApp.guardarFavs);
+function guardarAjustes(){
+  try{localStorage.setItem("dle-ajustes",JSON.stringify(AJ))}catch(e){}
+  try{if(window.AndroidApp&&window.AndroidApp.guardarAjustes)window.AndroidApp.guardarAjustes(JSON.stringify(AJ))}catch(e){}
+}
+function textoAvisos(){
+  const p=[];if(AJ.canal)p.push("cuando se confirme el canal");if(AJ.antes)p.push(AJ.min+" minutos antes de cada partido");
+  return p.length?" Te avisaremos "+p.join(" y ")+".":"";
+}
+const menuEl=document.getElementById("menu"),menuScrim=document.getElementById("menu-scrim");
+let menuFoco=null;
+function pintarMenu(){
+  const app=enApp();
+  let perm=true;try{if(app&&window.AndroidApp.avisosActivos)perm=window.AndroidApp.avisosActivos()}catch(e){}
+  const dis=app?"":" disabled";
+  const favs=[...FAV].map(id=>{let n=id;if(T[id])n=T[id].name;else if(matches){const m=matches.find(x=>x.localId===id||x.visitanteId===id);if(m)n=m.localId===id?m.local:m.visitante}return {id,n}}).sort((a,b)=>a.n.localeCompare(b.n,"es"));
+  menuEl.innerHTML=`
+    <div class="menu-cab"><b>Dónde lo <span>echan</span></b><button class="close" id="menu-cerrar" type="button" aria-label="Cerrar menú">×</button></div>
+    <section>
+      <h3>Avisos de mis equipos</h3>
+      ${!app?`<p class="note">Los avisos funcionan en la app de Android. Aquí puedes dejarlos preparados, pero el navegador no los envía.</p>`:!perm?`<p class="note warn">Las notificaciones de la app están desactivadas en Android.<br><button class="btn" id="aj-permiso" type="button">Activar notificaciones</button></p>`:""}
+      <label class="opc"><span><b>Canal confirmado</b><small>Cuando se sepa en qué canal echan un partido de tus equipos.</small></span><input class="sw" type="checkbox" data-aj="canal"${AJ.canal?" checked":""}${dis}></label>
+      <label class="opc"><span><b>Cambio de canal</b><small>Si un canal ya confirmado cambia después.</small></span><input class="sw" type="checkbox" data-aj="cambio"${AJ.cambio?" checked":""}${dis||(!AJ.canal?" disabled":"")}></label>
+      <div class="opc"><span><b>Antes del partido</b><small>Recordatorio con la hora y el canal.</small>
+        <span class="mins" role="group" aria-label="Minutos de antelación">${[5,15,30,60].map(n=>`<button type="button" data-min="${n}" aria-pressed="${AJ.min===n}"${dis||(!AJ.antes?" disabled":"")}>${n===60?"1 hora":n+" min"}</button>`).join("")}</span></span>
+        <input class="sw" type="checkbox" data-aj="antes" aria-label="Aviso antes del partido"${AJ.antes?" checked":""}${dis}></div>
+    </section>
+    <section>
+      <h3>Mis equipos</h3>
+      ${favs.length?`<div class="eq-l">${favs.map(f=>`<div><b>★ ${esc(f.n)}</b><button type="button" data-quitar="${esc(f.id)}" data-nombre="${esc(f.n)}">Quitar</button></div>`).join("")}</div>`
+        :`<p class="note">Aún no sigues a ningún equipo. Abre un partido y toca <b>☆ Seguir</b>.</p>`}
+    </section>
+    <section class="menu-info">
+      <h3>Información</h3>
+      <span>${meta&&meta.actualizado?"Guía actualizada "+esc(ago(meta.actualizado))+".":"Guía sin datos todavía."}</span>
+      <span>Horarios de LALIGA, RFEF y UEFA; canales según Movistar Plus+, DAZN, RTVE y las teles autonómicas.</span>
+      ${app?`<a href="https://alexample.github.io/dondeloechan/" target="_blank" rel="noopener">Abrir la versión web</a>`:""}
+    </section>`;
+}
+function abrirMenu(){
+  pintarMenu();menuFoco=document.activeElement;
+  menuEl.hidden=false;menuScrim.hidden=false;
+  document.getElementById("burger").setAttribute("aria-expanded","true");
+  requestAnimationFrame(()=>{menuEl.classList.add("on");menuScrim.classList.add("on")});
+  const c=document.getElementById("menu-cerrar");if(c)c.focus();
+}
+function cerrarMenu(){
+  if(menuEl.hidden)return;
+  menuEl.classList.remove("on");menuScrim.classList.remove("on");
+  document.getElementById("burger").setAttribute("aria-expanded","false");
+  setTimeout(()=>{menuEl.hidden=true;menuScrim.hidden=true},230);
+  if(menuFoco&&menuFoco.focus)menuFoco.focus();
+}
+document.getElementById("burger").addEventListener("click",abrirMenu);
+menuScrim.addEventListener("click",cerrarMenu);
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!menuEl.hidden){e.stopImmediatePropagation();cerrarMenu()}},true);
+menuEl.addEventListener("change",e=>{
+  const k=e.target.dataset&&e.target.dataset.aj;if(!k)return;
+  AJ[k]=e.target.checked;guardarAjustes();
+  if(e.target.checked){try{if(window.AndroidApp&&window.AndroidApp.permisoAvisos)window.AndroidApp.permisoAvisos()}catch(_){}}
+  pintarMenu();
+  aviso(k==="antes"?(AJ.antes?"Aviso "+AJ.min+" min antes activado.":"Aviso antes del partido desactivado."):k==="canal"?(AJ.canal?"Aviso de canal confirmado activado.":"Aviso de canal confirmado desactivado."):(AJ.cambio?"Aviso de cambio de canal activado.":"Aviso de cambio de canal desactivado."));
+});
+menuEl.addEventListener("click",e=>{
+  if(e.target.id==="menu-cerrar"){cerrarMenu();return}
+  if(e.target.id==="aj-permiso"){try{window.AndroidApp.permisoAvisos()}catch(_){}setTimeout(pintarMenu,1500);return}
+  const mb=e.target.closest("[data-min]");
+  if(mb&&!mb.disabled){AJ.min=+mb.dataset.min;guardarAjustes();pintarMenu();aviso("Te avisaremos "+(AJ.min===60?"1 hora":AJ.min+" minutos")+" antes.");return}
+  const q=e.target.closest("[data-quitar]");
+  if(q){alternarFav(q.dataset.quitar,q.dataset.nombre);pintarMenu();render();if(actual&&!sheet.hidden&&!esEscritorio())open(actual._id);else if(actual&&esEscritorio())open(actual._id)}
+});
+guardarAjustes();
+
 /* En la app de Android: pasar favoritos y catálogo de canales a los avisos en segundo plano. */
 function sincronizarAvisos(){
   try{
@@ -780,7 +901,7 @@ async function actualizar(){
 let ultima=0;
 window.alVolver=()=>{if(Date.now()-ultima>10*60e3){ultima=Date.now();actualizar()}else render()};
 window.abrirPartido=id=>{if(!matches)return;const m=matches.find(x=>x._id===id);if(m){league=m.liga;render();open(id)}};
-window.atras=()=>{if(esEscritorio()){if(actual){close();return true}return false}if(!sheet.hidden){close();return true}return false};
+window.atras=()=>{if(!menuEl.hidden){cerrarMenu();return true}if(esEscritorio()){if(actual){close();return true}return false}if(!sheet.hidden){close();return true}return false};
 
 (async()=>{
   try{const r=await fetch("escudos/lista.json");if(r.ok)ESCUDOS=new Set(await r.json())}catch(e){}
