@@ -266,8 +266,9 @@ def ordenar_canales(lista):
 
     def peso(c):
         if isinstance(c, str):
-            return PRIORIDAD.index(c) if c in PRIORIDAD else 50
-        return PRIORIDAD.index("mplus7") + (0.6 if c.get("dial") == "Web" else 0.5)  # autonómicas: junto a los gratuitos
+            return (PRIORIDAD.index(c) if c in PRIORIDAD else 50, c)
+        # autonómicas: junto a los gratuitos; primero las de TDT; desempate por nombre para que el orden sea estable
+        return (PRIORIDAD.index("mplus7") + (0.5 if c.get("dial") == "TDT" else 0.6), norm(c.get("name", "")))
     return sorted(salida, key=peso)
 
 
@@ -431,6 +432,9 @@ def main():
             if not isinstance(c, dict):
                 return c
             for p in previos:
+                if norm(p.get("name", "")) == norm(c.get("name", "")):
+                    return p
+            for p in previos:
                 a, b = norm(p.get("name", "")), norm(c.get("name", ""))
                 if a == b or a.startswith(b) or b.startswith(a) or a.split()[:1] == b.split()[:1] and len(a.split()[0]) > 3:
                     return p
@@ -438,7 +442,7 @@ def main():
         nuevos = [igual(c) for c in canales]
         # Teles autonómicas que ya teníamos y la fuente no menciona: se conservan.
         for p in previos:
-            if not any(isinstance(c, dict) and c is p for c in nuevos):
+            if not any(isinstance(c, dict) and norm(c.get("name", "")) == norm(p.get("name", "")) for c in nuevos):
                 nuevos.append(p)
         # No cambiar una señal concreta (Hypermotion 2/3, M+ LALIGA 2…) por la genérica de la misma familia.
         viejos = [c for c in (m.get("canales") or []) if isinstance(c, str)]
