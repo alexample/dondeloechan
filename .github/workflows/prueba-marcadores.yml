@@ -1,0 +1,20 @@
+name: Prueba marcadores (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          D1=$(date -u -d yesterday +%F); D2=$(date -u -d tomorrow +%F)
+          R=$(curl -s -w ' HTTP%{http_code}' -H 'Origin: https://alexample.github.io' "https://dondeloechan-ia.alexample.workers.dev/marcadores?competitions=PD,CL&dateFrom=$D1&dateTo=$D2")
+          echo "$R" | tail -c 300
+          python3 - "$R" <<'PY'
+          import sys,json
+          r=sys.argv[1];body,code=r.rsplit(' HTTP',1)
+          try:
+            d=json.loads(body);ms=d.get('matches',[])
+            vivos=[f"{m['homeTeam']['shortName']} {m['score']['fullTime']['home']}-{m['score']['fullTime']['away']} {m['awayTeam']['shortName']} ({m['status']})" for m in ms if m['status'] in ('IN_PLAY','PAUSED','FINISHED')]
+            print(f"::notice::HTTP {code} · {len(ms)} partidos · " + " | ".join(vivos[-12:]))
+          except Exception as e:
+            print(f"::notice::HTTP {code} · {body[:200]}")
+          PY
