@@ -374,7 +374,11 @@ def main():
     hoy = ahora()
     limite = hoy + dt.timedelta(days=HORIZONTE_DIAS)
     temp = temporada_txt(hoy)
-    cambios = {"nuevos": [], "horas": 0, "canales": 0, "resultados": 0, "tablas": []}
+    cambios = {"nuevos": [], "horas": 0, "canales": 0, "resultados": 0, "tablas": [], "detalle": []}
+
+    def nota_cambio(texto):
+        if len(cambios["detalle"]) < 30 and texto not in cambios["detalle"]:
+            cambios["detalle"].append(texto)
 
     por_clave = {}
     for m in partidos:
@@ -417,6 +421,7 @@ def main():
             m["inicio"] = nuevo
             m.pop("horaPendiente", None)
             cambios["horas"] += 1
+            nota_cambio(f"Nueva hora: {m['local']} – {m['visitante']}, {inicio.astimezone(MAD).strftime('%d/%m %H:%M')}")
 
     def poner_canales(m, canales, exacto):
         if m.get("estado") == "final" or not canales:
@@ -456,8 +461,11 @@ def main():
             # No empeorar: si ya había un canal exacto y ahora solo hay uno genérico, se deja el exacto.
             if prov and not m.get("provisional") and m.get("canales"):
                 return
+            antes_conf = m.get("canales") and not m.get("provisional")
             m["canales"] = canales
             m["provisional"] = prov
+            if not prov and not antes_conf:
+                nota_cambio(f"Canal confirmado: {m['local']} – {m['visitante']}")
             if not prov and m.get("nota", "").startswith("Anunciado en Movistar"):
                 m.pop("nota", None)
             cambios["canales"] += 1
@@ -468,6 +476,7 @@ def main():
             m["estado"] = "final"
             m.pop("minuto", None)
             cambios["resultados"] += 1
+            nota_cambio(f"Resultado: {m['local']} {marcador[0]}-{marcador[1]} {m['visitante']}")
         elif estado in ("aplazado", "suspendido") and m.get("estado") != estado and not m.get("marcador"):
             m["estado"] = estado
             cambios["resultados"] += 1
@@ -652,8 +661,24 @@ def main():
         resumen.append("Equipos nuevos (revisar si alguno ya existía con otro nombre): " + "; ".join(eq.nuevos))
     for r in resumen:
         log(r)
-    if hubo and not SECO:
+    # Registro de pasadas del robot (lo muestran la app y la web).
+    rb = datos.get("robot") or {}
+    hist = []
+    for h in rb.get("historial", []):
+        try:
+            if dt.datetime.fromisoformat(h["hora"]) > hoy - dt.timedelta(days=2):
+                hist.append(h)
+        except Exception:  # noqa: BLE001
+            pass
+    entrada = {"hora": iso_mad(hoy), "nuevos": len(cambios["nuevos"]), "horas": cambios["horas"],
+               "canales": cambios["canales"], "resultados": cambios["resultados"], "tablas": cambios["tablas"],
+               "detalle": [f"Nuevo partido: {x.split(': ', 1)[-1]}" for x in cambios["nuevos"][:10]] + cambios["detalle"][:20],
+               "avisos": len([x for x in LOG if x.startswith("⚠")])}
+    hist.insert(0, entrada)
+    datos["robot"] = {"comprobado": iso_mad(hoy), "cambio": iso_mad(hoy) if hubo else rb.get("cambio"), "historial": hist[:24]}
+    if hubo:
         datos["actualizado"] = iso_mad(hoy)
+    if not SECO:
         with open(DATOS, "w", encoding="utf-8") as fh:
             json.dump(datos, fh, ensure_ascii=False, indent=1)
             fh.write("\n")

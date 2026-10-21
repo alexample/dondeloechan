@@ -175,6 +175,24 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .eq-l div b{flex:1;font-weight:600;font-size:14.5px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .eq-l button{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:4px 10px;font:inherit;font-size:12.5px;cursor:pointer}
 .menu-info{font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.upd{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:4px 0}
+.upd span{color:var(--muted)} .upd b{font-weight:600}
+.st-t{margin:12px 0 6px;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.st{background:var(--bg);border-radius:10px;padding:8px 4px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.st b{font-family:var(--f-display);font-weight:800;font-size:22px;line-height:1;font-variant-numeric:tabular-nums}
+.st small{font-size:10.5px;color:var(--muted);line-height:1.15}
+.det{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;font-size:13px}
+.det li{padding-left:12px;position:relative;line-height:1.35}
+.det li::before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--pitch)}
+.det li.mas{color:var(--muted)} .det li.mas::before{display:none}
+.hist{margin-top:12px;font-size:13px}
+.hist summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:13px}
+.hist ul{margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column}
+.hist li{display:flex;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}
+.hist li:last-child{border-bottom:0}
+.hist li b{flex:none;width:92px;font-weight:600;font-variant-numeric:tabular-nums}
+.hist li span{color:var(--muted);line-height:1.35} .hist li em{font-style:normal;color:var(--warn)}
 .menu-info a{color:var(--accent);font-weight:600}
 @media (prefers-reduced-motion:reduce){.menu,.menu-scrim{transition:none}}
 .brand h1{white-space:nowrap}
@@ -452,7 +470,8 @@ function countdown(m,now){
 function chip(c){const k=chOf(c);return `<span class="chip op-${k.op}"><span class="lg">${esc(k.short)}</span>${esc(k.name)}${k.dial?` <span class="dial">${esc(k.dial)}</span>`:""}</span>`}
 function ago(iso){
   const d=(Date.now()-new Date(iso).getTime())/36e5;
-  if(d<1)return "hace menos de una hora";
+  if(d<1/60)return "hace un momento";
+  if(d<1)return `hace ${Math.max(1,Math.round(d*60))} min`;
   if(d<24)return `hace ${Math.round(d)} h`;
   return `el ${fStamp.format(new Date(iso))}`;
 }
@@ -510,11 +529,40 @@ function pintarMenu(){
       ${favs.length?`<div class="eq-l">${favs.map(f=>`<div><b>★ ${esc(f.n)}</b><button type="button" data-quitar="${esc(f.id)}" data-nombre="${esc(f.n)}">Quitar</button></div>`).join("")}</div>`
         :`<p class="note">Aún no sigues a ningún equipo. Abre un partido y toca <b>☆ Seguir</b>.</p>`}
     </section>
+    ${seccionActualizaciones()}
     <section class="menu-info">
       <h3>Información</h3>
       <span>${meta&&meta.actualizado?"Guía actualizada "+esc(ago(meta.actualizado))+".":"Guía sin datos todavía."}</span>
       <span>Horarios de LALIGA, RFEF y UEFA; canales según Movistar Plus+, DAZN, RTVE y las teles autonómicas.</span>
       ${app?`<a href="https://alexample.github.io/dondeloechan/" target="_blank" rel="noopener">Abrir la versión web</a>`:""}
+    </section>`;
+}
+/* Estadística de las pasadas del robot de datos (data/partidos.json → "robot"). */
+function resumenPasada(h){
+  const p=[];
+  if(h.nuevos)p.push(h.nuevos+(h.nuevos===1?" partido nuevo":" partidos nuevos"));
+  if(h.resultados)p.push(h.resultados+(h.resultados===1?" resultado":" resultados"));
+  if(h.canales)p.push(h.canales+(h.canales===1?" canal":" canales"));
+  if(h.horas)p.push(h.horas+(h.horas===1?" horario":" horarios"));
+  if(h.tablas&&h.tablas.length)p.push("clasificación de "+h.tablas.join(", "));
+  return p.length?p.join(" · "):"sin cambios";
+}
+function seccionActualizaciones(){
+  const rb=meta&&meta.robot;if(!rb||!rb.historial||!rb.historial.length)return "";
+  const hist=rb.historial,hace24=Date.now()-864e5;
+  const dia=hist.filter(h=>new Date(h.hora).getTime()>hace24);
+  const suma=k=>dia.reduce((a,h)=>a+(h[k]||0),0);
+  const conCambios=hist.find(h=>h.nuevos||h.resultados||h.canales||h.horas||(h.tablas&&h.tablas.length));
+  const fh=iso=>{const d=new Date(iso);const hoyK=fKey.format(new Date()),k=fKey.format(d);return (k===hoyK?"hoy":fDayShort.format(d).replace(".",""))+" "+fTime.format(d)};
+  const num=(n,t)=>`<div class="st"><b>${n}</b><small>${t}</small></div>`;
+  return `<section>
+      <h3>Actualizaciones</h3>
+      <div class="upd"><span>Última comprobación</span><b>${esc(fh(rb.comprobado))}</b></div>
+      ${rb.cambio?`<div class="upd"><span>Último cambio</span><b>${esc(fh(rb.cambio))}</b></div>`:""}
+      <p class="st-t">Últimas 24 horas · ${dia.length} ${dia.length===1?"comprobación":"comprobaciones"}</p>
+      <div class="stats">${num(suma("resultados"),"resultados")}${num(suma("canales"),"canales")}${num(suma("horas"),"horarios")}${num(suma("nuevos"),"partidos nuevos")}</div>
+      ${conCambios&&conCambios.detalle&&conCambios.detalle.length?`<p class="st-t">Lo último (${esc(fh(conCambios.hora))})</p><ul class="det">${conCambios.detalle.slice(0,8).map(x=>`<li>${esc(x)}</li>`).join("")}${conCambios.detalle.length>8?`<li class="mas">y ${conCambios.detalle.length-8} más</li>`:""}</ul>`:""}
+      <details class="hist"><summary>Historial de comprobaciones</summary><ul>${hist.slice(0,12).map(h=>`<li><b>${esc(fh(h.hora))}</b><span>${esc(resumenPasada(h))}${h.avisos?` · <em>${h.avisos} ${h.avisos===1?"fuente sin respuesta":"fuentes sin respuesta"}</em>`:""}</span></li>`).join("")}</ul></details>
     </section>`;
 }
 function abrirMenu(){
@@ -567,6 +615,11 @@ function renderFresh(){
   if(!meta||!meta.actualizado){el.className="fresh";t.textContent=dbState==="loading"?"Cargando la guía…":"Guía sin datos todavía.";return}
   const old=(Date.now()-new Date(meta.actualizado).getTime())>4*864e5;
   el.className="fresh"+(old||dbState==="offline"?" stale":"");
+  const rb=meta.robot;
+  if(rb&&rb.comprobado&&dbState!=="offline"){
+    t.textContent="Comprobado "+ago(rb.comprobado)+(rb.cambio&&rb.cambio!==rb.comprobado?" · último cambio "+ago(rb.cambio):"")+".";
+    return;
+  }
   t.textContent=(dbState==="offline"?"Sin conexión. Guía guardada, comprobada ":"Canales comprobados ")+ago(meta.actualizado)+".";
 }
 function render(){
@@ -874,7 +927,7 @@ addEventListener("scroll",botonHoy,{passive:true});addEventListener("resize",bot
 function aplicar(d,origen){
   if(!d||!Array.isArray(d.partidos))return false;
   matches=d.partidos.map(p=>({_id:p.id,...p})).filter(m=>m.inicio);
-  meta={actualizado:d.actualizado};
+  meta={actualizado:d.actualizado,robot:d.robot||null};
   CLAS=d.clasificacion||null;
   if(origen)dbState=origen;
   aplicarVivo();render();
