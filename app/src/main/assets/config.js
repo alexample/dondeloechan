@@ -18,3 +18,6 @@ window.MARCADORES = {
 
 /* Asistente «Pregúntale a la guía» (Cloudflare Workers AI, código en ia/worker.js). */
 window.IA_URL = "https://dondeloechan-ia.alexample.workers.dev/";
+
+/* Historial entre equipos y forma reciente (robot/historial.py → data/h2h/<id>.json). */
+window.H2H_URL = "https://raw.githubusercontent.com/Alexample/dondeloechan/main/data/h2h/";

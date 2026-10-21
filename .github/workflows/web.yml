@@ -36,8 +36,10 @@ jobs:
           cp -r app/src/main/assets/. site/
           cp web/* site/
           cp data/partidos.json site/partidos.json
+          if [ -d data/h2h ]; then mkdir -p site/h2h && cp data/h2h/*.json site/h2h/; fi
           # En la web, la guía se lee del propio sitio.
           echo 'window.DATOS_URL = "partidos.json";' >> site/config.js
+          echo 'window.H2H_URL = "h2h/";' >> site/config.js
           # Versión publicada: si el navegador tiene guardada una anterior, la página se recarga sola.
           echo "window.VERSION_WEB = \"$GITHUB_SHA\";" >> site/config.js
           echo "{\"v\":\"$GITHUB_SHA\"}" > site/version.json
