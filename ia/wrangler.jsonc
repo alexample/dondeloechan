@@ -1,0 +1,8 @@
+// Configuración del asistente para Cloudflare (Workers Builds la lee al desplegar desde GitHub).
+{
+  "name": "dondeloechan-ia",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  "workers_dev": true,
+  "ai": { "binding": "AI" }
+}
