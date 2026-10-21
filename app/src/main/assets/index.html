@@ -530,12 +530,31 @@ function status(m,now){
   if(now<k)return null;
   return now<k+115*60e3?"live":"done";
 }
+/* Minuto y parte del partido en juego. Si la fuente no da el minuto (football-data gratis no lo da),
+   se calcula por la hora de inicio: 45 min + ~18 de descanso y descuento. Devuelve {c: corto, l: largo}. */
+function tiempo(m,now){
+  if(status(m,now)!=="live")return null;
+  if(m.minuto==="Descanso")return {c:"Descanso",l:"Descanso"};
+  const e=Math.floor((now-new Date(m.inicio).getTime())/60e3);
+  let n=null,aprox=false;
+  const mm=String(m.minuto||"").match(/^(\d+)/);if(mm)n=+mm[1];
+  if(n==null){
+    if(e<0)return {c:"En juego",l:"Se está jugando ahora"};
+    aprox=true;
+    if(e<45)n=e+1;
+    else if(e<48||(m.enJuego&&e<55))return {c:"45+' · 1ª",l:"Primera parte · descuento (aprox.)"};
+    else if(e<63&&!m.enJuego)return {c:"Descanso",l:"Descanso (aprox.)"};
+    else n=Math.max(46,46+(e-63));
+  }
+  const parte=n>45?2:1,mins=n>90?"90+":String(n);
+  return {c:`${mins}' · ${parte}ª`,l:`${parte===1?"Primera":"Segunda"} parte · minuto ${mins}${aprox?" (aprox.)":""}`};
+}
 function countdown(m,now){
   const d=new Date(m.inicio).getTime()-now;
   const st=status(m,now);
   if(st==="off")return m.estado==="suspendido"?"Partido suspendido":"Partido aplazado";
   if(st==="done"&&tieneMarcador(m))return "Resultado final";
-  if(st==="live"&&m.minuto)return "En juego · "+m.minuto;
+  if(st==="live"){const t=tiempo(m,now);if(t)return "En juego · "+t.l}
   if(d<=0)return st==="live"?"Se está jugando ahora":"Partido terminado";
   const days=Math.floor(d/864e5),hrs=Math.floor(d%864e5/36e5),min=Math.floor(d%36e5/6e4);
   if(days>0)return `Empieza en ${days} d ${hrs} h`;
@@ -771,7 +790,7 @@ function render(){
     <section class="day${pas?" pasado":""}"><h2>${cap(fDay.format(new Date(g[0].inicio)))}${fKey.format(new Date(g[0].inicio))===hoyKey?' · <em class="hoyd">Hoy</em>':""}</h2><div class="list">
     ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];return `
       <button class="match${st==="done"?" past":""}${m._id===ahoraId&&!q?" ahora":""}"${m._id===ahoraId?' id="ahora"':""} data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
-        <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b><span class="${st||""}">${st==="live"?(m.minuto?esc(m.minuto):"En juego"):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
+        <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b><span class="${st||""}">${st==="live"?esc((tiempo(m,now)||{c:"En juego"}).c):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
         <span class="teams">
           ${league===0?`<span class="compl">${esc((COMP[m.liga]||{}).name||"")}</span>`:""}
           <span class="team">${crest(h)}<span class="nm">${FAV.has(m.localId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(h.name)}</span></span>
@@ -835,7 +854,7 @@ function iaContexto(){
     const d=new Date(m.inicio),st=status(m,now);
     const can=(m.canales||[]).map(c=>{const k=chOf(c);return k.name+(k.dial&&k.dial!=="TDT"?" (dial "+k.dial+(k.orange?", Orange "+k.orange:"")+")":k.dial==="TDT"?" (TDT gratis)":k.orange?" (Orange "+k.orange+")":"")}).join(", ")||(m.sinTV?"sin TV":"canal por confirmar");
     const v=VIVO[m._id];
-    const est=st==="done"||m.estado==="final"?"FINAL "+(tieneMarcador(m)?marcadorTxt(m):""):st==="live"?"EN JUEGO "+(tieneMarcador(m)?marcadorTxt(m):"")+(m.minuto?" min "+m.minuto:""):m.estado==="aplazado"?"APLAZADO":m.estado==="suspendido"?"SUSPENDIDO":"por jugar";
+    const est=st==="done"||m.estado==="final"?"FINAL "+(tieneMarcador(m)?marcadorTxt(m):""):st==="live"?"EN JUEGO "+(tieneMarcador(m)?marcadorTxt(m):"")+(tiempo(m,now)?" · "+tiempo(m,now).l:""):m.estado==="aplazado"?"APLAZADO":m.estado==="suspendido"?"SUSPENDIDO":"por jugar";
     L.push([m._id,((COMP[m.liga]||{}).name||"")+" "+jornLabel(m.jornada)+(m.etiqueta?" "+m.etiqueta:""),cap(fDay.format(d))+" "+(m.horaPendiente?"hora por fijar":fTime.format(d)),m.local+" – "+m.visitante,can+(m.provisional&&(m.canales||[]).length?" [provisional]":"")+(m.nota?" · nota: "+m.nota:""),est].join(" | "));
   }
   if(CLAS){
@@ -979,7 +998,7 @@ function textoPartido(m){
   const d=new Date(m.inicio),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=(m.canales||[]).map(chOf);
   const dial=c=>c.dial&&c.dial!=="TDT"?` (dial ${c.dial})`:c.orange?` (Orange ${c.orange})`:"";
   const tv=ch.length?"📺 "+ch[0].name+dial(ch[0])+(ch[1]?" · también "+ch[1].name+dial(ch[1]):""):m.sinTV?"Sin televisión":"Canal por confirmar";
-  if(tieneMarcador(m)&&(m.estado==="final"||m.estado==="directo"))return `⚽ ${h.name} ${m.marcador[0]}-${m.marcador[1]} ${a.name}${m.estado==="directo"?" (en juego"+(m.minuto?", "+m.minuto:"")+")":" (final)"}\n${(COMP[m.liga]||{}).name||""}\n${enlace(m)}`;
+  if(tieneMarcador(m)&&(m.estado==="final"||m.estado==="directo"))return `⚽ ${h.name} ${m.marcador[0]}-${m.marcador[1]} ${a.name}${m.estado==="directo"?" (en juego"+(tiempo(m,Date.now())?", "+tiempo(m,Date.now()).c:"")+")":" (final)"}\n${(COMP[m.liga]||{}).name||""}\n${enlace(m)}`;
   return `⚽ ${h.name} – ${a.name}\n${(COMP[m.liga]||{}).name||""}\n🗓 ${cap(fDay.format(d))}${m.horaPendiente?" · hora por fijar":" · "+fTime.format(d)+" h"}\n${tv}\n${enlace(m)}`;
 }
 async function compartir(m){
@@ -1105,7 +1124,7 @@ async function actualizarMarcadores(){
     if(!m)continue;
     const est=FD_ESTADO[x.status];if(!est)continue;
     const sc=x.score&&x.score.fullTime||{};
-    const v={estado:est};
+    const v={estado:est,minuto:null,enJuego:x.status==="IN_PLAY"};
     if(sc.home!=null&&sc.away!=null)v.marcador=[sc.home,sc.away];
     if(x.status==="PAUSED")v.minuto="Descanso";else if(x.minute)v.minuto=x.minute+"'";
     VIVO[m._id]=v;
@@ -1318,6 +1337,8 @@ window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cer
   actualizar();
 })();
 setInterval(render,60e3);
+// La ficha abierta de un partido en juego actualiza su minuto.
+setInterval(()=>{if(actual&&!sheet.hidden&&status(actual,Date.now())==="live"){const c=sheet.querySelector(".count");if(c)c.textContent=countdown(actual,Date.now())}},30e3);
 </script>
 </body>
 </html>
