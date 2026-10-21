@@ -657,6 +657,10 @@ def main():
         with open(DATOS, "w", encoding="utf-8") as fh:
             json.dump(datos, fh, ensure_ascii=False, indent=1)
             fh.write("\n")
+    if os.environ.get("GITHUB_ACTIONS"):
+        # Una sola anotación con todo el resumen (se puede leer desde la API de GitHub).
+        texto = "\n".join(LOG).replace("%", "%25").replace("\r", "").replace("\n", "%0A")
+        print(f"::notice title=Resumen del robot::{texto}", flush=True)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fh:
             fh.write("\n".join("- " + x for x in LOG) + "\n")
