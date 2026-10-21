@@ -5,5 +5,27 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - run: |
-          R=$(curl -s -w ' HTTP%{http_code}' -H 'Origin: https://alexample.github.io' "https://dondeloechan-ia.alexample.workers.dev/historial?comp=CL&fecha=2026-10-21&local=Real%20Madrid&visitante=RB%20Leipzig")
-          echo "::notice::${R:0:900}"
+          npm i -s puppeteer-core@23 >/dev/null 2>&1
+          cat > t.js <<'JS'
+          const pp=require('puppeteer-core');
+          (async()=>{const b=await pp.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});const p=await b.newPage();await p.setViewport({width:390,height:844});
+          await p.evaluateOnNewDocument(()=>localStorage.setItem('dle-consent',JSON.stringify({v:1,terceros:false})));
+          await p.goto('https://alexample.github.io/dondeloechan/',{waitUntil:'networkidle2'});
+          const out=[];
+          for(const [liga,q] of [[4,'¿Se han enfrentado antes? ¿Cómo quedaron?'],[5,'¿Cómo llegan los dos equipos?']]){
+            const id=await p.evaluate(l=>{const m=(l===4&&matches.find(x=>x._id.includes('rma-rb-leipzig')))||matches.filter(x=>x.liga===l&&new Date(x.inicio)>Date.now()).sort((a,b)=>new Date(a.inicio)-new Date(b.inicio))[0];return m&&m._id},liga);
+            await p.evaluate(id=>window.abrirPartido(id),id);await new Promise(r=>setTimeout(r,5000));
+            const h=await p.$eval('#h2h',e=>e.innerText.replace(/\s+/g,' ').slice(0,420)).catch(()=>'SIN H2H');
+            out.push(`[${liga}] ${id} FICHA: ${h}`);
+            await p.evaluate(()=>{const b=document.getElementById('ia-partido');b&&b.click()});await new Promise(r=>setTimeout(r,600));
+            await p.evaluate(q=>{document.getElementById('ia-q').value=q;document.getElementById('ia-form').requestSubmit()},q);
+            await p.waitForFunction(()=>!document.querySelector('.ia-pen'),{timeout:60000}).catch(()=>{});
+            const r=await p.$$eval('.ia-m.el',x=>x[x.length-1].innerText.replace(/\s+/g,' '));
+            out.push(`[${liga}] P: ${q} ## R: ${r.slice(0,500)}`);
+            await p.evaluate(()=>{document.getElementById('ia-cerrar').click()});await new Promise(r=>setTimeout(r,400));
+            await p.evaluate(()=>{const c=document.getElementById('close');c&&c.click()});await new Promise(r=>setTimeout(r,400));
+          }
+          for(const o of out)console.log('::notice::'+o);
+          await b.close()})();
+          JS
+          node t.js

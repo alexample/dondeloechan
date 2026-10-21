@@ -1272,6 +1272,7 @@ async function iaContextoPartido(m){
   const now=Date.now(),L=nomCorto(m.localId)||m.local,V=nomCorto(m.visitanteId)||m.visitante,st=status(m,now),t=tiempo(m,now);
   const out=[`PARTIDO SELECCIONADO (el usuario está viendo su ficha; si la pregunta no dice otra cosa, se refiere a este): ${m._id} | ${(COMP[m.liga]||{}).name||""} ${jornLabel(m.jornada)} | ${cap(fDay.format(new Date(m.inicio)))} ${m.horaPendiente?"hora por fijar":fTime.format(new Date(m.inicio))} | ${m.local} – ${m.visitante}`+(tieneMarcador(m)&&(st==="live"||st==="done")?` | ${st==="live"?"EN JUEGO":"FINAL"} ${marcadorTxt(m)}${t?" ("+t.l+")":""}`:"")];
   const d=await datosH2H(m);
+  if(!d)out.push("HISTORIAL: no disponible para este partido. Si te preguntan por enfrentamientos anteriores, estadísticas o la ida, di que la guía no tiene ese dato; NO lo inventes ni lo saques de tu memoria.");
   if(d){
     out.push(`Temporada actual: 2026/27. «Ida» = el enfrentamiento anterior entre ambos en esta misma temporada (si no lo hay, dilo y da el último que hubo). En Champions, la fase liga es a partido único: no hay ida y vuelta salvo en eliminatorias.`);
     if(d.vs&&d.vs.pj){
