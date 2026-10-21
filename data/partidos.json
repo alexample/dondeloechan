@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T12:25:39+02:00",
+ "actualizado": "2026-10-21T20:07:25+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -1028,7 +1028,6 @@
   {
    "id": "2627-1-10-val-vil",
    "canales": [
-    "mliga",
     "mliga2"
    ],
    "inicio": "2026-10-24T18:30:00+02:00",
@@ -1328,7 +1327,8 @@
   {
    "id": "2627-1-10-cel-bet",
    "canales": [
-    "daznll"
+    "daznll",
+    "daznll2"
    ],
    "inicio": "2026-10-25T16:15:00+01:00",
    "jornada": "10",
@@ -1336,7 +1336,8 @@
    "local": "RC Celta",
    "localId": "cel",
    "visitante": "Real Betis",
-   "visitanteId": "bet"
+   "visitanteId": "bet",
+   "provisional": false
   },
   {
    "id": "2627-2-11-alb-eld",
@@ -3410,6 +3411,7 @@
  ],
  "clasificacion": {
   "1": {
+   "tras": "Jornada 9",
    "filas": [
     [
      "bar",
@@ -3513,13 +3515,13 @@
     ],
     [
      "ath",
-     7,
+     8,
      2,
-     3,
+     4,
      2,
      7,
      6,
-     9
+     10
     ],
     [
      "vil",
@@ -3562,6 +3564,16 @@
      8
     ],
     [
+     "lev",
+     9,
+     1,
+     5,
+     3,
+     12,
+     16,
+     8
+    ],
+    [
      "rac",
      9,
      2,
@@ -3570,16 +3582,6 @@
      13,
      25,
      8
-    ],
-    [
-     "lev",
-     8,
-     1,
-     4,
-     3,
-     12,
-     16,
-     7
     ],
     [
      "elc",
@@ -3611,8 +3613,7 @@
      18,
      4
     ]
-   ],
-   "tras": "Jornada 9"
+   ]
   },
   "2": {
    "filas": [
@@ -4696,9 +4697,36 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-21T15:49:04+02:00",
-  "cambio": "2026-10-21T12:25:39+02:00",
+  "comprobado": "2026-10-21T20:07:25+02:00",
+  "cambio": "2026-10-21T20:07:25+02:00",
   "historial": [
+   {
+    "hora": "2026-10-21T20:07:25+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-10-val-vil",
+       "t": "Valencia CF – Villarreal CF"
+      },
+      {
+       "id": "2627-1-10-cel-bet",
+       "t": "RC Celta – Real Betis"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-21T15:49:04+02:00",
     "nuevos": 0,
