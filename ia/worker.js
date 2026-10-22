@@ -14,6 +14,8 @@
 const MODELOS = ["@cf/meta/llama-3.3-70b-instruct-fp8-fast", "@cf/meta/llama-3.1-8b-instruct-fast"];
 const ORIGENES = ["https://alexample.github.io", "https://appassets.androidplatform.net"];
 const MAX_PREGUNTA = 500;
+// Horas UTC en que el cron también lanza el robot de RunningSpain ([3] = 05:00 en verano). null = cada hora (pruebas).
+const RUNNINGSPAIN_HORAS = null;
 const MAX_CONTEXTO = 60000;
 const LIMITE_MIN = 6;      // preguntas por minuto y persona (IP)
 const LIMITE_DIA = 60;     // preguntas por día y persona (IP)
@@ -195,18 +197,26 @@ export default {
    *  Necesita el secreto GH_TOKEN (llave de GitHub con permiso «Contents: Read and write» sobre dondeloechan). */
   async scheduled(evento, env, ctx) {
     if (!env.GH_TOKEN) { console.log("Falta el secreto GH_TOKEN: no se puede avisar al robot."); return; }
-    const r = await fetch("https://api.github.com/repos/alexample/dondeloechan/dispatches", {
-      method: "POST",
-      headers: {
-        "Authorization": "Bearer " + env.GH_TOKEN,
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "dondeloechan-ia",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ event_type: "robot" }),
-    });
-    console.log("Aviso al robot de GitHub:", r.status, r.status === 204 ? "OK" : await r.text());
+    const avisar = async (repo) => {
+      const r = await fetch(`https://api.github.com/repos/${repo}/dispatches`, {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer " + env.GH_TOKEN,
+          "Accept": "application/vnd.github+json",
+          "X-GitHub-Api-Version": "2022-11-28",
+          "User-Agent": "dondeloechan-ia",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ event_type: "robot" }),
+      });
+      console.log(`Aviso al robot de ${repo}:`, r.status, r.status === 204 ? "OK" : await r.text());
+    };
+    const tareas = [avisar("alexample/dondeloechan")];
+    // RunningSpain (calendario de carreras): una vez al día a las 03 UTC.
+    // RUNNINGSPAIN_HORAS = null → cada hora (modo pruebas temporal).
+    const hora = new Date(evento.scheduledTime).getUTCHours();
+    if (RUNNINGSPAIN_HORAS === null || RUNNINGSPAIN_HORAS.includes(hora)) tareas.push(avisar("alexample/RunningSpain"));
+    await Promise.all(tareas);
   },
 
   async fetch(request, env, ctx) {
