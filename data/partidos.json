@@ -4749,9 +4749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-22T17:07:22+02:00",
+  "comprobado": "2026-10-22T17:15:54+02:00",
   "cambio": "2026-10-22T08:07:22+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T17:15:54+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-22T17:07:22+02:00",
     "nuevos": 0,
@@ -5170,36 +5186,6 @@
       {
        "id": "2627-1-apl-lev-ath",
        "t": "Levante UD 3-1 Athletic Club"
-      }
-     ],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-21T21:17:52+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 2,
-    "tablas": [
-     "Champions"
-    ],
-    "detalle": [
-     "Resultado: Lille 2-4 Galatasaray",
-     "Resultado: Como 4-1 Manchester United"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-4-fase-liga-j3-lille-galatasaray",
-       "t": "Lille 2-4 Galatasaray"
-      },
-      {
-       "id": "2627-4-fase-liga-j3-como-manchester-united",
-       "t": "Como 4-1 Manchester United"
       }
      ],
      "canales": [],
