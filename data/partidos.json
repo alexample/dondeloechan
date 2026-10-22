@@ -4749,9 +4749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-22T10:07:21+02:00",
+  "comprobado": "2026-10-22T11:07:21+02:00",
   "cambio": "2026-10-22T08:07:22+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T11:07:21+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-22T10:07:21+02:00",
     "nuevos": 0,
@@ -5187,16 +5203,6 @@
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0
-   },
-   {
-    "hora": "2026-10-21T12:24:29+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
     "resultados": 0,
     "tablas": [],
     "detalle": [],
