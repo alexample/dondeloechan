@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-22T08:07:22+02:00",
+ "actualizado": "2026-10-22T20:07:22+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -1571,18 +1571,18 @@
    "id": "2627-3-primera-ronda-calamocha-ce-europa",
    "canales": [
     {
-     "dial": "Web",
-     "how": "Gratis en la web y la app de Aragón Play (sin emisión en la TDT).",
-     "name": "Aragón Play",
-     "op": "free",
-     "short": "ARP"
-    },
-    {
      "dial": "TDT",
      "how": "Gratis en la TDT de Barcelona y en beteve.cat.",
      "name": "betevé",
      "op": "free",
      "short": "BTV"
+    },
+    {
+     "dial": "Web",
+     "how": "Gratis en la web y la app de Aragón Play (sin emisión en la TDT).",
+     "name": "Aragón Play",
+     "op": "free",
+     "short": "ARP"
     }
    ],
    "inicio": "2026-10-27T19:00:00+01:00",
@@ -1593,7 +1593,8 @@
    "localId": "calamocha",
    "visitante": "CE Europa",
    "visitanteAbbr": "EUR",
-   "visitanteId": "ce-europa"
+   "visitanteId": "ce-europa",
+   "provisional": false
   },
   {
    "id": "2627-3-primera-ronda-sestao-river-esp",
@@ -1622,7 +1623,7 @@
    "local": "UD Pinatar",
    "localAbbr": "PIN",
    "localId": "ud-pinatar",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Elche",
    "visitanteId": "elc"
   },
@@ -4749,9 +4750,36 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-22T19:07:22+02:00",
-  "cambio": "2026-10-22T08:07:22+02:00",
+  "comprobado": "2026-10-22T20:07:22+02:00",
+  "cambio": "2026-10-22T20:07:22+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T20:07:22+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: UD Pinatar – Elche"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-3-primera-ronda-calamocha-ce-europa",
+       "t": "Calamocha – CE Europa"
+      },
+      {
+       "id": "2627-3-primera-ronda-ud-pinatar-elc",
+       "t": "UD Pinatar – Elche · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-22T19:07:22+02:00",
     "nuevos": 0,
@@ -5124,59 +5152,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T00:07:21+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 7,
-    "tablas": [],
-    "detalle": [
-     "Resultado: Sporting CP 2-3 LASK",
-     "Resultado: Aston Villa 3-1 Viking",
-     "Resultado: Betis 1-0 Feyenoord",
-     "Resultado: Real Madrid 4-1 RB Leipzig",
-     "Resultado: Club Brugge 3-0 RC Lens",
-     "Resultado: Inter 1-0 Shakhtar Donetsk",
-     "Resultado: Bayern Múnich 2-2 Arsenal"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-4-fase-liga-j3-sporting-cp-lask",
-       "t": "Sporting CP 2-3 LASK"
-      },
-      {
-       "id": "2627-4-fase-liga-j3-aston-villa-viking",
-       "t": "Aston Villa 3-1 Viking"
-      },
-      {
-       "id": "2627-4-fase-liga-j3-bet-feyenoord",
-       "t": "Betis 1-0 Feyenoord"
-      },
-      {
-       "id": "2627-4-fase-liga-j3-rma-rb-leipzig",
-       "t": "Real Madrid 4-1 RB Leipzig"
-      },
-      {
-       "id": "2627-4-fase-liga-j3-club-brugge-rc-lens",
-       "t": "Club Brugge 3-0 RC Lens"
-      },
-      {
-       "id": "2627-4-fase-liga-j3-inter-shakhtar-donetsk",
-       "t": "Inter 1-0 Shakhtar Donetsk"
-      },
-      {
-       "id": "2627-4-fase-liga-j3-bayern-munich-arsenal",
-       "t": "Bayern Múnich 2-2 Arsenal"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
