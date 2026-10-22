@@ -16,6 +16,10 @@ const ORIGENES = ["https://alexample.github.io", "https://appassets.androidplatf
 const MAX_PREGUNTA = 500;
 // Horas UTC en que el cron también lanza el robot de RunningSpain ([3] = 05:00 en verano). null = cada hora (pruebas).
 const RUNNINGSPAIN_HORAS = null;
+// Relé hacia MacroDroid para RunningSpain: el servidor de MacroDroid no entrega al móvil las llamadas
+// que salen de GitHub, así que el robot llama aquí y el worker reenvía. Solo reenvía a la URL cuya
+// huella SHA-256 coincide (la URL real no está en el código, que es público).
+const MACRODROID_HUELLAS = ["62258f969a5362c26f8f632e3f6ffc3d83b78f81d9f14c5f900be5132bf6a178"];
 const MAX_CONTEXTO = 60000;
 const LIMITE_MIN = 6;      // preguntas por minuto y persona (IP)
 const LIMITE_DIA = 60;     // preguntas por día y persona (IP)
@@ -142,6 +146,17 @@ async function vivo(request, env, ctx, origen) {
   return new Response(JSON.stringify({ fuente: "ESPN", partidos: out }), { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
 }
 
+async function macrodroid(request) {
+  const hook = request.headers.get("X-Hook") || "";
+  if (!hook.startsWith("https://trigger.macrodroid.com/")) return new Response("Destino no válido", { status: 400 });
+  const huella = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(hook)))]
+    .map(b => b.toString(16).padStart(2, "0")).join("");
+  if (!MACRODROID_HUELLAS.includes(huella)) return new Response("Destino no permitido", { status: 403 });
+  const cuerpo = (await request.text()).slice(0, 3800);
+  const r = await fetch(hook, { method: "POST", body: cuerpo, headers: { "Content-Type": "text/plain; charset=utf-8" } });
+  return new Response(await r.text(), { status: r.status, headers: { "Content-Type": "text/plain; charset=utf-8" } });
+}
+
 const uso = new Map();     // ip -> {min, tMin, dia, tDia}  (memoria del worker: freno básico contra abusos)
 
 function cors(origen) {
@@ -222,6 +237,7 @@ export default {
   async fetch(request, env, ctx) {
     const origen = request.headers.get("Origin") || "";
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });
+    if (request.method === "POST" && new URL(request.url).pathname === "/macrodroid") return macrodroid(request);
     if (request.method === "GET" && new URL(request.url).pathname === "/vivo") {
       if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
       try { return await vivo(request, env, ctx, origen); }
