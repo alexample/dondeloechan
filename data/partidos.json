@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-22T22:07:26+02:00",
+ "actualizado": "2026-10-22T23:07:21+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -1047,7 +1047,12 @@
    ],
    "provisional": false,
    "localAbbr": "AGF",
-   "visitanteAbbr": "KLU"
+   "visitanteAbbr": "KLU",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j2-ajax-atalanta",
@@ -1064,7 +1069,12 @@
    ],
    "provisional": false,
    "localAbbr": "AJA",
-   "visitanteAbbr": "ATA"
+   "visitanteAbbr": "ATA",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j2-as-monaco-freiburg",
@@ -1081,7 +1091,12 @@
    ],
    "provisional": false,
    "localAbbr": "MON",
-   "visitanteAbbr": "FRE"
+   "visitanteAbbr": "FRE",
+   "marcador": [
+    3,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j2-borac-banja-luka-kups",
@@ -1098,7 +1113,12 @@
    ],
    "provisional": false,
    "localAbbr": "BOR",
-   "visitanteAbbr": "KUP"
+   "visitanteAbbr": "KUP",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j2-fc-midtjylland-sint-truiden-vv",
@@ -1115,7 +1135,12 @@
    ],
    "provisional": false,
    "localAbbr": "MID",
-   "visitanteAbbr": "SIN"
+   "visitanteAbbr": "SIN",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j2-fc-thun-hajduk-split",
@@ -1132,7 +1157,12 @@
    ],
    "provisional": false,
    "localAbbr": "THU",
-   "visitanteAbbr": "HAJ"
+   "visitanteAbbr": "HAJ",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j2-lincoln-red-imps-twente",
@@ -1149,7 +1179,12 @@
    ],
    "provisional": false,
    "localAbbr": "LIN",
-   "visitanteAbbr": "TWE"
+   "visitanteAbbr": "TWE",
+   "marcador": [
+    1,
+    4
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j2-sc-braga-gent",
@@ -1166,7 +1201,12 @@
    ],
    "provisional": false,
    "localAbbr": "BRA",
-   "visitanteAbbr": "GEN"
+   "visitanteAbbr": "GEN",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-5-9-real-union-cd-lugo",
@@ -5151,6 +5191,50 @@
      "Trabzonspor"
     ],
     [
+     "twente",
+     2,
+     2,
+     0,
+     0,
+     5,
+     1,
+     6,
+     "Twente"
+    ],
+    [
+     "as-monaco",
+     2,
+     2,
+     0,
+     0,
+     5,
+     1,
+     6,
+     "AS Monaco"
+    ],
+    [
+     "sint-truiden-vv",
+     2,
+     2,
+     0,
+     0,
+     3,
+     0,
+     6,
+     "Sint-Truiden VV"
+    ],
+    [
+     "hajduk-split",
+     2,
+     2,
+     0,
+     0,
+     3,
+     1,
+     6,
+     "Hajduk Split"
+    ],
+    [
      "brighton",
      2,
      1,
@@ -5195,81 +5279,70 @@
      "Mjällby AIF"
     ],
     [
-     "atalanta",
-     1,
+     "ajax",
+     2,
      1,
      0,
-     0,
+     1,
      3,
+     2,
+     3,
+     "Ajax"
+    ],
+    [
+     "borac-banja-luka",
+     2,
      1,
+     0,
+     1,
+     3,
+     2,
+     3,
+     "Borac Banja Luka"
+    ],
+    [
+     "atalanta",
+     2,
+     1,
+     0,
+     1,
+     3,
+     3,
      3,
      "Atalanta"
     ],
     [
-     "sint-truiden-vv",
-     1,
-     1,
-     0,
-     0,
-     2,
-     0,
-     3,
-     "Sint-Truiden VV"
-    ],
-    [
-     "freiburg",
-     1,
-     1,
-     0,
-     0,
-     3,
-     2,
-     3,
-     "Freiburg"
-    ],
-    [
-     "as-monaco",
-     1,
-     1,
-     0,
-     0,
+     "sc-braga",
      2,
      1,
-     3,
-     "AS Monaco"
-    ],
-    [
-     "hajduk-split",
-     1,
-     1,
      0,
-     0,
+     1,
      2,
-     1,
      3,
-     "Hajduk Split"
+     3,
+     "SC Braga"
     ],
     [
      "gent",
-     1,
-     1,
-     0,
-     0,
+     2,
      1,
      0,
+     1,
+     1,
+     2,
      3,
      "Gent"
     ],
     [
-     "twente",
-     1,
-     1,
-     0,
-     0,
+     "freiburg",
+     2,
      1,
      0,
+     1,
      3,
-     "Twente"
+     5,
+     3,
+     "Freiburg"
     ],
     [
      "nordsjaelland",
@@ -5283,6 +5356,17 @@
      "Nordsjælland"
     ],
     [
+     "klubi-sportiv-egnatia",
+     2,
+     0,
+     2,
+     0,
+     2,
+     2,
+     2,
+     "Klubi Sportiv Egnatia"
+    ],
+    [
      "riga-fc",
      2,
      0,
@@ -5292,28 +5376,6 @@
      2,
      2,
      "Riga FC"
-    ],
-    [
-     "fc-midtjylland",
-     1,
-     0,
-     1,
-     0,
-     1,
-     1,
-     1,
-     "FC Midtjylland"
-    ],
-    [
-     "klubi-sportiv-egnatia",
-     1,
-     0,
-     1,
-     0,
-     1,
-     1,
-     1,
-     "Klubi Sportiv Egnatia"
     ],
     [
      "crvena-zvezda",
@@ -5347,6 +5409,28 @@
      3,
      1,
      "FKB Jablonec"
+    ],
+    [
+     "fc-midtjylland",
+     2,
+     0,
+     1,
+     1,
+     1,
+     2,
+     1,
+     "FC Midtjylland"
+    ],
+    [
+     "agf-aarhus",
+     2,
+     0,
+     1,
+     1,
+     1,
+     2,
+     1,
+     "AGF Aarhus"
     ],
     [
      "pafos-fc",
@@ -5404,81 +5488,37 @@
      "FC Kairat"
     ],
     [
-     "ajax",
-     1,
-     0,
-     0,
-     1,
-     1,
-     2,
-     0,
-     "Ajax"
-    ],
-    [
-     "borac-banja-luka",
-     1,
-     0,
-     0,
-     1,
-     1,
-     2,
-     0,
-     "Borac Banja Luka"
-    ],
-    [
-     "lincoln-red-imps",
-     1,
-     0,
-     0,
-     1,
-     1,
-     2,
-     0,
-     "Lincoln Red Imps"
-    ],
-    [
-     "agf-aarhus",
-     1,
-     0,
-     0,
-     1,
-     0,
-     1,
-     0,
-     "AGF Aarhus"
-    ],
-    [
      "fc-thun",
-     1,
+     2,
      0,
      0,
-     1,
+     2,
      0,
-     1,
+     2,
      0,
      "FC Thun"
     ],
     [
-     "kups",
-     1,
-     0,
-     0,
-     1,
+     "lincoln-red-imps",
      2,
-     4,
      0,
-     "KuPS"
+     0,
+     2,
+     2,
+     6,
+     0,
+     "Lincoln Red Imps"
     ],
     [
-     "sc-braga",
-     1,
+     "kups",
+     2,
      0,
      0,
-     1,
+     2,
+     2,
+     6,
      0,
-     3,
-     0,
-     "SC Braga"
+     "KuPS"
     ],
     [
      "inter-club-d-escaldes",
@@ -5506,9 +5546,74 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-22T22:07:26+02:00",
-  "cambio": "2026-10-22T22:07:26+02:00",
+  "comprobado": "2026-10-22T23:07:21+02:00",
+  "cambio": "2026-10-22T23:07:21+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T23:07:21+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 8,
+    "tablas": [
+     "Conference"
+    ],
+    "detalle": [
+     "Resultado: AGF Aarhus 1-1 Klubi Sportiv Egnatia",
+     "Resultado: Ajax 2-0 Atalanta",
+     "Resultado: AS Monaco 3-0 Freiburg",
+     "Resultado: Borac Banja Luka 2-0 KuPS",
+     "Resultado: SC Braga 2-0 Gent",
+     "Resultado: FC Midtjylland 0-1 Sint-Truiden VV",
+     "Resultado: FC Thun 0-1 Hajduk Split",
+     "Resultado: Lincoln Red Imps 1-4 Twente"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-6-fase-liga-j2-agf-aarhus-klubi-sportiv-egnatia",
+       "t": "AGF Aarhus 1-1 Klubi Sportiv Egnatia"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-ajax-atalanta",
+       "t": "Ajax 2-0 Atalanta"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-as-monaco-freiburg",
+       "t": "AS Monaco 3-0 Freiburg"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-borac-banja-luka-kups",
+       "t": "Borac Banja Luka 2-0 KuPS"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-sc-braga-gent",
+       "t": "SC Braga 2-0 Gent"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fc-midtjylland-sint-truiden-vv",
+       "t": "FC Midtjylland 0-1 Sint-Truiden VV"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fc-thun-hajduk-split",
+       "t": "FC Thun 0-1 Hajduk Split"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-lincoln-red-imps-twente",
+       "t": "Lincoln Red Imps 1-4 Twente"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-22T22:07:26+02:00",
     "nuevos": 0,
@@ -6131,22 +6236,6 @@
    },
    {
     "hora": "2026-10-22T05:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T04:07:20+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
