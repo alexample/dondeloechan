@@ -141,8 +141,8 @@ class Equipos:
         n = norm(nombre)
         if n in self.alias:
             return self.alias[n]
-        cand = self.por_liga.get(liga, set()) if liga in (4, 5) else set(self.nombres)
-        if liga == 4:  # en Champions también juegan los españoles
+        cand = self.por_liga.get(liga, set()) if liga in (4, 5, 6) else set(self.nombres)
+        if liga in (4, 6):  # en Champions y Conference también juegan los españoles
             cand = cand | {i for i in self.nombres if len(i) == 3}
         # 1) nombre idéntico
         for i in cand:
@@ -180,11 +180,11 @@ class Equipos:
 # ---------------------------------------------------------------- canales
 DIAL = {"54": "mliga", "57": "mliga2", "55": "daznll", "58": "daznll2", "56": "hyper", "59": "hyper2", "53": "rfef",
         "60": "mlc", "61": "mlc2", "62": "mlc3", "180": "mlcmulti", "181": "mlc5", "182": "mlc6", "183": "mlc7",
-        "184": "mlc8", "7": "mplus7"}
+        "184": "mlc8", "185": "mlc9", "186": "mlc10", "187": "mlc11", "188": "mlc12", "189": "mlc13", "7": "mplus7"}
 PRIORIDAD = ["mliga", "mliga2", "mliga3", "mliga4", "daznll", "daznll2", "hyper", "hyper2", "hyper3", "rfef", "daznrfef",
-             "daznhm", "mlc", "mlc2", "mlc3", "mlc5", "mlc6", "mlc7", "mlc8", "mlcmulti", "mlcpend", "mcopa", "la1", "tdp",
+             "daznhm", "mlc", "mlc2", "mlc3", "mlc5", "mlc6", "mlc7", "mlc8", "mlc9", "mlc10", "mlc11", "mlc12", "mlc13", "mlcmulti", "mlcpend", "mconfpend", "mdisp", "mcopa", "la1", "tdp",
              "mplus7", "daznfree", "orange1", "orange2", "rtveplay", "fanplay", "fclub"]
-EXACTOS = set(PRIORIDAD) - {"mlcpend", "mcopa", "fanplay", "fclub", "rtveplay"}
+EXACTOS = set(PRIORIDAD) - {"mlcpend", "mconfpend", "mcopa", "fanplay", "fclub", "rtveplay", "mdisp"}
 
 
 def canal_fel(titulo, liga):
@@ -193,11 +193,13 @@ def canal_fel(titulo, liga):
     n = norm(t)
     if "por confirmar" in n or "tv bar" in n or "hdr" in n:
         return None
-    m = re.search(r"\(M(\d+)", t)
+    m = re.search(r"\(M\s?(\d+)", t)
     if m and m.group(1) in DIAL:
         return DIAL[m.group(1)]
     if "fanplay" in n:
         return "fanplay"
+    if "movistar" in n and "dispositivos" in n:
+        return "mdisp"
     if "footballclub" in n.replace(" ", ""):
         return "fclub"
     if "app gratis" in n or "dazn en abierto" in n:
@@ -310,10 +312,6 @@ def leer_fel(texto, liga):
     return filas
 
 
-MESES = {m: i + 1 for i, m in enumerate(["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
-                                          "septiembre", "octubre", "noviembre", "diciembre"])}
-
-
 MESES = {"enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6, "julio": 7, "agosto": 8,
          "septiembre": 9, "setiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12}
 
@@ -373,6 +371,79 @@ def tabla_valida(filas, n):
 
 
 # ---------------------------------------------------------------- principal
+ESPN_CONF = "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf"
+RONDAS_CONF = {"knockout round playoffs": "Play-off", "rd of 16": "Octavos", "round of 16": "Octavos",
+               "quarterfinals": "Cuartos", "semifinals": "Semifinal", "final": "Final"}
+
+
+def leer_espn_conference(hoy):
+    """Conference League desde el marcador público de ESPN: rondas (para numerar las jornadas), resultados y clasificación."""
+    vacio = {"partidos": [], "tabla": [], "ronda": lambda d: None}
+    txt = get(f"{ESPN_CONF}/scoreboard?dates={hoy:%Y%m%d}", "espn_conf.json")
+    try:
+        cal = json.loads(txt)["leagues"][0]["calendar"][0]["entries"] if txt else []
+    except Exception:  # noqa: BLE001
+        cal = []
+    if not cal:
+        log("⚠ ESPN Conference: sin calendario")
+        return vacio
+    fases = [(dt.datetime.fromisoformat(e["startDate"].replace("Z", "+00:00")),
+              dt.datetime.fromisoformat(e["endDate"].replace("Z", "+00:00")), e.get("label", "")) for e in cal]
+    liga_fase = next((f for f in fases if "league" in f[2].lower()), None)
+    partidos, semanas = [], set()
+    if liga_fase:
+        a, b = liga_fase[0], liga_fase[1]
+        txt = get(f"{ESPN_CONF}/scoreboard?dates={a:%Y%m%d}-{b:%Y%m%d}&limit=400", "espn_conf_fase.json")
+        try:
+            evs = json.loads(txt).get("events", []) if txt else []
+        except Exception:  # noqa: BLE001
+            evs = []
+        for ev in evs:
+            d = dt.datetime.fromisoformat(ev["date"].replace("Z", "+00:00"))
+            semanas.add(d.isocalendar()[:2])
+    semanas = sorted(semanas)
+    # resultados recientes (últimos 3 días)
+    for k in range(0, 4):
+        dia = hoy - dt.timedelta(days=k)
+        txt = get(f"{ESPN_CONF}/scoreboard?dates={dia:%Y%m%d}", f"espn_conf_{k}.json")
+        try:
+            evs = json.loads(txt).get("events", []) if txt else []
+        except Exception:  # noqa: BLE001
+            evs = []
+        for ev in evs:
+            c = ev["competitions"][0]
+            h = next(t for t in c["competitors"] if t["homeAway"] == "home")
+            v = next(t for t in c["competitors"] if t["homeAway"] == "away")
+            ty = ev["status"]["type"]
+            sc = [int(h["score"]), int(v["score"])] if h.get("score") not in (None, "") and v.get("score") not in (None, "") else None
+            partidos.append({"local": h["team"]["displayName"], "visitante": v["team"]["displayName"],
+                             "estado": ty.get("state", ""), "detalle": ty.get("name", ""), "marcador": sc})
+
+    def ronda(inicio):
+        for a, b, label in fases:
+            if a <= inicio <= b:
+                if "league" in label.lower():
+                    s = inicio.isocalendar()[:2]
+                    return f"Fase liga · J{semanas.index(s) + 1}" if s in semanas else "Fase liga"
+                return RONDAS_CONF.get(label.lower(), label)
+        return None
+
+    tabla = []
+    txt = get("https://site.api.espn.com/apis/v2/sports/soccer/uefa.europa.conf/standings", "espn_conf_tabla.json")
+    try:
+        ent = json.loads(txt)["children"][0]["standings"]["entries"] if txt else []
+        filas = []
+        for e in ent:
+            s = {x["name"]: x.get("value") for x in e.get("stats", [])}
+            filas.append((s.get("rank") or 99, [e["team"]["displayName"], int(s.get("gamesPlayed") or 0), int(s.get("wins") or 0),
+                          int(s.get("ties") or 0), int(s.get("losses") or 0), int(s.get("pointsFor") or 0),
+                          int(s.get("pointsAgainst") or 0), int(s.get("points") or 0)]))
+        tabla = [f for _, f in sorted(filas, key=lambda x: x[0])]
+    except Exception:  # noqa: BLE001
+        log("⚠ ESPN Conference: sin clasificación")
+    return {"partidos": partidos, "tabla": tabla, "ronda": ronda}
+
+
 RFEF = os.path.join(RAIZ, "data", "h2h", "rfef.json")
 
 
@@ -585,7 +656,9 @@ def main():
                 log(f"⚠ Clasificación de {comp} no cuadra: se deja la anterior")
 
     # ---- 2. Canales exactos y horarios de futbolenlatv.es (todas las competiciones)
-    FEL = {1: "la-liga", 2: "segunda-division-espana", 5: "primera-division-rfef", 3: "copa-del-rey", 4: "liga-campeones"}
+    FEL = {1: "la-liga", 2: "segunda-division-espana", 5: "primera-division-rfef", 3: "copa-del-rey", 4: "liga-campeones",
+           6: "uefa-europa-conference-league"}
+    conf = leer_espn_conference(hoy)
     vavel_jornadas = {}
     rfef = []   # resultados de la temporada de 1ª RFEF: historial («ida») y forma en la ficha
     for liga, grupo_urls in ((5, ["primera-federacion-grupo-1", "primera-federacion-grupo-2"]), (4, ["champions-league"])):
@@ -608,7 +681,7 @@ def main():
                 continue
             li, vi = eq.buscar(f["local"], liga), eq.buscar(f["visitante"], liga)
             m = por_clave.get((liga, li, vi))
-            if not m and liga in (3, 4, 5):
+            if not m and liga in (3, 4, 5, 6):
                 jornada, etiqueta = None, None
                 if liga == 5:
                     vj = vavel_jornadas.get((liga, li, vi))
@@ -618,6 +691,8 @@ def main():
                     vj = vavel_jornadas.get((liga, li, vi))
                     n = re.sub(r"\D", "", vj[0]) if vj else ""
                     jornada = f"Fase liga · J{n}" if n else None
+                elif liga == 6:
+                    jornada = conf["ronda"](f["inicio"])
                 else:
                     sub = norm(f["sub"])
                     jornada = {"1 ronda": "Primera ronda", "2 ronda": "Segunda ronda", "dieciseisavos de final": "Dieciseisavos",
@@ -628,6 +703,8 @@ def main():
                 continue
             poner_hora(m, f["inicio"])
             canales = list(f["canales"])
+            if not canales and liga == 6 and not m.get("canales"):
+                poner_canales(m, ["mconfpend"], exacto=False)   # toda la Conference va por Movistar Plus+
             if not canales:
                 continue
             if liga in (1, 2):
@@ -698,6 +775,26 @@ def main():
     elif filas:
         log("⚠ Clasificación de la Champions incompleta o no cuadra: se deja la anterior")
 
+    # ---- 5. Conference League: resultados y clasificación de ESPN
+    for x in conf["partidos"]:
+        li, vi = eq.buscar(x["local"], 6, crear=False), eq.buscar(x["visitante"], 6, crear=False)
+        m = por_clave.get((6, li, vi)) if li and vi else None
+        if not m:
+            continue
+        if x["estado"] == "post" and x["marcador"] and ("FULL_TIME" in x["detalle"] or "FINAL" in x["detalle"]):
+            poner_resultado(m, x["marcador"])
+        elif "POSTPONED" in x["detalle"]:
+            poner_resultado(m, None, "aplazado")
+    if len(conf["tabla"]) == 36:
+        filas = [[eq.buscar(r[0], 6, crear=False) or slug(r[0]), *r[1:], eq.nombres.get(eq.buscar(r[0], 6, crear=False), r[0])] for r in conf["tabla"]]
+        if tabla_valida([[k, *f[1:8]] for k, f in enumerate(filas)], 36):
+            nuevo = {"tras": f"Jornada {max(f[1] for f in filas)}", "filas": filas}
+            if clas.get("6") != nuevo:
+                clas["6"] = nuevo
+                cambios["tablas"].append("Conference")
+        else:
+            log("⚠ Clasificación de la Conference no cuadra: se deja la anterior")
+
     # ---- guardar
     partidos.sort(key=lambda m: (m["inicio"], m["liga"], m["id"]))
     datos["partidos"] = partidos
@@ -742,7 +839,7 @@ def main():
             fh.write("\n".join("- " + x for x in LOG) + "\n")
 
 
-COMP = {1: "Primera", 2: "Segunda", 3: "Copa", 4: "Champions", 5: "1ª RFEF"}
+COMP = {1: "Primera", 2: "Segunda", 3: "Copa", 4: "Champions", 5: "1ª RFEF", 6: "Conference"}
 
 if __name__ == "__main__":
     main()
