@@ -107,10 +107,10 @@ async function historialFD(request, env, ctx, origen) {
 }
 
 // Marcadores en tiempo real (marcador, minuto y parte) del marcador público de ESPN. Caché de 20 s para todos.
-const ESPN_LIGAS = new Set(["esp.1", "esp.2", "esp.copa_del_rey", "uefa.champions"]);
+const ESPN_LIGAS = new Set(["esp.1", "esp.2", "esp.copa_del_rey", "uefa.champions", "uefa.europa.conf"]);
 async function vivo(request, env, ctx, origen) {
   const u = new URL(request.url);
-  const ligas = (u.searchParams.get("ligas") || "").split(",").filter(l => ESPN_LIGAS.has(l)).slice(0, 4);
+  const ligas = (u.searchParams.get("ligas") || "").split(",").filter(l => ESPN_LIGAS.has(l)).slice(0, 5);
   const fechas = (u.searchParams.get("fechas") || "").split(",").filter(f => /^\d{8}$/.test(f)).slice(0, 2);
   if (!ligas.length || !fechas.length) return json({ error: "Parámetros no válidos." }, 400, origen);
   const cache = caches.default, out = [];
@@ -189,7 +189,7 @@ function permitir(ip) {
   return true;
 }
 
-const SISTEMA = (hoy, contexto) => `Eres el asistente de «Dónde lo Echan», una guía de fútbol español en televisión (LALIGA EA SPORTS, LALIGA HYPERMOTION, Primera Federación, Copa del Rey y Champions).
+const SISTEMA = (hoy, contexto) => `Eres el asistente de «Dónde lo Echan», una guía de fútbol español en televisión (LALIGA EA SPORTS, LALIGA HYPERMOTION, Primera Federación, Copa del Rey, Champions y Conference League).
 
 Hoy es ${hoy} (hora peninsular española).
 

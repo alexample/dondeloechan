@@ -356,11 +356,13 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 @media (min-width:1024px){
   :root{--panel:520px;--cont:min(1320px,calc(100vw - 48px))}
   .wrap{max-width:1320px;padding-left:24px;padding-right:24px}
-  header.top .wrap{display:grid;grid-template-columns:auto minmax(0,1fr) 300px;align-items:center;gap:24px;padding-block:14px}
+  header.top .wrap{display:grid;grid-template-columns:auto minmax(0,1fr) 230px;align-items:center;gap:20px;padding-block:14px}
   .brand{gap:16px;align-items:center}
   .brand h1{font-size:28px;white-space:nowrap}
   .tabs{background:transparent;padding:0;gap:6px}
-  .tabs button{flex:0 0 auto;padding:8px 14px;background:rgba(255,255,255,.08)}
+  .tabs button small{font-size:9px}
+  @media (max-width:1439px){.tabs button small{display:none}.tabs button{padding:9px 9px}header.top .wrap{grid-template-columns:auto minmax(0,1fr) 200px;gap:16px}}
+  .tabs button{flex:0 0 auto;padding:8px 10px;font-size:13px;background:rgba(255,255,255,.08)}
   .tabs button:hover{background:rgba(255,255,255,.16)}
   .tabs button[aria-selected="true"]:hover{background:var(--pitch-ink)}
   main .wrap{padding-right:calc(var(--panel) + 48px);padding-block:8px 60px}
@@ -396,6 +398,7 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
       <button role="tab" id="tab-5" aria-selected="false" data-l="5">1ª RFEF<small>Primera Fed.</small></button>
       <button role="tab" id="tab-3" aria-selected="false" data-l="3">Copa<small>Copa del Rey</small></button>
       <button role="tab" id="tab-4" aria-selected="false" data-l="4">Champions<small>Liga Campeones</small></button>
+      <button role="tab" id="tab-6" aria-selected="false" data-l="6">Conference<small>Conf. League</small></button>
     </div>
     <div class="favbar" id="favbar" role="group" aria-label="Filtrar por equipo" hidden></div>
     <label class="search">
@@ -443,7 +446,7 @@ const CH = {
   hyper:   {name:"LALIGA TV HYPERMOTION",   short:"HM",   op:"m",      dial:"56",  orange:"120", logo:"", how:"Movistar Plus+ y Orange TV."},
   hyper2:  {name:"LALIGA TV HYPERMOTION 2", short:"HM2",  op:"m",      dial:"59",  logo:"", how:"Señal paralela de Movistar Plus+ cuando coinciden partidos de Segunda."},
   hyper3:  {name:"LALIGA TV HYPERMOTION 3", short:"HM3",  op:"m",      dial:"",    logo:"", how:"Señal paralela de Movistar Plus+; búscala en la guía o en la app."},
-  mlc:     {name:"M+ LIGA DE CAMPEONES",    short:"LC",   op:"m",      dial:"60",  logo:"", how:"Movistar Plus+, que emite en exclusiva toda la Champions."},
+  mlc:     {name:"M+ LIGA DE CAMPEONES",    short:"LC",   op:"m",      dial:"60",  logo:"", how:"Movistar Plus+, que emite toda la Champions y la Conference League."},
   mlc2:    {name:"M+ LIGA DE CAMPEONES 2",  short:"LC2",  op:"m",      dial:"61",  logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
   mlc3:    {name:"M+ LIGA DE CAMPEONES 3",  short:"LC3",  op:"m",      dial:"62",  logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
   mlcmulti:{name:"Multichampions",          short:"LC4",  op:"m",      dial:"180", logo:"", how:"M+ Liga de Campeones 4: todos los partidos de las 21:00 a la vez, con los goles en directo."},
@@ -451,6 +454,13 @@ const CH = {
   mlc6:    {name:"M+ LIGA DE CAMPEONES 6",  short:"LC6",  op:"m",      dial:"182", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
   mlc7:    {name:"M+ LIGA DE CAMPEONES 7",  short:"LC7",  op:"m",      dial:"183", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
   mlc8:    {name:"M+ LIGA DE CAMPEONES 8",  short:"LC8",  op:"m",      dial:"184", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlc9:    {name:"M+ LIGA DE CAMPEONES 9",  short:"LC9",  op:"m",      dial:"185", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlc10:   {name:"M+ LIGA DE CAMPEONES 10", short:"LC10", op:"m",      dial:"186", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlc11:   {name:"M+ LIGA DE CAMPEONES 11", short:"LC11", op:"m",      dial:"187", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlc12:   {name:"M+ LIGA DE CAMPEONES 12", short:"LC12", op:"m",      dial:"188", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mlc13:   {name:"M+ LIGA DE CAMPEONES 13", short:"LC13", op:"m",      dial:"189", logo:"", how:"Señal paralela de Movistar Plus+ para los partidos que coinciden."},
+  mconfpend:{name:"Movistar Plus+",         short:"M+",   op:"m",      dial:"",    logo:"", how:"Toda la Conference League va por Movistar Plus+ (canales M+ Liga de Campeones). La señal exacta se publica unos días antes."},
+  mdisp:   {name:"Movistar Plus+ (app)",    short:"M+",   op:"m",      dial:"App", logo:"", how:"Solo en la app de Movistar Plus+ (móvil, tableta, ordenador o tele conectada), no en un canal del decodificador."},
   mlcpend: {name:"M+ Liga de Campeones",    short:"LC",   op:"m",      dial:"60–62", logo:"", how:"Toda la Champions va por Movistar Plus+. La señal exacta se publica unos días antes."},
   mcopa:   {name:"Movistar Plus+",          short:"M+",   op:"m",      dial:"",    logo:"", how:"Partido de Copa en Movistar Plus+. El canal exacto se publica unos días antes."},
   la1:     {name:"La 1",                    short:"La1",  op:"free",   dial:"TDT", logo:"", how:"Gratis en la TDT y en RTVE Play."},
@@ -475,7 +485,7 @@ const T = {};
  ["cas","CD Castellón","CAS"],["spo","Real Sporting","SPO"],["and","FC Andorra","AND"],["bur","Burgos CF","BUR"]
 ].forEach(([id,name,abbr])=>T[id]={id,name,abbr});
 const CANARY=new Set(["lpa","ten","paso"]);
-const COMP={1:{short:"Primera",name:"LALIGA EA SPORTS"},2:{short:"Segunda",name:"LALIGA HYPERMOTION"},5:{short:"Primera Federación",name:"PRIMERA FEDERACIÓN"},3:{short:"la Copa",name:"COPA DEL REY"},4:{short:"la Champions",name:"UEFA CHAMPIONS LEAGUE"}};
+const COMP={1:{short:"Primera",name:"LALIGA EA SPORTS"},2:{short:"Segunda",name:"LALIGA HYPERMOTION"},5:{short:"Primera Federación",name:"PRIMERA FEDERACIÓN"},3:{short:"la Copa",name:"COPA DEL REY"},4:{short:"la Champions",name:"UEFA CHAMPIONS LEAGUE"},6:{short:"la Conference",name:"UEFA CONFERENCE LEAGUE"}};
 const jornLabel=j=>/^\d+$/.test(String(j))?"Jornada "+j:String(j||"");
 const PREF=new Set(["cd","ud","sd","cf","fc","rcd","ad","ce","ue","rsd","sc","cda","ub","rc","club","de","del","la","el","real","atlético","atletico","sporting","deportivo","ca","sad","cp","as","ac","afc","rb","ss","sv"]);
 function siglas(n){const w=String(n).split(/[\s\-\/]+/).filter(x=>x.length>2&&!PREF.has(x.toLowerCase()));return ((w[0]||String(n)).replace(/[^A-Za-zÁÉÍÓÚÑÜÇáéíóúñüç]/g,"").slice(0,3)||"?").toUpperCase()}
@@ -512,7 +522,8 @@ let CLAS=null, verTabla=false;
 const ZONAS={1:[[4,"z1","Champions"],[6,"z2","Europa"],[-3,"z3","Descenso"]],
   2:[[2,"z1","Ascenso"],[6,"z2","Play-off"],[-4,"z3","Descenso"]],
   5:[[1,"z1","Ascenso"],[5,"z2","Play-off"],[-5,"z3","Descenso"]],
-  4:[[8,"z1","Octavos"],[24,"z2","Play-off"],[-12,"z3","Eliminado"]]};
+  4:[[8,"z1","Octavos"],[24,"z2","Play-off"],[-12,"z3","Eliminado"]],
+  6:[[8,"z1","Octavos"],[24,"z2","Play-off"],[-12,"z3","Eliminado"]]};
 function tablaDe(m){
   if(!CLAS)return null;
   let t=CLAS[m.liga];
@@ -604,7 +615,7 @@ const nomJug=s=>String(s||"").trim();
 function eventosHTML(m,now){
   const ev=(m.eventos||[]).slice().sort((a,b)=>a.seg-b.seg);
   const p=progreso(m,now);
-  if(!p&&!ev.length)return "";
+  if(!ev.length&&(!p||p.fin))return "";
   const escala=p&&p.escala||90;
   const marca=e=>{const n=parseInt(e.min,10)||0;return `<i class="ev ${e.t} ${e.lado}" style="left:${Math.min(100,100*n/escala)}%" title="${esc((e.t==="g"?"Gol ":"Roja ")+e.j+" "+e.min)}"></i>`};
   const barra=p?`<div class="tbar" role="img" aria-label="${esc(p.fin?"Partido terminado":(tiempo(m,now)||{}).l||"")}"><span class="tb-fill${p.fin?" fin":""}" style="width:${p.pct}%"></span><span class="tb-ht"></span>${ev.map(marca).join("")}</div><div class="tb-ejes"><span>0'</span><span>Descanso</span><span>${escala}'</span></div>`:"";
@@ -635,7 +646,7 @@ function ago(iso){
 
 /* ---------- Estado ---------- */
 let league=1, query="", matches=null, meta=null, dbState="loading";
-try{const s=localStorage.getItem("dle-league");if(s!==null&&+s>=0&&+s<=5)league=+s}catch(e){}
+try{const s=localStorage.getItem("dle-league");if(s!==null&&+s>=0&&+s<=6)league=+s}catch(e){}
 /* ---------- Equipos favoritos (se guardan en este móvil) ---------- */
 let FAV=new Set();
 try{FAV=new Set(JSON.parse(localStorage.getItem("dle-favs")||"[]"))}catch(e){}
@@ -830,7 +841,7 @@ function render(){
   pintarFavbar();
   const all=league===0?matches.filter(m=>favSel?(m.localId===favSel||m.visitanteId===favSel):esFav(m)):matches.filter(m=>m.liga===league);
   const jors=[...new Set(all.filter(m=>!status(m,now)||status(m,now)==="live").map(m=>m.jornada))].filter(j=>j&&j!=="Partido aplazado");
-  document.getElementById("jor").textContent=league===0?(FAV.size?FAV.size+(FAV.size===1?" equipo":" equipos"):""):jors.length?jornLabel(jors[0]):"";
+  document.getElementById("jor").textContent=league===0?(FAV.size?FAV.size+(FAV.size===1?" equipo":" equipos"):""):jors.length?(matchMedia("(max-width:600px)").matches?jornLabel(jors[0]).replace(/^Fase liga · /i,""):jornLabel(jors[0])):"";
   const q=norm(query.trim());
   const list=all.filter(m=>!q||norm(m.local+" "+m.visitante).includes(q)).sort((a,b)=>new Date(a.inicio)-new Date(b.inicio));
   if(!list.length){
@@ -922,7 +933,7 @@ function iaContexto(){
   }
   if(CLAS){
     const tabla=(nombre,t)=>{if(!t||!t.filas)return;L.push("");L.push("CLASIFICACIÓN "+nombre+(t.tras?" (tras "+String(t.tras).toLowerCase()+")":"")+": "+t.filas.map((r,i)=>`${i+1}. ${teamOf(r[0],r[8]).name} ${r[7]} pts (${r[1]} PJ, ${r[2]}G ${r[3]}E ${r[4]}P, ${r[5]}-${r[6]})`).join("; "))};
-    for(const k of ["1","2","4"])if(CLAS[k])tabla((COMP[k]||{}).name||k,CLAS[k]);
+    for(const k of ["1","2","4","6"])if(CLAS[k])tabla((COMP[k]||{}).name||k,CLAS[k]);
     if(CLAS["5"]&&CLAS["5"].grupos)for(const g in CLAS["5"].grupos)tabla("PRIMERA FEDERACIÓN "+g,CLAS["5"].grupos[g]);
   }
   if(FAV.size)L.push("","EQUIPOS QUE SIGUE EL USUARIO («mis equipos»): "+[...FAV].map(nombreEquipo).join(", "));
@@ -951,6 +962,7 @@ function iaSugPartido(m){
   else if(st!=="done")s.push("¿A qué hora es y dónde lo echan?");
   s.push("¿Cómo quedó el partido de ida?","¿Quién ha ganado más veces entre ellos?",`¿Cómo llegan ${L} y ${V}?`,"Estadísticas del último enfrentamiento");
   if(m.liga===4)return [s[0],"¿Se han enfrentado antes? ¿Cómo quedaron?",`¿Cómo llegan ${L} y ${V}?`,`¿Cómo va el ${L} en la fase liga?`];
+  if(m.liga===6)return [s[0],`¿Cómo va el ${L} en la Conference?`,`¿Cómo llega el ${m.localId.length===3?L:V} en liga?`,"¿Qué otros partidos de Conference hay?"];
   if(m.liga===5)return [s[0],"¿Cómo quedó la ida esta temporada?",`¿Cómo llegan ${L} y ${V}?`,`¿Cómo van en la clasificación del grupo?`];
   return s;
 }
@@ -1174,7 +1186,7 @@ function parecido(nuestro,fd){
 function enVentana(m,now){const k=new Date(m.inicio).getTime();return now>k-15*60e3&&now<k+3*36e5}
 /* Fuente principal del directo: marcador público de ESPN (a través del worker, caché de 20 s): marcador, minuto y parte al momento.
    Respaldo: football-data.org (solo Primera y Champions, con unos minutos de retraso). */
-const VIVO_ESPN={1:"esp.1",2:"esp.2",3:"esp.copa_del_rey",4:"uefa.champions"};
+const VIVO_ESPN={1:"esp.1",2:"esp.2",3:"esp.copa_del_rey",4:"uefa.champions",6:"uefa.europa.conf"};
 const enJuegoPosible=(m,now)=>m.estado!=="final"&&now>new Date(m.inicio).getTime()-15*60e3&&now<new Date(m.inicio).getTime()+4*36e5;
 function necesitaMarcador(now){
   if(!matches)return false;
@@ -1192,7 +1204,11 @@ async function marcadoresEspn(now){
   try{const r=await fetch(window.IA_URL.replace(/\/$/,"")+"/vivo?ligas="+ligas.join(",")+"&fechas="+fechas.join(","),{cache:"no-store",signal:ctl.signal});if(!r.ok)return false;d=await r.json()}
   catch(e){return false}finally{clearTimeout(t)}
   const porLiga={};for(const k in VIVO_ESPN)porLiga[VIVO_ESPN[k]]=+k;
-  for(const x of d.partidos||[]){
+  // Nombres de ESPN que no se parecen a los de la guía
+  const ALIAS={"Heart of Midlothian":"Hearts","Red Star Belgrade":"Crvena Zvezda","FC Copenhagen":"København"};
+  const ali=t=>t&&ALIAS[t.name]?{...t,name:ALIAS[t.name],shortName:ALIAS[t.name]}:t;
+  for(const x0 of d.partidos||[]){
+    const x={...x0,homeTeam:ali(x0.homeTeam),awayTeam:ali(x0.awayTeam)};
     const liga=porLiga[x.liga];if(!liga)continue;
     const tt=new Date(x.utcDate).getTime();
     const m=matches.find(m=>m.liga===liga&&Math.abs(new Date(m.inicio).getTime()-tt)<3*36e5
@@ -1310,6 +1326,13 @@ async function datosH2H(m){
     return null;
   }
   if(m.liga===4)return remotoH2H(m,"CL");
+  if(m.liga===6){
+    // Conference: no hay historial gratuito entre clubes; sí la forma en liga de los equipos españoles.
+    const [a,b]=await Promise.all([m.localId.length===3?h2hDe(m.localId):null,m.visitanteId.length===3?h2hDe(m.visitanteId):null]);
+    if(!a&&!b)return null;
+    return {a:a||{},b:b||{},vs:null,alcance:"",sinDuelos:"No hay historial gratuito de enfrentamientos en Conference League.",fuente:"football-data.co.uk",
+      pie:"Forma en liga (Primera o Segunda) de los equipos españoles: últimos 5 partidos, el más reciente a la derecha. Fuente: football-data.co.uk."};
+  }
   return null;
 }
 async function rfefH2H(m){
@@ -1366,7 +1389,7 @@ async function iaContextoPartido(m){
   const d=await datosH2H(m);
   if(!d)out.push("HISTORIAL: no disponible para este partido. Si te preguntan por enfrentamientos anteriores, estadísticas o la ida, di que la guía no tiene ese dato; NO lo inventes ni lo saques de tu memoria.");
   if(d){
-    out.push(`Temporada actual: 2026/27. «Ida» = el enfrentamiento anterior entre ambos en esta misma temporada (si no lo hay, dilo y da el último que hubo). En Champions, la fase liga es a partido único: no hay ida y vuelta salvo en eliminatorias.`);
+    out.push(`Temporada actual: 2026/27. «Ida» = el enfrentamiento anterior entre ambos en esta misma temporada (si no lo hay, dilo y da el último que hubo). En Champions y Conference, la fase liga es a partido único: no hay ida y vuelta salvo en eliminatorias.`);
     if(d.vs&&d.vs.pj){
       const x=d.vs;
       out.push(`HISTORIAL ${L} vs ${V} (${d.alcance}, fuente ${d.fuente}): ${x.pj} partidos; ganó ${L} ${x.g}, empates ${x.e}, ganó ${V} ${x.p}; goles ${L} ${x.gf} – ${x.gc} ${V}.`);
@@ -1420,7 +1443,7 @@ function open(id){
     ${m.nota?`<p class="note">${esc(m.nota)}</p>`:""}
     ${VIVO[m._id]&&(m.estado==="directo"||status(m,now)==="live")?`<p class="note" id="vivo-nota">${notaVivo()}</p>`:""}
     ${tablaHTML(m)}
-    ${[1,2,3,4,5].includes(m.liga)&&m.localId&&m.visitanteId&&window.H2H_URL?`<div id="h2h"><h3 class="sec-t">Historial y forma</h3><p class="h2h-fuente" style="margin:0">Cargando…</p></div>`:""}
+    ${[1,2,3,4,5,6].includes(m.liga)&&m.localId&&m.visitanteId&&window.H2H_URL?`<div id="h2h"><h3 class="sec-t">Historial y forma</h3><p class="h2h-fuente" style="margin:0">Cargando…</p></div>`:""}
     <div class="acciones">
       ${iaActivo()?`<button class="btn btn-ia" id="ia-partido" type="button">Pregunta sobre este partido</button>`:""}
       <button class="btn" id="compartir" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/></svg>Compartir partido</button>

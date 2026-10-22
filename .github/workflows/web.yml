@@ -49,7 +49,7 @@ jobs:
           p = "site/index.html"
           s = open(p, encoding="utf-8").read()
           extra = ('<meta name="theme-color" content="#1F5E3B">\n'
-                   '<meta name="description" content="Día, hora y canal exacto de cada partido de Primera, Segunda, Copa del Rey y Champions.">\n'
+                   '<meta name="description" content="Día, hora y canal exacto de cada partido de Primera, Segunda, Primera Federación, Copa del Rey, Champions y Conference League.">\n'
                    '<link rel="manifest" href="manifest.webmanifest">\n'
                    '<link rel="icon" href="icon.svg" type="image/svg+xml">\n'
                    '<link rel="apple-touch-icon" href="apple-touch-icon.png">\n'
