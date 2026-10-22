@@ -4749,9 +4749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-22T16:07:22+02:00",
+  "comprobado": "2026-10-22T17:07:22+02:00",
   "cambio": "2026-10-22T08:07:22+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T17:07:22+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-22T16:07:22+02:00",
     "nuevos": 0,
@@ -5186,22 +5202,6 @@
        "t": "Como 4-1 Manchester United"
       }
      ],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-21T21:07:22+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [],
      "horas": [],
      "nuevos": []
