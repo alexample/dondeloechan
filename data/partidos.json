@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-22T21:07:20+02:00",
+ "actualizado": "2026-10-22T22:07:26+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -2146,7 +2146,7 @@
    "local": "CD Manacor",
    "localAbbr": "MAN",
    "localId": "cd-manacor",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Villarreal",
    "visitanteId": "vil"
   },
@@ -5506,9 +5506,36 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-22T21:14:47+02:00",
-  "cambio": "2026-10-22T21:07:20+02:00",
+  "comprobado": "2026-10-22T22:07:26+02:00",
+  "cambio": "2026-10-22T22:07:26+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T22:07:26+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: CD Manacor – Villarreal"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-manacor-vil",
+       "t": "CD Manacor – Villarreal · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-22T21:14:47+02:00",
     "nuevos": 0,
@@ -6120,22 +6147,6 @@
    },
    {
     "hora": "2026-10-22T04:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T03:07:20+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
