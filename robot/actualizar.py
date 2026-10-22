@@ -794,6 +794,10 @@ def main():
             poner_resultado(m, x["marcador"])
         elif "POSTPONED" in x["detalle"]:
             poner_resultado(m, None, "aplazado")
+    sin_id = sorted({r[0] for r in conf["tabla"] if not eq.buscar(r[0], 6, crear=False)} |
+                    {n for x in conf["partidos"] for n in (x["local"], x["visitante"]) if not eq.buscar(n, 6, crear=False)})
+    if sin_id:
+        log("⚠ Conference: nombres de ESPN sin equipo (añadir a alias.json): " + "; ".join(sin_id))
     if len(conf["tabla"]) == 36:
         filas = [[eq.buscar(r[0], 6, crear=False) or slug(r[0]), *r[1:], eq.nombres.get(eq.buscar(r[0], 6, crear=False), r[0])] for r in conf["tabla"]]
         if tabla_valida([[k, *f[1:8]] for k, f in enumerate(filas)], 36):
