@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-22T20:07:22+02:00",
+ "actualizado": "2026-10-22T20:54:14+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -813,6 +813,345 @@
     3
    ],
    "estado": "final"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-fc-kairat-panathinaikos",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T16:30:00+02:00",
+   "local": "FC Kairat",
+   "localId": "fc-kairat",
+   "visitante": "Panathinaikos",
+   "visitanteId": "panathinaikos",
+   "canales": [
+    "mlc2"
+   ],
+   "provisional": false,
+   "localAbbr": "KAI",
+   "visitanteAbbr": "PAN",
+   "marcador": [
+    1,
+    5
+   ],
+   "estado": "final"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-crvena-zvezda-kobenhavn",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T18:45:00+02:00",
+   "local": "Crvena Zvezda",
+   "localId": "crvena-zvezda",
+   "visitante": "København",
+   "visitanteId": "kobenhavn",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "CRV",
+   "visitanteAbbr": "KOB"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-fc-iberia-1999-mjallby-aif",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T18:45:00+02:00",
+   "local": "FC Iberia 1999",
+   "localId": "fc-iberia-1999",
+   "visitante": "Mjällby AIF",
+   "visitanteId": "mjallby-aif",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "IBE",
+   "visitanteAbbr": "MJA",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-fkb-jablonec-brighton",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T18:45:00+02:00",
+   "local": "FKB Jablonec",
+   "localId": "fkb-jablonec",
+   "visitante": "Brighton",
+   "visitanteId": "brighton",
+   "canales": [
+    "mlc3",
+    "mlc11"
+   ],
+   "provisional": false,
+   "localAbbr": "FKB",
+   "visitanteAbbr": "BRI",
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-get-lugano",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T18:45:00+02:00",
+   "local": "Getafe CF",
+   "localId": "get",
+   "visitante": "Lugano",
+   "visitanteId": "lugano",
+   "canales": [
+    "mlc",
+    "mlc3"
+   ],
+   "provisional": false,
+   "visitanteAbbr": "LUG",
+   "marcador": [
+    2,
+    5
+   ],
+   "estado": "final"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-inter-club-d-escaldes-fcu-craiova-1948",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T18:45:00+02:00",
+   "local": "Inter Club d'Escaldes",
+   "localId": "inter-club-d-escaldes",
+   "visitante": "FCU Craiova 1948",
+   "visitanteId": "fcu-craiova-1948",
+   "canales": [
+    "mlc3",
+    "mlc12"
+   ],
+   "provisional": false,
+   "localAbbr": "INT",
+   "visitanteAbbr": "FCU"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-kauno-zalgiris-sk-brann",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T18:45:00+02:00",
+   "local": "Kauno Žalgiris",
+   "localId": "kauno-zalgiris",
+   "visitante": "SK Brann",
+   "visitanteId": "sk-brann",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "KAU",
+   "visitanteAbbr": "BRA",
+   "marcador": [
+    1,
+    4
+   ],
+   "estado": "final"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-nordsjaelland-cska-sofia",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T18:45:00+02:00",
+   "local": "Nordsjælland",
+   "localId": "nordsjaelland",
+   "visitante": "CSKA Sofia",
+   "visitanteId": "cska-sofia",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "NOR",
+   "visitanteAbbr": "CSK",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-pafos-fc-riga-fc",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T18:45:00+02:00",
+   "local": "Pafos FC",
+   "localId": "pafos-fc",
+   "visitante": "Riga FC",
+   "visitanteId": "riga-fc",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "PAF",
+   "visitanteAbbr": "RIG",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-trabzonspor-hearts",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T18:45:00+02:00",
+   "local": "Trabzonspor",
+   "localId": "trabzonspor",
+   "visitante": "Hearts",
+   "visitanteId": "hearts",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "TRA",
+   "visitanteAbbr": "HEA"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-agf-aarhus-klubi-sportiv-egnatia",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T21:00:00+02:00",
+   "local": "AGF Aarhus",
+   "localId": "agf-aarhus",
+   "visitante": "Klubi Sportiv Egnatia",
+   "visitanteId": "klubi-sportiv-egnatia",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "AGF",
+   "visitanteAbbr": "KLU"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-ajax-atalanta",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T21:00:00+02:00",
+   "local": "Ajax",
+   "localId": "ajax",
+   "visitante": "Atalanta",
+   "visitanteId": "atalanta",
+   "canales": [
+    "mlc3",
+    "mlc11"
+   ],
+   "provisional": false,
+   "localAbbr": "AJA",
+   "visitanteAbbr": "ATA"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-as-monaco-freiburg",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T21:00:00+02:00",
+   "local": "AS Monaco",
+   "localId": "as-monaco",
+   "visitante": "Freiburg",
+   "visitanteId": "freiburg",
+   "canales": [
+    "mlc3",
+    "mlc12"
+   ],
+   "provisional": false,
+   "localAbbr": "MON",
+   "visitanteAbbr": "FRE"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-borac-banja-luka-kups",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T21:00:00+02:00",
+   "local": "Borac Banja Luka",
+   "localId": "borac-banja-luka",
+   "visitante": "KuPS",
+   "visitanteId": "kups",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "BOR",
+   "visitanteAbbr": "KUP"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-fc-midtjylland-sint-truiden-vv",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T21:00:00+02:00",
+   "local": "FC Midtjylland",
+   "localId": "fc-midtjylland",
+   "visitante": "Sint-Truiden VV",
+   "visitanteId": "sint-truiden-vv",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "MID",
+   "visitanteAbbr": "SIN"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-fc-thun-hajduk-split",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T21:00:00+02:00",
+   "local": "FC Thun",
+   "localId": "fc-thun",
+   "visitante": "Hajduk Split",
+   "visitanteId": "hajduk-split",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "THU",
+   "visitanteAbbr": "HAJ"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-lincoln-red-imps-twente",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T21:00:00+02:00",
+   "local": "Lincoln Red Imps",
+   "localId": "lincoln-red-imps",
+   "visitante": "Twente",
+   "visitanteId": "twente",
+   "canales": [
+    "mlc3",
+    "mdisp"
+   ],
+   "provisional": false,
+   "localAbbr": "LIN",
+   "visitanteAbbr": "TWE"
+  },
+  {
+   "id": "2627-6-fase-liga-j2-sc-braga-gent",
+   "liga": 6,
+   "jornada": "Fase liga · J2",
+   "inicio": "2026-10-22T21:00:00+02:00",
+   "local": "SC Braga",
+   "localId": "sc-braga",
+   "visitante": "Gent",
+   "visitanteId": "gent",
+   "canales": [
+    "mlc3",
+    "mlc13"
+   ],
+   "provisional": false,
+   "localAbbr": "BRA",
+   "visitanteAbbr": "GEN"
   },
   {
    "id": "2627-5-9-real-union-cd-lugo",
@@ -4747,12 +5086,637 @@
      ]
     }
    }
+  },
+  "6": {
+   "tras": "Jornada 2",
+   "filas": [
+    [
+     "panathinaikos",
+     2,
+     2,
+     0,
+     0,
+     7,
+     2,
+     6,
+     "Panathinaikos"
+    ],
+    [
+     "lugano",
+     2,
+     2,
+     0,
+     0,
+     8,
+     4,
+     6,
+     "Lugano"
+    ],
+    [
+     "sk-brann",
+     2,
+     2,
+     0,
+     0,
+     6,
+     2,
+     6,
+     "SK Brann"
+    ],
+    [
+     "trabzonspor",
+     2,
+     2,
+     0,
+     0,
+     6,
+     2,
+     6,
+     "Trabzonspor"
+    ],
+    [
+     "brighton",
+     2,
+     1,
+     1,
+     0,
+     4,
+     0,
+     4,
+     "Brighton"
+    ],
+    [
+     "kobenhavn",
+     2,
+     1,
+     1,
+     0,
+     5,
+     2,
+     4,
+     "København"
+    ],
+    [
+     "csu-craiova",
+     2,
+     1,
+     1,
+     0,
+     4,
+     2,
+     4,
+     "CSU Craiova"
+    ],
+    [
+     "mjallby-aif",
+     2,
+     1,
+     1,
+     0,
+     3,
+     1,
+     4,
+     "Mjällby AIF"
+    ],
+    [
+     "atalanta",
+     1,
+     1,
+     0,
+     0,
+     3,
+     1,
+     3,
+     "Atalanta"
+    ],
+    [
+     "sint-truidense",
+     1,
+     1,
+     0,
+     0,
+     2,
+     0,
+     3,
+     "Sint-Truidense"
+    ],
+    [
+     "freiburg",
+     1,
+     1,
+     0,
+     0,
+     3,
+     2,
+     3,
+     "Freiburg"
+    ],
+    [
+     "as-monaco",
+     1,
+     1,
+     0,
+     0,
+     2,
+     1,
+     3,
+     "AS Monaco"
+    ],
+    [
+     "hajduk-split",
+     1,
+     1,
+     0,
+     0,
+     2,
+     1,
+     3,
+     "Hajduk Split"
+    ],
+    [
+     "gent",
+     1,
+     1,
+     0,
+     0,
+     1,
+     0,
+     3,
+     "Gent"
+    ],
+    [
+     "twente",
+     1,
+     1,
+     0,
+     0,
+     1,
+     0,
+     3,
+     "Twente"
+    ],
+    [
+     "nordsjaelland",
+     2,
+     0,
+     2,
+     0,
+     3,
+     3,
+     2,
+     "Nordsjælland"
+    ],
+    [
+     "riga-fc",
+     2,
+     0,
+     2,
+     0,
+     2,
+     2,
+     2,
+     "Riga FC"
+    ],
+    [
+     "fc-midtjylland",
+     1,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1,
+     "FC Midtjylland"
+    ],
+    [
+     "klubi-sportiv-egnatia",
+     1,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1,
+     "Klubi Sportiv Egnatia"
+    ],
+    [
+     "red-star-belgrade",
+     2,
+     0,
+     1,
+     1,
+     4,
+     5,
+     1,
+     "Red Star Belgrade"
+    ],
+    [
+     "cska-sofia",
+     2,
+     0,
+     1,
+     1,
+     3,
+     4,
+     1,
+     "CSKA Sofia"
+    ],
+    [
+     "fkb-jablonec",
+     2,
+     0,
+     1,
+     1,
+     2,
+     3,
+     1,
+     "FKB Jablonec"
+    ],
+    [
+     "pafos-fc",
+     2,
+     0,
+     1,
+     1,
+     2,
+     4,
+     1,
+     "Pafos FC"
+    ],
+    [
+     "heart-of-midlothian",
+     2,
+     0,
+     1,
+     1,
+     1,
+     3,
+     1,
+     "Heart of Midlothian"
+    ],
+    [
+     "fc-iberia-1999",
+     2,
+     0,
+     1,
+     1,
+     1,
+     3,
+     1,
+     "FC Iberia 1999"
+    ],
+    [
+     "get",
+     2,
+     0,
+     1,
+     1,
+     3,
+     6,
+     1,
+     "Getafe CF"
+    ],
+    [
+     "fc-kairat",
+     2,
+     0,
+     1,
+     1,
+     2,
+     6,
+     1,
+     "FC Kairat"
+    ],
+    [
+     "ajax",
+     1,
+     0,
+     0,
+     1,
+     1,
+     2,
+     0,
+     "Ajax"
+    ],
+    [
+     "borac-banja-luka",
+     1,
+     0,
+     0,
+     1,
+     1,
+     2,
+     0,
+     "Borac Banja Luka"
+    ],
+    [
+     "lincoln-red-imps",
+     1,
+     0,
+     0,
+     1,
+     1,
+     2,
+     0,
+     "Lincoln Red Imps"
+    ],
+    [
+     "agf-aarhus",
+     1,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     "AGF Aarhus"
+    ],
+    [
+     "fc-thun",
+     1,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     "FC Thun"
+    ],
+    [
+     "kups",
+     1,
+     0,
+     0,
+     1,
+     2,
+     4,
+     0,
+     "KuPS"
+    ],
+    [
+     "sc-braga",
+     1,
+     0,
+     0,
+     1,
+     0,
+     3,
+     0,
+     "SC Braga"
+    ],
+    [
+     "inter-club-d-escaldes",
+     2,
+     0,
+     0,
+     2,
+     1,
+     5,
+     0,
+     "Inter Club d'Escaldes"
+    ],
+    [
+     "kauno-zalgiris",
+     2,
+     0,
+     0,
+     2,
+     1,
+     8,
+     0,
+     "Kauno Žalgiris"
+    ]
+   ]
   }
  },
  "robot": {
-  "comprobado": "2026-10-22T20:07:22+02:00",
-  "cambio": "2026-10-22T20:07:22+02:00",
+  "comprobado": "2026-10-22T20:54:14+02:00",
+  "cambio": "2026-10-22T20:54:14+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T20:54:14+02:00",
+    "nuevos": 18,
+    "horas": 0,
+    "canales": 18,
+    "resultados": 7,
+    "tablas": [
+     "Conference"
+    ],
+    "detalle": [
+     "Nuevo partido: FC Kairat – Panathinaikos",
+     "Nuevo partido: Getafe CF – Lugano",
+     "Nuevo partido: Trabzonspor – Hearts",
+     "Nuevo partido: FKB Jablonec – Brighton",
+     "Nuevo partido: Nordsjælland – CSKA Sofia",
+     "Nuevo partido: Crvena Zvezda – København",
+     "Nuevo partido: Inter Club d'Escaldes – FCU Craiova 1948",
+     "Nuevo partido: Pafos FC – Riga FC",
+     "Nuevo partido: FC Iberia 1999 – Mjällby AIF",
+     "Nuevo partido: Kauno Žalgiris – SK Brann",
+     "Canal confirmado: FC Kairat – Panathinaikos",
+     "Canal confirmado: Getafe CF – Lugano",
+     "Canal confirmado: Trabzonspor – Hearts",
+     "Canal confirmado: FKB Jablonec – Brighton",
+     "Canal confirmado: Nordsjælland – CSKA Sofia",
+     "Canal confirmado: Crvena Zvezda – København",
+     "Canal confirmado: Inter Club d'Escaldes – FCU Craiova 1948",
+     "Canal confirmado: Pafos FC – Riga FC",
+     "Canal confirmado: FC Iberia 1999 – Mjällby AIF",
+     "Canal confirmado: Kauno Žalgiris – SK Brann",
+     "Canal confirmado: Ajax – Atalanta",
+     "Canal confirmado: SC Braga – Gent",
+     "Canal confirmado: AS Monaco – Freiburg",
+     "Canal confirmado: FC Thun – Hajduk Split",
+     "Canal confirmado: FC Midtjylland – Sint-Truiden VV",
+     "Canal confirmado: Lincoln Red Imps – Twente",
+     "Canal confirmado: AGF Aarhus – Klubi Sportiv Egnatia",
+     "Canal confirmado: Borac Banja Luka – KuPS",
+     "Resultado: FC Kairat 1-5 Panathinaikos",
+     "Resultado: Nordsjælland 2-2 CSKA Sofia"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-6-fase-liga-j2-fc-kairat-panathinaikos",
+       "t": "FC Kairat 1-5 Panathinaikos"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-nordsjaelland-cska-sofia",
+       "t": "Nordsjælland 2-2 CSKA Sofia"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-get-lugano",
+       "t": "Getafe CF 2-5 Lugano"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fc-iberia-1999-mjallby-aif",
+       "t": "FC Iberia 1999 1-1 Mjällby AIF"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fkb-jablonec-brighton",
+       "t": "FKB Jablonec 0-0 Brighton"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-kauno-zalgiris-sk-brann",
+       "t": "Kauno Žalgiris 1-4 SK Brann"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-pafos-fc-riga-fc",
+       "t": "Pafos FC 1-1 Riga FC"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-6-fase-liga-j2-fc-kairat-panathinaikos",
+       "t": "FC Kairat – Panathinaikos · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-get-lugano",
+       "t": "Getafe CF – Lugano · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-trabzonspor-hearts",
+       "t": "Trabzonspor – Hearts · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fkb-jablonec-brighton",
+       "t": "FKB Jablonec – Brighton · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-nordsjaelland-cska-sofia",
+       "t": "Nordsjælland – CSKA Sofia · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-crvena-zvezda-kobenhavn",
+       "t": "Crvena Zvezda – København · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-inter-club-d-escaldes-fcu-craiova-1948",
+       "t": "Inter Club d'Escaldes – FCU Craiova 1948 · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-pafos-fc-riga-fc",
+       "t": "Pafos FC – Riga FC · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fc-iberia-1999-mjallby-aif",
+       "t": "FC Iberia 1999 – Mjällby AIF · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-kauno-zalgiris-sk-brann",
+       "t": "Kauno Žalgiris – SK Brann · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-ajax-atalanta",
+       "t": "Ajax – Atalanta · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-sc-braga-gent",
+       "t": "SC Braga – Gent · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-as-monaco-freiburg",
+       "t": "AS Monaco – Freiburg · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fc-thun-hajduk-split",
+       "t": "FC Thun – Hajduk Split · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fc-midtjylland-sint-truiden-vv",
+       "t": "FC Midtjylland – Sint-Truiden VV · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-lincoln-red-imps-twente",
+       "t": "Lincoln Red Imps – Twente · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-agf-aarhus-klubi-sportiv-egnatia",
+       "t": "AGF Aarhus – Klubi Sportiv Egnatia · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-borac-banja-luka-kups",
+       "t": "Borac Banja Luka – KuPS · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-6-fase-liga-j2-fc-kairat-panathinaikos",
+       "t": "FC Kairat – Panathinaikos (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-get-lugano",
+       "t": "Getafe CF – Lugano (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-trabzonspor-hearts",
+       "t": "Trabzonspor – Hearts (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fkb-jablonec-brighton",
+       "t": "FKB Jablonec – Brighton (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-nordsjaelland-cska-sofia",
+       "t": "Nordsjælland – CSKA Sofia (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-crvena-zvezda-kobenhavn",
+       "t": "Crvena Zvezda – København (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-inter-club-d-escaldes-fcu-craiova-1948",
+       "t": "Inter Club d'Escaldes – FCU Craiova 1948 (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-pafos-fc-riga-fc",
+       "t": "Pafos FC – Riga FC (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fc-iberia-1999-mjallby-aif",
+       "t": "FC Iberia 1999 – Mjällby AIF (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-kauno-zalgiris-sk-brann",
+       "t": "Kauno Žalgiris – SK Brann (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-ajax-atalanta",
+       "t": "Ajax – Atalanta (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-sc-braga-gent",
+       "t": "SC Braga – Gent (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-as-monaco-freiburg",
+       "t": "AS Monaco – Freiburg (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fc-thun-hajduk-split",
+       "t": "FC Thun – Hajduk Split (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-fc-midtjylland-sint-truiden-vv",
+       "t": "FC Midtjylland – Sint-Truiden VV (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-lincoln-red-imps-twente",
+       "t": "Lincoln Red Imps – Twente (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-agf-aarhus-klubi-sportiv-egnatia",
+       "t": "AGF Aarhus – Klubi Sportiv Egnatia (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j2-borac-banja-luka-kups",
+       "t": "Borac Banja Luka – KuPS (Conference)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-22T20:07:22+02:00",
     "nuevos": 0,
@@ -5127,22 +6091,6 @@
    },
    {
     "hora": "2026-10-22T01:17:55+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T01:07:21+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
