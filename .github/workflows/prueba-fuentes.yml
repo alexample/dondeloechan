@@ -8,26 +8,24 @@ jobs:
           python3 - <<'PY'
           import urllib.request,re,html,json
           def g(u,h={}):
-              try:
-                  r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0","Accept-Language":"es-ES",**h})
-                  with urllib.request.urlopen(r,timeout=30) as x: return x.status,x.read().decode("utf-8","replace")
-              except Exception as e: return str(e)[:60],""
+              r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0","Accept-Language":"es-ES",**h})
+              with urllib.request.urlopen(r,timeout=30) as x: return x.read().decode("utf-8","replace")
           out=[]
-          st,t=g("https://www.futbolenlatv.es/competicion/liga-campeones")
-          links=sorted(set(l for l in re.findall(r'href="(/competicion/[^"]+)"',t) if re.search(r'conf|europa|uefa',l)))
-          out.append("FEL links: "+" ".join(links[:20]))
-          st,t=g("https://www.futbolenlatv.es/")
-          out.append("FEL home conf: "+" ".join(sorted(set(re.findall(r'href="(/competicion/[^"]*conf[^"]*)"',t)))[:10]))
-          st,t=g("https://www.vavel.com/es/data/champions-league/calendario/")
-          out.append("VAVEL links: "+" ".join(sorted(set(l for l in re.findall(r'href="(/es/data/[^"/]+)/',t) if re.search(r'conf|europa',l)))[:10]))
-          st,t=g("https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261022")
-          try:
-              e=json.loads(t);out.append("ESPN conf: "+" | ".join(ev['shortName']+' '+ev['status']['type']['name'] for ev in e['events'])[:700])
-          except Exception as x: out.append("ESPN conf "+str(st))
-          k="2e0b52f50c68465084f4da6f3c3c7613"
-          r=[]
-          for c in ["ECL","UCL","EL"]:
-              st,t=g(f"https://api.football-data.org/v4/competitions/{c}/matches?dateFrom=2026-10-22&dateTo=2026-10-22",{"X-Auth-Token":k});r.append(f"{c}:{st}")
-          out.append("FD "+" ".join(r))
+          t=g("https://www.futbolenlatv.es/competicion/uefa-europa-conference-league")
+          rows=re.findall(r'<tr>\s*<td class="hora.*?</tr>',t,re.S)
+          cans={}
+          for tr in rows:
+              for c in re.findall(r'<li[^>]*title="([^"]+)"',tr): cans[html.unescape(c)]=cans.get(html.unescape(c),0)+1
+          ej=[]
+          for tr in rows[:40]:
+              sd=re.search(r'itemprop="startDate" content="([^"]+)"',tr);l=re.search(r'<td class="local">.*?<span title="([^"]+)"',tr,re.S);v=re.search(r'<td class="visitante">.*?<span title="([^"]+)"',tr,re.S)
+              cs=[html.unescape(c) for c in re.findall(r'<li[^>]*title="([^"]+)"',tr)]
+              if sd and l and v: ej.append(f"{sd.group(1)[:16]} {html.unescape(l.group(1))}-{html.unescape(v.group(1))} {cs}")
+          out.append(f"FEL filas={len(rows)} canales={cans}")
+          out.append("FEL ej: "+" ## ".join(ej[:14])[:1500])
+          out.append("FEL ej2: "+" ## ".join(ej[14:40])[:1500])
+          s=json.loads(g("https://site.api.espn.com/apis/v2/sports/soccer/uefa.europa.conf/standings"))
+          ch=s.get("children",[{}])[0];en=ch.get("standings",{}).get("entries",[])
+          out.append(f"ESPN standings: grupos={len(s.get('children',[]))} filas={len(en)} ej="+json.dumps([(e['team']['displayName'],{x['name']:x.get('value') for x in e['stats'] if x['name'] in ('gamesPlayed','wins','ties','losses','pointsFor','pointsAgainst','points','rank')}) for e in en[:2]])[:600])
           for o in out: print("::notice::"+o)
           PY
