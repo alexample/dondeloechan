@@ -4747,9 +4747,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-22T01:17:55+02:00",
+  "comprobado": "2026-10-22T02:07:19+02:00",
   "cambio": "2026-10-22T00:07:21+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T02:07:19+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-22T01:17:55+02:00",
     "nuevos": 0,
