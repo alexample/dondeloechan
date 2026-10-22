@@ -74,8 +74,11 @@ def next_data(texto):
 
 
 # ---------------------------------------------------------------- utilidades
+TRANSLIT = str.maketrans({"æ": "ae", "Æ": "Ae", "ø": "o", "Ø": "O", "ß": "ss", "đ": "d", "Đ": "D", "ł": "l", "Ł": "L", "þ": "th", "ı": "i"})
+
+
 def norm(s):
-    s = unicodedata.normalize("NFD", html.unescape(str(s))).encode("ascii", "ignore").decode().lower()
+    s = unicodedata.normalize("NFD", html.unescape(str(s)).translate(TRANSLIT)).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9]+", " ", s).strip()
 
 
@@ -306,7 +309,7 @@ def leer_fel(texto, liga):
         inicio = dt.datetime.fromisoformat(sd.group(1)).replace(tzinfo=UTC)
         canales = [canal_fel(t, liga) for t in re.findall(r'<li class="[^"]*" title="([^"]+)">', tr)]
         sin_confirmar = 'title="Canal por confirmar"' in tr
-        filas.append({"inicio": inicio, "local": html.unescape(loc.group(1)), "visitante": html.unescape(vis.group(1)),
+        filas.append({"inicio": inicio, "local": html.unescape(loc.group(1)).strip(), "visitante": html.unescape(vis.group(1)).strip(),
                       "sub": html.unescape(sub.group(1)) if sub else "", "canales": [c for c in canales if c],
                       "por_confirmar": sin_confirmar})
     return filas
@@ -393,14 +396,20 @@ def leer_espn_conference(hoy):
     partidos, semanas = [], set()
     if liga_fase:
         a, b = liga_fase[0], liga_fase[1]
-        txt = get(f"{ESPN_CONF}/scoreboard?dates={a:%Y%m%d}-{b:%Y%m%d}&limit=400", "espn_conf_fase.json")
-        try:
-            evs = json.loads(txt).get("events", []) if txt else []
-        except Exception:  # noqa: BLE001
-            evs = []
+        # ESPN no admite rangos largos: se pide el año entero (con límite alto; si no, el normal de 100) y se filtra.
+        evs = []
+        for q in (f"dates={a:%Y}&limit=500", f"dates={a:%Y}"):
+            txt = get(f"{ESPN_CONF}/scoreboard?{q}", "espn_conf_fase.json")
+            try:
+                evs = json.loads(txt).get("events", []) if txt else []
+            except Exception:  # noqa: BLE001
+                evs = []
+            if evs:
+                break
         for ev in evs:
             d = dt.datetime.fromisoformat(ev["date"].replace("Z", "+00:00"))
-            semanas.add(d.isocalendar()[:2])
+            if a <= d <= b:
+                semanas.add(d.isocalendar()[:2])
     semanas = sorted(semanas)
     # resultados recientes (últimos 3 días)
     for k in range(0, 4):
