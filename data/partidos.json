@@ -4749,9 +4749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-22T17:15:54+02:00",
+  "comprobado": "2026-10-22T18:07:21+02:00",
   "cambio": "2026-10-22T08:07:22+02:00",
   "historial": [
+   {
+    "hora": "2026-10-22T18:07:21+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-22T17:15:54+02:00",
     "nuevos": 0,
@@ -5163,31 +5179,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-21T22:07:21+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 1,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Resultado: Levante UD 3-1 Athletic Club"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-apl-lev-ath",
-       "t": "Levante UD 3-1 Athletic Club"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
