@@ -1,0 +1,37 @@
+name: Prueba fuentes (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import urllib.request,re,html,json
+          def g(u):
+              try:
+                  r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0","Accept-Language":"es-ES"})
+                  with urllib.request.urlopen(r,timeout=30) as x: return x.status,x.read().decode("utf-8","replace")
+              except Exception as e: return str(e)[:60],""
+          for s in ["conference-league","uefa-conference-league","liga-conferencia","europa-conference-league"]:
+              st,t=g("https://www.futbolenlatv.es/competicion/"+s)
+              rows=re.findall(r'<tr>\s*<td class="hora.*?</tr>',t,re.S)
+              cans=set()
+              for tr in rows:
+                  for c in re.findall(r'<li[^>]*title="([^"]+)"',tr): cans.add(html.unescape(c))
+              eq=[(re.search(r'<td class="local">.*?<span title="([^"]+)"',tr,re.S) or [0,0])[1] for tr in rows[:6]]
+              print(f"::notice::FEL {s}: {st} filas={len(rows)} eq={eq} canales={sorted(cans)[:15]}")
+          for s in ["conference-league","uefa-conference-league","europa-conference-league"]:
+              for tipo in ["calendario","clasificacion"]:
+                  st,t=g(f"https://www.vavel.com/es/data/{s}/{tipo}/")
+                  print(f"::notice::VAVEL {s}/{tipo}: {st} bloques={len(re.findall(r'<h2 class=\"mo\">',t))} filas={len(re.findall(r'<tr class=\"(fx|)',t))} {re.findall(r'<h2 class=\"mo\">([^<]+)',t)[:2]}")
+          st,t=g("https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261022")
+          try:
+              e=json.loads(t);print("::notice::ESPN conf: "+" | ".join(ev['name']+' '+ev['status']['type']['name'] for ev in e['events'])[:900])
+          except Exception as x: print("::notice::ESPN conf "+str(st))
+          k="2e0b52f50c68465084f4da6f3c3c7613"
+          for c in ["ECL","UCL","EL"]:
+              try:
+                  r=urllib.request.Request(f"https://api.football-data.org/v4/competitions/{c}",headers={"X-Auth-Token":k})
+                  print(f"::notice::FD {c}: "+str(urllib.request.urlopen(r,timeout=20).status))
+              except Exception as x: print(f"::notice::FD {c}: {x}")
+          PY
