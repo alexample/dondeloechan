@@ -7,25 +7,17 @@ jobs:
       - run: |
           python3 - <<'PY'
           import urllib.request,re,html,json
-          def g(u,h={}):
-              r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0","Accept-Language":"es-ES",**h})
+          def g(u):
+              r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0","Accept-Language":"es-ES"})
               with urllib.request.urlopen(r,timeout=30) as x: return x.read().decode("utf-8","replace")
           out=[]
+          e=json.loads(g("https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261022"))
+          lg=e["leagues"][0]
+          out.append("ESPN season="+json.dumps(lg.get("season"))[:200]+" calendar="+json.dumps(lg.get("calendar"))[:900])
+          ev=e["events"][0]
+          out.append("ESPN ev keys="+",".join(ev.keys())+" week="+str(ev.get("week"))+" season="+json.dumps(ev.get("season"))+" notes="+json.dumps(ev["competitions"][0].get("notes"))[:200]+" names="+" | ".join(c["team"]["displayName"] for x in e["events"][:6] for c in x["competitions"][0]["competitors"]))
           t=g("https://www.futbolenlatv.es/competicion/uefa-europa-conference-league")
-          rows=re.findall(r'<tr>\s*<td class="hora.*?</tr>',t,re.S)
-          cans={}
-          for tr in rows:
-              for c in re.findall(r'<li[^>]*title="([^"]+)"',tr): cans[html.unescape(c)]=cans.get(html.unescape(c),0)+1
-          ej=[]
-          for tr in rows[:40]:
-              sd=re.search(r'itemprop="startDate" content="([^"]+)"',tr);l=re.search(r'<td class="local">.*?<span title="([^"]+)"',tr,re.S);v=re.search(r'<td class="visitante">.*?<span title="([^"]+)"',tr,re.S)
-              cs=[html.unescape(c) for c in re.findall(r'<li[^>]*title="([^"]+)"',tr)]
-              if sd and l and v: ej.append(f"{sd.group(1)[:16]} {html.unescape(l.group(1))}-{html.unescape(v.group(1))} {cs}")
-          out.append(f"FEL filas={len(rows)} canales={cans}")
-          out.append("FEL ej: "+" ## ".join(ej[:14])[:1500])
-          out.append("FEL ej2: "+" ## ".join(ej[14:40])[:1500])
-          s=json.loads(g("https://site.api.espn.com/apis/v2/sports/soccer/uefa.europa.conf/standings"))
-          ch=s.get("children",[{}])[0];en=ch.get("standings",{}).get("entries",[])
-          out.append(f"ESPN standings: grupos={len(s.get('children',[]))} filas={len(en)} ej="+json.dumps([(e['team']['displayName'],{x['name']:x.get('value') for x in e['stats'] if x['name'] in ('gamesPlayed','wins','ties','losses','pointsFor','pointsAgainst','points','rank')}) for e in en[:2]])[:600])
+          subs=re.findall(r'<label title="[^"]*">([^<]*)</label>\s*<span title="([^"]+)"',t)
+          out.append("FEL subs="+str(sorted(set(subs))[:10]))
           for o in out: print("::notice::"+o)
           PY
