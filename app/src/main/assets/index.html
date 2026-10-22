@@ -15,6 +15,7 @@
   --op-m:#1C4E80; --op-m-bg:#E3ECF5; --op-dazn:#262626; --op-dazn-bg:#ECECEA;
   --op-free:#2B7A3D; --op-free-bg:#E2F0E4; --op-orange:#A14A00; --op-orange-bg:#F7E9DC;
   --shadow:0 18px 40px rgba(20,32,26,.18);
+  --fav:#C98A0B; --fav-bg:#FFF7E0; --fav-line:#EBCB7A; --fav-ink:#8A5A00; --es-ink:#B4232A; --es-bg:#FFF3F1; --es-line:#F0C4BF;
   --f-display:"Saira Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
@@ -25,14 +26,16 @@
   --live:#FF6B6B; --done:#6E7B73; --warn:#F2C25B; --warn-bg:#3A2E10;
   --op-m:#9CC3EC; --op-m-bg:#1A2A3A; --op-dazn:#E8E8E4; --op-dazn-bg:#2A2D2B;
   --op-free:#8DD69C; --op-free-bg:#183222; --op-orange:#FFB577; --op-orange-bg:#3A2614;
-  --shadow:0 18px 40px rgba(0,0,0,.5); color-scheme:dark}}
+  --shadow:0 18px 40px rgba(0,0,0,.5); color-scheme:dark;
+  --fav:#E0A93A; --fav-bg:#2B2410; --fav-line:#5A4718; --fav-ink:#F2C766; --es-ink:#FF8F86; --es-bg:#2D1A19; --es-line:#5A2C29}}
 :root[data-theme="dark"]{
   --bg:#0D1511; --surface:#16211B; --ink:#E9EFE9; --muted:#9AA79F; --line:#26332B;
   --accent:#FF7A3D; --pitch:#123A25; --pitch-ink:#E9EFE9;
   --live:#FF6B6B; --done:#6E7B73; --warn:#F2C25B; --warn-bg:#3A2E10;
   --op-m:#9CC3EC; --op-m-bg:#1A2A3A; --op-dazn:#E8E8E4; --op-dazn-bg:#2A2D2B;
   --op-free:#8DD69C; --op-free-bg:#183222; --op-orange:#FFB577; --op-orange-bg:#3A2614;
-  --shadow:0 18px 40px rgba(0,0,0,.5); color-scheme:dark}
+  --shadow:0 18px 40px rgba(0,0,0,.5); color-scheme:dark;
+  --fav:#E0A93A; --fav-bg:#2B2410; --fav-line:#5A4718; --fav-ink:#F2C766; --es-ink:#FF8F86; --es-bg:#2D1A19; --es-line:#5A2C29}
 
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -84,6 +87,16 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .day.pasado h2{opacity:.65}
 .day h2 .hoyd{font-style:normal;color:var(--accent);letter-spacing:.06em}
 .match.ahora{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+/* Partidos con un equipo favorito (dorado) o, en Champions y Conference, con un equipo español (rojo y gualda) */
+.match.m-fav,.match.m-es{position:relative;overflow:hidden;padding-left:17px}
+.match.m-fav{background:var(--fav-bg);border-color:var(--fav-line)}
+.match.m-es{background:var(--es-bg);border-color:var(--es-line)}
+.match.m-fav::before,.match.m-es::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--fav)}
+.match.m-es::before{background:linear-gradient(#C60B1E 0 25%,#FFC400 25% 75%,#C60B1E 75%)}
+.match.m-fav.ahora,.match.m-es.ahora{border-color:var(--accent)}
+.team .nm.t-fav,.vs .side b.t-fav{color:var(--fav-ink)}
+.team .nm.t-es,.vs .side b.t-es{color:var(--es-ink)}
+.team .nm.t-fav,.team .nm.t-es{font-weight:800}
 .hoy{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:15;display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;padding:10px 18px;background:var(--pitch);color:var(--pitch-ink);font:inherit;font-weight:700;font-size:14px;box-shadow:var(--shadow);cursor:pointer}
 [hidden]{display:none!important}
 .hoy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -814,6 +827,15 @@ function renderFresh(){
   }
   t.textContent=(dbState==="offline"?"Sin conexión. Guía guardada, comprobada ":"Canales comprobados ")+ago(meta.actualizado)+".";
 }
+/* Destacados: favoritos siempre; equipos españoles solo en competiciones europeas (en las demás lo son todos). */
+const EUROPA=new Set([4,6]);
+function claseEquipo(id,liga){if(FAV.has(id))return "t-fav";if(EUROPA.has(liga)&&T[id])return "t-es";return ""}
+function claseMatch(m){
+  const f=FAV.has(m.localId)||FAV.has(m.visitanteId);
+  if(f&&league!==0)return " m-fav";
+  if(EUROPA.has(m.liga)&&(T[m.localId]||T[m.visitanteId]))return " m-es";
+  return "";
+}
 /* Pestañas con partidos en juego ahora mismo: borde rojo y «● En juego N» en lugar del subtítulo */
 function pintarVivoTabs(){
   const now=Date.now(),n={};
@@ -863,12 +885,12 @@ function render(){
   app.innerHTML=Object.values(groups).map(g=>{const pas=g.every(m=>status(m,now)==="done");return `
     <section class="day${pas?" pasado":""}"><h2>${cap(fDay.format(new Date(g[0].inicio)))}${fKey.format(new Date(g[0].inicio))===hoyKey?' · <em class="hoyd">Hoy</em>':""}</h2><div class="list">
     ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];return `
-      <button class="match${st==="done"?" past":""}${m._id===ahoraId&&!q?" ahora":""}"${m._id===ahoraId?' id="ahora"':""} data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
+      <button class="match${st==="done"?" past":""}${m._id===ahoraId&&!q?" ahora":""}${claseMatch(m)}"${m._id===ahoraId?' id="ahora"':""} data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
         <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b>${st==="live"&&progreso(m,now)?`<i class="kprog"><i style="width:${progreso(m,now).pct}%"></i></i>`:""}<span class="${st||""}">${st==="live"?esc((tiempo(m,now)||{c:"En juego"}).c):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
         <span class="teams">
           ${league===0?`<span class="compl">${esc((COMP[m.liga]||{}).name||"")}</span>`:""}
-          <span class="team">${crest(h)}<span class="nm">${FAV.has(m.localId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(h.name)}</span></span>
-          <span class="team">${crest(a)}<span class="nm">${FAV.has(m.visitanteId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(a.name)}</span></span>
+          <span class="team">${crest(h)}<span class="nm ${claseEquipo(m.localId,m.liga)}">${FAV.has(m.localId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(h.name)}</span></span>
+          <span class="team">${crest(a)}<span class="nm ${claseEquipo(m.visitanteId,m.liga)}">${FAV.has(m.visitanteId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(a.name)}</span></span>
           <span class="chips">${ch.length?ch.slice(0,esEscritorio()?4:2).map(chip).join(""):m.sinTV?`<span class="chip pend">Sin TV</span>`:`<span class="chip pend">Canal por confirmar</span>`}${ch.length>(esEscritorio()?4:2)?`<span class="chip op-dazn" style="padding-left:8px">+${ch.length-(esEscritorio()?4:2)}</span>`:""}${m.provisional&&ch.length?`<span class="chip pend">Provisional</span>`:""}</span>
         </span>
       </button>`}).join("")}
@@ -1416,9 +1438,9 @@ function open(id){
     <div class="grab"></div>
     <div class="sh-head"><span class="comp">${(COMP[m.liga]||{}).name||""} · ${esc(jornLabel(m.jornada))}</span><button class="close" id="close" aria-label="Cerrar">×</button></div>
     <div class="vs">
-      <div class="side">${crest(h,1)}<b id="sh-title">${esc(h.name)}</b>${botonFav(m.localId,h.name)}</div>
+      <div class="side">${crest(h,1)}<b id="sh-title" class="${claseEquipo(m.localId,m.liga)}">${esc(h.name)}</b>${botonFav(m.localId,h.name)}</div>
       ${tieneMarcador(m)&&(status(m,now)==="live"||status(m,now)==="done")?`<div class="mid score${status(m,now)==="live"?" live":""}">${m.marcador[0]}<i>–</i>${m.marcador[1]}</div>`:`<div class="mid">VS</div>`}
-      <div class="side">${crest(a,1)}<b>${esc(a.name)}</b>${botonFav(m.visitanteId,a.name)}</div>
+      <div class="side">${crest(a,1)}<b class="${claseEquipo(m.visitanteId,m.liga)}">${esc(a.name)}</b>${botonFav(m.visitanteId,a.name)}</div>
     </div>
     ${eventosHTML(m,now)}
     <div>
@@ -1507,7 +1529,7 @@ sheet.addEventListener("click",e=>{
   if(e.target.id==="ck-coment"){guardarConsent(true);return}
   if(e.target.closest("#vertabla")&&actual){verTabla=!verTabla;const tb=document.getElementById("tabla");if(tb){const y=tb.getBoundingClientRect().top;tb.outerHTML=tablaHTML(actual);const nt=document.getElementById("tabla");if(nt){sheet.scrollTop+=nt.getBoundingClientRect().top-y;const b=document.getElementById("vertabla");if(b)b.focus()}}return}
   const f=e.target.closest(".fav");
-  if(f){alternarFav(f.dataset.team,f.dataset.nombre);const on=FAV.has(f.dataset.team);f.setAttribute("aria-pressed",String(on));f.textContent=on?"★ Siguiendo":"☆ Seguir";render()}
+  if(f){alternarFav(f.dataset.team,f.dataset.nombre);const on=FAV.has(f.dataset.team);f.setAttribute("aria-pressed",String(on));f.textContent=on?"★ Siguiendo":"☆ Seguir";const nb=f.closest(".side")&&f.closest(".side").querySelector("b");if(nb&&actual)nb.className=claseEquipo(f.dataset.team,actual.liga);render()}
 });
 function botonFav(id,nombre){if(!id)return "";const on=FAV.has(id);return `<button class="fav" type="button" data-team="${esc(id)}" data-nombre="${esc(nombre)}" aria-pressed="${on}">${on?"★ Siguiendo":"☆ Seguir"}</button>`}
 scrim.addEventListener("click",close);
