@@ -1,3 +1,4 @@
+// Despliegue: Cloudflare Workers Builds desde GitHub (carpeta ia/).
 /**
  * Asistente de «Dónde lo Echan» — Cloudflare Worker con Workers AI (modelos abiertos).
  *
