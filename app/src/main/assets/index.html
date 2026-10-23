@@ -626,7 +626,7 @@ function progreso(m,now){
 }
 const nomJug=s=>String(s||"").trim();
 function eventosHTML(m,now){
-  const ev=(m.eventos||[]).slice().sort((a,b)=>a.seg-b.seg);
+  const ev=(m.eventos&&m.eventos.length?m.eventos:(m.goles||[])).slice().sort((a,b)=>a.seg-b.seg);
   const p=progreso(m,now);
   if(!ev.length&&(!p||p.fin))return "";
   const escala=p&&p.escala||90;
@@ -1407,7 +1407,8 @@ async function iaContextoPartido(m){
   if(!m)return "";
   const now=Date.now(),L=nomCorto(m.localId)||m.local,V=nomCorto(m.visitanteId)||m.visitante,st=status(m,now),t=tiempo(m,now);
   const out=[`PARTIDO SELECCIONADO (el usuario está viendo su ficha; si la pregunta no dice otra cosa, se refiere a este): ${m._id} | ${(COMP[m.liga]||{}).name||""} ${jornLabel(m.jornada)} | ${cap(fDay.format(new Date(m.inicio)))} ${m.horaPendiente?"hora por fijar":fTime.format(new Date(m.inicio))} | ${m.local} – ${m.visitante}`+(tieneMarcador(m)&&(st==="live"||st==="done")?` | ${st==="live"?"EN JUEGO":"FINAL"} ${marcadorTxt(m)}${t?" ("+t.l+")":""}`:"")];
-  if((m.eventos||[]).length)out.push("GOLES Y EXPULSIONES DE ESTE PARTIDO: "+m.eventos.map(e=>`${e.min} ${e.t==="g"?"gol":"roja"} de ${e.j} (${e.lado==="L"?m.local:m.visitante})${e.pen?" de penalti":""}${e.pp?" en propia puerta":""}`).join("; "));
+  const evIA=m.eventos&&m.eventos.length?m.eventos:(m.goles||[]);
+  if(evIA.length)out.push("GOLES Y EXPULSIONES DE ESTE PARTIDO: "+evIA.map(e=>`${e.min} ${e.t==="g"?"gol":"roja"} de ${e.j} (${e.lado==="L"?m.local:m.visitante})${e.pen?" de penalti":""}${e.pp?" en propia puerta":""}`).join("; "));
   const d=await datosH2H(m);
   if(!d)out.push("HISTORIAL: no disponible para este partido. Si te preguntan por enfrentamientos anteriores, estadísticas o la ida, di que la guía no tiene ese dato; NO lo inventes ni lo saques de tu memoria.");
   if(d){
@@ -1614,7 +1615,7 @@ function refrescar(forzar){
 }
 setInterval(()=>refrescar(false),30e3);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){refrescar(Date.now()-ultima>Math.min(cadaCuanto(),5*60e3));render()}});
-const firmaFicha=x=>JSON.stringify([x.marcador,x.estado,(x.eventos||[]).length,x.canales,x.inicio,x.horaPendiente,x.provisional]);
+const firmaFicha=x=>JSON.stringify([x.marcador,x.estado,(x.eventos||[]).length,(x.goles||[]).length,x.canales,x.inicio,x.horaPendiente,x.provisional]);
 let fichaPintada="";
 /* Si la ficha de un partido está abierta y cambia su marcador, estado o canal, se repinta sin moverla. */
 function refrescarFicha(){

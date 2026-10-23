@@ -453,6 +453,55 @@ def leer_espn_conference(hoy):
     return {"partidos": partidos, "tabla": tabla, "ronda": ronda}
 
 
+ESPN_LIGAS = {1: "esp.1", 2: "esp.2", 3: "esp.copa_del_rey", 4: "uefa.champions", 6: "uefa.europa.conf"}
+
+
+def eventos_espn(c):
+    """Goles y rojas de un partido de ESPN: [{t, min, seg, j, lado, pen, pp}] (lado L = local, V = visitante)."""
+    eqs = c.get("competitors", [])
+    ids = {str((t.get("team") or {}).get("id", "")): ("L" if t.get("homeAway") == "home" else "V") for t in eqs}
+    out = []
+    for e in c.get("details", []) or []:
+        if e.get("shootout") or not (e.get("scoringPlay") or e.get("redCard")):
+            continue
+        lado = ids.get(str((e.get("team") or {}).get("id", "")))
+        if not lado:
+            continue
+        j = (e.get("athletesInvolved") or [{}])[0]
+        out.append({"t": "g" if e.get("scoringPlay") else "r", "min": (e.get("clock") or {}).get("displayValue", ""),
+                    "seg": int((e.get("clock") or {}).get("value") or 0), "j": j.get("displayName") or j.get("shortName") or "",
+                    "lado": lado, "pen": bool(e.get("penaltyKick")), "pp": bool(e.get("ownGoal"))})
+    return sorted(out, key=lambda x: x["seg"])
+
+
+def leer_espn_goles(hoy):
+    """Partidos terminados en los últimos 3 días en ESPN: [(liga, local, visitante, marcador, eventos)]."""
+    salida = []
+    for liga, codigo in ESPN_LIGAS.items():
+        for k in range(0, 4):
+            dia = hoy - dt.timedelta(days=k)
+            txt = get(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{codigo}/scoreboard?dates={dia:%Y%m%d}", f"espn_{codigo}_{k}.json")
+            try:
+                evs = json.loads(txt).get("events", []) if txt else []
+            except Exception:  # noqa: BLE001
+                evs = []
+            for ev in evs:
+                ty = (ev.get("status") or {}).get("type") or {}
+                if ty.get("state") != "post":
+                    continue
+                c = (ev.get("competitions") or [{}])[0]
+                h = next((t for t in c.get("competitors", []) if t.get("homeAway") == "home"), None)
+                v = next((t for t in c.get("competitors", []) if t.get("homeAway") == "away"), None)
+                if not h or not v:
+                    continue
+                try:
+                    sc = [int(h["score"]), int(v["score"])]
+                except Exception:  # noqa: BLE001
+                    continue
+                salida.append((liga, h["team"]["displayName"], v["team"]["displayName"], sc, eventos_espn(c)))
+    return salida
+
+
 RFEF = os.path.join(RAIZ, "data", "h2h", "rfef.json")
 
 
@@ -784,7 +833,27 @@ def main():
     elif filas:
         log("⚠ Clasificación de la Champions incompleta o no cuadra: se deja la anterior")
 
-    # ---- 5. Conference League: resultados y clasificación de ESPN
+    # ---- 5. Goleadores de los partidos terminados (ESPN): se guardan para que sigan en la ficha
+    con_goles, sin_pareja = 0, []
+    for liga, local, visitante, sc, evs in leer_espn_goles(hoy):
+        li, vi = eq.buscar(local, liga, crear=False), eq.buscar(visitante, liga, crear=False)
+        m = por_clave.get((liga, li, vi)) if li and vi else None
+        if not m:
+            sin_pareja.append(f"{local} – {visitante}")
+            continue
+        goles = [e for e in evs if e["t"] == "g"]
+        # Solo si cuadran con el marcador (ESPN a veces tarda en poner algún goleador)
+        if len([g for g in goles if g["lado"] == "L"]) != sc[0] or len([g for g in goles if g["lado"] == "V"]) != sc[1]:
+            continue
+        if m.get("goles") != evs:
+            m["goles"] = evs
+            con_goles += 1
+    if con_goles:
+        log(f"Goleadores guardados en {con_goles} partidos")
+    if sin_pareja:
+        log("ESPN: partidos terminados sin pareja en la guía (otras ligas o nombres distintos): " + "; ".join(sin_pareja[:15]))
+
+    # ---- 6. Conference League: resultados y clasificación de ESPN
     for x in conf["partidos"]:
         li, vi = eq.buscar(x["local"], 6, crear=False), eq.buscar(x["visitante"], 6, crear=False)
         m = por_clave.get((6, li, vi)) if li and vi else None
