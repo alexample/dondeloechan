@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-23T21:07:23+02:00",
+ "actualizado": "2026-10-23T21:26:17+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -3166,7 +3166,59 @@
    "provisional": false,
    "visitante": "CD Lugo",
    "visitanteAbbr": "LUG",
-   "visitanteId": "cd-lugo"
+   "visitanteId": "cd-lugo",
+   "marcador": [
+    4,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "13'",
+     "seg": 780,
+     "j": "Ekain Azkune",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3780,
+     "j": "Alan Godoy",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "70'",
+     "seg": 4200,
+     "j": "Jordi Pola",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4920,
+     "j": "Unai Garcia",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+2'",
+     "seg": 5412,
+     "j": "Luca Sangalli",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-11-gra-vll",
@@ -7489,9 +7541,37 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-23T21:07:23+02:00",
-  "cambio": "2026-10-23T21:07:23+02:00",
+  "comprobado": "2026-10-23T21:26:17+02:00",
+  "cambio": "2026-10-23T21:26:17+02:00",
   "historial": [
+   {
+    "hora": "2026-10-23T21:26:17+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Real Unión 4-1 CD Lugo"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-9-real-union-cd-lugo",
+       "t": "Real Unión 4-1 CD Lugo"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-23T21:07:23+02:00",
     "nuevos": 0,
@@ -7963,27 +8043,6 @@
    },
    {
     "hora": "2026-10-23T04:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-23T03:29:51+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
