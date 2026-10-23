@@ -205,7 +205,7 @@ async function rfefFotmob(ctx) {
       const x = { grupo: /2/.test(L.name || "") ? "2" : "1", local: (m.home || {}).name || "", visitante: (m.away || {}).name || "",
         gl: (m.home || {}).score, gv: (m.away || {}).score, estado,
         detalle: st.cancelled ? "Aplazado" : st.finished ? "Final" : /HT|desc/i.test(corto) ? "Descanso" : "En juego",
-        reloj: /^\d/.test(corto) ? corto.replace(/['’]+$/, "") + "'" : "", parte: halfs.secondHalfStarted ? 2 : 1, eventos: [] };
+        reloj: /\d/.test(corto) ? corto.replace(/[^\d+]/g, "") + "'" : "", parte: halfs.secondHalfStarted ? 2 : 1, eventos: [] };
       if ((x.gl || 0) + (x.gv || 0) > 0) {
         try { x.eventos = fmEventos(await fmGet(`/matchDetails?matchId=${m.id}`, ctx, st.finished ? 3600 : 60)); } catch (e) { }
       }
