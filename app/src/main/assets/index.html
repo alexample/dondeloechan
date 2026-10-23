@@ -708,7 +708,7 @@ function pintarMenu(){
       <div class="opc col"><span><b>Goles</b><small>Mientras se juega un partido de tus equipos, un aviso por cada gol, con el goleador y el minuto.</small></span>
         <span class="mins" role="group" aria-label="Avisos de gol">${[["no","No avisar"],["mios","Los de mis equipos"],["todos","Todos los del partido"]].map(([k,n])=>`<button type="button" data-goles="${k}" aria-pressed="${AJ.goles===k}"${dis}>${n}</button>`).join("")}</span></div>
       <label class="opc"><span><b>Resultado final</b><small>Al acabar el partido, el resultado con los goleadores.</small></span><input class="sw" type="checkbox" data-aj="final"${AJ.final?" checked":""}${dis}></label>
-      ${app&&(AJ.goles!=="no"||AJ.final)?`<p class="note" style="margin-top:8px">Durante el partido verás una notificación fija con el marcador: es la que permite seguirlo en directo con la app cerrada. Desaparece al acabar.</p>`:""}
+      ${app&&(AJ.goles!=="no"||AJ.final)?`<p class="note" style="margin-top:8px">Mientras se juega, Android exige una notificación de la app: va plegada abajo del todo, sin sonido ni icono y sin marcadores («Avisos de gol activos»). Desaparece al acabar.</p>`:""}
     </section>
     <section>
       <h3>Vuelve el fútbol</h3>

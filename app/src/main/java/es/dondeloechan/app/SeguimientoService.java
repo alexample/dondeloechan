@@ -44,7 +44,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class SeguimientoService extends Service {
 
-    static final String CANAL_DIRECTO = "partido_en_directo";
+    // Notificación obligatoria del servicio: mínima y sin marcadores (los avisos útiles son los de cada gol).
+    static final String CANAL_DIRECTO = "seguimiento_silencioso";
     static final String CANAL_GOLES = "goles_y_final";
     static final String API = "https://dondeloechan-ia.alexample.workers.dev/partido";
     private static final int ID_FIJA = 7301;
@@ -72,8 +73,9 @@ public class SeguimientoService extends Service {
         if (Build.VERSION.SDK_INT >= 26) {
             NotificationManager nm = c.getSystemService(NotificationManager.class);
             if (nm == null) return;
-            NotificationChannel d = new NotificationChannel(CANAL_DIRECTO, "Partido en directo", NotificationManager.IMPORTANCE_LOW);
-            d.setDescription("Marcador en curso de los partidos de tus equipos mientras se juegan.");
+            nm.deleteNotificationChannel("partido_en_directo");   // la de antes, con marcadores
+            NotificationChannel d = new NotificationChannel(CANAL_DIRECTO, "Seguimiento de goles (silencioso)", NotificationManager.IMPORTANCE_MIN);
+            d.setDescription("Android exige una notificación mientras la app vigila los partidos de tus equipos para avisarte de los goles. Va plegada abajo, sin sonido ni icono.");
             d.setShowBadge(false);
             NotificationChannel g = new NotificationChannel(CANAL_GOLES, "Goles y resultado final", NotificationManager.IMPORTANCE_HIGH);
             g.setDescription("Aviso de cada gol y del resultado final de los partidos de tus equipos.");
@@ -91,7 +93,7 @@ public class SeguimientoService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         try {
-            ServiceCompat.startForeground(this, ID_FIJA, fija("Siguiendo el partido…"),
+            ServiceCompat.startForeground(this, ID_FIJA, fija(null),
                     Build.VERSION.SDK_INT >= 29 ? ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC : 0);
         } catch (Exception e) {
             stopSelf();
@@ -198,9 +200,7 @@ public class SeguimientoService extends Service {
             }
             for (String id : acabados) seguidos.remove(id);
             if (seguidos.isEmpty()) { principal.post(this::parar); return; }
-            StringBuilder t = new StringBuilder();
-            for (Seguido s : seguidos.values()) { if (t.length() > 0) t.append("\n"); t.append(s.linea); }
-            NotificationManagerCompat.from(this).notify(ID_FIJA, fija(t.toString()));
+            NotificationManagerCompat.from(this).notify(ID_FIJA, fija(null));
         } catch (Exception ignored) { }
     }
 
@@ -228,17 +228,18 @@ public class SeguimientoService extends Service {
         }
     }
 
-    private Notification fija(String texto) {
+    private Notification fija(String ignorado) {
         Intent abrir = new Intent(this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        if (!seguidos.isEmpty()) abrir.putExtra("partido", seguidos.keySet().iterator().next());
         PendingIntent pi = PendingIntent.getActivity(this, ID_FIJA, abrir, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-        String primera = texto.contains("\n") ? texto.substring(0, texto.indexOf('\n')) : texto;
+        int n = Math.max(1, seguidos.size());
         return new NotificationCompat.Builder(this, CANAL_DIRECTO)
                 .setSmallIcon(R.drawable.ic_aviso)
                 .setColor(0xFF1F5E3B)
-                .setContentTitle("En directo")
-                .setContentText(primera)
-                .setStyle(new NotificationCompat.BigTextStyle().bigText(texto))
+                .setContentTitle("Avisos de gol activos")
+                .setContentText(n == 1 ? "Pendiente del partido de tu equipo" : "Pendiente de " + n + " partidos de tus equipos")
+                .setPriority(NotificationCompat.PRIORITY_MIN)
+                .setCategory(NotificationCompat.CATEGORY_SERVICE)
+                .setShowWhen(false)
                 .setOngoing(true)
                 .setOnlyAlertOnce(true)
                 .setSilent(true)
