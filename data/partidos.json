@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-23T08:37:36+02:00",
+ "actualizado": "2026-10-23T17:07:25+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -1191,7 +1191,7 @@
      "t": "g",
      "min": "45'+2'",
      "seg": 2700,
-     "j": "Ronald Araújo",
+     "j": "Ronald Araujo",
      "lado": "L",
      "pen": false,
      "pp": false
@@ -7486,9 +7486,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-23T16:07:22+02:00",
-  "cambio": "2026-10-23T08:37:36+02:00",
+  "comprobado": "2026-10-23T17:07:25+02:00",
+  "cambio": "2026-10-23T17:07:25+02:00",
   "historial": [
+   {
+    "hora": "2026-10-23T17:07:25+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-23T16:07:22+02:00",
     "nuevos": 0,
@@ -7962,71 +7983,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T23:07:21+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 8,
-    "tablas": [
-     "Conference"
-    ],
-    "detalle": [
-     "Resultado: AGF Aarhus 1-1 Klubi Sportiv Egnatia",
-     "Resultado: Ajax 2-0 Atalanta",
-     "Resultado: AS Monaco 3-0 Freiburg",
-     "Resultado: Borac Banja Luka 2-0 KuPS",
-     "Resultado: SC Braga 2-0 Gent",
-     "Resultado: FC Midtjylland 0-1 Sint-Truiden VV",
-     "Resultado: FC Thun 0-1 Hajduk Split",
-     "Resultado: Lincoln Red Imps 1-4 Twente"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-6-fase-liga-j2-agf-aarhus-klubi-sportiv-egnatia",
-       "t": "AGF Aarhus 1-1 Klubi Sportiv Egnatia"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-ajax-atalanta",
-       "t": "Ajax 2-0 Atalanta"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-as-monaco-freiburg",
-       "t": "AS Monaco 3-0 Freiburg"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-borac-banja-luka-kups",
-       "t": "Borac Banja Luka 2-0 KuPS"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-sc-braga-gent",
-       "t": "SC Braga 2-0 Gent"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fc-midtjylland-sint-truiden-vv",
-       "t": "FC Midtjylland 0-1 Sint-Truiden VV"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fc-thun-hajduk-split",
-       "t": "FC Thun 0-1 Hajduk Split"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-lincoln-red-imps-twente",
-       "t": "Lincoln Red Imps 1-4 Twente"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
