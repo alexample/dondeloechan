@@ -7486,9 +7486,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-23T14:07:20+02:00",
+  "comprobado": "2026-10-23T15:07:24+02:00",
   "cambio": "2026-10-23T08:37:36+02:00",
   "historial": [
+   {
+    "hora": "2026-10-23T15:07:24+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-23T14:07:20+02:00",
     "nuevos": 0,
@@ -8012,46 +8033,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T21:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 3,
-    "tablas": [
-     "Conference"
-    ],
-    "detalle": [
-     "Resultado: Inter Club d'Escaldes 1-3 FCU Craiova 1948",
-     "Resultado: Crvena Zvezda 2-2 København",
-     "Resultado: Trabzonspor 2-0 Hearts"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-6-fase-liga-j2-inter-club-d-escaldes-fcu-craiova-1948",
-       "t": "Inter Club d'Escaldes 1-3 FCU Craiova 1948"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-crvena-zvezda-kobenhavn",
-       "t": "Crvena Zvezda 2-2 København"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-trabzonspor-hearts",
-       "t": "Trabzonspor 2-0 Hearts"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
