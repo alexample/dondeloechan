@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-23T08:36:21+02:00",
+ "actualizado": "2026-10-23T08:37:36+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -19,7 +19,27 @@
    ],
    "provisional": false,
    "visitante": "Córdoba CF",
-   "visitanteId": "cor"
+   "visitanteId": "cor",
+   "goles": [
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4938,
+     "j": "Eder García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Álvaro Morata",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-9-dep-lev",
@@ -39,7 +59,27 @@
    ],
    "provisional": false,
    "visitante": "Levante UD",
-   "visitanteId": "lev"
+   "visitanteId": "lev",
+   "goles": [
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3724,
+     "j": "Bil Nsongo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4905,
+     "j": "Dani Requena",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-9-esp-atm",
@@ -58,7 +98,18 @@
    ],
    "provisional": false,
    "visitante": "Atlético de Madrid",
-   "visitanteId": "atm"
+   "visitanteId": "atm",
+   "goles": [
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5337,
+     "j": "Álex Baena",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-10-rsb-alm",
@@ -78,7 +129,63 @@
    ],
    "provisional": false,
    "visitante": "UD Almería",
-   "visitanteId": "alm"
+   "visitanteId": "alm",
+   "goles": [
+    {
+     "t": "g",
+     "min": "23'",
+     "seg": 1344,
+     "j": "Brian Cipenga",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2268,
+     "j": "Miguel de la Fuente",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3218,
+     "j": "Sergio Arribas",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "58'",
+     "seg": 3451,
+     "j": "Lander Astiazarán",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "Arkaitz Mariezkurrena",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+6'",
+     "seg": 5400,
+     "j": "Iñaki Rupérez",
+     "lado": "V",
+     "pen": false,
+     "pp": true
+    }
+   ]
   },
   {
    "id": "2627-1-9-vil-elc",
@@ -97,7 +204,8 @@
    ],
    "provisional": false,
    "visitante": "Elche CF",
-   "visitanteId": "elc"
+   "visitanteId": "elc",
+   "goles": []
   },
   {
    "id": "2627-2-10-eib-mll",
@@ -117,7 +225,36 @@
    ],
    "provisional": false,
    "visitante": "RCD Mallorca",
-   "visitanteId": "mll"
+   "visitanteId": "mll",
+   "goles": [
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3105,
+     "j": "Fuentes",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "81'",
+     "seg": 4830,
+     "j": "John Donald",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+4'",
+     "seg": 5400,
+     "j": "Iván Gil",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-9-bet-bar",
@@ -136,7 +273,81 @@
    ],
    "provisional": false,
    "visitante": "FC Barcelona",
-   "visitanteId": "bar"
+   "visitanteId": "bar",
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 555,
+     "j": "Lamine Yamal",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "27'",
+     "seg": 1585,
+     "j": "Valentín Gómez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2421,
+     "j": "Rodri",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "51'",
+     "seg": 3060,
+     "j": "Gabriel Jesus",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "53'",
+     "seg": 3177,
+     "j": "Abde Ezzalzouli",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "54'",
+     "seg": 3226,
+     "j": "Facundo Bernal",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3718,
+     "j": "Eric García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4832,
+     "j": "Dani Olmo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-10-spo-alb",
@@ -156,7 +367,36 @@
    ],
    "provisional": false,
    "visitante": "Albacete BP",
-   "visitanteId": "alb"
+   "visitanteId": "alb",
+   "goles": [
+    {
+     "t": "g",
+     "min": "17'",
+     "seg": 986,
+     "j": "Alejo Sarco",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5144,
+     "j": "Jesús Vallejo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "César Gelabert",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-9-val-ath",
@@ -177,7 +417,8 @@
    ],
    "provisional": false,
    "visitante": "Athletic Club",
-   "visitanteId": "ath"
+   "visitanteId": "ath",
+   "goles": []
   },
   {
    "id": "2627-2-10-lpa-cas",
@@ -197,7 +438,36 @@
    ],
    "provisional": false,
    "visitante": "CD Castellón",
-   "visitanteId": "cas"
+   "visitanteId": "cas",
+   "goles": [
+    {
+     "t": "g",
+     "min": "18'",
+     "seg": 1028,
+     "j": "Israel Suero",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "22'",
+     "seg": 1308,
+     "j": "Agustín Sienra",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3222,
+     "j": "Pablo Santiago",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-9-osa-rac",
@@ -216,7 +486,27 @@
    ],
    "provisional": false,
    "visitante": "Real Racing Club",
-   "visitanteId": "rac"
+   "visitanteId": "rac",
+   "goles": [
+    {
+     "t": "g",
+     "min": "9'",
+     "seg": 488,
+     "j": "Ante Budimir",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5256,
+     "j": "Asier Osambela",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-10-ceu-ovi",
@@ -236,7 +526,36 @@
    ],
    "provisional": false,
    "visitante": "Real Oviedo",
-   "visitanteId": "ovi"
+   "visitanteId": "ovi",
+   "goles": [
+    {
+     "t": "g",
+     "min": "23'",
+     "seg": 1342,
+     "j": "Samu Rodríguez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3605,
+     "j": "Carlos Domínguez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4979,
+     "j": "Alejandro Camacho",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-9-cel-ala",
@@ -255,7 +574,36 @@
    ],
    "provisional": false,
    "visitante": "Deportivo Alavés",
-   "visitanteId": "ala"
+   "visitanteId": "ala",
+   "goles": [
+    {
+     "t": "g",
+     "min": "53'",
+     "seg": 3171,
+     "j": "Ferran Jutglà",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "71'",
+     "seg": 4211,
+     "j": "Javi Rodríguez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5165,
+     "j": "Hugo Novoa",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-10-gra-cad",
@@ -275,7 +623,27 @@
    ],
    "provisional": false,
    "visitante": "Cádiz CF",
-   "visitanteId": "cad"
+   "visitanteId": "cad",
+   "goles": [
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2969,
+     "j": "Gerard Gumbau",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 4005,
+     "j": "Jorge Pascual Medina",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-9-mal-rso",
@@ -294,7 +662,72 @@
    ],
    "provisional": false,
    "visitante": "Real Sociedad",
-   "visitanteId": "rso"
+   "visitanteId": "rso",
+   "goles": [
+    {
+     "t": "g",
+     "min": "3'",
+     "seg": 174,
+     "j": "Takefusa Kubo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "26'",
+     "seg": 1538,
+     "j": "Orri Óskarsson",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3209,
+     "j": "Adrián Niño",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3530,
+     "j": "Mikel Oyarzabal",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "66'",
+     "seg": 3914,
+     "j": "Pablo Martínez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 3993,
+     "j": "Mikel Oyarzabal",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "73'",
+     "seg": 4358,
+     "j": "Gonçalo Guedes",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-10-gir-and",
@@ -314,7 +747,27 @@
    ],
    "provisional": false,
    "visitante": "FC Andorra",
-   "visitanteId": "and"
+   "visitanteId": "and",
+   "goles": [
+    {
+     "t": "g",
+     "min": "5'",
+     "seg": 252,
+     "j": "Bryan Gil",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "31'",
+     "seg": 1835,
+     "j": "Vladyslav Vanat",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-10-vll-eld",
@@ -334,7 +787,63 @@
    ],
    "provisional": false,
    "visitante": "CD Eldense",
-   "visitanteId": "eld"
+   "visitanteId": "eld",
+   "goles": [
+    {
+     "t": "g",
+     "min": "23'",
+     "seg": 1378,
+     "j": "Adrián Arnun",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2444,
+     "j": "Jorge Rastrojo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45'+1'",
+     "seg": 2700,
+     "j": "Aingeru Olabarrieta",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "72'",
+     "seg": 4276,
+     "j": "Víctor Fernández",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4922,
+     "j": "Victor Barberà",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "Mariano Carmona",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-9-rma-sev",
@@ -353,7 +862,54 @@
    ],
    "provisional": false,
    "visitante": "Sevilla FC",
-   "visitanteId": "sev"
+   "visitanteId": "sev",
+   "goles": [
+    {
+     "t": "g",
+     "min": "30'",
+     "seg": 1756,
+     "j": "Arda Güler",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "37'",
+     "seg": 2185,
+     "j": "Kylian Mbappé",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3752,
+     "j": "Kylian Mbappé",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4750,
+     "j": "Manu Bueno",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4894,
+     "j": "Yan Diomande",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-10-bur-sab",
@@ -373,7 +929,18 @@
    ],
    "provisional": false,
    "visitante": "CE Sabadell",
-   "visitanteId": "sab"
+   "visitanteId": "sab",
+   "goles": [
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3752,
+     "j": "Curro",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-10-clb-ten",
@@ -393,7 +960,27 @@
    ],
    "provisional": false,
    "visitante": "CD Tenerife",
-   "visitanteId": "ten"
+   "visitanteId": "ten",
+   "goles": [
+    {
+     "t": "g",
+     "min": "28'",
+     "seg": 1656,
+     "j": "Alvaro Marin",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2947,
+     "j": "Nacho Gil",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-9-get-ray",
@@ -412,7 +999,36 @@
    ],
    "provisional": false,
    "visitante": "Rayo Vallecano",
-   "visitanteId": "ray"
+   "visitanteId": "ray",
+   "goles": [
+    {
+     "t": "g",
+     "min": "11'",
+     "seg": 611,
+     "j": "Álvaro García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "28'",
+     "seg": 1670,
+     "j": "Djené",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3359,
+     "j": "Martín Satriano",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-fenerbahce-slavia-praga",
@@ -6870,9 +7486,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-23T08:36:21+02:00",
-  "cambio": "2026-10-23T08:36:21+02:00",
+  "comprobado": "2026-10-23T08:37:36+02:00",
+  "cambio": "2026-10-23T08:37:36+02:00",
   "historial": [
+   {
+    "hora": "2026-10-23T08:37:36+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-23T08:36:21+02:00",
     "nuevos": 0,
@@ -7595,22 +8232,6 @@
    },
    {
     "hora": "2026-10-22T16:07:22+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T15:07:20+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
