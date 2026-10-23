@@ -7486,9 +7486,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-23T13:07:20+02:00",
+  "comprobado": "2026-10-23T14:07:20+02:00",
   "cambio": "2026-10-23T08:37:36+02:00",
   "historial": [
+   {
+    "hora": "2026-10-23T14:07:20+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-23T13:07:20+02:00",
     "nuevos": 0,
@@ -8039,230 +8060,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T20:54:14+02:00",
-    "nuevos": 18,
-    "horas": 0,
-    "canales": 18,
-    "resultados": 7,
-    "tablas": [
-     "Conference"
-    ],
-    "detalle": [
-     "Nuevo partido: FC Kairat – Panathinaikos",
-     "Nuevo partido: Getafe CF – Lugano",
-     "Nuevo partido: Trabzonspor – Hearts",
-     "Nuevo partido: FKB Jablonec – Brighton",
-     "Nuevo partido: Nordsjælland – CSKA Sofia",
-     "Nuevo partido: Crvena Zvezda – København",
-     "Nuevo partido: Inter Club d'Escaldes – FCU Craiova 1948",
-     "Nuevo partido: Pafos FC – Riga FC",
-     "Nuevo partido: FC Iberia 1999 – Mjällby AIF",
-     "Nuevo partido: Kauno Žalgiris – SK Brann",
-     "Canal confirmado: FC Kairat – Panathinaikos",
-     "Canal confirmado: Getafe CF – Lugano",
-     "Canal confirmado: Trabzonspor – Hearts",
-     "Canal confirmado: FKB Jablonec – Brighton",
-     "Canal confirmado: Nordsjælland – CSKA Sofia",
-     "Canal confirmado: Crvena Zvezda – København",
-     "Canal confirmado: Inter Club d'Escaldes – FCU Craiova 1948",
-     "Canal confirmado: Pafos FC – Riga FC",
-     "Canal confirmado: FC Iberia 1999 – Mjällby AIF",
-     "Canal confirmado: Kauno Žalgiris – SK Brann",
-     "Canal confirmado: Ajax – Atalanta",
-     "Canal confirmado: SC Braga – Gent",
-     "Canal confirmado: AS Monaco – Freiburg",
-     "Canal confirmado: FC Thun – Hajduk Split",
-     "Canal confirmado: FC Midtjylland – Sint-Truiden VV",
-     "Canal confirmado: Lincoln Red Imps – Twente",
-     "Canal confirmado: AGF Aarhus – Klubi Sportiv Egnatia",
-     "Canal confirmado: Borac Banja Luka – KuPS",
-     "Resultado: FC Kairat 1-5 Panathinaikos",
-     "Resultado: Nordsjælland 2-2 CSKA Sofia"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-6-fase-liga-j2-fc-kairat-panathinaikos",
-       "t": "FC Kairat 1-5 Panathinaikos"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-nordsjaelland-cska-sofia",
-       "t": "Nordsjælland 2-2 CSKA Sofia"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-get-lugano",
-       "t": "Getafe CF 2-5 Lugano"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fc-iberia-1999-mjallby-aif",
-       "t": "FC Iberia 1999 1-1 Mjällby AIF"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fkb-jablonec-brighton",
-       "t": "FKB Jablonec 0-0 Brighton"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-kauno-zalgiris-sk-brann",
-       "t": "Kauno Žalgiris 1-4 SK Brann"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-pafos-fc-riga-fc",
-       "t": "Pafos FC 1-1 Riga FC"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-6-fase-liga-j2-fc-kairat-panathinaikos",
-       "t": "FC Kairat – Panathinaikos · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-get-lugano",
-       "t": "Getafe CF – Lugano · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-trabzonspor-hearts",
-       "t": "Trabzonspor – Hearts · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fkb-jablonec-brighton",
-       "t": "FKB Jablonec – Brighton · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-nordsjaelland-cska-sofia",
-       "t": "Nordsjælland – CSKA Sofia · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-crvena-zvezda-kobenhavn",
-       "t": "Crvena Zvezda – København · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-inter-club-d-escaldes-fcu-craiova-1948",
-       "t": "Inter Club d'Escaldes – FCU Craiova 1948 · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-pafos-fc-riga-fc",
-       "t": "Pafos FC – Riga FC · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fc-iberia-1999-mjallby-aif",
-       "t": "FC Iberia 1999 – Mjällby AIF · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-kauno-zalgiris-sk-brann",
-       "t": "Kauno Žalgiris – SK Brann · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-ajax-atalanta",
-       "t": "Ajax – Atalanta · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-sc-braga-gent",
-       "t": "SC Braga – Gent · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-as-monaco-freiburg",
-       "t": "AS Monaco – Freiburg · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fc-thun-hajduk-split",
-       "t": "FC Thun – Hajduk Split · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fc-midtjylland-sint-truiden-vv",
-       "t": "FC Midtjylland – Sint-Truiden VV · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-lincoln-red-imps-twente",
-       "t": "Lincoln Red Imps – Twente · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-agf-aarhus-klubi-sportiv-egnatia",
-       "t": "AGF Aarhus – Klubi Sportiv Egnatia · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-borac-banja-luka-kups",
-       "t": "Borac Banja Luka – KuPS · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-6-fase-liga-j2-fc-kairat-panathinaikos",
-       "t": "FC Kairat – Panathinaikos (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-get-lugano",
-       "t": "Getafe CF – Lugano (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-trabzonspor-hearts",
-       "t": "Trabzonspor – Hearts (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fkb-jablonec-brighton",
-       "t": "FKB Jablonec – Brighton (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-nordsjaelland-cska-sofia",
-       "t": "Nordsjælland – CSKA Sofia (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-crvena-zvezda-kobenhavn",
-       "t": "Crvena Zvezda – København (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-inter-club-d-escaldes-fcu-craiova-1948",
-       "t": "Inter Club d'Escaldes – FCU Craiova 1948 (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-pafos-fc-riga-fc",
-       "t": "Pafos FC – Riga FC (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fc-iberia-1999-mjallby-aif",
-       "t": "FC Iberia 1999 – Mjällby AIF (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-kauno-zalgiris-sk-brann",
-       "t": "Kauno Žalgiris – SK Brann (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-ajax-atalanta",
-       "t": "Ajax – Atalanta (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-sc-braga-gent",
-       "t": "SC Braga – Gent (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-as-monaco-freiburg",
-       "t": "AS Monaco – Freiburg (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fc-thun-hajduk-split",
-       "t": "FC Thun – Hajduk Split (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-fc-midtjylland-sint-truiden-vv",
-       "t": "FC Midtjylland – Sint-Truiden VV (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-lincoln-red-imps-twente",
-       "t": "Lincoln Red Imps – Twente (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-agf-aarhus-klubi-sportiv-egnatia",
-       "t": "AGF Aarhus – Klubi Sportiv Egnatia (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j2-borac-banja-luka-kups",
-       "t": "Borac Banja Luka – KuPS (Conference)"
-      }
-     ]
     }
    }
   ]
