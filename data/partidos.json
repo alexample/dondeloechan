@@ -7486,9 +7486,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-23T11:07:20+02:00",
+  "comprobado": "2026-10-23T12:07:21+02:00",
   "cambio": "2026-10-23T08:37:36+02:00",
   "historial": [
+   {
+    "hora": "2026-10-23T12:07:21+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-23T11:07:20+02:00",
     "nuevos": 0,
@@ -8246,22 +8267,6 @@
        "t": "UD Pinatar – Elche · confirmado"
       }
      ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T19:07:22+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
      "horas": [],
      "nuevos": []
     }
