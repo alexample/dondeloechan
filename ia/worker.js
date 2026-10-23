@@ -15,7 +15,7 @@ const MODELOS = ["@cf/meta/llama-3.3-70b-instruct-fp8-fast", "@cf/meta/llama-3.1
 const ORIGENES = ["https://alexample.github.io", "https://appassets.androidplatform.net"];
 const MAX_PREGUNTA = 500;
 // Horas UTC en que el cron también lanza el robot de RunningSpain ([3] = 05:00 en verano). null = cada hora (pruebas).
-const RUNNINGSPAIN_HORAS = null;
+const RUNNINGSPAIN_HORAS = [3];
 // Relé hacia MacroDroid para RunningSpain: el servidor de MacroDroid no entrega al móvil las llamadas
 // que salen de GitHub, así que el robot llama aquí y el worker reenvía. Solo reenvía a la URL cuya
 // huella SHA-256 coincide (la URL real no está en el código, que es público).
