@@ -7624,9 +7624,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T00:07:20+02:00",
+  "comprobado": "2026-10-24T00:08:38+02:00",
   "cambio": "2026-10-24T00:07:20+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T00:08:38+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T00:07:20+02:00",
     "nuevos": 0,
@@ -8136,27 +8157,6 @@
    },
    {
     "hora": "2026-10-23T08:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-23T07:07:19+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
