@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-23T22:07:21+02:00",
+ "actualizado": "2026-10-23T23:07:21+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -3232,7 +3232,50 @@
    "local": "Granada CF",
    "localId": "gra",
    "visitante": "Real Valladolid",
-   "visitanteId": "vll"
+   "visitanteId": "vll",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "14'",
+     "seg": 816,
+     "j": "Sergio Rodelas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3417,
+     "j": "Iván Garriel",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 4001,
+     "j": "Jorge Pascual Medina",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+7'",
+     "seg": 5400,
+     "j": "David Torres",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-10-ala-mal",
@@ -3247,7 +3290,32 @@
    "localId": "ala",
    "nota": "Se puede ver gratis en la app de DAZN creando una cuenta.",
    "visitante": "Málaga CF",
-   "visitanteId": "mal"
+   "visitanteId": "mal",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "44'",
+     "seg": 2617,
+     "j": "Adrián Niño",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5307,
+     "j": "Aitor Mañas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-ce-europa-real-zaragoza",
@@ -5916,6 +5984,16 @@
      14
     ],
     [
+     "ala",
+     10,
+     3,
+     3,
+     4,
+     14,
+     11,
+     12
+    ],
+    [
      "cel",
      9,
      2,
@@ -5923,16 +6001,6 @@
      2,
      10,
      7,
-     11
-    ],
-    [
-     "ala",
-     10,
-     3,
-     2,
-     5,
-     13,
-     11,
      11
     ],
     [
@@ -6036,16 +6104,6 @@
      7
     ],
     [
-     "mal",
-     10,
-     1,
-     4,
-     5,
-     7,
-     18,
-     7
-    ],
-    [
      "val",
      9,
      1,
@@ -6054,6 +6112,16 @@
      6,
      15,
      6
+    ],
+    [
+     "mal",
+     10,
+     0,
+     5,
+     5,
+     7,
+     19,
+     5
     ]
    ]
   },
@@ -7540,9 +7608,44 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-23T22:07:21+02:00",
-  "cambio": "2026-10-23T22:07:21+02:00",
+  "comprobado": "2026-10-23T23:07:21+02:00",
+  "cambio": "2026-10-23T23:07:21+02:00",
   "historial": [
+   {
+    "hora": "2026-10-23T23:07:21+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 2,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Resultado: Deportivo Alavés 1-1 Málaga CF",
+     "Resultado: Granada CF 2-1 Real Valladolid"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-10-ala-mal",
+       "t": "Deportivo Alavés 1-1 Málaga CF"
+      },
+      {
+       "id": "2627-2-11-gra-vll",
+       "t": "Granada CF 2-1 Real Valladolid"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-23T22:07:21+02:00",
     "nuevos": 0,
@@ -8031,27 +8134,6 @@
    },
    {
     "hora": "2026-10-23T06:07:24+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-23T05:07:20+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
