@@ -174,6 +174,12 @@ public class MainActivity extends Activity {
             AvisosWorker.revisarYa(MainActivity.this);
         }
 
+        /** La página avisa de que un partido de tus equipos está en juego: se sigue en directo (goles y final). */
+        @JavascriptInterface
+        public void seguirPartido(String json) {
+            try { SeguimientoService.seguir(MainActivity.this, new JSONObject(json)); } catch (Exception ignored) { }
+        }
+
         /** Catálogo de canales (nombre y dial) para escribir el aviso. */
         @JavascriptInterface
         public void guardarCanales(String json) {

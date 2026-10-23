@@ -7,6 +7,9 @@
     <!-- Recordatorio 15 minutos antes del partido a la hora exacta -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <!-- Seguimiento en directo de los partidos de tus equipos (avisos de gol y de final) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
 
     <application
         android:allowBackup="true"
@@ -29,6 +32,7 @@
         </activity>
 
         <receiver android:name=".Recordatorio" android:exported="false" />
+        <service android:name=".SeguimientoService" android:exported="false" android:foregroundServiceType="dataSync" />
         <receiver android:name=".Arranque" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

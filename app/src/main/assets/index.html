@@ -676,7 +676,7 @@ function alternarFav(id,nombre){
 }
 /* ---------- Ajustes de avisos (menú lateral) ----------
    Se guardan en el navegador y, en la app, se pasan a Android para los avisos en segundo plano. */
-const AJ_DEF={canal:true,cambio:true,antes:true,min:15,vuelta:true,vhoras:12,vmin:15,vligas:[1,2,5,3,4,6]};
+const AJ_DEF={canal:true,cambio:true,antes:true,min:15,goles:"mios",final:true,vuelta:true,vhoras:12,vmin:15,vligas:[1,2,5,3,4,6]};
 let AJ={...AJ_DEF};
 try{AJ={...AJ_DEF,...JSON.parse(localStorage.getItem("dle-ajustes")||"{}")}}catch(e){}
 const enApp=()=>!!(window.AndroidApp&&window.AndroidApp.guardarFavs);
@@ -705,6 +705,10 @@ function pintarMenu(){
       <div class="opc"><span><b>Antes del partido</b><small>Recordatorio con la hora y el canal.</small>
         <span class="mins" role="group" aria-label="Minutos de antelación">${[5,15,30,60].map(n=>`<button type="button" data-min="${n}" aria-pressed="${AJ.min===n}"${dis||(!AJ.antes?" disabled":"")}>${n===60?"1 hora":n+" min"}</button>`).join("")}</span></span>
         <input class="sw" type="checkbox" data-aj="antes" aria-label="Aviso antes del partido"${AJ.antes?" checked":""}${dis}></div>
+      <div class="opc col"><span><b>Goles</b><small>Mientras se juega un partido de tus equipos, un aviso por cada gol, con el goleador y el minuto.</small></span>
+        <span class="mins" role="group" aria-label="Avisos de gol">${[["no","No avisar"],["mios","Los de mis equipos"],["todos","Todos los del partido"]].map(([k,n])=>`<button type="button" data-goles="${k}" aria-pressed="${AJ.goles===k}"${dis}>${n}</button>`).join("")}</span></div>
+      <label class="opc"><span><b>Resultado final</b><small>Al acabar el partido, el resultado con los goleadores.</small></span><input class="sw" type="checkbox" data-aj="final"${AJ.final?" checked":""}${dis}></label>
+      ${app&&(AJ.goles!=="no"||AJ.final)?`<p class="note" style="margin-top:8px">Durante el partido verás una notificación fija con el marcador: es la que permite seguirlo en directo con la app cerrada. Desaparece al acabar.</p>`:""}
     </section>
     <section>
       <h3>Vuelve el fútbol</h3>
@@ -797,6 +801,7 @@ menuEl.addEventListener("change",e=>{
   AJ[k]=e.target.checked;guardarAjustes();
   if(e.target.checked){try{if(window.AndroidApp&&window.AndroidApp.permisoAvisos)window.AndroidApp.permisoAvisos()}catch(_){}}
   pintarMenu();
+  if(k==="final"){aviso(AJ.final?"Te avisaremos del resultado final.":"Sin aviso de resultado final.");return}
   if(k==="vuelta"){aviso(AJ.vuelta?"Aviso tras un parón activado.":"Aviso tras un parón desactivado.");return}
   aviso(k==="antes"?(AJ.antes?"Aviso "+AJ.min+" min antes activado.":"Aviso antes del partido desactivado."):k==="canal"?(AJ.canal?"Aviso de canal confirmado activado.":"Aviso de canal confirmado desactivado."):(AJ.cambio?"Aviso de cambio de canal activado.":"Aviso de cambio de canal desactivado."));
 });
@@ -804,6 +809,8 @@ menuEl.addEventListener("click",e=>{
   if(e.target.id==="menu-cerrar"){cerrarMenu();return}
   if(e.target.id==="ck-pref"){cerrarMenu();setTimeout(mostrarBanner,250);return}
   if(e.target.id==="aj-permiso"){try{window.AndroidApp.permisoAvisos()}catch(_){}setTimeout(pintarMenu,1500);return}
+  const gb=e.target.closest("[data-goles]");
+  if(gb&&!gb.disabled){AJ.goles=gb.dataset.goles;guardarAjustes();const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y;aviso(AJ.goles==="no"?"Sin avisos de gol.":AJ.goles==="mios"?"Te avisaremos de cada gol de tus equipos.":"Te avisaremos de todos los goles de los partidos de tus equipos.");try{if(AJ.goles!=="no"&&window.AndroidApp&&window.AndroidApp.permisoAvisos)window.AndroidApp.permisoAvisos()}catch(_){}return}
   const vh=e.target.closest("[data-vhoras]");
   if(vh&&!vh.disabled){AJ.vhoras=+vh.dataset.vhoras;guardarAjustes();const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y;aviso("Parón: "+AJ.vhoras+" horas sin partidos.");return}
   const vm=e.target.closest("[data-vmin]");
@@ -855,6 +862,18 @@ function claseMatch(m){
   if(EUROPA.has(m.liga)&&(T[m.localId]||T[m.visitanteId]))return " m-es";
   return "";
 }
+/* App abierta durante un partido de tus equipos: que Android lo siga en directo (avisos de gol y final con la app cerrada). */
+const SEGUIDOS=new Set();
+function seguirFavsEnJuego(){
+  if(!window.AndroidApp||!window.AndroidApp.seguirPartido||!matches||!FAV.size)return;
+  if(AJ.goles==="no"&&!AJ.final)return;
+  const now=Date.now();
+  for(const m of matches){
+    if(SEGUIDOS.has(m._id)||status(m,now)!=="live"||!(FAV.has(m.localId)||FAV.has(m.visitanteId)))continue;
+    SEGUIDOS.add(m._id);
+    try{window.AndroidApp.seguirPartido(JSON.stringify({id:m._id,liga:m.liga,local:m.local,visitante:m.visitante,localId:m.localId,visitanteId:m.visitanteId,inicio:new Date(m.inicio).getTime()}))}catch(e){}
+  }
+}
 /* Pestañas con partidos en juego ahora mismo: borde rojo y «● En juego N» en lugar del subtítulo */
 function pintarVivoTabs(){
   const now=Date.now(),n={};
@@ -871,7 +890,7 @@ function pintarVivoTabs(){
 function render(){
   renderFresh();
   if(matches&&!hashHecho){hashHecho=true;setTimeout(abrirHash,0)}
-  pintarVivoTabs();
+  pintarVivoTabs();seguirFavsEnJuego();
   document.querySelectorAll(".tabs button").forEach(b=>{const on=+b.dataset.l===league;b.setAttribute("aria-selected",String(on));if(on&&b.scrollIntoView)try{b.scrollIntoView({block:"nearest",inline:"nearest"})}catch(e){}});
   const app=document.getElementById("app");
   if(matches===null){

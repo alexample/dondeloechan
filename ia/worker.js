@@ -113,6 +113,11 @@ async function vivo(request, env, ctx, origen) {
   const ligas = (u.searchParams.get("ligas") || "").split(",").filter(l => ESPN_LIGAS.has(l)).slice(0, 5);
   const fechas = (u.searchParams.get("fechas") || "").split(",").filter(f => /^\d{8}$/.test(f)).slice(0, 2);
   if (!ligas.length || !fechas.length) return json({ error: "Parámetros no válidos." }, 400, origen);
+  const out = await espnPartidos(ligas, fechas, ctx);
+  return new Response(JSON.stringify({ fuente: "ESPN", partidos: out }), { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
+}
+
+async function espnPartidos(ligas, fechas, ctx) {
   const cache = caches.default, out = [];
   await Promise.all(ligas.flatMap(liga => fechas.map(async fecha => {
     const url = `https://site.api.espn.com/apis/site/v2/sports/soccer/${liga}/scoreboard?dates=${fecha}`;
@@ -143,7 +148,28 @@ async function vivo(request, env, ctx, origen) {
         estado: ty.state || "", detalle: ty.name || "", reloj: st.displayClock || "", parte: st.period || 0, eventos });
     }
   })));
-  return new Response(JSON.stringify({ fuente: "ESPN", partidos: out }), { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
+  return out;
+}
+
+// Un partido concreto en directo (lo usa la app de Android en segundo plano para los avisos de gol y de final).
+// ?liga=1..6&fecha=AAAAMMDD&local=…&visitante=…  →  {encontrado, estado: pre|in|post, gl, gv, reloj, parte, detalle, eventos}
+const ESPN_DE_LIGA = { 1: "esp.1", 2: "esp.2", 3: "esp.copa_del_rey", 4: "uefa.champions", 6: "uefa.europa.conf" };
+const ALIAS_VIVO = { "Heart of Midlothian": "Hearts", "Red Star Belgrade": "Crvena Zvezda", "FC Copenhagen": "København" };
+async function partidoVivo(request, env, ctx) {
+  const u = new URL(request.url), liga = +u.searchParams.get("liga"), fecha = u.searchParams.get("fecha") || "";
+  const local = (u.searchParams.get("local") || "").slice(0, 60), visitante = (u.searchParams.get("visitante") || "").slice(0, 60);
+  const resp = o => new Response(JSON.stringify(o), { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" } });
+  if (!/^\d{8}$/.test(fecha) || !local || !visitante) return resp({ encontrado: false, error: "Parámetros no válidos." });
+  let lista = [];
+  if (liga === 5) {
+    lista = (await rfefFotmob(ctx)).map(x => ({ ...x, homeTeam: { name: x.local }, awayTeam: { name: x.visitante } }));
+  } else if (ESPN_DE_LIGA[liga]) {
+    lista = await espnPartidos([ESPN_DE_LIGA[liga]], [fecha], ctx);
+  }
+  const ali = t => ALIAS_VIVO[t.name] ? { ...t, name: ALIAS_VIVO[t.name], shortName: ALIAS_VIVO[t.name] } : t;
+  const x = lista.find(x => parecido(local, ali(x.homeTeam || {})) && parecido(visitante, ali(x.awayTeam || {})));
+  if (!x) return resp({ encontrado: false });
+  return resp({ encontrado: true, estado: x.estado, gl: x.gl, gv: x.gv, reloj: x.reloj || "", parte: x.parte || 0, detalle: x.detalle || "", eventos: x.eventos || [] });
 }
 
 async function macrodroid(request) {
@@ -328,6 +354,11 @@ export default {
     const origen = request.headers.get("Origin") || "";
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });
     if (request.method === "POST" && new URL(request.url).pathname === "/macrodroid") return macrodroid(request);
+    if (request.method === "GET" && new URL(request.url).pathname === "/partido") {
+      if (!ORIGENES.includes(origen) && request.headers.get("X-App") !== "dondeloechan") return json({ error: "Origen no permitido." }, 403, origen);
+      try { return await partidoVivo(request, env, ctx); }
+      catch (e) { return json({ encontrado: false, error: "No disponible ahora mismo." }, 502, origen); }
+    }
     if (request.method === "GET" && new URL(request.url).pathname === "/rfef") {
       if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
       try { return await rfefVivo(env, ctx, origen); }

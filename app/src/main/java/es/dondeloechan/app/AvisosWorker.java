@@ -113,6 +113,9 @@ public class AvisosWorker extends Worker {
         boolean avisoCanal = aj.optBoolean("canal", true);
         boolean avisoCambio = aj.optBoolean("cambio", true);
         boolean avisoAntes = aj.optBoolean("antes", true);
+        boolean seguirDirecto = !"no".equals(aj.optString("goles", "mios")) || aj.optBoolean("final", true);
+        Set<String> segAntes = new HashSet<>(p.getStringSet("alarmas_seg", new HashSet<>()));
+        Set<String> seg = new HashSet<>();
         int minAntes = aj.optInt("min", MIN_DEF);
         if (minAntes < 1 || minAntes > 180) minAntes = MIN_DEF;
         final long ANTES = minAntes * 60 * 1000L;
@@ -147,6 +150,11 @@ public class AvisosWorker extends Worker {
 
             // Recordatorio 15 minutos antes (si la hora está fijada y no se ha avisado ya para esta hora).
             String mid = m.optString("id");
+            // A la hora de inicio arranca el seguimiento en directo (avisos de gol y de resultado final).
+            if (seguirDirecto && !anulado && !m.optBoolean("horaPendiente", false)) {
+                programarSeguimiento(c, m, inicio);
+                seg.add("seg_" + mid);
+            }
             if (avisoAntes && !anulado && !m.optBoolean("horaPendiente", false) && inicio - ANTES > ahora - 60000
                     && p.getLong("rec_" + mid, 0) != inicio) {
                 programarRecordatorio(c, m, canales, catalogo, inicio, ANTES);
@@ -169,6 +177,8 @@ public class AvisosWorker extends Worker {
             ed.putString(clave, ahoraEstado);
         }
         for (String id : alarmasAntes) if (!alarmas.contains(id)) cancelarRecordatorio(c, id);
+        for (String id : segAntes) if (!seg.contains(id)) cancelarRecordatorio(c, id);
+        ed.putStringSet("alarmas_seg", seg);
         ed.putStringSet("alarmas", alarmas);
         ed.putString("favs_prev", new JSONArray(favs).toString());
         ed.apply();
@@ -253,6 +263,29 @@ public class AvisosWorker extends Worker {
                 .putExtra("inicio", inicio);
         PendingIntent pi = intentoRecordatorio(c, id, datos, PendingIntent.FLAG_UPDATE_CURRENT);
         long cuando = Math.max(inicio - ANTES, System.currentTimeMillis() + 1000);
+        try {
+            if (Build.VERSION.SDK_INT >= 31 && !am.canScheduleExactAlarms()) am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
+            else if (Build.VERSION.SDK_INT >= 23) am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
+            else am.setExact(AlarmManager.RTC_WAKEUP, cuando, pi);
+        } catch (SecurityException e) {
+            am.set(AlarmManager.RTC_WAKEUP, cuando, pi);
+        }
+    }
+
+    /** Alarma exacta a la hora de inicio de un partido de tus equipos: arranca SeguimientoService. */
+    private static void programarSeguimiento(Context c, JSONObject m, long inicio) {
+        AlarmManager am = (AlarmManager) c.getSystemService(Context.ALARM_SERVICE);
+        if (am == null) return;
+        JSONObject datos = new JSONObject();
+        try {
+            for (String k : new String[]{"id", "local", "visitante", "localId", "visitanteId"}) datos.put(k, m.optString(k));
+            datos.put("liga", m.optInt("liga"));
+            datos.put("inicio", inicio);
+        } catch (Exception ignored) { }
+        String id = "seg_" + m.optString("id");
+        Intent in = new Intent().putExtra("id", id).putExtra("tipo", "seguir").putExtra("partido", datos.toString()).putExtra("inicio", inicio);
+        PendingIntent pi = intentoRecordatorio(c, id, in, PendingIntent.FLAG_UPDATE_CURRENT);
+        long cuando = Math.max(inicio - 60000, System.currentTimeMillis() + 1000);
         try {
             if (Build.VERSION.SDK_INT >= 31 && !am.canScheduleExactAlarms()) am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
             else if (Build.VERSION.SDK_INT >= 23) am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
