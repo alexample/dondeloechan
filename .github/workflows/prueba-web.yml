@@ -1,0 +1,18 @@
+name: Prueba web (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          echo "::notice::RFEF $(curl -s -H 'Origin: https://alexample.github.io' https://dondeloechan-ia.alexample.workers.dev/rfef | head -c 900)"
+          python3 - <<'PY'
+          import urllib.request,re,html
+          for g in ["1","2"]:
+              t=urllib.request.urlopen(urllib.request.Request(f"https://www.vavel.com/es/data/primera-federacion-grupo-{g}/calendario/",headers={"User-Agent":"Mozilla/5.0"})).read().decode()
+              rows=[re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',tr))).strip() for tr in re.findall(r'<tr class="fx[^"]*">(.*?)</tr>',t,re.S)]
+              print(f"::notice::CAL{g} n={len(rows)} primeras: "+" | ".join(rows[:6]))
+              t=urllib.request.urlopen(urllib.request.Request(f"https://www.vavel.com/es/data/primera-federacion-grupo-{g}/resultados/",headers={"User-Agent":"Mozilla/5.0"})).read().decode()
+              rows=[re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',tr))).strip() for tr in re.findall(r'<tr class="fx[^"]*">(.*?)</tr>',t,re.S)]
+              print(f"::notice::RES{g} primeras: "+" | ".join(rows[:4]))
+          PY
