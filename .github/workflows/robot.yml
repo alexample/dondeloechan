@@ -13,6 +13,10 @@ on:
         description: "Solo probar (no guardar cambios)"
         type: boolean
         default: false
+      goles_dias:
+        description: "Días hacia atrás para rellenar goleadores (vacío = lo normal)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -30,6 +34,8 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Leer las fuentes y actualizar la guía
+        env:
+          GOLES_DIAS: ${{ inputs.goles_dias }}
         run: python3 robot/actualizar.py ${{ inputs.seco && '--seco' || '' }}
 
       - name: Guardar cambios

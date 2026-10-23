@@ -475,10 +475,12 @@ def eventos_espn(c):
 
 
 def leer_espn_goles(hoy):
-    """Partidos terminados en los últimos 3 días en ESPN: [(liga, local, visitante, marcador, eventos)]."""
+    """Partidos terminados en ESPN en los últimos días: [(liga, local, visitante, marcador, eventos)].
+    3 días en cada pasada; 10 en la pasada de las 4:00; GOLES_DIAS=N para rellenar a mano más atrás."""
+    dias = int(os.environ.get("GOLES_DIAS") or (10 if hoy.astimezone(MAD).hour == 4 else 3))
     salida = []
     for liga, codigo in ESPN_LIGAS.items():
-        for k in range(0, 4):
+        for k in range(0, dias + 1):
             dia = hoy - dt.timedelta(days=k)
             txt = get(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{codigo}/scoreboard?dates={dia:%Y%m%d}", f"espn_{codigo}_{k}.json")
             try:
