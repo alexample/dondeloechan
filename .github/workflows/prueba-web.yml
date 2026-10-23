@@ -5,14 +5,26 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - run: |
-          echo "::notice::RFEF $(curl -s -H 'Origin: https://alexample.github.io' https://dondeloechan-ia.alexample.workers.dev/rfef | head -c 900)"
           python3 - <<'PY'
-          import urllib.request,re,html
-          for g in ["1","2"]:
-              t=urllib.request.urlopen(urllib.request.Request(f"https://www.vavel.com/es/data/primera-federacion-grupo-{g}/calendario/",headers={"User-Agent":"Mozilla/5.0"})).read().decode()
-              rows=[re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',tr))).strip() for tr in re.findall(r'<tr class="fx[^"]*">(.*?)</tr>',t,re.S)]
-              print(f"::notice::CAL{g} n={len(rows)} primeras: "+" | ".join(rows[:6]))
-              t=urllib.request.urlopen(urllib.request.Request(f"https://www.vavel.com/es/data/primera-federacion-grupo-{g}/resultados/",headers={"User-Agent":"Mozilla/5.0"})).read().decode()
-              rows=[re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',tr))).strip() for tr in re.findall(r'<tr class="fx[^"]*">(.*?)</tr>',t,re.S)]
-              print(f"::notice::RES{g} primeras: "+" | ".join(rows[:4]))
+          import urllib.request,json
+          def g(u):
+              r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64)","Accept":"application/json"})
+              with urllib.request.urlopen(r,timeout=30) as x: return json.loads(x.read())
+          out=[]
+          d=g("https://www.fotmob.com/api/data/matches?date=20261023&timezone=Europe/Madrid")
+          for L in d.get("leagues",[]):
+              if "Federaci" in L.get("name","") or L.get("ccode")=="ESP":
+                  ms=L.get("matches",[])
+                  out.append(f"LIGA {L.get('name')} id={L.get('id')} primaryId={L.get('primaryId')} n={len(ms)}: "+" | ".join(f"{m['home']['name']} {m['home'].get('score')}-{m['away'].get('score')} {m['away']['name']} id={m['id']} st={json.dumps(m.get('status'))[:160]}" for m in ms[:3]))
+          for o in out: print("::notice::"+o[:1800])
+          mid=None
+          for L in d.get("leagues",[]):
+              for m in L.get("matches",[]):
+                  if m['home']['name'].startswith("Real Uni") or "Lugo" in m['away']['name']: mid=m['id']
+          if mid:
+              try:
+                  md=g(f"https://www.fotmob.com/api/data/matchDetails?matchId={mid}")
+                  ev=md.get("header",{}).get("events") or {}
+                  print("::notice::DETAIL keys="+",".join(md.keys())+" events="+json.dumps(ev,ensure_ascii=False)[:900])
+              except Exception as e: print("::notice::DETAIL error "+str(e)[:100])
           PY
