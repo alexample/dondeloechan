@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-22T23:07:21+02:00",
+ "actualizado": "2026-10-23T08:36:21+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -433,7 +433,45 @@
    "provisional": false,
    "visitante": "Slavia Praga",
    "visitanteAbbr": "SLA",
-   "visitanteId": "slavia-praga"
+   "visitanteId": "slavia-praga",
+   "goles": [
+    {
+     "t": "g",
+     "min": "4'",
+     "seg": 230,
+     "j": "Oguz Aydin",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "11'",
+     "seg": 643,
+     "j": "Mason Greenwood",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "15'",
+     "seg": 859,
+     "j": "Lukás Provod",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'",
+     "seg": 5369,
+     "j": "Pavel Kacor",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-sabah-borussia-dortmund",
@@ -454,7 +492,36 @@
    "provisional": false,
    "visitante": "Borussia Dortmund",
    "visitanteAbbr": "BVB",
-   "visitanteId": "borussia-dortmund"
+   "visitanteId": "borussia-dortmund",
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 591,
+     "j": "Serhou Guirassy",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2315,
+     "j": "Aden Mccarthy",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "53'",
+     "seg": 3149,
+     "j": "Serhou Guirassy",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-liverpool-vil",
@@ -475,7 +542,72 @@
    ],
    "provisional": false,
    "visitante": "Villarreal CF",
-   "visitanteId": "vil"
+   "visitanteId": "vil",
+   "goles": [
+    {
+     "t": "g",
+     "min": "4'",
+     "seg": 234,
+     "j": "Georges Mikautadze",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1688,
+     "j": "Sergi Cardona",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "36'",
+     "seg": 2133,
+     "j": "Alexis Mac Allister",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45'+2'",
+     "seg": 2700,
+     "j": "Ronald Araújo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "65'",
+     "seg": 3895,
+     "j": "Alexis Mac Allister",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4077,
+     "j": "Florian Wirtz",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5180,
+     "j": "Tani Oluwaseyi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-manchester-city-aek-atenas",
@@ -497,7 +629,63 @@
    "provisional": false,
    "visitante": "AEK Atenas",
    "visitanteAbbr": "AEK",
-   "visitanteId": "aek-atenas"
+   "visitanteId": "aek-atenas",
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 689,
+     "j": "Elliot Anderson",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "34'",
+     "seg": 2015,
+     "j": "Phil Foden",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3064,
+     "j": "Stavros Pilios",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3394,
+     "j": "Rayan Cherki",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "65'",
+     "seg": 3883,
+     "j": "Phil Foden",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "76'",
+     "seg": 4548,
+     "j": "Phil Foden",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-napoli-bod-glimt",
@@ -519,7 +707,72 @@
    "provisional": false,
    "visitante": "Bodø/Glimt",
    "visitanteAbbr": "BOD",
-   "visitanteId": "bod-glimt"
+   "visitanteId": "bod-glimt",
+   "goles": [
+    {
+     "t": "g",
+     "min": "1'",
+     "seg": 54,
+     "j": "Matteo Politano",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "27'",
+     "seg": 1602,
+     "j": "Jens Petter Hauge",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2436,
+     "j": "Scott McTominay",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3718,
+     "j": "Andreas Helmersen",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4468,
+     "j": "Scott McTominay",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5272,
+     "j": "Odin Bjørtuft",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "90'+4'",
+     "seg": 5400,
+     "j": "Sondre Brunstad Fet",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-porto-psv",
@@ -541,7 +794,18 @@
    "provisional": false,
    "visitante": "PSV",
    "visitanteAbbr": "PSV",
-   "visitanteId": "psv"
+   "visitanteId": "psv",
+   "goles": [
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3413,
+     "j": "Guus Til",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-psg-bar",
@@ -562,7 +826,63 @@
    ],
    "provisional": false,
    "visitante": "FC Barcelona",
-   "visitanteId": "bar"
+   "visitanteId": "bar",
+   "goles": [
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2237,
+     "j": "Désiré Doué",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3255,
+     "j": "Xavi Espart",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "72'",
+     "seg": 4283,
+     "j": "Lucas Hernández",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "79'",
+     "seg": 4706,
+     "j": "Lamine Yamal",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4813,
+     "j": "Vitinha",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5155,
+     "j": "Fabián Ruiz",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-roma-slovan-bratislava",
@@ -584,7 +904,45 @@
    "provisional": false,
    "visitante": "Slovan Bratislava",
    "visitanteAbbr": "SLO",
-   "visitanteId": "slovan-bratislava"
+   "visitanteId": "slovan-bratislava",
+   "goles": [
+    {
+     "t": "g",
+     "min": "21'",
+     "seg": 1259,
+     "j": "Mario Hermoso",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2295,
+     "j": "Nahuel Molina",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3119,
+     "j": "Niccolò Pisilli",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "58'",
+     "seg": 3430,
+     "j": "Donyell Malen",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-stuttgart-atm",
@@ -605,7 +963,36 @@
    ],
    "provisional": false,
    "visitante": "Atlético de Madrid",
-   "visitanteId": "atm"
+   "visitanteId": "atm",
+   "goles": [
+    {
+     "t": "g",
+     "min": "36'",
+     "seg": 2138,
+     "j": "Jamie Leweling",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2775,
+     "j": "Julián Álvarez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "64'",
+     "seg": 3792,
+     "j": "Morten Hjulmand",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-como-manchester-united",
@@ -625,7 +1012,54 @@
     4,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "2'",
+     "seg": 118,
+     "j": "Nico Paz",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "49'",
+     "seg": 2906,
+     "j": "Anastasios Douvikas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3376,
+     "j": "Nico Paz",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "76'",
+     "seg": 4506,
+     "j": "Jacobo Ramón",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Joshua Zirkzee",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-lille-galatasaray",
@@ -645,7 +1079,63 @@
     2,
     4
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "2'",
+     "seg": 65,
+     "j": "Yunus Akgün",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 417,
+     "j": "Soriba Diaoune",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2332,
+     "j": "Soriba Diaoune",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "44'",
+     "seg": 2587,
+     "j": "Alexey Batrakov",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3093,
+     "j": "Berke Özer",
+     "lado": "V",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3610,
+     "j": "Victor Osimhen",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-apl-lev-ath",
@@ -663,7 +1153,54 @@
     3,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "20'",
+     "seg": 1157,
+     "j": "Roger Brugué",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "22'",
+     "seg": 1278,
+     "j": "Roger Brugué",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 3967,
+     "j": "Álex Berenguer",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "73'",
+     "seg": 4349,
+     "j": "Aymeric Laporte",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+8'",
+     "seg": 5400,
+     "j": "Etta Eyong",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-aston-villa-viking",
@@ -684,7 +1221,45 @@
     3,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "23'",
+     "seg": 1323,
+     "j": "Ross Barkley",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "37'",
+     "seg": 2172,
+     "j": "Emiliano Buendía",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3686,
+     "j": "Henrik Heggheim",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "84'",
+     "seg": 5005,
+     "j": "Peter Christiansen",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-bayern-munich-arsenal",
@@ -705,7 +1280,45 @@
     2,
     2
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "25'",
+     "seg": 1455,
+     "j": "Eberechi Eze",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "35'",
+     "seg": 2062,
+     "j": "Alphonso Davies",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3609,
+     "j": "Harry Kane",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4874,
+     "j": "Declan Rice",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-bet-feyenoord",
@@ -725,7 +1338,18 @@
     1,
     0
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3535,
+     "j": "Isco",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-club-brugge-rc-lens",
@@ -746,7 +1370,36 @@
     3,
     0
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "45'+3'",
+     "seg": 2700,
+     "j": "Hans Vanaken",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2956,
+     "j": "Joaquin Seys",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "72'",
+     "seg": 4274,
+     "j": "Carlos Forbs",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-inter-shakhtar-donetsk",
@@ -767,7 +1420,27 @@
     1,
     0
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "r",
+     "min": "68'",
+     "seg": 4080,
+     "j": "Alessandro Bastoni",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "77'",
+     "seg": 4587,
+     "j": "Carlos Augusto",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-rma-rb-leipzig",
@@ -791,7 +1464,54 @@
     4,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "43'",
+     "seg": 2580,
+     "j": "Bernardo Silva",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3085,
+     "j": "Arda Güler",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4951,
+     "j": "Kylian Mbappé",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "85'",
+     "seg": 5050,
+     "j": "Tidiam Gomis",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5188,
+     "j": "Yan Diomande",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j3-sporting-cp-lask",
@@ -812,7 +1532,54 @@
     2,
     3
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "5'",
+     "seg": 255,
+     "j": "Luis Suárez",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "15'",
+     "seg": 868,
+     "j": "Christoph Lang",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3723,
+     "j": "Sasa Kalajdzic",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4029,
+     "j": "Krystof Danek",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5323,
+     "j": "Luis Suárez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-fc-kairat-panathinaikos",
@@ -833,7 +1600,63 @@
     1,
     5
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "6'",
+     "seg": 310,
+     "j": "Vicente Taborda",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1401,
+     "j": "Cyriel Dessers",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2787,
+     "j": "Cyriel Dessers",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3396,
+     "j": "Kings Kangwa",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4472,
+     "j": "Elmin Rastoder",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "79'",
+     "seg": 4718,
+     "j": "Ismail Bekbolat",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-crvena-zvezda-kobenhavn",
@@ -855,7 +1678,54 @@
     2,
     2
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1685,
+     "j": "Matej Gashtarov",
+     "lado": "V",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "34'",
+     "seg": 2030,
+     "j": "Timi Elsnik",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2441,
+     "j": "Vasilije Kostov",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "70'",
+     "seg": 4174,
+     "j": "Maher Carrizo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Stefan Gudelj",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-fc-iberia-1999-mjallby-aif",
@@ -877,7 +1747,27 @@
     1,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3264,
+     "j": "Jemali-Giorgi Jinjolava",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5307,
+     "j": "Tom Pettersson",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-fkb-jablonec-brighton",
@@ -899,7 +1789,8 @@
     0,
     0
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-6-fase-liga-j2-get-lugano",
@@ -920,7 +1811,72 @@
     2,
     5
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "2'",
+     "seg": 71,
+     "j": "Ivan Azón",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "3'",
+     "seg": 151,
+     "j": "Albian Ajeti",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 389,
+     "j": "Yanis Cimignani",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "26'",
+     "seg": 1549,
+     "j": "Albian Ajeti",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2976,
+     "j": "Uran Bislimi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "74'",
+     "seg": 4404,
+     "j": "Borja Mayoral",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+2'",
+     "seg": 5400,
+     "j": "Kevin Behrens",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-inter-club-d-escaldes-fcu-craiova-1948",
@@ -942,7 +1898,45 @@
     1,
     3
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "3'",
+     "seg": 121,
+     "j": "Assad Al-Hamlawi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "5'",
+     "seg": 285,
+     "j": "Stefan Baiaram",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "77'",
+     "seg": 4619,
+     "j": "Borja Arellano Monedero",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5120,
+     "j": "Simon Elisor",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-kauno-zalgiris-sk-brann",
@@ -964,7 +1958,54 @@
     1,
     4
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 378,
+     "j": "Niklas Castro",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 661,
+     "j": "Renan Oliveira",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "25'",
+     "seg": 1446,
+     "j": "Noah Holm",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "40'",
+     "seg": 2356,
+     "j": "Noah Holm",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "85'",
+     "seg": 5096,
+     "j": "Noah Holm",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-nordsjaelland-cska-sofia",
@@ -986,7 +2027,54 @@
     2,
     2
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "8'",
+     "seg": 457,
+     "j": "Santiago Godoy",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3262,
+     "j": "Ibrahim Adel",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 4009,
+     "j": "Ibrahim Adel",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "76'",
+     "seg": 4517,
+     "j": "Justin Janssen",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5242,
+     "j": "Santiago Godoy",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-pafos-fc-riga-fc",
@@ -1008,7 +2096,27 @@
     1,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 4005,
+     "j": "Caio Martins",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "76'",
+     "seg": 4536,
+     "j": "Gabriel Teixeira",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-trabzonspor-hearts",
@@ -1030,7 +2138,36 @@
     2,
     0
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1887,
+     "j": "Mohamed Salah",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "58'",
+     "seg": 3459,
+     "j": "Franculino Djú",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "Sidny Lopes Cabral",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-agf-aarhus-klubi-sportiv-egnatia",
@@ -1052,7 +2189,36 @@
     1,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "r",
+     "min": "3'",
+     "seg": 163,
+     "j": "Eric Kahl",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "13'",
+     "seg": 749,
+     "j": "Ildi Gruda",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "49'",
+     "seg": 2929,
+     "j": "James Bogere",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-ajax-atalanta",
@@ -1074,7 +2240,27 @@
     2,
     0
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5197,
+     "j": "Tolu Arokodare",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Abdellah Ouazane",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-as-monaco-freiburg",
@@ -1096,7 +2282,36 @@
     3,
     0
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "45'+2'",
+     "seg": 2700,
+     "j": "Paris Brunner",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4954,
+     "j": "Lamine Camara",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Ansu Fati",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-borac-banja-luka-kups",
@@ -1118,7 +2333,27 @@
     2,
     0
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1702,
+     "j": "Stefan Savic",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2977,
+     "j": "Matej Deket",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-fc-midtjylland-sint-truiden-vv",
@@ -1140,7 +2375,18 @@
     0,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "42'",
+     "seg": 2501,
+     "j": "Frederic Soelle Soelle",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-fc-thun-hajduk-split",
@@ -1162,7 +2408,18 @@
     0,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "17'",
+     "seg": 963,
+     "j": "Dali",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-lincoln-red-imps-twente",
@@ -1184,7 +2441,54 @@
     1,
     4
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "19'",
+     "seg": 1122,
+     "j": "Thomas van den Belt",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1435,
+     "j": "Wout Weghorst",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2251,
+     "j": "Nano González",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3368,
+     "j": "Thomas van den Belt",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Daouda Weidmann",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j2-sc-braga-gent",
@@ -1206,7 +2510,27 @@
     2,
     0
    ],
-   "estado": "final"
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "3'",
+     "seg": 166,
+     "j": "Víctor Gómez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "76'",
+     "seg": 4516,
+     "j": "Gabri Martínez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-real-union-cd-lugo",
@@ -5546,9 +6870,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-23T08:07:20+02:00",
-  "cambio": "2026-10-22T23:07:21+02:00",
+  "comprobado": "2026-10-23T08:36:21+02:00",
+  "cambio": "2026-10-23T08:36:21+02:00",
   "historial": [
+   {
+    "hora": "2026-10-23T08:36:21+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-23T08:07:20+02:00",
     "nuevos": 0,
@@ -6266,22 +7611,6 @@
    },
    {
     "hora": "2026-10-22T15:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-22T14:07:21+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
