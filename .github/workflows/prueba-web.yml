@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - run: |
+          for i in $(seq 1 12); do [ "$(curl -s -o /dev/null -w "%{http_code}" -H "X-App: dondeloechan" "https://dondeloechan-ia.alexample.workers.dev/partido?liga=1&fecha=20261023&local=a&visitante=b")" = "200" ] && break; sleep 20; done
           B=https://dondeloechan-ia.alexample.workers.dev/partido
           A=$(curl -s -H 'X-App: dondeloechan' "$B?liga=1&fecha=20261023&local=Deportivo%20Alav%C3%A9s&visitante=M%C3%A1laga%20CF" | head -c 600)
           R=$(curl -s -H 'X-App: dondeloechan' "$B?liga=5&fecha=20261023&local=CE%20Europa&visitante=Real%20Zaragoza" | head -c 600)
