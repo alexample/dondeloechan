@@ -157,6 +157,35 @@ async function macrodroid(request) {
   return new Response(await r.text(), { status: r.status, headers: { "Content-Type": "text/plain; charset=utf-8" } });
 }
 
+// 1ª RFEF en directo: el calendario de VAVEL marca los partidos «En juego» con su marcador (sin minuto).
+// Se guarda 60 s en la caché para todos.
+const DESHTML = s => String(s || "").replace(/&amp;/g, "&").replace(/&#0?39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&aacute;/g, "á").replace(/&eacute;/g, "é").replace(/&iacute;/g, "í").replace(/&oacute;/g, "ó").replace(/&uacute;/g, "ú").replace(/&ntilde;/g, "ñ").trim();
+async function rfefVivo(env, ctx, origen) {
+  const cache = caches.default, out = [];
+  await Promise.all(["primera-federacion-grupo-1", "primera-federacion-grupo-2"].map(async g => {
+    const clave = new Request("https://cache.dondeloechan/vavel/" + g);
+    let r = await cache.match(clave), txt;
+    if (r) txt = await r.text();
+    else {
+      const x = await fetch(`https://www.vavel.com/es/data/${g}/calendario/`, { headers: { "User-Agent": "Mozilla/5.0 (DondeLoEchan)", "Accept-Language": "es-ES" } });
+      if (!x.ok) return;
+      txt = await x.text();
+      ctx.waitUntil(cache.put(clave, new Response(txt, { headers: { "Content-Type": "text/html", "Cache-Control": "public, max-age=60" } })));
+    }
+    for (const tr of txt.match(/<tr class="fx[^"]*">[\s\S]*?<\/tr>/g) || []) {
+      const h = tr.match(/class="h[^"]*"[^>]*>([^<]+)</), a = tr.match(/class="a[^"]*"[^>]*>([^<]+)</);
+      const sc = tr.match(/<span class="sc">\s*(\d+)\s*-\s*(\d+)\s*<\/span>/), wt = tr.match(/<span class="wt">([^<]+)<\/span>/);
+      const cls = (tr.match(/<td class="w ([^"]+)"/) || [])[1] || "";
+      if (!h || !a || !sc) continue;
+      const det = DESHTML(wt ? wt[1] : "");
+      const estado = /live/.test(cls) || /juego|descanso|directo/i.test(det) ? "in" : /ft|fin/.test(cls) || /final/i.test(det) ? "post" : "pre";
+      if (estado === "pre") continue;
+      out.push({ grupo: g.slice(-1), local: DESHTML(h[1]), visitante: DESHTML(a[1]), gl: +sc[1], gv: +sc[2], estado, detalle: det });
+    }
+  }));
+  return new Response(JSON.stringify({ fuente: "VAVEL", partidos: out }), { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
+}
+
 const uso = new Map();     // ip -> {min, tMin, dia, tDia}  (memoria del worker: freno básico contra abusos)
 
 function cors(origen) {
@@ -238,6 +267,11 @@ export default {
     const origen = request.headers.get("Origin") || "";
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });
     if (request.method === "POST" && new URL(request.url).pathname === "/macrodroid") return macrodroid(request);
+    if (request.method === "GET" && new URL(request.url).pathname === "/rfef") {
+      if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+      try { return await rfefVivo(env, ctx, origen); }
+      catch (e) { return json({ error: "No hay marcadores ahora mismo." }, 502, origen); }
+    }
     if (request.method === "GET" && new URL(request.url).pathname === "/vivo") {
       if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
       try { return await vivo(request, env, ctx, origen); }
