@@ -52,6 +52,7 @@ public class AvisosWorker extends Worker {
     static final String PREFS = "avisos";
     static final String CANAL_AVISOS = "canales_confirmados";
     static final String CANAL_PREVIA = "recordatorio_15min";
+    static final String CANAL_VUELTA = "vuelve_el_futbol";
     static final int MIN_DEF = 15;
     static final String URL_GUIA = "https://raw.githubusercontent.com/Alexample/dondeloechan/main/data/partidos.json";
     private static final String TRABAJO = "revisar-canales";
@@ -81,8 +82,11 @@ public class AvisosWorker extends Worker {
             NotificationChannel pr = new NotificationChannel(CANAL_PREVIA, "Antes del partido",
                     NotificationManager.IMPORTANCE_HIGH);
             pr.setDescription("Recordatorio antes de que empiece un partido de tus equipos, con su canal (los minutos se eligen en el menú de la app).");
+            NotificationChannel vu = new NotificationChannel(CANAL_VUELTA, "Vuelve el fútbol",
+                    NotificationManager.IMPORTANCE_HIGH);
+            vu.setDescription("Aviso antes del primer partido después de unas horas sin fútbol (se configura en el menú de la app).");
             NotificationManager nm = c.getSystemService(NotificationManager.class);
-            if (nm != null) { nm.createNotificationChannel(ch); nm.createNotificationChannel(pr); }
+            if (nm != null) { nm.createNotificationChannel(ch); nm.createNotificationChannel(pr); nm.createNotificationChannel(vu); }
         }
     }
 
@@ -102,11 +106,6 @@ public class AvisosWorker extends Worker {
             for (int i = 0; i < a.length(); i++) favsAntes.add(a.getString(i));
         } catch (Exception ignored) { }
         Set<String> alarmasAntes = new HashSet<>(p.getStringSet("alarmas", new HashSet<>()));
-        if (favs.isEmpty()) {
-            for (String id : alarmasAntes) cancelarRecordatorio(c, id);
-            p.edit().putStringSet("alarmas", new HashSet<>()).putString("favs_prev", "[]").apply();
-            return Result.success();
-        }
 
         // Ajustes del menú de la app.
         JSONObject aj;
@@ -128,8 +127,9 @@ public class AvisosWorker extends Worker {
         try { partidos = new JSONObject(cuerpo).getJSONArray("partidos"); } catch (Exception e) { return Result.success(); }
 
         long ahora = System.currentTimeMillis();
-        SharedPreferences.Editor ed = p.edit();
         crearCanal(c);
+        revisarVuelta(c, p, aj, partidos, catalogo, ahora);
+        SharedPreferences.Editor ed = p.edit();
         int avisados = 0;
         Set<String> alarmas = new HashSet<>();
 
@@ -173,6 +173,99 @@ public class AvisosWorker extends Worker {
         ed.putString("favs_prev", new JSONArray(favs).toString());
         ed.apply();
         return Result.success();
+    }
+
+    /**
+     * «Vuelve el fútbol»: tras X horas sin ningún partido (de las competiciones elegidas), avisa N minutos antes
+     * del primero que se juegue, con su canal. Si empiezan varios a la vez (±30 min), van en el mismo aviso.
+     */
+    static void revisarVuelta(Context c, SharedPreferences p, JSONObject aj, JSONArray partidos, JSONObject catalogo, long ahora) {
+        Set<String> antes = new HashSet<>(p.getStringSet("alarmas_vuelta", new HashSet<>()));
+        Set<String> nuevas = new HashSet<>();
+        if (aj.optBoolean("vuelta", false)) {
+            int horas = aj.optInt("vhoras", 12);
+            if (horas < 2 || horas > 168) horas = 12;
+            int min = aj.optInt("vmin", MIN_DEF);
+            if (min < 1 || min > 180) min = MIN_DEF;
+            Set<Integer> ligas = new HashSet<>();
+            JSONArray vl = aj.optJSONArray("vligas");
+            if (vl != null) for (int i = 0; i < vl.length(); i++) ligas.add(vl.optInt(i));
+            final long DURA = 2 * 3600 * 1000L, PARON = horas * 3600 * 1000L, ANTES = min * 60 * 1000L, JUNTOS = 30 * 60 * 1000L;
+            java.util.List<JSONObject> lista = new java.util.ArrayList<>();
+            for (int i = 0; i < partidos.length(); i++) {
+                JSONObject m = partidos.optJSONObject(i);
+                if (m == null) continue;
+                if (!ligas.isEmpty() && !ligas.contains(m.optInt("liga"))) continue;
+                String est = m.optString("estado", "");
+                if (est.equals("aplazado") || est.equals("suspendido") || m.optBoolean("horaPendiente", false)) continue;
+                long t = fecha(m.optString("inicio"));
+                if (t == 0) continue;
+                try { m.put("_t", t); } catch (Exception ignored) { }
+                lista.add(m);
+            }
+            java.util.Collections.sort(lista, (a, b) -> Long.compare(a.optLong("_t"), b.optLong("_t")));
+            long finPrevio = 0;   // hora en que acaba (aprox.) el último partido anterior
+            for (int i = 0; i < lista.size(); i++) {
+                long t = lista.get(i).optLong("_t");
+                boolean paron = finPrevio > 0 && t - finPrevio >= PARON;
+                if (paron && t - ANTES > ahora - 60000) {
+                    java.util.List<JSONObject> grupo = new java.util.ArrayList<>();
+                    for (int j = i; j < lista.size() && lista.get(j).optLong("_t") - t <= JUNTOS; j++) grupo.add(lista.get(j));
+                    String id = "vuelta_" + t;
+                    if (p.getLong("rec_" + id, 0) != t) {
+                        programarVuelta(c, id, grupo, catalogo, t, ANTES, horas);
+                    }
+                    nuevas.add(id);
+                }
+                finPrevio = Math.max(finPrevio, t + DURA);
+            }
+        }
+        for (String id : antes) if (!nuevas.contains(id)) cancelarRecordatorio(c, id);
+        p.edit().putStringSet("alarmas_vuelta", nuevas).apply();
+    }
+
+    private static void programarVuelta(Context c, String id, java.util.List<JSONObject> grupo, JSONObject catalogo, long inicio, long ANTES, int horas) {
+        AlarmManager am = (AlarmManager) c.getSystemService(Context.ALARM_SERVICE);
+        if (am == null || grupo.isEmpty()) return;
+        SimpleDateFormat f = new SimpleDateFormat("HH:mm", Locale.ROOT);
+        f.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
+        StringBuilder cuerpo = new StringBuilder();
+        int n = 0;
+        for (JSONObject m : grupo) {
+            if (n == 4) { cuerpo.append("\n…y ").append(grupo.size() - 4).append(" más"); break; }
+            JSONArray canales = m.optJSONArray("canales");
+            String canal = m.optBoolean("sinTV", false) ? "sin TV" : canales == null || canales.length() == 0 ? "canal por confirmar"
+                    : describirCanal(canales.opt(0), catalogo);
+            if (n > 0) cuerpo.append("\n");
+            cuerpo.append(f.format(new Date(m.optLong("_t")))).append(" · ").append(m.optString("local")).append(" – ")
+                    .append(m.optString("visitante")).append(" · ").append(canal);
+            n++;
+        }
+        Intent datos = new Intent()
+                .putExtra("id", id)
+                .putExtra("tipo", "vuelta")
+                .putExtra("partido", grupo.get(0).optString("id"))
+                .putExtra("titulo", grupo.size() == 1 ? grupo.get(0).optString("local") + " – " + grupo.get(0).optString("visitante")
+                        : grupo.size() + " partidos")
+                .putExtra("cuerpo", cuerpo.toString())
+                .putExtra("paron", horas)
+                .putExtra("hora", f.format(new Date(inicio)))
+                .putExtra("inicio", inicio);
+        PendingIntent pi = intentoRecordatorio(c, id, datos, PendingIntent.FLAG_UPDATE_CURRENT);
+        long cuando = Math.max(inicio - ANTES, System.currentTimeMillis() + 1000);
+        try {
+            if (Build.VERSION.SDK_INT >= 31 && !am.canScheduleExactAlarms()) am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
+            else if (Build.VERSION.SDK_INT >= 23) am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
+            else am.setExact(AlarmManager.RTC_WAKEUP, cuando, pi);
+        } catch (SecurityException e) {
+            am.set(AlarmManager.RTC_WAKEUP, cuando, pi);
+        }
+    }
+
+    static void cancelarVuelta(Context c) {
+        SharedPreferences p = c.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+        for (String id : p.getStringSet("alarmas_vuelta", new HashSet<>())) cancelarRecordatorio(c, id);
+        p.edit().putStringSet("alarmas_vuelta", new HashSet<>()).apply();
     }
 
     private static PendingIntent intentoRecordatorio(Context c, String id, Intent datos, int flags) {

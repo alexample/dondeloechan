@@ -223,6 +223,7 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .sw:disabled{opacity:.45;cursor:default}
 .sw:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .opc span.mins{display:flex;flex-direction:row;gap:6px;flex-wrap:wrap;margin-top:8px}
+.opc.col{flex-direction:column;gap:0}
 .mins button{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:5px 11px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
 .mins button[aria-pressed="true"]{background:var(--pitch);border-color:var(--pitch);color:var(--pitch-ink)}
 .mins button:disabled{opacity:.45;cursor:default}
@@ -675,7 +676,7 @@ function alternarFav(id,nombre){
 }
 /* ---------- Ajustes de avisos (menú lateral) ----------
    Se guardan en el navegador y, en la app, se pasan a Android para los avisos en segundo plano. */
-const AJ_DEF={canal:true,cambio:true,antes:true,min:15};
+const AJ_DEF={canal:true,cambio:true,antes:true,min:15,vuelta:true,vhoras:12,vmin:15,vligas:[1,2,5,3,4,6]};
 let AJ={...AJ_DEF};
 try{AJ={...AJ_DEF,...JSON.parse(localStorage.getItem("dle-ajustes")||"{}")}}catch(e){}
 const enApp=()=>!!(window.AndroidApp&&window.AndroidApp.guardarFavs);
@@ -704,6 +705,17 @@ function pintarMenu(){
       <div class="opc"><span><b>Antes del partido</b><small>Recordatorio con la hora y el canal.</small>
         <span class="mins" role="group" aria-label="Minutos de antelación">${[5,15,30,60].map(n=>`<button type="button" data-min="${n}" aria-pressed="${AJ.min===n}"${dis||(!AJ.antes?" disabled":"")}>${n===60?"1 hora":n+" min"}</button>`).join("")}</span></span>
         <input class="sw" type="checkbox" data-aj="antes" aria-label="Aviso antes del partido"${AJ.antes?" checked":""}${dis}></div>
+    </section>
+    <section>
+      <h3>Vuelve el fútbol</h3>
+      <div class="opc"><span><b>Aviso tras un parón</b><small>Cuando, después de unas horas sin ningún partido, vaya a empezar uno (de cualquier equipo), te avisamos con el partido y su canal.</small></span>
+        <input class="sw" type="checkbox" data-aj="vuelta" aria-label="Aviso tras un parón"${AJ.vuelta?" checked":""}${dis}></div>
+      <div class="opc col"><span><b>Horas sin partidos</b><small>Cuánto tiempo sin fútbol cuenta como parón.</small></span>
+        <span class="mins" role="group" aria-label="Horas sin partidos">${[6,12,24,48].map(n=>`<button type="button" data-vhoras="${n}" aria-pressed="${AJ.vhoras===n}"${dis||(!AJ.vuelta?" disabled":"")}>${n} h</button>`).join("")}</span></div>
+      <div class="opc col"><span><b>Con cuánta antelación</b></span>
+        <span class="mins" role="group" aria-label="Minutos de antelación del aviso tras un parón">${[5,15,30,60].map(n=>`<button type="button" data-vmin="${n}" aria-pressed="${AJ.vmin===n}"${dis||(!AJ.vuelta?" disabled":"")}>${n===60?"1 hora":n+" min"}</button>`).join("")}</span></div>
+      <div class="opc col"><span><b>Competiciones</b><small>Solo cuentan los partidos de las que marques.</small></span>
+        <span class="mins ligas" role="group" aria-label="Competiciones del aviso tras un parón">${[[1,"Primera"],[2,"Segunda"],[5,"1ª RFEF"],[3,"Copa"],[4,"Champions"],[6,"Conference"]].map(([l,n])=>`<button type="button" data-vliga="${l}" aria-pressed="${(AJ.vligas||[]).includes(l)}"${dis||(!AJ.vuelta?" disabled":"")}>${n}</button>`).join("")}</span></div>
     </section>
     <section>
       <h3>Mis equipos</h3>${favs.length?`<p class="note" style="margin-bottom:6px">Toca un equipo para ver solo sus partidos.</p>`:""}
@@ -785,12 +797,19 @@ menuEl.addEventListener("change",e=>{
   AJ[k]=e.target.checked;guardarAjustes();
   if(e.target.checked){try{if(window.AndroidApp&&window.AndroidApp.permisoAvisos)window.AndroidApp.permisoAvisos()}catch(_){}}
   pintarMenu();
+  if(k==="vuelta"){aviso(AJ.vuelta?"Aviso tras un parón activado.":"Aviso tras un parón desactivado.");return}
   aviso(k==="antes"?(AJ.antes?"Aviso "+AJ.min+" min antes activado.":"Aviso antes del partido desactivado."):k==="canal"?(AJ.canal?"Aviso de canal confirmado activado.":"Aviso de canal confirmado desactivado."):(AJ.cambio?"Aviso de cambio de canal activado.":"Aviso de cambio de canal desactivado."));
 });
 menuEl.addEventListener("click",e=>{
   if(e.target.id==="menu-cerrar"){cerrarMenu();return}
   if(e.target.id==="ck-pref"){cerrarMenu();setTimeout(mostrarBanner,250);return}
   if(e.target.id==="aj-permiso"){try{window.AndroidApp.permisoAvisos()}catch(_){}setTimeout(pintarMenu,1500);return}
+  const vh=e.target.closest("[data-vhoras]");
+  if(vh&&!vh.disabled){AJ.vhoras=+vh.dataset.vhoras;guardarAjustes();const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y;aviso("Parón: "+AJ.vhoras+" horas sin partidos.");return}
+  const vm=e.target.closest("[data-vmin]");
+  if(vm&&!vm.disabled){AJ.vmin=+vm.dataset.vmin;guardarAjustes();const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y;aviso("Te avisaremos "+(AJ.vmin===60?"1 hora":AJ.vmin+" minutos")+" antes del primer partido tras el parón.");return}
+  const vl=e.target.closest("[data-vliga]");
+  if(vl&&!vl.disabled){const l=+vl.dataset.vliga,s=new Set(AJ.vligas||[]);if(s.has(l)){if(s.size>1)s.delete(l)}else s.add(l);AJ.vligas=[...s];guardarAjustes();const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y;return}
   const mb=e.target.closest("[data-min]");
   if(mb&&!mb.disabled){AJ.min=+mb.dataset.min;guardarAjustes();pintarMenu();aviso("Te avisaremos "+(AJ.min===60?"1 hora":AJ.min+" minutos")+" antes.");return}
   const cat=e.target.closest("[data-cat]");

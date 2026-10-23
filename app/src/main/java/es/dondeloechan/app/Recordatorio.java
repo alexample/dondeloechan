@@ -22,6 +22,7 @@ public class Recordatorio extends BroadcastReceiver {
         if (!AvisosWorker.puedeNotificar(c)) return;
 
         long falta = Math.max(0, Math.round((inicio - System.currentTimeMillis()) / 60000.0));
+        if ("vuelta".equals(in.getStringExtra("tipo"))) { vuelta(c, in, inicio, falta); return; }
         String cuando = falta <= 0 ? "Empieza ya" : "Empieza en " + falta + " min";
         String canal = in.getStringExtra("canal");
         Intent abrir = new Intent(c, MainActivity.class).putExtra("partido", id)
@@ -35,6 +36,30 @@ public class Recordatorio extends BroadcastReceiver {
                 .setContentTitle("⏱ " + cuando + ": " + in.getStringExtra("titulo"))
                 .setContentText(in.getStringExtra("hora") + " h · " + canal)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(in.getStringExtra("hora") + " h\n📺 " + canal))
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_EVENT)
+                .setTimeoutAfter(inicio + 30 * 60 * 1000L - System.currentTimeMillis())
+                .setContentIntent(pi)
+                .setAutoCancel(true);
+        try { NotificationManagerCompat.from(c).notify(n, b.build()); } catch (SecurityException ignored) { }
+    }
+
+    /** «Vuelve el fútbol»: primer partido (o partidos) tras un parón. */
+    private void vuelta(Context c, Intent in, long inicio, long falta) {
+        String id = in.getStringExtra("id");
+        String cuando = falta <= 0 ? "empieza ya" : "en " + falta + " min";
+        Intent abrir = new Intent(c, MainActivity.class).putExtra("partido", in.getStringExtra("partido"))
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        int n = ("rec_" + id).hashCode();
+        PendingIntent pi = PendingIntent.getActivity(c, n, abrir,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        String cuerpo = in.getStringExtra("cuerpo");
+        NotificationCompat.Builder b = new NotificationCompat.Builder(c, AvisosWorker.CANAL_VUELTA)
+                .setSmallIcon(R.drawable.ic_aviso)
+                .setColor(0xFF1F5E3B)
+                .setContentTitle("⚽ Vuelve el fútbol, " + cuando + ": " + in.getStringExtra("titulo"))
+                .setContentText(cuerpo)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(cuerpo))
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_EVENT)
                 .setTimeoutAfter(inicio + 30 * 60 * 1000L - System.currentTimeMillis())

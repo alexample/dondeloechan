@@ -170,6 +170,7 @@ public class MainActivity extends Activity {
             if (json.equals(antes)) return;
             getSharedPreferences(AvisosWorker.PREFS, Context.MODE_PRIVATE).edit().putString("ajustes", json).apply();
             try { if (!new JSONObject(json).optBoolean("antes", true)) AvisosWorker.cancelarTodos(MainActivity.this); } catch (Exception ignored) { }
+            try { if (!new JSONObject(json).optBoolean("vuelta", false)) AvisosWorker.cancelarVuelta(MainActivity.this); } catch (Exception ignored) { }
             AvisosWorker.revisarYa(MainActivity.this);
         }
 
