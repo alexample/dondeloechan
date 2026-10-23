@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-23T23:07:21+02:00",
+ "actualizado": "2026-10-24T00:07:20+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -3342,7 +3342,23 @@
    "provisional": false,
    "visitante": "Real Zaragoza",
    "visitanteAbbr": "ZAR",
-   "visitanteId": "real-zaragoza"
+   "visitanteId": "real-zaragoza",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4800,
+     "j": "Diego González",
+     "lado": "V",
+     "pen": false,
+     "pp": true
+    }
+   ]
   },
   {
    "id": "2627-5-9-deportivo-fabril-cd-extremadura",
@@ -7608,9 +7624,37 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-23T23:07:21+02:00",
-  "cambio": "2026-10-23T23:07:21+02:00",
+  "comprobado": "2026-10-24T00:07:20+02:00",
+  "cambio": "2026-10-24T00:07:20+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T00:07:20+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [],
+    "detalle": [
+     "Resultado: CE Europa 0-1 Real Zaragoza"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-9-ce-europa-real-zaragoza",
+       "t": "CE Europa 0-1 Real Zaragoza"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-23T23:07:21+02:00",
     "nuevos": 0,
@@ -8113,27 +8157,6 @@
    },
    {
     "hora": "2026-10-23T07:07:19+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-23T06:07:24+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
