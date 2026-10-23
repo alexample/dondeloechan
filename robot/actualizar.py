@@ -504,6 +504,50 @@ def leer_espn_goles(hoy):
     return salida
 
 
+def leer_fotmob_rfef(hoy):
+    """1ª RFEF terminados en FotMob (últimos días): [(5, local, visitante, marcador, eventos)] con goleadores."""
+    dias = int(os.environ.get("GOLES_DIAS") or (10 if hoy.astimezone(MAD).hour == 4 else 3))
+    salida = []
+    for k in range(0, dias + 1):
+        dia = (hoy - dt.timedelta(days=k)).astimezone(MAD)
+        txt = get(f"https://www.fotmob.com/api/data/matches?date={dia:%Y%m%d}&timezone=Europe/Madrid", f"fm_{k}.json")
+        try:
+            ligas = json.loads(txt).get("leagues", []) if txt else []
+        except Exception:  # noqa: BLE001
+            ligas = []
+        for L in ligas:
+            if L.get("primaryId") != 8968:
+                continue
+            for m in L.get("matches", []):
+                st = m.get("status") or {}
+                if not st.get("finished") or st.get("cancelled"):
+                    continue
+                gl, gv = (m.get("home") or {}).get("score"), (m.get("away") or {}).get("score")
+                if gl is None or gv is None:
+                    continue
+                evs = []
+                if gl + gv > 0:
+                    det = get(f"https://www.fotmob.com/api/data/matchDetails?matchId={m['id']}", f"fmd_{m['id']}.json")
+                    try:
+                        ev = (json.loads(det).get("header") or {}).get("events") or {}
+                    except Exception:  # noqa: BLE001
+                        ev = {}
+                    for clave, lado, tipo in (("homeTeamGoals", "L", "g"), ("awayTeamGoals", "V", "g"),
+                                              ("homeTeamRedCards", "L", "r"), ("awayTeamRedCards", "V", "r")):
+                        for lista in (ev.get(clave) or {}).values():
+                            for e in lista or []:
+                                if e.get("isPenaltyShootoutEvent"):
+                                    continue
+                                t, o = e.get("time") or 0, e.get("overloadTime") or 0
+                                evs.append({"t": tipo, "min": f"{t}{'+' + str(o) if o else ''}'", "seg": t * 60 + o * 6,
+                                            "j": e.get("fullName") or e.get("nameStr") or "", "lado": lado,
+                                            "pen": bool(re.search(r"pen", str(e.get("suffix") or e.get("goalDescription") or ""), re.I)),
+                                            "pp": bool(e.get("ownGoal"))})
+                    evs.sort(key=lambda x: x["seg"])
+                salida.append((5, (m.get("home") or {}).get("name", ""), (m.get("away") or {}).get("name", ""), [gl, gv], evs))
+    return salida
+
+
 RFEF = os.path.join(RAIZ, "data", "h2h", "rfef.json")
 
 
@@ -837,12 +881,14 @@ def main():
 
     # ---- 5. Goleadores de los partidos terminados (ESPN): se guardan para que sigan en la ficha
     con_goles, sin_pareja = 0, []
-    for liga, local, visitante, sc, evs in leer_espn_goles(hoy):
+    for liga, local, visitante, sc, evs in leer_espn_goles(hoy) + leer_fotmob_rfef(hoy):
         li, vi = eq.buscar(local, liga, crear=False), eq.buscar(visitante, liga, crear=False)
         m = por_clave.get((liga, li, vi)) if li and vi else None
         if not m:
             sin_pareja.append(f"{local} – {visitante}")
             continue
+        if liga == 5 and not m.get("marcador") and m.get("estado") != "final":
+            poner_resultado(m, sc)
         goles = [e for e in evs if e["t"] == "g"]
         # Solo si cuadran con el marcador (ESPN a veces tarda en poner algún goleador)
         if len([g for g in goles if g["lado"] == "L"]) != sc[0] or len([g for g in goles if g["lado"] == "V"]) != sc[1]:

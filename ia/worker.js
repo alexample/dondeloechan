@@ -160,19 +160,80 @@ async function macrodroid(request) {
 // 1ª RFEF en directo: el calendario de VAVEL marca los partidos «En juego» con su marcador (sin minuto).
 // Se guarda 60 s en la caché para todos.
 const DESHTML = s => String(s || "").replace(/&amp;/g, "&").replace(/&#0?39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&aacute;/g, "á").replace(/&eacute;/g, "é").replace(/&iacute;/g, "í").replace(/&oacute;/g, "ó").replace(/&uacute;/g, "ú").replace(/&ntilde;/g, "ñ").trim();
+// FotMob (fuente principal de 1ª RFEF en directo): marcador, minuto, parte y goleadores.
+const FM_RFEF = 8968;   // id de la Primera Federación en FotMob (los grupos cuelgan de él)
+async function fmGet(ruta, ctx, segundos) {
+  const clave = new Request("https://cache.dondeloechan/fm" + ruta);
+  const cache = caches.default;
+  const r = await cache.match(clave);
+  if (r) return r.json();
+  const x = await fetch("https://www.fotmob.com/api/data" + ruta, { headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)", "Accept": "application/json" } });
+  if (!x.ok) throw new Error("fotmob " + x.status);
+  const t = await x.text();
+  ctx.waitUntil(cache.put(clave, new Response(t, { headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=" + segundos } })));
+  return JSON.parse(t);
+}
+function fmEventos(md) {
+  const ev = (md && md.header && md.header.events) || {}, out = [];
+  for (const [clave, lado] of [["homeTeamGoals", "L"], ["awayTeamGoals", "V"]]) {
+    for (const lista of Object.values(ev[clave] || {})) for (const e of lista || []) {
+      if (e.isPenaltyShootoutEvent) continue;
+      const min = e.time != null ? `${e.time}${e.overloadTime ? "+" + e.overloadTime : ""}'` : "";
+      out.push({ t: "g", min, seg: (e.time || 0) * 60 + (e.overloadTime || 0) * 6, j: e.fullName || e.nameStr || (e.player || {}).name || "",
+        lado, pen: /pen/i.test(String(e.suffix || e.goalDescription || "")), pp: !!e.ownGoal });
+    }
+  }
+  for (const [clave, lado] of [["homeTeamRedCards", "L"], ["awayTeamRedCards", "V"]]) {
+    for (const lista of Object.values(ev[clave] || {})) for (const e of lista || []) {
+      out.push({ t: "r", min: e.time != null ? `${e.time}'` : "", seg: (e.time || 0) * 60, j: e.fullName || e.nameStr || "", lado });
+    }
+  }
+  return out.sort((a, b) => a.seg - b.seg);
+}
+async function rfefFotmob(ctx) {
+  const hoy = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Madrid", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).replace(/-/g, "");
+  const d = await fmGet(`/matches?date=${hoy}&timezone=Europe/Madrid`, ctx, 30);
+  const out = [];
+  for (const L of d.leagues || []) {
+    if (L.primaryId !== FM_RFEF) continue;
+    for (const m of L.matches || []) {
+      const st = m.status || {};
+      if (!st.started && !st.cancelled) continue;
+      const estado = st.cancelled ? "post" : st.finished ? "post" : "in";
+      const corto = (st.liveTime && st.liveTime.short) || "";
+      const halfs = st.halfs || {};
+      const x = { grupo: /2/.test(L.name || "") ? "2" : "1", local: (m.home || {}).name || "", visitante: (m.away || {}).name || "",
+        gl: (m.home || {}).score, gv: (m.away || {}).score, estado,
+        detalle: st.cancelled ? "Aplazado" : st.finished ? "Final" : /HT|desc/i.test(corto) ? "Descanso" : "En juego",
+        reloj: /^\d/.test(corto) ? corto.replace(/['’]+$/, "") + "'" : "", parte: halfs.secondHalfStarted ? 2 : 1, eventos: [] };
+      if ((x.gl || 0) + (x.gv || 0) > 0) {
+        try { x.eventos = fmEventos(await fmGet(`/matchDetails?matchId=${m.id}`, ctx, st.finished ? 3600 : 60)); } catch (e) { }
+      }
+      out.push(x);
+    }
+  }
+  return out;
+}
+
 async function rfefVivo(env, ctx, origen) {
+  try {
+    const p = await rfefFotmob(ctx);
+    return new Response(JSON.stringify({ fuente: "FotMob", partidos: p }), { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
+  } catch (e) { /* si FotMob falla, VAVEL */ }
   const cache = caches.default, out = [];
-  await Promise.all(["primera-federacion-grupo-1", "primera-federacion-grupo-2"].map(async g => {
-    const clave = new Request("https://cache.dondeloechan/vavel/" + g);
+  await Promise.all(["primera-federacion-grupo-1/calendario", "primera-federacion-grupo-2/calendario",
+                     "primera-federacion-grupo-1/resultados", "primera-federacion-grupo-2/resultados"].map(async ruta => {
+    const [g, tipo] = ruta.split("/");
+    const clave = new Request("https://cache.dondeloechan/vavel/" + ruta);
     let r = await cache.match(clave), txt;
     if (r) txt = await r.text();
     else {
-      const x = await fetch(`https://www.vavel.com/es/data/${g}/calendario/`, { headers: { "User-Agent": "Mozilla/5.0 (DondeLoEchan)", "Accept-Language": "es-ES" } });
+      const x = await fetch(`https://www.vavel.com/es/data/${g}/${tipo}/`, { headers: { "User-Agent": "Mozilla/5.0 (DondeLoEchan)", "Accept-Language": "es-ES" } });
       if (!x.ok) return;
       txt = await x.text();
       ctx.waitUntil(cache.put(clave, new Response(txt, { headers: { "Content-Type": "text/html", "Cache-Control": "public, max-age=60" } })));
     }
-    for (const tr of txt.match(/<tr class="fx[^"]*">[\s\S]*?<\/tr>/g) || []) {
+    for (const tr of (txt.match(/<tr class="fx[^"]*">[\s\S]*?<\/tr>/g) || []).slice(0, tipo === "resultados" ? 12 : 400)) {
       const h = tr.match(/class="h[^"]*"[^>]*>([^<]+)</), a = tr.match(/class="a[^"]*"[^>]*>([^<]+)</);
       const sc = tr.match(/<span class="sc">\s*(\d+)\s*-\s*(\d+)\s*<\/span>/), wt = tr.match(/<span class="wt">([^<]+)<\/span>/);
       const cls = (tr.match(/<td class="w ([^"]+)"/) || [])[1] || "";

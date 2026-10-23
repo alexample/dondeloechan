@@ -5,26 +5,17 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - run: |
-          python3 - <<'PY'
-          import urllib.request,json
-          def g(u):
-              r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64)","Accept":"application/json"})
-              with urllib.request.urlopen(r,timeout=30) as x: return json.loads(x.read())
-          out=[]
-          d=g("https://www.fotmob.com/api/data/matches?date=20261023&timezone=Europe/Madrid")
-          for L in d.get("leagues",[]):
-              if "Federaci" in L.get("name","") or L.get("ccode")=="ESP":
-                  ms=L.get("matches",[])
-                  out.append(f"LIGA {L.get('name')} id={L.get('id')} primaryId={L.get('primaryId')} n={len(ms)}: "+" | ".join(f"{m['home']['name']} {m['home'].get('score')}-{m['away'].get('score')} {m['away']['name']} id={m['id']} st={json.dumps(m.get('status'))[:160]}" for m in ms[:3]))
-          for o in out: print("::notice::"+o[:1800])
-          mid=None
-          for L in d.get("leagues",[]):
-              for m in L.get("matches",[]):
-                  if m['home']['name'].startswith("Real Uni") or "Lugo" in m['away']['name']: mid=m['id']
-          if mid:
-              try:
-                  md=g(f"https://www.fotmob.com/api/data/matchDetails?matchId={mid}")
-                  ev=md.get("header",{}).get("events") or {}
-                  print("::notice::DETAIL keys="+",".join(md.keys())+" events="+json.dumps(ev,ensure_ascii=False)[:900])
-              except Exception as e: print("::notice::DETAIL error "+str(e)[:100])
-          PY
+          echo "::notice::RFEF $(curl -s -H 'Origin: https://alexample.github.io' https://dondeloechan-ia.alexample.workers.dev/rfef | head -c 1200)"
+          npm i -s puppeteer-core@23 >/dev/null 2>&1
+          cat > t.js <<'JS'
+          const pp=require('puppeteer-core');
+          (async()=>{const b=await pp.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});const p=await b.newPage();await p.setViewport({width:390,height:844});
+          await p.evaluateOnNewDocument(()=>{localStorage.setItem('dle-consent',JSON.stringify({v:1,terceros:false}));localStorage.setItem('dle-league','5')});
+          await p.goto('https://alexample.github.io/dondeloechan/',{waitUntil:'networkidle2'});await new Promise(r=>setTimeout(r,5000));
+          const f=(await p.$$eval('#app .match',x=>x.map(y=>y.innerText.replace(/\s+/g,' ')).filter(t=>/Lugo|Zaragoza/.test(t)).slice(0,2).map(t=>t.slice(0,70)))).join(' | ');
+          await p.evaluate(()=>window.abrirPartido('2627-5-9-real-union-cd-lugo'));await new Promise(r=>setTimeout(r,1500));
+          const g=await p.$eval('.goles',e=>e.innerText.replace(/\s+/g,' ')).catch(()=>'sin goles');
+          console.log('::notice::WEB '+f+' ## FICHA R.Unión–Lugo: '+g);
+          await b.close()})();
+          JS
+          node t.js

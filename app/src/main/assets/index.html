@@ -1214,7 +1214,7 @@ let vivoTimer=null, vivoUltimo=0, vivoFuente=false, vivoOk=0, vivoFallo="";
 function notaVivo(){
   const s=vivoOk?Math.max(0,Math.round((Date.now()-vivoOk)/1000)):null;
   const cuando=s==null?"":s<60?` · comprobado hace ${s} s`:` · comprobado hace ${Math.round(s/60)} min`;
-  if(actual&&actual.liga===5)return "Marcador en directo de VAVEL (se actualiza cada minuto; el minuto de juego es aproximado)"+(vivoOkRfef?` · comprobado hace ${Math.max(0,Math.round((Date.now()-vivoOkRfef)/1000))} s`:"");
+  if(actual&&actual.liga===5)return (rfefFuente==="FotMob"?"Marcador en directo de FotMob":"Marcador en directo de VAVEL (se actualiza cada minuto; el minuto de juego es aproximado)")+(vivoOkRfef?` · comprobado hace ${Math.max(0,Math.round((Date.now()-vivoOkRfef)/1000))} s`:"");
   return (vivoFuente==="ESPN"?"Marcador en directo de ESPN":"Marcador de football-data.org (va unos minutos por detrás de la tele)")+cuando+(vivoFallo&&Date.now()-vivoOk>150e3?" · ahora mismo no responde, se reintenta cada minuto":"");
 }
 const FD_ESTADO={IN_PLAY:"directo",PAUSED:"directo",FINISHED:"final",AWARDED:"final",POSTPONED:"aplazado",SUSPENDED:"suspendido",CANCELLED:"aplazado"};
@@ -1310,16 +1310,20 @@ async function marcadoresRfef(now){
   for(const x of d.partidos||[]){
     const m=lista.find(m=>parecido(teamOf(m.localId,m.local,m.localAbbr),{name:x.local})&&parecido(teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),{name:x.visitante}));
     if(!m)continue;
-    const v={marcador:[x.gl,x.gv],minuto:null};
-    if(x.estado==="in"){v.estado="directo";v.enJuego=true;if(/descanso/i.test(x.detalle))v.minuto="Descanso"}
+    if(x.gl==null||x.gv==null)continue;
+    const v={marcador:[x.gl,x.gv],minuto:null,parte:x.parte||0};
+    if(x.estado==="in"){v.estado="directo";v.enJuego=true;if(/descanso/i.test(x.detalle))v.minuto="Descanso";else if(x.reloj)v.minuto=x.reloj}
+    else if(/aplaz/i.test(x.detalle)){v.estado="aplazado";v.marcador=null}
     else{v.estado="final";v.enJuego=false}
+    if(Array.isArray(x.eventos)&&x.eventos.length)v.eventos=x.eventos;
+    rfefFuente=d.fuente||"VAVEL";
     VIVO[m._id]=v;
   }
   vivoOkRfef=Date.now();
   aplicarVivo();render();refrescarFicha();
   return true;
 }
-let fdUltimo=0,vivoOkRfef=0;
+let fdUltimo=0,vivoOkRfef=0,rfefFuente="VAVEL";
 async function actualizarMarcadores(){
   const cfg=window.MARCADORES,now=Date.now();
   if(!necesitaMarcador(now))return;
