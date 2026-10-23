@@ -6,32 +6,19 @@ jobs:
     steps:
       - run: |
           python3 - <<'PY'
-          import urllib.request,json,re
+          import urllib.request,json,re,html
           def g(u,h={}):
-              r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0",**h})
+              r=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64)","Accept":"*/*",**h})
               with urllib.request.urlopen(r,timeout=30) as x: return x.read().decode("utf-8","replace")
           out=[]
-          for code in ["esp.3","esp.primera_rfef","esp.rfef","esp.1rfef"]:
+          for tipo in ["calendario","resultados"]:
+              t=g(f"https://www.vavel.com/es/data/primera-federacion-grupo-1/{tipo}/")
+              for tr in re.findall(r'<tr class="fx[^"]*">(.*?)</tr>',t,re.S):
+                  if 'Uni' in tr and 'Lugo' in tr: out.append(f"VAVEL {tipo}: "+re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',tr)))[:200]+" RAW "+re.sub(r'\s+',' ',tr)[:400])
+          for u in ["https://api.sofascore.com/api/v1/sport/football/scheduled-events/2026-10-23","https://www.fotmob.com/api/data/matches?date=20261023"]:
               try:
-                  e=json.loads(g(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{code}/scoreboard?dates=20261023"))
-                  out.append(f"{code}: "+(e.get('leagues') or [{}])[0].get('name','?')+" n="+str(len(e.get('events',[]))))
-              except Exception as x: out.append(f"{code}: {str(x)[:40]}")
-          try:
-              L=json.loads(g("https://sports.core.api.espn.com/v2/sports/soccer/leagues?limit=1000"))
-              refs=[i['$ref'] for i in L.get('items',[])]
-              esp=[r.split('/leagues/')[1].split('?')[0] for r in refs if '/leagues/esp' in r]
-              out.append("ESPN ligas esp: "+" ".join(esp))
-          except Exception as x: out.append("ligas: "+str(x)[:60])
-          t=g("https://www.vavel.com/es/data/primera-federacion-grupo-1/resultados/")
-          wt=sorted(set(re.findall(r'<span class="wt">([^<]+)</span>',t)))
-          out.append("VAVEL estados: "+str(wt[:20]))
-          try:
-              t=g("https://www.resultados-futbol.com/primera_division_rfef")
-              out.append("BeSoccer len="+str(len(t))+" envivo="+str(len(re.findall(r'(?i)en juego|live',t))))
-          except Exception as x: out.append("besoccer "+str(x)[:50])
-          try:
-              t=g("https://www.rfef.es/es/competiciones/primera-federacion")
-              out.append("RFEF len="+str(len(t))+" api="+" ".join(sorted(set(re.findall(r'https?://[a-z0-9.-]*(?:api|fenix|resultados)[a-z0-9./-]*',t)))[:6]))
-          except Exception as x: out.append("rfef "+str(x)[:50])
+                  t=g(u);hits=[m for m in re.findall(r'[^{}]{0,80}Lugo[^{}]{0,80}',t)][:2]
+                  out.append(f"{u[:40]} len={len(t)} lugo={hits}")
+              except Exception as x: out.append(f"{u[:40]}: {str(x)[:50]}")
           for o in out: print("::notice::"+o[:1500])
           PY
