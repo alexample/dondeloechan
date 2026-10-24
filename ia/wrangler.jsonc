@@ -5,6 +5,8 @@
   "compatibility_date": "2025-09-01",
   "workers_dev": true,
   "ai": { "binding": "AI" },
+  // Valoraciones (estrellas) de las carreras de RunningSpain
+  "kv_namespaces": [{ "binding": "VALORA", "id": "5c70a2cfae3a4479b81359311d6e99c1" }],
   // Cada hora, a los :07, el worker avisa a GitHub para que pase el robot de datos (más puntual que el horario de GitHub).
   "triggers": { "crons": ["7 * * * *"] }
 }

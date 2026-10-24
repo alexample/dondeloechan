@@ -173,6 +173,46 @@ async function partidoVivo(request, env, ctx) {
   return resp({ encontrado: true, estado: x.estado, gl: x.gl, gv: x.gv, reloj: x.reloj || "", parte: x.parte || 0, detalle: x.detalle || "", eventos: x.eventos || [] });
 }
 
+// ---- Valoraciones de carreras de RunningSpain (estrellas de 1 a 5)
+// KV "VALORA": "todas" = {clave: [suma, votos]} · "v:<clave>:<dispositivo>" = voto de ese dispositivo (se puede cambiar)
+const usoVotos = new Map();   // ip -> {min, tMin, dia, tDia}: freno contra abusos
+function permitirVoto(ip) {
+  const ahora = Date.now();
+  const u = usoVotos.get(ip) || { min: 0, tMin: ahora, dia: 0, tDia: ahora };
+  if (ahora - u.tMin > 60_000) { u.min = 0; u.tMin = ahora; }
+  if (ahora - u.tDia > 86_400_000) { u.dia = 0; u.tDia = ahora; }
+  if (u.min >= 15 || u.dia >= 150) return false;
+  u.min++; u.dia++;
+  usoVotos.set(ip, u);
+  if (usoVotos.size > 5000) usoVotos.clear();
+  return true;
+}
+
+async function valoraciones(request, env, origen) {
+  if (!env.VALORA) return json({ error: "Falta el almacén de valoraciones." }, 500, origen);
+  if (request.method === "GET") {
+    const todas = await env.VALORA.get("todas");
+    return new Response(todas || "{}", { status: 200, headers: { "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=30", ...cors(origen) } });
+  }
+  if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+  const ip = request.headers.get("CF-Connecting-IP") || "anon";
+  if (!permitirVoto(ip)) return json({ error: "Demasiados votos seguidos. Prueba más tarde." }, 429, origen);
+  let d;
+  try { d = await request.json(); } catch { return json({ error: "Petición no válida." }, 400, origen); }
+  const clave = String(d.k || ""), estrellas = Number(d.e), disp = String(d.d || "");
+  if (!/^[a-z0-9-]{3,90}$/.test(clave) || !Number.isInteger(estrellas) || estrellas < 1 || estrellas > 5
+      || !/^[a-z0-9]{16,40}$/.test(disp)) return json({ error: "Voto no válido." }, 400, origen);
+  const kv = "v:" + clave + ":" + disp;
+  const antes = Number(await env.VALORA.get(kv)) || 0;
+  const todas = JSON.parse((await env.VALORA.get("todas")) || "{}");
+  const [suma, votos] = todas[clave] || [0, 0];
+  todas[clave] = antes ? [suma - antes + estrellas, votos] : [suma + estrellas, votos + 1];
+  await env.VALORA.put(kv, String(estrellas));
+  await env.VALORA.put("todas", JSON.stringify(todas));
+  return json({ k: clave, v: todas[clave] }, 200, origen);
+}
+
 async function macrodroid(request) {
   const hook = request.headers.get("X-Hook") || "";
   if (!hook.startsWith("https://trigger.macrodroid.com/")) return new Response("Destino no válido", { status: 400 });
@@ -355,6 +395,7 @@ export default {
     const origen = request.headers.get("Origin") || "";
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });
     if (request.method === "POST" && new URL(request.url).pathname === "/macrodroid") return macrodroid(request);
+    if (new URL(request.url).pathname === "/valoraciones") return valoraciones(request, env, origen);
     if (request.method === "GET" && new URL(request.url).pathname === "/partido") {
       if (!ORIGENES.includes(origen) && request.headers.get("X-App") !== "dondeloechan") return json({ error: "Origen no permitido." }, 403, origen);
       try { return await partidoVivo(request, env, ctx); }
