@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T01:07:19+02:00",
+ "actualizado": "2026-10-24T14:07:20+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -4069,7 +4069,7 @@
   {
    "id": "2627-3-primera-ronda-sestao-river-esp",
    "canales": [
-    "mcopa"
+    "mliga"
    ],
    "inicio": "2026-10-27T19:00:00+01:00",
    "jornada": "Primera ronda",
@@ -4077,15 +4077,14 @@
    "local": "Sestao River",
    "localAbbr": "SES",
    "localId": "sestao-river",
-   "provisional": true,
+   "provisional": false,
    "visitante": "RCD Espanyol",
    "visitanteId": "esp"
   },
   {
    "id": "2627-3-primera-ronda-ud-pinatar-elc",
    "canales": [
-    "mliga2",
-    "mcopa"
+    "mliga2"
    ],
    "inicio": "2026-10-27T19:00:00+01:00",
    "jornada": "Primera ronda",
@@ -4253,8 +4252,7 @@
   {
    "id": "2627-3-primera-ronda-cd-manacor-vil",
    "canales": [
-    "mliga2",
-    "mcopa"
+    "mliga2"
    ],
    "inicio": "2026-10-27T21:00:00+01:00",
    "jornada": "Primera ronda",
@@ -4269,7 +4267,7 @@
   {
    "id": "2627-3-primera-ronda-recreativo-huelva-ray",
    "canales": [
-    "mcopa"
+    "mliga"
    ],
    "inicio": "2026-10-27T21:00:00+01:00",
    "jornada": "Primera ronda",
@@ -4277,7 +4275,7 @@
    "local": "Recreativo Huelva",
    "localAbbr": "REC",
    "localId": "recreativo-huelva",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Rayo Vallecano",
    "visitanteId": "ray"
   },
@@ -4644,7 +4642,7 @@
   {
    "id": "2627-3-primera-ronda-salamanca-uds-cel",
    "canales": [
-    "mcopa"
+    "mliga"
    ],
    "inicio": "2026-10-28T21:00:00+01:00",
    "jornada": "Primera ronda",
@@ -4652,14 +4650,14 @@
    "local": "Salamanca UDS",
    "localAbbr": "SAL",
    "localId": "salamanca-uds",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Celta de Vigo",
    "visitanteId": "cel"
   },
   {
    "id": "2627-3-primera-ronda-ue-tavernes-val",
    "canales": [
-    "mcopa"
+    "mliga2"
    ],
    "inicio": "2026-10-28T21:00:00+01:00",
    "jornada": "Primera ronda",
@@ -4667,7 +4665,7 @@
    "local": "UE Tavernes",
    "localAbbr": "TAV",
    "localId": "ue-tavernes",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Valencia CF",
    "visitanteId": "val"
   },
@@ -4700,7 +4698,7 @@
   {
    "id": "2627-3-primera-ronda-atletico-calatayud-osa",
    "canales": [
-    "mcopa"
+    "mliga2"
    ],
    "inicio": "2026-10-29T19:00:00+01:00",
    "jornada": "Primera ronda",
@@ -4841,7 +4839,7 @@
   {
    "id": "2627-3-primera-ronda-auriense-dep",
    "canales": [
-    "mcopa"
+    "mliga2"
    ],
    "inicio": "2026-10-29T21:00:00+01:00",
    "jornada": "Primera ronda",
@@ -4871,7 +4869,7 @@
   {
    "id": "2627-3-primera-ronda-sporting-hortaleza-sev",
    "canales": [
-    "mcopa"
+    "mliga"
    ],
    "inicio": "2026-10-29T21:00:00+01:00",
    "jornada": "Primera ronda",
@@ -6050,6 +6048,16 @@
      10
     ],
     [
+     "ray",
+     9,
+     2,
+     4,
+     3,
+     12,
+     17,
+     10
+    ],
+    [
      "vil",
      9,
      2,
@@ -6067,16 +6075,6 @@
      3,
      8,
      9,
-     9
-    ],
-    [
-     "ray",
-     8,
-     2,
-     3,
-     3,
-     12,
-     17,
      9
     ],
     [
@@ -6100,6 +6098,16 @@
      8
     ],
     [
+     "elc",
+     10,
+     1,
+     5,
+     4,
+     11,
+     17,
+     8
+    ],
+    [
      "rac",
      9,
      2,
@@ -6108,16 +6116,6 @@
      13,
      25,
      8
-    ],
-    [
-     "elc",
-     9,
-     1,
-     4,
-     4,
-     11,
-     17,
-     7
     ],
     [
      "val",
@@ -6166,13 +6164,13 @@
     ],
     [
      "eib",
-     10,
+     11,
      7,
-     1,
+     2,
      2,
      20,
      11,
-     22
+     23
     ],
     [
      "gra",
@@ -6265,6 +6263,16 @@
      13
     ],
     [
+     "cor",
+     11,
+     4,
+     1,
+     6,
+     15,
+     20,
+     13
+    ],
+    [
      "vll",
      11,
      3,
@@ -6282,16 +6290,6 @@
      4,
      15,
      16,
-     12
-    ],
-    [
-     "cor",
-     10,
-     4,
-     0,
-     6,
-     15,
-     20,
      12
     ],
     [
@@ -7624,9 +7622,74 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T13:07:20+02:00",
-  "cambio": "2026-10-24T01:07:19+02:00",
+  "comprobado": "2026-10-24T14:07:20+02:00",
+  "cambio": "2026-10-24T14:07:20+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T14:07:20+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 11,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Canal confirmado: Sestao River – RCD Espanyol",
+     "Canal confirmado: Recreativo Huelva – Rayo Vallecano",
+     "Canal confirmado: Salamanca UDS – Celta de Vigo",
+     "Canal confirmado: UE Tavernes – Valencia CF"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-3-primera-ronda-sestao-river-esp",
+       "t": "Sestao River – RCD Espanyol · confirmado"
+      },
+      {
+       "id": "2627-3-primera-ronda-ud-pinatar-elc",
+       "t": "UD Pinatar – Elche"
+      },
+      {
+       "id": "2627-3-primera-ronda-recreativo-huelva-ray",
+       "t": "Recreativo Huelva – Rayo Vallecano · confirmado"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-manacor-vil",
+       "t": "CD Manacor – Villarreal"
+      },
+      {
+       "id": "2627-3-primera-ronda-salamanca-uds-cel",
+       "t": "Salamanca UDS – Celta de Vigo · confirmado"
+      },
+      {
+       "id": "2627-3-primera-ronda-ue-tavernes-val",
+       "t": "UE Tavernes – Valencia CF · confirmado"
+      },
+      {
+       "id": "2627-3-primera-ronda-atletico-calatayud-osa",
+       "t": "Atlético Calatayud – Osasuna"
+      },
+      {
+       "id": "2627-3-primera-ronda-sporting-hortaleza-sev",
+       "t": "Sporting Hortaleza – Sevilla"
+      },
+      {
+       "id": "2627-3-primera-ronda-auriense-dep",
+       "t": "Auriense – Deportivo"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T13:07:20+02:00",
     "nuevos": 0,
@@ -8138,27 +8201,6 @@
    },
    {
     "hora": "2026-10-23T20:19:46+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-23T20:07:20+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
