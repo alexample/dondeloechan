@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T16:07:20+02:00",
+ "actualizado": "2026-10-24T16:31:21+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6194,6 +6194,16 @@
      9
     ],
     [
+     "esp",
+     10,
+     2,
+     3,
+     5,
+     11,
+     12,
+     9
+    ],
+    [
      "ath",
      8,
      2,
@@ -6224,24 +6234,14 @@
      9
     ],
     [
-     "esp",
-     9,
-     2,
-     2,
-     5,
-     11,
-     12,
-     8
-    ],
-    [
      "rac",
-     9,
+     10,
      2,
-     2,
+     3,
      5,
      13,
      25,
-     8
+     9
     ],
     [
      "val",
@@ -6309,6 +6309,16 @@
      20
     ],
     [
+     "mll",
+     11,
+     5,
+     4,
+     2,
+     12,
+     5,
+     19
+    ],
+    [
      "spo",
      10,
      6,
@@ -6326,16 +6336,6 @@
      2,
      17,
      9,
-     18
-    ],
-    [
-     "mll",
-     10,
-     5,
-     3,
-     2,
-     12,
-     5,
      18
     ],
     [
@@ -6419,6 +6419,16 @@
      12
     ],
     [
+     "leg",
+     11,
+     3,
+     3,
+     5,
+     6,
+     15,
+     12
+    ],
+    [
      "lpa",
      10,
      3,
@@ -6426,16 +6436,6 @@
      5,
      13,
      19,
-     11
-    ],
-    [
-     "leg",
-     10,
-     3,
-     2,
-     5,
-     6,
-     15,
      11
     ],
     [
@@ -7748,9 +7748,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T16:07:20+02:00",
-  "cambio": "2026-10-24T16:07:20+02:00",
+  "comprobado": "2026-10-24T16:31:21+02:00",
+  "cambio": "2026-10-24T16:31:21+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T16:31:21+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T16:07:20+02:00",
     "nuevos": 0,
@@ -8335,34 +8359,6 @@
       {
        "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
        "t": "CDA Navalcarnero – Betis · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-23T21:26:17+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 1,
-    "tablas": [],
-    "detalle": [
-     "Resultado: Real Unión 4-1 CD Lugo"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-9-real-union-cd-lugo",
-       "t": "Real Unión 4-1 CD Lugo"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
       }
      ],
      "horas": [],
