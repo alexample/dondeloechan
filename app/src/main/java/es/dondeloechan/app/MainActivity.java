@@ -177,7 +177,70 @@ public class MainActivity extends Activity {
         /** La página avisa de que un partido de tus equipos está en juego: se sigue en directo (goles y final). */
         @JavascriptInterface
         public void seguirPartido(String json) {
-            try { SeguimientoService.seguir(MainActivity.this, new JSONObject(json)); } catch (Exception ignored) { }
+            try {
+                JSONObject m = new JSONObject(json);
+                String id = "seg_" + m.optString("id");
+                android.content.SharedPreferences p = getSharedPreferences(AvisosWorker.PREFS, Context.MODE_PRIVATE);
+                java.util.Set<String> s = new java.util.HashSet<>(p.getStringSet("alarmas_seg", new java.util.HashSet<>()));
+                if (s.add(id)) p.edit().putStringSet("alarmas_seg", s).apply();
+                Seguimiento.programar(MainActivity.this, m, 0);
+            } catch (Exception ignored) { }
+        }
+
+        /** Estado para «Comprobar avisos»: permisos, batería y últimas líneas del registro. */
+        @JavascriptInterface
+        public String estadoAvisos() {
+            JSONObject o = new JSONObject();
+            try {
+                o.put("notif", AvisosWorker.puedeNotificar(MainActivity.this));
+                android.app.AlarmManager am = (android.app.AlarmManager) getSystemService(Context.ALARM_SERVICE);
+                o.put("exactas", Build.VERSION.SDK_INT < 31 || (am != null && am.canScheduleExactAlarms()));
+                android.os.PowerManager pm = (android.os.PowerManager) getSystemService(Context.POWER_SERVICE);
+                o.put("bateria", Build.VERSION.SDK_INT < 23 || (pm != null && pm.isIgnoringBatteryOptimizations(getPackageName())));
+                o.put("diag", new org.json.JSONArray(getSharedPreferences(AvisosWorker.PREFS, Context.MODE_PRIVATE).getString("diag", "[]")));
+                o.put("fabricante", Build.MANUFACTURER);
+            } catch (Exception ignored) { }
+            return o.toString();
+        }
+
+        @JavascriptInterface
+        public void abrirBateria() {
+            runOnUiThread(() -> {
+                try {
+                    startActivity(new Intent(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
+                            android.net.Uri.parse("package:" + getPackageName())));
+                } catch (Exception e) {
+                    try { startActivity(new Intent(android.provider.Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS)); } catch (Exception ignored) { }
+                }
+            });
+        }
+
+        @JavascriptInterface
+        public void abrirAjustesApp() {
+            runOnUiThread(() -> {
+                try {
+                    startActivity(new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                            android.net.Uri.parse("package:" + getPackageName())));
+                } catch (Exception ignored) { }
+            });
+        }
+
+        @JavascriptInterface
+        public void abrirAlarmas() {
+            if (Build.VERSION.SDK_INT < 31) return;
+            runOnUiThread(() -> {
+                try {
+                    startActivity(new Intent(android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM,
+                            android.net.Uri.parse("package:" + getPackageName())));
+                } catch (Exception ignored) { }
+            });
+        }
+
+        /** Aviso de prueba en el canal de goles, para ver que llegan. */
+        @JavascriptInterface
+        public void probarAviso() {
+            Seguimiento.avisar(MainActivity.this, "prueba_" + System.currentTimeMillis(), "⚽ ¡Gol de prueba!",
+                    "Así te llegará cada gol de tus equipos.\n34' Nombre del goleador", "");
         }
 
         /** Catálogo de canales (nombre y dial) para escribir el aviso. */

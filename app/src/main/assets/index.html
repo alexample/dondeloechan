@@ -224,6 +224,16 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .sw:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .opc span.mins{display:flex;flex-direction:row;gap:6px;flex-wrap:wrap;margin-top:8px}
 .opc.col{flex-direction:column;gap:0}
+.comp{margin-top:10px}
+.comp-t{appearance:none;border:0;background:none;padding:6px 0;font:inherit;font-weight:700;font-size:14px;color:var(--accent);cursor:pointer}
+.comp-l{list-style:none;margin:6px 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.comp-l li{display:flex;align-items:center;gap:8px;font-size:14px}
+.comp-l li span:first-child{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font-weight:800;font-size:12px;color:#fff;background:var(--op-free);flex:none}
+.comp-l li.ko span:first-child{background:var(--live)}
+.comp-l li span:nth-child(2){flex:1}
+.comp-l .btn{flex:none;width:auto;min-height:32px;padding:4px 12px;font-size:13px}
+.comp-h{margin:12px 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.comp-d{list-style:none;margin:0;padding:0;font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:3px}
 .mins button{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:5px 11px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
 .mins button[aria-pressed="true"]{background:var(--pitch);border-color:var(--pitch);color:var(--pitch-ink)}
 .mins button:disabled{opacity:.45;cursor:default}
@@ -688,6 +698,24 @@ function textoAvisos(){
   const p=[];if(AJ.canal)p.push("cuando se confirme el canal");if(AJ.antes)p.push(AJ.min+" minutos antes de cada partido");
   return p.length?" Te avisaremos "+p.join(" y ")+".":"";
 }
+/* «Comprobar avisos» (solo app): permisos que necesitan los avisos con la app cerrada y registro de lo último que pasó */
+let compAbierto=false;
+function seccionComprobar(){
+  let e={};try{e=JSON.parse(window.AndroidApp.estadoAvisos?window.AndroidApp.estadoAvisos():"{}")}catch(_){}
+  const fila=(ok,txt,btn)=>`<li class="${ok?"ok":"ko"}"><span>${ok?"✓":"!"}</span><span>${txt}</span>${!ok&&btn?btn:""}</li>`;
+  const samsung=/samsung/i.test(e.fabricante||""),xiaomi=/xiaomi|redmi|poco/i.test(e.fabricante||""),huawei=/huawei|honor/i.test(e.fabricante||"");
+  const diag=(e.diag||[]).slice(-8).reverse();
+  return `<div class="comp"><button type="button" class="comp-t" id="comp-t" aria-expanded="${compAbierto}">Comprobar avisos con la app cerrada ${compAbierto?"▴":"▾"}</button>
+  ${compAbierto?`<ul class="comp-l">
+    ${fila(e.notif!==false,"Notificaciones permitidas",`<button type="button" class="btn sec" id="aj-permiso">Permitir</button>`)}
+    ${fila(e.exactas!==false,"Alarmas a la hora exacta",`<button type="button" class="btn sec" data-ajs="alarmas">Permitir</button>`)}
+    ${fila(e.bateria===true,"Sin restricciones de batería",`<button type="button" class="btn sec" data-ajs="bateria">Quitar</button>`)}
+  </ul>
+  ${e.bateria!==true?`<p class="note">Imprescindible para los goles con la app cerrada: si Android «duerme» la app, no puede mirar el marcador.${samsung?" En Samsung, además: Ajustes › Batería › Límites de uso en segundo plano › quita «Dónde lo Echan» de «Aplicaciones en suspensión» y «en suspensión profunda».":xiaomi?" En Xiaomi, además: en los ajustes de la app, Ahorro de batería › «Sin restricciones» y activa «Inicio automático».":huawei?" En Huawei/Honor, además: Batería › Inicio de aplicaciones › gestiona «Dónde lo Echan» a mano y activa todo.":""}</p><button type="button" class="btn sec" data-ajs="app" style="margin-top:6px">Abrir ajustes de la app</button>`:""}
+  <div style="margin-top:10px"><button type="button" class="btn sec" data-ajs="probar">Enviar un aviso de prueba</button></div>
+  <h4 class="comp-h">Lo último</h4>
+  ${diag.length?`<ul class="comp-d">${diag.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<p class="note">Aún no hay nada: aparecerá cuando se preparen los avisos de un partido de tus equipos.</p>`}`:""}</div>`;
+}
 const menuEl=document.getElementById("menu"),menuScrim=document.getElementById("menu-scrim");
 let menuFoco=null;
 function pintarMenu(){
@@ -708,7 +736,7 @@ function pintarMenu(){
       <div class="opc col"><span><b>Goles</b><small>Mientras se juega un partido de tus equipos, un aviso por cada gol, con el goleador y el minuto.</small></span>
         <span class="mins" role="group" aria-label="Avisos de gol">${[["no","No avisar"],["mios","Los de mis equipos"],["todos","Todos los del partido"]].map(([k,n])=>`<button type="button" data-goles="${k}" aria-pressed="${AJ.goles===k}"${dis}>${n}</button>`).join("")}</span></div>
       <label class="opc"><span><b>Resultado final</b><small>Al acabar el partido, el resultado con los goleadores.</small></span><input class="sw" type="checkbox" data-aj="final"${AJ.final?" checked":""}${dis}></label>
-      ${app&&(AJ.goles!=="no"||AJ.final)?`<p class="note" style="margin-top:8px">Mientras se juega, Android exige una notificación de la app: va plegada abajo del todo, sin sonido ni icono y sin marcadores («Avisos de gol activos»). Desaparece al acabar.</p>`:""}
+      ${app?seccionComprobar():""}
     </section>
     <section>
       <h3>Vuelve el fútbol</h3>
@@ -809,6 +837,9 @@ menuEl.addEventListener("click",e=>{
   if(e.target.id==="menu-cerrar"){cerrarMenu();return}
   if(e.target.id==="ck-pref"){cerrarMenu();setTimeout(mostrarBanner,250);return}
   if(e.target.id==="aj-permiso"){try{window.AndroidApp.permisoAvisos()}catch(_){}setTimeout(pintarMenu,1500);return}
+  if(e.target.id==="comp-t"){compAbierto=!compAbierto;const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y;return}
+  const ajs=e.target.closest("[data-ajs]");
+  if(ajs){const k=ajs.dataset.ajs,A=window.AndroidApp||{};try{if(k==="bateria")A.abrirBateria();else if(k==="alarmas")A.abrirAlarmas();else if(k==="app")A.abrirAjustesApp();else if(k==="probar"){A.probarAviso();aviso("Aviso de prueba enviado: debería aparecer arriba.")}}catch(_){}return}
   const gb=e.target.closest("[data-goles]");
   if(gb&&!gb.disabled){AJ.goles=gb.dataset.goles;guardarAjustes();const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y;aviso(AJ.goles==="no"?"Sin avisos de gol.":AJ.goles==="mios"?"Te avisaremos de cada gol de tus equipos.":"Te avisaremos de todos los goles de los partidos de tus equipos.");try{if(AJ.goles!=="no"&&window.AndroidApp&&window.AndroidApp.permisoAvisos)window.AndroidApp.permisoAvisos()}catch(_){}return}
   const vh=e.target.closest("[data-vhoras]");
@@ -1689,7 +1720,7 @@ function refrescarFicha(){
   const y=sheet.scrollTop,lf=lastFocus,foco=document.activeElement;
   open(m._id);sheet.scrollTop=y;lastFocus=lf;try{foco&&foco.focus({preventScroll:true})}catch(e){}
 }
-window.alVolver=()=>refrescar(Date.now()-ultima>Math.min(cadaCuanto(),5*60e3));
+window.alVolver=()=>{refrescar(Date.now()-ultima>Math.min(cadaCuanto(),5*60e3));if(!menuEl.hidden){const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y}};
 window.abrirPartido=id=>{if(!matches)return;const m=matches.find(x=>x._id===id);if(m){league=m.liga;render();open(id)}};
 window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cerrarMenu();return true}if(esEscritorio()){if(actual){close();return true}return false}if(!sheet.hidden){close();return true}return false};
 

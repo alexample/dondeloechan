@@ -87,6 +87,7 @@ public class AvisosWorker extends Worker {
             vu.setDescription("Aviso antes del primer partido después de unas horas sin fútbol (se configura en el menú de la app).");
             NotificationManager nm = c.getSystemService(NotificationManager.class);
             if (nm != null) { nm.createNotificationChannel(ch); nm.createNotificationChannel(pr); nm.createNotificationChannel(vu); }
+            Seguimiento.crearCanal(c);
         }
     }
 
@@ -142,9 +143,14 @@ public class AvisosWorker extends Worker {
             String local = m.optString("localId"), visit = m.optString("visitanteId");
             if (!favs.contains(local) && !favs.contains(visit)) continue;
             long inicio = fecha(m.optString("inicio"));
-            if (inicio <= ahora) continue;
             String estado = m.optString("estado", "");
             boolean anulado = estado.equals("aplazado") || estado.equals("suspendido") || estado.equals("final");
+            // Partido ya en juego con su cadena de avisos de gol en marcha: no se toca.
+            if (inicio <= ahora) {
+                if (seguirDirecto && !anulado && ahora < inicio + Seguimiento.MAX_DURACION && segAntes.contains("seg_" + m.optString("id")))
+                    seg.add("seg_" + m.optString("id"));
+                continue;
+            }
 
             JSONArray canales = m.optJSONArray("canales");
 
@@ -152,6 +158,11 @@ public class AvisosWorker extends Worker {
             String mid = m.optString("id");
             // A la hora de inicio arranca el seguimiento en directo (avisos de gol y de resultado final).
             if (seguirDirecto && !anulado && !m.optBoolean("horaPendiente", false)) {
+                if (!segAntes.contains("seg_" + mid)) {
+                    SimpleDateFormat hf = new SimpleDateFormat("dd/MM HH:mm", Locale.ROOT);
+                    hf.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
+                    Seguimiento.diag(c, "Avisos de gol preparados: " + m.optString("local") + " – " + m.optString("visitante") + " (" + hf.format(new Date(inicio)) + ")");
+                }
                 programarSeguimiento(c, m, inicio);
                 seg.add("seg_" + mid);
             }
@@ -272,27 +283,15 @@ public class AvisosWorker extends Worker {
         }
     }
 
-    /** Alarma exacta a la hora de inicio de un partido de tus equipos: arranca SeguimientoService. */
+    /** A la hora de inicio de un partido de tus equipos empieza la cadena de consultas (avisos de gol y final). */
     private static void programarSeguimiento(Context c, JSONObject m, long inicio) {
-        AlarmManager am = (AlarmManager) c.getSystemService(Context.ALARM_SERVICE);
-        if (am == null) return;
         JSONObject datos = new JSONObject();
         try {
             for (String k : new String[]{"id", "local", "visitante", "localId", "visitanteId"}) datos.put(k, m.optString(k));
             datos.put("liga", m.optInt("liga"));
             datos.put("inicio", inicio);
         } catch (Exception ignored) { }
-        String id = "seg_" + m.optString("id");
-        Intent in = new Intent().putExtra("id", id).putExtra("tipo", "seguir").putExtra("partido", datos.toString()).putExtra("inicio", inicio);
-        PendingIntent pi = intentoRecordatorio(c, id, in, PendingIntent.FLAG_UPDATE_CURRENT);
-        long cuando = Math.max(inicio - 60000, System.currentTimeMillis() + 1000);
-        try {
-            if (Build.VERSION.SDK_INT >= 31 && !am.canScheduleExactAlarms()) am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
-            else if (Build.VERSION.SDK_INT >= 23) am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, cuando, pi);
-            else am.setExact(AlarmManager.RTC_WAKEUP, cuando, pi);
-        } catch (SecurityException e) {
-            am.set(AlarmManager.RTC_WAKEUP, cuando, pi);
-        }
+        Seguimiento.programar(c, datos, inicio - 60000);
     }
 
     static void cancelarVuelta(Context c) {

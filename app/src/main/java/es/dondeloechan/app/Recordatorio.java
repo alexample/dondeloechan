@@ -16,9 +16,21 @@ public class Recordatorio extends BroadcastReceiver {
         long inicio = in.getLongExtra("inicio", 0);
         if (id == null || inicio == 0) return;
         if ("seguir".equals(in.getStringExtra("tipo"))) {
-            // Empieza un partido de tus equipos: seguimiento en directo (goles y final).
-            if (System.currentTimeMillis() > inicio + 3 * 3600 * 1000L) return;
-            try { SeguimientoService.seguir(c, new org.json.JSONObject(in.getStringExtra("partido"))); } catch (Exception ignored) { }
+            // Partido de tus equipos en juego: consulta el marcador, avisa de goles nuevos y programa la siguiente consulta.
+            final org.json.JSONObject m;
+            try { m = new org.json.JSONObject(in.getStringExtra("partido")); } catch (Exception e) { return; }
+            final Context app = c.getApplicationContext();
+            final PendingResult pr = goAsync();
+            new Thread(() -> {
+                try {
+                    if (Seguimiento.consultarYAvisar(app, m)) Seguimiento.programar(app, m, System.currentTimeMillis() + Seguimiento.CADA);
+                } catch (Exception e) {
+                    Seguimiento.diag(app, "Error en el seguimiento: " + e.getClass().getSimpleName());
+                    Seguimiento.programar(app, m, System.currentTimeMillis() + Seguimiento.CADA);
+                } finally {
+                    pr.finish();
+                }
+            }).start();
             return;
         }
         // Si Android lo entrega muy tarde (el partido ya va por la mitad), no tiene sentido avisar.
