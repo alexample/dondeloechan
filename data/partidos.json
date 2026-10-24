@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T17:07:19+02:00",
+ "actualizado": "2026-10-24T18:07:20+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -3569,7 +3569,50 @@
    "provisional": false,
    "visitante": "UD Ourense",
    "visitanteAbbr": "OUR",
-   "visitanteId": "ud-ourense"
+   "visitanteId": "ud-ourense",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "27'",
+     "seg": 1620,
+     "j": "Jose Luis Cortes",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "48'",
+     "seg": 2880,
+     "j": "Adrian Lekuna",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "71'",
+     "seg": 4260,
+     "j": "Ruben Torres",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "79'",
+     "seg": 4740,
+     "j": "David Ferreiro",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-rayo-majadahonda-ue-sant-andreu",
@@ -3588,7 +3631,41 @@
    "provisional": false,
    "visitante": "UE Sant Andreu",
    "visitanteAbbr": "SAN",
-   "visitanteId": "ue-sant-andreu"
+   "visitanteId": "ue-sant-andreu",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 720,
+     "j": "Yuya Yoshimura",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "58'",
+     "seg": 3480,
+     "j": "Gonzalo Calçada",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3660,
+     "j": "Alex Bermejo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-10-rac-esp",
@@ -6164,6 +6241,16 @@
      11
     ],
     [
+     "rac",
+     10,
+     3,
+     2,
+     5,
+     15,
+     26,
+     11
+    ],
+    [
      "lev",
      9,
      2,
@@ -6191,16 +6278,6 @@
      4,
      13,
      13,
-     9
-    ],
-    [
-     "esp",
-     10,
-     2,
-     3,
-     5,
-     11,
-     12,
      9
     ],
     [
@@ -6234,14 +6311,14 @@
      9
     ],
     [
-     "rac",
+     "esp",
      10,
      2,
-     3,
-     5,
-     13,
-     25,
-     9
+     2,
+     6,
+     12,
+     14,
+     8
     ],
     [
      "val",
@@ -6299,16 +6376,6 @@
      22
     ],
     [
-     "mll",
-     11,
-     6,
-     3,
-     2,
-     13,
-     5,
-     21
-    ],
-    [
      "gra",
      11,
      6,
@@ -6317,6 +6384,16 @@
      18,
      14,
      20
+    ],
+    [
+     "mll",
+     11,
+     5,
+     4,
+     2,
+     13,
+     6,
+     19
     ],
     [
      "spo",
@@ -6419,6 +6496,16 @@
      12
     ],
     [
+     "leg",
+     11,
+     3,
+     3,
+     5,
+     7,
+     16,
+     12
+    ],
+    [
      "lpa",
      10,
      3,
@@ -6426,16 +6513,6 @@
      5,
      13,
      19,
-     11
-    ],
-    [
-     "leg",
-     11,
-     3,
-     2,
-     6,
-     6,
-     16,
      11
     ],
     [
@@ -7748,9 +7825,45 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T17:07:19+02:00",
-  "cambio": "2026-10-24T17:07:19+02:00",
+  "comprobado": "2026-10-24T18:07:20+02:00",
+  "cambio": "2026-10-24T18:07:20+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T18:07:20+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 2,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Arenas Club 2-0 UD Ourense",
+     "Resultado: Rayo Majadahonda 2-1 UE Sant Andreu"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-9-arenas-club-ud-ourense",
+       "t": "Arenas Club 2-0 UD Ourense"
+      },
+      {
+       "id": "2627-5-9-rayo-majadahonda-ue-sant-andreu",
+       "t": "Rayo Majadahonda 2-1 UE Sant Andreu"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T17:07:19+02:00",
     "nuevos": 0,
@@ -8310,41 +8423,6 @@
       {
        "id": "2627-5-9-ce-europa-real-zaragoza",
        "t": "CE Europa 0-1 Real Zaragoza"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-23T23:07:21+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 2,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Resultado: Deportivo Alavés 1-1 Málaga CF",
-     "Resultado: Granada CF 2-1 Real Valladolid"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-10-ala-mal",
-       "t": "Deportivo Alavés 1-1 Málaga CF"
-      },
-      {
-       "id": "2627-2-11-gra-vll",
-       "t": "Granada CF 2-1 Real Valladolid"
       }
      ],
      "canales": [
