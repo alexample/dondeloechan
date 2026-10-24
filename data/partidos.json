@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T21:07:20+02:00",
+ "actualizado": "2026-10-24T22:07:22+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -4049,7 +4049,6 @@
    "local": "CD Teruel",
    "localAbbr": "TER",
    "localId": "cd-teruel",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "Águilas FC",
    "visitanteAbbr": "AGU",
@@ -4093,7 +4092,6 @@
    "local": "CP Cacereño",
    "localAbbr": "CAC",
    "localId": "cp-cacereno",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "Zamora",
    "visitanteAbbr": "ZAM",
@@ -4137,7 +4135,6 @@
    "local": "Ponferradina",
    "localAbbr": "PFR",
    "localId": "ponferradina",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "Barakaldo CF",
    "visitanteAbbr": "BAR",
@@ -4225,7 +4222,6 @@
    "local": "Unionistas de Salamanca",
    "localAbbr": "UNI",
    "localId": "unionistas-de-salamanca",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "Bilbao Athletic",
    "visitanteAbbr": "BIL",
@@ -5436,7 +5432,7 @@
    "local": "Auriense",
    "localAbbr": "AUR",
    "localId": "auriense",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Deportivo",
    "visitanteId": "dep"
   },
@@ -5466,7 +5462,7 @@
    "local": "Sporting Hortaleza",
    "localAbbr": "HOR",
    "localId": "sporting-hortaleza",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Sevilla",
    "visitanteId": "sev"
   },
@@ -6734,12 +6730,12 @@
     [
      "alm",
      11,
-     8,
-     1,
+     9,
+     0,
      2,
-     20,
+     22,
      7,
-     25
+     27
     ],
     [
      "cas",
@@ -6802,16 +6798,6 @@
      19
     ],
     [
-     "ovi",
-     11,
-     5,
-     3,
-     3,
-     13,
-     10,
-     18
-    ],
-    [
      "bur",
      10,
      5,
@@ -6819,6 +6805,16 @@
      3,
      13,
      10,
+     17
+    ],
+    [
+     "ovi",
+     11,
+     5,
+     2,
+     4,
+     13,
+     12,
      17
     ],
     [
@@ -7372,13 +7368,13 @@
       ],
       [
        "ud-logrones",
-       8,
-       5,
+       9,
+       6,
        2,
        1,
-       17,
-       11,
-       17,
+       20,
+       12,
+       20,
        "UD Logroñés"
       ],
       [
@@ -7391,6 +7387,17 @@
        7,
        16,
        "Racing Ferrol"
+      ],
+      [
+       "cp-cacereno",
+       9,
+       4,
+       3,
+       2,
+       8,
+       5,
+       15,
+       "CP Cacereño"
       ],
       [
        "mirandes",
@@ -7426,6 +7433,17 @@
        "Real Unión"
       ],
       [
+       "ponferradina",
+       9,
+       3,
+       4,
+       2,
+       6,
+       6,
+       13,
+       "Ponferradina"
+      ],
+      [
        "merida",
        8,
        4,
@@ -7438,25 +7456,14 @@
       ],
       [
        "bilbao-athletic",
-       8,
+       9,
        3,
        3,
-       2,
-       13,
-       10,
+       3,
+       14,
+       12,
        12,
        "Bilbao Athletic"
-      ],
-      [
-       "zamora",
-       8,
-       3,
-       3,
-       2,
-       10,
-       8,
-       12,
-       "Zamora"
       ],
       [
        "cultural-leonesa",
@@ -7470,35 +7477,24 @@
        "Cultural Leonesa"
       ],
       [
-       "cp-cacereno",
-       8,
+       "zamora",
+       9,
        3,
        3,
-       2,
-       7,
-       5,
+       3,
+       10,
+       9,
        12,
-       "CP Cacereño"
-      ],
-      [
-       "ponferradina",
-       8,
-       3,
-       3,
-       2,
-       6,
-       6,
-       12,
-       "Ponferradina"
+       "Zamora"
       ],
       [
        "real-aviles-industrial",
-       8,
+       9,
        3,
        2,
-       3,
-       14,
-       10,
+       4,
+       15,
+       13,
        11,
        "Real Avilés Industrial"
       ],
@@ -7515,14 +7511,25 @@
       ],
       [
        "barakaldo-cf",
-       8,
+       9,
        2,
-       3,
+       4,
        3,
        8,
        10,
-       9,
+       10,
        "Barakaldo CF"
+      ],
+      [
+       "unionistas-de-salamanca",
+       9,
+       3,
+       1,
+       5,
+       12,
+       15,
+       10,
+       "Unionistas de Salamanca"
       ],
       [
        "cd-coria",
@@ -7545,17 +7552,6 @@
        16,
        8,
        "Deportivo Fabril"
-      ],
-      [
-       "unionistas-de-salamanca",
-       8,
-       2,
-       1,
-       5,
-       10,
-       14,
-       7,
-       "Unionistas de Salamanca"
       ],
       [
        "ud-ourense",
@@ -8211,9 +8207,44 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T21:07:20+02:00",
-  "cambio": "2026-10-24T21:07:20+02:00",
+  "comprobado": "2026-10-24T22:07:22+02:00",
+  "cambio": "2026-10-24T22:07:22+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T22:07:22+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Canal confirmado: Sporting Hortaleza – Sevilla",
+     "Canal confirmado: Auriense – Deportivo"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-3-primera-ronda-sporting-hortaleza-sev",
+       "t": "Sporting Hortaleza – Sevilla · confirmado"
+      },
+      {
+       "id": "2627-3-primera-ronda-auriense-dep",
+       "t": "Auriense – Deportivo · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T21:07:20+02:00",
     "nuevos": 0,
@@ -8852,27 +8883,6 @@
    },
    {
     "hora": "2026-10-24T02:40:38+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T02:07:20+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
