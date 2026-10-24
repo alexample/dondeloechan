@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T22:47:09+02:00",
+ "actualizado": "2026-10-24T23:07:20+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -4284,7 +4284,23 @@
    "localId": "atm",
    "nota": "Partido elegido para el canal Movistar Plus+ (dial 7), incluido en todos los paquetes de Movistar Plus+.",
    "visitante": "RC Deportivo",
-   "visitanteId": "dep"
+   "visitanteId": "dep",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2828,
+     "j": "Julián Álvarez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-11-alm-ovi",
@@ -4299,7 +4315,50 @@
    "local": "UD Almería",
    "localId": "alm",
    "visitante": "Real Oviedo",
-   "visitanteId": "ovi"
+   "visitanteId": "ovi",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "16'",
+     "seg": 950,
+     "j": "Sergio Arribas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "27'",
+     "seg": 1576,
+     "j": "Miguel de la Fuente",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5204,
+     "j": "Jacobo González",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'",
+     "seg": 5354,
+     "j": "Jorge Pulido",
+     "lado": "V",
+     "pen": false,
+     "pp": true
+    }
+   ]
   },
   {
    "id": "2627-5-9-cultural-leonesa-pontevedra",
@@ -4319,7 +4378,41 @@
    "provisional": false,
    "visitante": "Pontevedra",
    "visitanteAbbr": "PON",
-   "visitanteId": "pontevedra"
+   "visitanteId": "pontevedra",
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "13'",
+     "seg": 780,
+     "j": "Jorge Delgado",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3360,
+     "j": "Yelko Pino",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3540,
+     "j": "Iñaki Elejalde",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-alcorcon-ud-ibiza",
@@ -6730,12 +6823,12 @@
     [
      "alm",
      11,
-     9,
-     0,
+     8,
+     1,
      2,
      22,
-     7,
-     27
+     9,
+     25
     ],
     [
      "cas",
@@ -6798,6 +6891,16 @@
      19
     ],
     [
+     "ovi",
+     11,
+     5,
+     3,
+     3,
+     15,
+     12,
+     18
+    ],
+    [
      "bur",
      10,
      5,
@@ -6805,16 +6908,6 @@
      3,
      13,
      10,
-     17
-    ],
-    [
-     "ovi",
-     11,
-     5,
-     2,
-     4,
-     13,
-     12,
      17
     ],
     [
@@ -8207,9 +8300,49 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T22:47:09+02:00",
-  "cambio": "2026-10-24T22:47:09+02:00",
+  "comprobado": "2026-10-24T23:07:20+02:00",
+  "cambio": "2026-10-24T23:07:20+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T23:07:20+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 3,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Atlético de Madrid 1-0 RC Deportivo",
+     "Resultado: UD Almería 2-2 Real Oviedo",
+     "Resultado: Cultural Leonesa 1-2 Pontevedra"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-10-atm-dep",
+       "t": "Atlético de Madrid 1-0 RC Deportivo"
+      },
+      {
+       "id": "2627-2-11-alm-ovi",
+       "t": "UD Almería 2-2 Real Oviedo"
+      },
+      {
+       "id": "2627-5-9-cultural-leonesa-pontevedra",
+       "t": "Cultural Leonesa 1-2 Pontevedra"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T22:47:09+02:00",
     "nuevos": 0,
@@ -8865,27 +8998,6 @@
    },
    {
     "hora": "2026-10-24T04:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T03:07:18+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
