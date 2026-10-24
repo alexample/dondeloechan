@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T18:07:20+02:00",
+ "actualizado": "2026-10-24T19:07:19+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -3565,7 +3565,6 @@
    "local": "Arenas Club",
    "localAbbr": "ARE",
    "localId": "arenas-club",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "UD Ourense",
    "visitanteAbbr": "OUR",
@@ -3627,7 +3626,6 @@
    "local": "Rayo Majadahonda",
    "localAbbr": "MAJ",
    "localId": "rayo-majadahonda",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "UE Sant Andreu",
    "visitanteAbbr": "SAN",
@@ -3678,7 +3676,41 @@
    "local": "Real Racing Club",
    "localId": "rac",
    "visitante": "RCD Espanyol",
-   "visitanteId": "esp"
+   "visitanteId": "esp",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3706,
+     "j": "Edu Expósito",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4114,
+     "j": "Jeanuël Belocian",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "84'",
+     "seg": 5004,
+     "j": "Yassir Zabiri",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-11-leg-mll",
@@ -3693,7 +3725,32 @@
    "local": "CD Leganés",
    "localId": "leg",
    "visitante": "RCD Mallorca",
-   "visitanteId": "mll"
+   "visitanteId": "mll",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "34'",
+     "seg": 2020,
+     "j": "Zito Luvumbo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3409,
+     "j": "Álex Millán",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-mirandes-racing-ferrol",
@@ -3720,7 +3777,32 @@
    "provisional": false,
    "visitante": "Racing Ferrol",
    "visitanteAbbr": "RFE",
-   "visitanteId": "racing-ferrol"
+   "visitanteId": "racing-ferrol",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "14'",
+     "seg": 840,
+     "j": "Raúl Martínez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5340,
+     "j": "Jorge González",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-sd-huesca-antequera",
@@ -3746,7 +3828,32 @@
    "provisional": false,
    "visitante": "Antequera",
    "visitanteAbbr": "ANT",
-   "visitanteId": "antequera"
+   "visitanteId": "antequera",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "40'",
+     "seg": 2400,
+     "j": "Douglas Aurélio",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+5'",
+     "seg": 5430,
+     "j": "Destiny Ilahude",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-10-val-vil",
@@ -6251,6 +6358,16 @@
      11
     ],
     [
+     "vil",
+     10,
+     2,
+     4,
+     4,
+     13,
+     13,
+     10
+    ],
+    [
      "lev",
      9,
      2,
@@ -6269,16 +6386,6 @@
      14,
      17,
      10
-    ],
-    [
-     "vil",
-     9,
-     2,
-     3,
-     4,
-     13,
-     13,
-     9
     ],
     [
      "ath",
@@ -6322,13 +6429,13 @@
     ],
     [
      "val",
-     9,
+     10,
      1,
-     3,
+     4,
      5,
      6,
      15,
-     6
+     7
     ],
     [
      "mal",
@@ -6376,6 +6483,16 @@
      22
     ],
     [
+     "gir",
+     11,
+     6,
+     3,
+     2,
+     20,
+     9,
+     21
+    ],
+    [
      "gra",
      11,
      6,
@@ -6404,16 +6521,6 @@
      11,
      9,
      19
-    ],
-    [
-     "gir",
-     10,
-     5,
-     3,
-     2,
-     17,
-     9,
-     18
     ],
     [
      "ovi",
@@ -6466,6 +6573,16 @@
      14
     ],
     [
+     "lpa",
+     11,
+     4,
+     2,
+     5,
+     14,
+     19,
+     14
+    ],
+    [
      "ten",
      10,
      3,
@@ -6487,12 +6604,12 @@
     ],
     [
      "clb",
-     10,
+     11,
      3,
      3,
-     4,
+     5,
      15,
-     16,
+     19,
      12
     ],
     [
@@ -6506,16 +6623,6 @@
      12
     ],
     [
-     "lpa",
-     10,
-     3,
-     2,
-     5,
-     13,
-     19,
-     11
-    ],
-    [
      "and",
      10,
      3,
@@ -6527,12 +6634,12 @@
     ],
     [
      "rsb",
-     10,
+     11,
      2,
      2,
-     6,
+     7,
      14,
-     21,
+     22,
      8
     ],
     [
@@ -7825,9 +7932,55 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T18:07:20+02:00",
-  "cambio": "2026-10-24T18:07:20+02:00",
+  "comprobado": "2026-10-24T19:07:19+02:00",
+  "cambio": "2026-10-24T19:07:19+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T19:07:19+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 4,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Real Racing Club 2-1 RCD Espanyol",
+     "Resultado: CD Leganés 1-1 RCD Mallorca",
+     "Resultado: Mirandés 2-0 Racing Ferrol",
+     "Resultado: SD Huesca 1-1 Antequera"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-10-rac-esp",
+       "t": "Real Racing Club 2-1 RCD Espanyol"
+      },
+      {
+       "id": "2627-2-11-leg-mll",
+       "t": "CD Leganés 1-1 RCD Mallorca"
+      },
+      {
+       "id": "2627-5-9-mirandes-racing-ferrol",
+       "t": "Mirandés 2-0 Racing Ferrol"
+      },
+      {
+       "id": "2627-5-9-sd-huesca-antequera",
+       "t": "SD Huesca 1-1 Antequera"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T18:07:20+02:00",
     "nuevos": 0,
@@ -8397,34 +8550,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T00:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 1,
-    "tablas": [],
-    "detalle": [
-     "Resultado: CE Europa 0-1 Real Zaragoza"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-9-ce-europa-real-zaragoza",
-       "t": "CE Europa 0-1 Real Zaragoza"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
