@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T14:07:20+02:00",
+ "actualizado": "2026-10-24T15:07:19+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -3377,7 +3377,59 @@
    "provisional": false,
    "visitante": "CD Extremadura",
    "visitanteAbbr": "EXT",
-   "visitanteId": "cd-extremadura"
+   "visitanteId": "cd-extremadura",
+   "marcador": [
+    0,
+    5
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "8'",
+     "seg": 480,
+     "j": "Kike Márquez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "33'",
+     "seg": 1980,
+     "j": "Marco Perez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "44'",
+     "seg": 2640,
+     "j": "Rodrigo Escudero",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "51'",
+     "seg": 3060,
+     "j": "Rodrigo Escudero",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "66'",
+     "seg": 3960,
+     "j": "Sergi Molina",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-juventud-torremolinos-real-murcia",
@@ -3397,7 +3449,23 @@
    "provisional": false,
    "visitante": "Real Murcia",
    "visitanteAbbr": "MUR",
-   "visitanteId": "real-murcia"
+   "visitanteId": "real-murcia",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "78'",
+     "seg": 4680,
+     "j": "Pau Pérez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-10-ray-elc",
@@ -6048,12 +6116,12 @@
      10
     ],
     [
-     "ray",
-     9,
+     "elc",
+     10,
      2,
      4,
-     3,
-     12,
+     4,
+     13,
      17,
      10
     ],
@@ -6088,6 +6156,16 @@
      9
     ],
     [
+     "ray",
+     9,
+     2,
+     3,
+     4,
+     12,
+     19,
+     9
+    ],
+    [
      "esp",
      9,
      2,
@@ -6095,16 +6173,6 @@
      5,
      11,
      12,
-     8
-    ],
-    [
-     "elc",
-     10,
-     1,
-     5,
-     4,
-     11,
-     17,
      8
     ],
     [
@@ -7622,9 +7690,44 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T14:07:20+02:00",
-  "cambio": "2026-10-24T14:07:20+02:00",
+  "comprobado": "2026-10-24T15:07:19+02:00",
+  "cambio": "2026-10-24T15:07:19+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T15:07:19+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 2,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Resultado: Deportivo Fabril 0-5 CD Extremadura",
+     "Resultado: Juventud Torremolinos 1-0 Real Murcia"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-9-deportivo-fabril-cd-extremadura",
+       "t": "Deportivo Fabril 0-5 CD Extremadura"
+      },
+      {
+       "id": "2627-5-9-juventud-torremolinos-real-murcia",
+       "t": "Juventud Torremolinos 1-0 Real Murcia"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T14:07:20+02:00",
     "nuevos": 0,
@@ -8193,27 +8296,6 @@
       {
        "id": "2627-4-fase-liga-j4-atm-bayern-munich",
        "t": "Atlético de Madrid – Bayern Múnich"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-23T20:19:46+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
       }
      ],
      "horas": [],
