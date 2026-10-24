@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T16:31:21+02:00",
+ "actualizado": "2026-10-24T17:07:19+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6299,6 +6299,16 @@
      22
     ],
     [
+     "mll",
+     11,
+     6,
+     3,
+     2,
+     13,
+     5,
+     21
+    ],
+    [
      "gra",
      11,
      6,
@@ -6307,16 +6317,6 @@
      18,
      14,
      20
-    ],
-    [
-     "mll",
-     11,
-     5,
-     4,
-     2,
-     12,
-     5,
-     19
     ],
     [
      "spo",
@@ -6419,16 +6419,6 @@
      12
     ],
     [
-     "leg",
-     11,
-     3,
-     3,
-     5,
-     6,
-     15,
-     12
-    ],
-    [
      "lpa",
      10,
      3,
@@ -6436,6 +6426,16 @@
      5,
      13,
      19,
+     11
+    ],
+    [
+     "leg",
+     11,
+     3,
+     2,
+     6,
+     6,
+     16,
      11
     ],
     [
@@ -7748,9 +7748,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T16:31:21+02:00",
-  "cambio": "2026-10-24T16:31:21+02:00",
+  "comprobado": "2026-10-24T17:07:19+02:00",
+  "cambio": "2026-10-24T17:07:19+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T17:07:19+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T16:31:21+02:00",
     "nuevos": 0,
@@ -8328,37 +8351,6 @@
       {
        "id": "2627-1-11-dep-osa",
        "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-23T22:07:21+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Segunda",
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Canal confirmado: CDA Navalcarnero – Betis"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
-       "t": "CDA Navalcarnero – Betis · confirmado"
       }
      ],
      "horas": [],
