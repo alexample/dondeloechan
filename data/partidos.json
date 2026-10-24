@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T23:07:20+02:00",
+ "actualizado": "2026-10-25T00:07:20+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7504,6 +7504,17 @@
        "Mirandés"
       ],
       [
+       "pontevedra",
+       9,
+       4,
+       2,
+       3,
+       12,
+       11,
+       14,
+       "Pontevedra"
+      ],
+      [
        "cd-extremadura",
        9,
        4,
@@ -7560,12 +7571,12 @@
       ],
       [
        "cultural-leonesa",
-       8,
-       3,
-       3,
-       2,
        9,
-       7,
+       3,
+       3,
+       3,
+       10,
+       9,
        12,
        "Cultural Leonesa"
       ],
@@ -7590,17 +7601,6 @@
        13,
        11,
        "Real Avilés Industrial"
-      ],
-      [
-       "pontevedra",
-       8,
-       3,
-       2,
-       3,
-       10,
-       10,
-       11,
-       "Pontevedra"
       ],
       [
        "barakaldo-cf",
@@ -8300,9 +8300,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T23:07:20+02:00",
-  "cambio": "2026-10-24T23:07:20+02:00",
+  "comprobado": "2026-10-25T00:07:20+02:00",
+  "cambio": "2026-10-25T00:07:20+02:00",
   "historial": [
+   {
+    "hora": "2026-10-25T00:07:20+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T23:07:20+02:00",
     "nuevos": 0,
@@ -8977,27 +9000,6 @@
    },
    {
     "hora": "2026-10-24T05:07:19+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T04:07:20+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
