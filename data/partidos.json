@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T20:07:21+02:00",
+ "actualizado": "2026-10-24T21:07:20+02:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -3866,7 +3866,59 @@
    "localId": "val",
    "visitante": "Villarreal CF",
    "visitanteId": "vil",
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2254,
+     "j": "Pepelu",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4116,
+     "j": "Alex Freeman",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "79'",
+     "seg": 4715,
+     "j": "Pape Gueye",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "89'",
+     "seg": 5335,
+     "j": "Harvey Elliott",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+6'",
+     "seg": 5400,
+     "j": "Georges Mikautadze",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-11-gir-clb",
@@ -3881,7 +3933,77 @@
    "localId": "gir",
    "nota": "Coincide con Las Palmas–Real Sociedad B, que va por el canal principal (dial 56).",
    "visitante": "Celta Fortuna",
-   "visitanteId": "clb"
+   "visitanteId": "clb",
+   "marcador": [
+    5,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "17'",
+     "seg": 979,
+     "j": "Vladyslav Vanat",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "20'",
+     "seg": 1165,
+     "j": "Unai Hernandez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "28'",
+     "seg": 1629,
+     "j": "Pablo Meixús",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1728,
+     "j": "Vladyslav Vanat",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2266,
+     "j": "Carles Pérez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3283,
+     "j": "Vladyslav Vanat",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3526,
+     "j": "Óscar Marcos",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-11-lpa-rsb",
@@ -3896,7 +4018,23 @@
    "localId": "lpa",
    "nota": "Coincide con Girona–Celta Fortuna, que va por LALIGA TV HYPERMOTION 2 (dial 59).",
    "visitante": "Real Sociedad B",
-   "visitanteId": "rsb"
+   "visitanteId": "rsb",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "8'",
+     "seg": 423,
+     "j": "Jesé",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-cd-teruel-aguilas-fc",
@@ -3915,7 +4053,32 @@
    "provisional": false,
    "visitante": "Águilas FC",
    "visitanteAbbr": "AGU",
-   "visitanteId": "aguilas-fc"
+   "visitanteId": "aguilas-fc",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "17'",
+     "seg": 1020,
+     "j": "Mario Abenza",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+4'",
+     "seg": 5424,
+     "j": "<TBD>",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-cp-cacereno-zamora",
@@ -3934,7 +4097,32 @@
    "provisional": false,
    "visitante": "Zamora",
    "visitanteAbbr": "ZAM",
-   "visitanteId": "zamora"
+   "visitanteId": "zamora",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "72'",
+     "seg": 4320,
+     "j": "Alex Monerris",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90+4'",
+     "seg": 5424,
+     "j": "Isaiah Navarro",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-ponferradina-barakaldo-cf",
@@ -3953,7 +4141,13 @@
    "provisional": false,
    "visitante": "Barakaldo CF",
    "visitanteAbbr": "BAR",
-   "visitanteId": "barakaldo-cf"
+   "visitanteId": "barakaldo-cf",
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-5-9-real-aviles-industrial-ud-logrones",
@@ -3973,7 +4167,50 @@
    "provisional": false,
    "visitante": "UD Logroñés",
    "visitanteAbbr": "LOG",
-   "visitanteId": "ud-logrones"
+   "visitanteId": "ud-logrones",
+   "marcador": [
+    1,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1740,
+     "j": "Álvaro Santamaría",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3540,
+     "j": "Anai Morales",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "79'",
+     "seg": 4740,
+     "j": "Anai Morales",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "84'",
+     "seg": 5040,
+     "j": "Marcos Baselga",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-unionistas-de-salamanca-bilbao-athletic",
@@ -3992,7 +4229,50 @@
    "provisional": false,
    "visitante": "Bilbao Athletic",
    "visitanteAbbr": "BIL",
-   "visitanteId": "bilbao-athletic"
+   "visitanteId": "bilbao-athletic",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "42'",
+     "seg": 2520,
+     "j": "Álvaro Gómez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "46'",
+     "seg": 2760,
+     "j": "Enaut Lete",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "72'",
+     "seg": 4320,
+     "j": "Pau Ferrer",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90+7'",
+     "seg": 5442,
+     "j": "Mikel Garcia Serrano",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-10-atm-dep",
@@ -6258,13 +6538,13 @@
     ],
     [
      "atm",
-     9,
+     10,
      7,
-     1,
+     2,
      1,
      19,
      8,
-     22
+     23
     ],
     [
      "rma",
@@ -6317,6 +6597,26 @@
      12
     ],
     [
+     "vil",
+     10,
+     3,
+     3,
+     4,
+     15,
+     14,
+     12
+    ],
+    [
+     "dep",
+     10,
+     2,
+     6,
+     2,
+     13,
+     12,
+     12
+    ],
+    [
      "cel",
      9,
      2,
@@ -6324,16 +6624,6 @@
      2,
      10,
      7,
-     11
-    ],
-    [
-     "dep",
-     9,
-     2,
-     5,
-     2,
-     13,
-     12,
      11
     ],
     [
@@ -6355,16 +6645,6 @@
      15,
      26,
      11
-    ],
-    [
-     "vil",
-     10,
-     2,
-     4,
-     4,
-     14,
-     14,
-     10
     ],
     [
      "lev",
@@ -6430,11 +6710,11 @@
      "val",
      10,
      1,
-     4,
-     5,
+     3,
+     6,
      7,
-     16,
-     7
+     17,
+     6
     ],
     [
      "mal",
@@ -6453,13 +6733,13 @@
    "filas": [
     [
      "alm",
-     10,
+     11,
      8,
-     0,
+     1,
      2,
      20,
      7,
-     24
+     25
     ],
     [
      "cas",
@@ -6523,13 +6803,13 @@
     ],
     [
      "ovi",
-     10,
+     11,
      5,
-     2,
+     3,
      3,
      13,
      10,
-     17
+     18
     ],
     [
      "bur",
@@ -7931,9 +8211,75 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-24T20:07:21+02:00",
-  "cambio": "2026-10-24T20:07:21+02:00",
+  "comprobado": "2026-10-24T21:07:20+02:00",
+  "cambio": "2026-10-24T21:07:20+02:00",
   "historial": [
+   {
+    "hora": "2026-10-24T21:07:20+02:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 8,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Valencia CF 1-2 Villarreal CF",
+     "Resultado: Girona FC 5-1 Celta Fortuna",
+     "Resultado: UD Las Palmas 1-0 Real Sociedad B",
+     "Resultado: CD Teruel 1-1 Águilas FC",
+     "Resultado: CP Cacereño 1-0 Zamora",
+     "Resultado: Ponferradina 0-0 Barakaldo CF",
+     "Resultado: Real Avilés Industrial 1-3 UD Logroñés",
+     "Resultado: Unionistas de Salamanca 2-1 Bilbao Athletic"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-10-val-vil",
+       "t": "Valencia CF 1-2 Villarreal CF"
+      },
+      {
+       "id": "2627-2-11-gir-clb",
+       "t": "Girona FC 5-1 Celta Fortuna"
+      },
+      {
+       "id": "2627-2-11-lpa-rsb",
+       "t": "UD Las Palmas 1-0 Real Sociedad B"
+      },
+      {
+       "id": "2627-5-9-cd-teruel-aguilas-fc",
+       "t": "CD Teruel 1-1 Águilas FC"
+      },
+      {
+       "id": "2627-5-9-cp-cacereno-zamora",
+       "t": "CP Cacereño 1-0 Zamora"
+      },
+      {
+       "id": "2627-5-9-ponferradina-barakaldo-cf",
+       "t": "Ponferradina 0-0 Barakaldo CF"
+      },
+      {
+       "id": "2627-5-9-real-aviles-industrial-ud-logrones",
+       "t": "Real Avilés Industrial 1-3 UD Logroñés"
+      },
+      {
+       "id": "2627-5-9-unionistas-de-salamanca-bilbao-athletic",
+       "t": "Unionistas de Salamanca 2-1 Bilbao Athletic"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-24T20:07:21+02:00",
     "nuevos": 0,
@@ -8532,29 +8878,6 @@
     "canales": 2,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T01:07:19+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
     "detalle": [],
     "avisos": 0,
     "items": {
