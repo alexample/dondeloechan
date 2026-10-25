@@ -8300,9 +8300,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T07:06:16+01:00",
+  "comprobado": "2026-10-25T07:07:21+01:00",
   "cambio": "2026-10-25T00:07:20+02:00",
   "historial": [
+   {
+    "hora": "2026-10-25T07:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T07:06:16+01:00",
     "nuevos": 0,
@@ -8992,27 +9013,6 @@
       {
        "id": "2627-3-primera-ronda-auriense-dep",
        "t": "Auriense – Deportivo"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T13:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
       }
      ],
      "horas": [],
