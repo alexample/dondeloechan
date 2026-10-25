@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T09:07:19+01:00",
+ "actualizado": "2026-10-25T14:07:19+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -4451,7 +4451,41 @@
    "provisional": false,
    "visitante": "Real Jaén",
    "visitanteAbbr": "JAE",
-   "visitanteId": "real-jaen"
+   "visitanteId": "real-jaen",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2280,
+     "j": "Issiaka Kamate",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3720,
+     "j": "Adrian Paz",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "78'",
+     "seg": 4680,
+     "j": "Javier Gil",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-10-ath-get",
@@ -6736,6 +6770,16 @@
      11
     ],
     [
+     "ath",
+     9,
+     2,
+     4,
+     3,
+     8,
+     9,
+     10
+    ],
+    [
      "lev",
      9,
      2,
@@ -6756,24 +6800,14 @@
      10
     ],
     [
-     "ath",
-     8,
-     2,
-     3,
-     3,
-     8,
-     9,
-     9
-    ],
-    [
      "get",
-     9,
+     10,
      2,
-     3,
+     4,
      4,
      5,
      11,
-     9
+     10
     ],
     [
      "ray",
@@ -6912,13 +6946,13 @@
     ],
     [
      "sab",
-     10,
+     11,
      4,
-     4,
+     5,
      2,
      10,
      8,
-     16
+     17
     ],
     [
      "cor",
@@ -6941,6 +6975,16 @@
      14
     ],
     [
+     "ten",
+     11,
+     3,
+     5,
+     3,
+     12,
+     14,
+     14
+    ],
+    [
      "lpa",
      11,
      4,
@@ -6949,16 +6993,6 @@
      14,
      19,
      14
-    ],
-    [
-     "ten",
-     10,
-     3,
-     4,
-     3,
-     12,
-     14,
-     13
     ],
     [
      "vll",
@@ -8300,9 +8334,40 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T13:07:20+01:00",
-  "cambio": "2026-10-25T09:07:19+01:00",
+  "comprobado": "2026-10-25T14:07:19+01:00",
+  "cambio": "2026-10-25T14:07:19+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T14:07:19+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Atlético Madrileño 1-1 Real Jaén"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-9-atletico-madrileno-real-jaen",
+       "t": "Atlético Madrileño 1-1 Real Jaén"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T13:07:20+01:00",
     "nuevos": 0,
@@ -8863,37 +8928,6 @@
       {
        "id": "2627-1-11-dep-osa",
        "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T20:07:21+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Segunda",
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Canal confirmado: Atlético Calatayud – Osasuna"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-3-primera-ronda-atletico-calatayud-osa",
-       "t": "Atlético Calatayud – Osasuna · confirmado"
       }
      ],
      "horas": [],
