@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T20:05:33+01:00",
+ "actualizado": "2026-10-25T21:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -4920,7 +4920,41 @@
    "local": "Real Sociedad",
    "localId": "rso",
    "visitante": "Levante UD",
-   "visitanteId": "lev"
+   "visitanteId": "lev",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "6'",
+     "seg": 310,
+     "j": "Orri Óskarsson",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "22'",
+     "seg": 1320,
+     "j": "Nacho Pérez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "27'",
+     "seg": 1588,
+     "j": "Beñat Turrientes",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-11-cas-spo",
@@ -4935,7 +4969,50 @@
    "local": "CD Castellón",
    "localId": "cas",
    "visitante": "Real Sporting",
-   "visitanteId": "spo"
+   "visitanteId": "spo",
+   "marcador": [
+    4,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "3'",
+     "seg": 173,
+     "j": "Adam Jakobsen",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "26'",
+     "seg": 1536,
+     "j": "Israel Suero",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3110,
+     "j": "Adam Jakobsen",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5177,
+     "j": "Varo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-gimnastic-de-tarragona-hercules",
@@ -4955,7 +5032,68 @@
    "provisional": false,
    "visitante": "Hércules",
    "visitanteAbbr": "HER",
-   "visitanteId": "hercules"
+   "visitanteId": "hercules",
+   "marcador": [
+    4,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "14'",
+     "seg": 840,
+     "j": "Samuel Vázquez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "16'",
+     "seg": 960,
+     "j": "Joseda",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "22'",
+     "seg": 1320,
+     "j": "Sinan Bakış",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "26'",
+     "seg": 1560,
+     "j": "Carlos Segura",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "33'",
+     "seg": 1980,
+     "j": "Eugeni Valderrama",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3720,
+     "j": "Hamza Abdelilah",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-merida-cd-coria",
@@ -4974,7 +5112,13 @@
    "provisional": false,
    "visitante": "CD Coria",
    "visitanteAbbr": "COR",
-   "visitanteId": "cd-coria"
+   "visitanteId": "cd-coria",
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-1-10-bar-rma",
@@ -5894,7 +6038,7 @@
    "local": "Villarreal CF",
    "localId": "vil",
    "nota": "Partido elegido para el canal Movistar Plus+ (dial 7), incluido en todos los paquetes de Movistar Plus+.",
-   "provisional": true,
+   "provisional": false,
    "visitante": "RCD Espanyol",
    "visitanteId": "esp"
   },
@@ -5913,8 +6057,7 @@
    "local": "Atlético Madrileño",
    "localAbbr": "ATM",
    "localId": "atletico-madrileno",
-   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará.",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Alcorcón",
    "visitanteAbbr": "ALC",
    "visitanteId": "alcorcon"
@@ -6939,13 +7082,13 @@
    "filas": [
     [
      "bar",
+     10,
      9,
-     9,
-     0,
+     1,
      0,
      39,
      9,
-     27
+     28
     ],
     [
      "atm",
@@ -6959,13 +7102,13 @@
     ],
     [
      "rma",
-     9,
+     10,
      7,
-     0,
+     1,
      2,
      23,
      9,
-     21
+     22
     ],
     [
      "bet",
@@ -7148,7 +7291,7 @@
      8,
      2,
      1,
-     21,
+     22,
      4,
      26
     ],
@@ -7209,7 +7352,7 @@
      1,
      4,
      11,
-     12,
+     13,
      19
     ],
     [
@@ -8622,9 +8765,65 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T20:07:19+01:00",
-  "cambio": "2026-10-25T20:05:33+01:00",
+  "comprobado": "2026-10-25T21:07:20+01:00",
+  "cambio": "2026-10-25T21:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T21:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 4,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Real Sociedad 2-1 Levante UD",
+     "Resultado: CD Castellón 4-0 Real Sporting",
+     "Canal confirmado: Villarreal CF – RCD Espanyol",
+     "Canal confirmado: Atlético Madrileño – Alcorcón",
+     "Resultado: Gimnàstic de Tarragona 4-2 Hércules",
+     "Resultado: Mérida 0-0 CD Coria"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-10-rso-lev",
+       "t": "Real Sociedad 2-1 Levante UD"
+      },
+      {
+       "id": "2627-2-11-cas-spo",
+       "t": "CD Castellón 4-0 Real Sporting"
+      },
+      {
+       "id": "2627-5-9-gimnastic-de-tarragona-hercules",
+       "t": "Gimnàstic de Tarragona 4-2 Hércules"
+      },
+      {
+       "id": "2627-5-9-merida-cd-coria",
+       "t": "Mérida 0-0 CD Coria"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-11-vil-esp",
+       "t": "Villarreal CF – RCD Espanyol · confirmado"
+      },
+      {
+       "id": "2627-5-10-atletico-madrileno-alcorcon",
+       "t": "Atlético Madrileño – Alcorcón · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T20:07:19+01:00",
     "nuevos": 0,
@@ -9168,27 +9367,6 @@
    },
    {
     "hora": "2026-10-25T02:10:31+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T02:07:19+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
