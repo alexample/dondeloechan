@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T14:07:19+01:00",
+ "actualizado": "2026-10-25T15:07:19+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -4431,7 +4431,68 @@
    "provisional": false,
    "visitante": "UD Ibiza",
    "visitanteAbbr": "IBI",
-   "visitanteId": "ud-ibiza"
+   "visitanteId": "ud-ibiza",
+   "marcador": [
+    3,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "5'",
+     "seg": 300,
+     "j": "Miguel Berlanga",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "28'",
+     "seg": 1680,
+     "j": "Ander Yoldi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "43'",
+     "seg": 2580,
+     "j": "Esteban Aparicio",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4500,
+     "j": "Javier Eslava",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "78'",
+     "seg": 4680,
+     "j": "Miguel Berlanga",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+3'",
+     "seg": 5418,
+     "j": "Pedro Ortiz",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-9-atletico-madrileno-real-jaen",
@@ -6730,6 +6791,16 @@
      12
     ],
     [
+     "ath",
+     9,
+     3,
+     3,
+     3,
+     10,
+     9,
+     12
+    ],
+    [
      "cel",
      9,
      2,
@@ -6770,16 +6841,6 @@
      11
     ],
     [
-     "ath",
-     9,
-     2,
-     4,
-     3,
-     8,
-     9,
-     10
-    ],
-    [
      "lev",
      9,
      2,
@@ -6800,16 +6861,6 @@
      10
     ],
     [
-     "get",
-     10,
-     2,
-     4,
-     4,
-     5,
-     11,
-     10
-    ],
-    [
      "ray",
      9,
      2,
@@ -6817,6 +6868,16 @@
      4,
      12,
      20,
+     9
+    ],
+    [
+     "get",
+     10,
+     2,
+     3,
+     5,
+     5,
+     13,
      9
     ],
     [
@@ -8334,9 +8395,39 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T14:07:19+01:00",
-  "cambio": "2026-10-25T14:07:19+01:00",
+  "comprobado": "2026-10-25T15:07:19+01:00",
+  "cambio": "2026-10-25T15:07:19+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T15:07:19+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Resultado: Alcorcón 3-3 UD Ibiza"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-9-alcorcon-ud-ibiza",
+       "t": "Alcorcón 3-3 UD Ibiza"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T14:07:19+01:00",
     "nuevos": 0,
@@ -8862,72 +8953,6 @@
       {
        "id": "2627-3-primera-ronda-auriense-dep",
        "t": "Auriense – Deportivo · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T21:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 8,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Valencia CF 1-2 Villarreal CF",
-     "Resultado: Girona FC 5-1 Celta Fortuna",
-     "Resultado: UD Las Palmas 1-0 Real Sociedad B",
-     "Resultado: CD Teruel 1-1 Águilas FC",
-     "Resultado: CP Cacereño 1-0 Zamora",
-     "Resultado: Ponferradina 0-0 Barakaldo CF",
-     "Resultado: Real Avilés Industrial 1-3 UD Logroñés",
-     "Resultado: Unionistas de Salamanca 2-1 Bilbao Athletic"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-10-val-vil",
-       "t": "Valencia CF 1-2 Villarreal CF"
-      },
-      {
-       "id": "2627-2-11-gir-clb",
-       "t": "Girona FC 5-1 Celta Fortuna"
-      },
-      {
-       "id": "2627-2-11-lpa-rsb",
-       "t": "UD Las Palmas 1-0 Real Sociedad B"
-      },
-      {
-       "id": "2627-5-9-cd-teruel-aguilas-fc",
-       "t": "CD Teruel 1-1 Águilas FC"
-      },
-      {
-       "id": "2627-5-9-cp-cacereno-zamora",
-       "t": "CP Cacereño 1-0 Zamora"
-      },
-      {
-       "id": "2627-5-9-ponferradina-barakaldo-cf",
-       "t": "Ponferradina 0-0 Barakaldo CF"
-      },
-      {
-       "id": "2627-5-9-real-aviles-industrial-ud-logrones",
-       "t": "Real Avilés Industrial 1-3 UD Logroñés"
-      },
-      {
-       "id": "2627-5-9-unionistas-de-salamanca-bilbao-athletic",
-       "t": "Unionistas de Salamanca 2-1 Bilbao Athletic"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
       }
      ],
      "horas": [],
