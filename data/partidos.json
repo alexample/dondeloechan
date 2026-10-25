@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T00:07:20+02:00",
+ "actualizado": "2026-10-25T08:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -4263,7 +4263,7 @@
      "t": "r",
      "min": "90+7'",
      "seg": 5442,
-     "j": "Mikel Garcia Serrano",
+     "j": "Mikel Serrano",
      "lado": "L",
      "pen": false,
      "pp": false
@@ -8300,9 +8300,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T07:07:21+01:00",
-  "cambio": "2026-10-25T00:07:20+02:00",
+  "comprobado": "2026-10-25T08:07:20+01:00",
+  "cambio": "2026-10-25T08:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T08:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T07:07:21+01:00",
     "nuevos": 0,
@@ -8948,71 +8969,6 @@
       {
        "id": "2627-1-11-dep-osa",
        "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T14:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 11,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Canal confirmado: Sestao River – RCD Espanyol",
-     "Canal confirmado: Recreativo Huelva – Rayo Vallecano",
-     "Canal confirmado: Salamanca UDS – Celta de Vigo",
-     "Canal confirmado: UE Tavernes – Valencia CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-3-primera-ronda-sestao-river-esp",
-       "t": "Sestao River – RCD Espanyol · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-ud-pinatar-elc",
-       "t": "UD Pinatar – Elche"
-      },
-      {
-       "id": "2627-3-primera-ronda-recreativo-huelva-ray",
-       "t": "Recreativo Huelva – Rayo Vallecano · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-manacor-vil",
-       "t": "CD Manacor – Villarreal"
-      },
-      {
-       "id": "2627-3-primera-ronda-salamanca-uds-cel",
-       "t": "Salamanca UDS – Celta de Vigo · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-ue-tavernes-val",
-       "t": "UE Tavernes – Valencia CF · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-atletico-calatayud-osa",
-       "t": "Atlético Calatayud – Osasuna"
-      },
-      {
-       "id": "2627-3-primera-ronda-sporting-hortaleza-sev",
-       "t": "Sporting Hortaleza – Sevilla"
-      },
-      {
-       "id": "2627-3-primera-ronda-auriense-dep",
-       "t": "Auriense – Deportivo"
       }
      ],
      "horas": [],
