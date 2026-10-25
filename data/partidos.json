@@ -8300,9 +8300,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T12:07:23+01:00",
+  "comprobado": "2026-10-25T12:24:47+01:00",
   "cambio": "2026-10-25T09:07:19+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T12:24:47+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T12:07:23+01:00",
     "nuevos": 0,
@@ -8892,42 +8913,6 @@
       {
        "id": "2627-5-9-sd-huesca-antequera",
        "t": "SD Huesca 1-1 Antequera"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T18:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 2,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Arenas Club 2-0 UD Ourense",
-     "Resultado: Rayo Majadahonda 2-1 UE Sant Andreu"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-9-arenas-club-ud-ourense",
-       "t": "Arenas Club 2-0 UD Ourense"
-      },
-      {
-       "id": "2627-5-9-rayo-majadahonda-ue-sant-andreu",
-       "t": "Rayo Majadahonda 2-1 UE Sant Andreu"
       }
      ],
      "canales": [
