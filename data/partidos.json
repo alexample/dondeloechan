@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T16:07:21+01:00",
+ "actualizado": "2026-10-25T17:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -4691,7 +4691,59 @@
    "provisional": false,
    "visitante": "Cartagena",
    "visitanteAbbr": "CAR",
-   "visitanteId": "cartagena"
+   "visitanteId": "cartagena",
+   "marcador": [
+    4,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "18'",
+     "seg": 1080,
+     "j": "Nico Barattucci",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "30'",
+     "seg": 1800,
+     "j": "Marcos Moreno",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "53'",
+     "seg": 3180,
+     "j": "Facundo Viveros",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "66'",
+     "seg": 3960,
+     "j": "Douga Fofana",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+3'",
+     "seg": 5418,
+     "j": "Cesar Bonafe",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-10-cel-bet",
@@ -6818,13 +6870,13 @@
     ],
     [
      "bet",
-     9,
+     10,
      6,
-     1,
+     2,
      2,
      16,
      14,
-     19
+     20
     ],
     [
      "rso",
@@ -6867,6 +6919,16 @@
      12
     ],
     [
+     "cel",
+     10,
+     2,
+     6,
+     2,
+     10,
+     7,
+     12
+    ],
+    [
      "vil",
      10,
      3,
@@ -6875,16 +6937,6 @@
      15,
      14,
      12
-    ],
-    [
-     "cel",
-     9,
-     2,
-     5,
-     2,
-     10,
-     7,
-     11
     ],
     [
      "dep",
@@ -7103,12 +7155,12 @@
     ],
     [
      "eld",
-     10,
+     11,
      4,
      2,
-     4,
+     5,
      13,
-     13,
+     15,
      14
     ],
     [
@@ -7182,34 +7234,34 @@
      8
     ],
     [
-     "cad",
+     "ceu",
+     11,
+     2,
+     2,
+     7,
      10,
+     22,
+     8
+    ],
+    [
+     "cad",
+     11,
      1,
      4,
-     5,
+     6,
      11,
-     13,
+     14,
      7
     ],
     [
-     "ceu",
-     10,
-     1,
-     2,
-     7,
-     9,
-     22,
-     5
-    ],
-    [
      "alb",
-     10,
-     0,
+     11,
+     1,
      1,
      9,
-     6,
+     8,
      22,
-     1
+     4
     ]
    ]
   },
@@ -8471,9 +8523,40 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T16:07:21+01:00",
-  "cambio": "2026-10-25T16:07:21+01:00",
+  "comprobado": "2026-10-25T17:07:21+01:00",
+  "cambio": "2026-10-25T17:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T17:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Villarreal B 4-1 Cartagena"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-9-villarreal-b-cartagena",
+       "t": "Villarreal B 4-1 Cartagena"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T16:07:21+01:00",
     "nuevos": 0,
@@ -9003,30 +9086,6 @@
        "t": "Cultural Leonesa 1-2 Pontevedra"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T22:47:09+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
