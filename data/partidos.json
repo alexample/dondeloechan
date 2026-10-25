@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T21:07:20+01:00",
+ "actualizado": "2026-10-25T22:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -5108,7 +5108,6 @@
    "local": "Mérida",
    "localAbbr": "MER",
    "localId": "merida",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "CD Coria",
    "visitanteAbbr": "COR",
@@ -7084,11 +7083,11 @@
      "bar",
      10,
      9,
-     1,
      0,
+     1,
      39,
-     9,
-     28
+     10,
+     27
     ],
     [
      "atm",
@@ -7103,12 +7102,12 @@
     [
      "rma",
      10,
-     7,
-     1,
+     8,
+     0,
      2,
-     23,
+     24,
      9,
-     22
+     24
     ],
     [
      "bet",
@@ -8002,6 +8001,17 @@
        "Real Unión"
       ],
       [
+       "merida",
+       9,
+       4,
+       1,
+       4,
+       15,
+       12,
+       13,
+       "Mérida"
+      ],
+      [
        "ponferradina",
        9,
        3,
@@ -8011,17 +8021,6 @@
        6,
        13,
        "Ponferradina"
-      ],
-      [
-       "merida",
-       8,
-       4,
-       0,
-       4,
-       15,
-       12,
-       12,
-       "Mérida"
       ],
       [
        "bilbao-athletic",
@@ -8091,13 +8090,13 @@
       ],
       [
        "cd-coria",
-       8,
+       9,
        2,
-       2,
+       3,
        4,
        12,
        16,
-       8,
+       9,
        "CD Coria"
       ],
       [
@@ -8216,13 +8215,24 @@
        "UD Ibiza"
       ],
       [
+       "gimnastic-de-tarragona",
+       9,
+       4,
+       2,
+       3,
+       15,
+       14,
+       14,
+       "Gimnàstic de Tarragona"
+      ],
+      [
        "hercules",
-       8,
+       9,
        4,
        1,
-       3,
-       6,
-       7,
+       4,
+       8,
+       11,
        13,
        "Hércules"
       ],
@@ -8258,17 +8268,6 @@
        11,
        12,
        "Real Madrid Castilla"
-      ],
-      [
-       "gimnastic-de-tarragona",
-       8,
-       3,
-       2,
-       3,
-       11,
-       12,
-       11,
-       "Gimnàstic de Tarragona"
       ],
       [
        "antequera",
@@ -8765,9 +8764,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T21:07:20+01:00",
-  "cambio": "2026-10-25T21:07:20+01:00",
+  "comprobado": "2026-10-25T22:07:20+01:00",
+  "cambio": "2026-10-25T22:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T22:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T21:07:20+01:00",
     "nuevos": 0,
@@ -9346,27 +9369,6 @@
    },
    {
     "hora": "2026-10-25T03:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T02:10:31+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
