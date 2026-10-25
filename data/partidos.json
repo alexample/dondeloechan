@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T22:46:11+01:00",
+ "actualizado": "2026-10-25T23:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -5131,7 +5131,41 @@
    "local": "FC Barcelona",
    "localId": "bar",
    "visitante": "Real Madrid",
-   "visitanteId": "rma"
+   "visitanteId": "rma",
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2444,
+     "j": "Kylian Mbappé",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3634,
+     "j": "Raphinha",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5214,
+     "j": "Kylian Mbappé",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-11-and-bur",
@@ -7083,11 +7117,11 @@
      "bar",
      10,
      9,
-     1,
      0,
+     1,
      40,
-     10,
-     28
+     11,
+     27
     ],
     [
      "atm",
@@ -7102,12 +7136,12 @@
     [
      "rma",
      10,
-     7,
-     1,
+     8,
+     0,
      2,
-     24,
+     25,
      10,
-     22
+     24
     ],
     [
      "bet",
@@ -8764,9 +8798,39 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T22:46:11+01:00",
-  "cambio": "2026-10-25T22:46:11+01:00",
+  "comprobado": "2026-10-25T23:07:20+01:00",
+  "cambio": "2026-10-25T23:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T23:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Resultado: FC Barcelona 1-2 Real Madrid"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-10-bar-rma",
+       "t": "FC Barcelona 1-2 Real Madrid"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T22:46:11+01:00",
     "nuevos": 0,
@@ -9350,27 +9414,6 @@
    },
    {
     "hora": "2026-10-25T05:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T04:07:19+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
