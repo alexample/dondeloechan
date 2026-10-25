@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T19:07:20+01:00",
+ "actualizado": "2026-10-25T20:05:33+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7148,7 +7148,7 @@
      8,
      2,
      1,
-     20,
+     21,
      4,
      26
     ],
@@ -7209,7 +7209,7 @@
      1,
      4,
      11,
-     11,
+     12,
      19
     ],
     [
@@ -8084,15 +8084,15 @@
        "Hércules"
       ],
       [
-       "real-madrid-castilla",
-       8,
-       3,
-       3,
-       2,
-       11,
+       "algeciras-cf",
        9,
-       12,
-       "Real Madrid Castilla"
+       4,
+       1,
+       4,
+       13,
+       13,
+       13,
+       "Algeciras CF"
       ],
       [
        "sd-huesca",
@@ -8104,6 +8104,17 @@
        11,
        12,
        "SD Huesca"
+      ],
+      [
+       "real-madrid-castilla",
+       9,
+       3,
+       3,
+       3,
+       11,
+       11,
+       12,
+       "Real Madrid Castilla"
       ],
       [
        "gimnastic-de-tarragona",
@@ -8126,17 +8137,6 @@
        13,
        11,
        "Antequera"
-      ],
-      [
-       "algeciras-cf",
-       8,
-       3,
-       1,
-       4,
-       11,
-       13,
-       10,
-       "Algeciras CF"
       ],
       [
        "atletico-madrileno",
@@ -8622,9 +8622,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T19:07:20+01:00",
-  "cambio": "2026-10-25T19:07:20+01:00",
+  "comprobado": "2026-10-25T20:05:33+01:00",
+  "cambio": "2026-10-25T20:05:33+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T20:05:33+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T19:07:20+01:00",
     "nuevos": 0,
@@ -9165,27 +9189,6 @@
    },
    {
     "hora": "2026-10-25T02:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T01:12:21+02:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
