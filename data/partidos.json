@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T17:07:21+01:00",
+ "actualizado": "2026-10-25T17:15:30+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7897,6 +7897,17 @@
      "tras": "Jornada 9",
      "filas": [
       [
+       "villarreal-b",
+       9,
+       6,
+       2,
+       1,
+       21,
+       10,
+       20,
+       "Villarreal B"
+      ],
+      [
        "real-zaragoza",
        9,
        6,
@@ -7906,17 +7917,6 @@
        10,
        20,
        "Real Zaragoza"
-      ],
-      [
-       "villarreal-b",
-       8,
-       5,
-       2,
-       1,
-       17,
-       9,
-       17,
-       "Villarreal B"
       ],
       [
        "real-murcia",
@@ -7942,12 +7942,12 @@
       ],
       [
        "cartagena",
-       8,
+       9,
        4,
        3,
-       1,
-       13,
-       5,
+       2,
+       14,
+       9,
        15,
        "Cartagena"
       ],
@@ -8523,9 +8523,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T17:07:21+01:00",
-  "cambio": "2026-10-25T17:07:21+01:00",
+  "comprobado": "2026-10-25T17:15:30+01:00",
+  "cambio": "2026-10-25T17:15:30+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T17:15:30+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T17:07:21+01:00",
     "nuevos": 0,
@@ -9046,46 +9069,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-24T23:07:20+02:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 3,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Atlético de Madrid 1-0 RC Deportivo",
-     "Resultado: UD Almería 2-2 Real Oviedo",
-     "Resultado: Cultural Leonesa 1-2 Pontevedra"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-10-atm-dep",
-       "t": "Atlético de Madrid 1-0 RC Deportivo"
-      },
-      {
-       "id": "2627-2-11-alm-ovi",
-       "t": "UD Almería 2-2 Real Oviedo"
-      },
-      {
-       "id": "2627-5-9-cultural-leonesa-pontevedra",
-       "t": "Cultural Leonesa 1-2 Pontevedra"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
