@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T22:07:20+01:00",
+ "actualizado": "2026-10-25T22:46:11+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7083,11 +7083,11 @@
      "bar",
      10,
      9,
-     0,
      1,
-     39,
+     0,
+     40,
      10,
-     27
+     28
     ],
     [
      "atm",
@@ -7102,12 +7102,12 @@
     [
      "rma",
      10,
-     8,
-     0,
+     7,
+     1,
      2,
      24,
-     9,
-     24
+     10,
+     22
     ],
     [
      "bet",
@@ -8764,9 +8764,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-25T22:07:20+01:00",
-  "cambio": "2026-10-25T22:07:20+01:00",
+  "comprobado": "2026-10-25T22:46:11+01:00",
+  "cambio": "2026-10-25T22:46:11+01:00",
   "historial": [
+   {
+    "hora": "2026-10-25T22:46:11+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-25T22:07:20+01:00",
     "nuevos": 0,
@@ -9348,27 +9371,6 @@
    },
    {
     "hora": "2026-10-25T04:07:19+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T03:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
