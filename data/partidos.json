@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T23:07:20+01:00",
+ "actualizado": "2026-10-26T13:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -5804,6 +5804,7 @@
   {
    "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
    "canales": [
+    "mlc",
     "mplus7"
    ],
    "inicio": "2026-10-28T21:00:00+01:00",
@@ -6002,6 +6003,13 @@
    "id": "2627-3-primera-ronda-ae-prat-ath",
    "canales": [
     "tdp",
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    },
     "rtveplay"
    ],
    "inicio": "2026-10-29T21:00:00+01:00",
@@ -6011,7 +6019,8 @@
    "localAbbr": "PRA",
    "localId": "ae-prat",
    "visitante": "Athletic",
-   "visitanteId": "ath"
+   "visitanteId": "ath",
+   "provisional": false
   },
   {
    "id": "2627-3-primera-ronda-auriense-dep",
@@ -8798,9 +8807,38 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-26T12:07:20+01:00",
-  "cambio": "2026-10-25T23:07:20+01:00",
+  "comprobado": "2026-10-26T13:07:22+01:00",
+  "cambio": "2026-10-26T13:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-26T13:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
+       "t": "CDA Navalcarnero – Betis"
+      },
+      {
+       "id": "2627-3-primera-ronda-ae-prat-ath",
+       "t": "AE Prat – Athletic"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-26T12:07:20+01:00",
     "nuevos": 0,
@@ -9355,29 +9393,6 @@
        "t": "RC Celta 0-0 Real Betis"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T17:15:30+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
