@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-26T17:07:21+01:00",
+ "actualizado": "2026-10-26T19:07:23+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6283,7 +6283,7 @@
    "liga": 1,
    "local": "Real Betis",
    "localId": "bet",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Málaga CF",
    "visitanteId": "mal"
   },
@@ -6319,7 +6319,7 @@
    "liga": 2,
    "local": "Celta Fortuna",
    "localId": "clb",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Córdoba CF",
    "visitanteId": "cor"
   },
@@ -6345,8 +6345,7 @@
    "local": "Real Madrid Castilla",
    "localAbbr": "RMC",
    "localId": "real-madrid-castilla",
-   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará.",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Cartagena",
    "visitanteAbbr": "CAR",
    "visitanteId": "cartagena"
@@ -7115,6 +7114,150 @@
    "visitante": "Sabah",
    "visitanteAbbr": "SBH",
    "visitanteId": "sabah"
+  },
+  {
+   "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
+   "liga": 6,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-11-05T18:45:00+01:00",
+   "local": "AGF Aarhus",
+   "localId": "agf-aarhus",
+   "visitante": "SC Braga",
+   "visitanteId": "sc-braga",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "AGF",
+   "visitanteAbbr": "BRA"
+  },
+  {
+   "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
+   "liga": 6,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-11-05T18:45:00+01:00",
+   "local": "Atalanta",
+   "localId": "atalanta",
+   "visitante": "FC Kairat",
+   "visitanteId": "fc-kairat",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "ATA",
+   "visitanteAbbr": "KAI"
+  },
+  {
+   "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
+   "liga": 6,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-11-05T18:45:00+01:00",
+   "local": "Crvena Zvezda",
+   "localId": "crvena-zvezda",
+   "visitante": "Inter Club d'Escaldes",
+   "visitanteId": "inter-club-d-escaldes",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "CRV",
+   "visitanteAbbr": "INT"
+  },
+  {
+   "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
+   "liga": 6,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-11-05T18:45:00+01:00",
+   "local": "FC Midtjylland",
+   "localId": "fc-midtjylland",
+   "visitante": "Ajax",
+   "visitanteId": "ajax",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "MID",
+   "visitanteAbbr": "AJA"
+  },
+  {
+   "id": "2627-6-fase-liga-j3-fc-thun-hearts",
+   "liga": 6,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-11-05T18:45:00+01:00",
+   "local": "FC Thun",
+   "localId": "fc-thun",
+   "visitante": "Hearts",
+   "visitanteId": "hearts",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "THU",
+   "visitanteAbbr": "HEA"
+  },
+  {
+   "id": "2627-6-fase-liga-j3-kups-gent",
+   "liga": 6,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-11-05T18:45:00+01:00",
+   "local": "KuPS",
+   "localId": "kups",
+   "visitante": "Gent",
+   "visitanteId": "gent",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "KUP",
+   "visitanteAbbr": "GEN"
+  },
+  {
+   "id": "2627-6-fase-liga-j3-lincoln-red-imps-hajduk-split",
+   "liga": 6,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-11-05T18:45:00+01:00",
+   "local": "Lincoln Red Imps",
+   "localId": "lincoln-red-imps",
+   "visitante": "Hajduk Split",
+   "visitanteId": "hajduk-split",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "LIN",
+   "visitanteAbbr": "HAJ"
+  },
+  {
+   "id": "2627-6-fase-liga-j3-mjallby-aif-borac-banja-luka",
+   "liga": 6,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-11-05T18:45:00+01:00",
+   "local": "Mjällby AIF",
+   "localId": "mjallby-aif",
+   "visitante": "Borac Banja Luka",
+   "visitanteId": "borac-banja-luka",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "MJA",
+   "visitanteAbbr": "BOR"
+  },
+  {
+   "id": "2627-6-fase-liga-j3-trabzonspor-freiburg",
+   "liga": 6,
+   "jornada": "Fase liga · J3",
+   "inicio": "2026-11-05T18:45:00+01:00",
+   "local": "Trabzonspor",
+   "localId": "trabzonspor",
+   "visitante": "Freiburg",
+   "visitanteId": "freiburg",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "TRA",
+   "visitanteAbbr": "FRE"
   }
  ],
  "clasificacion": {
@@ -8806,9 +8949,128 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-26T18:07:21+01:00",
-  "cambio": "2026-10-26T17:07:21+01:00",
+  "comprobado": "2026-10-26T19:07:23+01:00",
+  "cambio": "2026-10-26T19:07:23+01:00",
   "historial": [
+   {
+    "hora": "2026-10-26T19:07:23+01:00",
+    "nuevos": 9,
+    "horas": 0,
+    "canales": 14,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Atalanta – FC Kairat",
+     "Nuevo partido: Trabzonspor – Freiburg",
+     "Nuevo partido: FC Thun – Hearts",
+     "Nuevo partido: FC Midtjylland – Ajax",
+     "Nuevo partido: Lincoln Red Imps – Hajduk Split",
+     "Nuevo partido: Crvena Zvezda – Inter Club d'Escaldes",
+     "Nuevo partido: KuPS – Gent",
+     "Nuevo partido: AGF Aarhus – SC Braga",
+     "Nuevo partido: Mjällby AIF – Borac Banja Luka",
+     "Canal confirmado: Real Betis – Málaga CF",
+     "Canal confirmado: Celta Fortuna – Córdoba CF",
+     "Canal confirmado: Real Madrid Castilla – Cartagena"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-11-bet-mal",
+       "t": "Real Betis – Málaga CF · confirmado"
+      },
+      {
+       "id": "2627-2-12-clb-cor",
+       "t": "Celta Fortuna – Córdoba CF · confirmado"
+      },
+      {
+       "id": "2627-5-10-real-madrid-castilla-cartagena",
+       "t": "Real Madrid Castilla – Cartagena · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
+       "t": "Atalanta – FC Kairat"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-trabzonspor-freiburg",
+       "t": "Trabzonspor – Freiburg"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-fc-thun-hearts",
+       "t": "FC Thun – Hearts"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
+       "t": "FC Midtjylland – Ajax"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-lincoln-red-imps-hajduk-split",
+       "t": "Lincoln Red Imps – Hajduk Split"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
+       "t": "Crvena Zvezda – Inter Club d'Escaldes"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-kups-gent",
+       "t": "KuPS – Gent"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
+       "t": "AGF Aarhus – SC Braga"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-mjallby-aif-borac-banja-luka",
+       "t": "Mjällby AIF – Borac Banja Luka"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
+       "t": "Atalanta – FC Kairat (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-trabzonspor-freiburg",
+       "t": "Trabzonspor – Freiburg (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-fc-thun-hearts",
+       "t": "FC Thun – Hearts (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
+       "t": "FC Midtjylland – Ajax (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-lincoln-red-imps-hajduk-split",
+       "t": "Lincoln Red Imps – Hajduk Split (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
+       "t": "Crvena Zvezda – Inter Club d'Escaldes (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-kups-gent",
+       "t": "KuPS – Gent (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
+       "t": "AGF Aarhus – SC Braga (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-mjallby-aif-borac-banja-luka",
+       "t": "Mjällby AIF – Borac Banja Luka (Conference)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-26T18:07:21+01:00",
     "nuevos": 0,
@@ -9326,29 +9588,6 @@
        "t": "FC Barcelona 1-2 Real Madrid"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T22:46:11+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
