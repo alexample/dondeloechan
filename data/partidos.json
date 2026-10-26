@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-26T13:07:22+01:00",
+ "actualizado": "2026-10-26T14:00:16+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6140,7 +6140,7 @@
    "liga": 1,
    "local": "Levante UD",
    "localId": "lev",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Atlético de Madrid",
    "visitanteId": "atm"
   },
@@ -6155,7 +6155,7 @@
    "liga": 2,
    "local": "Real Sociedad B",
    "localId": "rsb",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Girona FC",
    "visitanteId": "gir"
   },
@@ -8807,9 +8807,41 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-26T13:07:22+01:00",
-  "cambio": "2026-10-26T13:07:22+01:00",
+  "comprobado": "2026-10-26T14:00:16+01:00",
+  "cambio": "2026-10-26T14:00:16+01:00",
   "historial": [
+   {
+    "hora": "2026-10-26T14:00:16+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Levante UD – Atlético de Madrid",
+     "Canal confirmado: Real Sociedad B – Girona FC"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-11-lev-atm",
+       "t": "Levante UD – Atlético de Madrid · confirmado"
+      },
+      {
+       "id": "2627-2-12-rsb-gir",
+       "t": "Real Sociedad B – Girona FC · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-26T13:07:22+01:00",
     "nuevos": 0,
@@ -9361,36 +9393,6 @@
       {
        "id": "2627-5-9-algeciras-cf-real-madrid-castilla",
        "t": "Algeciras CF 2-0 Real Madrid Castilla"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T18:07:19+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 1,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: RC Celta 0-0 Real Betis"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-10-cel-bet",
-       "t": "RC Celta 0-0 Real Betis"
       }
      ],
      "canales": [
