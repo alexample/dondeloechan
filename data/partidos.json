@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-26T22:07:21+01:00",
+ "actualizado": "2026-10-26T23:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -5179,7 +5179,59 @@
    "local": "FC Andorra",
    "localId": "and",
    "visitante": "Burgos CF",
-   "visitanteId": "bur"
+   "visitanteId": "bur",
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 544,
+     "j": "Jon Karrikaburu",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "14'",
+     "seg": 783,
+     "j": "Lautaro De León",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "17'",
+     "seg": 1015,
+     "j": "Oier Luengo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "28'",
+     "seg": 1676,
+     "j": "Curro",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "43'",
+     "seg": 2534,
+     "j": "Jordi Cano",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-10-sev-osa",
@@ -5192,7 +5244,32 @@
    "local": "Sevilla FC",
    "localId": "sev",
    "visitante": "CA Osasuna",
-   "visitanteId": "osa"
+   "visitanteId": "osa",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1432,
+     "j": "Isaac Romero",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4892,
+     "j": "Felix Correia",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-cuarte-gir",
@@ -7463,7 +7540,7 @@
      5,
      2,
      3,
-     15,
+     16,
      16,
      17
     ],
@@ -7524,7 +7601,7 @@
      2,
      5,
      10,
-     19,
+     20,
      11
     ],
     [
@@ -9092,9 +9169,44 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-26T22:07:21+01:00",
-  "cambio": "2026-10-26T22:07:21+01:00",
+  "comprobado": "2026-10-26T23:07:20+01:00",
+  "cambio": "2026-10-26T23:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-26T23:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 2,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Resultado: Sevilla FC 2-0 CA Osasuna",
+     "Resultado: FC Andorra 2-3 Burgos CF"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-10-sev-osa",
+       "t": "Sevilla FC 2-0 CA Osasuna"
+      },
+      {
+       "id": "2627-2-11-and-bur",
+       "t": "FC Andorra 2-3 Burgos CF"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-26T22:07:21+01:00",
     "nuevos": 0,
@@ -9805,27 +9917,6 @@
    },
    {
     "hora": "2026-10-26T03:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-26T02:07:22+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
