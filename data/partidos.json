@@ -8807,9 +8807,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-26T14:00:16+01:00",
+  "comprobado": "2026-10-26T14:07:21+01:00",
   "cambio": "2026-10-26T14:00:16+01:00",
   "historial": [
+   {
+    "hora": "2026-10-26T14:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-26T14:00:16+01:00",
     "nuevos": 0,
@@ -9354,47 +9375,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T19:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 3,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Albacete BP 2-0 CD Eldense",
-     "Resultado: Cádiz CF 3-1 AD Ceuta FC",
-     "Resultado: Algeciras CF 2-0 Real Madrid Castilla"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-11-alb-eld",
-       "t": "Albacete BP 2-0 CD Eldense"
-      },
-      {
-       "id": "2627-2-11-cad-ceu",
-       "t": "Cádiz CF 3-1 AD Ceuta FC"
-      },
-      {
-       "id": "2627-5-9-algeciras-cf-real-madrid-castilla",
-       "t": "Algeciras CF 2-0 Real Madrid Castilla"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
