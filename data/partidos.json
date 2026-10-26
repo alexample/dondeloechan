@@ -8798,9 +8798,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-26T10:07:20+01:00",
+  "comprobado": "2026-10-26T11:07:19+01:00",
   "cambio": "2026-10-25T23:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-26T11:07:19+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-26T10:07:20+01:00",
     "nuevos": 0,
@@ -9365,43 +9386,6 @@
       {
        "id": "2627-5-9-villarreal-b-cartagena",
        "t": "Villarreal B 4-1 Cartagena"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T16:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 2,
-    "tablas": [
-     "Primera",
-     "Segunda",
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Resultado: Athletic Club 4-0 Getafe CF",
-     "Resultado: CE Sabadell 1-1 CD Tenerife"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-10-ath-get",
-       "t": "Athletic Club 4-0 Getafe CF"
-      },
-      {
-       "id": "2627-2-11-sab-ten",
-       "t": "CE Sabadell 1-1 CD Tenerife"
       }
      ],
      "canales": [
