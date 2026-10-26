@@ -8798,9 +8798,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-26T09:07:19+01:00",
+  "comprobado": "2026-10-26T10:07:20+01:00",
   "cambio": "2026-10-25T23:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-26T10:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-26T09:07:19+01:00",
     "nuevos": 0,
@@ -9381,36 +9402,6 @@
       {
        "id": "2627-2-11-sab-ten",
        "t": "CE Sabadell 1-1 CD Tenerife"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-25T15:07:19+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 1,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Resultado: Alcorcón 3-3 UD Ibiza"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-9-alcorcon-ud-ibiza",
-       "t": "Alcorcón 3-3 UD Ibiza"
       }
      ],
      "canales": [
