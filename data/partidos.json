@@ -9248,9 +9248,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T17:37:04+01:00",
+  "comprobado": "2026-10-27T18:07:23+01:00",
   "cambio": "2026-10-27T17:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T18:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-27T17:37:04+01:00",
     "nuevos": 0,
@@ -9894,41 +9915,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-26T23:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 2,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Resultado: Sevilla FC 2-0 CA Osasuna",
-     "Resultado: FC Andorra 2-3 Burgos CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-10-sev-osa",
-       "t": "Sevilla FC 2-0 CA Osasuna"
-      },
-      {
-       "id": "2627-2-11-and-bur",
-       "t": "FC Andorra 2-3 Burgos CF"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
