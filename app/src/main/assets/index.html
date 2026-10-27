@@ -81,8 +81,22 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .match.past{opacity:.72}
 .team .star{font-style:normal;color:var(--accent);margin-right:4px}
 .compl{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.fav{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;min-height:34px}
-.fav[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+/* «Seguir» = favorito + avisos: estrella con campanita */
+.fav{appearance:none;display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 13px 5px 9px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;min-height:34px}
+.fav[aria-pressed="true"]{background:var(--fav-bg);border-color:var(--fav);color:var(--fav-ink)}
+.favico{position:relative;display:inline-block;width:20px;height:20px;flex:none}
+.favico svg.est{width:20px;height:20px}
+.favico .cmp{position:absolute;right:-5px;bottom:-3px;width:13px;height:13px;border-radius:50%;background:var(--surface);display:grid;place-items:center;box-shadow:0 0 0 1px var(--line)}
+.favico .cmp svg{width:9px;height:9px}
+.fav[aria-pressed="true"] .favico svg.est{fill:var(--fav);stroke:var(--fav)}
+.fav[aria-pressed="true"] .favico .cmp{background:var(--fav);box-shadow:none;color:#fff}
+.fav[aria-pressed="true"] .favico .cmp svg{fill:#fff;stroke:#fff}
+/* Campana del partido (cabecera de la ficha) */
+.campana-b{appearance:none;display:inline-grid;place-items:center;border:1px solid var(--line);background:transparent;color:var(--ink);width:34px;height:34px;border-radius:50%;cursor:pointer;padding:0}
+.campana-b svg{width:17px;height:17px}
+.campana-b[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.campana-b[aria-pressed="true"] svg{fill:currentColor}
+.sh-acc{display:flex;align-items:center;gap:8px}
 .fav:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .day.pasado h2{opacity:.65}
 .day h2 .hoyd{font-style:normal;color:var(--accent);letter-spacing:.06em}
@@ -338,7 +352,8 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .note{font-size:13px;color:var(--muted);background:var(--bg);border-radius:10px;padding:10px 12px;margin:0}
 .note.warn{background:var(--warn-bg);color:var(--warn)}
 .acciones{display:flex;flex-wrap:wrap;gap:8px}
-.campana{display:block;font-style:normal;font-size:12px;line-height:1;margin-top:2px}
+.campana{display:block;font-style:normal;line-height:1;margin:3px auto 0;width:13px;height:13px;color:var(--accent)}
+.campana svg{width:13px;height:13px;fill:currentColor}
 .kprog{display:block;width:44px;height:4px;border-radius:99px;background:var(--line);margin:4px auto 2px;overflow:hidden}
 .kprog i{display:block;height:100%;background:var(--live);border-radius:99px}
 .partido-vivo{margin-top:-6px}
@@ -517,6 +532,9 @@ const T = {};
  ["cas","CD Castellón","CAS"],["spo","Real Sporting","SPO"],["and","FC Andorra","AND"],["bur","Burgos CF","BUR"]
 ].forEach(([id,name,abbr])=>T[id]={id,name,abbr});
 const CANARY=new Set(["lpa","ten","paso"]);
+const SVG_EST='<svg class="est" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>';
+const SVG_CAMP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 8 2.5 8h-17S6 15 6 9"/><path d="M10.3 20.5a2 2 0 0 0 3.4 0"/></svg>';
+const favTexto=on=>`<span class="favico">${SVG_EST}<span class="cmp">${SVG_CAMP}</span></span>${on?"Siguiendo":"Seguir"}`;
 const COMP={1:{short:"Primera",name:"LALIGA EA SPORTS"},2:{short:"Segunda",name:"LALIGA HYPERMOTION"},5:{short:"Primera Federación",name:"PRIMERA FEDERACIÓN"},3:{short:"la Copa",name:"COPA DEL REY"},4:{short:"la Champions",name:"UEFA CHAMPIONS LEAGUE"},6:{short:"la Conference",name:"UEFA CONFERENCE LEAGUE"}};
 const jornLabel=j=>/^\d+$/.test(String(j))?"Jornada "+j:String(j||"");
 const PREF=new Set(["cd","ud","sd","cf","fc","rcd","ad","ce","ue","rsd","sc","cda","ub","rc","club","de","del","la","el","real","atlético","atletico","sporting","deportivo","ca","sad","cp","as","ac","afc","rb","ss","sv"]);
@@ -799,13 +817,13 @@ function pintarMenu(){
     <section>
       <h3>Mis equipos</h3>${favs.length?`<p class="note" style="margin-bottom:6px">Toca un equipo para ver solo sus partidos.</p>`:""}
       ${favs.length?`<div class="eq-l">${favs.map(f=>`<div><button type="button" class="ir" data-ver="${esc(f.id)}" title="Ver sus partidos">★ ${esc(f.n)}</button><button type="button" data-quitar="${esc(f.id)}" data-nombre="${esc(f.n)}">Quitar</button></div>`).join("")}</div>`
-        :`<p class="note">Aún no sigues a ningún equipo. Abre un partido y toca <b>☆ Seguir</b>.</p>`}
+        :`<p class="note">Aún no sigues a ningún equipo. Abre un partido y toca <b>Seguir</b> junto a un equipo: lo verás destacado y te avisaremos de sus partidos.</p>`}
     </section>
     <section>
       <h3>Partidos con aviso</h3>
       ${(()=>{const L=[...SIGUE].map(id=>matches&&matches.find(x=>x._id===id)).filter(Boolean).sort((a,b)=>new Date(a.inicio)-new Date(b.inicio));
-        return L.length?`<div class="eq-l">${L.map(m=>`<div><button type="button" class="ir" data-abrir="${esc(m._id)}">🔔 ${esc(m.local)} – ${esc(m.visitante)}<small style="display:block;font-weight:500;color:var(--muted)">${esc(cap(fDayShort.format(new Date(m.inicio))))} · ${esc(fTime.format(new Date(m.inicio)))}</small></button><button type="button" data-nosigue="${esc(m._id)}">Quitar</button></div>`).join("")}</div>`
-        :`<p class="note">Para que te avise de un partido concreto (goles de los dos equipos y resultado final), ábrelo y toca <b>🔔 Avisarme de este partido</b>.</p>`})()}
+        return L.length?`<div class="eq-l">${L.map(m=>`<div><button type="button" class="ir" data-abrir="${esc(m._id)}"><span class="campana" style="display:inline-block;margin:0 4px 0 0;vertical-align:-1px">${SVG_CAMP}</span>${esc(m.local)} – ${esc(m.visitante)}<small style="display:block;font-weight:500;color:var(--muted)">${esc(cap(fDayShort.format(new Date(m.inicio))))} · ${esc(fTime.format(new Date(m.inicio)))}</small></button><button type="button" data-nosigue="${esc(m._id)}">Quitar</button></div>`).join("")}</div>`
+        :`<p class="note">Para que te avise de un partido concreto (goles de los dos equipos y resultado final), ábrelo y toca la <b>campana</b> de arriba de la ficha.</p>`})()}
     </section>
     ${seccionActualizaciones()}
     <section class="menu-info">
@@ -1030,7 +1048,7 @@ function render(){
     <section class="day${pas?" pasado":""}"><h2>${cap(fDay.format(new Date(g[0].inicio)))}${fKey.format(new Date(g[0].inicio))===hoyKey?' · <em class="hoyd">Hoy</em>':""}</h2><div class="list">
     ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];return `
       <button class="match${st==="done"?" past":""}${m._id===ahoraId&&!q?" ahora":""}${claseMatch(m)}"${m._id===ahoraId?' id="ahora"':""} data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
-        <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b>${st==="live"&&progreso(m,now)?`<i class="kprog"><i style="width:${progreso(m,now).pct}%"></i></i>`:""}${SIGUE.has(m._id)?'<i class="campana" aria-label="con avisos">🔔</i>':""}<span class="${st||""}">${st==="live"?esc((tiempo(m,now)||{c:"En juego"}).c):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
+        <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b>${st==="live"&&progreso(m,now)?`<i class="kprog"><i style="width:${progreso(m,now).pct}%"></i></i>`:""}${SIGUE.has(m._id)?`<i class="campana" aria-label="con avisos">${SVG_CAMP}</i>`:""}<span class="${st||""}">${st==="live"?esc((tiempo(m,now)||{c:"En juego"}).c):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
         <span class="teams">
           ${league===0?`<span class="compl">${esc((COMP[m.liga]||{}).name||"")}</span>`:""}
           <span class="team">${crest(h)}<span class="nm ${claseEquipo(m.localId,m.liga)}">${FAV.has(m.localId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(h.name)}</span></span>
@@ -1606,7 +1624,7 @@ function open(id){
   const canary=CANARY.has(m.localId);
   sheet.innerHTML=`<div class="wrap">
     <div class="grab"></div>
-    <div class="sh-head"><span class="comp">${(COMP[m.liga]||{}).name||""} · ${esc(jornLabel(m.jornada))}</span><button class="close" id="close" aria-label="Cerrar">×</button></div>
+    <div class="sh-head"><span class="comp">${(COMP[m.liga]||{}).name||""} · ${esc(jornLabel(m.jornada))}</span><span class="sh-acc">${status(m,now)!=="done"&&m.estado!=="final"?`<button class="campana-b" id="sigue-partido" type="button" aria-pressed="${SIGUE.has(m._id)}" aria-label="${SIGUE.has(m._id)?"Quitar avisos de este partido":"Avisarme de este partido"}" title="${SIGUE.has(m._id)?"Quitar avisos de este partido":"Avisarme de este partido: goles de los dos equipos y resultado"}">${SVG_CAMP}</button>`:""}<button class="close" id="close" aria-label="Cerrar">×</button></span></div>
     <div class="vs">
       <div class="side">${crest(h,1)}<b id="sh-title" class="${claseEquipo(m.localId,m.liga)}">${esc(h.name)}</b>${botonFav(m.localId,h.name)}</div>
       ${tieneMarcador(m)&&(status(m,now)==="live"||status(m,now)==="done")?`<div class="mid score${status(m,now)==="live"?" live":""}">${m.marcador[0]}<i>–</i>${m.marcador[1]}</div>`:`<div class="mid">VS</div>`}
@@ -1637,8 +1655,6 @@ function open(id){
     ${tablaHTML(m)}
     ${[1,2,3,4,5,6].includes(m.liga)&&m.localId&&m.visitanteId&&window.H2H_URL?`<div id="h2h"><h3 class="sec-t">Historial y forma</h3><p class="h2h-fuente" style="margin:0">Cargando…</p></div>`:""}
     <div class="acciones">
-      ${iaActivo()?`<button class="btn btn-ia" id="ia-partido" type="button">Pregunta sobre este partido</button>`:""}
-      ${status(m,now)!=="done"&&m.estado!=="final"?`<button class="btn sec" id="sigue-partido" type="button" aria-pressed="${SIGUE.has(m._id)}">${SIGUE.has(m._id)?"🔕 Dejar de avisarme":"🔔 Avisarme de este partido"}</button>`:""}
       <button class="btn" id="compartir" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13"/><path d="m7 8 5-5 5 5"/></svg>Compartir partido</button>
       ${conComentariosFuera()?`<a class="btn sec" href="${esc(enlace(m))}" target="_blank" rel="noopener">Comentarios</a>`:""}
     </div>
@@ -1696,15 +1712,14 @@ document.getElementById("app").addEventListener("click",e=>{const b=e.target.clo
 sheet.addEventListener("click",e=>{
   if(e.target.id==="close"){close();return}
   if(e.target.closest("#compartir")&&actual){compartir(actual);return}
-  if(e.target.closest("#ia-partido")&&actual){iaAbrir(actual);return}
   const sp=e.target.closest("#sigue-partido");
-  if(sp&&actual){alternarSigue(actual);const on=SIGUE.has(actual._id);sp.setAttribute("aria-pressed",String(on));sp.textContent=on?"🔕 Dejar de avisarme":"🔔 Avisarme de este partido";render();return}
+  if(sp&&actual){alternarSigue(actual);const on=SIGUE.has(actual._id);sp.setAttribute("aria-pressed",String(on));const t=on?"Quitar avisos de este partido":"Avisarme de este partido";sp.setAttribute("aria-label",t);sp.title=on?t:t+": goles de los dos equipos y resultado";render();return}
   if(e.target.id==="ck-coment"){guardarConsent(true);return}
   if(e.target.closest("#vertabla")&&actual){verTabla=!verTabla;const tb=document.getElementById("tabla");if(tb){const y=tb.getBoundingClientRect().top;tb.outerHTML=tablaHTML(actual);const nt=document.getElementById("tabla");if(nt){sheet.scrollTop+=nt.getBoundingClientRect().top-y;const b=document.getElementById("vertabla");if(b)b.focus()}}return}
   const f=e.target.closest(".fav");
-  if(f){alternarFav(f.dataset.team,f.dataset.nombre);const on=FAV.has(f.dataset.team);f.setAttribute("aria-pressed",String(on));f.textContent=on?"★ Siguiendo":"☆ Seguir";const nb=f.closest(".side")&&f.closest(".side").querySelector("b");if(nb&&actual)nb.className=claseEquipo(f.dataset.team,actual.liga);render()}
+  if(f){alternarFav(f.dataset.team,f.dataset.nombre);const on=FAV.has(f.dataset.team);f.setAttribute("aria-pressed",String(on));f.innerHTML=favTexto(on);f.setAttribute("aria-label",(on?"Dejar de seguir a ":"Seguir a ")+f.dataset.nombre+" (favorito y avisos)");const nb=f.closest(".side")&&f.closest(".side").querySelector("b");if(nb&&actual)nb.className=claseEquipo(f.dataset.team,actual.liga);render()}
 });
-function botonFav(id,nombre){if(!id)return "";const on=FAV.has(id);return `<button class="fav" type="button" data-team="${esc(id)}" data-nombre="${esc(nombre)}" aria-pressed="${on}">${on?"★ Siguiendo":"☆ Seguir"}</button>`}
+function botonFav(id,nombre){if(!id)return "";const on=FAV.has(id);return `<button class="fav" type="button" data-team="${esc(id)}" data-nombre="${esc(nombre)}" aria-pressed="${on}" aria-label="${on?"Dejar de seguir a ":"Seguir a "}${esc(nombre)} (favorito y avisos)" title="Favorito: sus partidos destacados y avisos de canal, goles y resultado">${favTexto(on)}</button>`}
 scrim.addEventListener("click",close);
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!sheet.hidden)close()});
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
