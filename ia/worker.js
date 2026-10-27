@@ -328,6 +328,77 @@ function cors(origen) {
   };
 }
 
+// ---------------------------------------------------------------- RunningSpain: lectura con IA (último recurso)
+// Solo responde al robot de GitHub de alexample/RunningSpain: cada ejecución trae un token firmado por GitHub (OIDC),
+// así que no hace falta guardar ninguna clave. Tope diario para no gastar: RS_IA_TOPE_DIA lecturas.
+const RS_IA_TOPE_DIA = 40;
+const GH_ISS = "https://token.actions.githubusercontent.com";
+let jwksCache = { t: 0, keys: [] };
+
+function b64url(s) {
+  s = s.replace(/-/g, "+").replace(/_/g, "/");
+  while (s.length % 4) s += "=";
+  return Uint8Array.from(atob(s), c => c.charCodeAt(0));
+}
+
+async function tokenGitHubValido(auth) {
+  const jwt = (auth || "").replace(/^Bearer\s+/i, "");
+  const partes = jwt.split(".");
+  if (partes.length !== 3) return false;
+  let cab, datos;
+  try {
+    cab = JSON.parse(new TextDecoder().decode(b64url(partes[0])));
+    datos = JSON.parse(new TextDecoder().decode(b64url(partes[1])));
+  } catch { return false; }
+  const ahora = Date.now() / 1000;
+  if (datos.iss !== GH_ISS || datos.aud !== "runningspain-ia" || datos.repository !== "alexample/RunningSpain"
+      || !(datos.exp > ahora) || (datos.nbf && datos.nbf > ahora + 60)) return false;
+  if (Date.now() - jwksCache.t > 3600e3) {
+    const r = await fetch(GH_ISS + "/.well-known/jwks");
+    jwksCache = { t: Date.now(), keys: (await r.json()).keys || [] };
+  }
+  const jwk = jwksCache.keys.find(k => k.kid === cab.kid);
+  if (!jwk || cab.alg !== "RS256") return false;
+  const clave = await crypto.subtle.importKey("jwk", jwk, { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, false, ["verify"]);
+  return crypto.subtle.verify("RSASSA-PKCS1-v1_5", clave, b64url(partes[2]), new TextEncoder().encode(partes[0] + "." + partes[1]));
+}
+
+async function runningspainIA(request, env) {
+  const resp = (o, e) => new Response(JSON.stringify(o), { status: e, headers: { "Content-Type": "application/json; charset=utf-8" } });
+  if (request.method !== "POST") return resp({ error: "Usa POST." }, 405);
+  if (!(await tokenGitHubValido(request.headers.get("Authorization")))) return resp({ error: "No autorizado." }, 401);
+  if (!env.AI) return resp({ error: "Sin Workers AI." }, 500);
+  const dia = "ia:" + new Date().toISOString().slice(0, 10);
+  const usadas = parseInt((await env.VALORA.get(dia)) || "0", 10);
+  if (usadas >= RS_IA_TOPE_DIA) return resp({ error: "Tope diario alcanzado." }, 429);
+  await env.VALORA.put(dia, String(usadas + 1), { expirationTtl: 3 * 86400 });
+
+  let d;
+  try { d = await request.json(); } catch { return resp({ error: "Petición no válida." }, 400); }
+  const imgs = (d.imagenes || []).slice(0, 30).map((x, i) => `${i}: ${String(x.u).slice(0, 200)} | ${String(x.alt || "").slice(0, 80)}`).join("\n");
+  const links = (d.enlaces || []).slice(0, 40).map((x, i) => `${i}: ${String(x.u).slice(0, 200)} | ${String(x.t || "").slice(0, 80)}`).join("\n");
+  const faltan = (d.faltan || []).join(", ");
+  const sistema = "Eres un extractor de datos de carreras populares de running en España. Respondes SOLO con un objeto JSON válido, sin texto alrededor. " +
+    "Nunca inventes: si el dato no aparece claramente en el material, pon null.";
+  const pregunta =
+    `Carrera: «${String(d.nombre || "").slice(0, 120)}» en ${String(d.lugar || "").slice(0, 80)}, fecha prevista ${String(d.fecha || "").slice(0, 10)}. Hoy es ${new Date().toISOString().slice(0, 10)}.\n` +
+    `Faltan estos datos: ${faltan}.\n\n` +
+    `Devuelve este JSON:\n{"km": distancias de ESTA carrera separadas por " · " (p. ej. "21,097 km · 10 km"; NO avituallamientos, puntos kilométricos ni distancias a otros pueblos) o null,\n` +
+    ` "inscripcion": "abierta" | "cerrada" | "agotada" | "proximamente" | null (según lo que diga el texto HOY),\n` +
+    ` "cartel": número de la imagen que es el cartel oficial de esta edición (de la lista IMÁGENES) o null,\n` +
+    ` "recorrido": número del enlace al mapa/track/plano del recorrido (de la lista ENLACES) o null}\n\n` +
+    `IMÁGENES:\n${imgs || "(ninguna)"}\n\nENLACES:\n${links || "(ninguno)"}\n\nTEXTO:\n${String(d.texto || "").slice(0, 14000)}`;
+  for (const modelo of MODELOS) {
+    try {
+      const r = await env.AI.run(modelo, { messages: [{ role: "system", content: sistema }, { role: "user", content: pregunta }], max_tokens: 250, temperature: 0 });
+      const texto = (r && (r.response || (r.result && r.result.response))) || "";
+      const m = (typeof texto === "string" ? texto : JSON.stringify(texto)).match(/\{[\s\S]*\}/);
+      if (m) return resp({ ...JSON.parse(m[0]), modelo }, 200);
+    } catch (e) { /* siguiente modelo */ }
+  }
+  return resp({ error: "La IA no respondió." }, 502);
+}
+
 function json(obj, estado, origen) {
   return new Response(JSON.stringify(obj), {
     status: estado,
@@ -397,6 +468,7 @@ export default {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });
     if (request.method === "POST" && new URL(request.url).pathname === "/macrodroid") return macrodroid(request);
     if (new URL(request.url).pathname === "/valoraciones") return valoraciones(request, env, origen);
+    if (new URL(request.url).pathname === "/runningspain-ia") return runningspainIA(request, env);
     if (request.method === "GET" && new URL(request.url).pathname === "/partido") {
       if (!ORIGENES.includes(origen) && request.headers.get("X-App") !== "dondeloechan") return json({ error: "Origen no permitido." }, 403, origen);
       try { return await partidoVivo(request, env, ctx); }
