@@ -163,7 +163,7 @@ async function partidoVivo(request, env, ctx) {
   if (!/^\d{8}$/.test(fecha) || !local || !visitante) return resp({ encontrado: false, error: "Parámetros no válidos." });
   let lista = [];
   if (liga === 5) {
-    lista = (await rfefFotmob(ctx)).map(x => ({ ...x, homeTeam: { name: x.local }, awayTeam: { name: x.visitante } }));
+    lista = (await rfefFotmob(ctx, fecha)).map(x => ({ ...x, homeTeam: { name: x.local }, awayTeam: { name: x.visitante } }));
   } else if (ESPN_DE_LIGA[liga]) {
     lista = await espnPartidos([ESPN_DE_LIGA[liga]], [fecha], ctx);
   }
@@ -257,8 +257,9 @@ function fmEventos(md) {
   }
   return out.sort((a, b) => a.seg - b.seg);
 }
-async function rfefFotmob(ctx) {
-  const hoy = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Madrid", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).replace(/-/g, "");
+async function rfefFotmob(ctx, fecha) {
+  const hoy = /^\d{8}$/.test(fecha || "") ? fecha
+    : new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Madrid", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).replace(/-/g, "");
   const d = await fmGet(`/matches?date=${hoy}&timezone=Europe/Madrid`, ctx, 30);
   const out = [];
   for (const L of d.leagues || []) {

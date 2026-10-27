@@ -236,6 +236,21 @@ public class MainActivity extends Activity {
             });
         }
 
+        /** Prueba completa con un partido real ya jugado: consulta al servidor y avisa de sus goles y del final. */
+        @JavascriptInterface
+        public void probarSeguimiento(String json) {
+            final Context app = getApplicationContext();
+            new Thread(() -> {
+                try {
+                    JSONObject m = new JSONObject(json);
+                    Seguimiento.diag(app, "Prueba con " + m.optString("local") + " – " + m.optString("visitante"));
+                    Seguimiento.consultarYAvisar(app, m, true);
+                } catch (Exception e) {
+                    Seguimiento.diag(app, "Prueba: error " + e.getClass().getSimpleName() + " " + e.getMessage());
+                }
+            }).start();
+        }
+
         /** Aviso de prueba en el canal de goles, para ver que llegan. */
         @JavascriptInterface
         public void probarAviso() {

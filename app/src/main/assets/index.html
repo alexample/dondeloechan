@@ -700,6 +700,13 @@ function textoAvisos(){
 }
 /* «Comprobar avisos» (solo app): permisos que necesitan los avisos con la app cerrada y registro de lo último que pasó */
 let compAbierto=false;
+/* Último partido terminado con goles (Primera, Segunda, Copa, Champions o Conference) para la prueba completa */
+function ultimoConGoles(){
+  if(!matches)return null;
+  const now=Date.now();
+  return matches.filter(m=>[1,2,3,4,6].includes(m.liga)&&m.estado==="final"&&m.marcador&&m.marcador[0]+m.marcador[1]>0&&new Date(m.inicio).getTime()>now-4*864e5)
+    .sort((a,b)=>new Date(b.inicio)-new Date(a.inicio))[0]||null;
+}
 function seccionComprobar(){
   let e={};try{e=JSON.parse(window.AndroidApp.estadoAvisos?window.AndroidApp.estadoAvisos():"{}")}catch(_){}
   const fila=(ok,txt,btn)=>`<li class="${ok?"ok":"ko"}"><span>${ok?"✓":"!"}</span><span>${txt}</span>${!ok&&btn?btn:""}</li>`;
@@ -712,7 +719,7 @@ function seccionComprobar(){
     ${fila(e.bateria===true,"Sin restricciones de batería",`<button type="button" class="btn sec" data-ajs="bateria">Quitar</button>`)}
   </ul>
   ${e.bateria!==true?`<p class="note">Imprescindible para los goles con la app cerrada: si Android «duerme» la app, no puede mirar el marcador.${samsung?" En Samsung, además: Ajustes › Batería › Límites de uso en segundo plano › quita «Dónde lo Echan» de «Aplicaciones en suspensión» y «en suspensión profunda».":xiaomi?" En Xiaomi, además: en los ajustes de la app, Ahorro de batería › «Sin restricciones» y activa «Inicio automático».":huawei?" En Huawei/Honor, además: Batería › Inicio de aplicaciones › gestiona «Dónde lo Echan» a mano y activa todo.":""}</p><button type="button" class="btn sec" data-ajs="app" style="margin-top:6px">Abrir ajustes de la app</button>`:""}
-  <div style="margin-top:10px"><button type="button" class="btn sec" data-ajs="probar">Enviar un aviso de prueba</button></div>
+  <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px"><button type="button" class="btn sec" data-ajs="probar">Enviar un aviso de prueba</button>${ultimoConGoles()?`<button type="button" class="btn sec" data-ajs="real">Probar con ${esc(ultimoConGoles().local)} – ${esc(ultimoConGoles().visitante)}</button>`:""}</div>
   <h4 class="comp-h">Lo último</h4>
   ${diag.length?`<ul class="comp-d">${diag.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<p class="note">Aún no hay nada: aparecerá cuando se preparen los avisos de un partido de tus equipos.</p>`}`:""}</div>`;
 }
@@ -839,7 +846,8 @@ menuEl.addEventListener("click",e=>{
   if(e.target.id==="aj-permiso"){try{window.AndroidApp.permisoAvisos()}catch(_){}setTimeout(pintarMenu,1500);return}
   if(e.target.id==="comp-t"){compAbierto=!compAbierto;const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y;return}
   const ajs=e.target.closest("[data-ajs]");
-  if(ajs){const k=ajs.dataset.ajs,A=window.AndroidApp||{};try{if(k==="bateria")A.abrirBateria();else if(k==="alarmas")A.abrirAlarmas();else if(k==="app")A.abrirAjustesApp();else if(k==="probar"){A.probarAviso();aviso("Aviso de prueba enviado: debería aparecer arriba.")}}catch(_){}return}
+  if(ajs){const k=ajs.dataset.ajs,A=window.AndroidApp||{};try{if(k==="bateria")A.abrirBateria();else if(k==="alarmas")A.abrirAlarmas();else if(k==="app")A.abrirAjustesApp();else if(k==="probar"){A.probarAviso();aviso("Aviso de prueba enviado: debería aparecer arriba.")}
+    else if(k==="real"){const m=ultimoConGoles();if(m&&A.probarSeguimiento){A.probarSeguimiento(JSON.stringify({id:m._id,liga:m.liga,local:m.local,visitante:m.visitante,localId:m.localId,visitanteId:m.visitanteId,inicio:new Date(m.inicio).getTime()}));aviso("Probando: en unos segundos deberían llegarte sus goles y el final.");setTimeout(()=>{if(!menuEl.hidden){const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y}},8000)}}}catch(_){}return}
   const gb=e.target.closest("[data-goles]");
   if(gb&&!gb.disabled){AJ.goles=gb.dataset.goles;guardarAjustes();const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y;aviso(AJ.goles==="no"?"Sin avisos de gol.":AJ.goles==="mios"?"Te avisaremos de cada gol de tus equipos.":"Te avisaremos de todos los goles de los partidos de tus equipos.");try{if(AJ.goles!=="no"&&window.AndroidApp&&window.AndroidApp.permisoAvisos)window.AndroidApp.permisoAvisos()}catch(_){}return}
   const vh=e.target.closest("[data-vhoras]");

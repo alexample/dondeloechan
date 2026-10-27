@@ -79,21 +79,25 @@ public final class Seguimiento {
     }
 
     /** Una consulta (la llama Recordatorio en segundo plano). Devuelve true si hay que seguir. */
-    static boolean consultarYAvisar(Context c, JSONObject m) {
+    static boolean consultarYAvisar(Context c, JSONObject m) { return consultarYAvisar(c, m, false); }
+
+    /** prueba = true: «Probar con un partido real» del menú (avisa de todos sus goles desde 0–0, sin límite de tiempo). */
+    static boolean consultarYAvisar(Context c, JSONObject m, boolean prueba) {
         SharedPreferences p = c.getSharedPreferences(AvisosWorker.PREFS, Context.MODE_PRIVATE);
         String id = m.optString("id");
         long inicio = m.optLong("inicio");
         long ahora = System.currentTimeMillis();
-        if (ahora > inicio + MAX_DURACION) { diag(c, "Fin del seguimiento (tiempo): " + titulo(m)); return false; }
+        if (!prueba && ahora > inicio + MAX_DURACION) { diag(c, "Fin del seguimiento (tiempo): " + titulo(m)); return false; }
         JSONObject aj;
         try { aj = new JSONObject(p.getString("ajustes", "{}")); } catch (Exception e) { aj = new JSONObject(); }
-        String modoGoles = aj.optString("goles", "mios");
-        boolean avisoFinal = aj.optBoolean("final", true);
+        String modoGoles = prueba ? "todos" : aj.optString("goles", "mios");
+        boolean avisoFinal = prueba || aj.optBoolean("final", true);
         if ("no".equals(modoGoles) && !avisoFinal) return false;
 
         JSONObject r;
         try { r = consultar(m); } catch (Exception e) { diag(c, "Sin conexión al consultar " + titulo(m) + ": " + e.getClass().getSimpleName()); return true; }
         if (r == null || !r.optBoolean("encontrado")) { diag(c, "Aún sin datos de " + titulo(m)); return true; }
+        if (prueba) diag(c, "Prueba: el servidor responde " + titulo(m) + " " + r.optInt("gl") + "–" + r.optInt("gv") + " (" + r.optString("estado") + ")");
         String estado = r.optString("estado");
         if ("pre".equals(estado)) return true;
 
@@ -114,12 +118,13 @@ public final class Seguimiento {
         String marcador = local + " " + gl + "–" + gv + " " + visit;
 
         // Estado guardado: goles ya avisados de cada lado.
-        String clave = "vivo_" + id;
+        String clave = (prueba ? "prueba_" : "vivo_") + id;
+        if (prueba) p.edit().remove(clave).remove("fin_prueba_" + id).apply();
         int yaL = -1, yaV = -1;
         try { JSONObject st = new JSONObject(p.getString(clave, "{}")); yaL = st.optInt("gl", -1); yaV = st.optInt("gv", -1); } catch (Exception ignored) { }
         if (yaL < 0) {
             // Primera lectura. Si el partido acaba de empezar (≤ 20 min), se avisa también de los goles que ya hubiera.
-            boolean reciente = ahora - inicio < 20 * 60 * 1000L;
+            boolean reciente = prueba || ahora - inicio < 20 * 60 * 1000L;
             yaL = reciente ? 0 : gl;
             yaV = reciente ? 0 : gv;
             diag(c, "Siguiendo " + titulo(m) + " (" + gl + "–" + gv + ")");
@@ -140,7 +145,7 @@ public final class Seguimiento {
                 if ("todos".equals(modoGoles) || ("mios".equals(modoGoles) && mio)) {
                     String det = e == null ? "" : (e.optString("min") + " " + e.optString("j")
                             + (e.optBoolean("pen") ? " (penalti)" : "") + (e.optBoolean("pp") ? " (en propia puerta)" : "")).trim();
-                    avisar(c, id + "_" + (esL ? "L" : "V") + n, "⚽ ¡Gol " + (mio ? "de tu " : "del ") + quien + "!",
+                    avisar(c, (prueba ? "p_" : "") + id + "_" + (esL ? "L" : "V") + n, "⚽ ¡Gol " + (mio ? "de tu " : "del ") + quien + "!",
                             marcador + (det.isEmpty() ? "" : "\n" + det), id);
                     diag(c, "Aviso de gol: " + quien + " (" + marcador + ")");
                 } else {
@@ -151,14 +156,14 @@ public final class Seguimiento {
         try { p.edit().putString(clave, new JSONObject().put("gl", Math.max(gl, yaL)).put("gv", Math.max(gv, yaV)).toString()).apply(); } catch (Exception ignored) { }
 
         if ("post".equals(estado)) {
-            if (avisoFinal && !p.getBoolean("fin_" + id, false) && !r.optString("detalle").toLowerCase(Locale.ROOT).contains("aplaz")) {
+            if (avisoFinal && !p.getBoolean((prueba ? "fin_prueba_" : "fin_") + id, false) && !r.optString("detalle").toLowerCase(Locale.ROOT).contains("aplaz")) {
                 StringBuilder g = new StringBuilder();
                 for (JSONObject e : goles) {
                     if (g.length() > 0) g.append("\n");
                     g.append("L".equals(e.optString("lado")) ? local : visit).append(": ").append(e.optString("j")).append(" ").append(e.optString("min"));
                 }
-                avisar(c, id + "_final", "🏁 Final: " + marcador, g.length() > 0 ? g.toString() : marcador, id);
-                p.edit().putBoolean("fin_" + id, true).apply();
+                avisar(c, (prueba ? "p_" : "") + id + "_final", "🏁 Final: " + marcador, g.length() > 0 ? g.toString() : marcador, id);
+                if (!prueba) p.edit().putBoolean("fin_" + id, true).apply();
                 diag(c, "Aviso de final: " + marcador);
             }
             return false;
