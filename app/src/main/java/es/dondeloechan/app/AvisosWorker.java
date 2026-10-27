@@ -107,6 +107,7 @@ public class AvisosWorker extends Worker {
             for (int i = 0; i < a.length(); i++) favsAntes.add(a.getString(i));
         } catch (Exception ignored) { }
         Set<String> alarmasAntes = new HashSet<>(p.getStringSet("alarmas", new HashSet<>()));
+        Set<String> sigue = leerSet(p, "partidos");   // partidos sueltos con aviso (🔔 en la ficha)
 
         // Ajustes del menú de la app.
         JSONObject aj;
@@ -141,13 +142,13 @@ public class AvisosWorker extends Worker {
             JSONObject m = partidos.optJSONObject(i);
             if (m == null) continue;
             String local = m.optString("localId"), visit = m.optString("visitanteId");
-            if (!favs.contains(local) && !favs.contains(visit)) continue;
+            if (!favs.contains(local) && !favs.contains(visit) && !sigue.contains(m.optString("id"))) continue;
             long inicio = fecha(m.optString("inicio"));
             String estado = m.optString("estado", "");
             boolean anulado = estado.equals("aplazado") || estado.equals("suspendido") || estado.equals("final");
             // Partido ya en juego con su cadena de avisos de gol en marcha: no se toca.
             if (inicio <= ahora) {
-                if (seguirDirecto && !anulado && ahora < inicio + Seguimiento.MAX_DURACION && segAntes.contains("seg_" + m.optString("id")))
+                if ((seguirDirecto || sigue.contains(m.optString("id"))) && !anulado && ahora < inicio + Seguimiento.MAX_DURACION && segAntes.contains("seg_" + m.optString("id")))
                     seg.add("seg_" + m.optString("id"));
                 continue;
             }
@@ -157,7 +158,7 @@ public class AvisosWorker extends Worker {
             // Recordatorio 15 minutos antes (si la hora está fijada y no se ha avisado ya para esta hora).
             String mid = m.optString("id");
             // A la hora de inicio arranca el seguimiento en directo (avisos de gol y de resultado final).
-            if (seguirDirecto && !anulado && !m.optBoolean("horaPendiente", false)) {
+            if ((seguirDirecto || sigue.contains(mid)) && !anulado && !m.optBoolean("horaPendiente", false)) {
                 if (!segAntes.contains("seg_" + mid)) {
                     SimpleDateFormat hf = new SimpleDateFormat("dd/MM HH:mm", Locale.ROOT);
                     hf.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
@@ -298,6 +299,15 @@ public class AvisosWorker extends Worker {
         SharedPreferences p = c.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         for (String id : p.getStringSet("alarmas_vuelta", new HashSet<>())) cancelarRecordatorio(c, id);
         p.edit().putStringSet("alarmas_vuelta", new HashSet<>()).apply();
+    }
+
+    static Set<String> leerSet(SharedPreferences p, String clave) {
+        Set<String> s = new HashSet<>();
+        try {
+            JSONArray a = new JSONArray(p.getString(clave, "[]"));
+            for (int i = 0; i < a.length(); i++) s.add(a.getString(i));
+        } catch (Exception ignored) { }
+        return s;
     }
 
     private static PendingIntent intentoRecordatorio(Context c, String id, Intent datos, int flags) {

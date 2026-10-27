@@ -163,6 +163,15 @@ public class MainActivity extends Activity {
             AvisosWorker.revisarYa(MainActivity.this);
         }
 
+        /** Partidos sueltos con avisos (ids), aunque no sigas a sus equipos. */
+        @JavascriptInterface
+        public void guardarPartidos(String json) {
+            android.content.SharedPreferences p = getSharedPreferences(AvisosWorker.PREFS, Context.MODE_PRIVATE);
+            if (json.equals(p.getString("partidos", ""))) return;
+            p.edit().putString("partidos", json).apply();
+            AvisosWorker.revisarYa(MainActivity.this);
+        }
+
         /** Ajustes del menú: {"canal":bool,"cambio":bool,"antes":bool,"min":int}. */
         @JavascriptInterface
         public void guardarAjustes(String json) {

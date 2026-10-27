@@ -90,8 +90,10 @@ public final class Seguimiento {
         if (!prueba && ahora > inicio + MAX_DURACION) { diag(c, "Fin del seguimiento (tiempo): " + titulo(m)); return false; }
         JSONObject aj;
         try { aj = new JSONObject(p.getString("ajustes", "{}")); } catch (Exception e) { aj = new JSONObject(); }
-        String modoGoles = prueba ? "todos" : aj.optString("goles", "mios");
-        boolean avisoFinal = prueba || aj.optBoolean("final", true);
+        // Partido elegido con 🔔: avisa de los goles de los dos equipos y del final.
+        boolean elegido = AvisosWorker.leerSet(p, "partidos").contains(id);
+        String modoGoles = prueba || elegido ? "todos" : aj.optString("goles", "mios");
+        boolean avisoFinal = prueba || elegido || aj.optBoolean("final", true);
         if ("no".equals(modoGoles) && !avisoFinal) return false;
 
         JSONObject r;
