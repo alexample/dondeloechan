@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T21:07:22+01:00",
+ "actualizado": "2026-10-27T22:07:23+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -5309,7 +5309,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-calamocha-ce-europa",
@@ -5338,7 +5343,12 @@
    "visitante": "CE Europa",
    "visitanteAbbr": "EUR",
    "visitanteId": "ce-europa",
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-sestao-river-esp",
@@ -5353,7 +5363,72 @@
    "localId": "sestao-river",
    "provisional": false,
    "visitante": "RCD Espanyol",
-   "visitanteId": "esp"
+   "visitanteId": "esp",
+   "goles": [
+    {
+     "t": "g",
+     "min": "6'",
+     "seg": 344,
+     "j": "Marcos Fernández",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "18'",
+     "seg": 1073,
+     "j": "Adrián Carrión",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "40'",
+     "seg": 2343,
+     "j": "Andoni Ugarte",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'",
+     "seg": 5378,
+     "j": "Roberto Fernández",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "96'",
+     "seg": 5717,
+     "j": "Gabriel Moscardo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "98'",
+     "seg": 5832,
+     "j": "Ander Laka",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "120'+1'",
+     "seg": 7200,
+     "j": "Jon Rojo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-ud-pinatar-elc",
@@ -5368,7 +5443,12 @@
    "localId": "ud-pinatar",
    "provisional": false,
    "visitante": "Elche",
-   "visitanteId": "elc"
+   "visitanteId": "elc",
+   "marcador": [
+    1,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-ce-manresa-ue-sant-andreu",
@@ -5437,7 +5517,18 @@
    "visitante": "Rayo Majadahonda",
    "visitanteAbbr": "MAJ",
    "visitanteId": "rayo-majadahonda",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "90'+2'",
+     "seg": 5400,
+     "j": "David Del Pozo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-gimnastica-segoviana-cultural-leonesa",
@@ -5453,7 +5544,36 @@
    "visitante": "Cultural Leonesa",
    "visitanteAbbr": "CUL",
    "visitanteId": "cultural-leonesa",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "31'",
+     "seg": 1860,
+     "j": "Antón Escobar",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "35'",
+     "seg": 2100,
+     "j": "Bogdan Ionut Tiru",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "47'",
+     "seg": 2820,
+     "j": "Samba Gnamadio",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-rsd-alcala-lpa",
@@ -7625,6 +7745,26 @@
     "daznfree"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-5-11-real-aviles-industrial-cd-extremadura",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-06T21:15:00+01:00",
+   "local": "Real Avilés Industrial",
+   "localId": "real-aviles-industrial",
+   "visitante": "CD Extremadura",
+   "visitanteId": "cd-extremadura",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "AVI",
+   "visitanteAbbr": "EXT",
+   "etiqueta": "Grupo 1"
   }
  ],
  "clasificacion": {
@@ -9316,9 +9456,61 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T21:07:22+01:00",
-  "cambio": "2026-10-27T21:07:22+01:00",
+  "comprobado": "2026-10-27T22:07:23+01:00",
+  "cambio": "2026-10-27T22:07:23+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T22:07:23+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 5,
+    "resultados": 3,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Real Avilés Industrial – CD Extremadura",
+     "Resultado: Calamocha 0-3 CE Europa",
+     "Resultado: UD Pinatar 1-3 Elche",
+     "Resultado: CD Cuarte 0-2 Girona"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-3-primera-ronda-calamocha-ce-europa",
+       "t": "Calamocha 0-3 CE Europa"
+      },
+      {
+       "id": "2627-3-primera-ronda-ud-pinatar-elc",
+       "t": "UD Pinatar 1-3 Elche"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-cuarte-gir",
+       "t": "CD Cuarte 0-2 Girona"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-5-11-real-aviles-industrial-cd-extremadura",
+       "t": "Real Avilés Industrial – CD Extremadura"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-11-real-aviles-industrial-cd-extremadura",
+       "t": "Real Avilés Industrial – CD Extremadura (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-27T21:07:22+01:00",
     "nuevos": 2,
@@ -10014,27 +10206,6 @@
    },
    {
     "hora": "2026-10-27T03:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T02:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
