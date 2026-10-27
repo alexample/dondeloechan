@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T23:08:00+01:00",
+ "actualizado": "2026-10-28T00:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -5475,7 +5475,45 @@
    "nota": "Hora oficial de la RFEF (20:30); algunas guías lo anuncian a las 19:30.",
    "visitante": "UE Sant Andreu",
    "visitanteAbbr": "SAN",
-   "visitanteId": "ue-sant-andreu"
+   "visitanteId": "ue-sant-andreu",
+   "goles": [
+    {
+     "t": "g",
+     "min": "93'",
+     "seg": 5580,
+     "j": "Pablo Agudín",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "105'",
+     "seg": 6300,
+     "j": "Alexis García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "116'",
+     "seg": 6960,
+     "j": "David Momoh Domínguez",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "119'",
+     "seg": 7140,
+     "j": "Roger Munells Carrera",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-ud-castellonense-alm",
@@ -5528,7 +5566,12 @@
      "pen": true,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-atletico-tordesillas-mirandes",
@@ -5600,7 +5643,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    3,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-ciudad-de-lucena-rayo-majadahonda",
@@ -5627,7 +5675,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-gimnastica-segoviana-cultural-leonesa",
@@ -5649,10 +5702,10 @@
      "t": "g",
      "min": "31'",
      "seg": 1860,
-     "j": "Antón Escobar",
+     "j": "Samba Gnamadio",
      "lado": "V",
      "pen": false,
-     "pp": false
+     "pp": true
     },
     {
      "t": "r",
@@ -5735,7 +5788,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-ud-llanera-ponferradina",
@@ -5771,7 +5829,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-cd-don-benito-cd-extremadura",
@@ -5856,7 +5919,7 @@
      "t": "g",
      "min": "120'+2'",
      "seg": 7200,
-     "j": "Diego Díaz",
+     "j": "Nordin Al Lal",
      "lado": "V",
      "pen": false,
      "pp": false
@@ -5897,7 +5960,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-cd-atletico-paso-cor",
@@ -5965,7 +6033,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    3,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-cd-manacor-vil",
@@ -6028,7 +6101,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    5
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-recreativo-huelva-ray",
@@ -6044,7 +6122,72 @@
    "localId": "recreativo-huelva",
    "provisional": false,
    "visitante": "Rayo Vallecano",
-   "visitanteId": "ray"
+   "visitanteId": "ray",
+   "goles": [
+    {
+     "t": "g",
+     "min": "23'",
+     "seg": 1322,
+     "j": "Alejandro Marín Díaz",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "41'",
+     "seg": 2451,
+     "j": "Roan Riera",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "43'",
+     "seg": 2563,
+     "j": "Alexandre Alemão",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "97'",
+     "seg": 5804,
+     "j": "Alexandre Alemão",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "99'",
+     "seg": 5896,
+     "j": "Jorge de Frutos",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "108'",
+     "seg": 6459,
+     "j": "Florian Lejeune",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "109'",
+     "seg": 6521,
+     "j": "Paolo Romero",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-sporting-de-alcazar-mal",
@@ -6097,7 +6240,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-tudelano-real-zaragoza",
@@ -6156,7 +6304,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    4
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-anaitasuna-ala",
@@ -9882,9 +10035,86 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T23:08:00+01:00",
-  "cambio": "2026-10-27T23:08:00+01:00",
+  "comprobado": "2026-10-28T00:07:21+01:00",
+  "cambio": "2026-10-28T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-28T00:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 10,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Tudelano 0-4 Real Zaragoza",
+     "Resultado: Sporting de Alcázar 0-3 Málaga",
+     "Resultado: Arosa SC 2-0 Pontevedra",
+     "Resultado: CD Manacor 0-5 Villarreal",
+     "Resultado: CD Atlético Paso 3-1 Córdoba",
+     "Resultado: Ciudad de Lucena 0-1 Rayo Majadahonda",
+     "Resultado: UD Llanera 1-1 Ponferradina",
+     "Resultado: Atlético Tordesillas 3-3 Mirandés",
+     "Resultado: RSD Alcalá 1-3 Las Palmas",
+     "Resultado: UD Castellonense 1-2 UD Almería"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-3-primera-ronda-tudelano-real-zaragoza",
+       "t": "Tudelano 0-4 Real Zaragoza"
+      },
+      {
+       "id": "2627-3-primera-ronda-sporting-de-alcazar-mal",
+       "t": "Sporting de Alcázar 0-3 Málaga"
+      },
+      {
+       "id": "2627-3-primera-ronda-arosa-sc-pontevedra",
+       "t": "Arosa SC 2-0 Pontevedra"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-manacor-vil",
+       "t": "CD Manacor 0-5 Villarreal"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-atletico-paso-cor",
+       "t": "CD Atlético Paso 3-1 Córdoba"
+      },
+      {
+       "id": "2627-3-primera-ronda-ciudad-de-lucena-rayo-majadahonda",
+       "t": "Ciudad de Lucena 0-1 Rayo Majadahonda"
+      },
+      {
+       "id": "2627-3-primera-ronda-ud-llanera-ponferradina",
+       "t": "UD Llanera 1-1 Ponferradina"
+      },
+      {
+       "id": "2627-3-primera-ronda-atletico-tordesillas-mirandes",
+       "t": "Atlético Tordesillas 3-3 Mirandés"
+      },
+      {
+       "id": "2627-3-primera-ronda-rsd-alcala-lpa",
+       "t": "RSD Alcalá 1-3 Las Palmas"
+      },
+      {
+       "id": "2627-3-primera-ronda-ud-castellonense-alm",
+       "t": "UD Castellonense 1-2 UD Almería"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-27T23:08:00+01:00",
     "nuevos": 0,
@@ -10631,27 +10861,6 @@
    },
    {
     "hora": "2026-10-27T06:01:30+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T05:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
