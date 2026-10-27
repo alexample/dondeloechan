@@ -183,7 +183,7 @@ class Equipos:
 # ---------------------------------------------------------------- canales
 DIAL = {"54": "mliga", "57": "mliga2", "55": "daznll", "58": "daznll2", "56": "hyper", "59": "hyper2", "53": "rfef",
         "60": "mlc", "61": "mlc2", "62": "mlc3", "180": "mlcmulti", "181": "mlc5", "182": "mlc6", "183": "mlc7",
-        "184": "mlc8", "185": "mlc9", "186": "mlc10", "187": "mlc11", "188": "mlc12", "189": "mlc13", "7": "mplus7"}
+        "184": "mlc8", "167": "mliga3", "168": "mliga4", "185": "mlc9", "186": "mlc10", "187": "mlc11", "188": "mlc12", "189": "mlc13", "7": "mplus7"}
 PRIORIDAD = ["mliga", "mliga2", "mliga3", "mliga4", "daznll", "daznll2", "hyper", "hyper2", "hyper3", "rfef", "daznrfef",
              "daznhm", "mlc", "mlc2", "mlc3", "mlc5", "mlc6", "mlc7", "mlc8", "mlc9", "mlc10", "mlc11", "mlc12", "mlc13", "mlcmulti", "mlcpend", "mconfpend", "mdisp", "mcopa", "la1", "tdp",
              "mplus7", "daznfree", "orange1", "orange2", "rtveplay", "fanplay", "fclub"]
@@ -809,6 +809,8 @@ def main():
             canales = list(f["canales"])
             if not canales and liga == 6 and not m.get("canales"):
                 poner_canales(m, ["mconfpend"], exacto=False)   # toda la Conference va por Movistar Plus+
+            if not canales and liga == 3 and not m.get("canales") and f.get("por_confirmar"):
+                poner_canales(m, ["mcopa"], exacto=False)       # la Copa la emite Movistar Plus+ (salvo la que da RTVE); canal exacto, días antes
             if not canales:
                 continue
             if liga in (1, 2):
