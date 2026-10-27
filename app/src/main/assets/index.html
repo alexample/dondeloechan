@@ -1305,7 +1305,7 @@ async function marcadoresEspn(now){
   catch(e){return false}finally{clearTimeout(t)}
   const porLiga={};for(const k in VIVO_ESPN)porLiga[VIVO_ESPN[k]]=+k;
   // Nombres de ESPN que no se parecen a los de la guía
-  const ALIAS={"Heart of Midlothian":"Hearts","Red Star Belgrade":"Crvena Zvezda","FC Copenhagen":"København"};
+  const ALIAS={"Heart of Midlothian":"Hearts","Red Star Belgrade":"Crvena Zvezda","FC Copenhagen":"København","San Sebastián de los Reyes":"UD Sanse"};
   const ali=t=>t&&ALIAS[t.name]?{...t,name:ALIAS[t.name],shortName:ALIAS[t.name]}:t;
   for(const x0 of d.partidos||[]){
     const x={...x0,homeTeam:ali(x0.homeTeam),awayTeam:ali(x0.awayTeam)};

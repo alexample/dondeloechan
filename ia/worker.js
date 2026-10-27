@@ -155,7 +155,7 @@ async function espnPartidos(ligas, fechas, ctx) {
 // Un partido concreto en directo (lo usa la app de Android en segundo plano para los avisos de gol y de final).
 // ?liga=1..6&fecha=AAAAMMDD&local=…&visitante=…  →  {encontrado, estado: pre|in|post, gl, gv, reloj, parte, detalle, eventos}
 const ESPN_DE_LIGA = { 1: "esp.1", 2: "esp.2", 3: "esp.copa_del_rey", 4: "uefa.champions", 6: "uefa.europa.conf" };
-const ALIAS_VIVO = { "Heart of Midlothian": "Hearts", "Red Star Belgrade": "Crvena Zvezda", "FC Copenhagen": "København" };
+const ALIAS_VIVO = { "Heart of Midlothian": "Hearts", "Red Star Belgrade": "Crvena Zvezda", "FC Copenhagen": "København", "San Sebastián de los Reyes": "UD Sanse" };
 async function partidoVivo(request, env, ctx) {
   const u = new URL(request.url), liga = +u.searchParams.get("liga"), fecha = u.searchParams.get("fecha") || "";
   const local = (u.searchParams.get("local") || "").slice(0, 60), visitante = (u.searchParams.get("visitante") || "").slice(0, 60);
