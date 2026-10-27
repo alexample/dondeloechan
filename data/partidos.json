@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T17:07:22+01:00",
+ "actualizado": "2026-10-27T19:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6751,7 +6751,7 @@
    "liga": 1,
    "local": "Elche CF",
    "localId": "elc",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Valencia CF",
    "visitanteId": "val"
   },
@@ -6766,7 +6766,7 @@
    "liga": 2,
    "local": "Burgos CF",
    "localId": "bur",
-   "provisional": true,
+   "provisional": false,
    "visitante": "CD Castellón",
    "visitanteId": "cas"
   },
@@ -6785,8 +6785,7 @@
    "local": "CD Lugo",
    "localAbbr": "LUG",
    "localId": "cd-lugo",
-   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará.",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Mérida",
    "visitanteAbbr": "MER",
    "visitanteId": "merida"
@@ -7557,6 +7556,26 @@
    "provisional": true,
    "localAbbr": "TWE",
    "visitanteAbbr": "PAF"
+  },
+  {
+   "id": "2627-5-11-cp-cacereno-cd-lugo",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-06T19:00:00+01:00",
+   "local": "CP Cacereño",
+   "localId": "cp-cacereno",
+   "visitante": "CD Lugo",
+   "visitanteId": "cd-lugo",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "CAC",
+   "visitanteAbbr": "LUG",
+   "etiqueta": "Grupo 1"
   }
  ],
  "clasificacion": {
@@ -9248,9 +9267,56 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T18:07:23+01:00",
-  "cambio": "2026-10-27T17:07:22+01:00",
+  "comprobado": "2026-10-27T19:07:22+01:00",
+  "cambio": "2026-10-27T19:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T19:07:22+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: CP Cacereño – CD Lugo",
+     "Canal confirmado: Elche CF – Valencia CF",
+     "Canal confirmado: Burgos CF – CD Castellón",
+     "Canal confirmado: CD Lugo – Mérida"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-11-elc-val",
+       "t": "Elche CF – Valencia CF · confirmado"
+      },
+      {
+       "id": "2627-2-12-bur-cas",
+       "t": "Burgos CF – CD Castellón · confirmado"
+      },
+      {
+       "id": "2627-5-10-cd-lugo-merida",
+       "t": "CD Lugo – Mérida · confirmado"
+      },
+      {
+       "id": "2627-5-11-cp-cacereno-cd-lugo",
+       "t": "CP Cacereño – CD Lugo"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-11-cp-cacereno-cd-lugo",
+       "t": "CP Cacereño – CD Lugo (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-27T18:07:23+01:00",
     "nuevos": 0,
@@ -9885,27 +9951,6 @@
    },
    {
     "hora": "2026-10-27T00:51:44+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T00:07:19+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
