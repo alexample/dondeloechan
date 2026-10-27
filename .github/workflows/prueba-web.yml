@@ -1,0 +1,16 @@
+name: Prueba web (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - run: |
+          ok=0; no=""; while read q; do r=$(curl -s -H 'X-App: dondeloechan' "https://dondeloechan-ia.alexample.workers.dev/partido?$q"); if echo "$r" | grep -q '"encontrado":true'; then ok=$((ok+1)); else no="$no | $(python3 -c "import urllib.parse,sys;d=dict(urllib.parse.parse_qsl(sys.argv[1]));print(d['fecha'][-2:],d['local'],'-',d['visitante'])" "$q")"; fi; done < .github/copa_q.txt
+          echo "::notice::Encontrados $ok. Sin encontrar: $no"
+          python3 - <<'PY'
+          import urllib.request,json
+          for f in ["20261027","20261028","20261029"]:
+              e=json.loads(urllib.request.urlopen(urllib.request.Request(f"https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates={f}",headers={"User-Agent":"Mozilla/5.0"})).read())
+              print(f"::notice::ESPN {f} n={len(e.get('events',[]))}: "+" | ".join(ev['name'] for ev in e.get('events',[]))[:1500])
+          PY
