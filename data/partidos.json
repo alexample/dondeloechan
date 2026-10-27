@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T22:17:59+01:00",
+ "actualizado": "2026-10-27T23:08:00+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -5490,7 +5490,45 @@
    "localId": "ud-castellonense",
    "visitante": "UD Almería",
    "visitanteId": "alm",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "93'",
+     "seg": 5580,
+     "j": "Agustín Murillo Sala",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "112'",
+     "seg": 6720,
+     "j": "Thalys",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "120'+2'",
+     "seg": 7200,
+     "j": "Didac Castellá",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "120'+2'",
+     "seg": 7200,
+     "j": "Sergio Arribas",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-atletico-tordesillas-mirandes",
@@ -5506,7 +5544,63 @@
    "visitante": "Mirandés",
    "visitanteAbbr": "MIR",
    "visitanteId": "mirandes",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "5'",
+     "seg": 300,
+     "j": "Chatún",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1740,
+     "j": "Chatún",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2880,
+     "j": "Abel Conejo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4140,
+     "j": "Ricardo de Moraes",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4860,
+     "j": "Aritz Arambarri",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "Jorge González",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-ciudad-de-lucena-rayo-majadahonda",
@@ -5603,7 +5697,45 @@
    "localAbbr": "ALC",
    "localId": "rsd-alcala",
    "visitante": "Las Palmas",
-   "visitanteId": "lpa"
+   "visitanteId": "lpa",
+   "goles": [
+    {
+     "t": "g",
+     "min": "49'",
+     "seg": 2881,
+     "j": "Kirian Rodríguez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4080,
+     "j": "Luis Simón Pecharromán",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "95'",
+     "seg": 5700,
+     "j": "Kirian Rodríguez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "105'",
+     "seg": 6300,
+     "j": "Manu Fuster",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-ud-llanera-ponferradina",
@@ -5619,7 +5751,27 @@
    "visitante": "Ponferradina",
    "visitanteAbbr": "PON",
    "visitanteId": "ponferradina",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2300,
+     "j": "Serigne Faye",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4906,
+     "j": "Longo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-don-benito-cd-extremadura",
@@ -5635,7 +5787,81 @@
    "visitante": "CD Extremadura",
    "visitanteAbbr": "EXT",
    "visitanteId": "cd-extremadura",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "35'",
+     "seg": 2100,
+     "j": "Gorka Santamaria",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "44'",
+     "seg": 2640,
+     "j": "Gorka Santamaria",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4500,
+     "j": "Diego Díaz",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4860,
+     "j": "Luis Morcillo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "César Llera",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "97'",
+     "seg": 5820,
+     "j": "Iker Burgos López",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "118'",
+     "seg": 7080,
+     "j": "Luis Morcillo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "120'+2'",
+     "seg": 7200,
+     "j": "Diego Díaz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-arosa-sc-pontevedra",
@@ -5651,7 +5877,27 @@
    "visitante": "Pontevedra",
    "visitanteAbbr": "PON",
    "visitanteId": "pontevedra",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3300,
+     "j": "Marcos Remeseiro",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "66'",
+     "seg": 3960,
+     "j": "Gabriel Palmás",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-atletico-paso-cor",
@@ -5672,7 +5918,54 @@
    "localId": "cd-atletico-paso",
    "nota": "Se juega en La Palma: en Canarias, a las 20:00.",
    "visitante": "Córdoba",
-   "visitanteId": "cor"
+   "visitanteId": "cor",
+   "goles": [
+    {
+     "t": "g",
+     "min": "30'",
+     "seg": 1800,
+     "j": "Ibai Sanz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "62'",
+     "seg": 3720,
+     "j": "",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "64'",
+     "seg": 3840,
+     "j": "Iván Villoslada",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "76'",
+     "seg": 4560,
+     "j": "Aythami Perera",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "Aythami Perera",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-manacor-vil",
@@ -5688,7 +5981,54 @@
    "localId": "cd-manacor",
    "provisional": false,
    "visitante": "Villarreal",
-   "visitanteId": "vil"
+   "visitanteId": "vil",
+   "goles": [
+    {
+     "t": "g",
+     "min": "13'",
+     "seg": 733,
+     "j": "Alassane Diatta",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "26'",
+     "seg": 1519,
+     "j": "Tani Oluwaseyi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2790,
+     "j": "Sergi Cardona",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3287,
+     "j": "Nizar El Jmili Ben Hamou",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4024,
+     "j": "Nicolas Pépé",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-recreativo-huelva-ray",
@@ -5719,7 +6059,45 @@
    "localId": "sporting-de-alcazar",
    "provisional": false,
    "visitante": "Málaga",
-   "visitanteId": "mal"
+   "visitanteId": "mal",
+   "goles": [
+    {
+     "t": "g",
+     "min": "71'",
+     "seg": 4223,
+     "j": "Chupete",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "78'",
+     "seg": 4624,
+     "j": "Antonio Avilés Ransanz",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4790,
+     "j": "Chupete",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5233,
+     "j": "Daniel Lorenzo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-tudelano-real-zaragoza",
@@ -5740,7 +6118,45 @@
    "localId": "tudelano",
    "visitante": "Real Zaragoza",
    "visitanteAbbr": "ZAR",
-   "visitanteId": "real-zaragoza"
+   "visitanteId": "real-zaragoza",
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 720,
+     "j": "Joaquin Delgado",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "20'",
+     "seg": 1200,
+     "j": "Pau Sans",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "37'",
+     "seg": 2220,
+     "j": "Pau Sans",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2460,
+     "j": "Hugo Pinilla",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-anaitasuna-ala",
@@ -9466,9 +9882,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T22:17:59+01:00",
-  "cambio": "2026-10-27T22:17:59+01:00",
+  "comprobado": "2026-10-27T23:08:00+01:00",
+  "cambio": "2026-10-27T23:08:00+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T23:08:00+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-27T22:17:59+01:00",
     "nuevos": 0,
@@ -10211,27 +10652,6 @@
    },
    {
     "hora": "2026-10-27T05:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T04:07:20+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
