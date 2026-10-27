@@ -1,0 +1,31 @@
+name: Prueba fuentes (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import urllib.request,json
+          def g(u):
+              return json.loads(urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0","Accept":"application/json"}),timeout=30).read())
+          e=g("https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261025")
+          ev=[x for x in e["events"] if "Barcelona" in x["name"]][0]
+          s=g(f"https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event={ev['id']}")
+          ro=s.get("rosters",[])
+          out=[f"ESPN id={ev['id']} keys={list(s.keys())[:15]} rosters={len(ro)}"]
+          for r in ro[:2]:
+              st=[p for p in r.get("roster",[]) if p.get("starter")]
+              out.append(f"{r.get('homeAway')} {r.get('team',{}).get('displayName')} form={r.get('formation')} titulares={len(st)} ej="+json.dumps([(p.get('jersey'),p.get('athlete',{}).get('displayName'),(p.get('position') or {}).get('abbreviation'),p.get('formationPlace')) for p in st[:4]],ensure_ascii=False)+" keys="+",".join(list(st[0].keys()) if st else []))
+          # fotmob RFEF
+          d=g("https://www.fotmob.com/api/data/matches?date=20261025&timezone=Europe/Madrid")
+          mid=None
+          for L in d["leagues"]:
+              if L.get("primaryId")==8968:
+                  mid=L["matches"][0]["id"];nm=L["matches"][0]["home"]["name"];break
+          md=g(f"https://www.fotmob.com/api/data/matchDetails?matchId={mid}")
+          lu=(md.get("content") or {}).get("lineup") or {}
+          ht=lu.get("homeTeam") or {}
+          out.append(f"FOTMOB {nm} lineup keys={list(lu.keys())} home keys={list(ht.keys())[:12]} formation={ht.get('formation')} starters="+json.dumps([(p.get('shirtNumber'),p.get('name'),p.get('positionId'),p.get('usualPlayingPositionId')) for p in (ht.get('starters') or [])[:4]],ensure_ascii=False)[:500])
+          for o in out: print("::notice::"+o[:1500])
+          PY
