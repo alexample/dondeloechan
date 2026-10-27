@@ -144,7 +144,7 @@ async function espnPartidos(ligas, fechas, ctx) {
           j: j.displayName || j.shortName || "", lado: eqId === idL ? "L" : eqId === idV ? "V" : "",
           pen: !!e.penaltyKick, pp: !!e.ownGoal };
       }).filter(e => e.lado);
-      out.push({ liga, utcDate: ev.date, homeTeam: team(h), awayTeam: team(a),
+      out.push({ id: ev.id, liga, utcDate: ev.date, homeTeam: team(h), awayTeam: team(a),
         gl: h.score != null ? +h.score : null, gv: a.score != null ? +a.score : null,
         estado: ty.state || "", detalle: ty.name || "", reloj: st.displayClock || "", parte: st.period || 0, eventos });
     }
@@ -156,6 +156,56 @@ async function espnPartidos(ligas, fechas, ctx) {
 // ?liga=1..6&fecha=AAAAMMDD&local=…&visitante=…  →  {encontrado, estado: pre|in|post, gl, gv, reloj, parte, detalle, eventos}
 const ESPN_DE_LIGA = { 1: "esp.1", 2: "esp.2", 3: "esp.copa_del_rey", 4: "uefa.champions", 6: "uefa.europa.conf" };
 const ALIAS_VIVO = { "Heart of Midlothian": "Hearts", "Red Star Belgrade": "Crvena Zvezda", "FC Copenhagen": "København", "San Sebastián de los Reyes": "UD Sanse" };
+// Alineaciones (titulares, formación y banquillo), árbitro y estadio en cuanto se publican (~1 h antes).
+// ESPN (resumen del partido) para Primera, Segunda, Copa, Champions y Conference; FotMob para 1ª RFEF si las tiene.
+const POS_ES = p => { p = String(p || "").toUpperCase(); if (p === "G" || p === "GK") return "POR";
+  if (/^(CD|CB|LB|RB|LWB|RWB|D|SW)/.test(p)) return "DEF"; if (/^(DM|CM|AM|LM|RM|M)/.test(p)) return "MED"; if (/^(F|CF|ST|LW|RW|SS)/.test(p)) return "DEL"; return ""; };
+async function alineaciones(request, env, ctx, origen) {
+  const u = new URL(request.url), liga = +u.searchParams.get("liga"), fecha = u.searchParams.get("fecha") || "";
+  const local = (u.searchParams.get("local") || "").slice(0, 60), visitante = (u.searchParams.get("visitante") || "").slice(0, 60);
+  const resp = o => new Response(JSON.stringify(o), { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...cors(origen) } });
+  if (!/^\d{8}$/.test(fecha) || !local || !visitante) return resp({ disponible: false });
+  const ali = t => ALIAS_VIVO[t.name] ? { ...t, name: ALIAS_VIVO[t.name], shortName: ALIAS_VIVO[t.name] } : t;
+  if (ESPN_DE_LIGA[liga]) {
+    const lista = await espnPartidos([ESPN_DE_LIGA[liga]], [fecha], ctx);
+    const x = lista.find(x => parecido(local, ali(x.homeTeam || {})) && parecido(visitante, ali(x.awayTeam || {})));
+    if (!x || !x.id) return resp({ disponible: false });
+    const clave = new Request("https://cache.dondeloechan/espn-sum/" + x.id);
+    let r = await caches.default.match(clave), s;
+    if (r) s = await r.json();
+    else {
+      const f = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${ESPN_DE_LIGA[liga]}/summary?event=${x.id}`, { headers: { "User-Agent": "Mozilla/5.0 (DondeLoEchan)" } });
+      if (!f.ok) return resp({ disponible: false });
+      s = await f.json();
+      ctx.waitUntil(caches.default.put(clave, new Response(JSON.stringify({ rosters: s.rosters, gameInfo: s.gameInfo }), { headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=" + (x.estado === "post" ? 21600 : 120) } })));
+    }
+    const equipos = (s.rosters || []).map(ro => {
+      const jug = (ro.roster || []).map(p => ({ n: p.jersey || "", j: (p.athlete || {}).displayName || "", pos: POS_ES((p.position || {}).abbreviation),
+        sitio: +p.formationPlace || 0, titular: !!p.starter, entra: !!p.subbedIn, sale: !!p.subbedOut }));
+      return { lado: ro.homeAway === "home" ? "L" : "V", formacion: ro.formation || "",
+        titulares: jug.filter(p => p.titular).sort((a, b) => a.sitio - b.sitio), suplentes: jug.filter(p => !p.titular) };
+    }).filter(e => e.titulares.length >= 11);
+    const gi = s.gameInfo || {};
+    const arbitro = ((gi.officials || []).find(o => /referee|árbitro/i.test(((o.position || {}).displayName) || (o.position || {}).name || "")) || (gi.officials || [])[0] || {}).displayName || "";
+    return resp({ disponible: equipos.length === 2, fuente: "ESPN", equipos, arbitro, estadio: ((gi.venue || {}).fullName) || "" });
+  }
+  if (liga === 5) {
+    const d = await fmGet(`/matches?date=${fecha}&timezone=Europe/Madrid`, ctx, 120);
+    let m = null;
+    for (const L of d.leagues || []) if (L.primaryId === FM_RFEF)
+      for (const z of L.matches || []) if (parecido(local, { name: (z.home || {}).name }) && parecido(visitante, { name: (z.away || {}).name })) m = z;
+    if (!m) return resp({ disponible: false });
+    const md = await fmGet(`/matchDetails?matchId=${m.id}`, ctx, 120);
+    const lu = (md.content || {}).lineup || {};
+    const eq = (t, lado) => ({ lado, formacion: (t || {}).formation || "",
+      titulares: ((t || {}).starters || []).map(p => ({ n: String(p.shirtNumber || ""), j: p.name || "", pos: "" })),
+      suplentes: ((t || {}).subs || []).map(p => ({ n: String(p.shirtNumber || ""), j: p.name || "" })) });
+    const equipos = [eq(lu.homeTeam, "L"), eq(lu.awayTeam, "V")].filter(e => e.titulares.length >= 11);
+    return resp({ disponible: equipos.length === 2, fuente: "FotMob", equipos, arbitro: "", estadio: "" });
+  }
+  return resp({ disponible: false });
+}
+
 async function partidoVivo(request, env, ctx) {
   const u = new URL(request.url), liga = +u.searchParams.get("liga"), fecha = u.searchParams.get("fecha") || "";
   const local = (u.searchParams.get("local") || "").slice(0, 60), visitante = (u.searchParams.get("visitante") || "").slice(0, 60);
@@ -434,7 +484,7 @@ REGLAS
 - Al final de CADA respuesta añade una última línea, exactamente con este formato, con 3 preguntas cortas (máximo 9 palabras cada una) que el usuario podría hacerte a continuación, relacionadas con lo que acaba de preguntar (el mismo partido, sus equipos, su clasificación, otros partidos de ese día o de la jornada) y que se puedan responder con la GUÍA:
 SUGERENCIAS: pregunta 1 | pregunta 2 | pregunta 3
 - Si la GUÍA empieza con «PARTIDO SELECCIONADO», el usuario está mirando ese partido: las preguntas sin más detalle («¿cómo quedó la ida?», «¿quién gana más?», «estadísticas») se refieren a él. Usa el HISTORIAL, los ÚLTIMOS ENFRENTAMIENTOS y la FORMA que vienen debajo; cita fecha y temporada de los partidos que menciones. No inventes datos que no estén (por ejemplo, goleadores o posesión) y NUNCA uses tu memoria para resultados o enfrentamientos pasados: si no vienen en la GUÍA, di que no tienes ese dato.
-- La GUÍA NO tiene alineaciones, bajas o lesionados, árbitro, entradas, cuotas de apuestas ni enlaces para ver partidos. Si te lo preguntan, dilo en una frase y sugiere consultar los canales oficiales del club o de la competición; no lo inventes. Nunca recomiendes webs piratas.
+- Las ALINEACIONES (titulares, formación, banquillo), el árbitro y el estadio solo los sabes si vienen en la GUÍA (se publican ~1 hora antes); si no vienen, di que aún no se han publicado. La GUÍA NO tiene bajas o lesionados, entradas, cuotas de apuestas ni enlaces para ver partidos. Si te lo preguntan, dilo en una frase y sugiere consultar los canales oficiales del club o de la competición; no lo inventes. Nunca recomiendes webs piratas.
 - «¿Qué necesita…?» o «¿qué se juega…?»: razona solo con la CLASIFICACIÓN, las ZONAS y los partidos que aparecen en la GUÍA (y la CLASIFICACIÓN EN DIRECTO si la hay), y deja claro que es según la tabla actual.
 - «¿Se puede ver gratis?»: los canales con «TDT» o «gratis» en la GUÍA son en abierto (La 1, Teledeporte, autonómicas, DAZN en abierto, RTVE Play…); el resto son de pago.
 - Si te preguntan algo que no tiene que ver con el fútbol o con la guía, responde amablemente que solo puedes ayudar con los partidos, canales, resultados y clasificaciones de la guía.
@@ -475,6 +525,11 @@ export default {
     if (request.method === "POST" && new URL(request.url).pathname === "/macrodroid") return macrodroid(request);
     if (new URL(request.url).pathname === "/valoraciones") return valoraciones(request, env, origen);
     if (new URL(request.url).pathname === "/runningspain-ia") return runningspainIA(request, env);
+    if (request.method === "GET" && new URL(request.url).pathname === "/alineaciones") {
+      if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+      try { return await alineaciones(request, env, ctx, origen); }
+      catch (e) { return json({ disponible: false }, 200, origen); }
+    }
     if (request.method === "GET" && new URL(request.url).pathname === "/partido") {
       if (!ORIGENES.includes(origen) && request.headers.get("X-App") !== "dondeloechan") return json({ error: "Origen no permitido." }, 403, origen);
       try { return await partidoVivo(request, env, ctx); }

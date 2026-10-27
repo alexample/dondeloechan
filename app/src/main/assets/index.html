@@ -383,6 +383,15 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .forma i{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;font-style:normal;font-weight:700;font-size:11px;color:#fff;margin-left:3px}
 .forma i.G{background:var(--pitch)} .forma i.E{background:var(--done)} .forma i.P{background:var(--accent)}
 .h2h-fuente{font-size:11.5px;color:var(--muted);margin:8px 0 0}
+.al{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.al-c>b{display:block;font-size:13.5px;margin-bottom:4px}
+.al-f{font-family:var(--f-mono);font-size:11px;font-weight:500;color:var(--muted)}
+.al ol,.al ul{list-style:none;margin:0;padding:0;font-size:13px;display:flex;flex-direction:column;gap:3px}
+.al li{display:flex;align-items:baseline;gap:6px;min-width:0}
+.al li small{color:var(--muted);font-size:10.5px;margin-left:auto}
+.al-n{display:inline-block;min-width:20px;text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700}
+.al-s{font-style:normal;color:var(--live);font-weight:800} .al-e{font-style:normal;color:var(--op-free);font-weight:800}
+.al details{margin-top:6px;font-size:12.5px} .al summary{cursor:pointer;color:var(--accent);font-weight:700}
 .btn-ia{background:var(--accent);color:#fff;border-color:transparent}
 @media (max-width:1023px){body.ficha-on .ia-fab{z-index:22} body.ficha-on .sheet{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 .ia-sobre{display:inline-flex;align-items:center;gap:6px;margin-top:6px;padding:3px 4px 3px 10px;border-radius:999px;background:var(--bg);font-size:12.5px;font-weight:700}
@@ -1148,7 +1157,9 @@ function iaSugPartido(m){
   const mi=FAV.has(m.localId)?L:FAV.has(m.visitanteId)?V:EUROPA.has(m.liga)&&T[m.visitanteId]&&!T[m.localId]?V:L;
   const tabla=[1,2,4,5,6].includes(m.liga),copa=m.liga===3,europa=EUROPA.has(m.liga);
   if(fase==="antes"){
-    const s=["¿A qué hora es y en qué canal lo echan?","¿Se puede ver gratis o en abierto?",`¿Cómo llegan ${L} y ${V}?`];
+    const s=["¿A qué hora es y en qué canal lo echan?"];
+    if(ventanaAlin(m))s.push("¿Cuáles son las alineaciones?");
+    s.push("¿Se puede ver gratis o en abierto?",`¿Cómo llegan ${L} y ${V}?`);
     if(m.liga===1)s.push(`¿Qué se juega el ${mi} en la tabla?`);
     else if(m.liga===2)s.push(`¿Está el ${mi} en zona de ascenso o de descenso?`);
     else if(m.liga===5)s.push(`¿Cómo va el ${mi} en la pelea por el ascenso?`);
@@ -1158,7 +1169,7 @@ function iaSugPartido(m){
     else s.push("¿Qué otros partidos de Copa hay ese día?");
     return s;
   }
-  if(fase==="durante")return ["¿Cómo va el partido y quién ha marcado?","¿Cuánto queda de partido?",
+  if(fase==="durante")return ["¿Cómo va el partido y quién ha marcado?","¿Cuáles son las alineaciones y quién ha entrado?","¿Cuánto queda de partido?",
     tabla?"¿Cómo quedaría la clasificación si acaba así?":"¿Qué pasa si acaban empatados?","¿Cómo van los otros partidos que se están jugando?"];
   return ["¿Quién marcó los goles?",tabla?`¿Cómo queda el ${mi} en la clasificación?`:"¿Quién pasa de ronda?",
     `¿Cuándo vuelve a jugar el ${mi} y dónde lo echan?`,copa?"¿Qué otros equipos de Primera han pasado?":"¿Cómo quedaron los otros partidos de la jornada?"];
@@ -1614,6 +1625,37 @@ async function pintarH2H(m){
   h+=forma(d.a,L)+forma(d.b,V);
   box.innerHTML=`<h3 class="sec-t">Historial y forma</h3>${h}<p class="h2h-fuente">${esc(d.pie)}</p>`;
 }
+/* ---------- Alineaciones (ESPN / FotMob vía worker), en cuanto se publican (~1 h antes) ---------- */
+const ALIN={};   // id -> {t: hora de la consulta, p: promesa}
+const ventanaAlin=m=>{const k=new Date(m.inicio).getTime(),now=Date.now();return now>k-90*60e3&&now<k+30*36e5&&!m.horaPendiente&&[1,2,3,4,5,6].includes(m.liga)};
+function alinDe(m){
+  if(!window.IA_URL||!ventanaAlin(m))return Promise.resolve(null);
+  const c=ALIN[m._id],now=Date.now();
+  if(c&&(c.ok||now-c.t<2*60e3))return c.p;
+  const q=new URLSearchParams({liga:m.liga,fecha:fechaMad(m.inicio).replace(/-/g,""),local:m.local,visitante:m.visitante});
+  const p=fetch(window.IA_URL.replace(/\/$/,"")+"/alineaciones?"+q,{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(d&&d.disponible)ALIN[m._id].ok=status(m,Date.now())==="done";return d&&d.disponible?d:null}).catch(()=>null);
+  ALIN[m._id]={t:now,p,ok:false};
+  return p;
+}
+async function pintarAlin(m){
+  const d=await alinDe(m);
+  const box=document.getElementById("alin");if(!box||!actual||actual._id!==m._id)return;
+  const firma=d?JSON.stringify(d):"-"+status(m,Date.now());if(box.dataset.f===firma)return;box.dataset.f=firma;   // no repintar (ni cerrar el banquillo) si no cambia
+  if(!d){box.innerHTML=status(m,Date.now())===null?`<h3 class="sec-t">Alineaciones</h3><p class="h2h-fuente" style="margin:0">Se publican aproximadamente una hora antes del partido; aparecerán aquí solas.</p>`:"";return}
+  const col=e=>{const nom=e.lado==="L"?m.local:m.visitante;
+    return `<div class="al-c"><b>${esc(nom)}${e.formacion?` <span class="al-f">${esc(e.formacion)}</span>`:""}</b><ol>${e.titulares.map(p=>`<li><span class="al-n">${esc(p.n)}</span>${esc(p.j)}${p.sale?' <i class="al-s" title="Sustituido">↓</i>':""}${p.pos?` <small>${esc(p.pos)}</small>`:""}</li>`).join("")}</ol>
+      ${e.suplentes&&e.suplentes.length?`<details><summary>Banquillo (${e.suplentes.length})</summary><ul>${e.suplentes.map(p=>`<li><span class="al-n">${esc(p.n)}</span>${esc(p.j)}${p.entra?' <i class="al-e" title="Ha entrado">↑</i>':""}</li>`).join("")}</ul></details>`:""}</div>`};
+  const L=d.equipos.find(e=>e.lado==="L"),V=d.equipos.find(e=>e.lado==="V");
+  box.innerHTML=`<h3 class="sec-t">Alineaciones</h3><div class="al">${L?col(L):""}${V?col(V):""}</div>
+    <p class="h2h-fuente">${d.arbitro?`Árbitro: ${esc(d.arbitro)} · `:""}${d.estadio?`Estadio: ${esc(d.estadio)} · `:""}Fuente: ${esc(d.fuente||"ESPN")}.</p>`;
+}
+function alinTexto(m,d){
+  if(!d)return "";
+  const t=e=>`${e.lado==="L"?m.local:m.visitante}${e.formacion?" ("+e.formacion+")":""}: `+e.titulares.map(p=>`${p.n} ${p.j}${p.pos?" ["+p.pos+"]":""}${p.sale?" (sustituido)":""}`).join(", ")
+    +(e.suplentes&&e.suplentes.length?". Banquillo: "+e.suplentes.map(p=>`${p.n} ${p.j}${p.entra?" (ha entrado)":""}`).join(", "):"");
+  return "ALINEACIONES CONFIRMADAS (titulares, fuente "+(d.fuente||"ESPN")+"): "+d.equipos.map(t).join(" | ")+(d.arbitro?". Árbitro: "+d.arbitro:"")+(d.estadio?". Estadio: "+d.estadio:"");
+}
+
 /* Texto para la IA con el partido que se está viendo */
 async function iaContextoPartido(m){
   if(!m)return "";
@@ -1621,6 +1663,8 @@ async function iaContextoPartido(m){
   const out=[`PARTIDO SELECCIONADO (el usuario está viendo su ficha; si la pregunta no dice otra cosa, se refiere a este): ${m._id} | ${(COMP[m.liga]||{}).name||""} ${jornLabel(m.jornada)} | ${cap(fDay.format(new Date(m.inicio)))} ${m.horaPendiente?"hora por fijar":fTime.format(new Date(m.inicio))} | ${m.local} – ${m.visitante}`+(tieneMarcador(m)&&(st==="live"||st==="done")?` | ${st==="live"?"EN JUEGO":"FINAL"} ${marcadorTxt(m)}${t?" ("+t.l+")":""}`:"")];
   const evIA=m.eventos&&m.eventos.length?m.eventos:(m.goles||[]);
   if(evIA.length)out.push("GOLES Y EXPULSIONES DE ESTE PARTIDO: "+evIA.map(e=>`${e.min} ${e.t==="g"?"gol":"roja"} de ${e.j} (${e.lado==="L"?m.local:m.visitante})${e.pen?" de penalti":""}${e.pp?" en propia puerta":""}`).join("; "));
+  const al=await alinDe(m);
+  out.push(al?alinTexto(m,al):ventanaAlin(m)?"ALINEACIONES: aún no publicadas (suelen salir una hora antes).":"ALINEACIONES: todavía no se conocen (se publican una hora antes del partido).");
   out.push("MOMENTO DEL PARTIDO: "+({antes:"aún no ha empezado",durante:"se está jugando ahora",despues:"ya terminó"})[faseDe(m)]+".");
   // Formato y zonas de la tabla, para «qué se juega» / «qué necesita»
   if(m.liga===3)out.push("FORMATO COPA DEL REY: eliminatoria a partido único (salvo semifinales, a ida y vuelta) en el campo del equipo de menor categoría; si acaba en empate hay prórroga y, si sigue, penaltis.");
@@ -1688,6 +1732,7 @@ function open(id){
     ${m.provisional?`<p class="note warn">Canal provisional: la señal exacta (M+ LALIGA 2, Liga de Campeones 3…) suele confirmarse unos días antes del partido.</p>`:""}
     ${m.nota?`<p class="note">${esc(m.nota)}</p>`:""}
     ${VIVO[m._id]&&(m.estado==="directo"||status(m,now)==="live")?`<p class="note" id="vivo-nota">${notaVivo()}</p>`:""}
+    ${ventanaAlin(m)?`<div id="alin"></div>`:""}
     ${tablaHTML(m)}
     ${[1,2,3,4,5,6].includes(m.liga)&&m.localId&&m.visitanteId&&window.H2H_URL?`<div id="h2h"><h3 class="sec-t">Historial y forma</h3><p class="h2h-fuente" style="margin:0">Cargando…</p></div>`:""}
     <div class="acciones">
@@ -1696,7 +1741,7 @@ function open(id){
     </div>
     ${conComentariosAqui()?`<div><h3 class="sec-t">Comentarios</h3><div id="comentarios"></div></div>`:""}
   </div>`;
-  actual=m;fichaPintada=firmaFicha(m);document.body.classList.add("ficha-on");pintarH2H(m);
+  actual=m;fichaPintada=firmaFicha(m);document.body.classList.add("ficha-on");pintarH2H(m);pintarAlin(m);
   if(conComentariosAqui())cargarComentarios(m);
   marcar("p-"+m._id);
   marcarSel(m._id);
@@ -1864,7 +1909,7 @@ window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cer
 })();
 setInterval(render,60e3);
 // La ficha abierta de un partido en juego actualiza su minuto.
-setInterval(()=>{if(actual&&!sheet.hidden&&status(actual,Date.now())!=="live"){const tb=document.getElementById("tabla");if(tb&&(matches||[]).some(x=>x.liga===actual.liga&&status(x,Date.now())==="live"))tb.outerHTML=tablaHTML(actual)}if(actual&&!sheet.hidden&&status(actual,Date.now())==="live"){const c=sheet.querySelector(".count");if(c)c.textContent=countdown(actual,Date.now());const pv=sheet.querySelector(".partido-vivo");if(pv){const h=eventosHTML(actual,Date.now());if(h)pv.outerHTML=h};const tb=document.getElementById("tabla");if(tb&&(matches||[]).some(x=>x.liga===actual.liga&&status(x,Date.now())==="live"))tb.outerHTML=tablaHTML(actual);const n=document.getElementById("vivo-nota");if(n)n.textContent=notaVivo()}},15e3);
+setInterval(()=>{if(actual&&!sheet.hidden&&ventanaAlin(actual)&&document.getElementById("alin"))pintarAlin(actual);if(actual&&!sheet.hidden&&status(actual,Date.now())!=="live"){const tb=document.getElementById("tabla");if(tb&&(matches||[]).some(x=>x.liga===actual.liga&&status(x,Date.now())==="live"))tb.outerHTML=tablaHTML(actual)}if(actual&&!sheet.hidden&&status(actual,Date.now())==="live"){const c=sheet.querySelector(".count");if(c)c.textContent=countdown(actual,Date.now());const pv=sheet.querySelector(".partido-vivo");if(pv){const h=eventosHTML(actual,Date.now());if(h)pv.outerHTML=h};const tb=document.getElementById("tabla");if(tb&&(matches||[]).some(x=>x.liga===actual.liga&&status(x,Date.now())==="live"))tb.outerHTML=tablaHTML(actual);const n=document.getElementById("vivo-nota");if(n)n.textContent=notaVivo()}},15e3);
 </script>
 </body>
 </html>
