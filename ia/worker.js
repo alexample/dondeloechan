@@ -380,8 +380,11 @@ async function runningspainIA(request, env) {
   const faltan = (d.faltan || []).join(", ");
   const sistema = "Eres un extractor de datos de carreras populares de running en España. Respondes SOLO con un objeto JSON válido, sin texto alrededor. " +
     "Nunca inventes: si el dato no aparece claramente en el material, pon null.";
-  const pregunta =
-    `Carrera: «${String(d.nombre || "").slice(0, 120)}» en ${String(d.lugar || "").slice(0, 80)}, fecha prevista ${String(d.fecha || "").slice(0, 10)}. Hoy es ${new Date().toISOString().slice(0, 10)}.\n` +
+  const pregunta = d.modo === "resultados"
+    ? `Carrera: «${String(d.nombre || "").slice(0, 120)}» en ${String(d.lugar || "").slice(0, 80)}, disputada el ${String(d.fecha || "").slice(0, 10)}.\n` +
+      `¿Cuál de estos enlaces lleva a las clasificaciones o resultados de ESTA edición (no de años anteriores, ni listados generales de todas las carreras, ni inscripciones)?\n` +
+      `Devuelve este JSON: {"resultados": número del enlace o null si ninguno es claramente eso}\n\nENLACES:\n${links || "(ninguno)"}`
+    : `Carrera: «${String(d.nombre || "").slice(0, 120)}» en ${String(d.lugar || "").slice(0, 80)}, fecha prevista ${String(d.fecha || "").slice(0, 10)}. Hoy es ${new Date().toISOString().slice(0, 10)}.\n` +
     `Faltan estos datos: ${faltan}.\n\n` +
     `Devuelve este JSON:\n{"km": distancias de ESTA carrera separadas por " · " (p. ej. "21,097 km · 10 km"; NO avituallamientos, puntos kilométricos ni distancias a otros pueblos) o null,\n` +
     ` "inscripcion": "abierta" | "cerrada" | "agotada" | "proximamente" | null (según lo que diga el texto HOY),\n` +
