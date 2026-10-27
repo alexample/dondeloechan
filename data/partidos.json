@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T19:07:22+01:00",
+ "actualizado": "2026-10-27T21:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -5289,7 +5289,27 @@
    "localAbbr": "CUA",
    "localId": "cd-cuarte",
    "visitante": "Girona",
-   "visitanteId": "gir"
+   "visitanteId": "gir",
+   "goles": [
+    {
+     "t": "g",
+     "min": "23'",
+     "seg": 1380,
+     "j": "Abel Ruiz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3600,
+     "j": "Oleksandr Pishchur",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-calamocha-ce-europa",
@@ -6838,7 +6858,7 @@
    "liga": 1,
    "local": "Athletic Club",
    "localId": "ath",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Real Sociedad",
    "visitanteId": "rso"
   },
@@ -6853,7 +6873,7 @@
    "liga": 2,
    "local": "CD Tenerife",
    "localId": "ten",
-   "provisional": true,
+   "provisional": false,
    "visitante": "FC Andorra",
    "visitanteId": "and"
   },
@@ -6872,8 +6892,7 @@
    "local": "CD Extremadura",
    "localAbbr": "EXT",
    "localId": "cd-extremadura",
-   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará.",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Unionistas de Salamanca",
    "visitanteAbbr": "UNI",
    "visitanteId": "unionistas-de-salamanca"
@@ -7576,6 +7595,36 @@
    "localAbbr": "CAC",
    "visitanteAbbr": "LUG",
    "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-2-13-cas-eib",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-11-06T20:30:00+01:00",
+   "local": "CD Castellón",
+   "localId": "cas",
+   "visitante": "SD Eibar",
+   "visitanteId": "eib",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-1-12-sev-ala",
+   "liga": 1,
+   "jornada": "12",
+   "inicio": "2026-11-06T21:00:00+01:00",
+   "local": "Sevilla FC",
+   "localId": "sev",
+   "visitante": "Deportivo Alavés",
+   "visitanteId": "ala",
+   "canales": [
+    "daznll",
+    "daznfree"
+   ],
+   "provisional": true
   }
  ],
  "clasificacion": {
@@ -9267,9 +9316,65 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T20:07:23+01:00",
-  "cambio": "2026-10-27T19:07:22+01:00",
+  "comprobado": "2026-10-27T21:07:22+01:00",
+  "cambio": "2026-10-27T21:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T21:07:22+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 8,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Sevilla FC – Deportivo Alavés",
+     "Nuevo partido: CD Castellón – SD Eibar",
+     "Canal confirmado: Athletic Club – Real Sociedad",
+     "Canal confirmado: CD Tenerife – FC Andorra",
+     "Canal confirmado: CD Extremadura – Unionistas de Salamanca"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-2-13-cas-eib",
+       "t": "CD Castellón – SD Eibar"
+      },
+      {
+       "id": "2627-1-11-ath-rso",
+       "t": "Athletic Club – Real Sociedad · confirmado"
+      },
+      {
+       "id": "2627-2-12-ten-and",
+       "t": "CD Tenerife – FC Andorra · confirmado"
+      },
+      {
+       "id": "2627-5-10-cd-extremadura-unionistas-de-salamanca",
+       "t": "CD Extremadura – Unionistas de Salamanca · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés (Primera)"
+      },
+      {
+       "id": "2627-2-13-cas-eib",
+       "t": "CD Castellón – SD Eibar (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-27T20:07:23+01:00",
     "nuevos": 0,
@@ -9930,27 +10035,6 @@
    },
    {
     "hora": "2026-10-27T02:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T01:07:20+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
