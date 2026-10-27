@@ -1,0 +1,20 @@
+name: Prueba fuentes (temporal)
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import urllib.request,re,html,collections
+          t=urllib.request.urlopen(urllib.request.Request("https://www.futbolenlatv.es/competicion/copa-del-rey",headers={"User-Agent":"Mozilla/5.0","Accept-Language":"es-ES"})).read().decode()
+          rows=re.findall(r'<tr>\s*<td class="hora.*?</tr>',t,re.S)
+          cnt=collections.Counter();ej=[]
+          for tr in rows:
+              l=re.search(r'<td class="local">.*?<span title="([^"]+)"',tr,re.S);v=re.search(r'<td class="visitante">.*?<span title="([^"]+)"',tr,re.S)
+              cs=[html.unescape(c) for c in re.findall(r'<li class="[^"]*" title="([^"]+)">',tr)]
+              for c in cs: cnt[c]+=1
+              if l and v and re.search(r'Castellonense|Tordesillas|Lucena|Segoviana|Llanera|Don Benito|Arosa|Pamplona|Coruxo|Covadonga|Cieza',l.group(1)): ej.append(f"{html.unescape(l.group(1))}-{html.unescape(v.group(1))}: {cs}")
+          print("::notice::FILAS "+str(len(rows))+" CANALES "+str(dict(cnt))[:1500])
+          print("::notice::EJ "+" ## ".join(ej)[:1800])
+          PY
