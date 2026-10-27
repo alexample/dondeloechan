@@ -136,6 +136,13 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 
 /* Clasificación en la ficha */
 .tabla{--z1:#2F8A57;--z2:#8DBF9F;--z3:var(--live)}
+.tabla td.ps{white-space:nowrap}
+.tabla .mv{font-style:normal;font-size:9.5px;font-weight:800;margin-left:3px;vertical-align:1px}
+.tabla .mv.up{color:var(--op-free)} .tabla .mv.dn{color:var(--live)}
+.tabla .tb-vivo{display:inline-block;margin-left:6px;padding:0 6px;border-radius:999px;background:var(--live);color:#fff;font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.5}
+.tabla tr.jugando td.eq{font-weight:700}
+.tb-dir{display:inline-flex;align-items:center;gap:5px;color:var(--live)!important;font-weight:700}
+.tb-dir i{width:7px;height:7px;border-radius:50%;background:var(--live);animation:latido 1.4s ease-in-out infinite}
 .tb-h{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
 .tb-h .sec-t{margin-bottom:6px}
 .tb-j{font-size:11.5px;color:var(--muted)}
@@ -554,10 +561,42 @@ function tablaDe(m){
   if(t&&t.grupos)t=t.grupos[m.etiqueta]||null;
   return t&&Array.isArray(t.filas)&&t.filas.length?t:null;
 }
+/* Clasificación en directo: a la tabla oficial se le suman los partidos que se están jugando (con su marcador de ahora)
+   y los recién terminados que la tabla aún no recoge. Orden: puntos, diferencia de goles y goles a favor (aproximado:
+   los desempates oficiales por enfrentamiento directo no se calculan). */
+function numJornada(j){const x=String(j||"").match(/(\d+)\s*$/);return x?+x[1]:null}
+function tablaViva(m,t){
+  const F=t.filas.map(r=>r.slice()),now=Date.now(),cambios={},jugando={};
+  const busca=(id,nom)=>F.findIndex(r=>r[0]===id||(r[8]&&nom&&norm(r[8])===norm(nom)));
+  let vivo=false;
+  for(const x of matches||[]){
+    if(x.liga!==m.liga||(m.liga===5&&x.etiqueta!==m.etiqueta)||!tieneMarcador(x))continue;
+    const st=status(x,now),k=new Date(x.inicio).getTime();
+    const iH=busca(x.localId,x.local),iA=busca(x.visitanteId,x.visitante);
+    if(iH<0||iA<0)continue;
+    let aplicar=false;
+    if(st==="live")aplicar=true;
+    else if(st==="done"&&now-k<5*36e5){const J=numJornada(x.jornada);aplicar=J!=null&&F[iH][1]<J&&F[iA][1]<J}
+    if(!aplicar)continue;
+    const [a,b]=x.marcador;
+    for(const [i,gf,gc] of [[iH,a,b],[iA,b,a]]){
+      const r=F[i];r[1]++;r[5]+=gf;r[6]+=gc;
+      if(gf>gc){r[2]++;r[7]+=3}else if(gf===gc){r[3]++;r[7]+=1}else r[4]++;
+      jugando[r[0]||r[8]]=st==="live"?`${gf}–${gc}`:"";
+    }
+    vivo=true;
+  }
+  if(!vivo)return {filas:t.filas,vivo:false,mov:{},jugando:{}};
+  const orden=new Map(t.filas.map((r,i)=>[r[0]||r[8],i]));
+  F.sort((x,y)=>y[7]-x[7]||(y[5]-y[6])-(x[5]-x[6])||y[5]-x[5]||orden.get(x[0]||x[8])-orden.get(y[0]||y[8]));
+  const mov={};F.forEach((r,i)=>{const d=orden.get(r[0]||r[8])-i;if(d)mov[r[0]||r[8]]=d});
+  return {filas:F,vivo:true,mov,jugando};
+}
 function zonaDe(liga,pos,n){for(const [h,c] of (ZONAS[liga]||[])){if(h>0&&pos<=h)return c;if(h<0&&pos>n+h)return c}return ""}
 function tablaHTML(m){
   const t=tablaDe(m);if(!t)return "";
-  const F=t.filas,n=F.length;
+  const tv=tablaViva(m,t);
+  const F=tv.filas,n=F.length;
   const busca=(id,nom)=>F.findIndex(r=>r[0]===id||(r[8]&&nom&&norm(r[8])===norm(nom)));
   const iH=busca(m.localId,m.local),iA=busca(m.visitanteId,m.visitante);
   if(iH<0&&iA<0)return "";
@@ -571,13 +610,13 @@ function tablaHTML(m){
   let prev=-1,filas="";
   for(const i of ver){
     if(prev>=0&&i>prev+1)filas+=`<tr class="gap" aria-hidden="true"><td colspan="5">···</td></tr>`;
-    const r=F[i],dg=r[5]-r[6],tm=teamOf(r[0],r[8]);
-    filas+=`<tr class="${zonaDe(m.liga,i+1,n)}${i===iH||i===iA?" yo":""}"><td class="ps">${i+1}</td><td class="eq">${esc(tm.name)}</td><td class="pj">${r[1]}</td><td class="dg">${dg>0?"+"+dg:dg<0?"−"+(-dg):0}</td><td class="pt">${r[7]}</td></tr>`;
+    const r=F[i],dg=r[5]-r[6],tm=teamOf(r[0],r[8]),kk=r[0]||r[8],mv=tv.mov[kk]||0,jg=tv.jugando[kk];
+    filas+=`<tr class="${zonaDe(m.liga,i+1,n)}${i===iH||i===iA?" yo":""}${jg!=null?" jugando":""}"><td class="ps">${i+1}${mv?`<i class="mv ${mv>0?"up":"dn"}" aria-label="${mv>0?"sube "+mv:"baja "+(-mv)}">${mv>0?"▲":"▼"}${Math.abs(mv)}</i>`:""}</td><td class="eq">${esc(tm.name)}${jg?`<span class="tb-vivo">${jg}</span>`:""}</td><td class="pj">${r[1]}</td><td class="dg">${dg>0?"+"+dg:dg<0?"−"+(-dg):0}</td><td class="pt">${r[7]}</td></tr>`;
     prev=i;
   }
   const z=ZONAS[m.liga]||[];
   return `<div class="tabla" id="tabla">
-    <div class="tb-h"><h3 class="sec-t">Clasificación${t.grupos?"":(m.etiqueta&&m.liga===5?" · "+esc(m.etiqueta):"")}</h3>${t.tras?`<span class="tb-j">Tras ${esc(String(t.tras).toLowerCase())}</span>`:""}</div>
+    <div class="tb-h"><h3 class="sec-t">Clasificación${t.grupos?"":(m.etiqueta&&m.liga===5?" · "+esc(m.etiqueta):"")}</h3>${tv.vivo?`<span class="tb-j tb-dir"><i></i>En directo</span>`:t.tras?`<span class="tb-j">Tras ${esc(String(t.tras).toLowerCase())}</span>`:""}</div>
     <table><thead><tr><th>#</th><th class="eq">Equipo</th><th>PJ</th><th>DG</th><th>Pts</th></tr></thead><tbody>${filas}</tbody></table>
     <div class="tb-pie"><span class="ley">${z.map(([,c,txt])=>`<span><i style="background:var(--${c})"></i>${txt}</span>`).join("")}</span>${vecinos.length<n?`<button class="tb-ver" id="vertabla" type="button" aria-expanded="${verTabla}">${verTabla?"Ver menos":"Ver tabla completa"}</button>`:""}</div>
   </div>`;
@@ -1742,7 +1781,7 @@ window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cer
 })();
 setInterval(render,60e3);
 // La ficha abierta de un partido en juego actualiza su minuto.
-setInterval(()=>{if(actual&&!sheet.hidden&&status(actual,Date.now())==="live"){const c=sheet.querySelector(".count");if(c)c.textContent=countdown(actual,Date.now());const pv=sheet.querySelector(".partido-vivo");if(pv){const h=eventosHTML(actual,Date.now());if(h)pv.outerHTML=h}const n=document.getElementById("vivo-nota");if(n)n.textContent=notaVivo()}},15e3);
+setInterval(()=>{if(actual&&!sheet.hidden&&status(actual,Date.now())!=="live"){const tb=document.getElementById("tabla");if(tb&&(matches||[]).some(x=>x.liga===actual.liga&&status(x,Date.now())==="live"))tb.outerHTML=tablaHTML(actual)}if(actual&&!sheet.hidden&&status(actual,Date.now())==="live"){const c=sheet.querySelector(".count");if(c)c.textContent=countdown(actual,Date.now());const pv=sheet.querySelector(".partido-vivo");if(pv){const h=eventosHTML(actual,Date.now());if(h)pv.outerHTML=h};const tb=document.getElementById("tabla");if(tb&&(matches||[]).some(x=>x.liga===actual.liga&&status(x,Date.now())==="live"))tb.outerHTML=tablaHTML(actual);const n=document.getElementById("vivo-nota");if(n)n.textContent=notaVivo()}},15e3);
 </script>
 </body>
 </html>
