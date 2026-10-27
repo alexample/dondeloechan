@@ -9250,9 +9250,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T11:07:21+01:00",
+  "comprobado": "2026-10-27T11:32:01+01:00",
   "cambio": "2026-10-27T10:38:10+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T11:32:01+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-27T11:07:21+01:00",
     "nuevos": 0,
@@ -10108,27 +10129,6 @@
       {
        "id": "2627-5-10-ud-logrones-mirandes",
        "t": "UD Logroñés – Mirandés · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-26T16:07:23+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
       }
      ],
      "horas": [],
