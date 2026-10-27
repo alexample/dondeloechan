@@ -1155,7 +1155,7 @@ function iaSugPartido(m){
     else if(europa)s.push(`¿Qué necesita el ${mi} para acabar entre los 8 primeros?`);
     else if(copa)s.push("¿Qué pasa si empatan? ¿Hay prórroga y penaltis?");
     if(!copa||(T[m.localId]&&T[m.visitanteId]))s.push(m.liga===5?"¿Se han enfrentado ya esta temporada?":europa?"¿Se han enfrentado antes?":"¿Cómo quedó el último partido entre ellos?");
-    else s.push(`¿En qué categoría juega el ${T[m.localId]?V:L}?`);
+    else s.push("¿Qué otros partidos de Copa hay ese día?");
     return s;
   }
   if(fase==="durante")return ["¿Cómo va el partido y quién ha marcado?","¿Cuánto queda de partido?",
