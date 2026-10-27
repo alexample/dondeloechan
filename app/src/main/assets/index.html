@@ -92,8 +92,8 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .fav[aria-pressed="true"] .favico .cmp{background:var(--fav);box-shadow:none;color:#fff}
 .fav[aria-pressed="true"] .favico .cmp svg{fill:#fff;stroke:#fff}
 /* Campana del partido (cabecera de la ficha) */
-.campana-b{appearance:none;display:inline-grid;place-items:center;border:1px solid var(--line);background:transparent;color:var(--ink);width:34px;height:34px;border-radius:50%;cursor:pointer;padding:0}
-.campana-b svg{width:17px;height:17px}
+.campana-b{appearance:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:transparent;color:var(--ink);height:34px;border-radius:999px;cursor:pointer;padding:0 12px 0 10px;font:inherit;font-size:13px;font-weight:700;white-space:nowrap}
+.campana-b svg{width:16px;height:16px;flex:none}
 .campana-b[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
 .campana-b[aria-pressed="true"] svg{fill:currentColor}
 .sh-acc{display:flex;align-items:center;gap:8px}
@@ -1048,7 +1048,7 @@ function render(){
     <section class="day${pas?" pasado":""}"><h2>${cap(fDay.format(new Date(g[0].inicio)))}${fKey.format(new Date(g[0].inicio))===hoyKey?' · <em class="hoyd">Hoy</em>':""}</h2><div class="list">
     ${g.map(m=>{const st=status(m,now),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];return `
       <button class="match${st==="done"?" past":""}${m._id===ahoraId&&!q?" ahora":""}${claseMatch(m)}"${m._id===ahoraId?' id="ahora"':""} data-id="${esc(m._id)}" aria-label="${esc(h.name)} contra ${esc(a.name)}, ver hora y canal">
-        <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b>${st==="live"&&progreso(m,now)?`<i class="kprog"><i style="width:${progreso(m,now).pct}%"></i></i>`:""}${SIGUE.has(m._id)?`<i class="campana" aria-label="con avisos">${SVG_CAMP}</i>`:""}<span class="${st||""}">${st==="live"?esc((tiempo(m,now)||{c:"En juego"}).c):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span></span>
+        <span class="kick"><b class="${tieneMarcador(m)&&(st==="live"||st==="done")?"sc":""}">${tieneMarcador(m)&&(st==="live"||st==="done")?marcadorTxt(m):m.horaPendiente?"--:--":fTime.format(new Date(m.inicio))}</b>${st==="live"&&progreso(m,now)?`<i class="kprog"><i style="width:${progreso(m,now).pct}%"></i></i>`:""}<span class="${st||""}">${st==="live"?esc((tiempo(m,now)||{c:"En juego"}).c):st==="done"?"Final":st==="off"?(m.estado==="suspendido"?"Suspend.":"Aplazado"):m.etiqueta?esc(m.etiqueta):"h"}</span>${SIGUE.has(m._id)?`<i class="campana" aria-label="con avisos">${SVG_CAMP}</i>`:""}</span>
         <span class="teams">
           ${league===0?`<span class="compl">${esc((COMP[m.liga]||{}).name||"")}</span>`:""}
           <span class="team">${crest(h)}<span class="nm ${claseEquipo(m.localId,m.liga)}">${FAV.has(m.localId)?'<i class="star" aria-label="favorito">★</i>':""}${esc(h.name)}</span></span>
@@ -1139,16 +1139,38 @@ function iaFormato(t){
   cerrarP();
   return out.join("");
 }
+/* Preguntas sugeridas según el momento del partido (antes, durante, después) y la competición.
+   Basadas en lo que más se pregunta en guías previas y foros: hora y canal, verlo gratis, cómo llegan,
+   qué se juegan, cómo va / quién marcó / cuánto queda, cómo queda la tabla, qué necesita, cuándo vuelve a jugar. */
+function faseDe(m){const st=status(m,Date.now());return st==="live"?"durante":(st==="done"||m.estado==="final")?"despues":"antes"}
 function iaSugPartido(m){
-  const L=nomCorto(m.localId)||m.local,V=nomCorto(m.visitanteId)||m.visitante,st=status(m,Date.now());
+  const L=nomCorto(m.localId)||m.local,V=nomCorto(m.visitanteId)||m.visitante,fase=faseDe(m);
+  const mi=FAV.has(m.localId)?L:FAV.has(m.visitanteId)?V:EUROPA.has(m.liga)&&T[m.visitanteId]&&!T[m.localId]?V:L;
+  const tabla=[1,2,4,5,6].includes(m.liga),copa=m.liga===3,europa=EUROPA.has(m.liga);
+  if(fase==="antes"){
+    const s=["¿A qué hora es y en qué canal lo echan?","¿Se puede ver gratis o en abierto?",`¿Cómo llegan ${L} y ${V}?`];
+    if(m.liga===1)s.push(`¿Qué se juega el ${mi} en la tabla?`);
+    else if(m.liga===2)s.push(`¿Está el ${mi} en zona de ascenso o de descenso?`);
+    else if(m.liga===5)s.push(`¿Cómo va el ${mi} en la pelea por el ascenso?`);
+    else if(europa)s.push(`¿Qué necesita el ${mi} para acabar entre los 8 primeros?`);
+    else if(copa)s.push("¿Qué pasa si empatan? ¿Hay prórroga y penaltis?");
+    if(!copa||(T[m.localId]&&T[m.visitanteId]))s.push(m.liga===5?"¿Se han enfrentado ya esta temporada?":europa?"¿Se han enfrentado antes?":"¿Cómo quedó el último partido entre ellos?");
+    else s.push(`¿En qué categoría juega el ${T[m.localId]?V:L}?`);
+    return s;
+  }
+  if(fase==="durante")return ["¿Cómo va el partido y quién ha marcado?","¿Cuánto queda de partido?",
+    tabla?"¿Cómo quedaría la clasificación si acaba así?":"¿Qué pasa si acaban empatados?","¿Cómo van los otros partidos que se están jugando?"];
+  return ["¿Quién marcó los goles?",tabla?`¿Cómo queda el ${mi} en la clasificación?`:"¿Quién pasa de ronda?",
+    `¿Cuándo vuelve a jugar el ${mi} y dónde lo echan?`,copa?"¿Qué otros equipos de Primera han pasado?":"¿Cómo quedaron los otros partidos de la jornada?"];
+}
+function iaSugGeneral(){
+  const now=Date.now(),hayVivo=(matches||[]).some(m=>status(m,now)==="live"),fav=[...FAV][0];
   const s=[];
-  if(st==="live")s.push("¿Cómo va el partido?");
-  else if(st!=="done")s.push("¿A qué hora es y dónde lo echan?");
-  s.push("¿Cómo quedó el partido de ida?","¿Quién ha ganado más veces entre ellos?",`¿Cómo llegan ${L} y ${V}?`,"Estadísticas del último enfrentamiento");
-  if(m.liga===4)return [s[0],"¿Se han enfrentado antes? ¿Cómo quedaron?",`¿Cómo llegan ${L} y ${V}?`,`¿Cómo va el ${L} en la fase liga?`];
-  if(m.liga===6)return [s[0],`¿Cómo va el ${L} en la Conference?`,`¿Cómo llega el ${m.localId.length===3?L:V} en liga?`,"¿Qué otros partidos de Conference hay?"];
-  if(m.liga===5)return [s[0],"¿Cómo quedó la ida esta temporada?",`¿Cómo llegan ${L} y ${V}?`,`¿Cómo van en la clasificación del grupo?`];
-  return s;
+  if(hayVivo)s.push("¿Qué partidos se están jugando ahora y cómo van?");
+  s.push("¿Qué partidos hay hoy y dónde los echan?");
+  if(fav)s.push(`¿Cuándo juega el ${nombreEquipo(fav)} y en qué canal?`);
+  s.push("¿Qué echan en abierto este fin de semana?","¿Cuál es el partido más interesante de la jornada?","¿Cómo va la clasificación de Primera?");
+  return s.slice(0,5);
 }
 function iaPintarCab(){
   const c=iaEl.querySelector(".ia-cab small");if(!c)return;
@@ -1161,11 +1183,12 @@ function iaPintarInicio(){
   if(iaMsgs.children.length)return;
   if(iaPartido){
     const sug=iaSugPartido(iaPartido);
-    iaMsgs.innerHTML=`<div class="ia-m el"><p>Pregúntame lo que quieras del <b>${esc(iaPartido.local)} – ${esc(iaPartido.visitante)}</b>: canal y hora, cómo quedó la ida, el historial entre ellos, estadísticas de sus últimos duelos o cómo llegan.</p></div><div class="ia-sug">${sug.map(x=>`<button type="button" data-sug="${esc(x)}">${esc(x)}</button>`).join("")}</div>`;
+    const fase=faseDe(iaPartido),t=`<b>${esc(iaPartido.local)} – ${esc(iaPartido.visitante)}</b>`;
+    const intro=fase==="durante"?`El ${t} se está jugando. Pregúntame cómo va, quién ha marcado o cómo quedaría la tabla.`:fase==="despues"?`El ${t} ya terminó. Pregúntame por los goles, cómo queda la tabla o cuándo vuelven a jugar.`:`Pregúntame lo que quieras del ${t}: hora y canal, cómo llegan, qué se juegan o el historial entre ellos.`;
+    iaMsgs.innerHTML=`<div class="ia-m el"><p>${intro}</p></div><div class="ia-sug">${sug.map(x=>`<button type="button" data-sug="${esc(x)}">${esc(x)}</button>`).join("")}</div>`;
     return;
   }
-  const fav=[...FAV][0];
-  const sug=["¿Qué partidos hay hoy y dónde los echan?",fav?`¿Cuándo juega el ${nombreEquipo(fav)} y en qué canal?`:"¿Cuándo juega el Real Madrid y en qué canal?","¿Qué echan este fin de semana en abierto?","¿Cómo va la clasificación de Primera?","¿Qué resultados hubo ayer?"];
+  const sug=iaSugGeneral();
   iaMsgs.innerHTML=`<div class="ia-m el"><p>Hola. Pregúntame por horarios, canales, resultados o clasificaciones de la guía.</p></div><div class="ia-sug">${sug.map(x=>`<button type="button" data-sug="${esc(x)}">${esc(x)}</button>`).join("")}</div>`;
 }
 /* Teclado: el panel ocupa solo la zona visible para que la caja de texto no quede tapada */
@@ -1187,8 +1210,10 @@ function iaSepararSug(t){
 function iaIdeas(texto,q,deIA){
   const ids=[...(String(texto)+"\n"+iaHist.filter(h=>h.rol==="asistente").map(h=>h.texto).reverse().join("\n")).matchAll(/\[\[([^\]]+)\]\]/g)].map(x=>x[1].trim());
   const m=iaPartido||matches&&ids.map(id=>matches.find(z=>z._id===id)).find(Boolean);
-  const ideas=[...deIA.slice(0,3)];
+  // Una idea de la IA y luego las preguntas típicas del momento del partido (las más útiles con los datos de la guía)
+  const ideas=[...deIA.slice(0,1)];
   if(iaPartido)ideas.push(...iaSugPartido(iaPartido));
+  ideas.push(...deIA.slice(1));
   if(m){
     const now=Date.now(),st=status(m,now),dia=fDay.format(new Date(m.inicio));
     const L=nombreEquipo(m.localId)||m.local,V=nombreEquipo(m.visitanteId)||m.visitante;
@@ -1596,6 +1621,17 @@ async function iaContextoPartido(m){
   const out=[`PARTIDO SELECCIONADO (el usuario está viendo su ficha; si la pregunta no dice otra cosa, se refiere a este): ${m._id} | ${(COMP[m.liga]||{}).name||""} ${jornLabel(m.jornada)} | ${cap(fDay.format(new Date(m.inicio)))} ${m.horaPendiente?"hora por fijar":fTime.format(new Date(m.inicio))} | ${m.local} – ${m.visitante}`+(tieneMarcador(m)&&(st==="live"||st==="done")?` | ${st==="live"?"EN JUEGO":"FINAL"} ${marcadorTxt(m)}${t?" ("+t.l+")":""}`:"")];
   const evIA=m.eventos&&m.eventos.length?m.eventos:(m.goles||[]);
   if(evIA.length)out.push("GOLES Y EXPULSIONES DE ESTE PARTIDO: "+evIA.map(e=>`${e.min} ${e.t==="g"?"gol":"roja"} de ${e.j} (${e.lado==="L"?m.local:m.visitante})${e.pen?" de penalti":""}${e.pp?" en propia puerta":""}`).join("; "));
+  out.push("MOMENTO DEL PARTIDO: "+({antes:"aún no ha empezado",durante:"se está jugando ahora",despues:"ya terminó"})[faseDe(m)]+".");
+  // Formato y zonas de la tabla, para «qué se juega» / «qué necesita»
+  if(m.liga===3)out.push("FORMATO COPA DEL REY: eliminatoria a partido único (salvo semifinales, a ida y vuelta) en el campo del equipo de menor categoría; si acaba en empate hay prórroga y, si sigue, penaltis.");
+  if(m.liga===4||m.liga===6)out.push("FORMATO FASE LIGA: liga única de 36 equipos a partido único; del 1.º al 8.º pasan directos a octavos; del 9.º al 24.º juegan un play-off; del 25.º al 36.º quedan eliminados.");
+  const tb=tablaDe(m);
+  if(tb){
+    const z=(ZONAS[m.liga]||[]).map(([h,,txt])=>h>0?`hasta el ${h}.º ${txt}`:`últimos ${-h} ${txt}`).join(", ");
+    if(z)out.push(`ZONAS DE LA TABLA (${tb.filas.length} equipos${m.liga===5&&m.etiqueta?", "+m.etiqueta:""}): ${z}.`);
+    const tv=tablaViva(m,tb);
+    if(tv.vivo)out.push("CLASIFICACIÓN EN DIRECTO (si los partidos en juego acabaran ahora): "+tv.filas.map((r,i)=>`${i+1}. ${teamOf(r[0],r[8]).name} ${r[7]} pts (${r[1]} PJ, DG ${r[5]-r[6]>0?"+":""}${r[5]-r[6]})`).join("; "));
+  }
   const d=await datosH2H(m);
   if(!d)out.push("HISTORIAL: no disponible para este partido. Si te preguntan por enfrentamientos anteriores, estadísticas o la ida, di que la guía no tiene ese dato; NO lo inventes ni lo saques de tu memoria.");
   if(d){
@@ -1624,7 +1660,7 @@ function open(id){
   const canary=CANARY.has(m.localId);
   sheet.innerHTML=`<div class="wrap">
     <div class="grab"></div>
-    <div class="sh-head"><span class="comp">${(COMP[m.liga]||{}).name||""} · ${esc(jornLabel(m.jornada))}</span><span class="sh-acc">${status(m,now)!=="done"&&m.estado!=="final"?`<button class="campana-b" id="sigue-partido" type="button" aria-pressed="${SIGUE.has(m._id)}" aria-label="${SIGUE.has(m._id)?"Quitar avisos de este partido":"Avisarme de este partido"}" title="${SIGUE.has(m._id)?"Quitar avisos de este partido":"Avisarme de este partido: goles de los dos equipos y resultado"}">${SVG_CAMP}</button>`:""}<button class="close" id="close" aria-label="Cerrar">×</button></span></div>
+    <div class="sh-head"><span class="comp">${(COMP[m.liga]||{}).name||""} · ${esc(jornLabel(m.jornada))}</span><span class="sh-acc">${status(m,now)!=="done"&&m.estado!=="final"?`<button class="campana-b" id="sigue-partido" type="button" aria-pressed="${SIGUE.has(m._id)}" aria-label="${SIGUE.has(m._id)?"Quitar avisos de este partido":"Avisarme de este partido"}" title="${SIGUE.has(m._id)?"Quitar avisos de este partido":"Avisarme de este partido: goles de los dos equipos y resultado"}">${SVG_CAMP}<span>${SIGUE.has(m._id)?"Avisándote":"Avisarme"}</span></button>`:""}<button class="close" id="close" aria-label="Cerrar">×</button></span></div>
     <div class="vs">
       <div class="side">${crest(h,1)}<b id="sh-title" class="${claseEquipo(m.localId,m.liga)}">${esc(h.name)}</b>${botonFav(m.localId,h.name)}</div>
       ${tieneMarcador(m)&&(status(m,now)==="live"||status(m,now)==="done")?`<div class="mid score${status(m,now)==="live"?" live":""}">${m.marcador[0]}<i>–</i>${m.marcador[1]}</div>`:`<div class="mid">VS</div>`}
@@ -1713,7 +1749,7 @@ sheet.addEventListener("click",e=>{
   if(e.target.id==="close"){close();return}
   if(e.target.closest("#compartir")&&actual){compartir(actual);return}
   const sp=e.target.closest("#sigue-partido");
-  if(sp&&actual){alternarSigue(actual);const on=SIGUE.has(actual._id);sp.setAttribute("aria-pressed",String(on));const t=on?"Quitar avisos de este partido":"Avisarme de este partido";sp.setAttribute("aria-label",t);sp.title=on?t:t+": goles de los dos equipos y resultado";render();return}
+  if(sp&&actual){alternarSigue(actual);const on=SIGUE.has(actual._id);sp.setAttribute("aria-pressed",String(on));const t=on?"Quitar avisos de este partido":"Avisarme de este partido";sp.setAttribute("aria-label",t);sp.title=on?t:t+": goles de los dos equipos y resultado";const sl=sp.querySelector("span");if(sl)sl.textContent=on?"Avisándote":"Avisarme";render();return}
   if(e.target.id==="ck-coment"){guardarConsent(true);return}
   if(e.target.closest("#vertabla")&&actual){verTabla=!verTabla;const tb=document.getElementById("tabla");if(tb){const y=tb.getBoundingClientRect().top;tb.outerHTML=tablaHTML(actual);const nt=document.getElementById("tabla");if(nt){sheet.scrollTop+=nt.getBoundingClientRect().top-y;const b=document.getElementById("vertabla");if(b)b.focus()}}return}
   const f=e.target.closest(".fav");
