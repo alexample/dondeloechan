@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T12:07:21+01:00",
+ "actualizado": "2026-10-27T14:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6635,7 +6635,7 @@
    "liga": 1,
    "local": "Getafe CF",
    "localId": "get",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Sevilla FC",
    "visitanteId": "sev"
   },
@@ -6650,7 +6650,7 @@
    "liga": 2,
    "local": "CD Eldense",
    "localId": "eld",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Granada CF",
    "visitanteId": "gra"
   },
@@ -9249,9 +9249,41 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T13:07:20+01:00",
-  "cambio": "2026-10-27T12:07:21+01:00",
+  "comprobado": "2026-10-27T14:07:20+01:00",
+  "cambio": "2026-10-27T14:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T14:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Getafe CF – Sevilla FC",
+     "Canal confirmado: CD Eldense – Granada CF"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-11-get-sev",
+       "t": "Getafe CF – Sevilla FC · confirmado"
+      },
+      {
+       "id": "2627-2-12-eld-gra",
+       "t": "CD Eldense – Granada CF · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-27T13:07:20+01:00",
     "nuevos": 0,
@@ -10003,125 +10035,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-26T19:07:23+01:00",
-    "nuevos": 9,
-    "horas": 0,
-    "canales": 14,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Atalanta – FC Kairat",
-     "Nuevo partido: Trabzonspor – Freiburg",
-     "Nuevo partido: FC Thun – Hearts",
-     "Nuevo partido: FC Midtjylland – Ajax",
-     "Nuevo partido: Lincoln Red Imps – Hajduk Split",
-     "Nuevo partido: Crvena Zvezda – Inter Club d'Escaldes",
-     "Nuevo partido: KuPS – Gent",
-     "Nuevo partido: AGF Aarhus – SC Braga",
-     "Nuevo partido: Mjällby AIF – Borac Banja Luka",
-     "Canal confirmado: Real Betis – Málaga CF",
-     "Canal confirmado: Celta Fortuna – Córdoba CF",
-     "Canal confirmado: Real Madrid Castilla – Cartagena"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-11-bet-mal",
-       "t": "Real Betis – Málaga CF · confirmado"
-      },
-      {
-       "id": "2627-2-12-clb-cor",
-       "t": "Celta Fortuna – Córdoba CF · confirmado"
-      },
-      {
-       "id": "2627-5-10-real-madrid-castilla-cartagena",
-       "t": "Real Madrid Castilla – Cartagena · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
-       "t": "Atalanta – FC Kairat"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-trabzonspor-freiburg",
-       "t": "Trabzonspor – Freiburg"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fc-thun-hearts",
-       "t": "FC Thun – Hearts"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
-       "t": "FC Midtjylland – Ajax"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-lincoln-red-imps-hajduk-split",
-       "t": "Lincoln Red Imps – Hajduk Split"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
-       "t": "Crvena Zvezda – Inter Club d'Escaldes"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-kups-gent",
-       "t": "KuPS – Gent"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
-       "t": "AGF Aarhus – SC Braga"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-mjallby-aif-borac-banja-luka",
-       "t": "Mjällby AIF – Borac Banja Luka"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
-       "t": "Atalanta – FC Kairat (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-trabzonspor-freiburg",
-       "t": "Trabzonspor – Freiburg (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fc-thun-hearts",
-       "t": "FC Thun – Hearts (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
-       "t": "FC Midtjylland – Ajax (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-lincoln-red-imps-hajduk-split",
-       "t": "Lincoln Red Imps – Hajduk Split (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
-       "t": "Crvena Zvezda – Inter Club d'Escaldes (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-kups-gent",
-       "t": "KuPS – Gent (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
-       "t": "AGF Aarhus – SC Braga (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-mjallby-aif-borac-banja-luka",
-       "t": "Mjällby AIF – Borac Banja Luka (Conference)"
-      }
-     ]
     }
    }
   ]
