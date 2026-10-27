@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T14:07:20+01:00",
+ "actualizado": "2026-10-27T17:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6683,7 +6683,7 @@
    "liga": 1,
    "local": "Real Racing Club",
    "localId": "rac",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Real Madrid",
    "visitanteId": "rma"
   },
@@ -6698,7 +6698,7 @@
    "liga": 2,
    "local": "AD Ceuta FC",
    "localId": "ceu",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Real Sporting",
    "visitanteId": "spo"
   },
@@ -6736,8 +6736,7 @@
    "local": "UD Ourense",
    "localAbbr": "OUR",
    "localId": "ud-ourense",
-   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará.",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Cultural Leonesa",
    "visitanteAbbr": "CUL",
    "visitanteId": "cultural-leonesa"
@@ -9249,9 +9248,46 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T16:07:21+01:00",
-  "cambio": "2026-10-27T14:07:20+01:00",
+  "comprobado": "2026-10-27T17:07:22+01:00",
+  "cambio": "2026-10-27T17:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T17:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 5,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Real Racing Club – Real Madrid",
+     "Canal confirmado: AD Ceuta FC – Real Sporting",
+     "Canal confirmado: UD Ourense – Cultural Leonesa"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-11-rac-rma",
+       "t": "Real Racing Club – Real Madrid · confirmado"
+      },
+      {
+       "id": "2627-2-12-ceu-spo",
+       "t": "AD Ceuta FC – Real Sporting · confirmado"
+      },
+      {
+       "id": "2627-5-10-ud-ourense-cultural-leonesa",
+       "t": "UD Ourense – Cultural Leonesa · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-27T16:07:21+01:00",
     "nuevos": 0,
@@ -9904,137 +9940,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-26T21:07:23+01:00",
-    "nuevos": 9,
-    "horas": 0,
-    "canales": 16,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Nuevo partido: Getafe CF – Brighton",
-     "Nuevo partido: Twente – Pafos FC",
-     "Nuevo partido: AS Monaco – Nordsjælland",
-     "Nuevo partido: København – FC Iberia 1999",
-     "Nuevo partido: Panathinaikos – CSKA Sofia",
-     "Nuevo partido: Lugano – Kauno Žalgiris",
-     "Nuevo partido: Sint-Truiden VV – SK Brann",
-     "Nuevo partido: Riga FC – FKB Jablonec",
-     "Nuevo partido: FCU Craiova 1948 – Klubi Sportiv Egnatia",
-     "Canal confirmado: FC Barcelona – Deportivo Alavés",
-     "Canal confirmado: Albacete BP – CE Sabadell",
-     "Canal confirmado: Real Zaragoza – Villarreal B",
-     "Canal confirmado: Ribadesella CF – Racing de Santander"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-11-bar-ala",
-       "t": "FC Barcelona – Deportivo Alavés · confirmado"
-      },
-      {
-       "id": "2627-2-12-alb-sab",
-       "t": "Albacete BP – CE Sabadell · confirmado"
-      },
-      {
-       "id": "2627-5-10-real-zaragoza-villarreal-b",
-       "t": "Real Zaragoza – Villarreal B · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-recreativo-huelva-ray",
-       "t": "Recreativo Huelva – Rayo Vallecano"
-      },
-      {
-       "id": "2627-3-primera-ronda-ribadesella-cf-rac",
-       "t": "Ribadesella CF – Racing de Santander · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-get-brighton",
-       "t": "Getafe CF – Brighton"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-twente-pafos-fc",
-       "t": "Twente – Pafos FC"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-as-monaco-nordsjaelland",
-       "t": "AS Monaco – Nordsjælland"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-kobenhavn-fc-iberia-1999",
-       "t": "København – FC Iberia 1999"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-panathinaikos-cska-sofia",
-       "t": "Panathinaikos – CSKA Sofia"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-lugano-kauno-zalgiris",
-       "t": "Lugano – Kauno Žalgiris"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-sint-truiden-vv-sk-brann",
-       "t": "Sint-Truiden VV – SK Brann"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-riga-fc-fkb-jablonec",
-       "t": "Riga FC – FKB Jablonec"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fcu-craiova-1948-klubi-sportiv-egnatia",
-       "t": "FCU Craiova 1948 – Klubi Sportiv Egnatia"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-6-fase-liga-j3-get-brighton",
-       "t": "Getafe CF – Brighton (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-twente-pafos-fc",
-       "t": "Twente – Pafos FC (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-as-monaco-nordsjaelland",
-       "t": "AS Monaco – Nordsjælland (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-kobenhavn-fc-iberia-1999",
-       "t": "København – FC Iberia 1999 (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-panathinaikos-cska-sofia",
-       "t": "Panathinaikos – CSKA Sofia (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-lugano-kauno-zalgiris",
-       "t": "Lugano – Kauno Žalgiris (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-sint-truiden-vv-sk-brann",
-       "t": "Sint-Truiden VV – SK Brann (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-riga-fc-fkb-jablonec",
-       "t": "Riga FC – FKB Jablonec (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fcu-craiova-1948-klubi-sportiv-egnatia",
-       "t": "FCU Craiova 1948 – Klubi Sportiv Egnatia (Conference)"
-      }
-     ]
     }
    }
   ]
