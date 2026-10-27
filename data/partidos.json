@@ -9169,9 +9169,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T08:07:21+01:00",
+  "comprobado": "2026-10-27T09:07:21+01:00",
   "cambio": "2026-10-26T23:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T09:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-27T08:07:21+01:00",
     "nuevos": 0,
@@ -9901,35 +9922,6 @@
       {
        "id": "2627-2-12-rsb-gir",
        "t": "Real Sociedad B – Girona FC · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-26T13:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
-       "t": "CDA Navalcarnero – Betis"
-      },
-      {
-       "id": "2627-3-primera-ronda-ae-prat-ath",
-       "t": "AE Prat – Athletic"
       }
      ],
      "horas": [],
