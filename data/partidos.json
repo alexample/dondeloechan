@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T10:38:10+01:00",
+ "actualizado": "2026-10-27T12:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6601,8 +6601,7 @@
    "local": "Antequera",
    "localAbbr": "ANT",
    "localId": "antequera",
-   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará.",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Real Murcia",
    "visitanteAbbr": "MUR",
    "visitanteId": "real-murcia"
@@ -9250,9 +9249,36 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-27T11:32:01+01:00",
-  "cambio": "2026-10-27T10:38:10+01:00",
+  "comprobado": "2026-10-27T12:07:21+01:00",
+  "cambio": "2026-10-27T12:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-27T12:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Antequera – Real Murcia"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-5-10-antequera-real-murcia",
+       "t": "Antequera – Real Murcia · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-27T11:32:01+01:00",
     "nuevos": 0,
@@ -10092,43 +10118,6 @@
       {
        "id": "2627-1-11-dep-osa",
        "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-26T17:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 5,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: Rayo Vallecano – RC Celta",
-     "Canal confirmado: SD Eibar – UD Almería",
-     "Canal confirmado: UD Logroñés – Mirandés"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-11-ray-cel",
-       "t": "Rayo Vallecano – RC Celta · confirmado"
-      },
-      {
-       "id": "2627-2-12-eib-alm",
-       "t": "SD Eibar – UD Almería · confirmado"
-      },
-      {
-       "id": "2627-5-10-ud-logrones-mirandes",
-       "t": "UD Logroñés – Mirandés · confirmado"
       }
      ],
      "horas": [],
