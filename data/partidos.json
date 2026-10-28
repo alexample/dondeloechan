@@ -10050,9 +10050,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-28T09:27:54+01:00",
+  "comprobado": "2026-10-28T10:07:22+01:00",
   "cambio": "2026-10-28T08:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-28T10:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-28T09:27:54+01:00",
     "nuevos": 0,
@@ -10775,38 +10800,6 @@
       {
        "id": "2627-1-11-dep-osa",
        "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T14:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: Getafe CF – Sevilla FC",
-     "Canal confirmado: CD Eldense – Granada CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-11-get-sev",
-       "t": "Getafe CF – Sevilla FC · confirmado"
-      },
-      {
-       "id": "2627-2-12-eld-gra",
-       "t": "CD Eldense – Granada CF · confirmado"
       }
      ],
      "horas": [],
