@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-28T19:07:22+01:00",
+ "actualizado": "2026-10-28T21:07:24+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7494,8 +7494,7 @@
    "local": "SD Huesca",
    "localAbbr": "HUE",
    "localId": "sd-huesca",
-   "nota": "Anunciado en Movistar Plus+ (dial 53) y DAZN. Movistar publica su guía de ese día unos días antes; la actualización diaria lo confirmará.",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Gimnàstic de Tarragona",
    "visitanteAbbr": "NAS",
    "visitanteId": "gimnastic-de-tarragona"
@@ -7513,7 +7512,7 @@
    "local": "RC Deportivo",
    "localId": "dep",
    "nota": "Se puede ver gratis en la app de DAZN creando una cuenta.",
-   "provisional": true,
+   "provisional": false,
    "visitante": "CA Osasuna",
    "visitanteId": "osa"
   },
@@ -7529,7 +7528,7 @@
    "liga": 2,
    "local": "RCD Mallorca",
    "localId": "mll",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Cádiz CF",
    "visitanteId": "cad"
   },
@@ -8637,6 +8636,69 @@
    "localAbbr": "UNI",
    "visitanteAbbr": "ZAM",
    "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-1-12-val-rma",
+   "liga": 1,
+   "jornada": "12",
+   "inicio": "2026-11-07T21:00:00+01:00",
+   "local": "Valencia CF",
+   "localId": "val",
+   "visitante": "Real Madrid",
+   "visitanteId": "rma",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-13-gra-ten",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-11-07T21:00:00+01:00",
+   "local": "Granada CF",
+   "localId": "gra",
+   "visitante": "CD Tenerife",
+   "visitanteId": "ten",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-11-real-zaragoza-sd-huesca",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-07T21:00:00+01:00",
+   "local": "Real Zaragoza",
+   "localId": "real-zaragoza",
+   "visitante": "SD Huesca",
+   "visitanteId": "sd-huesca",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    {
+     "name": "Aragón TV",
+     "short": "ARA",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Aragón y en Aragón Play."
+    },
+    {
+     "name": "Aragón Play",
+     "short": "ARP",
+     "op": "free",
+     "dial": "Web",
+     "how": "Gratis en la web y la app de Aragón Play (sin emisión en la TDT)."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ZAR",
+   "visitanteAbbr": "HUE",
+   "etiqueta": "Grupo 2"
   }
  ],
  "clasificacion": {
@@ -10328,9 +10390,74 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-28T20:07:24+01:00",
-  "cambio": "2026-10-28T19:07:22+01:00",
+  "comprobado": "2026-10-28T21:07:24+01:00",
+  "cambio": "2026-10-28T21:07:24+01:00",
   "historial": [
+   {
+    "hora": "2026-10-28T21:07:24+01:00",
+    "nuevos": 3,
+    "horas": 0,
+    "canales": 9,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Valencia CF – Real Madrid",
+     "Nuevo partido: Granada CF – CD Tenerife",
+     "Nuevo partido: Real Zaragoza – SD Huesca",
+     "Canal confirmado: RC Deportivo – CA Osasuna",
+     "Canal confirmado: RCD Mallorca – Cádiz CF",
+     "Canal confirmado: SD Huesca – Gimnàstic de Tarragona"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-1-12-val-rma",
+       "t": "Valencia CF – Real Madrid"
+      },
+      {
+       "id": "2627-2-13-gra-ten",
+       "t": "Granada CF – CD Tenerife"
+      },
+      {
+       "id": "2627-2-12-mll-cad",
+       "t": "RCD Mallorca – Cádiz CF · confirmado"
+      },
+      {
+       "id": "2627-5-10-sd-huesca-gimnastic-de-tarragona",
+       "t": "SD Huesca – Gimnàstic de Tarragona · confirmado"
+      },
+      {
+       "id": "2627-5-11-real-zaragoza-sd-huesca",
+       "t": "Real Zaragoza – SD Huesca"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-12-val-rma",
+       "t": "Valencia CF – Real Madrid (Primera)"
+      },
+      {
+       "id": "2627-2-13-gra-ten",
+       "t": "Granada CF – CD Tenerife (Segunda)"
+      },
+      {
+       "id": "2627-5-11-real-zaragoza-sd-huesca",
+       "t": "Real Zaragoza – SD Huesca (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-28T20:07:24+01:00",
     "nuevos": 0,
@@ -11165,83 +11292,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-28T00:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 10,
-    "tablas": [],
-    "detalle": [
-     "Resultado: Tudelano 0-4 Real Zaragoza",
-     "Resultado: Sporting de Alcázar 0-3 Málaga",
-     "Resultado: Arosa SC 2-0 Pontevedra",
-     "Resultado: CD Manacor 0-5 Villarreal",
-     "Resultado: CD Atlético Paso 3-1 Córdoba",
-     "Resultado: Ciudad de Lucena 0-1 Rayo Majadahonda",
-     "Resultado: UD Llanera 1-1 Ponferradina",
-     "Resultado: Atlético Tordesillas 3-3 Mirandés",
-     "Resultado: RSD Alcalá 1-3 Las Palmas",
-     "Resultado: UD Castellonense 1-2 UD Almería"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-3-primera-ronda-tudelano-real-zaragoza",
-       "t": "Tudelano 0-4 Real Zaragoza"
-      },
-      {
-       "id": "2627-3-primera-ronda-sporting-de-alcazar-mal",
-       "t": "Sporting de Alcázar 0-3 Málaga"
-      },
-      {
-       "id": "2627-3-primera-ronda-arosa-sc-pontevedra",
-       "t": "Arosa SC 2-0 Pontevedra"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-manacor-vil",
-       "t": "CD Manacor 0-5 Villarreal"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-atletico-paso-cor",
-       "t": "CD Atlético Paso 3-1 Córdoba"
-      },
-      {
-       "id": "2627-3-primera-ronda-ciudad-de-lucena-rayo-majadahonda",
-       "t": "Ciudad de Lucena 0-1 Rayo Majadahonda"
-      },
-      {
-       "id": "2627-3-primera-ronda-ud-llanera-ponferradina",
-       "t": "UD Llanera 1-1 Ponferradina"
-      },
-      {
-       "id": "2627-3-primera-ronda-atletico-tordesillas-mirandes",
-       "t": "Atlético Tordesillas 3-3 Mirandés"
-      },
-      {
-       "id": "2627-3-primera-ronda-rsd-alcala-lpa",
-       "t": "RSD Alcalá 1-3 Las Palmas"
-      },
-      {
-       "id": "2627-3-primera-ronda-ud-castellonense-alm",
-       "t": "UD Castellonense 1-2 UD Almería"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-11-dep-osa",
