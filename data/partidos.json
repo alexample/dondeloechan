@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-28T13:07:21+01:00",
+ "actualizado": "2026-10-28T14:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8379,6 +8379,35 @@
    "localAbbr": "RFE",
    "visitanteAbbr": "LOG",
    "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-1-12-mal-rac",
+   "liga": 1,
+   "jornada": "12",
+   "inicio": "2026-11-07T14:00:00+01:00",
+   "local": "Málaga CF",
+   "localId": "mal",
+   "visitante": "Real Racing Club",
+   "visitanteId": "rac",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-13-bur-clb",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-11-07T14:00:00+01:00",
+   "local": "Burgos CF",
+   "localId": "bur",
+   "visitante": "Celta Fortuna",
+   "visitanteId": "clb",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
   }
  ],
  "clasificacion": {
@@ -10070,9 +10099,54 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-28T13:07:21+01:00",
-  "cambio": "2026-10-28T13:07:21+01:00",
+  "comprobado": "2026-10-28T14:07:22+01:00",
+  "cambio": "2026-10-28T14:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-28T14:07:22+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Málaga CF – Real Racing Club",
+     "Nuevo partido: Burgos CF – Celta Fortuna"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-1-12-mal-rac",
+       "t": "Málaga CF – Real Racing Club"
+      },
+      {
+       "id": "2627-2-13-bur-clb",
+       "t": "Burgos CF – Celta Fortuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-12-mal-rac",
+       "t": "Málaga CF – Real Racing Club (Primera)"
+      },
+      {
+       "id": "2627-2-13-bur-clb",
+       "t": "Burgos CF – Celta Fortuna (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-28T13:07:21+01:00",
     "nuevos": 1,
@@ -10793,27 +10867,6 @@
    },
    {
     "hora": "2026-10-27T18:07:23+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T17:37:04+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
