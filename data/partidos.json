@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-28T00:07:21+01:00",
+ "actualizado": "2026-10-28T08:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -5513,7 +5513,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-ud-castellonense-alm",
@@ -5924,7 +5929,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    4
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-arosa-sc-pontevedra",
@@ -6187,7 +6197,12 @@
      "pen": true,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-sporting-de-alcazar-mal",
@@ -10035,9 +10050,51 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-28T07:07:21+01:00",
-  "cambio": "2026-10-28T00:07:21+01:00",
+  "comprobado": "2026-10-28T08:07:21+01:00",
+  "cambio": "2026-10-28T08:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-28T08:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 3,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Recreativo Huelva 2-3 Rayo Vallecano",
+     "Resultado: CE Manresa 2-2 UE Sant Andreu",
+     "Resultado: CD Don Benito 2-4 CD Extremadura"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-3-primera-ronda-recreativo-huelva-ray",
+       "t": "Recreativo Huelva 2-3 Rayo Vallecano"
+      },
+      {
+       "id": "2627-3-primera-ronda-ce-manresa-ue-sant-andreu",
+       "t": "CE Manresa 2-2 UE Sant Andreu"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-don-benito-cd-extremadura",
+       "t": "CD Don Benito 2-4 CD Extremadura"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-28T07:07:21+01:00",
     "nuevos": 0,
@@ -10748,27 +10805,6 @@
       {
        "id": "2627-5-10-antequera-real-murcia",
        "t": "Antequera – Real Murcia · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T11:32:01+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
       }
      ],
      "horas": [],
