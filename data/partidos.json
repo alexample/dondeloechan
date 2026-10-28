@@ -10035,9 +10035,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-28T05:07:20+01:00",
+  "comprobado": "2026-10-28T06:07:23+01:00",
   "cambio": "2026-10-28T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-28T06:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-28T05:07:20+01:00",
     "nuevos": 0,
@@ -10740,164 +10765,6 @@
       {
        "id": "2627-1-11-dep-osa",
        "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T10:38:10+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 35,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: Sporting de Alcázar – Málaga",
-     "Canal confirmado: CD Tarancón – Levante",
-     "Canal confirmado: Anaitasuna – Alavés",
-     "Canal confirmado: Lebrijana – Getafe"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-3-primera-ronda-ud-castellonense-alm",
-       "t": "UD Castellonense – UD Almería"
-      },
-      {
-       "id": "2627-3-primera-ronda-gimnastica-segoviana-cultural-leonesa",
-       "t": "Gimnástica Segoviana – Cultural Leonesa"
-      },
-      {
-       "id": "2627-3-primera-ronda-ud-llanera-ponferradina",
-       "t": "UD Llanera – Ponferradina"
-      },
-      {
-       "id": "2627-3-primera-ronda-ciudad-de-lucena-rayo-majadahonda",
-       "t": "Ciudad de Lucena – Rayo Majadahonda"
-      },
-      {
-       "id": "2627-3-primera-ronda-atletico-tordesillas-mirandes",
-       "t": "Atlético Tordesillas – Mirandés"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-don-benito-cd-extremadura",
-       "t": "CD Don Benito – CD Extremadura"
-      },
-      {
-       "id": "2627-3-primera-ronda-arosa-sc-pontevedra",
-       "t": "Arosa SC – Pontevedra"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-manacor-vil",
-       "t": "CD Manacor – Villarreal"
-      },
-      {
-       "id": "2627-3-primera-ronda-sporting-de-alcazar-mal",
-       "t": "Sporting de Alcázar – Málaga · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-coruxo-zamora",
-       "t": "Coruxo – Zamora"
-      },
-      {
-       "id": "2627-3-primera-ronda-ud-poblense-ceu",
-       "t": "UD Poblense – AD Ceuta"
-      },
-      {
-       "id": "2627-3-primera-ronda-portugalete-real-union",
-       "t": "Portugalete – Real Unión"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-pamplona-eib",
-       "t": "CD Pamplona – SD Eibar"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-tarancon-lev",
-       "t": "CD Tarancón – Levante · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-anaitasuna-ala",
-       "t": "Anaitasuna – Alavés · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-sd-amorebieta-ud-logrones",
-       "t": "SD Amorebieta – UD Logroñés"
-      },
-      {
-       "id": "2627-3-primera-ronda-trival-valderas-leg",
-       "t": "Trival Valderas – Leganés"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-covadonga-vll",
-       "t": "CD Covadonga – Real Valladolid"
-      },
-      {
-       "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
-       "t": "CP Mijas Las Lagunas – Real Jaén"
-      },
-      {
-       "id": "2627-3-primera-ronda-gimnastica-torrelavega-ud-ourense",
-       "t": "Gimnástica Torrelavega – UD Ourense"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-cieza-gra",
-       "t": "CD Cieza – Granada"
-      },
-      {
-       "id": "2627-3-primera-ronda-deportiva-minera-cartagena",
-       "t": "Deportiva Minera – Cartagena"
-      },
-      {
-       "id": "2627-3-primera-ronda-reus-fc-reddis-barakaldo-cf",
-       "t": "Reus FC Reddis – Barakaldo CF"
-      },
-      {
-       "id": "2627-3-primera-ronda-ud-sanse-cd-coria",
-       "t": "UD Sanse – CD Coria"
-      },
-      {
-       "id": "2627-3-primera-ronda-atletico-baleares-eld",
-       "t": "Atlético Baleares – Eldense"
-      },
-      {
-       "id": "2627-3-primera-ronda-lebrijana-get",
-       "t": "Lebrijana – Getafe · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-ub-conquense-cas",
-       "t": "UB Conquense – Castellón"
-      },
-      {
-       "id": "2627-3-primera-ronda-real-avila-unionistas-de-salamanca",
-       "t": "Real Ávila – Unionistas de Salamanca"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-laredo-bur",
-       "t": "CD Laredo – Burgos"
-      },
-      {
-       "id": "2627-3-primera-ronda-antequera-aguilas-fc",
-       "t": "Antequera – Águilas FC"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-varea-and",
-       "t": "CD Varea – FC Andorra"
-      },
-      {
-       "id": "2627-3-primera-ronda-ribadesella-cf-rac",
-       "t": "Ribadesella CF – Racing de Santander"
-      },
-      {
-       "id": "2627-3-primera-ronda-auriense-dep",
-       "t": "Auriense – Deportivo"
       }
      ],
      "horas": [],
