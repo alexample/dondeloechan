@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-28T16:07:23+01:00",
+ "actualizado": "2026-10-28T16:59:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7647,7 +7647,7 @@
    "liga": 2,
    "local": "Real Oviedo",
    "localId": "ovi",
-   "provisional": true,
+   "provisional": false,
    "visitante": "UD Las Palmas",
    "visitanteId": "lpa"
   },
@@ -8432,6 +8432,120 @@
     "daznhm"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-1-12-esp-dep",
+   "liga": 1,
+   "jornada": "12",
+   "inicio": "2026-11-07T16:15:00+01:00",
+   "local": "RCD Espanyol",
+   "localId": "esp",
+   "visitante": "RC Deportivo",
+   "visitanteId": "dep",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-13-cad-ovi",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-11-07T16:15:00+01:00",
+   "local": "Cádiz CF",
+   "localId": "cad",
+   "visitante": "Real Oviedo",
+   "visitanteId": "ovi",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-11-alcorcon-real-jaen",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-07T16:30:00+01:00",
+   "local": "Alcorcón",
+   "localId": "alcorcon",
+   "visitante": "Real Jaén",
+   "visitanteId": "real-jaen",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ALC",
+   "visitanteAbbr": "JAE",
+   "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-5-11-antequera-rayo-majadahonda",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-07T16:30:00+01:00",
+   "local": "Antequera",
+   "localId": "antequera",
+   "visitante": "Rayo Majadahonda",
+   "visitanteId": "rayo-majadahonda",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ANT",
+   "visitanteAbbr": "MAJ",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-11-barakaldo-cf-real-union",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-07T16:30:00+01:00",
+   "local": "Barakaldo CF",
+   "localId": "barakaldo-cf",
+   "visitante": "Real Unión",
+   "visitanteId": "real-union",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "BAR",
+   "visitanteAbbr": "RUN",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-11-pontevedra-ud-ourense",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-07T16:30:00+01:00",
+   "local": "Pontevedra",
+   "localId": "pontevedra",
+   "visitante": "UD Ourense",
+   "visitanteId": "ud-ourense",
+   "canales": [
+    {
+     "name": "TVG",
+     "short": "TVG",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Galicia y en la web de la CRTVG."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "PON",
+   "visitanteAbbr": "OUR",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub."
   }
  ],
  "clasificacion": {
@@ -10123,9 +10237,95 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-28T16:07:23+01:00",
-  "cambio": "2026-10-28T16:07:23+01:00",
+  "comprobado": "2026-10-28T16:59:43+01:00",
+  "cambio": "2026-10-28T16:59:43+01:00",
   "historial": [
+   {
+    "hora": "2026-10-28T16:59:43+01:00",
+    "nuevos": 6,
+    "horas": 0,
+    "canales": 11,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: RCD Espanyol – RC Deportivo",
+     "Nuevo partido: Cádiz CF – Real Oviedo",
+     "Nuevo partido: Alcorcón – Real Jaén",
+     "Nuevo partido: Barakaldo CF – Real Unión",
+     "Nuevo partido: Pontevedra – UD Ourense",
+     "Nuevo partido: Antequera – Rayo Majadahonda",
+     "Canal confirmado: Real Oviedo – UD Las Palmas"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-1-12-esp-dep",
+       "t": "RCD Espanyol – RC Deportivo"
+      },
+      {
+       "id": "2627-2-13-cad-ovi",
+       "t": "Cádiz CF – Real Oviedo"
+      },
+      {
+       "id": "2627-2-12-ovi-lpa",
+       "t": "Real Oviedo – UD Las Palmas · confirmado"
+      },
+      {
+       "id": "2627-5-11-alcorcon-real-jaen",
+       "t": "Alcorcón – Real Jaén"
+      },
+      {
+       "id": "2627-5-11-barakaldo-cf-real-union",
+       "t": "Barakaldo CF – Real Unión"
+      },
+      {
+       "id": "2627-5-11-pontevedra-ud-ourense",
+       "t": "Pontevedra – UD Ourense"
+      },
+      {
+       "id": "2627-5-11-antequera-rayo-majadahonda",
+       "t": "Antequera – Rayo Majadahonda"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-12-esp-dep",
+       "t": "RCD Espanyol – RC Deportivo (Primera)"
+      },
+      {
+       "id": "2627-2-13-cad-ovi",
+       "t": "Cádiz CF – Real Oviedo (Segunda)"
+      },
+      {
+       "id": "2627-5-11-alcorcon-real-jaen",
+       "t": "Alcorcón – Real Jaén (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-11-barakaldo-cf-real-union",
+       "t": "Barakaldo CF – Real Unión (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-11-pontevedra-ud-ourense",
+       "t": "Pontevedra – UD Ourense (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-11-antequera-rayo-majadahonda",
+       "t": "Antequera – Rayo Majadahonda (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-28T16:07:23+01:00",
     "nuevos": 0,
@@ -10869,27 +11069,6 @@
        "t": "CD Castellón – SD Eibar (Segunda)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-10-27T20:07:23+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
