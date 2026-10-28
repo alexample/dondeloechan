@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-28T14:07:22+01:00",
+ "actualizado": "2026-10-28T16:07:23+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6339,7 +6339,8 @@
    "localId": "anaitasuna",
    "provisional": false,
    "visitante": "Alavés",
-   "visitanteId": "ala"
+   "visitanteId": "ala",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-cd-pamplona-eib",
@@ -6354,7 +6355,8 @@
    "localId": "cd-pamplona",
    "visitante": "SD Eibar",
    "visitanteId": "eib",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-cd-tarancon-lev",
@@ -6369,7 +6371,8 @@
    "localId": "cd-tarancon",
    "provisional": false,
    "visitante": "Levante",
-   "visitanteId": "lev"
+   "visitanteId": "lev",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-coruxo-zamora",
@@ -6385,7 +6388,8 @@
    "visitante": "Zamora",
    "visitanteAbbr": "ZAM",
    "visitanteId": "zamora",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-pena-sport-fc-sd-huesca",
@@ -6406,7 +6410,8 @@
    "localId": "pena-sport-fc",
    "visitante": "SD Huesca",
    "visitanteAbbr": "HUE",
-   "visitanteId": "sd-huesca"
+   "visitanteId": "sd-huesca",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-portugalete-real-union",
@@ -6422,7 +6427,8 @@
    "visitante": "Real Unión",
    "visitanteAbbr": "RUN",
    "visitanteId": "real-union",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-ud-poblense-ceu",
@@ -6437,7 +6443,8 @@
    "localId": "ud-poblense",
    "visitante": "AD Ceuta",
    "visitanteId": "ceu",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-utebo-sab",
@@ -6457,7 +6464,8 @@
    "localAbbr": "UTE",
    "localId": "utebo",
    "visitante": "CE Sabadell",
-   "visitanteId": "sab"
+   "visitanteId": "sab",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-alcoyano-mll",
@@ -6484,7 +6492,8 @@
    "localAbbr": "ALC",
    "localId": "alcoyano",
    "visitante": "RCD Mallorca",
-   "visitanteId": "mll"
+   "visitanteId": "mll",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
@@ -6504,7 +6513,8 @@
    "localAbbr": "CSP",
    "localId": "calvo-sotelo-puertollano",
    "visitante": "Albacete",
-   "visitanteId": "alb"
+   "visitanteId": "alb",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-cd-badajoz-ten",
@@ -6524,7 +6534,8 @@
    "localAbbr": "BAD",
    "localId": "cd-badajoz",
    "visitante": "Tenerife",
-   "visitanteId": "ten"
+   "visitanteId": "ten",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-cd-covadonga-vll",
@@ -6539,7 +6550,8 @@
    "localId": "cd-covadonga",
    "visitante": "Real Valladolid",
    "visitanteId": "vll",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-cd-numancia-ovi",
@@ -6559,7 +6571,8 @@
    "localAbbr": "NUM",
    "localId": "cd-numancia",
    "visitante": "Real Oviedo",
-   "visitanteId": "ovi"
+   "visitanteId": "ovi",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
@@ -6575,7 +6588,8 @@
    "visitante": "Real Jaén",
    "visitanteAbbr": "JAE",
    "visitanteId": "real-jaen",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-sd-amorebieta-ud-logrones",
@@ -6591,7 +6605,8 @@
    "visitante": "UD Logroñés",
    "visitanteAbbr": "LOG",
    "visitanteId": "ud-logrones",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-trival-valderas-leg",
@@ -6606,7 +6621,8 @@
    "localId": "trival-valderas",
    "visitante": "Leganés",
    "visitanteId": "leg",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-cd-cieza-gra",
@@ -6621,7 +6637,8 @@
    "localId": "cd-cieza",
    "visitante": "Granada",
    "visitanteId": "gra",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-deportiva-minera-cartagena",
@@ -6637,7 +6654,8 @@
    "visitante": "Cartagena",
    "visitanteAbbr": "CAR",
    "visitanteId": "cartagena",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-gimnastica-torrelavega-ud-ourense",
@@ -6653,7 +6671,8 @@
    "visitante": "UD Ourense",
    "visitanteAbbr": "OUR",
    "visitanteId": "ud-ourense",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-reus-fc-reddis-barakaldo-cf",
@@ -6669,7 +6688,8 @@
    "visitante": "Barakaldo CF",
    "visitanteAbbr": "BAR",
    "visitanteId": "barakaldo-cf",
-   "provisional": true
+   "provisional": true,
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
@@ -6685,7 +6705,8 @@
    "localId": "cda-navalcarnero",
    "provisional": false,
    "visitante": "Betis",
-   "visitanteId": "bet"
+   "visitanteId": "bet",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-salamanca-uds-cel",
@@ -6700,7 +6721,8 @@
    "localId": "salamanca-uds",
    "provisional": false,
    "visitante": "Celta de Vigo",
-   "visitanteId": "cel"
+   "visitanteId": "cel",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-ue-tavernes-val",
@@ -6715,7 +6737,8 @@
    "localId": "ue-tavernes",
    "provisional": false,
    "visitante": "Valencia CF",
-   "visitanteId": "val"
+   "visitanteId": "val",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-xerez-cd-cad",
@@ -6729,7 +6752,8 @@
    "localAbbr": "XER",
    "localId": "xerez-cd",
    "visitante": "Cádiz",
-   "visitanteId": "cad"
+   "visitanteId": "cad",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-atletico-baleares-eld",
@@ -10099,9 +10123,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-28T15:07:23+01:00",
-  "cambio": "2026-10-28T14:07:22+01:00",
+  "comprobado": "2026-10-28T16:07:23+01:00",
+  "cambio": "2026-10-28T16:07:23+01:00",
   "historial": [
+   {
+    "hora": "2026-10-28T16:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-28T15:07:23+01:00",
     "nuevos": 0,
@@ -10841,53 +10890,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T19:07:22+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 6,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: CP Cacereño – CD Lugo",
-     "Canal confirmado: Elche CF – Valencia CF",
-     "Canal confirmado: Burgos CF – CD Castellón",
-     "Canal confirmado: CD Lugo – Mérida"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-11-elc-val",
-       "t": "Elche CF – Valencia CF · confirmado"
-      },
-      {
-       "id": "2627-2-12-bur-cas",
-       "t": "Burgos CF – CD Castellón · confirmado"
-      },
-      {
-       "id": "2627-5-10-cd-lugo-merida",
-       "t": "CD Lugo – Mérida · confirmado"
-      },
-      {
-       "id": "2627-5-11-cp-cacereno-cd-lugo",
-       "t": "CP Cacereño – CD Lugo"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-11-cp-cacereno-cd-lugo",
-       "t": "CP Cacereño – CD Lugo (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
