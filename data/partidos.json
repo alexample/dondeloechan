@@ -10050,9 +10050,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-28T08:07:21+01:00",
+  "comprobado": "2026-10-28T09:07:21+01:00",
   "cambio": "2026-10-28T08:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-28T09:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo – CA Osasuna"
+      },
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-28T08:07:21+01:00",
     "nuevos": 0,
@@ -10778,33 +10803,6 @@
       {
        "id": "2627-1-11-dep-osa",
        "t": "RC Deportivo – CA Osasuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-27T12:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: Antequera – Real Murcia"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-5-10-antequera-real-murcia",
-       "t": "Antequera – Real Murcia · confirmado"
       }
      ],
      "horas": [],
