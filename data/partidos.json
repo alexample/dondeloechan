@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T21:07:23+01:00",
+ "actualizado": "2026-10-29T21:16:24+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7075,7 +7075,8 @@
   {
    "id": "2627-1-11-ray-cel",
    "canales": [
-    "daznll"
+    "daznll",
+    "daznll2"
    ],
    "inicio": "2026-10-31T16:15:00+01:00",
    "jornada": "11",
@@ -7363,7 +7364,8 @@
   {
    "id": "2627-1-11-get-sev",
    "canales": [
-    "daznll"
+    "daznll",
+    "daznll2"
    ],
    "inicio": "2026-11-01T14:00:00+01:00",
    "jornada": "11",
@@ -10921,9 +10923,38 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T21:07:23+01:00",
-  "cambio": "2026-10-29T21:07:23+01:00",
+  "comprobado": "2026-10-29T21:16:24+01:00",
+  "cambio": "2026-10-29T21:16:24+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T21:16:24+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-1-11-ray-cel",
+       "t": "Rayo Vallecano – RC Celta"
+      },
+      {
+       "id": "2627-1-11-get-sev",
+       "t": "Getafe CF – Sevilla FC"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T21:07:23+01:00",
     "nuevos": 2,
@@ -11673,27 +11704,6 @@
    },
    {
     "hora": "2026-10-29T01:54:27+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T01:07:20+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
