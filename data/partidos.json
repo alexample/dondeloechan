@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T14:07:22+01:00",
+ "actualizado": "2026-10-29T16:07:24+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8845,6 +8845,26 @@
     }
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-5-11-real-madrid-castilla-hercules",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-08T16:00:00+01:00",
+   "local": "Real Madrid Castilla",
+   "localId": "real-madrid-castilla",
+   "visitante": "Hércules",
+   "visitanteId": "hercules",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "RMC",
+   "visitanteAbbr": "HER",
+   "etiqueta": "Grupo 2"
   }
  ],
  "clasificacion": {
@@ -10536,9 +10556,41 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T15:16:33+01:00",
-  "cambio": "2026-10-29T14:07:22+01:00",
+  "comprobado": "2026-10-29T16:07:24+01:00",
+  "cambio": "2026-10-29T16:07:24+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T16:07:24+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Real Madrid Castilla – Hércules"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-5-11-real-madrid-castilla-hercules",
+       "t": "Real Madrid Castilla – Hércules"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-11-real-madrid-castilla-hercules",
+       "t": "Real Madrid Castilla – Hércules (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-29T15:16:33+01:00",
     "nuevos": 0,
@@ -11170,31 +11222,6 @@
        "t": "Real Zaragoza – SD Huesca (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-10-28T20:07:24+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
