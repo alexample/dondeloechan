@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T22:07:22+01:00",
+ "actualizado": "2026-10-29T23:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7091,7 +7091,18 @@
    "visitante": "Unionistas de Salamanca",
    "visitanteAbbr": "UNI",
    "visitanteId": "unionistas-de-salamanca",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "110'",
+     "seg": 6600,
+     "j": "Alejandro Millán Coutiño",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-ub-conquense-cas",
@@ -7193,7 +7204,72 @@
    "localId": "ae-prat",
    "visitante": "Athletic",
    "visitanteId": "ath",
-   "provisional": false
+   "provisional": false,
+   "goles": [
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1705,
+     "j": "Maroan Sannadi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "31'",
+     "seg": 1842,
+     "j": "Robert Navarro",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "33'",
+     "seg": 1965,
+     "j": "Gustavo Reinke Gonçalves",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "36'",
+     "seg": 2151,
+     "j": "Nico Serrano",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "84'",
+     "seg": 4990,
+     "j": "Jesús Vizcay Hurtado",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5205,
+     "j": "Christian Imga",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5272,
+     "j": "Selton Sánchez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-auriense-dep",
@@ -7209,7 +7285,36 @@
    "localId": "auriense",
    "provisional": false,
    "visitante": "Deportivo",
-   "visitanteId": "dep"
+   "visitanteId": "dep",
+   "goles": [
+    {
+     "t": "g",
+     "min": "45'",
+     "seg": 2694,
+     "j": "Jonathan Asp Jensen",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3382,
+     "j": "Jonathan Asp Jensen",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "85'",
+     "seg": 5067,
+     "j": "Luismi Cruz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-ribadesella-cf-rac",
@@ -7225,7 +7330,27 @@
    "localId": "ribadesella-cf",
    "provisional": false,
    "visitante": "Racing de Santander",
-   "visitanteId": "rac"
+   "visitanteId": "rac",
+   "goles": [
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2843,
+     "j": "Asier Villalibre",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3764,
+     "j": "Asier Villalibre",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-sporting-hortaleza-sev",
@@ -7240,7 +7365,36 @@
    "localId": "sporting-hortaleza",
    "provisional": false,
    "visitante": "Sevilla",
-   "visitanteId": "sev"
+   "visitanteId": "sev",
+   "goles": [
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1399,
+     "j": "Robbie Ure",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "40'",
+     "seg": 2381,
+     "j": "Peque",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3335,
+     "j": "Rubén Vargas",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-xerez-cd-cad",
@@ -7255,7 +7409,44 @@
    "localId": "xerez-cd",
    "visitante": "Cádiz",
    "visitanteId": "cad",
-   "goles": []
+   "goles": [
+    {
+     "t": "g",
+     "min": "2'",
+     "seg": 120,
+     "j": "Jaime Lopéz",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "25'",
+     "seg": 1500,
+     "j": "Cristian Gutiérrez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3540,
+     "j": "García Pascual",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4980,
+     "j": "Borja Vázquez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-11-vil-esp",
@@ -11219,9 +11410,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T22:07:22+01:00",
-  "cambio": "2026-10-29T22:07:22+01:00",
+  "comprobado": "2026-10-29T23:07:22+01:00",
+  "cambio": "2026-10-29T23:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T23:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T22:07:22+01:00",
     "nuevos": 0,
@@ -12011,27 +12223,6 @@
    },
    {
     "hora": "2026-10-29T03:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T02:07:20+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
