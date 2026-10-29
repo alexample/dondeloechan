@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T23:07:22+01:00",
+ "actualizado": "2026-10-30T00:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6853,7 +6853,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-cd-covadonga-vll",
@@ -6879,7 +6884,12 @@
      "pen": true,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-cd-guijuelo-spo",
@@ -6937,7 +6947,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-cd-laredo-bur",
@@ -7008,7 +7023,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    4
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-cd-varea-and",
@@ -7102,7 +7122,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-ub-conquense-cas",
@@ -7164,7 +7189,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-gimnastica-torrelavega-ud-ourense",
@@ -7181,7 +7211,67 @@
    "visitanteAbbr": "OUR",
    "visitanteId": "ud-ourense",
    "provisional": true,
-   "goles": []
+   "goles": [
+    {
+     "t": "g",
+     "min": "8'",
+     "seg": 480,
+     "j": "José Luis Friaza",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "47'",
+     "seg": 2820,
+     "j": "Álvaro Fernández",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "88'",
+     "seg": 5280,
+     "j": "David Ferreiro",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Javi Labrada",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "96'",
+     "seg": 5760,
+     "j": "Saza",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "116'",
+     "seg": 6960,
+     "j": "Alberto Gómez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    3,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-ae-prat-ath",
@@ -7269,7 +7359,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    6
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-auriense-dep",
@@ -7350,7 +7445,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-sporting-hortaleza-sev",
@@ -7394,7 +7494,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-xerez-cd-cad",
@@ -7446,7 +7551,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-1-11-vil-esp",
@@ -11410,9 +11520,87 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T23:07:22+01:00",
-  "cambio": "2026-10-29T23:07:22+01:00",
+  "comprobado": "2026-10-30T00:07:21+01:00",
+  "cambio": "2026-10-30T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T00:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 11,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Sporting Hortaleza 0-3 Sevilla",
+     "Resultado: Ribadesella CF 0-2 Racing de Santander",
+     "Resultado: AE Prat 1-6 Athletic",
+     "Resultado: Xerez CD 1-3 Cádiz",
+     "Resultado: Gimnástica Torrelavega 3-1 UD Ourense",
+     "Resultado: CD Covadonga 0-1 Real Valladolid",
+     "Resultado: CD Guijuelo 1-3 Sporting Gijón",
+     "Resultado: CD Laredo 2-4 Burgos",
+     "Resultado: Antequera 2-0 Águilas FC",
+     "Resultado: UB Conquense 0-3 Castellón",
+     "Resultado: Real Ávila 1-0 Unionistas de Salamanca"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-3-primera-ronda-sporting-hortaleza-sev",
+       "t": "Sporting Hortaleza 0-3 Sevilla"
+      },
+      {
+       "id": "2627-3-primera-ronda-ribadesella-cf-rac",
+       "t": "Ribadesella CF 0-2 Racing de Santander"
+      },
+      {
+       "id": "2627-3-primera-ronda-ae-prat-ath",
+       "t": "AE Prat 1-6 Athletic"
+      },
+      {
+       "id": "2627-3-primera-ronda-xerez-cd-cad",
+       "t": "Xerez CD 1-3 Cádiz"
+      },
+      {
+       "id": "2627-3-primera-ronda-gimnastica-torrelavega-ud-ourense",
+       "t": "Gimnástica Torrelavega 3-1 UD Ourense"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-covadonga-vll",
+       "t": "CD Covadonga 0-1 Real Valladolid"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-guijuelo-spo",
+       "t": "CD Guijuelo 1-3 Sporting Gijón"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-laredo-bur",
+       "t": "CD Laredo 2-4 Burgos"
+      },
+      {
+       "id": "2627-3-primera-ronda-antequera-aguilas-fc",
+       "t": "Antequera 2-0 Águilas FC"
+      },
+      {
+       "id": "2627-3-primera-ronda-ub-conquense-cas",
+       "t": "UB Conquense 0-3 Castellón"
+      },
+      {
+       "id": "2627-3-primera-ronda-real-avila-unionistas-de-salamanca",
+       "t": "Real Ávila 1-0 Unionistas de Salamanca"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T23:07:22+01:00",
     "nuevos": 0,
@@ -12202,27 +12390,6 @@
    },
    {
     "hora": "2026-10-29T04:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T03:07:20+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
