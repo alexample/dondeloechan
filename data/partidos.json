@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T20:07:22+01:00",
+ "actualizado": "2026-10-29T21:07:23+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6410,7 +6410,67 @@
    "localId": "cd-numancia",
    "visitante": "Real Oviedo",
    "visitanteId": "ovi",
-   "goles": []
+   "goles": [
+    {
+     "t": "g",
+     "min": "42'",
+     "seg": 2520,
+     "j": "Aitor Aranzabe",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3420,
+     "j": "Iker León Gutiérrez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "74'",
+     "seg": 4440,
+     "j": "Alexandru Mihai Isfan",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4500,
+     "j": "Mikel Goti",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5160,
+     "j": "Jonatan González Crespo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5340,
+     "j": "Mikel Goti",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    3,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-pena-sport-fc-sd-huesca",
@@ -6452,7 +6512,18 @@
    "localId": "atletico-baleares",
    "visitante": "Eldense",
    "visitanteId": "eld",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "58'",
+     "seg": 3480,
+     "j": "Iker Ortega",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-atletico-calatayud-osa",
@@ -6467,7 +6538,68 @@
    "localId": "atletico-calatayud",
    "provisional": false,
    "visitante": "Osasuna",
-   "visitanteId": "osa"
+   "visitanteId": "osa",
+   "marcador": [
+    0,
+    6
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "13'",
+     "seg": 741,
+     "j": "Raúl García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "28'",
+     "seg": 1668,
+     "j": "Enrique Barja",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2314,
+     "j": "Raúl García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3095,
+     "j": "Jonathan Dubasin",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3500,
+     "j": "Raúl García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4879,
+     "j": "Asier Bonel Aicua",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-coruxo-zamora",
@@ -6499,7 +6631,54 @@
    "localId": "lebrijana",
    "provisional": false,
    "visitante": "Getafe",
-   "visitanteId": "get"
+   "visitanteId": "get",
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 561,
+     "j": "Pepe Tejero Gómez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "23'",
+     "seg": 1351,
+     "j": "Sergio David Romero Campo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45'",
+     "seg": 2651,
+     "j": "Abdel Abqar",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45'+2'",
+     "seg": 2700,
+     "j": "Borja Mayoral",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4052,
+     "j": "Orel Mangala",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-ud-poblense-ceu",
@@ -7614,7 +7793,7 @@
    "liga": 4,
    "local": "Atlético de Madrid",
    "localId": "atm",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Bayern Múnich",
    "visitanteAbbr": "BAY",
    "visitanteId": "bayern-munich"
@@ -7629,7 +7808,7 @@
    "liga": 4,
    "local": "FC Barcelona",
    "localId": "bar",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Aston Villa",
    "visitanteAbbr": "AVL",
    "visitanteId": "aston-villa"
@@ -7645,7 +7824,7 @@
    "local": "Bodø/Glimt",
    "localAbbr": "BOD",
    "localId": "bod-glimt",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Lille",
    "visitanteAbbr": "LIL",
    "visitanteId": "lille"
@@ -7661,7 +7840,7 @@
    "local": "Feyenoord",
    "localAbbr": "FEY",
    "localId": "feyenoord",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Inter",
    "visitanteAbbr": "INT",
    "visitanteId": "inter"
@@ -7677,7 +7856,7 @@
    "local": "LASK",
    "localAbbr": "LAS",
    "localId": "lask",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Slovan Bratislava",
    "visitanteAbbr": "SLO",
    "visitanteId": "slovan-bratislava"
@@ -7693,7 +7872,7 @@
    "local": "Manchester United",
    "localAbbr": "MUN",
    "localId": "manchester-united",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Roma",
    "visitanteAbbr": "ROM",
    "visitanteId": "roma"
@@ -7708,7 +7887,7 @@
    "liga": 4,
    "local": "Villarreal",
    "localId": "vil",
-   "provisional": true,
+   "provisional": false,
    "visitante": "PSG",
    "visitanteAbbr": "PSG",
    "visitanteId": "psg"
@@ -9015,6 +9194,40 @@
     "hyper",
     "daznhm",
     "orange2"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-11-real-murcia-algeciras-cf",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-08T20:30:00+01:00",
+   "local": "Real Murcia",
+   "localId": "real-murcia",
+   "visitante": "Algeciras CF",
+   "visitanteId": "algeciras-cf",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "MUR",
+   "visitanteAbbr": "ALG",
+   "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-1-12-atm-bar",
+   "liga": 1,
+   "jornada": "12",
+   "inicio": "2026-11-08T21:00:00+01:00",
+   "local": "Atlético de Madrid",
+   "localId": "atm",
+   "visitante": "FC Barcelona",
+   "visitanteId": "bar",
+   "canales": [
+    "mliga"
    ],
    "provisional": true
   }
@@ -10708,9 +10921,96 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T20:07:22+01:00",
-  "cambio": "2026-10-29T20:07:22+01:00",
+  "comprobado": "2026-10-29T21:07:23+01:00",
+  "cambio": "2026-10-29T21:07:23+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T21:07:23+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 11,
+    "resultados": 2,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Atlético de Madrid – FC Barcelona",
+     "Nuevo partido: Real Murcia – Algeciras CF",
+     "Canal confirmado: Villarreal – PSG",
+     "Canal confirmado: Atlético de Madrid – Bayern Múnich",
+     "Canal confirmado: FC Barcelona – Aston Villa",
+     "Canal confirmado: Manchester United – Roma",
+     "Canal confirmado: Feyenoord – Inter",
+     "Canal confirmado: LASK – Slovan Bratislava",
+     "Canal confirmado: Bodø/Glimt – Lille",
+     "Resultado: Atlético Calatayud 0-6 Osasuna",
+     "Resultado: CD Numancia 3-3 Real Oviedo"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-3-primera-ronda-atletico-calatayud-osa",
+       "t": "Atlético Calatayud 0-6 Osasuna"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-numancia-ovi",
+       "t": "CD Numancia 3-3 Real Oviedo"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-1-12-atm-bar",
+       "t": "Atlético de Madrid – FC Barcelona"
+      },
+      {
+       "id": "2627-5-11-real-murcia-algeciras-cf",
+       "t": "Real Murcia – Algeciras CF"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-vil-psg",
+       "t": "Villarreal – PSG · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-atm-bayern-munich",
+       "t": "Atlético de Madrid – Bayern Múnich · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-bar-aston-villa",
+       "t": "FC Barcelona – Aston Villa · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-manchester-united-roma",
+       "t": "Manchester United – Roma · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-feyenoord-inter",
+       "t": "Feyenoord – Inter · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-lask-slovan-bratislava",
+       "t": "LASK – Slovan Bratislava · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-bod-glimt-lille",
+       "t": "Bodø/Glimt – Lille · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-12-atm-bar",
+       "t": "Atlético de Madrid – FC Barcelona (Primera)"
+      },
+      {
+       "id": "2627-5-11-real-murcia-algeciras-cf",
+       "t": "Real Murcia – Algeciras CF (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-29T20:07:22+01:00",
     "nuevos": 0,
@@ -11394,27 +11694,6 @@
    },
    {
     "hora": "2026-10-29T01:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T00:07:20+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
