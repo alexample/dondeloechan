@@ -10586,9 +10586,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T17:07:25+01:00",
+  "comprobado": "2026-10-29T18:07:21+01:00",
   "cambio": "2026-10-29T17:07:25+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T18:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T17:07:25+01:00",
     "nuevos": 2,
@@ -11190,27 +11211,6 @@
    },
    {
     "hora": "2026-10-28T22:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-28T22:02:48+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
