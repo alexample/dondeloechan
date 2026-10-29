@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T17:07:25+01:00",
+ "actualizado": "2026-10-29T19:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7543,7 +7543,7 @@
    "local": "Galatasaray",
    "localAbbr": "GAL",
    "localId": "galatasaray",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Stuttgart",
    "visitanteAbbr": "STU",
    "visitanteId": "stuttgart"
@@ -7559,7 +7559,7 @@
    "local": "Shakhtar Donetsk",
    "localAbbr": "SHA",
    "localId": "shakhtar-donetsk",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Sporting CP",
    "visitanteAbbr": "SCP",
    "visitanteId": "sporting-cp"
@@ -8889,6 +8889,123 @@
    "localId": "gir",
    "visitante": "UD Almería",
    "visitanteId": "alm",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-11-cultural-leonesa-ponferradina",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-08T18:15:00+01:00",
+   "local": "Cultural Leonesa",
+   "localId": "cultural-leonesa",
+   "visitante": "Ponferradina",
+   "visitanteId": "ponferradina",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "CUL",
+   "visitanteAbbr": "PFR",
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-5-11-merida-bilbao-athletic",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-08T18:15:00+01:00",
+   "local": "Mérida",
+   "localId": "merida",
+   "visitante": "Bilbao Athletic",
+   "visitanteId": "bilbao-athletic",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "MER",
+   "visitanteAbbr": "BIL",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-11-mirandes-cd-coria",
+   "liga": 5,
+   "jornada": "11",
+   "inicio": "2026-11-08T18:15:00+01:00",
+   "local": "Mirandés",
+   "localId": "mirandes",
+   "visitante": "CD Coria",
+   "visitanteId": "cd-coria",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "MIR",
+   "visitanteAbbr": "COR",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-1-12-cel-lev",
+   "liga": 1,
+   "jornada": "12",
+   "inicio": "2026-11-08T18:30:00+01:00",
+   "local": "RC Celta",
+   "localId": "cel",
+   "visitante": "Levante UD",
+   "visitanteId": "lev",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-1-12-vil-get",
+   "liga": 1,
+   "jornada": "12",
+   "inicio": "2026-11-08T18:30:00+01:00",
+   "local": "Villarreal CF",
+   "localId": "vil",
+   "visitante": "Getafe CF",
+   "visitanteId": "get",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-13-lpa-eld",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-11-08T18:30:00+01:00",
+   "local": "UD Las Palmas",
+   "localId": "lpa",
+   "visitante": "CD Eldense",
+   "visitanteId": "eld",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-13-spo-vll",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-11-08T18:30:00+01:00",
+   "local": "Real Sporting",
+   "localId": "spo",
+   "visitante": "Real Valladolid",
+   "visitanteId": "vll",
    "canales": [
     "hyper",
     "daznhm",
@@ -10586,9 +10703,105 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T18:07:21+01:00",
-  "cambio": "2026-10-29T17:07:25+01:00",
+  "comprobado": "2026-10-29T19:07:21+01:00",
+  "cambio": "2026-10-29T19:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T19:07:21+01:00",
+    "nuevos": 7,
+    "horas": 0,
+    "canales": 11,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: RC Celta – Levante UD",
+     "Nuevo partido: Villarreal CF – Getafe CF",
+     "Nuevo partido: UD Las Palmas – CD Eldense",
+     "Nuevo partido: Real Sporting – Real Valladolid",
+     "Nuevo partido: Mirandés – CD Coria",
+     "Nuevo partido: Cultural Leonesa – Ponferradina",
+     "Nuevo partido: Mérida – Bilbao Athletic",
+     "Canal confirmado: Shakhtar Donetsk – Sporting CP",
+     "Canal confirmado: Galatasaray – Stuttgart"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-1-12-cel-lev",
+       "t": "RC Celta – Levante UD"
+      },
+      {
+       "id": "2627-1-12-vil-get",
+       "t": "Villarreal CF – Getafe CF"
+      },
+      {
+       "id": "2627-2-13-lpa-eld",
+       "t": "UD Las Palmas – CD Eldense"
+      },
+      {
+       "id": "2627-2-13-spo-vll",
+       "t": "Real Sporting – Real Valladolid"
+      },
+      {
+       "id": "2627-5-11-mirandes-cd-coria",
+       "t": "Mirandés – CD Coria"
+      },
+      {
+       "id": "2627-5-11-cultural-leonesa-ponferradina",
+       "t": "Cultural Leonesa – Ponferradina"
+      },
+      {
+       "id": "2627-5-11-merida-bilbao-athletic",
+       "t": "Mérida – Bilbao Athletic"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-shakhtar-donetsk-sporting-cp",
+       "t": "Shakhtar Donetsk – Sporting CP · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-galatasaray-stuttgart",
+       "t": "Galatasaray – Stuttgart · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-12-cel-lev",
+       "t": "RC Celta – Levante UD (Primera)"
+      },
+      {
+       "id": "2627-1-12-vil-get",
+       "t": "Villarreal CF – Getafe CF (Primera)"
+      },
+      {
+       "id": "2627-2-13-lpa-eld",
+       "t": "UD Las Palmas – CD Eldense (Segunda)"
+      },
+      {
+       "id": "2627-2-13-spo-vll",
+       "t": "Real Sporting – Real Valladolid (Segunda)"
+      },
+      {
+       "id": "2627-5-11-mirandes-cd-coria",
+       "t": "Mirandés – CD Coria (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-11-cultural-leonesa-ponferradina",
+       "t": "Cultural Leonesa – Ponferradina (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-11-merida-bilbao-athletic",
+       "t": "Mérida – Bilbao Athletic (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-29T18:07:21+01:00",
     "nuevos": 0,
@@ -11190,27 +11403,6 @@
    },
    {
     "hora": "2026-10-28T23:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-28T22:07:20+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
