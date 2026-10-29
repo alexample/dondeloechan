@@ -10536,9 +10536,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T15:07:23+01:00",
+  "comprobado": "2026-10-29T15:16:33+01:00",
   "cambio": "2026-10-29T14:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T15:16:33+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T15:07:23+01:00",
     "nuevos": 0,
@@ -11174,195 +11195,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-28T19:07:22+01:00",
-    "nuevos": 5,
-    "horas": 20,
-    "canales": 13,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: CA Osasuna – Athletic Club",
-     "Nuevo partido: Córdoba CF – AD Ceuta FC",
-     "Nuevo partido: CD Leganés – Albacete BP",
-     "Nuevo partido: Cartagena – UE Sant Andreu",
-     "Nuevo partido: Unionistas de Salamanca – Zamora",
-     "Canal confirmado: Real Valladolid – CD Leganés",
-     "Canal confirmado: Real Jaén – Algeciras CF",
-     "Nueva hora: CD Numancia – Real Oviedo, 29/10 18:00",
-     "Nueva hora: Peña Sport FC – SD Huesca, 29/10 18:00",
-     "Nueva hora: Coruxo – Zamora, 29/10 19:00",
-     "Nueva hora: UD Poblense – AD Ceuta, 29/10 19:00",
-     "Nueva hora: CD Cieza – Granada, 29/10 19:30",
-     "Nueva hora: CD Covadonga – Real Valladolid, 29/10 20:00",
-     "Nueva hora: CP Mijas Las Lagunas – Real Jaén, 29/10 20:00",
-     "Nueva hora: Gimnástica Torrelavega – UD Ourense, 29/10 20:30",
-     "Nueva hora: Xerez CD – Cádiz, 29/10 21:00",
-     "Nueva hora: CD Pamplona – SD Eibar, 03/11 19:00",
-     "Nueva hora: Anaitasuna – Alavés, 03/11 19:00",
-     "Nueva hora: Portugalete – Real Unión, 04/11 19:00",
-     "Nueva hora: SD Amorebieta – UD Logroñés, 04/11 20:00",
-     "Nueva hora: Utebo – CE Sabadell, 04/11 20:30",
-     "Nueva hora: Deportiva Minera – Cartagena, 04/11 20:30",
-     "Nueva hora: Reus FC Reddis – Barakaldo CF, 04/11 20:30",
-     "Nueva hora: Calvo Sotelo Puertollano – Albacete, 04/11 20:45",
-     "Nueva hora: CD Badajoz – Tenerife, 04/11 21:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-1-12-osa-ath",
-       "t": "CA Osasuna – Athletic Club"
-      },
-      {
-       "id": "2627-2-13-cor-ceu",
-       "t": "Córdoba CF – AD Ceuta FC"
-      },
-      {
-       "id": "2627-2-13-leg-alb",
-       "t": "CD Leganés – Albacete BP"
-      },
-      {
-       "id": "2627-2-12-vll-leg",
-       "t": "Real Valladolid – CD Leganés · confirmado"
-      },
-      {
-       "id": "2627-5-10-real-jaen-algeciras-cf",
-       "t": "Real Jaén – Algeciras CF · confirmado"
-      },
-      {
-       "id": "2627-5-11-cartagena-ue-sant-andreu",
-       "t": "Cartagena – UE Sant Andreu"
-      },
-      {
-       "id": "2627-5-11-unionistas-de-salamanca-zamora",
-       "t": "Unionistas de Salamanca – Zamora"
-      },
-      {
-       "id": "2627-3-primera-ronda-ub-conquense-cas",
-       "t": "UB Conquense – Castellón"
-      },
-      {
-       "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
-       "t": "CP Mijas Las Lagunas – Real Jaén"
-      }
-     ],
-     "horas": [
-      {
-       "id": "2627-3-primera-ronda-cd-numancia-ovi",
-       "t": "CD Numancia – Real Oviedo: 29/10 a las 18:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-pena-sport-fc-sd-huesca",
-       "t": "Peña Sport FC – SD Huesca: 29/10 a las 18:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-coruxo-zamora",
-       "t": "Coruxo – Zamora: 29/10 a las 19:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-ud-poblense-ceu",
-       "t": "UD Poblense – AD Ceuta: 29/10 a las 19:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-cieza-gra",
-       "t": "CD Cieza – Granada: 29/10 a las 19:30"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-covadonga-vll",
-       "t": "CD Covadonga – Real Valladolid: 29/10 a las 20:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
-       "t": "CP Mijas Las Lagunas – Real Jaén: 29/10 a las 20:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-gimnastica-torrelavega-ud-ourense",
-       "t": "Gimnástica Torrelavega – UD Ourense: 29/10 a las 20:30"
-      },
-      {
-       "id": "2627-3-primera-ronda-xerez-cd-cad",
-       "t": "Xerez CD – Cádiz: 29/10 a las 21:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-pamplona-eib",
-       "t": "CD Pamplona – SD Eibar: 03/11 a las 19:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-anaitasuna-ala",
-       "t": "Anaitasuna – Alavés: 03/11 a las 19:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-portugalete-real-union",
-       "t": "Portugalete – Real Unión: 04/11 a las 19:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-sd-amorebieta-ud-logrones",
-       "t": "SD Amorebieta – UD Logroñés: 04/11 a las 20:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-utebo-sab",
-       "t": "Utebo – CE Sabadell: 04/11 a las 20:30"
-      },
-      {
-       "id": "2627-3-primera-ronda-deportiva-minera-cartagena",
-       "t": "Deportiva Minera – Cartagena: 04/11 a las 20:30"
-      },
-      {
-       "id": "2627-3-primera-ronda-reus-fc-reddis-barakaldo-cf",
-       "t": "Reus FC Reddis – Barakaldo CF: 04/11 a las 20:30"
-      },
-      {
-       "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
-       "t": "Calvo Sotelo Puertollano – Albacete: 04/11 a las 20:45"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-badajoz-ten",
-       "t": "CD Badajoz – Tenerife: 04/11 a las 21:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-tarancon-lev",
-       "t": "CD Tarancón – Levante: 05/11 a las 19:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-alcoyano-mll",
-       "t": "Alcoyano – RCD Mallorca: 05/11 a las 21:00"
-      }
-     ],
-     "nuevos": [
-      {
-       "id": "2627-1-12-osa-ath",
-       "t": "CA Osasuna – Athletic Club (Primera)"
-      },
-      {
-       "id": "2627-2-13-cor-ceu",
-       "t": "Córdoba CF – AD Ceuta FC (Segunda)"
-      },
-      {
-       "id": "2627-2-13-leg-alb",
-       "t": "CD Leganés – Albacete BP (Segunda)"
-      },
-      {
-       "id": "2627-5-11-cartagena-ue-sant-andreu",
-       "t": "Cartagena – UE Sant Andreu (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-unionistas-de-salamanca-zamora",
-       "t": "Unionistas de Salamanca – Zamora (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
