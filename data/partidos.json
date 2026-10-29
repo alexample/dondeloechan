@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-28T21:07:24+01:00",
+ "actualizado": "2026-10-29T08:03:10+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7535,7 +7535,7 @@
   {
    "id": "2627-4-fase-liga-j4-galatasaray-stuttgart",
    "canales": [
-    "mlcpend"
+    "mlc3"
    ],
    "inicio": "2026-11-03T18:45:00+01:00",
    "jornada": "Fase liga · J4",
@@ -7551,7 +7551,7 @@
   {
    "id": "2627-4-fase-liga-j4-shakhtar-donetsk-sporting-cp",
    "canales": [
-    "mlcpend"
+    "mlc2"
    ],
    "inicio": "2026-11-03T18:45:00+01:00",
    "jornada": "Fase liga · J4",
@@ -7617,7 +7617,7 @@
   {
    "id": "2627-4-fase-liga-j4-bar-aston-villa",
    "canales": [
-    "mlcpend"
+    "mlc2"
    ],
    "inicio": "2026-11-03T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -7632,7 +7632,7 @@
   {
    "id": "2627-4-fase-liga-j4-bod-glimt-lille",
    "canales": [
-    "mlcpend"
+    "mlc6"
    ],
    "inicio": "2026-11-03T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -7648,7 +7648,7 @@
   {
    "id": "2627-4-fase-liga-j4-feyenoord-inter",
    "canales": [
-    "mlcpend"
+    "mlc5"
    ],
    "inicio": "2026-11-03T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -7664,7 +7664,7 @@
   {
    "id": "2627-4-fase-liga-j4-lask-slovan-bratislava",
    "canales": [
-    "mlcpend"
+    "mlc7"
    ],
    "inicio": "2026-11-03T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -7680,7 +7680,7 @@
   {
    "id": "2627-4-fase-liga-j4-manchester-united-roma",
    "canales": [
-    "mlcpend"
+    "mlc8"
    ],
    "inicio": "2026-11-03T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -7696,7 +7696,7 @@
   {
    "id": "2627-4-fase-liga-j4-vil-psg",
    "canales": [
-    "mlcpend"
+    "mlc3"
    ],
    "inicio": "2026-11-03T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -10390,9 +10390,62 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T07:07:20+01:00",
-  "cambio": "2026-10-28T21:07:24+01:00",
+  "comprobado": "2026-10-29T08:03:10+01:00",
+  "cambio": "2026-10-29T08:03:10+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T08:03:10+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 10,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-shakhtar-donetsk-sporting-cp",
+       "t": "Shakhtar Donetsk – Sporting CP"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-galatasaray-stuttgart",
+       "t": "Galatasaray – Stuttgart"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-vil-psg",
+       "t": "Villarreal – PSG"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-bar-aston-villa",
+       "t": "FC Barcelona – Aston Villa"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-manchester-united-roma",
+       "t": "Manchester United – Roma"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-feyenoord-inter",
+       "t": "Feyenoord – Inter"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-lask-slovan-bratislava",
+       "t": "LASK – Slovan Bratislava"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-bod-glimt-lille",
+       "t": "Bodø/Glimt – Lille"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T07:07:20+01:00",
     "nuevos": 0,
@@ -11193,31 +11246,6 @@
    },
    {
     "hora": "2026-10-28T12:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-28T11:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 4,
