@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T21:16:24+01:00",
+ "actualizado": "2026-10-29T22:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6523,7 +6523,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-atletico-calatayud-osa",
@@ -6616,7 +6621,12 @@
    "visitanteAbbr": "ZAM",
    "visitanteId": "zamora",
    "provisional": true,
-   "goles": []
+   "goles": [],
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-lebrijana-get",
@@ -6678,7 +6688,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-ud-poblense-ceu",
@@ -6694,7 +6709,12 @@
    "visitante": "AD Ceuta",
    "visitanteId": "ceu",
    "provisional": true,
-   "goles": []
+   "goles": [],
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-ud-sanse-cd-coria",
@@ -6710,7 +6730,45 @@
    "visitante": "CD Coria",
    "visitanteAbbr": "COR",
    "visitanteId": "cd-coria",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "34'",
+     "seg": 2040,
+     "j": "Toper",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3780,
+     "j": "De La Llave De La Llave",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "93'",
+     "seg": 5580,
+     "j": "Adrián López",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "119'",
+     "seg": 7140,
+     "j": "Rafael Núñez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-cieza-gra",
@@ -6726,7 +6784,40 @@
    "visitante": "Granada",
    "visitanteId": "gra",
    "provisional": true,
-   "goles": []
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 600,
+     "j": "Diego Hormigo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3660,
+     "j": "Benedikt Gimber",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "84'",
+     "seg": 5040,
+     "j": "Jorge Pascual Medina",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-antequera-aguilas-fc",
@@ -6742,7 +6833,27 @@
    "visitante": "Águilas FC",
    "visitanteAbbr": "ÁGU",
    "visitanteId": "aguilas-fc",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "21'",
+     "seg": 1260,
+     "j": "Israel Domínguez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4080,
+     "j": "Alberto Quintana",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-covadonga-vll",
@@ -6758,7 +6869,17 @@
    "visitante": "Real Valladolid",
    "visitanteId": "vll",
    "provisional": true,
-   "goles": []
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 661,
+     "j": "Robin Van Duiven",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-guijuelo-spo",
@@ -6778,7 +6899,45 @@
    "localAbbr": "GUI",
    "localId": "cd-guijuelo",
    "visitante": "Sporting Gijón",
-   "visitanteId": "spo"
+   "visitanteId": "spo",
+   "goles": [
+    {
+     "t": "g",
+     "min": "36'",
+     "seg": 2160,
+     "j": "Pablo Vázquez",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3660,
+     "j": "Juan Otero",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3720,
+     "j": "Enol Prendes",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Miguel Conde",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-laredo-bur",
@@ -6793,7 +6952,63 @@
    "localId": "cd-laredo",
    "visitante": "Burgos",
    "visitanteId": "bur",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "20'",
+     "seg": 1200,
+     "j": "José Gragera",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2880,
+     "j": "Andrés Carral",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 4020,
+     "j": "Alberto Dadie",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "72'",
+     "seg": 4320,
+     "j": "Óscar Conde",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5160,
+     "j": "Iván Martínez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Alberto Dadie",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-varea-and",
@@ -6808,7 +7023,41 @@
    "localId": "cd-varea",
    "visitante": "FC Andorra",
    "visitanteId": "and",
-   "provisional": true
+   "provisional": true,
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1920,
+     "j": "Diego Diaz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "49'",
+     "seg": 2940,
+     "j": "Julian Rijkhoff",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "71'",
+     "seg": 4260,
+     "j": "Nacho Quintana",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
@@ -6857,7 +7106,54 @@
    "localId": "ub-conquense",
    "visitante": "Castellón",
    "visitanteId": "cas",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "33'",
+     "seg": 1980,
+     "j": "Varo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "35'",
+     "seg": 2100,
+     "j": "Antonio Gala",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "51'",
+     "seg": 3060,
+     "j": "Martín Conde",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3720,
+     "j": "Varo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "78'",
+     "seg": 4680,
+     "j": "Moussa Mohamed Koita",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-gimnastica-torrelavega-ud-ourense",
@@ -10923,9 +11219,62 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T21:16:24+01:00",
-  "cambio": "2026-10-29T21:16:24+01:00",
+  "comprobado": "2026-10-29T22:07:22+01:00",
+  "cambio": "2026-10-29T22:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T22:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 6,
+    "tablas": [],
+    "detalle": [
+     "Resultado: CD Varea 0-3 FC Andorra",
+     "Resultado: CD Cieza 0-3 Granada",
+     "Resultado: UD Poblense 1-2 AD Ceuta",
+     "Resultado: Atlético Baleares 0-1 Eldense",
+     "Resultado: Coruxo 0-2 Zamora",
+     "Resultado: Lebrijana 2-3 Getafe"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-3-primera-ronda-cd-varea-and",
+       "t": "CD Varea 0-3 FC Andorra"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-cieza-gra",
+       "t": "CD Cieza 0-3 Granada"
+      },
+      {
+       "id": "2627-3-primera-ronda-ud-poblense-ceu",
+       "t": "UD Poblense 1-2 AD Ceuta"
+      },
+      {
+       "id": "2627-3-primera-ronda-atletico-baleares-eld",
+       "t": "Atlético Baleares 0-1 Eldense"
+      },
+      {
+       "id": "2627-3-primera-ronda-coruxo-zamora",
+       "t": "Coruxo 0-2 Zamora"
+      },
+      {
+       "id": "2627-3-primera-ronda-lebrijana-get",
+       "t": "Lebrijana 2-3 Getafe"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T21:16:24+01:00",
     "nuevos": 0,
@@ -11683,27 +12032,6 @@
    },
    {
     "hora": "2026-10-29T02:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T01:54:27+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
