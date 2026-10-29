@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T16:07:24+01:00",
+ "actualizado": "2026-10-29T17:07:25+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8865,6 +8865,36 @@
    "localAbbr": "RMC",
    "visitanteAbbr": "HER",
    "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-1-12-rso-ray",
+   "liga": 1,
+   "jornada": "12",
+   "inicio": "2026-11-08T16:15:00+01:00",
+   "local": "Real Sociedad",
+   "localId": "rso",
+   "visitante": "Rayo Vallecano",
+   "visitanteId": "ray",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-13-gir-alm",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-11-08T16:15:00+01:00",
+   "local": "Girona FC",
+   "localId": "gir",
+   "visitante": "UD Almería",
+   "visitanteId": "alm",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
   }
  ],
  "clasificacion": {
@@ -10556,9 +10586,50 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T16:07:24+01:00",
-  "cambio": "2026-10-29T16:07:24+01:00",
+  "comprobado": "2026-10-29T17:07:25+01:00",
+  "cambio": "2026-10-29T17:07:25+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T17:07:25+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Real Sociedad – Rayo Vallecano",
+     "Nuevo partido: Girona FC – UD Almería"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-1-12-rso-ray",
+       "t": "Real Sociedad – Rayo Vallecano"
+      },
+      {
+       "id": "2627-2-13-gir-alm",
+       "t": "Girona FC – UD Almería"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-12-rso-ray",
+       "t": "Real Sociedad – Rayo Vallecano (Primera)"
+      },
+      {
+       "id": "2627-2-13-gir-alm",
+       "t": "Girona FC – UD Almería (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-29T16:07:24+01:00",
     "nuevos": 1,
@@ -11157,71 +11228,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-28T21:07:24+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 9,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Valencia CF – Real Madrid",
-     "Nuevo partido: Granada CF – CD Tenerife",
-     "Nuevo partido: Real Zaragoza – SD Huesca",
-     "Canal confirmado: RC Deportivo – CA Osasuna",
-     "Canal confirmado: RCD Mallorca – Cádiz CF",
-     "Canal confirmado: SD Huesca – Gimnàstic de Tarragona"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-1-12-val-rma",
-       "t": "Valencia CF – Real Madrid"
-      },
-      {
-       "id": "2627-2-13-gra-ten",
-       "t": "Granada CF – CD Tenerife"
-      },
-      {
-       "id": "2627-2-12-mll-cad",
-       "t": "RCD Mallorca – Cádiz CF · confirmado"
-      },
-      {
-       "id": "2627-5-10-sd-huesca-gimnastic-de-tarragona",
-       "t": "SD Huesca – Gimnàstic de Tarragona · confirmado"
-      },
-      {
-       "id": "2627-5-11-real-zaragoza-sd-huesca",
-       "t": "Real Zaragoza – SD Huesca"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-12-val-rma",
-       "t": "Valencia CF – Real Madrid (Primera)"
-      },
-      {
-       "id": "2627-2-13-gra-ten",
-       "t": "Granada CF – CD Tenerife (Segunda)"
-      },
-      {
-       "id": "2627-5-11-real-zaragoza-sd-huesca",
-       "t": "Real Zaragoza – SD Huesca (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
