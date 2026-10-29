@@ -10486,9 +10486,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T12:07:22+01:00",
+  "comprobado": "2026-10-29T13:07:22+01:00",
   "cambio": "2026-10-29T12:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T13:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T12:07:22+01:00",
     "nuevos": 5,
@@ -11280,92 +11301,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-28T16:59:43+01:00",
-    "nuevos": 6,
-    "horas": 0,
-    "canales": 11,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: RCD Espanyol – RC Deportivo",
-     "Nuevo partido: Cádiz CF – Real Oviedo",
-     "Nuevo partido: Alcorcón – Real Jaén",
-     "Nuevo partido: Barakaldo CF – Real Unión",
-     "Nuevo partido: Pontevedra – UD Ourense",
-     "Nuevo partido: Antequera – Rayo Majadahonda",
-     "Canal confirmado: Real Oviedo – UD Las Palmas"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-1-12-esp-dep",
-       "t": "RCD Espanyol – RC Deportivo"
-      },
-      {
-       "id": "2627-2-13-cad-ovi",
-       "t": "Cádiz CF – Real Oviedo"
-      },
-      {
-       "id": "2627-2-12-ovi-lpa",
-       "t": "Real Oviedo – UD Las Palmas · confirmado"
-      },
-      {
-       "id": "2627-5-11-alcorcon-real-jaen",
-       "t": "Alcorcón – Real Jaén"
-      },
-      {
-       "id": "2627-5-11-barakaldo-cf-real-union",
-       "t": "Barakaldo CF – Real Unión"
-      },
-      {
-       "id": "2627-5-11-pontevedra-ud-ourense",
-       "t": "Pontevedra – UD Ourense"
-      },
-      {
-       "id": "2627-5-11-antequera-rayo-majadahonda",
-       "t": "Antequera – Rayo Majadahonda"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-12-esp-dep",
-       "t": "RCD Espanyol – RC Deportivo (Primera)"
-      },
-      {
-       "id": "2627-2-13-cad-ovi",
-       "t": "Cádiz CF – Real Oviedo (Segunda)"
-      },
-      {
-       "id": "2627-5-11-alcorcon-real-jaen",
-       "t": "Alcorcón – Real Jaén (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-barakaldo-cf-real-union",
-       "t": "Barakaldo CF – Real Unión (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-pontevedra-ud-ourense",
-       "t": "Pontevedra – UD Ourense (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-antequera-rayo-majadahonda",
-       "t": "Antequera – Rayo Majadahonda (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
