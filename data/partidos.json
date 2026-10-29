@@ -10536,9 +10536,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T14:07:22+01:00",
+  "comprobado": "2026-10-29T15:07:23+01:00",
   "cambio": "2026-10-29T14:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T15:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T14:07:22+01:00",
     "nuevos": 2,
@@ -11342,31 +11363,6 @@
        "t": "Unionistas de Salamanca – Zamora (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-10-28T18:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
