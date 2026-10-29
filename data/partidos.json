@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T12:07:22+01:00",
+ "actualizado": "2026-10-29T14:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8795,6 +8795,56 @@
    "visitanteAbbr": "TOR",
    "etiqueta": "Grupo 2",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-1-12-elc-bet",
+   "liga": 1,
+   "jornada": "12",
+   "inicio": "2026-11-08T14:00:00+01:00",
+   "local": "Elche CF",
+   "localId": "elc",
+   "visitante": "Real Betis",
+   "visitanteId": "bet",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-13-and-mll",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-11-08T14:00:00+01:00",
+   "local": "FC Andorra",
+   "localId": "and",
+   "visitante": "RCD Mallorca",
+   "visitanteId": "mll",
+   "canales": [
+    "hyper",
+    "daznhm",
+    {
+     "name": "IB3",
+     "short": "IB3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de las Illes Balears y en ib3.org."
+    },
+    {
+     "name": "Replay YouTube",
+     "short": "REP",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de ver en directo y en su web."
+    },
+    {
+     "name": "Replay",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
+    }
+   ],
+   "provisional": true
   }
  ],
  "clasificacion": {
@@ -10486,9 +10536,50 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T13:07:22+01:00",
-  "cambio": "2026-10-29T12:07:22+01:00",
+  "comprobado": "2026-10-29T14:07:22+01:00",
+  "cambio": "2026-10-29T14:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T14:07:22+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 5,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Elche CF – Real Betis",
+     "Nuevo partido: FC Andorra – RCD Mallorca"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-1-12-elc-bet",
+       "t": "Elche CF – Real Betis"
+      },
+      {
+       "id": "2627-2-13-and-mll",
+       "t": "FC Andorra – RCD Mallorca"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-12-elc-bet",
+       "t": "Elche CF – Real Betis (Primera)"
+      },
+      {
+       "id": "2627-2-13-and-mll",
+       "t": "FC Andorra – RCD Mallorca (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-29T13:07:22+01:00",
     "nuevos": 0,
@@ -11255,31 +11346,6 @@
    },
    {
     "hora": "2026-10-28T18:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-28T17:07:25+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 4,
