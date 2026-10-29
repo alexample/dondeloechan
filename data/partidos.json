@@ -10390,9 +10390,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-29T08:07:20+01:00",
+  "comprobado": "2026-10-29T09:07:21+01:00",
   "cambio": "2026-10-29T08:03:10+01:00",
   "historial": [
+   {
+    "hora": "2026-10-29T09:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-29T08:07:20+01:00",
     "nuevos": 0,
@@ -11225,42 +11246,6 @@
       {
        "id": "2627-2-13-bur-clb",
        "t": "Burgos CF – Celta Fortuna (Segunda)"
-      }
-     ]
-    }
-   },
-   {
-    "hora": "2026-10-28T13:07:21+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 5,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Racing Ferrol – UD Logroñés"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo – CA Osasuna"
-      },
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-5-11-racing-ferrol-ud-logrones",
-       "t": "Racing Ferrol – UD Logroñés"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-11-racing-ferrol-ud-logrones",
-       "t": "Racing Ferrol – UD Logroñés (1ª RFEF)"
       }
      ]
     }
