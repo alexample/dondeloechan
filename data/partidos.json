@@ -11520,9 +11520,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T15:06:49+01:00",
+  "comprobado": "2026-10-30T15:07:24+01:00",
   "cambio": "2026-10-30T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T15:07:24+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-30T15:06:49+01:00",
     "nuevos": 0,
@@ -12174,102 +12195,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T19:07:21+01:00",
-    "nuevos": 7,
-    "horas": 0,
-    "canales": 11,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: RC Celta – Levante UD",
-     "Nuevo partido: Villarreal CF – Getafe CF",
-     "Nuevo partido: UD Las Palmas – CD Eldense",
-     "Nuevo partido: Real Sporting – Real Valladolid",
-     "Nuevo partido: Mirandés – CD Coria",
-     "Nuevo partido: Cultural Leonesa – Ponferradina",
-     "Nuevo partido: Mérida – Bilbao Athletic",
-     "Canal confirmado: Shakhtar Donetsk – Sporting CP",
-     "Canal confirmado: Galatasaray – Stuttgart"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-1-12-cel-lev",
-       "t": "RC Celta – Levante UD"
-      },
-      {
-       "id": "2627-1-12-vil-get",
-       "t": "Villarreal CF – Getafe CF"
-      },
-      {
-       "id": "2627-2-13-lpa-eld",
-       "t": "UD Las Palmas – CD Eldense"
-      },
-      {
-       "id": "2627-2-13-spo-vll",
-       "t": "Real Sporting – Real Valladolid"
-      },
-      {
-       "id": "2627-5-11-mirandes-cd-coria",
-       "t": "Mirandés – CD Coria"
-      },
-      {
-       "id": "2627-5-11-cultural-leonesa-ponferradina",
-       "t": "Cultural Leonesa – Ponferradina"
-      },
-      {
-       "id": "2627-5-11-merida-bilbao-athletic",
-       "t": "Mérida – Bilbao Athletic"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-shakhtar-donetsk-sporting-cp",
-       "t": "Shakhtar Donetsk – Sporting CP · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-galatasaray-stuttgart",
-       "t": "Galatasaray – Stuttgart · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-12-cel-lev",
-       "t": "RC Celta – Levante UD (Primera)"
-      },
-      {
-       "id": "2627-1-12-vil-get",
-       "t": "Villarreal CF – Getafe CF (Primera)"
-      },
-      {
-       "id": "2627-2-13-lpa-eld",
-       "t": "UD Las Palmas – CD Eldense (Segunda)"
-      },
-      {
-       "id": "2627-2-13-spo-vll",
-       "t": "Real Sporting – Real Valladolid (Segunda)"
-      },
-      {
-       "id": "2627-5-11-mirandes-cd-coria",
-       "t": "Mirandés – CD Coria (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-cultural-leonesa-ponferradina",
-       "t": "Cultural Leonesa – Ponferradina (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-merida-bilbao-athletic",
-       "t": "Mérida – Bilbao Athletic (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
