@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-30T22:07:25+01:00",
+ "actualizado": "2026-10-30T23:07:23+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7541,7 +7541,23 @@
    "nota": "Partido elegido para el canal Movistar Plus+ (dial 7), incluido en todos los paquetes de Movistar Plus+.",
    "provisional": false,
    "visitante": "RCD Espanyol",
-   "visitanteId": "esp"
+   "visitanteId": "esp",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3587,
+     "j": "Leandro Cabrera",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-atletico-madrileno-alcorcon",
@@ -7561,7 +7577,32 @@
    "provisional": false,
    "visitante": "Alcorcón",
    "visitanteAbbr": "ALC",
-   "visitanteId": "alcorcon"
+   "visitanteId": "alcorcon",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 3000,
+     "j": "Marc Domenech",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+6'",
+     "seg": 5436,
+     "j": "Javi Lancho",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-ud-ibiza-ce-europa",
@@ -7587,7 +7628,41 @@
    "provisional": false,
    "visitante": "CE Europa",
    "visitanteAbbr": "EUR",
-   "visitanteId": "ce-europa"
+   "visitanteId": "ce-europa",
+   "marcador": [
+    3,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "9'",
+     "seg": 540,
+     "j": "Josep Calavera",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "51'",
+     "seg": 3060,
+     "j": "Georges Nsukula",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "78'",
+     "seg": 4680,
+     "j": "Manu Justo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-11-lev-atm",
@@ -11535,9 +11610,47 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T22:07:25+01:00",
-  "cambio": "2026-10-30T22:07:25+01:00",
+  "comprobado": "2026-10-30T23:07:23+01:00",
+  "cambio": "2026-10-30T23:07:23+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T23:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 3,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Villarreal CF 0-1 RCD Espanyol",
+     "Resultado: Atlético Madrileño 1-1 Alcorcón",
+     "Resultado: UD Ibiza 3-0 CE Europa"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-11-vil-esp",
+       "t": "Villarreal CF 0-1 RCD Espanyol"
+      },
+      {
+       "id": "2627-5-10-atletico-madrileno-alcorcon",
+       "t": "Atlético Madrileño 1-1 Alcorcón"
+      },
+      {
+       "id": "2627-5-10-ud-ibiza-ce-europa",
+       "t": "UD Ibiza 3-0 CE Europa"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-30T22:07:25+01:00",
     "nuevos": 0,
@@ -12030,27 +12143,6 @@
    },
    {
     "hora": "2026-10-30T03:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-30T02:07:20+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
