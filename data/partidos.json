@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-30T23:07:23+01:00",
+ "actualizado": "2026-10-31T00:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -10981,7 +10981,7 @@
      ]
     },
     "Grupo 2": {
-     "tras": "Jornada 9",
+     "tras": "Jornada 10",
      "filas": [
       [
        "villarreal-b",
@@ -11004,6 +11004,17 @@
        10,
        20,
        "Real Zaragoza"
+      ],
+      [
+       "ud-ibiza",
+       10,
+       5,
+       2,
+       3,
+       17,
+       13,
+       17,
+       "UD Ibiza"
       ],
       [
        "real-murcia",
@@ -11040,25 +11051,14 @@
       ],
       [
        "alcorcon",
-       9,
+       10,
        3,
-       5,
+       6,
        1,
-       17,
-       9,
-       14,
+       18,
+       10,
+       15,
        "Alcorcón"
-      ],
-      [
-       "ud-ibiza",
-       9,
-       4,
-       2,
-       3,
-       14,
-       13,
-       14,
-       "UD Ibiza"
       ],
       [
        "gimnastic-de-tarragona",
@@ -11128,13 +11128,13 @@
       ],
       [
        "atletico-madrileno",
-       9,
-       2,
-       4,
-       3,
-       17,
-       15,
        10,
+       2,
+       5,
+       3,
+       18,
+       16,
+       11,
        "Atlético Madrileño"
       ],
       [
@@ -11155,7 +11155,7 @@
        1,
        6,
        7,
-       10,
+       11,
        7,
        "Rayo Majadahonda"
       ],
@@ -11172,12 +11172,12 @@
       ],
       [
        "ce-europa",
-       9,
+       10,
        2,
        1,
-       6,
-       6,
-       15,
+       7,
+       7,
+       18,
        7,
        "CE Europa"
       ],
@@ -11610,9 +11610,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T23:07:23+01:00",
-  "cambio": "2026-10-30T23:07:23+01:00",
+  "comprobado": "2026-10-31T00:07:21+01:00",
+  "cambio": "2026-10-31T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-31T00:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-30T23:07:23+01:00",
     "nuevos": 0,
@@ -12122,27 +12145,6 @@
    },
    {
     "hora": "2026-10-30T04:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-30T03:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
