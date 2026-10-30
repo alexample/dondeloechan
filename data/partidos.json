@@ -11520,9 +11520,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T15:07:24+01:00",
+  "comprobado": "2026-10-30T16:07:22+01:00",
   "cambio": "2026-10-30T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T16:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-30T15:07:24+01:00",
     "nuevos": 0,
@@ -12167,34 +12188,6 @@
        "t": "Real Murcia – Algeciras CF (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-10-29T20:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 1,
-    "tablas": [],
-    "detalle": [
-     "Resultado: Peña Sport FC 1-5 SD Huesca"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-3-primera-ronda-pena-sport-fc-sd-huesca",
-       "t": "Peña Sport FC 1-5 SD Huesca"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
