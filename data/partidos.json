@@ -11520,9 +11520,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T03:07:21+01:00",
+  "comprobado": "2026-10-30T04:07:20+01:00",
   "cambio": "2026-10-30T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T04:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-30T03:07:21+01:00",
     "nuevos": 0,
@@ -12350,59 +12371,6 @@
       {
        "id": "2627-1-12-sev-ala",
        "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T08:03:10+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 10,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-shakhtar-donetsk-sporting-cp",
-       "t": "Shakhtar Donetsk – Sporting CP"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-galatasaray-stuttgart",
-       "t": "Galatasaray – Stuttgart"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-vil-psg",
-       "t": "Villarreal – PSG"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-bar-aston-villa",
-       "t": "FC Barcelona – Aston Villa"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-manchester-united-roma",
-       "t": "Manchester United – Roma"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-feyenoord-inter",
-       "t": "Feyenoord – Inter"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-lask-slovan-bratislava",
-       "t": "LASK – Slovan Bratislava"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-bod-glimt-lille",
-       "t": "Bodø/Glimt – Lille"
       }
      ],
      "horas": [],
