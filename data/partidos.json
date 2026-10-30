@@ -11520,9 +11520,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T16:07:22+01:00",
+  "comprobado": "2026-10-30T17:07:28+01:00",
   "cambio": "2026-10-30T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T17:07:28+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-30T16:07:22+01:00",
     "nuevos": 0,
@@ -12101,93 +12122,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T21:07:23+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 11,
-    "resultados": 2,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Atlético de Madrid – FC Barcelona",
-     "Nuevo partido: Real Murcia – Algeciras CF",
-     "Canal confirmado: Villarreal – PSG",
-     "Canal confirmado: Atlético de Madrid – Bayern Múnich",
-     "Canal confirmado: FC Barcelona – Aston Villa",
-     "Canal confirmado: Manchester United – Roma",
-     "Canal confirmado: Feyenoord – Inter",
-     "Canal confirmado: LASK – Slovan Bratislava",
-     "Canal confirmado: Bodø/Glimt – Lille",
-     "Resultado: Atlético Calatayud 0-6 Osasuna",
-     "Resultado: CD Numancia 3-3 Real Oviedo"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-3-primera-ronda-atletico-calatayud-osa",
-       "t": "Atlético Calatayud 0-6 Osasuna"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-numancia-ovi",
-       "t": "CD Numancia 3-3 Real Oviedo"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-1-12-atm-bar",
-       "t": "Atlético de Madrid – FC Barcelona"
-      },
-      {
-       "id": "2627-5-11-real-murcia-algeciras-cf",
-       "t": "Real Murcia – Algeciras CF"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-vil-psg",
-       "t": "Villarreal – PSG · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-atm-bayern-munich",
-       "t": "Atlético de Madrid – Bayern Múnich · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-bar-aston-villa",
-       "t": "FC Barcelona – Aston Villa · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-manchester-united-roma",
-       "t": "Manchester United – Roma · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-feyenoord-inter",
-       "t": "Feyenoord – Inter · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-lask-slovan-bratislava",
-       "t": "LASK – Slovan Bratislava · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-bod-glimt-lille",
-       "t": "Bodø/Glimt – Lille · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-12-atm-bar",
-       "t": "Atlético de Madrid – FC Barcelona (Primera)"
-      },
-      {
-       "id": "2627-5-11-real-murcia-algeciras-cf",
-       "t": "Real Murcia – Algeciras CF (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
