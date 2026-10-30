@@ -11520,9 +11520,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T18:07:23+01:00",
+  "comprobado": "2026-10-30T19:07:22+01:00",
   "cambio": "2026-10-30T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T19:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-30T18:07:23+01:00",
     "nuevos": 0,
@@ -12053,59 +12074,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T22:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 6,
-    "tablas": [],
-    "detalle": [
-     "Resultado: CD Varea 0-3 FC Andorra",
-     "Resultado: CD Cieza 0-3 Granada",
-     "Resultado: UD Poblense 1-2 AD Ceuta",
-     "Resultado: Atlético Baleares 0-1 Eldense",
-     "Resultado: Coruxo 0-2 Zamora",
-     "Resultado: Lebrijana 2-3 Getafe"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-3-primera-ronda-cd-varea-and",
-       "t": "CD Varea 0-3 FC Andorra"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-cieza-gra",
-       "t": "CD Cieza 0-3 Granada"
-      },
-      {
-       "id": "2627-3-primera-ronda-ud-poblense-ceu",
-       "t": "UD Poblense 1-2 AD Ceuta"
-      },
-      {
-       "id": "2627-3-primera-ronda-atletico-baleares-eld",
-       "t": "Atlético Baleares 0-1 Eldense"
-      },
-      {
-       "id": "2627-3-primera-ronda-coruxo-zamora",
-       "t": "Coruxo 0-2 Zamora"
-      },
-      {
-       "id": "2627-3-primera-ronda-lebrijana-get",
-       "t": "Lebrijana 2-3 Getafe"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-12-sev-ala",
