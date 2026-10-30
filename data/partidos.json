@@ -11520,9 +11520,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T07:07:21+01:00",
+  "comprobado": "2026-10-30T08:04:59+01:00",
   "cambio": "2026-10-30T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T08:04:59+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-30T07:07:21+01:00",
     "nuevos": 0,
@@ -12347,34 +12368,6 @@
        "t": "Águilas FC – Gimnàstic de Tarragona (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-10-29T11:07:21+01:00",
-    "nuevos": 0,
-    "horas": 1,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nueva hora: Alcoyano – RCD Mallorca, 05/11 20:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [
-      {
-       "id": "2627-3-primera-ronda-alcoyano-mll",
-       "t": "Alcoyano – RCD Mallorca: 05/11 a las 20:00"
-      }
-     ],
-     "nuevos": []
     }
    }
   ]
