@@ -11520,9 +11520,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T08:04:59+01:00",
+  "comprobado": "2026-10-30T08:07:20+01:00",
   "cambio": "2026-10-30T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T08:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-30T08:04:59+01:00",
     "nuevos": 0,
@@ -12300,74 +12321,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-29T12:07:22+01:00",
-    "nuevos": 5,
-    "horas": 0,
-    "canales": 7,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: CD Teruel – UD Ibiza",
-     "Nuevo partido: CE Europa – Atlético Madrileño",
-     "Nuevo partido: Arenas Club – Deportivo Fabril",
-     "Nuevo partido: Villarreal B – Juventud Torremolinos",
-     "Nuevo partido: Águilas FC – Gimnàstic de Tarragona"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-5-11-cd-teruel-ud-ibiza",
-       "t": "CD Teruel – UD Ibiza"
-      },
-      {
-       "id": "2627-5-11-ce-europa-atletico-madrileno",
-       "t": "CE Europa – Atlético Madrileño"
-      },
-      {
-       "id": "2627-5-11-arenas-club-deportivo-fabril",
-       "t": "Arenas Club – Deportivo Fabril"
-      },
-      {
-       "id": "2627-5-11-villarreal-b-juventud-torremolinos",
-       "t": "Villarreal B – Juventud Torremolinos"
-      },
-      {
-       "id": "2627-5-11-aguilas-fc-gimnastic-de-tarragona",
-       "t": "Águilas FC – Gimnàstic de Tarragona"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-11-cd-teruel-ud-ibiza",
-       "t": "CD Teruel – UD Ibiza (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-ce-europa-atletico-madrileno",
-       "t": "CE Europa – Atlético Madrileño (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-arenas-club-deportivo-fabril",
-       "t": "Arenas Club – Deportivo Fabril (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-villarreal-b-juventud-torremolinos",
-       "t": "Villarreal B – Juventud Torremolinos (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-11-aguilas-fc-gimnastic-de-tarragona",
-       "t": "Águilas FC – Gimnàstic de Tarragona (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
