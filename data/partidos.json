@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-30T20:07:21+01:00",
+ "actualizado": "2026-10-30T21:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6360,22 +6360,6 @@
    "goles": []
   },
   {
-   "id": "2627-3-primera-ronda-ue-tavernes-val",
-   "canales": [
-    "mliga2"
-   ],
-   "inicio": "2026-10-28T21:00:00+01:00",
-   "jornada": "Primera ronda",
-   "liga": 3,
-   "local": "UE Tavernes",
-   "localAbbr": "TAV",
-   "localId": "ue-tavernes",
-   "provisional": false,
-   "visitante": "Valencia CF",
-   "visitanteId": "val",
-   "goles": []
-  },
-  {
    "id": "2627-3-primera-ronda-cd-numancia-ovi",
    "canales": [
     {
@@ -9815,6 +9799,21 @@
    "provisional": true
   },
   {
+   "id": "2627-2-13-sab-rsb",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-11-09T20:30:00+01:00",
+   "local": "CE Sabadell",
+   "localId": "sab",
+   "visitante": "Real Sociedad B",
+   "visitanteId": "rsb",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
    "id": "2627-3-primera-ronda-trival-valderas-leg",
    "canales": [
     "mcopa"
@@ -9829,11 +9828,27 @@
    "visitanteId": "leg",
    "provisional": true,
    "goles": []
+  },
+  {
+   "id": "2627-3-primera-ronda-ue-tavernes-val",
+   "canales": [
+    "mliga2"
+   ],
+   "inicio": "2026-11-10T21:00:00+01:00",
+   "jornada": "Primera ronda",
+   "liga": 3,
+   "local": "UE Tavernes",
+   "localAbbr": "TAV",
+   "localId": "ue-tavernes",
+   "provisional": false,
+   "visitante": "Valencia CF",
+   "visitanteId": "val",
+   "goles": []
   }
  ],
  "clasificacion": {
   "1": {
-   "tras": "Jornada 10",
+   "tras": "Jornada 11",
    "filas": [
     [
      "bar",
@@ -9896,6 +9911,16 @@
      17
     ],
     [
+     "vil",
+     11,
+     3,
+     4,
+     4,
+     15,
+     14,
+     13
+    ],
+    [
      "ala",
      10,
      3,
@@ -9923,16 +9948,6 @@
      2,
      10,
      7,
-     12
-    ],
-    [
-     "vil",
-     10,
-     3,
-     3,
-     4,
-     15,
-     14,
      12
     ],
     [
@@ -9986,6 +10001,16 @@
      10
     ],
     [
+     "esp",
+     11,
+     2,
+     3,
+     6,
+     12,
+     14,
+     9
+    ],
+    [
      "ray",
      9,
      2,
@@ -10004,16 +10029,6 @@
      5,
      15,
      9
-    ],
-    [
-     "esp",
-     10,
-     2,
-     2,
-     6,
-     12,
-     14,
-     8
     ],
     [
      "val",
@@ -11520,9 +11535,49 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-30T20:20:40+01:00",
-  "cambio": "2026-10-30T20:07:21+01:00",
+  "comprobado": "2026-10-30T21:07:20+01:00",
+  "cambio": "2026-10-30T21:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-30T21:07:20+01:00",
+    "nuevos": 1,
+    "horas": 1,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Nuevo partido: CE Sabadell – Real Sociedad B",
+     "Nueva hora: UE Tavernes – Valencia CF, 10/11 21:00"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-2-13-sab-rsb",
+       "t": "CE Sabadell – Real Sociedad B"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-3-primera-ronda-ue-tavernes-val",
+       "t": "UE Tavernes – Valencia CF: 10/11 a las 21:00"
+      }
+     ],
+     "nuevos": [
+      {
+       "id": "2627-2-13-sab-rsb",
+       "t": "CE Sabadell – Real Sociedad B (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-10-30T20:20:40+01:00",
     "nuevos": 0,
@@ -11994,27 +12049,6 @@
    },
    {
     "hora": "2026-10-30T01:58:19+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-30T01:07:20+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
