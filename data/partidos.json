@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T18:42:44+01:00",
+ "actualizado": "2026-10-31T19:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7898,7 +7898,6 @@
    "local": "Bilbao Athletic",
    "localAbbr": "BIL",
    "localId": "bilbao-athletic",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "CP Cacereño",
    "visitanteAbbr": "CAC",
@@ -7967,7 +7966,6 @@
    "local": "Racing Ferrol",
    "localAbbr": "RFE",
    "localId": "racing-ferrol",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub.",
    "provisional": false,
    "visitante": "Ponferradina",
    "visitanteAbbr": "PFR",
@@ -10452,8 +10450,8 @@
      5,
      1,
      6,
-     17,
-     20,
+     18,
+     21,
      16
     ],
     [
@@ -10492,8 +10490,8 @@
      3,
      4,
      5,
-     16,
-     21,
+     17,
+     22,
      13
     ],
     [
@@ -10972,7 +10970,7 @@
   "5": {
    "grupos": {
     "Grupo 1": {
-     "tras": "Jornada 9",
+     "tras": "Jornada 10",
      "filas": [
       [
        "cd-lugo",
@@ -10987,47 +10985,58 @@
       ],
       [
        "ud-logrones",
-       9,
+       10,
        6,
        2,
-       1,
+       2,
        20,
-       12,
+       13,
        20,
        "UD Logroñés"
       ],
       [
-       "racing-ferrol",
-       9,
+       "mirandes",
+       10,
        5,
-       1,
+       2,
+       3,
+       13,
+       10,
+       17,
+       "Mirandés"
+      ],
+      [
+       "racing-ferrol",
+       10,
+       5,
+       2,
        3,
        9,
        7,
-       16,
+       17,
        "Racing Ferrol"
       ],
       [
-       "cp-cacereno",
-       9,
+       "bilbao-athletic",
+       10,
        4,
        3,
-       2,
-       8,
-       5,
+       3,
+       17,
+       13,
        15,
-       "CP Cacereño"
+       "Bilbao Athletic"
       ],
       [
-       "mirandes",
-       9,
-       4,
-       2,
-       3,
-       12,
+       "cp-cacereno",
        10,
-       14,
-       "Mirandés"
+       4,
+       3,
+       3,
+       9,
+       8,
+       15,
+       "CP Cacereño"
       ],
       [
        "pontevedra",
@@ -11039,6 +11048,17 @@
        11,
        14,
        "Pontevedra"
+      ],
+      [
+       "ponferradina",
+       10,
+       3,
+       5,
+       2,
+       6,
+       6,
+       14,
+       "Ponferradina"
       ],
       [
        "cd-extremadura",
@@ -11072,28 +11092,6 @@
        12,
        13,
        "Mérida"
-      ],
-      [
-       "ponferradina",
-       9,
-       3,
-       4,
-       2,
-       6,
-       6,
-       13,
-       "Ponferradina"
-      ],
-      [
-       "bilbao-athletic",
-       9,
-       3,
-       3,
-       3,
-       14,
-       12,
-       12,
-       "Bilbao Athletic"
       ],
       [
        "cultural-leonesa",
@@ -11826,9 +11824,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-31T18:42:44+01:00",
-  "cambio": "2026-10-31T18:42:44+01:00",
+  "comprobado": "2026-10-31T19:07:22+01:00",
+  "cambio": "2026-10-31T19:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-10-31T19:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-31T18:42:44+01:00",
     "nuevos": 0,
@@ -12366,44 +12388,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-30T23:07:23+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 3,
-    "tablas": [],
-    "detalle": [
-     "Resultado: Villarreal CF 0-1 RCD Espanyol",
-     "Resultado: Atlético Madrileño 1-1 Alcorcón",
-     "Resultado: UD Ibiza 3-0 CE Europa"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-11-vil-esp",
-       "t": "Villarreal CF 0-1 RCD Espanyol"
-      },
-      {
-       "id": "2627-5-10-atletico-madrileno-alcorcon",
-       "t": "Atlético Madrileño 1-1 Alcorcón"
-      },
-      {
-       "id": "2627-5-10-ud-ibiza-ce-europa",
-       "t": "UD Ibiza 3-0 CE Europa"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-12-sev-ala",
