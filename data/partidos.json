@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T18:07:21+01:00",
+ "actualizado": "2026-10-31T18:42:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7756,7 +7756,6 @@
    "local": "UE Sant Andreu",
    "localAbbr": "SAN",
    "localId": "ue-sant-andreu",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "CD Teruel",
    "visitanteAbbr": "TER",
@@ -7809,7 +7808,41 @@
    "localId": "ray",
    "provisional": false,
    "visitante": "RC Celta",
-   "visitanteId": "cel"
+   "visitanteId": "cel",
+   "marcador": [
+    3,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "36'",
+     "seg": 2135,
+     "j": "Jorge de Frutos",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3270,
+     "j": "Jorge de Frutos",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "73'",
+     "seg": 4371,
+     "j": "Unai López",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-12-eib-alm",
@@ -7825,7 +7858,32 @@
    "localId": "eib",
    "provisional": false,
    "visitante": "UD Almería",
-   "visitanteId": "alm"
+   "visitanteId": "alm",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "18'",
+     "seg": 1071,
+     "j": "Quim Junyent",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5203,
+     "j": "Pejiño",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-bilbao-athletic-cp-cacereno",
@@ -7844,7 +7902,50 @@
    "provisional": false,
    "visitante": "CP Cacereño",
    "visitanteAbbr": "CAC",
-   "visitanteId": "cp-cacereno"
+   "visitanteId": "cp-cacereno",
+   "marcador": [
+    3,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "28'",
+     "seg": 1680,
+     "j": "Igor Oyono",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2820,
+     "j": "Igor Oyono",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "51'",
+     "seg": 3060,
+     "j": "Ander Pecina",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5280,
+     "j": "Oussama Chit",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-racing-ferrol-ponferradina",
@@ -7870,7 +7971,13 @@
    "provisional": false,
    "visitante": "Ponferradina",
    "visitanteAbbr": "PFR",
-   "visitanteId": "ponferradina"
+   "visitanteId": "ponferradina",
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-5-10-ud-logrones-mirandes",
@@ -7890,7 +7997,32 @@
    "provisional": false,
    "visitante": "Mirandés",
    "visitanteAbbr": "MIR",
-   "visitanteId": "mirandes"
+   "visitanteId": "mirandes",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "r",
+     "min": "45+2'",
+     "seg": 2712,
+     "j": "latif Issman",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3420,
+     "j": "Peru Rodríguez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-11-bet-mal",
@@ -10041,13 +10173,13 @@
     ],
     [
      "bet",
-     10,
+     11,
      6,
-     2,
+     3,
      2,
      16,
      14,
-     20
+     21
     ],
     [
      "rso",
@@ -10201,29 +10333,19 @@
     ],
     [
      "mal",
-     10,
+     11,
      0,
-     5,
+     6,
      5,
      7,
      19,
-     5
+     6
     ]
    ]
   },
   "2": {
    "tras": "Jornada 12",
    "filas": [
-    [
-     "alm",
-     12,
-     9,
-     1,
-     2,
-     23,
-     9,
-     28
-    ],
     [
      "cas",
      11,
@@ -10235,14 +10357,24 @@
      26
     ],
     [
+     "alm",
+     12,
+     8,
+     2,
+     2,
+     23,
+     10,
+     26
+    ],
+    [
      "eib",
      12,
      7,
-     1,
-     4,
-     20,
+     2,
+     3,
+     21,
      14,
-     22
+     23
     ],
     [
      "gir",
@@ -10316,13 +10448,13 @@
     ],
     [
      "cor",
-     11,
+     12,
      5,
-     0,
+     1,
      6,
      17,
      20,
-     15
+     16
     ],
     [
      "eld",
@@ -10355,6 +10487,16 @@
      14
     ],
     [
+     "clb",
+     12,
+     3,
+     4,
+     5,
+     16,
+     21,
+     13
+    ],
+    [
      "vll",
      11,
      3,
@@ -10362,16 +10504,6 @@
      5,
      16,
      16,
-     12
-    ],
-    [
-     "clb",
-     11,
-     3,
-     3,
-     5,
-     16,
-     21,
      12
     ],
     [
@@ -11694,9 +11826,60 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-31T18:07:21+01:00",
-  "cambio": "2026-10-31T18:07:21+01:00",
+  "comprobado": "2026-10-31T18:42:44+01:00",
+  "cambio": "2026-10-31T18:42:44+01:00",
   "historial": [
+   {
+    "hora": "2026-10-31T18:42:44+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 5,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Rayo Vallecano 3-0 RC Celta",
+     "Resultado: SD Eibar 1-1 UD Almería",
+     "Resultado: Bilbao Athletic 3-1 CP Cacereño",
+     "Resultado: UD Logroñés 0-1 Mirandés",
+     "Resultado: Racing Ferrol 0-0 Ponferradina"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-11-ray-cel",
+       "t": "Rayo Vallecano 3-0 RC Celta"
+      },
+      {
+       "id": "2627-2-12-eib-alm",
+       "t": "SD Eibar 1-1 UD Almería"
+      },
+      {
+       "id": "2627-5-10-bilbao-athletic-cp-cacereno",
+       "t": "Bilbao Athletic 3-1 CP Cacereño"
+      },
+      {
+       "id": "2627-5-10-ud-logrones-mirandes",
+       "t": "UD Logroñés 0-1 Mirandés"
+      },
+      {
+       "id": "2627-5-10-racing-ferrol-ponferradina",
+       "t": "Racing Ferrol 0-0 Ponferradina"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-31T18:07:21+01:00",
     "nuevos": 0,
@@ -12221,29 +12404,6 @@
        "t": "UD Ibiza 3-0 CE Europa"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-30T22:07:25+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-12-sev-ala",
