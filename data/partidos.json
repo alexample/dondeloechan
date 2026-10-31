@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T17:07:21+01:00",
+ "actualizado": "2026-10-31T18:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7760,7 +7760,41 @@
    "provisional": false,
    "visitante": "CD Teruel",
    "visitanteAbbr": "TER",
-   "visitanteId": "cd-teruel"
+   "visitanteId": "cd-teruel",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3120,
+     "j": "Jaume Tovar",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "83'",
+     "seg": 4980,
+     "j": "Álvaro López",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5340,
+     "j": "Pau Darbra",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-11-ray-cel",
@@ -10056,16 +10090,6 @@
      12
     ],
     [
-     "cel",
-     11,
-     2,
-     6,
-     3,
-     10,
-     8,
-     12
-    ],
-    [
      "vil",
      11,
      3,
@@ -10076,12 +10100,22 @@
      12
     ],
     [
+     "cel",
+     11,
+     2,
+     6,
+     3,
+     10,
+     10,
+     12
+    ],
+    [
      "ray",
      10,
      3,
      3,
      4,
-     13,
+     15,
      20,
      12
     ],
@@ -11660,9 +11694,39 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-31T17:07:21+01:00",
-  "cambio": "2026-10-31T17:07:21+01:00",
+  "comprobado": "2026-10-31T18:07:21+01:00",
+  "cambio": "2026-10-31T18:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-31T18:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Resultado: UE Sant Andreu 2-0 CD Teruel"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-10-ue-sant-andreu-cd-teruel",
+       "t": "UE Sant Andreu 2-0 CD Teruel"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-31T17:07:21+01:00",
     "nuevos": 0,
@@ -12188,46 +12252,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-30T21:07:20+01:00",
-    "nuevos": 1,
-    "horas": 1,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Nuevo partido: CE Sabadell – Real Sociedad B",
-     "Nueva hora: UE Tavernes – Valencia CF, 10/11 21:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-2-13-sab-rsb",
-       "t": "CE Sabadell – Real Sociedad B"
-      }
-     ],
-     "horas": [
-      {
-       "id": "2627-3-primera-ronda-ue-tavernes-val",
-       "t": "UE Tavernes – Valencia CF: 10/11 a las 21:00"
-      }
-     ],
-     "nuevos": [
-      {
-       "id": "2627-2-13-sab-rsb",
-       "t": "CE Sabadell – Real Sociedad B (Segunda)"
-      }
-     ]
     }
    }
   ]
