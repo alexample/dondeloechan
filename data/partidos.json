@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T19:07:22+01:00",
+ "actualizado": "2026-10-31T20:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -10172,12 +10172,12 @@
     [
      "bet",
      11,
-     6,
-     3,
+     7,
      2,
-     16,
-     14,
-     21
+     2,
+     18,
+     15,
+     23
     ],
     [
      "rso",
@@ -10333,11 +10333,11 @@
      "mal",
      11,
      0,
-     6,
      5,
-     7,
-     19,
-     6
+     6,
+     8,
+     21,
+     5
     ]
    ]
   },
@@ -10450,8 +10450,8 @@
      5,
      1,
      6,
-     18,
-     21,
+     19,
+     22,
      16
     ],
     [
@@ -10490,8 +10490,8 @@
      3,
      4,
      5,
-     17,
-     22,
+     18,
+     23,
      13
     ],
     [
@@ -11824,9 +11824,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-31T19:07:22+01:00",
-  "cambio": "2026-10-31T19:07:22+01:00",
+  "comprobado": "2026-10-31T20:07:21+01:00",
+  "cambio": "2026-10-31T20:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-31T20:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-31T19:07:22+01:00",
     "nuevos": 0,
@@ -12361,29 +12385,6 @@
     "canales": 1,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T00:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
     "detalle": [],
     "avisos": 0,
     "items": {
