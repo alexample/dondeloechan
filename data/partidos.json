@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T21:07:21+01:00",
+ "actualizado": "2026-10-31T22:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8232,7 +8232,6 @@
    "local": "Real Unión",
    "localAbbr": "RUN",
    "localId": "real-union",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "Real Avilés Industrial",
    "visitanteAbbr": "AVI",
@@ -10305,12 +10304,12 @@
     [
      "bar",
      11,
-     9,
+     10,
+     0,
      1,
-     1,
-     40,
+     44,
      11,
-     28
+     30
     ],
     [
      "atm",
@@ -10363,16 +10362,6 @@
      17
     ],
     [
-     "ala",
-     11,
-     3,
-     4,
-     4,
-     14,
-     11,
-     13
-    ],
-    [
      "ath",
      9,
      3,
@@ -10400,6 +10389,16 @@
      3,
      10,
      10,
+     12
+    ],
+    [
+     "ala",
+     11,
+     3,
+     3,
+     5,
+     14,
+     15,
      12
     ],
     [
@@ -10601,11 +10600,11 @@
      "sab",
      12,
      4,
-     6,
-     2,
+     5,
+     3,
      11,
-     9,
-     18
+     11,
+     17
     ],
     [
      "cor",
@@ -10710,12 +10709,12 @@
     [
      "alb",
      12,
-     1,
      2,
+     1,
      9,
-     8,
+     10,
      22,
-     5
+     7
     ],
     [
      "ceu",
@@ -11416,17 +11415,6 @@
        "Real Jaén"
       ],
       [
-       "cartagena",
-       9,
-       4,
-       3,
-       2,
-       14,
-       9,
-       15,
-       "Cartagena"
-      ],
-      [
        "alcorcon",
        10,
        3,
@@ -11436,6 +11424,28 @@
        10,
        15,
        "Alcorcón"
+      ],
+      [
+       "cartagena",
+       10,
+       4,
+       3,
+       3,
+       14,
+       11,
+       15,
+       "Cartagena"
+      ],
+      [
+       "real-madrid-castilla",
+       10,
+       4,
+       3,
+       3,
+       13,
+       11,
+       15,
+       "Real Madrid Castilla"
       ],
       [
        "gimnastic-de-tarragona",
@@ -11482,15 +11492,15 @@
        "SD Huesca"
       ],
       [
-       "real-madrid-castilla",
-       9,
+       "ue-sant-andreu",
+       10,
        3,
        3,
-       3,
-       11,
-       11,
+       4,
        12,
-       "Real Madrid Castilla"
+       12,
+       12,
+       "UE Sant Andreu"
       ],
       [
        "antequera",
@@ -11513,17 +11523,6 @@
        16,
        11,
        "Atlético Madrileño"
-      ],
-      [
-       "ue-sant-andreu",
-       9,
-       2,
-       3,
-       4,
-       10,
-       12,
-       9,
-       "UE Sant Andreu"
       ],
       [
        "rayo-majadahonda",
@@ -11560,12 +11559,12 @@
       ],
       [
        "cd-teruel",
-       9,
+       10,
        1,
        3,
-       5,
+       6,
        4,
-       15,
+       17,
        6,
        "CD Teruel"
       ],
@@ -11987,9 +11986,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-31T21:07:21+01:00",
-  "cambio": "2026-10-31T21:07:21+01:00",
+  "comprobado": "2026-10-31T22:07:20+01:00",
+  "cambio": "2026-10-31T22:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-31T22:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-31T21:07:21+01:00",
     "nuevos": 0,
@@ -12550,27 +12574,6 @@
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T01:07:23+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
     "resultados": 0,
     "tablas": [],
     "detalle": [],
