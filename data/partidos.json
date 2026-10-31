@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T22:07:20+01:00",
+ "actualizado": "2026-10-31T23:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8294,7 +8294,77 @@
    "localId": "bar",
    "provisional": false,
    "visitante": "Deportivo Alavés",
-   "visitanteId": "ala"
+   "visitanteId": "ala",
+   "marcador": [
+    6,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "8'",
+     "seg": 468,
+     "j": "Raphinha",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "23'",
+     "seg": 1325,
+     "j": "Fermín López",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2425,
+     "j": "Raphinha",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45'+1'",
+     "seg": 2700,
+     "j": "Lamine Yamal",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "64'",
+     "seg": 3822,
+     "j": "Lamine Yamal",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4815,
+     "j": "Anthony Gordon",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "84'",
+     "seg": 5011,
+     "j": "Mariano Díaz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-12-alb-sab",
@@ -8309,7 +8379,50 @@
    "localId": "alb",
    "provisional": false,
    "visitante": "CE Sabadell",
-   "visitanteId": "sab"
+   "visitanteId": "sab",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 546,
+     "j": "Óscar Sanz",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2255,
+     "j": "Diego Fuoli",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "r",
+     "min": "42'",
+     "seg": 2509,
+     "j": "José Corpas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4819,
+     "j": "Eneko Aguilar",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-real-zaragoza-villarreal-b",
@@ -8336,7 +8449,59 @@
    "provisional": false,
    "visitante": "Villarreal B",
    "visitanteAbbr": "VIB",
-   "visitanteId": "villarreal-b"
+   "visitanteId": "villarreal-b",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "64'",
+     "seg": 3840,
+     "j": "Albert Garcia",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "70'",
+     "seg": 4200,
+     "j": "Álvaro García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5160,
+     "j": "Jaume Jardí",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+3'",
+     "seg": 5418,
+     "j": "Diego González",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90+7'",
+     "seg": 5442,
+     "j": "Jaime Tobajas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-antequera-real-murcia",
@@ -10307,8 +10472,8 @@
      10,
      0,
      1,
-     44,
-     11,
+     46,
+     12,
      30
     ],
     [
@@ -10397,8 +10562,8 @@
      3,
      3,
      5,
-     14,
      15,
+     17,
      12
     ],
     [
@@ -10602,7 +10767,7 @@
      4,
      5,
      3,
-     11,
+     12,
      11,
      17
     ],
@@ -10713,7 +10878,7 @@
      1,
      9,
      10,
-     22,
+     23,
      7
     ],
     [
@@ -11201,6 +11366,17 @@
        "CP Cacereño"
       ],
       [
+       "real-aviles-industrial",
+       10,
+       4,
+       2,
+       4,
+       18,
+       13,
+       14,
+       "Real Avilés Industrial"
+      ],
+      [
        "pontevedra",
        9,
        4,
@@ -11234,17 +11410,6 @@
        "CD Extremadura"
       ],
       [
-       "real-union",
-       9,
-       3,
-       4,
-       2,
-       19,
-       14,
-       13,
-       "Real Unión"
-      ],
-      [
        "merida",
        9,
        4,
@@ -11254,6 +11419,17 @@
        12,
        13,
        "Mérida"
+      ],
+      [
+       "real-union",
+       10,
+       3,
+       4,
+       3,
+       19,
+       17,
+       13,
+       "Real Unión"
       ],
       [
        "cultural-leonesa",
@@ -11276,17 +11452,6 @@
        9,
        12,
        "Zamora"
-      ],
-      [
-       "real-aviles-industrial",
-       9,
-       3,
-       2,
-       4,
-       15,
-       13,
-       11,
-       "Real Avilés Industrial"
       ],
       [
        "barakaldo-cf",
@@ -11986,9 +12151,51 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-31T22:31:13+01:00",
-  "cambio": "2026-10-31T22:07:20+01:00",
+  "comprobado": "2026-10-31T23:07:20+01:00",
+  "cambio": "2026-10-31T23:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-10-31T23:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 3,
+    "tablas": [
+     "Primera",
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Resultado: FC Barcelona 6-1 Deportivo Alavés",
+     "Resultado: Albacete BP 2-1 CE Sabadell",
+     "Resultado: Real Zaragoza 2-2 Villarreal B"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-11-bar-ala",
+       "t": "FC Barcelona 6-1 Deportivo Alavés"
+      },
+      {
+       "id": "2627-2-12-alb-sab",
+       "t": "Albacete BP 2-1 CE Sabadell"
+      },
+      {
+       "id": "2627-5-10-real-zaragoza-villarreal-b",
+       "t": "Real Zaragoza 2-2 Villarreal B"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-31T22:31:13+01:00",
     "nuevos": 0,
@@ -12550,27 +12757,6 @@
    },
    {
     "hora": "2026-10-31T04:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T03:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
