@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T20:07:21+01:00",
+ "actualizado": "2026-10-31T21:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8034,7 +8034,41 @@
    "localId": "bet",
    "provisional": false,
    "visitante": "Málaga CF",
-   "visitanteId": "mal"
+   "visitanteId": "mal",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2276,
+     "j": "Marc Bartra",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45'+2'",
+     "seg": 2700,
+     "j": "Pablo Fornals",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4069,
+     "j": "Adrián Niño",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-12-clb-cor",
@@ -8070,7 +8104,68 @@
    "localId": "clb",
    "provisional": false,
    "visitante": "Córdoba CF",
-   "visitanteId": "cor"
+   "visitanteId": "cor",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1427,
+     "j": "Aldrine Kibet",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "27'",
+     "seg": 1563,
+     "j": "Diego Bri",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "45'+2'",
+     "seg": 2700,
+     "j": "Álex Martín",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3354,
+     "j": "Alvaro Marin",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "72'",
+     "seg": 4306,
+     "j": "Victor Sánchez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "85'",
+     "seg": 5070,
+     "j": "Isma Ruiz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-real-madrid-castilla-cartagena",
@@ -8097,7 +8192,32 @@
    "provisional": false,
    "visitante": "Cartagena",
    "visitanteAbbr": "CAR",
-   "visitanteId": "cartagena"
+   "visitanteId": "cartagena",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 720,
+     "j": "Pol Fortuny",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "17'",
+     "seg": 1020,
+     "j": "Alexis Ciria",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-real-union-real-aviles-industrial",
@@ -8116,7 +8236,50 @@
    "provisional": false,
    "visitante": "Real Avilés Industrial",
    "visitanteAbbr": "AVI",
-   "visitanteId": "real-aviles-industrial"
+   "visitanteId": "real-aviles-industrial",
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2280,
+     "j": "Iker Alday",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "74'",
+     "seg": 4440,
+     "j": "Mángel",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4980,
+     "j": "Daniel Liduena",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+5'",
+     "seg": 5430,
+     "j": "Julián Mahicas",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-11-bar-ala",
@@ -10140,6 +10303,16 @@
    "tras": "Jornada 11",
    "filas": [
     [
+     "bar",
+     11,
+     9,
+     1,
+     1,
+     40,
+     11,
+     28
+    ],
+    [
      "atm",
      11,
      9,
@@ -10148,16 +10321,6 @@
      22,
      8,
      28
-    ],
-    [
-     "bar",
-     10,
-     9,
-     0,
-     1,
-     40,
-     11,
-     27
     ],
     [
      "rma",
@@ -10201,13 +10364,13 @@
     ],
     [
      "ala",
-     10,
+     11,
      3,
-     3,
+     4,
      4,
      14,
      11,
-     12
+     13
     ],
     [
      "ath",
@@ -10436,13 +10599,13 @@
     ],
     [
      "sab",
-     11,
+     12,
      4,
-     5,
+     6,
      2,
      11,
      9,
-     17
+     18
     ],
     [
      "cor",
@@ -10545,6 +10708,16 @@
      10
     ],
     [
+     "alb",
+     12,
+     1,
+     2,
+     9,
+     8,
+     22,
+     5
+    ],
+    [
      "ceu",
      11,
      1,
@@ -10553,16 +10726,6 @@
      10,
      25,
      5
-    ],
-    [
-     "alb",
-     11,
-     1,
-     1,
-     9,
-     8,
-     22,
-     4
     ]
    ]
   },
@@ -11824,9 +11987,55 @@
   }
  },
  "robot": {
-  "comprobado": "2026-10-31T20:07:21+01:00",
-  "cambio": "2026-10-31T20:07:21+01:00",
+  "comprobado": "2026-10-31T21:07:21+01:00",
+  "cambio": "2026-10-31T21:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-10-31T21:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 4,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Real Betis 2-1 Málaga CF",
+     "Resultado: Celta Fortuna 2-2 Córdoba CF",
+     "Resultado: Real Unión 0-3 Real Avilés Industrial",
+     "Resultado: Real Madrid Castilla 2-0 Cartagena"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-11-bet-mal",
+       "t": "Real Betis 2-1 Málaga CF"
+      },
+      {
+       "id": "2627-2-12-clb-cor",
+       "t": "Celta Fortuna 2-2 Córdoba CF"
+      },
+      {
+       "id": "2627-5-10-real-union-real-aviles-industrial",
+       "t": "Real Unión 0-3 Real Avilés Industrial"
+      },
+      {
+       "id": "2627-5-10-real-madrid-castilla-cartagena",
+       "t": "Real Madrid Castilla 2-0 Cartagena"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-10-31T20:07:21+01:00",
     "nuevos": 0,
@@ -12359,27 +12568,6 @@
    },
    {
     "hora": "2026-10-31T01:07:23+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T00:44:37+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 1,
