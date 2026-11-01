@@ -12151,9 +12151,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T12:07:21+01:00",
+  "comprobado": "2026-11-01T13:07:22+01:00",
   "cambio": "2026-11-01T10:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T13:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T12:07:21+01:00",
     "nuevos": 0,
@@ -12807,30 +12828,6 @@
        "t": "UE Sant Andreu 2-0 CD Teruel"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T17:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-12-sev-ala",
