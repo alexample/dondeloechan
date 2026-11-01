@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T23:07:21+01:00",
+ "actualizado": "2026-11-02T00:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11723,13 +11723,13 @@
      "filas": [
       [
        "cd-lugo",
-       9,
-       7,
-       1,
-       1,
-       16,
+       10,
        8,
-       22,
+       1,
+       1,
+       18,
+       9,
+       25,
        "CD Lugo"
       ],
       [
@@ -11832,17 +11832,6 @@
        "CD Extremadura"
       ],
       [
-       "merida",
-       9,
-       4,
-       1,
-       4,
-       15,
-       12,
-       13,
-       "Mérida"
-      ],
-      [
        "real-union",
        10,
        3,
@@ -11852,6 +11841,17 @@
        17,
        13,
        "Real Unión"
+      ],
+      [
+       "merida",
+       10,
+       4,
+       1,
+       5,
+       16,
+       14,
+       13,
+       "Mérida"
       ],
       [
        "cultural-leonesa",
@@ -12573,9 +12573,27 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T23:07:21+01:00",
-  "cambio": "2026-11-01T23:07:21+01:00",
+  "comprobado": "2026-11-02T00:07:21+01:00",
+  "cambio": "2026-11-02T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T00:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T23:07:21+01:00",
     "nuevos": 0,
@@ -13251,29 +13269,6 @@
    },
    {
     "hora": "2026-11-01T04:07:19+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T03:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
