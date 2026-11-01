@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T06:07:20+01:00",
+ "actualizado": "2026-11-01T09:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -9093,7 +9093,7 @@
   {
    "id": "2627-4-fase-liga-j4-fenerbahce-liverpool",
    "canales": [
-    "mlcpend"
+    "mlc3"
    ],
    "inicio": "2026-11-04T18:45:00+01:00",
    "jornada": "Fase liga · J4",
@@ -9101,7 +9101,7 @@
    "local": "Fenerbahçe",
    "localAbbr": "FEN",
    "localId": "fenerbahce",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Liverpool",
    "visitanteAbbr": "LIV",
    "visitanteId": "liverpool"
@@ -9240,7 +9240,7 @@
   {
    "id": "2627-4-fase-liga-j4-borussia-dortmund-bet",
    "canales": [
-    "mlcpend"
+    "mlc2"
    ],
    "inicio": "2026-11-04T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -9248,14 +9248,14 @@
    "local": "Borussia Dortmund",
    "localAbbr": "BVB",
    "localId": "borussia-dortmund",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Betis",
    "visitanteId": "bet"
   },
   {
    "id": "2627-4-fase-liga-j4-porto-napoli",
    "canales": [
-    "mlcpend"
+    "mlc3"
    ],
    "inicio": "2026-11-04T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -9263,7 +9263,7 @@
    "local": "Porto",
    "localAbbr": "POR",
    "localId": "porto",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Napoli",
    "visitanteAbbr": "NAP",
    "visitanteId": "napoli"
@@ -9271,7 +9271,7 @@
   {
    "id": "2627-4-fase-liga-j4-psv-club-brugge",
    "canales": [
-    "mlcpend"
+    "mlc6"
    ],
    "inicio": "2026-11-04T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -9279,7 +9279,7 @@
    "local": "PSV",
    "localAbbr": "PSV",
    "localId": "psv",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Club Brugge",
    "visitanteAbbr": "BRU",
    "visitanteId": "club-brugge"
@@ -9287,7 +9287,7 @@
   {
    "id": "2627-4-fase-liga-j4-rb-leipzig-manchester-city",
    "canales": [
-    "mlcpend"
+    "mlc5"
    ],
    "inicio": "2026-11-04T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -9295,7 +9295,7 @@
    "local": "RB Leipzig",
    "localAbbr": "RBL",
    "localId": "rb-leipzig",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Manchester City",
    "visitanteAbbr": "MCI",
    "visitanteId": "manchester-city"
@@ -9303,7 +9303,7 @@
   {
    "id": "2627-4-fase-liga-j4-rc-lens-como",
    "canales": [
-    "mlcpend"
+    "mlc7"
    ],
    "inicio": "2026-11-04T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -9311,7 +9311,7 @@
    "local": "RC Lens",
    "localAbbr": "LEN",
    "localId": "rc-lens",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Como",
    "visitanteAbbr": "COM",
    "visitanteId": "como"
@@ -9319,7 +9319,7 @@
   {
    "id": "2627-4-fase-liga-j4-slavia-praga-arsenal",
    "canales": [
-    "mlcpend"
+    "mlc8"
    ],
    "inicio": "2026-11-04T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -9327,7 +9327,7 @@
    "local": "Slavia Praga",
    "localAbbr": "SLA",
    "localId": "slavia-praga",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Arsenal",
    "visitanteAbbr": "ARS",
    "visitanteId": "arsenal"
@@ -9335,7 +9335,7 @@
   {
    "id": "2627-4-fase-liga-j4-viking-sabah",
    "canales": [
-    "mlcpend"
+    "mlc9"
    ],
    "inicio": "2026-11-04T21:00:00+01:00",
    "jornada": "Fase liga · J4",
@@ -9343,7 +9343,7 @@
    "local": "Viking",
    "localAbbr": "VIK",
    "localId": "viking",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Sabah",
    "visitanteAbbr": "SBH",
    "visitanteId": "sabah"
@@ -9374,9 +9374,9 @@
    "visitante": "FC Kairat",
    "visitanteId": "fc-kairat",
    "canales": [
-    "mconfpend"
+    "mlc13"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "ATA",
    "visitanteAbbr": "KAI"
   },
@@ -9390,9 +9390,9 @@
    "visitante": "Inter Club d'Escaldes",
    "visitanteId": "inter-club-d-escaldes",
    "canales": [
-    "mconfpend"
+    "mlc11"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "CRV",
    "visitanteAbbr": "INT"
   },
@@ -9406,9 +9406,9 @@
    "visitante": "Ajax",
    "visitanteId": "ajax",
    "canales": [
-    "mconfpend"
+    "mlc12"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "MID",
    "visitanteAbbr": "AJA"
   },
@@ -9546,9 +9546,9 @@
    "visitante": "Nordsjælland",
    "visitanteId": "nordsjaelland",
    "canales": [
-    "mconfpend"
+    "mlc12"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "MON",
    "visitanteAbbr": "NOR"
   },
@@ -9578,9 +9578,9 @@
    "visitante": "Brighton",
    "visitanteId": "brighton",
    "canales": [
-    "mconfpend"
+    "mlc2"
    ],
-   "provisional": true,
+   "provisional": false,
    "visitanteAbbr": "BRI"
   },
   {
@@ -9593,9 +9593,9 @@
    "visitante": "FC Iberia 1999",
    "visitanteId": "fc-iberia-1999",
    "canales": [
-    "mconfpend"
+    "mlc13"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "KOB",
    "visitanteAbbr": "IBE"
   },
@@ -11366,6 +11366,17 @@
        "CP Cacereño"
       ],
       [
+       "real-aviles-industrial",
+       10,
+       4,
+       2,
+       4,
+       18,
+       13,
+       14,
+       "Real Avilés Industrial"
+      ],
+      [
        "pontevedra",
        9,
        4,
@@ -11399,17 +11410,6 @@
        "CD Extremadura"
       ],
       [
-       "real-union",
-       9,
-       3,
-       4,
-       2,
-       19,
-       14,
-       13,
-       "Real Unión"
-      ],
-      [
        "merida",
        9,
        4,
@@ -11419,6 +11419,17 @@
        12,
        13,
        "Mérida"
+      ],
+      [
+       "real-union",
+       10,
+       3,
+       4,
+       3,
+       19,
+       17,
+       13,
+       "Real Unión"
       ],
       [
        "cultural-leonesa",
@@ -11441,17 +11452,6 @@
        9,
        12,
        "Zamora"
-      ],
-      [
-       "real-aviles-industrial",
-       9,
-       3,
-       2,
-       4,
-       15,
-       13,
-       11,
-       "Real Avilés Industrial"
       ],
       [
        "barakaldo-cf",
@@ -12151,9 +12151,103 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T08:30:23+01:00",
-  "cambio": "2026-11-01T06:07:20+01:00",
+  "comprobado": "2026-11-01T09:07:20+01:00",
+  "cambio": "2026-11-01T09:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T09:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 16,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Canal confirmado: Fenerbahçe – Liverpool",
+     "Canal confirmado: PSV – Club Brugge",
+     "Canal confirmado: Borussia Dortmund – Betis",
+     "Canal confirmado: Porto – Napoli",
+     "Canal confirmado: RC Lens – Como",
+     "Canal confirmado: RB Leipzig – Manchester City",
+     "Canal confirmado: Slavia Praga – Arsenal",
+     "Canal confirmado: Viking – Sabah",
+     "Canal confirmado: Atalanta – FC Kairat",
+     "Canal confirmado: FC Midtjylland – Ajax",
+     "Canal confirmado: Crvena Zvezda – Inter Club d'Escaldes",
+     "Canal confirmado: Getafe CF – Brighton",
+     "Canal confirmado: AS Monaco – Nordsjælland",
+     "Canal confirmado: København – FC Iberia 1999"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-fenerbahce-liverpool",
+       "t": "Fenerbahçe – Liverpool · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-psv-club-brugge",
+       "t": "PSV – Club Brugge · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-borussia-dortmund-bet",
+       "t": "Borussia Dortmund – Betis · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-porto-napoli",
+       "t": "Porto – Napoli · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-rc-lens-como",
+       "t": "RC Lens – Como · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-rb-leipzig-manchester-city",
+       "t": "RB Leipzig – Manchester City · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-slavia-praga-arsenal",
+       "t": "Slavia Praga – Arsenal · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-viking-sabah",
+       "t": "Viking – Sabah · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
+       "t": "Atalanta – FC Kairat · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
+       "t": "FC Midtjylland – Ajax · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
+       "t": "Crvena Zvezda – Inter Club d'Escaldes · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-get-brighton",
+       "t": "Getafe CF – Brighton · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-as-monaco-nordsjaelland",
+       "t": "AS Monaco – Nordsjælland · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-kobenhavn-fc-iberia-1999",
+       "t": "København – FC Iberia 1999 · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T08:30:23+01:00",
     "nuevos": 0,
@@ -12751,27 +12845,6 @@
      "Primera",
      "Segunda"
     ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T13:24:57+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
     "detalle": [],
     "avisos": 0,
     "items": {
