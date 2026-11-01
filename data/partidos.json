@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T18:07:21+01:00",
+ "actualizado": "2026-11-01T19:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6327,23 +6327,6 @@
    "estado": "final"
   },
   {
-   "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
-   "canales": [
-    "mlc",
-    "mplus7"
-   ],
-   "inicio": "2026-10-28T21:00:00+01:00",
-   "jornada": "Primera ronda",
-   "liga": 3,
-   "local": "CDA Navalcarnero",
-   "localAbbr": "NAV",
-   "localId": "cda-navalcarnero",
-   "provisional": false,
-   "visitante": "Betis",
-   "visitanteId": "bet",
-   "goles": []
-  },
-  {
    "id": "2627-3-primera-ronda-salamanca-uds-cel",
    "canales": [
     "mliga"
@@ -8683,7 +8666,6 @@
    "local": "Juventud Torremolinos",
    "localAbbr": "TOR",
    "localId": "juventud-torremolinos",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "Águilas FC",
    "visitanteAbbr": "AGU",
@@ -8707,7 +8689,41 @@
    "localId": "rac",
    "provisional": false,
    "visitante": "Real Madrid",
-   "visitanteId": "rma"
+   "visitanteId": "rma",
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "11'",
+     "seg": 658,
+     "j": "Kylian Mbappé",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "21'",
+     "seg": 1260,
+     "j": "Jude Bellingham",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "36'",
+     "seg": 2158,
+     "j": "Yan Diomande",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-12-ceu-spo",
@@ -8722,7 +8738,32 @@
    "localId": "ceu",
    "provisional": false,
    "visitante": "Real Sporting",
-   "visitanteId": "spo"
+   "visitanteId": "spo",
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1733,
+     "j": "Alejo Sarco",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 3978,
+     "j": "Guillermo Rosas",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-cd-coria-arenas-club",
@@ -8741,7 +8782,32 @@
    "provisional": false,
    "visitante": "Arenas Club",
    "visitanteAbbr": "ARE",
-   "visitanteId": "arenas-club"
+   "visitanteId": "arenas-club",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "r",
+     "min": "29'",
+     "seg": 1740,
+     "j": "Pablo Palacin",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "58'",
+     "seg": 3480,
+     "j": "Ander Dufur",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-ud-ourense-cultural-leonesa",
@@ -8761,7 +8827,23 @@
    "provisional": false,
    "visitante": "Cultural Leonesa",
    "visitanteAbbr": "CUL",
-   "visitanteId": "cultural-leonesa"
+   "visitanteId": "cultural-leonesa",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "90+8'",
+     "seg": 5448,
+     "j": "Raul Martinez",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-11-elc-val",
@@ -9798,7 +9880,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "CAC",
    "visitanteAbbr": "LUG",
    "etiqueta": "Grupo 1"
@@ -10564,6 +10646,23 @@
    "visitante": "Valencia CF",
    "visitanteId": "val",
    "goles": []
+  },
+  {
+   "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
+   "canales": [
+    "mlc",
+    "mplus7"
+   ],
+   "inicio": "2026-11-12T19:00:00+01:00",
+   "jornada": "Primera ronda",
+   "liga": 3,
+   "local": "CDA Navalcarnero",
+   "localAbbr": "NAV",
+   "localId": "cda-navalcarnero",
+   "provisional": false,
+   "visitante": "Betis",
+   "visitanteId": "bet",
+   "goles": []
   }
  ],
  "clasificacion": {
@@ -10711,6 +10810,16 @@
      11
     ],
     [
+     "elc",
+     11,
+     2,
+     5,
+     4,
+     14,
+     17,
+     11
+    ],
+    [
      "osa",
      10,
      3,
@@ -10731,16 +10840,6 @@
      11
     ],
     [
-     "elc",
-     10,
-     2,
-     4,
-     4,
-     14,
-     17,
-     10
-    ],
-    [
      "lev",
      11,
      2,
@@ -10752,13 +10851,13 @@
     ],
     [
      "val",
-     10,
+     11,
      1,
-     3,
+     4,
      6,
      7,
      17,
-     6
+     7
     ],
     [
      "mal",
@@ -10777,13 +10876,13 @@
    "filas": [
     [
      "cas",
-     11,
-     8,
+     12,
+     9,
      2,
      1,
-     22,
+     23,
      4,
-     26
+     29
     ],
     [
      "alm",
@@ -10837,12 +10936,12 @@
     ],
     [
      "bur",
-     11,
+     12,
      6,
      2,
-     3,
+     4,
      16,
-     12,
+     13,
      20
     ],
     [
@@ -12255,9 +12354,66 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T18:07:21+01:00",
-  "cambio": "2026-11-01T18:07:21+01:00",
+  "comprobado": "2026-11-01T19:07:22+01:00",
+  "cambio": "2026-11-01T19:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T19:07:22+01:00",
+    "nuevos": 0,
+    "horas": 1,
+    "canales": 3,
+    "resultados": 4,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Real Racing Club 0-3 Real Madrid",
+     "Resultado: AD Ceuta FC 0-2 Real Sporting",
+     "Canal confirmado: CP Cacereño – CD Lugo",
+     "Nueva hora: CDA Navalcarnero – Betis, 12/11 19:00",
+     "Resultado: CD Coria 0-1 Arenas Club",
+     "Resultado: UD Ourense 1-0 Cultural Leonesa"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-11-rac-rma",
+       "t": "Real Racing Club 0-3 Real Madrid"
+      },
+      {
+       "id": "2627-2-12-ceu-spo",
+       "t": "AD Ceuta FC 0-2 Real Sporting"
+      },
+      {
+       "id": "2627-5-10-cd-coria-arenas-club",
+       "t": "CD Coria 0-1 Arenas Club"
+      },
+      {
+       "id": "2627-5-10-ud-ourense-cultural-leonesa",
+       "t": "UD Ourense 1-0 Cultural Leonesa"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-5-11-cp-cacereno-cd-lugo",
+       "t": "CP Cacereño – CD Lugo · confirmado"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
+       "t": "CDA Navalcarnero – Betis: 12/11 a las 19:00"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T18:07:21+01:00",
     "nuevos": 0,
@@ -12882,27 +13038,6 @@
        "t": "Real Zaragoza 2-2 Villarreal B"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T22:31:13+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-12-sev-ala",
