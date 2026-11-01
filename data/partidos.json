@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T20:07:20+01:00",
+ "actualizado": "2026-11-01T20:38:57+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8856,7 +8856,23 @@
    "localId": "elc",
    "provisional": false,
    "visitante": "Valencia CF",
-   "visitanteId": "val"
+   "visitanteId": "val",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4095,
+     "j": "Umar Sadiq",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-12-bur-cas",
@@ -8871,7 +8887,41 @@
    "localId": "bur",
    "provisional": false,
    "visitante": "CD Castellón",
-   "visitanteId": "cas"
+   "visitanteId": "cas",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "2'",
+     "seg": 106,
+     "j": "Israel Suero",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45'+1'",
+     "seg": 2700,
+     "j": "Oier Luengo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "60'",
+     "seg": 3554,
+     "j": "Matías Orozco",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-cd-lugo-merida",
@@ -8910,7 +8960,50 @@
    "provisional": false,
    "visitante": "Deportivo Fabril",
    "visitanteAbbr": "FAB",
-   "visitanteId": "deportivo-fabril"
+   "visitanteId": "deportivo-fabril",
+   "marcador": [
+    1,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "5'",
+     "seg": 300,
+     "j": "Manu Ferreiro",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3360,
+     "j": "Iker Gil",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4140,
+     "j": "Unai Dufur",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "77'",
+     "seg": 4620,
+     "j": "Martín Ochoa",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-hercules-rayo-majadahonda",
@@ -9898,7 +9991,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-1-12-sev-ala",
@@ -12354,9 +12447,52 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T20:07:20+01:00",
-  "cambio": "2026-11-01T20:07:20+01:00",
+  "comprobado": "2026-11-01T20:38:57+01:00",
+  "cambio": "2026-11-01T20:38:57+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T20:38:57+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 3,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Elche CF 0-1 Valencia CF",
+     "Resultado: Burgos CF 1-1 CD Castellón",
+     "Canal confirmado: CD Castellón – SD Eibar",
+     "Resultado: Zamora 1-3 Deportivo Fabril"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-11-elc-val",
+       "t": "Elche CF 0-1 Valencia CF"
+      },
+      {
+       "id": "2627-2-12-bur-cas",
+       "t": "Burgos CF 1-1 CD Castellón"
+      },
+      {
+       "id": "2627-5-10-zamora-deportivo-fabril",
+       "t": "Zamora 1-3 Deportivo Fabril"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      },
+      {
+       "id": "2627-2-13-cas-eib",
+       "t": "CD Castellón – SD Eibar · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T20:07:20+01:00",
     "nuevos": 0,
@@ -12987,29 +13123,6 @@
    },
    {
     "hora": "2026-11-01T01:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T00:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
