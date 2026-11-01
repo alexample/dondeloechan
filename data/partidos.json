@@ -12151,9 +12151,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T11:07:21+01:00",
+  "comprobado": "2026-11-01T12:07:21+01:00",
   "cambio": "2026-11-01T10:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T12:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T11:07:21+01:00",
     "nuevos": 0,
@@ -12810,42 +12831,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T16:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 2,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Levante UD 0-2 Atlético de Madrid",
-     "Resultado: Real Sociedad B 1-0 Girona FC"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-11-lev-atm",
-       "t": "Levante UD 0-2 Atlético de Madrid"
-      },
-      {
-       "id": "2627-2-12-rsb-gir",
-       "t": "Real Sociedad B 1-0 Girona FC"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-12-sev-ala",
