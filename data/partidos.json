@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T10:07:20+01:00",
+ "actualizado": "2026-11-01T14:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8521,7 +8521,23 @@
    "provisional": false,
    "visitante": "Real Murcia",
    "visitanteAbbr": "MUR",
-   "visitanteId": "real-murcia"
+   "visitanteId": "real-murcia",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "45+2'",
+     "seg": 2712,
+     "j": "Usse Diao",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-barakaldo-cf-pontevedra",
@@ -8540,7 +8556,13 @@
    "provisional": false,
    "visitante": "Pontevedra",
    "visitanteAbbr": "PON",
-   "visitanteId": "pontevedra"
+   "visitanteId": "pontevedra",
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-1-11-get-sev",
@@ -10518,13 +10540,13 @@
     ],
     [
      "sev",
-     10,
+     11,
      5,
-     2,
+     3,
      3,
      16,
      16,
-     17
+     18
     ],
     [
      "ath",
@@ -10638,13 +10660,13 @@
     ],
     [
      "get",
-     10,
+     11,
      2,
-     3,
+     4,
      5,
      5,
      15,
-     9
+     10
     ],
     [
      "val",
@@ -10713,13 +10735,13 @@
     ],
     [
      "gra",
-     11,
+     12,
      6,
-     2,
+     3,
      3,
      18,
      14,
-     20
+     21
     ],
     [
      "bur",
@@ -10783,13 +10805,13 @@
     ],
     [
      "eld",
-     11,
+     12,
      4,
-     2,
+     3,
      5,
      13,
      15,
-     14
+     15
     ],
     [
      "ten",
@@ -12151,9 +12173,45 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T13:07:22+01:00",
-  "cambio": "2026-11-01T10:07:20+01:00",
+  "comprobado": "2026-11-01T14:07:21+01:00",
+  "cambio": "2026-11-01T14:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T14:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 2,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Barakaldo CF 0-0 Pontevedra",
+     "Resultado: Antequera 0-1 Real Murcia"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-10-barakaldo-cf-pontevedra",
+       "t": "Barakaldo CF 0-0 Pontevedra"
+      },
+      {
+       "id": "2627-5-10-antequera-real-murcia",
+       "t": "Antequera 0-1 Real Murcia"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T13:07:22+01:00",
     "nuevos": 0,
@@ -12796,36 +12854,6 @@
       {
        "id": "2627-5-10-racing-ferrol-ponferradina",
        "t": "Racing Ferrol 0-0 Ponferradina"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T18:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 1,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Resultado: UE Sant Andreu 2-0 CD Teruel"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-10-ue-sant-andreu-cd-teruel",
-       "t": "UE Sant Andreu 2-0 CD Teruel"
       }
      ],
      "canales": [
