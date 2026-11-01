@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T21:07:20+01:00",
+ "actualizado": "2026-11-01T22:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -10056,7 +10056,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "AVI",
    "visitanteAbbr": "EXT",
    "etiqueta": "Grupo 1"
@@ -10839,11 +10839,11 @@
      "rso",
      11,
      6,
-     2,
-     3,
-     19,
-     18,
-     20
+     1,
+     4,
+     20,
+     20,
+     19
     ],
     [
      "sev",
@@ -10858,12 +10858,12 @@
     [
      "ath",
      10,
-     3,
      4,
      3,
-     12,
-     9,
-     13
+     3,
+     14,
+     10,
+     15
     ],
     [
      "vil",
@@ -12480,9 +12480,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T21:07:20+01:00",
-  "cambio": "2026-11-01T21:07:20+01:00",
+  "comprobado": "2026-11-01T22:07:20+01:00",
+  "cambio": "2026-11-01T22:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T22:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Canal confirmado: Real Avilés Industrial – CD Extremadura"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-11-real-aviles-industrial-cd-extremadura",
+       "t": "Real Avilés Industrial – CD Extremadura · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T21:07:20+01:00",
     "nuevos": 0,
@@ -13146,27 +13171,6 @@
    },
    {
     "hora": "2026-11-01T02:08:16+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T02:07:22+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
