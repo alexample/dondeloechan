@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T15:07:22+01:00",
+ "actualizado": "2026-11-01T16:05:38+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8576,7 +8576,59 @@
    "localId": "get",
    "provisional": false,
    "visitante": "Sevilla FC",
-   "visitanteId": "sev"
+   "visitanteId": "sev",
+   "marcador": [
+    3,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "19'",
+     "seg": 1113,
+     "j": "Enrique Salas",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4076,
+     "j": "Enes Ünal",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "73'",
+     "seg": 4380,
+     "j": "Martín Satriano",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Manu Bueno",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+4'",
+     "seg": 5400,
+     "j": "Orel Mangala",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-12-eld-gra",
@@ -8591,7 +8643,32 @@
    "localId": "eld",
    "provisional": false,
    "visitante": "Granada CF",
-   "visitanteId": "gra"
+   "visitanteId": "gra",
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3562,
+     "j": "Rubén Alcaraz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Owen Mira Chukwuemeka",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-juventud-torremolinos-aguilas-fc",
@@ -10528,16 +10605,6 @@
      23
     ],
     [
-     "sev",
-     11,
-     6,
-     2,
-     3,
-     17,
-     16,
-     20
-    ],
-    [
      "rso",
      10,
      6,
@@ -10546,6 +10613,16 @@
      19,
      18,
      19
+    ],
+    [
+     "sev",
+     11,
+     5,
+     2,
+     4,
+     17,
+     19,
+     17
     ],
     [
      "ath",
@@ -10595,6 +10672,16 @@
      4,
      15,
      20,
+     12
+    ],
+    [
+     "get",
+     11,
+     3,
+     3,
+     5,
+     8,
+     16,
      12
     ],
     [
@@ -10658,16 +10745,6 @@
      10
     ],
     [
-     "get",
-     11,
-     2,
-     3,
-     6,
-     5,
-     16,
-     9
-    ],
-    [
      "val",
      10,
      1,
@@ -10723,6 +10800,16 @@
      23
     ],
     [
+     "gra",
+     12,
+     7,
+     2,
+     3,
+     20,
+     14,
+     23
+    ],
+    [
      "gir",
      12,
      6,
@@ -10730,16 +10817,6 @@
      3,
      22,
      11,
-     21
-    ],
-    [
-     "gra",
-     12,
-     6,
-     3,
-     3,
-     18,
-     14,
      21
     ],
     [
@@ -10803,16 +10880,6 @@
      16
     ],
     [
-     "eld",
-     12,
-     4,
-     3,
-     5,
-     13,
-     15,
-     15
-    ],
-    [
      "ten",
      11,
      3,
@@ -10820,6 +10887,16 @@
      3,
      13,
      15,
+     14
+    ],
+    [
+     "eld",
+     12,
+     4,
+     2,
+     6,
+     13,
+     17,
      14
     ],
     [
@@ -12172,9 +12249,45 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T15:07:22+01:00",
-  "cambio": "2026-11-01T15:07:22+01:00",
+  "comprobado": "2026-11-01T16:05:38+01:00",
+  "cambio": "2026-11-01T16:05:38+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T16:05:38+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 2,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Getafe CF 3-1 Sevilla FC",
+     "Resultado: CD Eldense 0-2 Granada CF"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-11-get-sev",
+       "t": "Getafe CF 3-1 Sevilla FC"
+      },
+      {
+       "id": "2627-2-12-eld-gra",
+       "t": "CD Eldense 0-2 Granada CF"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T15:07:22+01:00",
     "nuevos": 0,
@@ -12798,30 +12911,6 @@
     "tablas": [
      "Primera",
      "Segunda"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T19:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Segunda",
-     "Primera Federación"
     ],
     "detalle": [],
     "avisos": 0,
