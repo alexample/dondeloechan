@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T14:07:21+01:00",
+ "actualizado": "2026-11-01T15:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8552,7 +8552,6 @@
    "local": "Barakaldo CF",
    "localAbbr": "BAR",
    "localId": "barakaldo-cf",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "provisional": false,
    "visitante": "Pontevedra",
    "visitanteAbbr": "PON",
@@ -10529,6 +10528,16 @@
      23
     ],
     [
+     "sev",
+     11,
+     6,
+     2,
+     3,
+     17,
+     16,
+     20
+    ],
+    [
      "rso",
      10,
      6,
@@ -10537,16 +10546,6 @@
      19,
      18,
      19
-    ],
-    [
-     "sev",
-     11,
-     5,
-     3,
-     3,
-     16,
-     16,
-     18
     ],
     [
      "ath",
@@ -10662,11 +10661,11 @@
      "get",
      11,
      2,
-     4,
+     3,
+     6,
      5,
-     5,
-     15,
-     10
+     16,
+     9
     ],
     [
      "val",
@@ -12173,9 +12172,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T14:07:21+01:00",
-  "cambio": "2026-11-01T14:07:21+01:00",
+  "comprobado": "2026-11-01T15:07:22+01:00",
+  "cambio": "2026-11-01T15:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T15:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T14:07:21+01:00",
     "nuevos": 0,
@@ -12805,57 +12827,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T18:42:44+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 5,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Rayo Vallecano 3-0 RC Celta",
-     "Resultado: SD Eibar 1-1 UD Almería",
-     "Resultado: Bilbao Athletic 3-1 CP Cacereño",
-     "Resultado: UD Logroñés 0-1 Mirandés",
-     "Resultado: Racing Ferrol 0-0 Ponferradina"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-11-ray-cel",
-       "t": "Rayo Vallecano 3-0 RC Celta"
-      },
-      {
-       "id": "2627-2-12-eib-alm",
-       "t": "SD Eibar 1-1 UD Almería"
-      },
-      {
-       "id": "2627-5-10-bilbao-athletic-cp-cacereno",
-       "t": "Bilbao Athletic 3-1 CP Cacereño"
-      },
-      {
-       "id": "2627-5-10-ud-logrones-mirandes",
-       "t": "UD Logroñés 0-1 Mirandés"
-      },
-      {
-       "id": "2627-5-10-racing-ferrol-ponferradina",
-       "t": "Racing Ferrol 0-0 Ponferradina"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-12-sev-ala",
