@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T17:07:21+01:00",
+ "actualizado": "2026-11-01T18:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -8687,7 +8687,13 @@
    "provisional": false,
    "visitante": "Águilas FC",
    "visitanteAbbr": "AGU",
-   "visitanteId": "aguilas-fc"
+   "visitanteId": "aguilas-fc",
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-1-11-rac-rma",
@@ -10815,7 +10821,7 @@
      7,
      1,
      4,
-     12,
+     13,
      13,
      22
     ],
@@ -10986,7 +10992,7 @@
      2,
      9,
      10,
-     26,
+     27,
      5
     ]
    ]
@@ -12249,9 +12255,39 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-01T17:07:21+01:00",
-  "cambio": "2026-11-01T17:07:21+01:00",
+  "comprobado": "2026-11-01T18:07:21+01:00",
+  "cambio": "2026-11-01T18:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-01T18:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Juventud Torremolinos 0-0 Águilas FC"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-10-juventud-torremolinos-aguilas-fc",
+       "t": "Juventud Torremolinos 0-0 Águilas FC"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC – Deportivo Alavés"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-01T17:07:21+01:00",
     "nuevos": 0,
@@ -12863,31 +12899,6 @@
     "canales": 2,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-10-31T22:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Segunda",
-     "Primera Federación"
-    ],
     "detalle": [],
     "avisos": 0,
     "items": {
