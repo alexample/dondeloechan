@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T22:07:25+01:00",
+ "actualizado": "2026-11-02T23:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -9491,7 +9491,41 @@
    "provisional": false,
    "visitante": "Gimnàstic de Tarragona",
    "visitanteAbbr": "NAS",
-   "visitanteId": "gimnastic-de-tarragona"
+   "visitanteId": "gimnastic-de-tarragona",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1740,
+     "j": "Joseda",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4860,
+     "j": "Diego Collado",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90+8'",
+     "seg": 5448,
+     "j": "Darío Ramírez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-11-dep-osa",
@@ -9508,7 +9542,41 @@
    "nota": "Se puede ver gratis en la app de DAZN creando una cuenta.",
    "provisional": false,
    "visitante": "CA Osasuna",
-   "visitanteId": "osa"
+   "visitanteId": "osa",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1918,
+     "j": "Ante Budimir",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "64'",
+     "seg": 3833,
+     "j": "Mario Soriano Carreno",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5205,
+     "j": "Bil Nsongo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-12-mll-cad",
@@ -9524,7 +9592,41 @@
    "localId": "mll",
    "provisional": false,
    "visitante": "Cádiz CF",
-   "visitanteId": "cad"
+   "visitanteId": "cad",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2970,
+     "j": "Antonio Cordero",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3740,
+     "j": "Pablo Torre",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5335,
+     "j": "Fuentes",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j4-galatasaray-stuttgart",
@@ -11197,13 +11299,13 @@
      15
     ],
     [
-     "osa",
+     "dep",
      11,
-     4,
-     2,
+     3,
      5,
-     11,
-     20,
+     3,
+     15,
+     14,
      14
     ],
     [
@@ -11267,13 +11369,13 @@
      11
     ],
     [
-     "dep",
+     "osa",
      11,
+     3,
      2,
-     5,
-     4,
-     13,
-     14,
+     6,
+     11,
+     22,
      11
     ],
     [
@@ -11372,6 +11474,16 @@
      23
     ],
     [
+     "mll",
+     12,
+     6,
+     4,
+     2,
+     15,
+     7,
+     22
+    ],
+    [
      "spo",
      12,
      7,
@@ -11400,16 +11512,6 @@
      17,
      13,
      21
-    ],
-    [
-     "mll",
-     12,
-     5,
-     5,
-     2,
-     13,
-     6,
-     20
     ],
     [
      "ovi",
@@ -11502,16 +11604,6 @@
      12
     ],
     [
-     "cad",
-     12,
-     2,
-     5,
-     5,
-     14,
-     14,
-     11
-    ],
-    [
      "rsb",
      12,
      3,
@@ -11520,6 +11612,16 @@
      15,
      22,
      11
+    ],
+    [
+     "cad",
+     12,
+     2,
+     4,
+     6,
+     15,
+     16,
+     10
     ],
     [
      "and",
@@ -12811,9 +12913,45 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T22:07:25+01:00",
-  "cambio": "2026-11-02T22:07:25+01:00",
+  "comprobado": "2026-11-02T23:07:21+01:00",
+  "cambio": "2026-11-02T23:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T23:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 3,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: RC Deportivo 2-1 CA Osasuna",
+     "Resultado: RCD Mallorca 2-1 Cádiz CF",
+     "Resultado: SD Huesca 2-0 Gimnàstic de Tarragona"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-11-dep-osa",
+       "t": "RC Deportivo 2-1 CA Osasuna"
+      },
+      {
+       "id": "2627-2-12-mll-cad",
+       "t": "RCD Mallorca 2-1 Cádiz CF"
+      },
+      {
+       "id": "2627-5-10-sd-huesca-gimnastic-de-tarragona",
+       "t": "SD Huesca 2-0 Gimnàstic de Tarragona"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T22:07:25+01:00",
     "nuevos": 0,
@@ -13313,22 +13451,6 @@
    },
    {
     "hora": "2026-11-02T02:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-02T01:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
