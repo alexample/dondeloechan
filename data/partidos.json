@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T00:07:21+01:00",
+ "actualizado": "2026-11-02T09:07:23+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11766,6 +11766,17 @@
        "Racing Ferrol"
       ],
       [
+       "cd-extremadura",
+       10,
+       5,
+       1,
+       4,
+       19,
+       10,
+       16,
+       "CD Extremadura"
+      ],
+      [
        "bilbao-athletic",
        10,
        4,
@@ -11819,17 +11830,6 @@
        6,
        14,
        "Ponferradina"
-      ],
-      [
-       "cd-extremadura",
-       9,
-       4,
-       1,
-       4,
-       16,
-       10,
-       13,
-       "CD Extremadura"
       ],
       [
        "real-union",
@@ -11899,12 +11899,12 @@
       ],
       [
        "unionistas-de-salamanca",
-       9,
+       10,
        3,
        1,
-       5,
+       6,
        12,
-       15,
+       18,
        10,
        "Unionistas de Salamanca"
       ],
@@ -12002,6 +12002,17 @@
        "Real Jaén"
       ],
       [
+       "hercules",
+       10,
+       5,
+       1,
+       4,
+       10,
+       11,
+       16,
+       "Hércules"
+      ],
+      [
        "alcorcon",
        10,
        3,
@@ -12044,17 +12055,6 @@
        14,
        14,
        "Gimnàstic de Tarragona"
-      ],
-      [
-       "hercules",
-       9,
-       4,
-       1,
-       4,
-       8,
-       11,
-       13,
-       "Hércules"
       ],
       [
        "algeciras-cf",
@@ -12124,12 +12124,12 @@
       ],
       [
        "rayo-majadahonda",
-       9,
+       10,
        2,
        1,
-       6,
        7,
-       11,
+       7,
+       13,
        7,
        "Rayo Majadahonda"
       ],
@@ -12573,9 +12573,27 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T08:07:20+01:00",
-  "cambio": "2026-11-02T00:07:21+01:00",
+  "comprobado": "2026-11-02T09:07:23+01:00",
+  "cambio": "2026-11-02T09:07:23+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T09:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T08:07:20+01:00",
     "nuevos": 0,
@@ -13130,27 +13148,6 @@
        "t": "Antequera 0-1 Real Murcia"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T13:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-12-sev-ala",
