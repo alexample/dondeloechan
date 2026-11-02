@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T18:07:21+01:00",
+ "actualizado": "2026-11-02T19:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -9278,7 +9278,59 @@
    "localId": "ovi",
    "provisional": false,
    "visitante": "UD Las Palmas",
-   "visitanteId": "lpa"
+   "visitanteId": "lpa",
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "21'",
+     "seg": 1236,
+     "j": "Manu Fuster",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "26'",
+     "seg": 1542,
+     "j": "Jesé",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3190,
+     "j": "Taisei Miyashiro",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3681,
+     "j": "Carlos Domínguez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4772,
+     "j": "Mikel Goti",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-real-jaen-algeciras-cf",
@@ -10395,7 +10447,7 @@
     "mplus7",
     "orange1"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-13-cor-ceu",
@@ -10410,7 +10462,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-13-leg-alb",
@@ -10425,7 +10477,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-11-cartagena-ue-sant-andreu",
@@ -10447,7 +10499,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "CAR",
    "visitanteAbbr": "SAN",
    "etiqueta": "Grupo 2",
@@ -10468,7 +10520,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "UNI",
    "visitanteAbbr": "ZAM",
    "etiqueta": "Grupo 1"
@@ -11278,6 +11330,16 @@
      16
     ],
     [
+     "vll",
+     12,
+     4,
+     3,
+     5,
+     19,
+     17,
+     15
+    ],
+    [
      "ten",
      11,
      3,
@@ -11308,23 +11370,13 @@
      13
     ],
     [
-     "vll",
-     11,
-     3,
-     3,
-     5,
-     16,
-     16,
-     12
-    ],
-    [
      "leg",
-     11,
+     12,
      3,
      3,
-     5,
-     7,
-     16,
+     6,
+     8,
+     19,
      12
     ],
     [
@@ -12637,9 +12689,60 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T18:07:21+01:00",
-  "cambio": "2026-11-02T18:07:21+01:00",
+  "comprobado": "2026-11-02T19:07:22+01:00",
+  "cambio": "2026-11-02T19:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T19:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 5,
+    "resultados": 1,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Real Oviedo 2-3 UD Las Palmas",
+     "Canal confirmado: CA Osasuna – Athletic Club",
+     "Canal confirmado: Córdoba CF – AD Ceuta FC",
+     "Canal confirmado: CD Leganés – Albacete BP",
+     "Canal confirmado: Cartagena – UE Sant Andreu",
+     "Canal confirmado: Unionistas de Salamanca – Zamora"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-2-12-ovi-lpa",
+       "t": "Real Oviedo 2-3 UD Las Palmas"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-osa-ath",
+       "t": "CA Osasuna – Athletic Club · confirmado"
+      },
+      {
+       "id": "2627-2-13-cor-ceu",
+       "t": "Córdoba CF – AD Ceuta FC · confirmado"
+      },
+      {
+       "id": "2627-2-13-leg-alb",
+       "t": "CD Leganés – Albacete BP · confirmado"
+      },
+      {
+       "id": "2627-5-11-cartagena-ue-sant-andreu",
+       "t": "Cartagena – UE Sant Andreu · confirmado"
+      },
+      {
+       "id": "2627-5-11-unionistas-de-salamanca-zamora",
+       "t": "Unionistas de Salamanca – Zamora · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T18:07:21+01:00",
     "nuevos": 0,
@@ -13092,31 +13195,6 @@
       }
      ],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T22:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 0,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Canal confirmado: Real Avilés Industrial – CD Extremadura"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-11-real-aviles-industrial-cd-extremadura",
-       "t": "Real Avilés Industrial – CD Extremadura · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
