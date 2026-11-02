@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T16:07:23+01:00",
+ "actualizado": "2026-11-02T16:46:59+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -9198,7 +9198,71 @@
    "provisional": false,
    "visitante": "FC Andorra",
    "visitanteId": "and",
-   "goles": []
+   "goles": [
+    {
+     "t": "g",
+     "min": "3'",
+     "seg": 132,
+     "j": "Christian Gomis",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2339,
+     "j": "Enric Gallego",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4963,
+     "j": "Lautaro De León",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "83'",
+     "seg": 4971,
+     "j": "Lautaro De León",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "85'",
+     "seg": 5050,
+     "j": "Dani Martín",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5233,
+     "j": "Stefan Golubović",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+7'",
+     "seg": 5400,
+     "j": "Jesús Owono",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-12-ovi-lpa",
@@ -10215,7 +10279,7 @@
    "canales": [
     "daznll"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-13-cad-ovi",
@@ -10231,7 +10295,7 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-11-alcorcon-real-jaen",
@@ -10248,7 +10312,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "ALC",
    "visitanteAbbr": "JAE",
    "etiqueta": "Grupo 2"
@@ -10266,7 +10330,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "ANT",
    "visitanteAbbr": "MAJ",
    "etiqueta": "Grupo 2",
@@ -10285,7 +10349,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "BAR",
    "visitanteAbbr": "RUN",
    "etiqueta": "Grupo 1",
@@ -10311,7 +10375,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "PON",
    "visitanteAbbr": "OUR",
    "etiqueta": "Grupo 1",
@@ -11175,12 +11239,12 @@
     ],
     [
      "ovi",
-     11,
+     12,
      5,
      3,
-     3,
+     4,
      15,
-     12,
+     14,
      18
     ],
     [
@@ -11191,6 +11255,16 @@
      3,
      12,
      11,
+     17
+    ],
+    [
+     "lpa",
+     12,
+     5,
+     2,
+     5,
+     16,
+     19,
      17
     ],
     [
@@ -11205,13 +11279,13 @@
     ],
     [
      "ten",
-     12,
+     11,
      3,
-     6,
+     5,
      3,
+     13,
      15,
-     17,
-     15
+     14
     ],
     [
      "eld",
@@ -11221,16 +11295,6 @@
      6,
      13,
      17,
-     14
-    ],
-    [
-     "lpa",
-     11,
-     4,
-     2,
-     5,
-     14,
-     19,
      14
     ],
     [
@@ -11264,16 +11328,6 @@
      12
     ],
     [
-     "and",
-     12,
-     3,
-     2,
-     7,
-     17,
-     22,
-     11
-    ],
-    [
      "rsb",
      12,
      3,
@@ -11291,6 +11345,16 @@
      5,
      14,
      14,
+     10
+    ],
+    [
+     "and",
+     11,
+     3,
+     1,
+     7,
+     15,
+     20,
      10
     ],
     [
@@ -12573,9 +12637,59 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T16:07:23+01:00",
-  "cambio": "2026-11-02T16:07:23+01:00",
+  "comprobado": "2026-11-02T16:46:59+01:00",
+  "cambio": "2026-11-02T16:46:59+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T16:46:59+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Canal confirmado: RCD Espanyol – RC Deportivo",
+     "Canal confirmado: Cádiz CF – Real Oviedo",
+     "Canal confirmado: Alcorcón – Real Jaén",
+     "Canal confirmado: Barakaldo CF – Real Unión",
+     "Canal confirmado: Pontevedra – UD Ourense",
+     "Canal confirmado: Antequera – Rayo Majadahonda"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-esp-dep",
+       "t": "RCD Espanyol – RC Deportivo · confirmado"
+      },
+      {
+       "id": "2627-2-13-cad-ovi",
+       "t": "Cádiz CF – Real Oviedo · confirmado"
+      },
+      {
+       "id": "2627-5-11-alcorcon-real-jaen",
+       "t": "Alcorcón – Real Jaén · confirmado"
+      },
+      {
+       "id": "2627-5-11-barakaldo-cf-real-union",
+       "t": "Barakaldo CF – Real Unión · confirmado"
+      },
+      {
+       "id": "2627-5-11-pontevedra-ud-ourense",
+       "t": "Pontevedra – UD Ourense · confirmado"
+      },
+      {
+       "id": "2627-5-11-antequera-rayo-majadahonda",
+       "t": "Antequera – Rayo Majadahonda · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T16:07:23+01:00",
     "nuevos": 0,
@@ -13042,31 +13156,6 @@
       {
        "id": "2627-2-13-cas-eib",
        "t": "CD Castellón – SD Eibar · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T20:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Segunda",
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
       }
      ],
      "horas": [],
