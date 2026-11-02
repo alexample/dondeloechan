@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T20:07:24+01:00",
+ "actualizado": "2026-11-02T21:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -6327,22 +6327,6 @@
    "estado": "final"
   },
   {
-   "id": "2627-3-primera-ronda-salamanca-uds-cel",
-   "canales": [
-    "mliga"
-   ],
-   "inicio": "2026-10-28T21:00:00+01:00",
-   "jornada": "Primera ronda",
-   "liga": 3,
-   "local": "Salamanca UDS",
-   "localAbbr": "SAL",
-   "localId": "salamanca-uds",
-   "provisional": false,
-   "visitante": "Celta de Vigo",
-   "visitanteId": "cel",
-   "goles": []
-  },
-  {
    "id": "2627-3-primera-ronda-cd-numancia-ovi",
    "canales": [
     {
@@ -9350,7 +9334,59 @@
    "provisional": false,
    "visitante": "Algeciras CF",
    "visitanteAbbr": "ALG",
-   "visitanteId": "algeciras-cf"
+   "visitanteId": "algeciras-cf",
+   "marcador": [
+    3,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 600,
+     "j": "Moha Keita",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3360,
+     "j": "Mario Martos",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3600,
+     "j": "Mario Martos",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "74'",
+     "seg": 4440,
+     "j": "Raúl Rubio",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "85'",
+     "seg": 5100,
+     "j": "Joe James Riley",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-12-vll-leg",
@@ -9365,7 +9401,77 @@
    "localId": "vll",
    "provisional": false,
    "visitante": "CD Leganés",
-   "visitanteId": "leg"
+   "visitanteId": "leg",
+   "marcador": [
+    4,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "6'",
+     "seg": 330,
+     "j": "Miguel Rubio",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "21'",
+     "seg": 1219,
+     "j": "Álex Millán",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1434,
+     "j": "Miguel Rubio",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "30'",
+     "seg": 1764,
+     "j": "Adrián Arnun",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3199,
+     "j": "Tai Abed",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4074,
+     "j": "Álvaro Morata",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Álvaro Morata",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-10-sd-huesca-gimnastic-de-tarragona",
@@ -10537,7 +10643,7 @@
    "canales": [
     "daznll"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-13-gra-ten",
@@ -10552,7 +10658,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-11-real-zaragoza-sd-huesca",
@@ -10583,7 +10689,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "ZAR",
    "visitanteAbbr": "HUE",
    "etiqueta": "Grupo 2"
@@ -10998,6 +11104,22 @@
    "visitante": "Betis",
    "visitanteId": "bet",
    "goles": []
+  },
+  {
+   "id": "2627-3-primera-ronda-salamanca-uds-cel",
+   "canales": [
+    "mliga"
+   ],
+   "inicio": "2026-11-13T21:00:00+01:00",
+   "jornada": "Primera ronda",
+   "liga": 3,
+   "local": "Salamanca UDS",
+   "localAbbr": "SAL",
+   "localId": "salamanca-uds",
+   "provisional": false,
+   "visitante": "Celta de Vigo",
+   "visitanteId": "cel",
+   "goles": []
   }
  ],
  "clasificacion": {
@@ -11085,6 +11207,16 @@
      12
     ],
     [
+     "dep",
+     11,
+     2,
+     6,
+     3,
+     13,
+     13,
+     12
+    ],
+    [
      "cel",
      11,
      2,
@@ -11125,14 +11257,14 @@
      12
     ],
     [
-     "dep",
-     10,
-     2,
-     5,
+     "osa",
+     11,
      3,
-     13,
-     13,
-     11
+     3,
+     5,
+     10,
+     20,
+     12
     ],
     [
      "esp",
@@ -11142,16 +11274,6 @@
      6,
      13,
      14,
-     11
-    ],
-    [
-     "osa",
-     10,
-     3,
-     2,
-     5,
-     10,
-     20,
      11
     ],
     [
@@ -11281,13 +11403,13 @@
     ],
     [
      "mll",
-     11,
+     12,
      5,
-     4,
+     5,
      2,
      13,
      6,
-     19
+     20
     ],
     [
      "ovi",
@@ -11336,7 +11458,7 @@
      3,
      5,
      20,
-     18,
+     19,
      15
     ],
     [
@@ -11375,9 +11497,19 @@
      3,
      3,
      6,
-     9,
+     10,
      20,
      12
+    ],
+    [
+     "cad",
+     12,
+     2,
+     5,
+     5,
+     14,
+     14,
+     11
     ],
     [
      "rsb",
@@ -11388,16 +11520,6 @@
      15,
      22,
      11
-    ],
-    [
-     "cad",
-     11,
-     2,
-     4,
-     5,
-     14,
-     14,
-     10
     ],
     [
      "and",
@@ -12689,9 +12811,62 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T20:07:24+01:00",
-  "cambio": "2026-11-02T20:07:24+01:00",
+  "comprobado": "2026-11-02T21:07:21+01:00",
+  "cambio": "2026-11-02T21:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T21:07:21+01:00",
+    "nuevos": 0,
+    "horas": 1,
+    "canales": 3,
+    "resultados": 2,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Real Valladolid 4-3 CD Leganés",
+     "Canal confirmado: Valencia CF – Real Madrid",
+     "Canal confirmado: Granada CF – CD Tenerife",
+     "Canal confirmado: Real Zaragoza – SD Huesca",
+     "Nueva hora: Salamanca UDS – Celta de Vigo, 13/11 21:00",
+     "Resultado: Real Jaén 3-2 Algeciras CF"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-2-12-vll-leg",
+       "t": "Real Valladolid 4-3 CD Leganés"
+      },
+      {
+       "id": "2627-5-10-real-jaen-algeciras-cf",
+       "t": "Real Jaén 3-2 Algeciras CF"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-12-val-rma",
+       "t": "Valencia CF – Real Madrid · confirmado"
+      },
+      {
+       "id": "2627-2-13-gra-ten",
+       "t": "Granada CF – CD Tenerife · confirmado"
+      },
+      {
+       "id": "2627-5-11-real-zaragoza-sd-huesca",
+       "t": "Real Zaragoza – SD Huesca · confirmado"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-3-primera-ronda-salamanca-uds-cel",
+       "t": "Salamanca UDS – Celta de Vigo: 13/11 a las 21:00"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T20:07:24+01:00",
     "nuevos": 0,
@@ -13157,24 +13332,6 @@
     "canales": 0,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-02T00:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
     "detalle": [],
     "avisos": 0,
     "items": {
