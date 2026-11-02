@@ -12573,9 +12573,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T10:07:31+01:00",
+  "comprobado": "2026-11-02T11:07:20+01:00",
   "cambio": "2026-11-02T09:07:23+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T11:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T10:07:31+01:00",
     "nuevos": 0,
@@ -13105,29 +13121,6 @@
        "t": "CD Eldense 0-2 Granada CF"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T15:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-12-sev-ala",
