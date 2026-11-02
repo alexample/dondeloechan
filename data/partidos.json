@@ -12637,9 +12637,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T16:46:59+01:00",
+  "comprobado": "2026-11-02T17:07:32+01:00",
   "cambio": "2026-11-02T16:46:59+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T17:07:32+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T16:46:59+01:00",
     "nuevos": 0,
@@ -13113,49 +13129,6 @@
       {
        "id": "2627-1-12-sev-ala",
        "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T20:38:57+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 3,
-    "tablas": [],
-    "detalle": [
-     "Resultado: Elche CF 0-1 Valencia CF",
-     "Resultado: Burgos CF 1-1 CD Castellón",
-     "Canal confirmado: CD Castellón – SD Eibar",
-     "Resultado: Zamora 1-3 Deportivo Fabril"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-11-elc-val",
-       "t": "Elche CF 0-1 Valencia CF"
-      },
-      {
-       "id": "2627-2-12-bur-cas",
-       "t": "Burgos CF 1-1 CD Castellón"
-      },
-      {
-       "id": "2627-5-10-zamora-deportivo-fabril",
-       "t": "Zamora 1-3 Deportivo Fabril"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-2-13-cas-eib",
-       "t": "CD Castellón – SD Eibar · confirmado"
       }
      ],
      "horas": [],
