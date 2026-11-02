@@ -12573,9 +12573,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T04:07:21+01:00",
+  "comprobado": "2026-11-02T05:07:20+01:00",
   "cambio": "2026-11-02T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T05:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T04:07:21+01:00",
     "nuevos": 0,
@@ -13234,27 +13250,6 @@
       {
        "id": "2627-6-fase-liga-j3-kobenhavn-fc-iberia-1999",
        "t": "København – FC Iberia 1999 · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T08:30:23+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
       }
      ],
      "horas": [],
