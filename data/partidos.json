@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T09:07:23+01:00",
+ "actualizado": "2026-11-02T13:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -9131,22 +9131,6 @@
    ]
   },
   {
-   "id": "2627-2-12-ten-and",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "inicio": "2026-11-01T21:00:00+01:00",
-   "jornada": "12",
-   "liga": 2,
-   "local": "CD Tenerife",
-   "localId": "ten",
-   "provisional": false,
-   "visitante": "FC Andorra",
-   "visitanteId": "and",
-   "goles": []
-  },
-  {
    "id": "2627-5-10-cd-extremadura-unionistas-de-salamanca",
    "canales": [
     "rfef",
@@ -9199,6 +9183,22 @@
      "pp": false
     }
    ]
+  },
+  {
+   "id": "2627-2-12-ten-and",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "inicio": "2026-11-02T14:00:00+01:00",
+   "jornada": "12",
+   "liga": 2,
+   "local": "CD Tenerife",
+   "localId": "ten",
+   "provisional": false,
+   "visitante": "FC Andorra",
+   "visitanteId": "and",
+   "goles": []
   },
   {
    "id": "2627-2-12-ovi-lpa",
@@ -10169,7 +10169,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "RFE",
    "visitanteAbbr": "LOG",
    "etiqueta": "Grupo 1"
@@ -12573,9 +12573,38 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T12:07:21+01:00",
-  "cambio": "2026-11-02T09:07:23+01:00",
+  "comprobado": "2026-11-02T13:07:21+01:00",
+  "cambio": "2026-11-02T13:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T13:07:21+01:00",
+    "nuevos": 0,
+    "horas": 1,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nueva hora: CD Tenerife – FC Andorra, 02/11 14:00",
+     "Canal confirmado: Racing Ferrol – UD Logroñés"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-11-racing-ferrol-ud-logrones",
+       "t": "Racing Ferrol – UD Logroñés · confirmado"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-12-ten-and",
+       "t": "CD Tenerife – FC Andorra: 02/11 a las 14:00"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T12:07:21+01:00",
     "nuevos": 0,
@@ -13076,27 +13105,6 @@
      "Segunda",
      "Primera Federación"
     ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T16:07:19+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
     "detalle": [],
     "avisos": 0,
     "items": {
