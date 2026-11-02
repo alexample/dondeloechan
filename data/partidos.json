@@ -12573,9 +12573,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-02T05:07:20+01:00",
+  "comprobado": "2026-11-02T06:07:21+01:00",
   "cambio": "2026-11-02T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-02T06:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-02T05:07:20+01:00",
     "nuevos": 0,
@@ -13156,100 +13172,6 @@
       {
        "id": "2627-1-12-sev-ala",
        "t": "Sevilla FC – Deportivo Alavés"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-01T09:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 16,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Canal confirmado: Fenerbahçe – Liverpool",
-     "Canal confirmado: PSV – Club Brugge",
-     "Canal confirmado: Borussia Dortmund – Betis",
-     "Canal confirmado: Porto – Napoli",
-     "Canal confirmado: RC Lens – Como",
-     "Canal confirmado: RB Leipzig – Manchester City",
-     "Canal confirmado: Slavia Praga – Arsenal",
-     "Canal confirmado: Viking – Sabah",
-     "Canal confirmado: Atalanta – FC Kairat",
-     "Canal confirmado: FC Midtjylland – Ajax",
-     "Canal confirmado: Crvena Zvezda – Inter Club d'Escaldes",
-     "Canal confirmado: Getafe CF – Brighton",
-     "Canal confirmado: AS Monaco – Nordsjælland",
-     "Canal confirmado: København – FC Iberia 1999"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC – Deportivo Alavés"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-fenerbahce-liverpool",
-       "t": "Fenerbahçe – Liverpool · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-psv-club-brugge",
-       "t": "PSV – Club Brugge · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-borussia-dortmund-bet",
-       "t": "Borussia Dortmund – Betis · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-porto-napoli",
-       "t": "Porto – Napoli · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-rc-lens-como",
-       "t": "RC Lens – Como · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-rb-leipzig-manchester-city",
-       "t": "RB Leipzig – Manchester City · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-slavia-praga-arsenal",
-       "t": "Slavia Praga – Arsenal · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-viking-sabah",
-       "t": "Viking – Sabah · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
-       "t": "Atalanta – FC Kairat · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
-       "t": "FC Midtjylland – Ajax · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
-       "t": "Crvena Zvezda – Inter Club d'Escaldes · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-get-brighton",
-       "t": "Getafe CF – Brighton · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-as-monaco-nordsjaelland",
-       "t": "AS Monaco – Nordsjælland · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-kobenhavn-fc-iberia-1999",
-       "t": "København – FC Iberia 1999 · confirmado"
       }
      ],
      "horas": [],
