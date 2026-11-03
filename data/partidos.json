@@ -12969,9 +12969,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-03T19:07:31+01:00",
+  "comprobado": "2026-11-03T20:07:26+01:00",
   "cambio": "2026-11-03T19:07:31+01:00",
   "historial": [
+   {
+    "hora": "2026-11-03T20:07:26+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-03T19:07:31+01:00",
     "nuevos": 1,
@@ -13589,42 +13605,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-02T23:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 3,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: RC Deportivo 2-1 CA Osasuna",
-     "Resultado: RCD Mallorca 2-1 Cádiz CF",
-     "Resultado: SD Huesca 2-0 Gimnàstic de Tarragona"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-11-dep-osa",
-       "t": "RC Deportivo 2-1 CA Osasuna"
-      },
-      {
-       "id": "2627-2-12-mll-cad",
-       "t": "RCD Mallorca 2-1 Cádiz CF"
-      },
-      {
-       "id": "2627-5-10-sd-huesca-gimnastic-de-tarragona",
-       "t": "SD Huesca 2-0 Gimnàstic de Tarragona"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
