@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-03T19:07:31+01:00",
+ "actualizado": "2026-11-03T21:07:33+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -9647,7 +9647,27 @@
    "provisional": false,
    "visitante": "Stuttgart",
    "visitanteAbbr": "STU",
-   "visitanteId": "stuttgart"
+   "visitanteId": "stuttgart",
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 675,
+     "j": "Alexey Batrakov",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "15'",
+     "seg": 876,
+     "j": "Alexey Batrakov",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j4-shakhtar-donetsk-sporting-cp",
@@ -9663,7 +9683,18 @@
    "provisional": false,
    "visitante": "Sporting CP",
    "visitanteAbbr": "SCP",
-   "visitanteId": "sporting-cp"
+   "visitanteId": "sporting-cp",
+   "goles": [
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3506,
+     "j": "Issa Doumbia",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-anaitasuna-ala",
@@ -11160,7 +11191,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "MUR",
    "visitanteAbbr": "ALG",
    "etiqueta": "Grupo 2"
@@ -11177,7 +11208,7 @@
    "canales": [
     "mliga"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-13-sab-rsb",
@@ -11262,6 +11293,21 @@
    "localAbbr": "PFR",
    "visitanteAbbr": "CAC",
    "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-2-14-leg-bur",
+   "liga": 2,
+   "jornada": "14",
+   "inicio": "2026-11-13T20:30:00+01:00",
+   "local": "CD Leganés",
+   "localId": "leg",
+   "visitante": "Burgos CF",
+   "visitanteId": "bur",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
   },
   {
    "id": "2627-3-primera-ronda-salamanca-uds-cel",
@@ -12969,9 +13015,47 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-03T20:07:26+01:00",
-  "cambio": "2026-11-03T19:07:31+01:00",
+  "comprobado": "2026-11-03T21:07:33+01:00",
+  "cambio": "2026-11-03T21:07:33+01:00",
   "historial": [
+   {
+    "hora": "2026-11-03T21:07:33+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: CD Leganés – Burgos CF",
+     "Canal confirmado: Atlético de Madrid – FC Barcelona",
+     "Canal confirmado: Real Murcia – Algeciras CF"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-leg-bur",
+       "t": "CD Leganés – Burgos CF"
+      },
+      {
+       "id": "2627-1-12-atm-bar",
+       "t": "Atlético de Madrid – FC Barcelona · confirmado"
+      },
+      {
+       "id": "2627-5-11-real-murcia-algeciras-cf",
+       "t": "Real Murcia – Algeciras CF · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-2-14-leg-bur",
+       "t": "CD Leganés – Burgos CF (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-03T20:07:26+01:00",
     "nuevos": 0,
@@ -13580,22 +13664,6 @@
    },
    {
     "hora": "2026-11-03T00:29:11+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-03T00:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
