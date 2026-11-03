@@ -12949,9 +12949,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-03T17:07:26+01:00",
+  "comprobado": "2026-11-03T18:07:23+01:00",
   "cambio": "2026-11-03T17:07:26+01:00",
   "historial": [
+   {
+    "hora": "2026-11-03T18:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-03T17:07:26+01:00",
     "nuevos": 0,
@@ -13541,59 +13557,6 @@
      "resultados": [],
      "canales": [],
      "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-02T21:07:21+01:00",
-    "nuevos": 0,
-    "horas": 1,
-    "canales": 3,
-    "resultados": 2,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Real Valladolid 4-3 CD Leganés",
-     "Canal confirmado: Valencia CF – Real Madrid",
-     "Canal confirmado: Granada CF – CD Tenerife",
-     "Canal confirmado: Real Zaragoza – SD Huesca",
-     "Nueva hora: Salamanca UDS – Celta de Vigo, 13/11 21:00",
-     "Resultado: Real Jaén 3-2 Algeciras CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-12-vll-leg",
-       "t": "Real Valladolid 4-3 CD Leganés"
-      },
-      {
-       "id": "2627-5-10-real-jaen-algeciras-cf",
-       "t": "Real Jaén 3-2 Algeciras CF"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-12-val-rma",
-       "t": "Valencia CF – Real Madrid · confirmado"
-      },
-      {
-       "id": "2627-2-13-gra-ten",
-       "t": "Granada CF – CD Tenerife · confirmado"
-      },
-      {
-       "id": "2627-5-11-real-zaragoza-sd-huesca",
-       "t": "Real Zaragoza – SD Huesca · confirmado"
-      }
-     ],
-     "horas": [
-      {
-       "id": "2627-3-primera-ronda-salamanca-uds-cel",
-       "t": "Salamanca UDS – Celta de Vigo: 13/11 a las 21:00"
-      }
-     ],
      "nuevos": []
     }
    }
