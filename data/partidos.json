@@ -12944,9 +12944,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-03T16:05:54+01:00",
+  "comprobado": "2026-11-03T16:07:22+01:00",
   "cambio": "2026-11-03T16:05:54+01:00",
   "historial": [
+   {
+    "hora": "2026-11-03T16:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-03T16:05:54+01:00",
     "nuevos": 0,
@@ -13554,57 +13570,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-02T19:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 5,
-    "resultados": 1,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Real Oviedo 2-3 UD Las Palmas",
-     "Canal confirmado: CA Osasuna – Athletic Club",
-     "Canal confirmado: Córdoba CF – AD Ceuta FC",
-     "Canal confirmado: CD Leganés – Albacete BP",
-     "Canal confirmado: Cartagena – UE Sant Andreu",
-     "Canal confirmado: Unionistas de Salamanca – Zamora"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-12-ovi-lpa",
-       "t": "Real Oviedo 2-3 UD Las Palmas"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-12-osa-ath",
-       "t": "CA Osasuna – Athletic Club · confirmado"
-      },
-      {
-       "id": "2627-2-13-cor-ceu",
-       "t": "Córdoba CF – AD Ceuta FC · confirmado"
-      },
-      {
-       "id": "2627-2-13-leg-alb",
-       "t": "CD Leganés – Albacete BP · confirmado"
-      },
-      {
-       "id": "2627-5-11-cartagena-ue-sant-andreu",
-       "t": "Cartagena – UE Sant Andreu · confirmado"
-      },
-      {
-       "id": "2627-5-11-unionistas-de-salamanca-zamora",
-       "t": "Unionistas de Salamanca – Zamora · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
