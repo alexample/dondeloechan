@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-03T12:07:28+01:00",
+ "actualizado": "2026-11-03T14:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -10935,7 +10935,7 @@
    "canales": [
     "daznll"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-13-and-mll",
@@ -10971,7 +10971,7 @@
      "how": "Gratis por internet, en su web o aplicación."
     }
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-11-real-madrid-castilla-hercules",
@@ -12944,9 +12944,37 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-03T13:07:22+01:00",
-  "cambio": "2026-11-03T12:07:28+01:00",
+  "comprobado": "2026-11-03T14:07:21+01:00",
+  "cambio": "2026-11-03T14:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-03T14:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Elche CF – Real Betis",
+     "Canal confirmado: FC Andorra – RCD Mallorca"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-12-elc-bet",
+       "t": "Elche CF – Real Betis · confirmado"
+      },
+      {
+       "id": "2627-2-13-and-mll",
+       "t": "FC Andorra – RCD Mallorca · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-03T13:07:22+01:00",
     "nuevos": 0,
@@ -13572,56 +13600,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-02T16:46:59+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 6,
-    "resultados": 0,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [
-     "Canal confirmado: RCD Espanyol – RC Deportivo",
-     "Canal confirmado: Cádiz CF – Real Oviedo",
-     "Canal confirmado: Alcorcón – Real Jaén",
-     "Canal confirmado: Barakaldo CF – Real Unión",
-     "Canal confirmado: Pontevedra – UD Ourense",
-     "Canal confirmado: Antequera – Rayo Majadahonda"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-esp-dep",
-       "t": "RCD Espanyol – RC Deportivo · confirmado"
-      },
-      {
-       "id": "2627-2-13-cad-ovi",
-       "t": "Cádiz CF – Real Oviedo · confirmado"
-      },
-      {
-       "id": "2627-5-11-alcorcon-real-jaen",
-       "t": "Alcorcón – Real Jaén · confirmado"
-      },
-      {
-       "id": "2627-5-11-barakaldo-cf-real-union",
-       "t": "Barakaldo CF – Real Unión · confirmado"
-      },
-      {
-       "id": "2627-5-11-pontevedra-ud-ourense",
-       "t": "Pontevedra – UD Ourense · confirmado"
-      },
-      {
-       "id": "2627-5-11-antequera-rayo-majadahonda",
-       "t": "Antequera – Rayo Majadahonda · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
