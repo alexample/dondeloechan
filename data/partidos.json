@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-03T14:07:21+01:00",
+ "actualizado": "2026-11-03T16:05:54+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -10988,7 +10988,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "RMC",
    "visitanteAbbr": "HER",
    "etiqueta": "Grupo 2"
@@ -12944,9 +12944,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-03T15:07:24+01:00",
-  "cambio": "2026-11-03T14:07:21+01:00",
+  "comprobado": "2026-11-03T16:05:54+01:00",
+  "cambio": "2026-11-03T16:05:54+01:00",
   "historial": [
+   {
+    "hora": "2026-11-03T16:05:54+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Real Madrid Castilla – Hércules"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-11-real-madrid-castilla-hercules",
+       "t": "Real Madrid Castilla – Hércules · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-03T15:07:24+01:00",
     "nuevos": 0,
@@ -13582,24 +13605,6 @@
        "t": "Unionistas de Salamanca – Zamora · confirmado"
       }
      ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-02T18:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
      "horas": [],
      "nuevos": []
     }
