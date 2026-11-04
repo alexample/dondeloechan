@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-03T23:07:23+01:00",
+ "actualizado": "2026-11-04T08:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -7015,23 +7015,6 @@
    ]
   },
   {
-   "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
-   "canales": [
-    "fanplay"
-   ],
-   "inicio": "2026-10-29T20:00:00+01:00",
-   "jornada": "Primera ronda",
-   "liga": 3,
-   "local": "CP Mijas Las Lagunas",
-   "localAbbr": "MIJ",
-   "localId": "cp-mijas-las-lagunas",
-   "visitante": "Real Jaén",
-   "visitanteAbbr": "JAE",
-   "visitanteId": "real-jaen",
-   "provisional": true,
-   "goles": []
-  },
-  {
    "id": "2627-3-primera-ronda-real-avila-unionistas-de-salamanca",
    "canales": [
     "mcopa"
@@ -11455,6 +11438,23 @@
    "provisional": true
   },
   {
+   "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
+   "canales": [
+    "fanplay"
+   ],
+   "inicio": "2026-11-10T20:00:00+01:00",
+   "jornada": "Primera ronda",
+   "liga": 3,
+   "local": "CP Mijas Las Lagunas",
+   "localAbbr": "MIJ",
+   "localId": "cp-mijas-las-lagunas",
+   "visitante": "Real Jaén",
+   "visitanteAbbr": "JAE",
+   "visitanteId": "real-jaen",
+   "provisional": true,
+   "goles": []
+  },
+  {
    "id": "2627-3-primera-ronda-trival-valderas-leg",
    "canales": [
     "mcopa"
@@ -13264,9 +13264,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-04T07:07:20+01:00",
-  "cambio": "2026-11-03T23:07:23+01:00",
+  "comprobado": "2026-11-04T08:07:22+01:00",
+  "cambio": "2026-11-04T08:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-04T08:07:22+01:00",
+    "nuevos": 0,
+    "horas": 1,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nueva hora: CP Mijas Las Lagunas – Real Jaén, 10/11 20:00"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [
+      {
+       "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
+       "t": "CP Mijas Las Lagunas – Real Jaén: 10/11 a las 20:00"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-04T07:07:20+01:00",
     "nuevos": 0,
@@ -13919,22 +13942,6 @@
        "t": "FCU Craiova 1948 – Klubi Sportiv Egnatia · confirmado"
       }
      ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-03T11:07:23+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
      "horas": [],
      "nuevos": []
     }
