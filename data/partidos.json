@@ -13299,9 +13299,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-04T15:07:22+01:00",
+  "comprobado": "2026-11-04T16:07:24+01:00",
   "cambio": "2026-11-04T14:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-04T16:07:24+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-04T15:07:22+01:00",
     "nuevos": 0,
@@ -13733,74 +13749,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-03T19:07:31+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 9,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Ponferradina – CP Cacereño",
-     "Canal confirmado: RC Celta – Levante UD",
-     "Canal confirmado: Villarreal CF – Getafe CF",
-     "Canal confirmado: Real Sporting – Real Valladolid",
-     "Canal confirmado: UD Las Palmas – CD Eldense",
-     "Canal confirmado: Mirandés – CD Coria",
-     "Canal confirmado: Cultural Leonesa – Ponferradina",
-     "Canal confirmado: Mérida – Bilbao Athletic",
-     "Canal confirmado: AEK Atenas – Real Madrid"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-12-cel-lev",
-       "t": "RC Celta – Levante UD · confirmado"
-      },
-      {
-       "id": "2627-1-12-vil-get",
-       "t": "Villarreal CF – Getafe CF · confirmado"
-      },
-      {
-       "id": "2627-2-13-spo-vll",
-       "t": "Real Sporting – Real Valladolid · confirmado"
-      },
-      {
-       "id": "2627-2-13-lpa-eld",
-       "t": "UD Las Palmas – CD Eldense · confirmado"
-      },
-      {
-       "id": "2627-5-11-mirandes-cd-coria",
-       "t": "Mirandés – CD Coria · confirmado"
-      },
-      {
-       "id": "2627-5-11-cultural-leonesa-ponferradina",
-       "t": "Cultural Leonesa – Ponferradina · confirmado"
-      },
-      {
-       "id": "2627-5-11-merida-bilbao-athletic",
-       "t": "Mérida – Bilbao Athletic · confirmado"
-      },
-      {
-       "id": "2627-5-12-ponferradina-cp-cacereno",
-       "t": "Ponferradina – CP Cacereño"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-aek-atenas-rma",
-       "t": "AEK Atenas – Real Madrid · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-12-ponferradina-cp-cacereno",
-       "t": "Ponferradina – CP Cacereño (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
