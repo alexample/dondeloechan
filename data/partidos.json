@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T18:07:32+01:00",
+ "actualizado": "2026-11-04T19:09:04+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11681,6 +11681,147 @@
    "visitanteAbbr": "MER",
    "etiqueta": "Grupo 1",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-2-14-alm-and",
+   "liga": 2,
+   "jornada": "14",
+   "inicio": "2026-11-14T18:30:00+01:00",
+   "local": "UD Almería",
+   "localId": "alm",
+   "visitante": "FC Andorra",
+   "visitanteId": "and",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-14-mll-cor",
+   "liga": 2,
+   "jornada": "14",
+   "inicio": "2026-11-14T18:30:00+01:00",
+   "local": "RCD Mallorca",
+   "localId": "mll",
+   "visitante": "Córdoba CF",
+   "visitanteId": "cor",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-12-ce-europa-ue-sant-andreu",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-14T18:30:00+01:00",
+   "local": "CE Europa",
+   "localId": "ce-europa",
+   "visitante": "UE Sant Andreu",
+   "visitanteId": "ue-sant-andreu",
+   "canales": [
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "EUR",
+   "visitanteAbbr": "SAN",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Esport3; completo, en FANPLAY TV y FootballClub."
+  },
+  {
+   "id": "2627-5-12-cd-coria-unionistas-de-salamanca",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-14T18:45:00+01:00",
+   "local": "CD Coria",
+   "localId": "cd-coria",
+   "visitante": "Unionistas de Salamanca",
+   "visitanteId": "unionistas-de-salamanca",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "COR",
+   "visitanteAbbr": "UNI",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-12-deportivo-fabril-barakaldo-cf",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-14T18:45:00+01:00",
+   "local": "Deportivo Fabril",
+   "localId": "deportivo-fabril",
+   "visitante": "Barakaldo CF",
+   "visitanteId": "barakaldo-cf",
+   "canales": [
+    {
+     "name": "TVG",
+     "short": "TVG",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Galicia y en la web de la CRTVG."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "FAB",
+   "visitanteAbbr": "BAR",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub."
+  },
+  {
+   "id": "2627-5-12-hercules-villarreal-b",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-14T18:45:00+01:00",
+   "local": "Hércules",
+   "localId": "hercules",
+   "visitante": "Villarreal B",
+   "visitanteId": "villarreal-b",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "HER",
+   "visitanteAbbr": "VIB",
+   "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-5-12-juventud-torremolinos-sd-huesca",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-14T18:45:00+01:00",
+   "local": "Juventud Torremolinos",
+   "localId": "juventud-torremolinos",
+   "visitante": "SD Huesca",
+   "visitanteId": "sd-huesca",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "TOR",
+   "visitanteAbbr": "HUE",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
  ],
  "clasificacion": {
@@ -13372,9 +13513,91 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-04T18:14:10+01:00",
-  "cambio": "2026-11-04T18:07:32+01:00",
+  "comprobado": "2026-11-04T19:09:04+01:00",
+  "cambio": "2026-11-04T19:09:04+01:00",
   "historial": [
+   {
+    "hora": "2026-11-04T19:09:04+01:00",
+    "nuevos": 7,
+    "horas": 0,
+    "canales": 7,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: UD Almería – FC Andorra",
+     "Nuevo partido: RCD Mallorca – Córdoba CF",
+     "Nuevo partido: CE Europa – UE Sant Andreu",
+     "Nuevo partido: Hércules – Villarreal B",
+     "Nuevo partido: Deportivo Fabril – Barakaldo CF",
+     "Nuevo partido: CD Coria – Unionistas de Salamanca",
+     "Nuevo partido: Juventud Torremolinos – SD Huesca"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-alm-and",
+       "t": "UD Almería – FC Andorra"
+      },
+      {
+       "id": "2627-2-14-mll-cor",
+       "t": "RCD Mallorca – Córdoba CF"
+      },
+      {
+       "id": "2627-5-12-ce-europa-ue-sant-andreu",
+       "t": "CE Europa – UE Sant Andreu"
+      },
+      {
+       "id": "2627-5-12-hercules-villarreal-b",
+       "t": "Hércules – Villarreal B"
+      },
+      {
+       "id": "2627-5-12-deportivo-fabril-barakaldo-cf",
+       "t": "Deportivo Fabril – Barakaldo CF"
+      },
+      {
+       "id": "2627-5-12-cd-coria-unionistas-de-salamanca",
+       "t": "CD Coria – Unionistas de Salamanca"
+      },
+      {
+       "id": "2627-5-12-juventud-torremolinos-sd-huesca",
+       "t": "Juventud Torremolinos – SD Huesca"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-2-14-alm-and",
+       "t": "UD Almería – FC Andorra (Segunda)"
+      },
+      {
+       "id": "2627-2-14-mll-cor",
+       "t": "RCD Mallorca – Córdoba CF (Segunda)"
+      },
+      {
+       "id": "2627-5-12-ce-europa-ue-sant-andreu",
+       "t": "CE Europa – UE Sant Andreu (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-hercules-villarreal-b",
+       "t": "Hércules – Villarreal B (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-deportivo-fabril-barakaldo-cf",
+       "t": "Deportivo Fabril – Barakaldo CF (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-cd-coria-unionistas-de-salamanca",
+       "t": "CD Coria – Unionistas de Salamanca (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-juventud-torremolinos-sd-huesca",
+       "t": "Juventud Torremolinos – SD Huesca (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-04T18:14:10+01:00",
     "nuevos": 0,
@@ -13808,22 +14031,6 @@
    },
    {
     "hora": "2026-11-03T23:07:23+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-03T22:07:22+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
