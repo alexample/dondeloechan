@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T21:07:23+01:00",
+ "actualizado": "2026-11-04T23:07:27+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -10337,7 +10337,36 @@
    "localId": "borussia-dortmund",
    "provisional": false,
    "visitante": "Betis",
-   "visitanteId": "bet"
+   "visitanteId": "bet",
+   "goles": [
+    {
+     "t": "g",
+     "min": "49'",
+     "seg": 2931,
+     "j": "Fábio Silva",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 4004,
+     "j": "Aitor Ruibal",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "72'",
+     "seg": 4287,
+     "j": "Konstantinos Karetsas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j4-porto-napoli",
@@ -10354,7 +10383,63 @@
    "provisional": false,
    "visitante": "Napoli",
    "visitanteAbbr": "NAP",
-   "visitanteId": "napoli"
+   "visitanteId": "napoli",
+   "goles": [
+    {
+     "t": "g",
+     "min": "11'",
+     "seg": 631,
+     "j": "Jan Bednarek",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "43'",
+     "seg": 2546,
+     "j": "Scott McTominay",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "71'",
+     "seg": 4215,
+     "j": "Gabri Veiga",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4781,
+     "j": "Jakub Kiwior",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "88'",
+     "seg": 5279,
+     "j": "Rafa Marín",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'",
+     "seg": 5354,
+     "j": "Samu Aghehowa",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j4-psv-club-brugge",
@@ -10371,7 +10456,36 @@
    "provisional": false,
    "visitante": "Club Brugge",
    "visitanteAbbr": "BRU",
-   "visitanteId": "club-brugge"
+   "visitanteId": "club-brugge",
+   "goles": [
+    {
+     "t": "g",
+     "min": "25'",
+     "seg": 1452,
+     "j": "Nicolo Tresoldi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3227,
+     "j": "Kodai Sano",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "65'",
+     "seg": 3899,
+     "j": "Carlos Forbs",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j4-rb-leipzig-manchester-city",
@@ -10388,7 +10502,54 @@
    "provisional": false,
    "visitante": "Manchester City",
    "visitanteAbbr": "MCI",
-   "visitanteId": "manchester-city"
+   "visitanteId": "manchester-city",
+   "goles": [
+    {
+     "t": "g",
+     "min": "37'",
+     "seg": 2192,
+     "j": "Castello Lukeba",
+     "lado": "V",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "49'",
+     "seg": 2915,
+     "j": "Ridle Baku",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "58'",
+     "seg": 3454,
+     "j": "Enzo Fernández",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3643,
+     "j": "Antonio Nusa",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "78'",
+     "seg": 4648,
+     "j": "Erling Haaland",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j4-rc-lens-como",
@@ -10405,7 +10566,99 @@
    "provisional": false,
    "visitante": "Como",
    "visitanteAbbr": "COM",
-   "visitanteId": "como"
+   "visitanteId": "como",
+   "goles": [
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 417,
+     "j": "Anastasios Douvikas",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1868,
+     "j": "Anastasios Douvikas",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "40'",
+     "seg": 2377,
+     "j": "Nico Paz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2780,
+     "j": "Lucas Da Cunha",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "53'",
+     "seg": 3169,
+     "j": "Marc-Oliver Kempf",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3362,
+     "j": "Anastasios Douvikas",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3679,
+     "j": "Mattia Liberali",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "65'",
+     "seg": 3853,
+     "j": "Ruben Aguilar",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4132,
+     "j": "Martin Baturina",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Matteo Papaccioli",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j4-slavia-praga-arsenal",
@@ -10422,7 +10675,36 @@
    "provisional": false,
    "visitante": "Arsenal",
    "visitanteAbbr": "ARS",
-   "visitanteId": "arsenal"
+   "visitanteId": "arsenal",
+   "goles": [
+    {
+     "t": "g",
+     "min": "9'",
+     "seg": 509,
+     "j": "Noni Madueke",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2221,
+     "j": "Viktor Gyökeres",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'",
+     "seg": 5348,
+     "j": "Wiktor Nowak",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j4-viking-sabah",
@@ -10439,7 +10721,63 @@
    "provisional": false,
    "visitante": "Sabah",
    "visitanteAbbr": "SBH",
-   "visitanteId": "sabah"
+   "visitanteId": "sabah",
+   "goles": [
+    {
+     "t": "g",
+     "min": "11'",
+     "seg": 643,
+     "j": "Orphé M'Bina",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "27'",
+     "seg": 1573,
+     "j": "Erik Botheim",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4103,
+     "j": "Zlatko Tripic",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "77'",
+     "seg": 4614,
+     "j": "Aden McCarthy",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4822,
+     "j": "Henrik Falchener",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+4'",
+     "seg": 5400,
+     "j": "Erik Botheim",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
@@ -13652,9 +13990,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-04T22:07:27+01:00",
-  "cambio": "2026-11-04T21:07:23+01:00",
+  "comprobado": "2026-11-04T23:07:27+01:00",
+  "cambio": "2026-11-04T23:07:27+01:00",
   "historial": [
+   {
+    "hora": "2026-11-04T23:07:27+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-04T22:07:27+01:00",
     "nuevos": 0,
@@ -14180,22 +14534,6 @@
    },
    {
     "hora": "2026-11-04T02:20:01+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-04T02:07:22+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
