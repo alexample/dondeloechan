@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T19:09:04+01:00",
+ "actualizado": "2026-11-04T21:07:23+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -10071,7 +10071,63 @@
    "localId": "aek-atenas",
    "provisional": false,
    "visitante": "Real Madrid",
-   "visitanteId": "rma"
+   "visitanteId": "rma",
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 671,
+     "j": "Aboubakary Koita",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1914,
+     "j": "Jude Bellingham",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4468,
+     "j": "Stavros Pilios",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "78'",
+     "seg": 4628,
+     "j": "Kylian Mbappé",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+2'",
+     "seg": 5400,
+     "j": "Federico Valverde",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "Aboubakary Koita",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j4-fenerbahce-liverpool",
@@ -10087,7 +10143,54 @@
    "provisional": false,
    "visitante": "Liverpool",
    "visitanteAbbr": "LIV",
-   "visitanteId": "liverpool"
+   "visitanteId": "liverpool",
+   "goles": [
+    {
+     "t": "g",
+     "min": "25'",
+     "seg": 1475,
+     "j": "Trey Nyoni",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1704,
+     "j": "Mason Greenwood",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4105,
+     "j": "Alexander Isak",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "73'",
+     "seg": 4365,
+     "j": "Archie Brown",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "79'",
+     "seg": 4714,
+     "j": "Vedat Muriqi",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-portugalete-real-union",
@@ -11435,7 +11538,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
@@ -11822,6 +11925,42 @@
    "visitanteAbbr": "HUE",
    "etiqueta": "Grupo 2",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-2-14-ovi-gir",
+   "liga": 2,
+   "jornada": "14",
+   "inicio": "2026-11-14T21:00:00+01:00",
+   "local": "Real Oviedo",
+   "localId": "ovi",
+   "visitante": "Girona FC",
+   "visitanteId": "gir",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-12-real-jaen-real-zaragoza",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-14T21:00:00+01:00",
+   "local": "Real Jaén",
+   "localId": "real-jaen",
+   "visitante": "Real Zaragoza",
+   "visitanteId": "real-zaragoza",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "JAE",
+   "visitanteAbbr": "ZAR",
+   "etiqueta": "Grupo 2"
   }
  ],
  "clasificacion": {
@@ -13513,9 +13652,51 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-04T20:07:21+01:00",
-  "cambio": "2026-11-04T19:09:04+01:00",
+  "comprobado": "2026-11-04T21:07:23+01:00",
+  "cambio": "2026-11-04T21:07:23+01:00",
   "historial": [
+   {
+    "hora": "2026-11-04T21:07:23+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Real Oviedo – Girona FC",
+     "Nuevo partido: Real Jaén – Real Zaragoza",
+     "Canal confirmado: CE Sabadell – Real Sociedad B"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-ovi-gir",
+       "t": "Real Oviedo – Girona FC"
+      },
+      {
+       "id": "2627-2-13-sab-rsb",
+       "t": "CE Sabadell – Real Sociedad B · confirmado"
+      },
+      {
+       "id": "2627-5-12-real-jaen-real-zaragoza",
+       "t": "Real Jaén – Real Zaragoza"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-2-14-ovi-gir",
+       "t": "Real Oviedo – Girona FC (Segunda)"
+      },
+      {
+       "id": "2627-5-12-real-jaen-real-zaragoza",
+       "t": "Real Jaén – Real Zaragoza (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-04T20:07:21+01:00",
     "nuevos": 0,
@@ -14015,22 +14196,6 @@
    },
    {
     "hora": "2026-11-04T01:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-04T00:07:22+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
