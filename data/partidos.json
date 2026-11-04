@@ -13264,9 +13264,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-04T08:07:22+01:00",
+  "comprobado": "2026-11-04T09:07:20+01:00",
   "cambio": "2026-11-04T08:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-04T09:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-04T08:07:22+01:00",
     "nuevos": 0,
@@ -13763,185 +13779,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-03T12:07:28+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 36,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: CD Teruel – UD Ibiza",
-     "Canal confirmado: CE Europa – Atlético Madrileño",
-     "Canal confirmado: Arenas Club – Deportivo Fabril",
-     "Canal confirmado: Villarreal B – Juventud Torremolinos",
-     "Canal confirmado: Águilas FC – Gimnàstic de Tarragona",
-     "Canal confirmado: Trabzonspor – Freiburg",
-     "Canal confirmado: FC Thun – Hearts",
-     "Canal confirmado: Lincoln Red Imps – Hajduk Split",
-     "Canal confirmado: KuPS – Gent",
-     "Canal confirmado: AGF Aarhus – SC Braga",
-     "Canal confirmado: Mjällby AIF – Borac Banja Luka",
-     "Canal confirmado: Twente – Pafos FC",
-     "Canal confirmado: Panathinaikos – CSKA Sofia",
-     "Canal confirmado: Lugano – Kauno Žalgiris",
-     "Canal confirmado: Sint-Truiden VV – SK Brann",
-     "Canal confirmado: Riga FC – FKB Jablonec",
-     "Canal confirmado: FCU Craiova 1948 – Klubi Sportiv Egnatia"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-11-cd-teruel-ud-ibiza",
-       "t": "CD Teruel – UD Ibiza · confirmado"
-      },
-      {
-       "id": "2627-5-11-ce-europa-atletico-madrileno",
-       "t": "CE Europa – Atlético Madrileño · confirmado"
-      },
-      {
-       "id": "2627-5-11-arenas-club-deportivo-fabril",
-       "t": "Arenas Club – Deportivo Fabril · confirmado"
-      },
-      {
-       "id": "2627-5-11-villarreal-b-juventud-torremolinos",
-       "t": "Villarreal B – Juventud Torremolinos · confirmado"
-      },
-      {
-       "id": "2627-5-11-aguilas-fc-gimnastic-de-tarragona",
-       "t": "Águilas FC – Gimnàstic de Tarragona · confirmado"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-vil-psg",
-       "t": "Villarreal – PSG"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-bar-aston-villa",
-       "t": "FC Barcelona – Aston Villa"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-manchester-united-roma",
-       "t": "Manchester United – Roma"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-feyenoord-inter",
-       "t": "Feyenoord – Inter"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-lask-slovan-bratislava",
-       "t": "LASK – Slovan Bratislava"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-bod-glimt-lille",
-       "t": "Bodø/Glimt – Lille"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-psv-club-brugge",
-       "t": "PSV – Club Brugge"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-borussia-dortmund-bet",
-       "t": "Borussia Dortmund – Betis"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-porto-napoli",
-       "t": "Porto – Napoli"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-rc-lens-como",
-       "t": "RC Lens – Como"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-rb-leipzig-manchester-city",
-       "t": "RB Leipzig – Manchester City"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-slavia-praga-arsenal",
-       "t": "Slavia Praga – Arsenal"
-      },
-      {
-       "id": "2627-4-fase-liga-j4-viking-sabah",
-       "t": "Viking – Sabah"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
-       "t": "Atalanta – FC Kairat"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-trabzonspor-freiburg",
-       "t": "Trabzonspor – Freiburg · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fc-thun-hearts",
-       "t": "FC Thun – Hearts · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
-       "t": "FC Midtjylland – Ajax"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-lincoln-red-imps-hajduk-split",
-       "t": "Lincoln Red Imps – Hajduk Split · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
-       "t": "Crvena Zvezda – Inter Club d'Escaldes"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-kups-gent",
-       "t": "KuPS – Gent · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
-       "t": "AGF Aarhus – SC Braga · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-mjallby-aif-borac-banja-luka",
-       "t": "Mjällby AIF – Borac Banja Luka · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-get-brighton",
-       "t": "Getafe CF – Brighton"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-twente-pafos-fc",
-       "t": "Twente – Pafos FC · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-as-monaco-nordsjaelland",
-       "t": "AS Monaco – Nordsjælland"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-kobenhavn-fc-iberia-1999",
-       "t": "København – FC Iberia 1999"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-panathinaikos-cska-sofia",
-       "t": "Panathinaikos – CSKA Sofia · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-lugano-kauno-zalgiris",
-       "t": "Lugano – Kauno Žalgiris · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-sint-truiden-vv-sk-brann",
-       "t": "Sint-Truiden VV – SK Brann · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-riga-fc-fkb-jablonec",
-       "t": "Riga FC – FKB Jablonec · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fcu-craiova-1948-klubi-sportiv-egnatia",
-       "t": "FCU Craiova 1948 – Klubi Sportiv Egnatia · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
