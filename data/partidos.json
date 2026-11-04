@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T17:07:19+01:00",
+ "actualizado": "2026-11-04T18:07:32+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -10946,7 +10946,7 @@
    "visitante": "AD Ceuta FC",
    "visitanteId": "ceu",
    "canales": [
-    "hyper",
+    "hyper2",
     "daznhm"
    ],
    "provisional": false
@@ -11367,7 +11367,7 @@
    "visitante": "CD Eldense",
    "visitanteId": "eld",
    "canales": [
-    "hyper",
+    "hyper2",
     "daznhm"
    ],
    "provisional": false
@@ -13372,9 +13372,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-04T17:07:19+01:00",
-  "cambio": "2026-11-04T17:07:19+01:00",
+  "comprobado": "2026-11-04T18:07:32+01:00",
+  "cambio": "2026-11-04T18:07:32+01:00",
   "historial": [
+   {
+    "hora": "2026-11-04T18:07:32+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-13-cor-ceu",
+       "t": "Córdoba CF – AD Ceuta FC"
+      },
+      {
+       "id": "2627-2-13-lpa-eld",
+       "t": "UD Las Palmas – CD Eldense"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-04T17:07:19+01:00",
     "nuevos": 4,
@@ -13821,44 +13846,6 @@
       {
        "id": "2627-5-12-gimnastic-de-tarragona-real-madrid-castilla",
        "t": "Gimnàstic de Tarragona – Real Madrid Castilla (1ª RFEF)"
-      }
-     ]
-    }
-   },
-   {
-    "hora": "2026-11-03T21:07:33+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: CD Leganés – Burgos CF",
-     "Canal confirmado: Atlético de Madrid – FC Barcelona",
-     "Canal confirmado: Real Murcia – Algeciras CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-2-14-leg-bur",
-       "t": "CD Leganés – Burgos CF"
-      },
-      {
-       "id": "2627-1-12-atm-bar",
-       "t": "Atlético de Madrid – FC Barcelona · confirmado"
-      },
-      {
-       "id": "2627-5-11-real-murcia-algeciras-cf",
-       "t": "Real Murcia – Algeciras CF · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-2-14-leg-bur",
-       "t": "CD Leganés – Burgos CF (Segunda)"
       }
      ]
     }
