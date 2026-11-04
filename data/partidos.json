@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T14:07:21+01:00",
+ "actualizado": "2026-11-04T17:07:19+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11608,6 +11608,79 @@
     "daznhm"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-2-14-rsb-spo",
+   "liga": 2,
+   "jornada": "14",
+   "inicio": "2026-11-14T16:15:00+01:00",
+   "local": "Real Sociedad B",
+   "localId": "rsb",
+   "visitante": "Real Sporting",
+   "visitanteId": "spo",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-12-rayo-majadahonda-aguilas-fc",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-14T16:30:00+01:00",
+   "local": "Rayo Majadahonda",
+   "localId": "rayo-majadahonda",
+   "visitante": "Águilas FC",
+   "visitanteId": "aguilas-fc",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "MAJ",
+   "visitanteAbbr": "AGU",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-12-real-union-cultural-leonesa",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-14T16:30:00+01:00",
+   "local": "Real Unión",
+   "localId": "real-union",
+   "visitante": "Cultural Leonesa",
+   "visitanteId": "cultural-leonesa",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "RUN",
+   "visitanteAbbr": "CUL",
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-5-12-ud-ourense-merida",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-14T16:30:00+01:00",
+   "local": "UD Ourense",
+   "localId": "ud-ourense",
+   "visitante": "Mérida",
+   "visitanteId": "merida",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "OUR",
+   "visitanteAbbr": "MER",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
  ],
  "clasificacion": {
@@ -13299,9 +13372,64 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-04T16:07:24+01:00",
-  "cambio": "2026-11-04T14:07:21+01:00",
+  "comprobado": "2026-11-04T17:07:19+01:00",
+  "cambio": "2026-11-04T17:07:19+01:00",
   "historial": [
+   {
+    "hora": "2026-11-04T17:07:19+01:00",
+    "nuevos": 4,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Real Sociedad B – Real Sporting",
+     "Nuevo partido: Real Unión – Cultural Leonesa",
+     "Nuevo partido: Rayo Majadahonda – Águilas FC",
+     "Nuevo partido: UD Ourense – Mérida"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-rsb-spo",
+       "t": "Real Sociedad B – Real Sporting"
+      },
+      {
+       "id": "2627-5-12-real-union-cultural-leonesa",
+       "t": "Real Unión – Cultural Leonesa"
+      },
+      {
+       "id": "2627-5-12-rayo-majadahonda-aguilas-fc",
+       "t": "Rayo Majadahonda – Águilas FC"
+      },
+      {
+       "id": "2627-5-12-ud-ourense-merida",
+       "t": "UD Ourense – Mérida"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-2-14-rsb-spo",
+       "t": "Real Sociedad B – Real Sporting (Segunda)"
+      },
+      {
+       "id": "2627-5-12-real-union-cultural-leonesa",
+       "t": "Real Unión – Cultural Leonesa (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-rayo-majadahonda-aguilas-fc",
+       "t": "Rayo Majadahonda – Águilas FC (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-ud-ourense-merida",
+       "t": "UD Ourense – Mérida (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-04T16:07:24+01:00",
     "nuevos": 0,
@@ -13733,22 +13861,6 @@
        "t": "CD Leganés – Burgos CF (Segunda)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-03T20:07:26+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
