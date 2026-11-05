@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-05T15:07:22+01:00",
+ "actualizado": "2026-11-05T17:07:58+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12407,6 +12407,100 @@
    "localAbbr": "ZAM",
    "visitanteAbbr": "AVI",
    "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-2-14-gra-lpa",
+   "liga": 2,
+   "jornada": "14",
+   "inicio": "2026-11-15T16:15:00+01:00",
+   "local": "Granada CF",
+   "localId": "gra",
+   "visitante": "UD Las Palmas",
+   "visitanteId": "lpa",
+   "canales": [
+    "hyper",
+    "daznhm",
+    {
+     "name": "Replay YouTube",
+     "short": "REP",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de ver en directo y en su web."
+    },
+    {
+     "name": "Televisión Canaria",
+     "short": "TVC",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Canarias y en la web de RTVC."
+    },
+    {
+     "name": "Replay",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
+    }
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-12-algeciras-cf-antequera",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-15T16:30:00+01:00",
+   "local": "Algeciras CF",
+   "localId": "algeciras-cf",
+   "visitante": "Antequera",
+   "visitanteId": "antequera",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ALG",
+   "visitanteAbbr": "ANT",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-12-cd-lugo-mirandes",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-15T16:30:00+01:00",
+   "local": "CD Lugo",
+   "localId": "cd-lugo",
+   "visitante": "Mirandés",
+   "visitanteId": "mirandes",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "LUG",
+   "visitanteAbbr": "MIR",
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-5-12-ud-logrones-arenas-club",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-15T16:30:00+01:00",
+   "local": "UD Logroñés",
+   "localId": "ud-logrones",
+   "visitante": "Arenas Club",
+   "visitanteId": "arenas-club",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "LOG",
+   "visitanteAbbr": "ARE",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
  ],
  "clasificacion": {
@@ -14098,9 +14192,64 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-05T16:07:21+01:00",
-  "cambio": "2026-11-05T15:07:22+01:00",
+  "comprobado": "2026-11-05T17:07:58+01:00",
+  "cambio": "2026-11-05T17:07:58+01:00",
   "historial": [
+   {
+    "hora": "2026-11-05T17:07:58+01:00",
+    "nuevos": 4,
+    "horas": 0,
+    "canales": 5,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Granada CF – UD Las Palmas",
+     "Nuevo partido: CD Lugo – Mirandés",
+     "Nuevo partido: UD Logroñés – Arenas Club",
+     "Nuevo partido: Algeciras CF – Antequera"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-gra-lpa",
+       "t": "Granada CF – UD Las Palmas"
+      },
+      {
+       "id": "2627-5-12-cd-lugo-mirandes",
+       "t": "CD Lugo – Mirandés"
+      },
+      {
+       "id": "2627-5-12-ud-logrones-arenas-club",
+       "t": "UD Logroñés – Arenas Club"
+      },
+      {
+       "id": "2627-5-12-algeciras-cf-antequera",
+       "t": "Algeciras CF – Antequera"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-2-14-gra-lpa",
+       "t": "Granada CF – UD Las Palmas (Segunda)"
+      },
+      {
+       "id": "2627-5-12-cd-lugo-mirandes",
+       "t": "CD Lugo – Mirandés (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-ud-logrones-arenas-club",
+       "t": "UD Logroñés – Arenas Club (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-algeciras-cf-antequera",
+       "t": "Algeciras CF – Antequera (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-05T16:07:21+01:00",
     "nuevos": 0,
@@ -14552,22 +14701,6 @@
        "t": "Real Jaén – Real Zaragoza (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-04T20:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
