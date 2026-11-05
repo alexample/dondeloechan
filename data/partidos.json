@@ -13991,9 +13991,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-05T08:07:24+01:00",
+  "comprobado": "2026-11-05T09:07:23+01:00",
   "cambio": "2026-11-05T08:07:24+01:00",
   "historial": [
+   {
+    "hora": "2026-11-05T09:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-05T08:07:24+01:00",
     "nuevos": 0,
@@ -14529,22 +14545,6 @@
        "t": "Bilbao Athletic – Racing Ferrol (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-04T12:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
