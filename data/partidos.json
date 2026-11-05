@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-05T12:07:20+01:00",
+ "actualizado": "2026-11-05T14:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12372,6 +12372,21 @@
    "visitanteAbbr": "CAR",
    "etiqueta": "Grupo 2",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-2-14-ten-ceu",
+   "liga": 2,
+   "jornada": "14",
+   "inicio": "2026-11-15T14:00:00+01:00",
+   "local": "CD Tenerife",
+   "localId": "ten",
+   "visitante": "AD Ceuta FC",
+   "visitanteId": "ceu",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
   }
  ],
  "clasificacion": {
@@ -14063,9 +14078,37 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-05T13:18:08+01:00",
-  "cambio": "2026-11-05T12:07:20+01:00",
+  "comprobado": "2026-11-05T14:07:22+01:00",
+  "cambio": "2026-11-05T14:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-05T14:07:22+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: CD Tenerife – AD Ceuta FC"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-ten-ceu",
+       "t": "CD Tenerife – AD Ceuta FC"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-2-14-ten-ceu",
+       "t": "CD Tenerife – AD Ceuta FC (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-05T13:18:08+01:00",
     "nuevos": 0,
@@ -14557,31 +14600,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-04T18:07:32+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-2-13-cor-ceu",
-       "t": "Córdoba CF – AD Ceuta FC"
-      },
-      {
-       "id": "2627-2-13-lpa-eld",
-       "t": "UD Las Palmas – CD Eldense"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
