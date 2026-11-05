@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-05T21:59:30+01:00",
+ "actualizado": "2026-11-05T23:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11052,7 +11052,32 @@
    ],
    "provisional": false,
    "localAbbr": "MON",
-   "visitanteAbbr": "NOR"
+   "visitanteAbbr": "NOR",
+   "goles": [
+    {
+     "t": "g",
+     "min": "33'",
+     "seg": 1927,
+     "j": "Mathys Detourbet",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Matthis Abline",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-fcu-craiova-1948-klubi-sportiv-egnatia",
@@ -11069,7 +11094,41 @@
    ],
    "provisional": false,
    "localAbbr": "FCU",
-   "visitanteAbbr": "KLU"
+   "visitanteAbbr": "KLU",
+   "goles": [
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1429,
+     "j": "Alexandru Cicaldau",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1915,
+     "j": "Nicusor Bancu",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "83'",
+     "seg": 4967,
+     "j": "Enea Bitri",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-get-brighton",
@@ -11085,7 +11144,23 @@
     "mlc3"
    ],
    "provisional": false,
-   "visitanteAbbr": "BRI"
+   "visitanteAbbr": "BRI",
+   "goles": [
+    {
+     "t": "g",
+     "min": "64'",
+     "seg": 3795,
+     "j": "Malick Yalcouyé",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-kobenhavn-fc-iberia-1999",
@@ -11102,7 +11177,41 @@
    ],
    "provisional": false,
    "localAbbr": "KOB",
-   "visitanteAbbr": "IBE"
+   "visitanteAbbr": "IBE",
+   "goles": [
+    {
+     "t": "g",
+     "min": "19'",
+     "seg": 1121,
+     "j": "Mohamed Elyounoussi",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "22'",
+     "seg": 1312,
+     "j": "Vahid Selimovic",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "30'",
+     "seg": 1778,
+     "j": "Amiran Dzagania",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-lugano-kauno-zalgiris",
@@ -11119,7 +11228,41 @@
    ],
    "provisional": false,
    "localAbbr": "LUG",
-   "visitanteAbbr": "KAU"
+   "visitanteAbbr": "KAU",
+   "goles": [
+    {
+     "t": "g",
+     "min": "11'",
+     "seg": 660,
+     "j": "Yanis Cimignani",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1438,
+     "j": "Ezgjan Alioski",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1914,
+     "j": "Daniel Correia",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    3,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-panathinaikos-cska-sofia",
@@ -11136,7 +11279,41 @@
    ],
    "provisional": false,
    "localAbbr": "PAN",
-   "visitanteAbbr": "CSK"
+   "visitanteAbbr": "CSK",
+   "goles": [
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2425,
+     "j": "Davide Calabria",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "44'",
+     "seg": 2589,
+     "j": "Dinis Almeida",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4052,
+     "j": "Vicente Taborda",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-riga-fc-fkb-jablonec",
@@ -11153,7 +11330,32 @@
    ],
    "provisional": false,
    "localAbbr": "RIG",
-   "visitanteAbbr": "FKB"
+   "visitanteAbbr": "FKB",
+   "goles": [
+    {
+     "t": "g",
+     "min": "34'",
+     "seg": 2040,
+     "j": "Reginaldo Ramires",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "49'",
+     "seg": 2885,
+     "j": "Sebastian Nebyla",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-sint-truiden-vv-sk-brann",
@@ -11170,7 +11372,32 @@
    ],
    "provisional": false,
    "localAbbr": "SIN",
-   "visitanteAbbr": "BRA"
+   "visitanteAbbr": "BRA",
+   "goles": [
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2838,
+     "j": "Nelson Ishiwatari",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "78'",
+     "seg": 4679,
+     "j": "Ulrick Mathisen",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-twente-pafos-fc",
@@ -11187,7 +11414,59 @@
    ],
    "provisional": false,
    "localAbbr": "TWE",
-   "visitanteAbbr": "PAF"
+   "visitanteAbbr": "PAF",
+   "goles": [
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2340,
+     "j": "Lelê",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3708,
+     "j": "Ruud Nijstad",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "64'",
+     "seg": 3825,
+     "j": "Lelê",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "76'",
+     "seg": 4524,
+     "j": "Sondre Ørjasaeter",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4900,
+     "j": "Daouda Weidmann",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    3,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-5-11-cp-cacereno-cd-lugo",
@@ -14070,6 +14349,94 @@
    "tras": "Jornada 3",
    "filas": [
     [
+     "lugano",
+     3,
+     3,
+     0,
+     0,
+     11,
+     4,
+     9,
+     "Lugano"
+    ],
+    [
+     "panathinaikos",
+     3,
+     3,
+     0,
+     0,
+     9,
+     3,
+     9,
+     "Panathinaikos"
+    ],
+    [
+     "twente",
+     3,
+     3,
+     0,
+     0,
+     8,
+     2,
+     9,
+     "Twente"
+    ],
+    [
+     "as-monaco",
+     3,
+     3,
+     0,
+     0,
+     7,
+     1,
+     9,
+     "AS Monaco"
+    ],
+    [
+     "brighton",
+     3,
+     2,
+     1,
+     0,
+     5,
+     0,
+     7,
+     "Brighton"
+    ],
+    [
+     "sk-brann",
+     3,
+     2,
+     1,
+     0,
+     7,
+     3,
+     7,
+     "SK Brann"
+    ],
+    [
+     "kobenhavn",
+     3,
+     2,
+     1,
+     0,
+     7,
+     3,
+     7,
+     "København"
+    ],
+    [
+     "fcu-craiova-1948",
+     3,
+     2,
+     1,
+     0,
+     6,
+     2,
+     7,
+     "FCU Craiova 1948"
+    ],
+    [
      "mjallby-aif",
      3,
      2,
@@ -14079,6 +14446,17 @@
      1,
      7,
      "Mjällby AIF"
+    ],
+    [
+     "sint-truiden-vv",
+     3,
+     2,
+     1,
+     0,
+     4,
+     1,
+     7,
+     "Sint-Truiden VV"
     ],
     [
      "ajax",
@@ -14092,61 +14470,6 @@
      "Ajax"
     ],
     [
-     "panathinaikos",
-     2,
-     2,
-     0,
-     0,
-     7,
-     2,
-     6,
-     "Panathinaikos"
-    ],
-    [
-     "lugano",
-     2,
-     2,
-     0,
-     0,
-     8,
-     4,
-     6,
-     "Lugano"
-    ],
-    [
-     "sk-brann",
-     2,
-     2,
-     0,
-     0,
-     6,
-     2,
-     6,
-     "SK Brann"
-    ],
-    [
-     "twente",
-     2,
-     2,
-     0,
-     0,
-     5,
-     1,
-     6,
-     "Twente"
-    ],
-    [
-     "as-monaco",
-     2,
-     2,
-     0,
-     0,
-     5,
-     1,
-     6,
-     "AS Monaco"
-    ],
-    [
      "trabzonspor",
      3,
      2,
@@ -14156,17 +14479,6 @@
      3,
      6,
      "Trabzonspor"
-    ],
-    [
-     "sint-truiden-vv",
-     2,
-     2,
-     0,
-     0,
-     3,
-     0,
-     6,
-     "Sint-Truiden VV"
     ],
     [
      "hajduk-split",
@@ -14189,39 +14501,6 @@
      5,
      6,
      "Freiburg"
-    ],
-    [
-     "brighton",
-     2,
-     1,
-     1,
-     0,
-     4,
-     0,
-     4,
-     "Brighton"
-    ],
-    [
-     "kobenhavn",
-     2,
-     1,
-     1,
-     0,
-     5,
-     2,
-     4,
-     "København"
-    ],
-    [
-     "fcu-craiova-1948",
-     2,
-     1,
-     1,
-     0,
-     4,
-     2,
-     4,
-     "FCU Craiova 1948"
     ],
     [
      "crvena-zvezda",
@@ -14268,6 +14547,17 @@
      "Gent"
     ],
     [
+     "riga-fc",
+     3,
+     0,
+     3,
+     0,
+     3,
+     3,
+     3,
+     "Riga FC"
+    ],
+    [
      "fc-thun",
      3,
      1,
@@ -14301,37 +14591,15 @@
      "Lincoln Red Imps"
     ],
     [
-     "nordsjaelland",
-     2,
-     0,
-     2,
-     0,
+     "fkb-jablonec",
      3,
+     0,
+     2,
+     1,
      3,
+     4,
      2,
-     "Nordsjælland"
-    ],
-    [
-     "klubi-sportiv-egnatia",
-     2,
-     0,
-     2,
-     0,
-     2,
-     2,
-     2,
-     "Klubi Sportiv Egnatia"
-    ],
-    [
-     "riga-fc",
-     2,
-     0,
-     2,
-     0,
-     2,
-     2,
-     2,
-     "Riga FC"
+     "FKB Jablonec"
     ],
     [
      "agf-aarhus",
@@ -14343,6 +14611,28 @@
      2,
      2,
      "AGF Aarhus"
+    ],
+    [
+     "nordsjaelland",
+     3,
+     0,
+     2,
+     1,
+     3,
+     5,
+     2,
+     "Nordsjælland"
+    ],
+    [
+     "klubi-sportiv-egnatia",
+     3,
+     0,
+     2,
+     1,
+     2,
+     4,
+     2,
+     "Klubi Sportiv Egnatia"
     ],
     [
      "fc-kairat",
@@ -14357,56 +14647,45 @@
     ],
     [
      "cska-sofia",
-     2,
+     3,
      0,
      1,
-     1,
-     3,
+     2,
      4,
+     6,
      1,
      "CSKA Sofia"
     ],
     [
-     "fkb-jablonec",
-     2,
-     0,
-     1,
-     1,
-     2,
-     3,
-     1,
-     "FKB Jablonec"
-    ],
-    [
-     "pafos-fc",
-     2,
-     0,
-     1,
-     1,
-     2,
-     4,
-     1,
-     "Pafos FC"
-    ],
-    [
      "fc-iberia-1999",
-     2,
+     3,
      0,
      1,
-     1,
-     1,
-     3,
+     2,
+     2,
+     5,
      1,
      "FC Iberia 1999"
     ],
     [
-     "get",
-     2,
+     "pafos-fc",
+     3,
      0,
      1,
-     1,
+     2,
      3,
-     6,
+     7,
+     1,
+     "Pafos FC"
+    ],
+    [
+     "get",
+     3,
+     0,
+     1,
+     2,
+     3,
+     7,
      1,
      "Getafe CF"
     ],
@@ -14456,12 +14735,12 @@
     ],
     [
      "kauno-zalgiris",
-     2,
+     3,
      0,
      0,
-     2,
+     3,
      1,
-     8,
+     11,
      0,
      "Kauno Žalgiris"
     ]
@@ -14469,9 +14748,74 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-05T22:07:20+01:00",
-  "cambio": "2026-11-05T21:59:30+01:00",
+  "comprobado": "2026-11-05T23:07:22+01:00",
+  "cambio": "2026-11-05T23:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-05T23:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 9,
+    "tablas": [
+     "Conference"
+    ],
+    "detalle": [
+     "Resultado: AS Monaco 2-0 Nordsjælland",
+     "Resultado: FCU Craiova 1948 2-0 Klubi Sportiv Egnatia",
+     "Resultado: København 2-1 FC Iberia 1999",
+     "Resultado: Lugano 3-0 Kauno Žalgiris",
+     "Resultado: Twente 3-1 Pafos FC",
+     "Resultado: Getafe CF 0-1 Brighton",
+     "Resultado: Panathinaikos 2-1 CSKA Sofia",
+     "Resultado: Riga FC 1-1 FKB Jablonec",
+     "Resultado: Sint-Truiden VV 1-1 SK Brann"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-6-fase-liga-j3-as-monaco-nordsjaelland",
+       "t": "AS Monaco 2-0 Nordsjælland"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-fcu-craiova-1948-klubi-sportiv-egnatia",
+       "t": "FCU Craiova 1948 2-0 Klubi Sportiv Egnatia"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-kobenhavn-fc-iberia-1999",
+       "t": "København 2-1 FC Iberia 1999"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-lugano-kauno-zalgiris",
+       "t": "Lugano 3-0 Kauno Žalgiris"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-twente-pafos-fc",
+       "t": "Twente 3-1 Pafos FC"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-get-brighton",
+       "t": "Getafe CF 0-1 Brighton"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-panathinaikos-cska-sofia",
+       "t": "Panathinaikos 2-1 CSKA Sofia"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-riga-fc-fkb-jablonec",
+       "t": "Riga FC 1-1 FKB Jablonec"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-sint-truiden-vv-sk-brann",
+       "t": "Sint-Truiden VV 1-1 SK Brann"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-05T22:07:20+01:00",
     "nuevos": 0,
@@ -15015,22 +15359,6 @@
    },
    {
     "hora": "2026-11-05T04:28:35+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-05T04:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
