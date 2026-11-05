@@ -10,12 +10,12 @@ jobs:
           def g(u):
               return json.loads(urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0","Accept":"application/json"}),timeout=30).read())
           out=[]
-          for f in ["20261103","20261104","20261105"]:
+          for f in ["20261103","20261105"]:
               e=g(f"https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates={f}")
               out.append(f"ESPN {f}: "+" | ".join(f"{ev['shortName']} {[c.get('score') for c in ev['competitions'][0]['competitors']]} {ev['status']['type']['name']} det={len(ev['competitions'][0].get('details',[]))}" for ev in e.get('events',[]))[:900])
               d=g(f"https://www.fotmob.com/api/data/matches?date={f}&timezone=Europe/Madrid")
               for L in d.get("leagues",[]):
                   if "Copa del Rey" in L.get("name",""):
-                      out.append(f"FOTMOB {f} {L.get('name')} primaryId={L.get('primaryId')}: "+" | ".join(f"{m['home']['name']} {m['home'].get('score')}-{m['away'].get('score')} {m['away']['name']} fin={m['status'].get('finished')}" for m in L.get('matches',[]))[:900])
+                      out.append(f"FOTMOB {f} {L.get('name')} primaryId={L.get('primaryId')}: "+" | ".join(f"{m['home']['name']}-{m['away']['name']} id={m['id']} st={json.dumps(m['status'],ensure_ascii=False)}" for m in L.get('matches',[]))[:1400])
           for o in out: print("::notice::"+o)
           PY
