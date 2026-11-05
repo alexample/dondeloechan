@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-05T19:07:21+01:00",
+ "actualizado": "2026-11-05T21:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -10794,7 +10794,13 @@
    ],
    "provisional": false,
    "localAbbr": "AGF",
-   "visitanteAbbr": "BRA"
+   "visitanteAbbr": "BRA",
+   "goles": [],
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
@@ -10811,7 +10817,32 @@
    ],
    "provisional": false,
    "localAbbr": "ATA",
-   "visitanteAbbr": "KAI"
+   "visitanteAbbr": "KAI",
+   "goles": [
+    {
+     "t": "g",
+     "min": "53'",
+     "seg": 3155,
+     "j": "Marc Gual",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4861,
+     "j": "Nikola Krstovic",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
@@ -10828,7 +10859,59 @@
    ],
    "provisional": false,
    "localAbbr": "CRV",
-   "visitanteAbbr": "INT"
+   "visitanteAbbr": "INT",
+   "goles": [
+    {
+     "t": "r",
+     "min": "35'",
+     "seg": 2083,
+     "j": "Aleksandar Katai",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "51'",
+     "seg": 3031,
+     "j": "Domi Berlanga",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3684,
+     "j": "Borja Arellano Monedero",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4760,
+     "j": "Vladimir Lucic",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+2'",
+     "seg": 5400,
+     "j": "Javier Díaz",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    }
+   ],
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
@@ -10845,7 +10928,86 @@
    ],
    "provisional": false,
    "localAbbr": "MID",
-   "visitanteAbbr": "AJA"
+   "visitanteAbbr": "AJA",
+   "goles": [
+    {
+     "t": "g",
+     "min": "9'",
+     "seg": 527,
+     "j": "Tolu Arokodare",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "28'",
+     "seg": 1626,
+     "j": "Friday Etim",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "43'",
+     "seg": 2530,
+     "j": "Kjell-Arik Wätjen",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3064,
+     "j": "Tolu Arokodare",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3501,
+     "j": "Owen Wijndal",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 3990,
+     "j": "Davy Klaassen",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "74'",
+     "seg": 4435,
+     "j": "Oscar Gloukh",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4878,
+     "j": "Marcos Leonardo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    1,
+    6
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-fc-thun-hearts",
@@ -10862,7 +11024,50 @@
    ],
    "provisional": false,
    "localAbbr": "THU",
-   "visitanteAbbr": "HEA"
+   "visitanteAbbr": "HEA",
+   "goles": [
+    {
+     "t": "g",
+     "min": "22'",
+     "seg": 1312,
+     "j": "Jamie McCart",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "34'",
+     "seg": 1982,
+     "j": "Brighton Labeau",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3358,
+     "j": "Furkan Dursun",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4906,
+     "j": "Stuart Findlay",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    3,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-kups-gent",
@@ -10879,7 +11084,13 @@
    ],
    "provisional": false,
    "localAbbr": "KUP",
-   "visitanteAbbr": "GEN"
+   "visitanteAbbr": "GEN",
+   "goles": [],
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-lincoln-red-imps-hajduk-split",
@@ -10896,7 +11107,23 @@
    ],
    "provisional": false,
    "localAbbr": "LIN",
-   "visitanteAbbr": "HAJ"
+   "visitanteAbbr": "HAJ",
+   "goles": [
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5312,
+     "j": "Dennis Hadzikadunic",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    }
+   ],
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-mjallby-aif-borac-banja-luka",
@@ -10913,7 +11140,32 @@
    ],
    "provisional": false,
    "localAbbr": "MJA",
-   "visitanteAbbr": "BOR"
+   "visitanteAbbr": "BOR",
+   "goles": [
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3219,
+     "j": "Jacob Bergstrom",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5261,
+     "j": "Mads Enggård",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-trabzonspor-freiburg",
@@ -10930,7 +11182,23 @@
    ],
    "provisional": false,
    "localAbbr": "TRA",
-   "visitanteAbbr": "FRE"
+   "visitanteAbbr": "FRE",
+   "goles": [
+    {
+     "t": "g",
+     "min": "14'",
+     "seg": 784,
+     "j": "Lukas Kübler",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-cd-tarancon-lev",
@@ -13841,8 +14109,30 @@
    }
   },
   "6": {
-   "tras": "Jornada 2",
+   "tras": "Jornada 3",
    "filas": [
+    [
+     "mjallby-aif",
+     3,
+     2,
+     1,
+     0,
+     5,
+     1,
+     7,
+     "Mjällby AIF"
+    ],
+    [
+     "ajax",
+     3,
+     2,
+     0,
+     1,
+     9,
+     3,
+     6,
+     "Ajax"
+    ],
     [
      "panathinaikos",
      2,
@@ -13877,17 +14167,6 @@
      "SK Brann"
     ],
     [
-     "trabzonspor",
-     2,
-     2,
-     0,
-     0,
-     6,
-     2,
-     6,
-     "Trabzonspor"
-    ],
-    [
      "twente",
      2,
      2,
@@ -13910,6 +14189,17 @@
      "AS Monaco"
     ],
     [
+     "trabzonspor",
+     3,
+     2,
+     0,
+     1,
+     6,
+     3,
+     6,
+     "Trabzonspor"
+    ],
+    [
      "sint-truiden-vv",
      2,
      2,
@@ -13922,14 +14212,25 @@
     ],
     [
      "hajduk-split",
-     2,
-     2,
-     0,
-     0,
      3,
+     2,
+     0,
      1,
+     3,
+     2,
      6,
      "Hajduk Split"
+    ],
+    [
+     "freiburg",
+     3,
+     2,
+     0,
+     1,
+     4,
+     5,
+     6,
+     "Freiburg"
     ],
     [
      "brighton",
@@ -13965,81 +14266,81 @@
      "FCU Craiova 1948"
     ],
     [
-     "mjallby-aif",
-     2,
-     1,
-     1,
-     0,
+     "crvena-zvezda",
      3,
      1,
+     1,
+     1,
+     6,
+     6,
      4,
-     "Mjällby AIF"
-    ],
-    [
-     "ajax",
-     2,
-     1,
-     0,
-     1,
-     3,
-     2,
-     3,
-     "Ajax"
-    ],
-    [
-     "borac-banja-luka",
-     2,
-     1,
-     0,
-     1,
-     3,
-     2,
-     3,
-     "Borac Banja Luka"
+     "Crvena Zvezda"
     ],
     [
      "atalanta",
-     2,
+     3,
      1,
-     0,
      1,
-     3,
-     3,
-     3,
+     1,
+     4,
+     4,
+     4,
      "Atalanta"
     ],
     [
      "sc-braga",
-     2,
+     3,
      1,
-     0,
+     1,
      1,
      2,
      3,
-     3,
+     4,
      "SC Braga"
     ],
     [
      "gent",
-     2,
-     1,
-     0,
-     1,
-     1,
-     2,
      3,
+     1,
+     1,
+     1,
+     1,
+     2,
+     4,
      "Gent"
     ],
     [
-     "freiburg",
-     2,
+     "fc-thun",
+     3,
      1,
      0,
+     2,
+     3,
+     3,
+     3,
+     "FC Thun"
+    ],
+    [
+     "borac-banja-luka",
+     3,
      1,
+     0,
+     2,
      3,
-     5,
+     4,
      3,
-     "Freiburg"
+     "Borac Banja Luka"
+    ],
+    [
+     "lincoln-red-imps",
+     3,
+     1,
+     0,
+     2,
+     3,
+     6,
+     3,
+     "Lincoln Red Imps"
     ],
     [
      "nordsjaelland",
@@ -14075,15 +14376,26 @@
      "Riga FC"
     ],
     [
-     "crvena-zvezda",
-     2,
+     "agf-aarhus",
+     3,
      0,
+     2,
      1,
      1,
-     4,
-     5,
+     2,
+     2,
+     "AGF Aarhus"
+    ],
+    [
+     "fc-kairat",
+     3,
+     0,
+     2,
      1,
-     "Crvena Zvezda"
+     3,
+     7,
+     2,
+     "FC Kairat"
     ],
     [
      "cska-sofia",
@@ -14108,28 +14420,6 @@
      "FKB Jablonec"
     ],
     [
-     "fc-midtjylland",
-     2,
-     0,
-     1,
-     1,
-     1,
-     2,
-     1,
-     "FC Midtjylland"
-    ],
-    [
-     "agf-aarhus",
-     2,
-     0,
-     1,
-     1,
-     1,
-     2,
-     1,
-     "AGF Aarhus"
-    ],
-    [
      "pafos-fc",
      2,
      0,
@@ -14139,17 +14429,6 @@
      4,
      1,
      "Pafos FC"
-    ],
-    [
-     "hearts",
-     2,
-     0,
-     1,
-     1,
-     1,
-     3,
-     1,
-     "Hearts"
     ],
     [
      "fc-iberia-1999",
@@ -14174,57 +14453,46 @@
      "Getafe CF"
     ],
     [
-     "fc-kairat",
-     2,
+     "hearts",
+     3,
      0,
      1,
-     1,
+     2,
      2,
      6,
      1,
-     "FC Kairat"
-    ],
-    [
-     "fc-thun",
-     2,
-     0,
-     0,
-     2,
-     0,
-     2,
-     0,
-     "FC Thun"
-    ],
-    [
-     "lincoln-red-imps",
-     2,
-     0,
-     0,
-     2,
-     2,
-     6,
-     0,
-     "Lincoln Red Imps"
+     "Hearts"
     ],
     [
      "kups",
-     2,
+     3,
      0,
-     0,
+     1,
      2,
      2,
      6,
-     0,
+     1,
      "KuPS"
     ],
     [
-     "inter-club-d-escaldes",
-     2,
+     "fc-midtjylland",
+     3,
      0,
-     0,
-     2,
      1,
-     5,
+     2,
+     2,
+     8,
+     1,
+     "FC Midtjylland"
+    ],
+    [
+     "inter-club-d-escaldes",
+     3,
+     0,
+     0,
+     3,
+     2,
+     7,
      0,
      "Inter Club d'Escaldes"
     ],
@@ -14243,9 +14511,74 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-05T20:07:23+01:00",
-  "cambio": "2026-11-05T19:07:21+01:00",
+  "comprobado": "2026-11-05T21:07:22+01:00",
+  "cambio": "2026-11-05T21:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-05T21:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 9,
+    "tablas": [
+     "Conference"
+    ],
+    "detalle": [
+     "Resultado: AGF Aarhus 0-0 SC Braga",
+     "Resultado: Atalanta 1-1 FC Kairat",
+     "Resultado: FC Midtjylland 1-6 Ajax",
+     "Resultado: FC Thun 3-1 Hearts",
+     "Resultado: KuPS 0-0 Gent",
+     "Resultado: Lincoln Red Imps 1-0 Hajduk Split",
+     "Resultado: Mjällby AIF 2-0 Borac Banja Luka",
+     "Resultado: Crvena Zvezda 2-1 Inter Club d'Escaldes",
+     "Resultado: Trabzonspor 0-1 Freiburg"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
+       "t": "AGF Aarhus 0-0 SC Braga"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
+       "t": "Atalanta 1-1 FC Kairat"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
+       "t": "FC Midtjylland 1-6 Ajax"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-fc-thun-hearts",
+       "t": "FC Thun 3-1 Hearts"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-kups-gent",
+       "t": "KuPS 0-0 Gent"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-lincoln-red-imps-hajduk-split",
+       "t": "Lincoln Red Imps 1-0 Hajduk Split"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-mjallby-aif-borac-banja-luka",
+       "t": "Mjällby AIF 2-0 Borac Banja Luka"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
+       "t": "Crvena Zvezda 2-1 Inter Club d'Escaldes"
+      },
+      {
+       "id": "2627-6-fase-liga-j3-trabzonspor-freiburg",
+       "t": "Trabzonspor 0-1 Freiburg"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-05T20:07:23+01:00",
     "nuevos": 0,
@@ -14728,22 +15061,6 @@
    },
    {
     "hora": "2026-11-05T00:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-04T23:38:53+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
