@@ -14063,9 +14063,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-05T12:07:20+01:00",
+  "comprobado": "2026-11-05T13:07:21+01:00",
   "cambio": "2026-11-05T12:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-05T13:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-05T12:07:20+01:00",
     "nuevos": 3,
@@ -14607,22 +14623,6 @@
        "t": "UD Ourense – Mérida (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-04T16:07:24+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
