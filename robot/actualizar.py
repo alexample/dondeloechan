@@ -938,6 +938,36 @@ def main():
                 poner_resultado(m, None, "aplazado")
                 log(f"Aplazado (FotMob): {m['local']} – {m['visitante']}")
 
+    # ---- 5c. Nueva fecha de los aplazados: cada 6 horas se busca en FotMob (próximas 3 semanas) dónde han caído.
+    aplazados = [m for m in partidos if m.get("estado") == "aplazado" and m["liga"] in (1, 2, 3, 5)]
+    if aplazados and (hoy.astimezone(MAD).hour % 6 == 0 or os.environ.get("GOLES_DIAS")):
+        for k in range(0, 22):
+            dia = (hoy + dt.timedelta(days=k)).astimezone(MAD)
+            txt = get(f"https://www.fotmob.com/api/data/matches?date={dia:%Y%m%d}&timezone=Europe/Madrid", f"fm_fut_{k}.json")
+            try:
+                ligas_fm = json.loads(txt).get("leagues", []) if txt else []
+            except Exception:  # noqa: BLE001
+                ligas_fm = []
+            for L in ligas_fm:
+                liga = {138: 3, 8968: 5, 87: 1, 140: 2}.get(L.get("primaryId"))
+                if not liga:
+                    continue
+                for z in L.get("matches", []):
+                    st = z.get("status") or {}
+                    if st.get("cancelled") or st.get("started"):
+                        continue
+                    li, vi = eq.buscar((z.get("home") or {}).get("name", ""), liga, crear=False), eq.buscar((z.get("away") or {}).get("name", ""), liga, crear=False)
+                    m = por_clave.get((liga, li, vi)) if li and vi else None
+                    if not m or m.get("estado") != "aplazado":
+                        continue
+                    try:
+                        nueva = dt.datetime.fromisoformat(str(st.get("utcTime", "")).replace("Z", "+00:00"))
+                    except Exception:  # noqa: BLE001
+                        continue
+                    if nueva > hoy:
+                        poner_hora(m, nueva)
+                        log(f"Nueva fecha (FotMob) tras aplazamiento: {m['local']} – {m['visitante']}, {nueva.astimezone(MAD):%d/%m %H:%M}")
+
     # ---- 6. Conference League: resultados y clasificación de ESPN
     for x in conf["partidos"]:
         li, vi = eq.buscar(x["local"], 6, crear=False), eq.buscar(x["visitante"], 6, crear=False)
