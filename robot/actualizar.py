@@ -631,7 +631,7 @@ def main():
             return
         # Una fuente atrasada no devuelve al pasado un partido aplazado que ya tiene fecha nueva.
         try:
-            if inicio < hoy - dt.timedelta(hours=3) and dt.datetime.fromisoformat(m["inicio"]) > hoy:
+            if inicio < hoy and dt.datetime.fromisoformat(m["inicio"]) > hoy:
                 return
         except Exception:  # noqa: BLE001
             pass

@@ -11042,7 +11042,7 @@
    "canales": [
     "mcopa"
    ],
-   "inicio": "2026-11-05T19:00:00+01:00",
+   "inicio": "2026-11-12T19:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "CD Tarancón",
@@ -11050,15 +11050,14 @@
    "localId": "cd-tarancon",
    "provisional": true,
    "visitante": "Levante",
-   "visitanteId": "lev",
-   "estado": "aplazado"
+   "visitanteId": "lev"
   },
   {
    "id": "2627-3-primera-ronda-alcoyano-mll",
    "canales": [
     "mcopa"
    ],
-   "inicio": "2026-11-05T20:00:00+01:00",
+   "inicio": "2026-11-18T20:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "Alcoyano",
@@ -11066,8 +11065,7 @@
    "localId": "alcoyano",
    "visitante": "RCD Mallorca",
    "visitanteId": "mll",
-   "provisional": true,
-   "estado": "aplazado"
+   "provisional": true
   },
   {
    "id": "2627-6-fase-liga-j3-as-monaco-nordsjaelland",
