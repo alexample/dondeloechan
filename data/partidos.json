@@ -13990,9 +13990,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-05T04:07:21+01:00",
+  "comprobado": "2026-11-05T04:28:35+01:00",
   "cambio": "2026-11-05T01:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-05T04:28:35+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-05T04:07:21+01:00",
     "nuevos": 0,
@@ -14522,29 +14538,6 @@
      "resultados": [],
      "canales": [],
      "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-04T08:07:22+01:00",
-    "nuevos": 0,
-    "horas": 1,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nueva hora: CP Mijas Las Lagunas – Real Jaén, 10/11 20:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [
-      {
-       "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
-       "t": "CP Mijas Las Lagunas – Real Jaén: 10/11 a las 20:00"
-      }
-     ],
      "nuevos": []
     }
    }
