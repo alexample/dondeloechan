@@ -629,6 +629,15 @@ def main():
         nuevo = iso_mad(inicio)
         if m.get("estado") == "final":
             return
+        # Una fuente atrasada no devuelve al pasado un partido aplazado que ya tiene fecha nueva.
+        try:
+            if inicio < hoy - dt.timedelta(hours=3) and dt.datetime.fromisoformat(m["inicio"]) > hoy:
+                return
+        except Exception:  # noqa: BLE001
+            pass
+        if m.get("estado") == "aplazado" and inicio > hoy and m.get("inicio") != nuevo:
+            m.pop("estado", None)   # aplazado con fecha nueva: vuelve a estar programado
+            apuntar("horas", m, f"{m['local']} – {m['visitante']}: nueva fecha tras el aplazamiento")
         if pendiente:
             if not m.get("horaPendiente"):
                 m["horaPendiente"] = True
@@ -902,6 +911,32 @@ def main():
         log(f"Goleadores guardados en {con_goles} partidos")
     if sin_pareja:
         log("ESPN: partidos terminados sin pareja en la guía (otras ligas o nombres distintos): " + "; ".join(sin_pareja[:15]))
+
+    # ---- 5b. Aplazamientos que solo se ven en FotMob (Copa sobre todo): el partido no se jugó en su fecha.
+    for k in range(-1, 4):
+        dia = (hoy - dt.timedelta(days=k)).astimezone(MAD)
+        txt = get(f"https://www.fotmob.com/api/data/matches?date={dia:%Y%m%d}&timezone=Europe/Madrid", f"fm_ap_{k}.json")
+        try:
+            ligas_fm = json.loads(txt).get("leagues", []) if txt else []
+        except Exception:  # noqa: BLE001
+            ligas_fm = []
+        for L in ligas_fm:
+            liga = {138: 3, 8968: 5, 87: 1, 140: 2}.get(L.get("primaryId"))
+            if not liga:
+                continue
+            for z in L.get("matches", []):
+                st = z.get("status") or {}
+                if not st.get("cancelled") or "postpon" not in str((st.get("reason") or {}).get("longKey", "")).lower():
+                    continue
+                li, vi = eq.buscar((z.get("home") or {}).get("name", ""), liga, crear=False), eq.buscar((z.get("away") or {}).get("name", ""), liga, crear=False)
+                m = por_clave.get((liga, li, vi)) if li and vi else None
+                if not m or m.get("estado") in ("final", "aplazado"):
+                    continue
+                # Solo si el partido de la guía sigue en esa misma fecha (si ya tiene fecha nueva, no se toca)
+                if (m.get("inicio") or "")[:10] != dia.strftime("%Y-%m-%d"):
+                    continue
+                poner_resultado(m, None, "aplazado")
+                log(f"Aplazado (FotMob): {m['local']} – {m['visitante']}")
 
     # ---- 6. Conference League: resultados y clasificación de ESPN
     for x in conf["partidos"]:

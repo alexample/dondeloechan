@@ -9682,25 +9682,24 @@
   {
    "id": "2627-3-primera-ronda-anaitasuna-ala",
    "canales": [
-    "mliga3"
+    "mcopa"
    ],
-   "inicio": "2026-11-03T19:00:00+01:00",
+   "inicio": "2026-11-10T19:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "Anaitasuna",
    "localAbbr": "ANA",
    "localId": "anaitasuna",
-   "provisional": false,
+   "provisional": true,
    "visitante": "Alavés",
-   "visitanteId": "ala",
-   "goles": []
+   "visitanteId": "ala"
   },
   {
    "id": "2627-3-primera-ronda-cd-pamplona-eib",
    "canales": [
     "mcopa"
    ],
-   "inicio": "2026-11-03T19:00:00+01:00",
+   "inicio": "2026-11-10T19:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "CD Pamplona",
@@ -9708,8 +9707,7 @@
    "localId": "cd-pamplona",
    "visitante": "SD Eibar",
    "visitanteId": "eib",
-   "provisional": true,
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-4-fase-liga-j4-atm-bayern-munich",
@@ -10197,7 +10195,7 @@
    "canales": [
     "mcopa"
    ],
-   "inicio": "2026-11-04T19:00:00+01:00",
+   "inicio": "2026-11-18T19:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "Portugalete",
@@ -10206,15 +10204,14 @@
    "visitante": "Real Unión",
    "visitanteAbbr": "RUN",
    "visitanteId": "real-union",
-   "provisional": true,
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-3-primera-ronda-sd-amorebieta-ud-logrones",
    "canales": [
     "mcopa"
    ],
-   "inicio": "2026-11-04T20:00:00+01:00",
+   "inicio": "2026-11-10T20:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "SD Amorebieta",
@@ -10223,15 +10220,14 @@
    "visitante": "UD Logroñés",
    "visitanteAbbr": "LOG",
    "visitanteId": "ud-logrones",
-   "provisional": true,
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-3-primera-ronda-deportiva-minera-cartagena",
    "canales": [
     "mcopa"
    ],
-   "inicio": "2026-11-04T20:30:00+01:00",
+   "inicio": "2026-11-18T20:30:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "Deportiva Minera",
@@ -10240,15 +10236,14 @@
    "visitante": "Cartagena",
    "visitanteAbbr": "CAR",
    "visitanteId": "cartagena",
-   "provisional": true,
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-3-primera-ronda-reus-fc-reddis-barakaldo-cf",
    "canales": [
     "mcopa"
    ],
-   "inicio": "2026-11-04T20:30:00+01:00",
+   "inicio": "2026-11-18T20:30:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "Reus FC Reddis",
@@ -10257,21 +10252,14 @@
    "visitante": "Barakaldo CF",
    "visitanteAbbr": "BAR",
    "visitanteId": "barakaldo-cf",
-   "provisional": true,
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-3-primera-ronda-utebo-sab",
    "canales": [
-    {
-     "dial": "Web",
-     "how": "Gratis en la web y la app de Aragón Play (sin emisión en la TDT).",
-     "name": "Aragón Play",
-     "op": "free",
-     "short": "ARP"
-    }
+    "mcopa"
    ],
-   "inicio": "2026-11-04T20:30:00+01:00",
+   "inicio": "2026-11-18T19:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "Utebo",
@@ -10279,20 +10267,14 @@
    "localId": "utebo",
    "visitante": "CE Sabadell",
    "visitanteId": "sab",
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
    "canales": [
-    {
-     "dial": "TDT",
-     "how": "Castilla-La Mancha Media: gratis en la TDT de Castilla-La Mancha y en CMMPlay.",
-     "name": "CMM",
-     "op": "free",
-     "short": "CMM"
-    }
+    "mcopa"
    ],
-   "inicio": "2026-11-04T20:45:00+01:00",
+   "inicio": "2026-11-12T18:30:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "Calvo Sotelo Puertollano",
@@ -10300,20 +10282,14 @@
    "localId": "calvo-sotelo-puertollano",
    "visitante": "Albacete",
    "visitanteId": "alb",
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-3-primera-ronda-cd-badajoz-ten",
    "canales": [
-    {
-     "dial": "TDT",
-     "how": "Gratis en la TDT de Canarias y en la web de RTVC.",
-     "name": "Televisión Canaria",
-     "op": "free",
-     "short": "TVC"
-    }
+    "mcopa"
    ],
-   "inicio": "2026-11-04T21:00:00+01:00",
+   "inicio": "2026-11-10T20:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "CD Badajoz",
@@ -10321,7 +10297,7 @@
    "localId": "cd-badajoz",
    "visitante": "Tenerife",
    "visitanteId": "ten",
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-4-fase-liga-j4-borussia-dortmund-bet",
@@ -11203,38 +11179,24 @@
   {
    "id": "2627-3-primera-ronda-cd-tarancon-lev",
    "canales": [
-    "mliga4"
+    "mcopa"
    ],
-   "inicio": "2026-11-05T19:00:00+01:00",
+   "inicio": "2026-11-12T19:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "CD Tarancón",
    "localAbbr": "TAR",
    "localId": "cd-tarancon",
-   "provisional": false,
+   "provisional": true,
    "visitante": "Levante",
-   "visitanteId": "lev",
-   "goles": []
+   "visitanteId": "lev"
   },
   {
    "id": "2627-3-primera-ronda-alcoyano-mll",
    "canales": [
-    {
-     "dial": "TDT",
-     "how": "Gratis en la TDT de la Comunitat Valenciana y en apuntmedia.es.",
-     "name": "À Punt",
-     "op": "free",
-     "short": "APT"
-    },
-    {
-     "dial": "TDT",
-     "how": "Gratis en la TDT de las Illes Balears y en ib3.org.",
-     "name": "IB3",
-     "op": "free",
-     "short": "IB3"
-    }
+    "mcopa"
    ],
-   "inicio": "2026-11-05T20:00:00+01:00",
+   "inicio": "2026-11-18T20:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
    "local": "Alcoyano",
@@ -11242,7 +11204,7 @@
    "localId": "alcoyano",
    "visitante": "RCD Mallorca",
    "visitanteId": "mll",
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-6-fase-liga-j3-as-monaco-nordsjaelland",
@@ -12161,8 +12123,7 @@
    "visitante": "Real Jaén",
    "visitanteAbbr": "JAE",
    "visitanteId": "real-jaen",
-   "provisional": true,
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-3-primera-ronda-trival-valderas-leg",
@@ -12177,8 +12138,7 @@
    "localId": "trival-valderas",
    "visitante": "Leganés",
    "visitanteId": "leg",
-   "provisional": true,
-   "goles": []
+   "provisional": true
   },
   {
    "id": "2627-3-primera-ronda-ue-tavernes-val",
@@ -12193,8 +12153,7 @@
    "localId": "ue-tavernes",
    "provisional": false,
    "visitante": "Valencia CF",
-   "visitanteId": "val",
-   "goles": []
+   "visitanteId": "val"
   },
   {
    "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
@@ -12210,8 +12169,7 @@
    "localId": "cda-navalcarnero",
    "provisional": false,
    "visitante": "Betis",
-   "visitanteId": "bet",
-   "goles": []
+   "visitanteId": "bet"
   },
   {
    "id": "2627-5-12-ponferradina-cp-cacereno",
@@ -12261,8 +12219,7 @@
    "localId": "salamanca-uds",
    "provisional": false,
    "visitante": "Celta de Vigo",
-   "visitanteId": "cel",
-   "goles": []
+   "visitanteId": "cel"
   },
   {
    "id": "2627-5-12-gimnastic-de-tarragona-real-madrid-castilla",
