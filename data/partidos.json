@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-05T08:07:24+01:00",
+ "actualizado": "2026-11-05T12:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12300,6 +12300,78 @@
    "localAbbr": "JAE",
    "visitanteAbbr": "ZAR",
    "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-5-12-atletico-madrileno-cd-teruel",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-15T12:00:00+01:00",
+   "local": "Atlético Madrileño",
+   "localId": "atletico-madrileno",
+   "visitante": "CD Teruel",
+   "visitanteId": "cd-teruel",
+   "canales": [
+    {
+     "name": "Aragón TV",
+     "short": "ARA",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Aragón y en Aragón Play."
+    },
+    {
+     "name": "Aragón Play",
+     "short": "ARP",
+     "op": "free",
+     "dial": "Web",
+     "how": "Gratis en la web y la app de Aragón Play (sin emisión en la TDT)."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ATM",
+   "visitanteAbbr": "TER",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Aragón TV; completo, en FANPLAY TV y FootballClub."
+  },
+  {
+   "id": "2627-5-12-cd-extremadura-pontevedra",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-15T12:00:00+01:00",
+   "local": "CD Extremadura",
+   "localId": "cd-extremadura",
+   "visitante": "Pontevedra",
+   "visitanteId": "pontevedra",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "EXT",
+   "visitanteAbbr": "PON",
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-5-12-ud-ibiza-cartagena",
+   "liga": 5,
+   "jornada": "12",
+   "inicio": "2026-11-15T12:00:00+01:00",
+   "local": "UD Ibiza",
+   "localId": "ud-ibiza",
+   "visitante": "Cartagena",
+   "visitanteId": "cartagena",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "IBI",
+   "visitanteAbbr": "CAR",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
  ],
  "clasificacion": {
@@ -13991,9 +14063,55 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-05T11:07:25+01:00",
-  "cambio": "2026-11-05T08:07:24+01:00",
+  "comprobado": "2026-11-05T12:07:20+01:00",
+  "cambio": "2026-11-05T12:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-05T12:07:20+01:00",
+    "nuevos": 3,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Atlético Madrileño – CD Teruel",
+     "Nuevo partido: UD Ibiza – Cartagena",
+     "Nuevo partido: CD Extremadura – Pontevedra"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-12-atletico-madrileno-cd-teruel",
+       "t": "Atlético Madrileño – CD Teruel"
+      },
+      {
+       "id": "2627-5-12-ud-ibiza-cartagena",
+       "t": "UD Ibiza – Cartagena"
+      },
+      {
+       "id": "2627-5-12-cd-extremadura-pontevedra",
+       "t": "CD Extremadura – Pontevedra"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-12-atletico-madrileno-cd-teruel",
+       "t": "Atlético Madrileño – CD Teruel (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-ud-ibiza-cartagena",
+       "t": "UD Ibiza – Cartagena (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-12-cd-extremadura-pontevedra",
+       "t": "CD Extremadura – Pontevedra (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-05T11:07:25+01:00",
     "nuevos": 0,
@@ -14493,22 +14611,6 @@
    },
    {
     "hora": "2026-11-04T16:07:24+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-04T15:07:22+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
