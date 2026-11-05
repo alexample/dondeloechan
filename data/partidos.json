@@ -14063,9 +14063,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-05T13:07:21+01:00",
+  "comprobado": "2026-11-05T13:18:08+01:00",
   "cambio": "2026-11-05T12:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-05T13:18:08+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-05T13:07:21+01:00",
     "nuevos": 0,
@@ -14568,61 +14584,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-04T17:07:19+01:00",
-    "nuevos": 4,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Real Sociedad B – Real Sporting",
-     "Nuevo partido: Real Unión – Cultural Leonesa",
-     "Nuevo partido: Rayo Majadahonda – Águilas FC",
-     "Nuevo partido: UD Ourense – Mérida"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-2-14-rsb-spo",
-       "t": "Real Sociedad B – Real Sporting"
-      },
-      {
-       "id": "2627-5-12-real-union-cultural-leonesa",
-       "t": "Real Unión – Cultural Leonesa"
-      },
-      {
-       "id": "2627-5-12-rayo-majadahonda-aguilas-fc",
-       "t": "Rayo Majadahonda – Águilas FC"
-      },
-      {
-       "id": "2627-5-12-ud-ourense-merida",
-       "t": "UD Ourense – Mérida"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-2-14-rsb-spo",
-       "t": "Real Sociedad B – Real Sporting (Segunda)"
-      },
-      {
-       "id": "2627-5-12-real-union-cultural-leonesa",
-       "t": "Real Unión – Cultural Leonesa (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-12-rayo-majadahonda-aguilas-fc",
-       "t": "Rayo Majadahonda – Águilas FC (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-12-ud-ourense-merida",
-       "t": "UD Ourense – Mérida (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
