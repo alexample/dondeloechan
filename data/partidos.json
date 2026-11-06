@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T21:07:21+01:00",
+ "actualizado": "2026-11-06T23:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11534,7 +11534,13 @@
     "daznll",
     "daznfree"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-5-11-real-aviles-industrial-cd-extremadura",
@@ -14787,9 +14793,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T22:07:23+01:00",
-  "cambio": "2026-11-06T21:07:21+01:00",
+  "comprobado": "2026-11-06T23:07:20+01:00",
+  "cambio": "2026-11-06T23:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T23:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 1,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Sevilla FC 0-0 Deportivo Alavés"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-12-sev-ala",
+       "t": "Sevilla FC 0-0 Deportivo Alavés"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T22:07:23+01:00",
     "nuevos": 0,
@@ -15180,22 +15209,6 @@
    },
    {
     "hora": "2026-11-06T02:31:44+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-06T02:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
