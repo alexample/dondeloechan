@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T20:07:22+01:00",
+ "actualizado": "2026-11-06T21:07:21+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11486,7 +11486,23 @@
    "provisional": false,
    "localAbbr": "CAC",
    "visitanteAbbr": "LUG",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "17'",
+     "seg": 1020,
+     "j": "Tornike Morchiladze",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-13-cas-eib",
@@ -12989,6 +13005,21 @@
    "etiqueta": "Grupo 2"
   },
   {
+   "id": "2627-2-14-alb-clb",
+   "liga": 2,
+   "jornada": "14",
+   "inicio": "2026-11-16T20:30:00+01:00",
+   "local": "Albacete BP",
+   "localId": "alb",
+   "visitante": "Celta Fortuna",
+   "visitanteId": "clb",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
    "id": "2627-3-primera-ronda-portugalete-real-union",
    "canales": [
     "mcopa"
@@ -13069,7 +13100,7 @@
  ],
  "clasificacion": {
   "1": {
-   "tras": "Jornada 11",
+   "tras": "Jornada 12",
    "filas": [
     [
      "bar",
@@ -13123,13 +13154,13 @@
     ],
     [
      "sev",
-     11,
+     12,
      5,
-     2,
+     3,
      4,
      17,
      19,
-     17
+     18
     ],
     [
      "ath",
@@ -13152,6 +13183,16 @@
      14
     ],
     [
+     "ala",
+     12,
+     3,
+     4,
+     5,
+     15,
+     17,
+     13
+    ],
+    [
      "vil",
      11,
      3,
@@ -13169,16 +13210,6 @@
      3,
      10,
      10,
-     12
-    ],
-    [
-     "ala",
-     11,
-     3,
-     3,
-     5,
-     15,
-     17,
      12
     ],
     [
@@ -14756,9 +14787,45 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T20:07:22+01:00",
-  "cambio": "2026-11-06T20:07:22+01:00",
+  "comprobado": "2026-11-06T21:07:21+01:00",
+  "cambio": "2026-11-06T21:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T21:07:21+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 1,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Nuevo partido: Albacete BP – Celta Fortuna",
+     "Resultado: CP Cacereño 0-1 CD Lugo"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-11-cp-cacereno-cd-lugo",
+       "t": "CP Cacereño 0-1 CD Lugo"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-2-14-alb-clb",
+       "t": "Albacete BP – Celta Fortuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-2-14-alb-clb",
+       "t": "Albacete BP – Celta Fortuna (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-06T20:07:22+01:00",
     "nuevos": 0,
@@ -15133,22 +15200,6 @@
     "horas": 0,
     "canales": 0,
     "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-06T00:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 1,
     "tablas": [],
     "detalle": [],
     "avisos": 0,
