@@ -14749,9 +14749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T06:07:21+01:00",
+  "comprobado": "2026-11-06T07:07:23+01:00",
   "cambio": "2026-11-06T00:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T07:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T06:07:21+01:00",
     "nuevos": 0,
@@ -15321,52 +15337,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-05T12:07:20+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Atlético Madrileño – CD Teruel",
-     "Nuevo partido: UD Ibiza – Cartagena",
-     "Nuevo partido: CD Extremadura – Pontevedra"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-12-atletico-madrileno-cd-teruel",
-       "t": "Atlético Madrileño – CD Teruel"
-      },
-      {
-       "id": "2627-5-12-ud-ibiza-cartagena",
-       "t": "UD Ibiza – Cartagena"
-      },
-      {
-       "id": "2627-5-12-cd-extremadura-pontevedra",
-       "t": "CD Extremadura – Pontevedra"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-12-atletico-madrileno-cd-teruel",
-       "t": "Atlético Madrileño – CD Teruel (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-12-ud-ibiza-cartagena",
-       "t": "UD Ibiza – Cartagena (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-12-cd-extremadura-pontevedra",
-       "t": "CD Extremadura – Pontevedra (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
