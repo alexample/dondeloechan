@@ -14749,9 +14749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T15:07:20+01:00",
+  "comprobado": "2026-11-06T16:07:21+01:00",
   "cambio": "2026-11-06T00:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T16:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T15:07:20+01:00",
     "nuevos": 0,
@@ -15176,71 +15192,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-05T21:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 9,
-    "tablas": [
-     "Conference"
-    ],
-    "detalle": [
-     "Resultado: AGF Aarhus 0-0 SC Braga",
-     "Resultado: Atalanta 1-1 FC Kairat",
-     "Resultado: FC Midtjylland 1-6 Ajax",
-     "Resultado: FC Thun 3-1 Hearts",
-     "Resultado: KuPS 0-0 Gent",
-     "Resultado: Lincoln Red Imps 1-0 Hajduk Split",
-     "Resultado: Mjällby AIF 2-0 Borac Banja Luka",
-     "Resultado: Crvena Zvezda 2-1 Inter Club d'Escaldes",
-     "Resultado: Trabzonspor 0-1 Freiburg"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
-       "t": "AGF Aarhus 0-0 SC Braga"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-atalanta-fc-kairat",
-       "t": "Atalanta 1-1 FC Kairat"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fc-midtjylland-ajax",
-       "t": "FC Midtjylland 1-6 Ajax"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fc-thun-hearts",
-       "t": "FC Thun 3-1 Hearts"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-kups-gent",
-       "t": "KuPS 0-0 Gent"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-lincoln-red-imps-hajduk-split",
-       "t": "Lincoln Red Imps 1-0 Hajduk Split"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-mjallby-aif-borac-banja-luka",
-       "t": "Mjällby AIF 2-0 Borac Banja Luka"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-crvena-zvezda-inter-club-d-escaldes",
-       "t": "Crvena Zvezda 2-1 Inter Club d'Escaldes"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-trabzonspor-freiburg",
-       "t": "Trabzonspor 0-1 Freiburg"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
