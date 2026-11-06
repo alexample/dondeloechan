@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T18:07:22+01:00",
+ "actualizado": "2026-11-06T20:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12225,7 +12225,7 @@
   {
    "id": "2627-3-primera-ronda-anaitasuna-ala",
    "canales": [
-    "mcopa"
+    "mliga"
    ],
    "inicio": "2026-11-10T19:00:00+01:00",
    "jornada": "Primera ronda",
@@ -12233,7 +12233,7 @@
    "local": "Anaitasuna",
    "localAbbr": "ANA",
    "localId": "anaitasuna",
-   "provisional": true,
+   "provisional": false,
    "visitante": "Alavés",
    "visitanteId": "ala"
   },
@@ -12353,7 +12353,7 @@
   {
    "id": "2627-3-primera-ronda-cd-tarancon-lev",
    "canales": [
-    "mcopa"
+    "mliga2"
    ],
    "inicio": "2026-11-12T19:00:00+01:00",
    "jornada": "Primera ronda",
@@ -14756,9 +14756,36 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T19:07:20+01:00",
-  "cambio": "2026-11-06T18:07:22+01:00",
+  "comprobado": "2026-11-06T20:07:22+01:00",
+  "cambio": "2026-11-06T20:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T20:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Anaitasuna – Alavés"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-3-primera-ronda-anaitasuna-ala",
+       "t": "Anaitasuna – Alavés · confirmado"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-tarancon-lev",
+       "t": "CD Tarancón – Levante"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T19:07:20+01:00",
     "nuevos": 0,
@@ -15127,71 +15154,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-05T23:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 9,
-    "tablas": [
-     "Conference"
-    ],
-    "detalle": [
-     "Resultado: AS Monaco 2-0 Nordsjælland",
-     "Resultado: FCU Craiova 1948 2-0 Klubi Sportiv Egnatia",
-     "Resultado: København 2-1 FC Iberia 1999",
-     "Resultado: Lugano 3-0 Kauno Žalgiris",
-     "Resultado: Twente 3-1 Pafos FC",
-     "Resultado: Getafe CF 0-1 Brighton",
-     "Resultado: Panathinaikos 2-1 CSKA Sofia",
-     "Resultado: Riga FC 1-1 FKB Jablonec",
-     "Resultado: Sint-Truiden VV 1-1 SK Brann"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-6-fase-liga-j3-as-monaco-nordsjaelland",
-       "t": "AS Monaco 2-0 Nordsjælland"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-fcu-craiova-1948-klubi-sportiv-egnatia",
-       "t": "FCU Craiova 1948 2-0 Klubi Sportiv Egnatia"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-kobenhavn-fc-iberia-1999",
-       "t": "København 2-1 FC Iberia 1999"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-lugano-kauno-zalgiris",
-       "t": "Lugano 3-0 Kauno Žalgiris"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-twente-pafos-fc",
-       "t": "Twente 3-1 Pafos FC"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-get-brighton",
-       "t": "Getafe CF 0-1 Brighton"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-panathinaikos-cska-sofia",
-       "t": "Panathinaikos 2-1 CSKA Sofia"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-riga-fc-fkb-jablonec",
-       "t": "Riga FC 1-1 FKB Jablonec"
-      },
-      {
-       "id": "2627-6-fase-liga-j3-sint-truiden-vv-sk-brann",
-       "t": "Sint-Truiden VV 1-1 SK Brann"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
