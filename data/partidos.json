@@ -14749,9 +14749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T08:07:21+01:00",
+  "comprobado": "2026-11-06T09:07:21+01:00",
   "cambio": "2026-11-06T00:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T09:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T08:07:21+01:00",
     "nuevos": 0,
@@ -15321,22 +15337,6 @@
        "t": "CD Tenerife – AD Ceuta FC (Segunda)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-05T13:18:08+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
