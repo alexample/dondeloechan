@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T17:07:22+01:00",
+ "actualizado": "2026-11-06T18:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11502,7 +11502,8 @@
     "daznhm"
    ],
    "provisional": false,
-   "estado": "aplazado"
+   "estado": "aplazado",
+   "goles": []
   },
   {
    "id": "2627-1-12-sev-ala",
@@ -14755,9 +14756,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T17:07:22+01:00",
-  "cambio": "2026-11-06T17:07:22+01:00",
+  "comprobado": "2026-11-06T18:07:22+01:00",
+  "cambio": "2026-11-06T18:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T18:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T17:07:22+01:00",
     "nuevos": 0,
@@ -15177,34 +15194,6 @@
      "resultados": [],
      "canales": [],
      "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-05T21:58:19+01:00",
-    "nuevos": 0,
-    "horas": 2,
-    "canales": 0,
-    "resultados": 3,
-    "tablas": [],
-    "detalle": [
-     "Nueva hora: CD Tarancón – Levante, 05/11 19:00",
-     "Nueva hora: Alcoyano – RCD Mallorca, 05/11 20:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [
-      {
-       "id": "2627-3-primera-ronda-cd-tarancon-lev",
-       "t": "CD Tarancón – Levante: 05/11 a las 19:00"
-      },
-      {
-       "id": "2627-3-primera-ronda-alcoyano-mll",
-       "t": "Alcoyano – RCD Mallorca: 05/11 a las 20:00"
-      }
-     ],
      "nuevos": []
     }
    }
