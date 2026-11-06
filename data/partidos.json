@@ -14749,9 +14749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T11:07:20+01:00",
+  "comprobado": "2026-11-06T12:07:23+01:00",
   "cambio": "2026-11-06T00:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T12:07:23+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T11:07:20+01:00",
     "nuevos": 0,
@@ -15258,61 +15274,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-05T17:07:58+01:00",
-    "nuevos": 4,
-    "horas": 0,
-    "canales": 5,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Granada CF – UD Las Palmas",
-     "Nuevo partido: CD Lugo – Mirandés",
-     "Nuevo partido: UD Logroñés – Arenas Club",
-     "Nuevo partido: Algeciras CF – Antequera"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-2-14-gra-lpa",
-       "t": "Granada CF – UD Las Palmas"
-      },
-      {
-       "id": "2627-5-12-cd-lugo-mirandes",
-       "t": "CD Lugo – Mirandés"
-      },
-      {
-       "id": "2627-5-12-ud-logrones-arenas-club",
-       "t": "UD Logroñés – Arenas Club"
-      },
-      {
-       "id": "2627-5-12-algeciras-cf-antequera",
-       "t": "Algeciras CF – Antequera"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-2-14-gra-lpa",
-       "t": "Granada CF – UD Las Palmas (Segunda)"
-      },
-      {
-       "id": "2627-5-12-cd-lugo-mirandes",
-       "t": "CD Lugo – Mirandés (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-12-ud-logrones-arenas-club",
-       "t": "UD Logroñés – Arenas Club (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-12-algeciras-cf-antequera",
-       "t": "Algeciras CF – Antequera (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
