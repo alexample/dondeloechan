@@ -14749,9 +14749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T10:07:23+01:00",
+  "comprobado": "2026-11-06T10:22:01+01:00",
   "cambio": "2026-11-06T00:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T10:22:01+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T10:07:23+01:00",
     "nuevos": 0,
@@ -15297,34 +15313,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-05T15:07:22+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Zamora – Real Avilés Industrial"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-12-zamora-real-aviles-industrial",
-       "t": "Zamora – Real Avilés Industrial"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-12-zamora-real-aviles-industrial",
-       "t": "Zamora – Real Avilés Industrial (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
