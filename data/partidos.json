@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T23:07:20+01:00",
+ "actualizado": "2026-11-07T00:06:30+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11560,7 +11560,86 @@
    "provisional": false,
    "localAbbr": "AVI",
    "visitanteAbbr": "EXT",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    5,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "15'",
+     "seg": 900,
+     "j": "Oscar Menéndez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "30'",
+     "seg": 1800,
+     "j": "Dieguito",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "54'",
+     "seg": 3240,
+     "j": "Diego Espejo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3360,
+     "j": "Berto Cayarga",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "79'",
+     "seg": 4740,
+     "j": "Iker Burgos",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "85'",
+     "seg": 5100,
+     "j": "Natalio Lorenzo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+8'",
+     "seg": 5448,
+     "j": "Santi Franco",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+12'",
+     "seg": 5472,
+     "j": "Daniel Liduena",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-11-racing-ferrol-ud-logrones",
@@ -11845,7 +11924,8 @@
     "daznhm"
    ],
    "provisional": false,
-   "estado": "aplazado"
+   "estado": "aplazado",
+   "goles": []
   },
   {
    "id": "2627-5-11-real-zaragoza-sd-huesca",
@@ -12025,7 +12105,8 @@
      "how": "Gratis por internet, en su web o aplicación."
     }
    ],
-   "provisional": false
+   "provisional": false,
+   "estado": "aplazado"
   },
   {
    "id": "2627-5-11-real-madrid-castilla-hercules",
@@ -14793,9 +14874,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T23:07:20+01:00",
-  "cambio": "2026-11-06T23:07:20+01:00",
+  "comprobado": "2026-11-07T00:06:30+01:00",
+  "cambio": "2026-11-07T00:06:30+01:00",
   "historial": [
+   {
+    "hora": "2026-11-07T00:06:30+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 2,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Real Avilés Industrial 5-2 CD Extremadura"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-11-real-aviles-industrial-cd-extremadura",
+       "t": "Real Avilés Industrial 5-2 CD Extremadura"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T23:07:20+01:00",
     "nuevos": 0,
@@ -15193,22 +15297,6 @@
    },
    {
     "hora": "2026-11-06T03:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-06T02:31:44+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
