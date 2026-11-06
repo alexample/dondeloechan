@@ -14749,9 +14749,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T13:07:20+01:00",
+  "comprobado": "2026-11-06T14:07:21+01:00",
   "cambio": "2026-11-06T00:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T14:07:21+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T13:07:20+01:00",
     "nuevos": 0,
@@ -15228,52 +15244,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-05T19:07:21+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: SD Eibar – Cádiz CF",
-     "Nuevo partido: CD Eldense – CE Sabadell",
-     "Nuevo partido: Real Murcia – Alcorcón"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-2-14-eib-cad",
-       "t": "SD Eibar – Cádiz CF"
-      },
-      {
-       "id": "2627-2-14-eld-sab",
-       "t": "CD Eldense – CE Sabadell"
-      },
-      {
-       "id": "2627-5-12-real-murcia-alcorcon",
-       "t": "Real Murcia – Alcorcón"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-2-14-eib-cad",
-       "t": "SD Eibar – Cádiz CF (Segunda)"
-      },
-      {
-       "id": "2627-2-14-eld-sab",
-       "t": "CD Eldense – CE Sabadell (Segunda)"
-      },
-      {
-       "id": "2627-5-12-real-murcia-alcorcon",
-       "t": "Real Murcia – Alcorcón (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
