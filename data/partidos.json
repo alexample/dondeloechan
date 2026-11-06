@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T00:07:20+01:00",
+ "actualizado": "2026-11-06T17:07:22+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12331,7 +12331,13 @@
   {
    "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
    "canales": [
-    "mcopa"
+    {
+     "name": "CMM",
+     "short": "CMM",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Castilla-La Mancha Media: gratis en la TDT de Castilla-La Mancha y en CMMPlay."
+    }
    ],
    "inicio": "2026-11-12T18:30:00+01:00",
    "jornada": "Primera ronda",
@@ -14749,9 +14755,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-06T16:07:21+01:00",
-  "cambio": "2026-11-06T00:07:20+01:00",
+  "comprobado": "2026-11-06T17:07:22+01:00",
+  "cambio": "2026-11-06T17:07:22+01:00",
   "historial": [
+   {
+    "hora": "2026-11-06T17:07:22+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
+       "t": "Calvo Sotelo Puertollano – Albacete"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-06T16:07:21+01:00",
     "nuevos": 0,
@@ -15178,22 +15205,6 @@
        "t": "Alcoyano – RCD Mallorca: 05/11 a las 20:00"
       }
      ],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-05T21:39:26+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
      "nuevos": []
     }
    }
