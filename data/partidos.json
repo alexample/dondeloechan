@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T15:07:20+01:00",
+ "actualizado": "2026-11-07T16:07:24+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11707,7 +11707,50 @@
    "canales": [
     "mliga"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "28'",
+     "seg": 1637,
+     "j": "Carlos Dotor",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2985,
+     "j": "Iker Luque",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3575,
+     "j": "Yassir Zabiri",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "64'",
+     "seg": 3834,
+     "j": "Adam Aznou",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-13-bur-clb",
@@ -11722,7 +11765,41 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 695,
+     "j": "Alvaro Marin",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4060,
+     "j": "Curro",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5125,
+     "j": "Alex Fores",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-12-esp-dep",
@@ -13304,6 +13381,16 @@
      14
     ],
     [
+     "rac",
+     12,
+     4,
+     2,
+     6,
+     17,
+     30,
+     14
+    ],
+    [
      "ala",
      12,
      3,
@@ -13374,16 +13461,6 @@
      11
     ],
     [
-     "rac",
-     12,
-     3,
-     2,
-     7,
-     15,
-     30,
-     11
-    ],
-    [
      "elc",
      11,
      2,
@@ -13416,12 +13493,12 @@
     [
      "mal",
      12,
-     1,
+     0,
      5,
-     6,
+     7,
      9,
-     21,
-     8
+     23,
+     5
     ]
    ]
   },
@@ -13447,6 +13524,16 @@
      23,
      10,
      26
+    ],
+    [
+     "bur",
+     13,
+     7,
+     3,
+     3,
+     19,
+     14,
+     24
     ],
     [
      "eib",
@@ -13499,16 +13586,6 @@
      21
     ],
     [
-     "bur",
-     13,
-     6,
-     3,
-     4,
-     17,
-     14,
-     21
-    ],
-    [
      "ovi",
      12,
      5,
@@ -13549,16 +13626,6 @@
      16
     ],
     [
-     "clb",
-     13,
-     4,
-     4,
-     5,
-     19,
-     23,
-     16
-    ],
-    [
      "vll",
      12,
      4,
@@ -13587,6 +13654,16 @@
      13,
      17,
      14
+    ],
+    [
+     "clb",
+     13,
+     3,
+     4,
+     6,
+     19,
+     25,
+     13
     ],
     [
      "leg",
@@ -14908,9 +14985,40 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-07T15:07:20+01:00",
-  "cambio": "2026-11-07T15:07:20+01:00",
+  "comprobado": "2026-11-07T16:07:24+01:00",
+  "cambio": "2026-11-07T16:07:24+01:00",
   "historial": [
+   {
+    "hora": "2026-11-07T16:07:24+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 2,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Málaga CF 1-2 Real Racing Club",
+     "Resultado: Burgos CF 2-1 Celta Fortuna"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-12-mal-rac",
+       "t": "Málaga CF 1-2 Real Racing Club"
+      },
+      {
+       "id": "2627-2-13-bur-clb",
+       "t": "Burgos CF 2-1 Celta Fortuna"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-07T15:07:20+01:00",
     "nuevos": 0,
@@ -15323,22 +15431,6 @@
    },
    {
     "hora": "2026-11-06T19:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-06T18:28:34+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
