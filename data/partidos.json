@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T21:07:19+01:00",
+ "actualizado": "2026-11-07T21:51:52+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12314,7 +12314,6 @@
    "localAbbr": "CAR",
    "visitanteAbbr": "SAN",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Esport3; completo, en FANPLAY TV y FootballClub.",
    "marcador": [
     2,
     2
@@ -13743,12 +13742,12 @@
     [
      "rma",
      12,
-     9,
-     1,
-     2,
-     28,
      10,
-     28
+     0,
+     2,
+     30,
+     10,
+     30
     ],
     [
      "atm",
@@ -13914,11 +13913,11 @@
      "val",
      12,
      2,
-     4,
-     6,
+     3,
+     7,
      8,
-     17,
-     10
+     19,
+     9
     ],
     [
      "mal",
@@ -15415,9 +15414,27 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-07T21:07:19+01:00",
-  "cambio": "2026-11-07T21:07:19+01:00",
+  "comprobado": "2026-11-07T21:51:52+01:00",
+  "cambio": "2026-11-07T21:51:52+01:00",
   "historial": [
+   {
+    "hora": "2026-11-07T21:51:52+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-07T21:07:19+01:00",
     "nuevos": 0,
@@ -15906,22 +15923,6 @@
    },
    {
     "hora": "2026-11-07T02:07:19+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-07T01:07:23+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
