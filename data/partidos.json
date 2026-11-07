@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T17:07:21+01:00",
+ "actualizado": "2026-11-07T18:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13592,7 +13592,7 @@
      3,
      4,
      19,
-     15,
+     16,
      21
     ],
     [
@@ -13701,7 +13701,7 @@
      2,
      4,
      7,
-     15,
+     16,
      18,
      10
     ],
@@ -14985,9 +14985,27 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-07T17:25:02+01:00",
-  "cambio": "2026-11-07T17:07:21+01:00",
+  "comprobado": "2026-11-07T18:07:20+01:00",
+  "cambio": "2026-11-07T18:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-07T18:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-07T17:25:02+01:00",
     "nuevos": 0,
@@ -15399,42 +15417,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-06T21:07:21+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 1,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Nuevo partido: Albacete BP – Celta Fortuna",
-     "Resultado: CP Cacereño 0-1 CD Lugo"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-11-cp-cacereno-cd-lugo",
-       "t": "CP Cacereño 0-1 CD Lugo"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-2-14-alb-clb",
-       "t": "Albacete BP – Celta Fortuna"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-2-14-alb-clb",
-       "t": "Albacete BP – Celta Fortuna (Segunda)"
-      }
-     ]
     }
    }
   ]
