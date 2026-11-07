@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T19:07:20+01:00",
+ "actualizado": "2026-11-07T20:07:19+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11978,7 +11978,6 @@
    "localAbbr": "ANT",
    "visitanteAbbr": "MAJ",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     3,
     1
@@ -12040,7 +12039,6 @@
    "localAbbr": "BAR",
    "visitanteAbbr": "RUN",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     2,
     0
@@ -12091,7 +12089,6 @@
    "localAbbr": "PON",
    "visitanteAbbr": "OUR",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub.",
    "marcador": [
     1,
     0
@@ -12685,21 +12682,6 @@
    "localId": "cd-pamplona",
    "visitante": "SD Eibar",
    "visitanteId": "eib",
-   "provisional": true
-  },
-  {
-   "id": "2627-3-primera-ronda-cd-badajoz-ten",
-   "canales": [
-    "mcopa"
-   ],
-   "inicio": "2026-11-10T20:00:00+01:00",
-   "jornada": "Primera ronda",
-   "liga": 3,
-   "local": "CD Badajoz",
-   "localAbbr": "BAD",
-   "localId": "cd-badajoz",
-   "visitante": "Tenerife",
-   "visitanteId": "ten",
    "provisional": true
   },
   {
@@ -13486,7 +13468,20 @@
   {
    "id": "2627-3-primera-ronda-alcoyano-mll",
    "canales": [
-    "mcopa"
+    {
+     "name": "À Punt",
+     "short": "APT",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de la Comunitat Valenciana y en apuntmedia.es."
+    },
+    {
+     "name": "IB3",
+     "short": "IB3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de las Illes Balears y en ib3.org."
+    }
    ],
    "inicio": "2026-11-18T20:00:00+01:00",
    "jornada": "Primera ronda",
@@ -13496,6 +13491,27 @@
    "localId": "alcoyano",
    "visitante": "RCD Mallorca",
    "visitanteId": "mll",
+   "provisional": true
+  },
+  {
+   "id": "2627-3-primera-ronda-cd-badajoz-ten",
+   "canales": [
+    {
+     "name": "Televisión Canaria",
+     "short": "TVC",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Canarias y en la web de RTVC."
+    }
+   ],
+   "inicio": "2026-11-18T20:00:00+01:00",
+   "jornada": "Primera ronda",
+   "liga": 3,
+   "local": "CD Badajoz",
+   "localAbbr": "BAD",
+   "localId": "cd-badajoz",
+   "visitante": "Tenerife",
+   "visitanteId": "ten",
    "provisional": true
   },
   {
@@ -13836,7 +13852,7 @@
      6,
      1,
      6,
-     21,
+     22,
      22,
      19
     ],
@@ -13906,8 +13922,8 @@
      3,
      3,
      7,
-     10,
-     21,
+     11,
+     23,
      12
     ],
     [
@@ -13946,8 +13962,8 @@
      3,
      1,
      9,
-     11,
-     23,
+     13,
+     24,
      10
     ],
     [
@@ -13957,7 +13973,7 @@
      2,
      10,
      10,
-     29,
+     30,
      5
     ]
    ]
@@ -15220,9 +15236,43 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-07T19:07:20+01:00",
-  "cambio": "2026-11-07T19:07:20+01:00",
+  "comprobado": "2026-11-07T20:07:19+01:00",
+  "cambio": "2026-11-07T20:07:19+01:00",
   "historial": [
+   {
+    "hora": "2026-11-07T20:07:19+01:00",
+    "nuevos": 0,
+    "horas": 1,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Nueva hora: CD Badajoz – Tenerife, 18/11 20:00"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-3-primera-ronda-alcoyano-mll",
+       "t": "Alcoyano – RCD Mallorca"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-badajoz-ten",
+       "t": "CD Badajoz – Tenerife"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-3-primera-ronda-cd-badajoz-ten",
+       "t": "CD Badajoz – Tenerife: 18/11 a las 20:00"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-07T19:07:20+01:00",
     "nuevos": 0,
@@ -15678,29 +15728,6 @@
       {
        "id": "2627-5-11-real-aviles-industrial-cd-extremadura",
        "t": "Real Avilés Industrial 5-2 CD Extremadura"
-      }
-     ],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-06T23:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 1,
-    "tablas": [],
-    "detalle": [
-     "Resultado: Sevilla FC 0-0 Deportivo Alavés"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-12-sev-ala",
-       "t": "Sevilla FC 0-0 Deportivo Alavés"
       }
      ],
      "canales": [],
