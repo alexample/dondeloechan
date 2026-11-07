@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T00:06:30+01:00",
+ "actualizado": "2026-11-07T14:07:19+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13320,6 +13320,16 @@
      12
     ],
     [
+     "rac",
+     12,
+     3,
+     3,
+     6,
+     15,
+     29,
+     12
+    ],
+    [
      "esp",
      11,
      3,
@@ -13337,16 +13347,6 @@
      6,
      11,
      22,
-     11
-    ],
-    [
-     "rac",
-     11,
-     3,
-     2,
-     6,
-     15,
-     29,
      11
     ],
     [
@@ -13381,18 +13381,18 @@
     ],
     [
      "mal",
-     11,
+     12,
      0,
-     5,
+     6,
      6,
      8,
      21,
-     5
+     6
     ]
    ]
   },
   "2": {
-   "tras": "Jornada 12",
+   "tras": "Jornada 13",
    "filas": [
     [
      "cas",
@@ -13445,6 +13445,16 @@
      22
     ],
     [
+     "bur",
+     13,
+     6,
+     4,
+     3,
+     17,
+     13,
+     22
+    ],
+    [
      "spo",
      12,
      7,
@@ -13462,16 +13472,6 @@
      3,
      22,
      11,
-     21
-    ],
-    [
-     "bur",
-     12,
-     6,
-     3,
-     3,
-     17,
-     13,
      21
     ],
     [
@@ -13546,13 +13546,13 @@
     ],
     [
      "clb",
-     12,
+     13,
      3,
-     4,
+     5,
      5,
      18,
      23,
-     13
+     14
     ],
     [
      "leg",
@@ -14874,9 +14874,28 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-07T13:07:20+01:00",
-  "cambio": "2026-11-07T00:06:30+01:00",
+  "comprobado": "2026-11-07T14:07:19+01:00",
+  "cambio": "2026-11-07T14:07:19+01:00",
   "historial": [
+   {
+    "hora": "2026-11-07T14:07:19+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-07T13:07:20+01:00",
     "nuevos": 0,
@@ -15286,27 +15305,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-06T17:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
-       "t": "Calvo Sotelo Puertollano – Albacete"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
