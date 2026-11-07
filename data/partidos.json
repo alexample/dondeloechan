@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T14:07:19+01:00",
+ "actualizado": "2026-11-07T15:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11659,7 +11659,41 @@
    "provisional": false,
    "localAbbr": "RFE",
    "visitanteAbbr": "LOG",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3360,
+     "j": "Miguelete",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5280,
+     "j": "Etienne Eto'o",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+5'",
+     "seg": 5430,
+     "j": "José Val",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-12-mal-rac",
@@ -13320,16 +13354,6 @@
      12
     ],
     [
-     "rac",
-     12,
-     3,
-     3,
-     6,
-     15,
-     29,
-     12
-    ],
-    [
      "esp",
      11,
      3,
@@ -13347,6 +13371,16 @@
      6,
      11,
      22,
+     11
+    ],
+    [
+     "rac",
+     12,
+     3,
+     2,
+     7,
+     15,
+     30,
      11
     ],
     [
@@ -13382,12 +13416,12 @@
     [
      "mal",
      12,
-     0,
+     1,
+     5,
      6,
-     6,
-     8,
+     9,
      21,
-     6
+     8
     ]
    ]
   },
@@ -13445,16 +13479,6 @@
      22
     ],
     [
-     "bur",
-     13,
-     6,
-     4,
-     3,
-     17,
-     13,
-     22
-    ],
-    [
      "spo",
      12,
      7,
@@ -13472,6 +13496,16 @@
      3,
      22,
      11,
+     21
+    ],
+    [
+     "bur",
+     13,
+     6,
+     3,
+     4,
+     17,
+     14,
      21
     ],
     [
@@ -13515,6 +13549,16 @@
      16
     ],
     [
+     "clb",
+     13,
+     4,
+     4,
+     5,
+     19,
+     23,
+     16
+    ],
+    [
      "vll",
      12,
      4,
@@ -13542,16 +13586,6 @@
      6,
      13,
      17,
-     14
-    ],
-    [
-     "clb",
-     13,
-     3,
-     5,
-     5,
-     18,
-     23,
      14
     ],
     [
@@ -14874,9 +14908,35 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-07T14:07:19+01:00",
-  "cambio": "2026-11-07T14:07:19+01:00",
+  "comprobado": "2026-11-07T15:07:20+01:00",
+  "cambio": "2026-11-07T15:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-07T15:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 1,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Racing Ferrol 1-2 UD Logroñés"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-11-racing-ferrol-ud-logrones",
+       "t": "Racing Ferrol 1-2 UD Logroñés"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-07T14:07:19+01:00",
     "nuevos": 0,
@@ -15279,22 +15339,6 @@
    },
    {
     "hora": "2026-11-06T18:28:34+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-06T18:07:22+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
