@@ -15693,9 +15693,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-08T16:07:20+01:00",
+  "comprobado": "2026-11-08T16:10:43+01:00",
   "cambio": "2026-11-08T16:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-08T16:10:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-08T16:07:20+01:00",
     "nuevos": 0,
@@ -16144,40 +16160,6 @@
      ],
      "canales": [],
      "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-07T20:07:19+01:00",
-    "nuevos": 0,
-    "horas": 1,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [
-     "Nueva hora: CD Badajoz – Tenerife, 18/11 20:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-3-primera-ronda-alcoyano-mll",
-       "t": "Alcoyano – RCD Mallorca"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-badajoz-ten",
-       "t": "CD Badajoz – Tenerife"
-      }
-     ],
-     "horas": [
-      {
-       "id": "2627-3-primera-ronda-cd-badajoz-ten",
-       "t": "CD Badajoz – Tenerife: 18/11 a las 20:00"
-      }
-     ],
      "nuevos": []
     }
    }
