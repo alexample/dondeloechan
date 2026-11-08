@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T20:07:21+01:00",
+ "actualizado": "2026-11-08T20:40:15+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13036,7 +13036,41 @@
    "provisional": false,
    "localAbbr": "CUL",
    "visitanteAbbr": "PFR",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2460,
+     "j": "Sérigné Faye",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "45'",
+     "seg": 2700,
+     "j": "Antón Escobar",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4980,
+     "j": "Róber",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-11-merida-bilbao-athletic",
@@ -13055,7 +13089,41 @@
    "localAbbr": "MER",
    "visitanteAbbr": "BIL",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "r",
+     "min": "4'",
+     "seg": 240,
+     "j": "Beñat Larrea",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 420,
+     "j": "Carlos Doncel",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "88'",
+     "seg": 5280,
+     "j": "Darwin Guagua",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-11-mirandes-cd-coria",
@@ -13074,7 +13142,32 @@
    "localAbbr": "MIR",
    "visitanteAbbr": "COR",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2460,
+     "j": "Alex Toper",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5160,
+     "j": "Rafa Núñez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-12-cel-lev",
@@ -13089,7 +13182,13 @@
     "mliga",
     "mliga2"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-1-12-vil-get",
@@ -13103,7 +13202,32 @@
    "canales": [
     "daznll"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4753,
+     "j": "Tajon Buchanan",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Carlos Romero",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-13-spo-vll",
@@ -13119,7 +13243,50 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "4'",
+     "seg": 204,
+     "j": "Julien Ponceau",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2324,
+     "j": "Tai Abed",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4971,
+     "j": "Guillermo Rosas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Juan Otero",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-11-real-murcia-algeciras-cf",
@@ -13364,7 +13531,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-3-primera-ronda-salamanca-uds-cel",
@@ -14154,6 +14321,16 @@
      16
     ],
     [
+     "vil",
+     12,
+     4,
+     3,
+     5,
+     17,
+     15,
+     15
+    ],
+    [
      "dep",
      12,
      3,
@@ -14172,16 +14349,6 @@
      17,
      30,
      14
-    ],
-    [
-     "vil",
-     12,
-     3,
-     4,
-     5,
-     15,
-     15,
-     13
     ],
     [
      "cel",
@@ -14204,16 +14371,6 @@
      13
     ],
     [
-     "get",
-     12,
-     3,
-     4,
-     5,
-     8,
-     16,
-     13
-    ],
-    [
      "esp",
      12,
      3,
@@ -14231,6 +14388,16 @@
      5,
      15,
      21,
+     12
+    ],
+    [
+     "get",
+     12,
+     3,
+     3,
+     6,
+     8,
+     18,
      12
     ],
     [
@@ -14354,7 +14521,7 @@
      7,
      1,
      5,
-     13,
+     14,
      15,
      22
     ],
@@ -14395,7 +14562,7 @@
      3,
      5,
      22,
-     19,
+     20,
      18
     ],
     [
@@ -15768,9 +15935,66 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-08T20:07:21+01:00",
-  "cambio": "2026-11-08T20:07:21+01:00",
+  "comprobado": "2026-11-08T20:40:15+01:00",
+  "cambio": "2026-11-08T20:40:15+01:00",
   "historial": [
+   {
+    "hora": "2026-11-08T20:40:15+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 6,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: RC Celta 0-0 Levante UD",
+     "Resultado: Villarreal CF 2-0 Getafe CF",
+     "Resultado: Real Sporting 1-2 Real Valladolid",
+     "Canal confirmado: CD Leganés – Burgos CF",
+     "Resultado: Mirandés 0-2 CD Coria",
+     "Resultado: Cultural Leonesa 1-1 Ponferradina",
+     "Resultado: Mérida 2-0 Bilbao Athletic"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-12-cel-lev",
+       "t": "RC Celta 0-0 Levante UD"
+      },
+      {
+       "id": "2627-1-12-vil-get",
+       "t": "Villarreal CF 2-0 Getafe CF"
+      },
+      {
+       "id": "2627-2-13-spo-vll",
+       "t": "Real Sporting 1-2 Real Valladolid"
+      },
+      {
+       "id": "2627-5-11-mirandes-cd-coria",
+       "t": "Mirandés 0-2 CD Coria"
+      },
+      {
+       "id": "2627-5-11-cultural-leonesa-ponferradina",
+       "t": "Cultural Leonesa 1-1 Ponferradina"
+      },
+      {
+       "id": "2627-5-11-merida-bilbao-athletic",
+       "t": "Mérida 2-0 Bilbao Athletic"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-2-14-leg-bur",
+       "t": "CD Leganés – Burgos CF · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-08T20:07:21+01:00",
     "nuevos": 0,
@@ -16206,22 +16430,6 @@
    },
    {
     "hora": "2026-11-08T01:07:24+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-08T00:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
