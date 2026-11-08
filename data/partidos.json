@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T14:07:20+01:00",
+ "actualizado": "2026-11-08T15:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12562,7 +12562,6 @@
    "localAbbr": "AGU",
    "visitanteAbbr": "NAS",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     1,
     1
@@ -12606,7 +12605,6 @@
    "localAbbr": "ARE",
    "visitanteAbbr": "FAB",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     2,
     1
@@ -12659,7 +12657,6 @@
    "localAbbr": "TER",
    "visitanteAbbr": "IBI",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     1,
     1
@@ -12784,7 +12781,6 @@
    "localAbbr": "VIB",
    "visitanteAbbr": "TOR",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     1,
     1
@@ -13022,7 +13018,8 @@
     "hyper2",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "estado": "aplazado"
   },
   {
    "id": "2627-2-13-spo-vll",
@@ -15671,9 +15668,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-08T14:07:20+01:00",
-  "cambio": "2026-11-08T14:07:20+01:00",
+  "comprobado": "2026-11-08T15:07:20+01:00",
+  "cambio": "2026-11-08T15:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-08T15:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 1,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-08T14:07:20+01:00",
     "nuevos": 0,
@@ -16184,24 +16197,6 @@
        "t": "Utebo – CE Sabadell"
       }
      ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-07T18:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
      "horas": [],
      "nuevos": []
     }
