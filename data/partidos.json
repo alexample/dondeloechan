@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T20:40:15+01:00",
+ "actualizado": "2026-11-08T21:07:24+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13089,7 +13089,6 @@
    "localAbbr": "MER",
    "visitanteAbbr": "BIL",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     2,
     0
@@ -13142,7 +13141,6 @@
    "localAbbr": "MIR",
    "visitanteAbbr": "COR",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     0,
     2
@@ -14252,13 +14250,13 @@
    "filas": [
     [
      "bar",
-     11,
+     12,
      10,
-     0,
+     1,
      1,
      46,
      12,
-     30
+     31
     ],
     [
      "rma",
@@ -14272,13 +14270,13 @@
     ],
     [
      "atm",
-     11,
+     12,
      9,
-     1,
+     2,
      1,
      22,
      8,
-     28
+     29
     ],
     [
      "bet",
@@ -15935,9 +15933,27 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-08T20:40:15+01:00",
-  "cambio": "2026-11-08T20:40:15+01:00",
+  "comprobado": "2026-11-08T21:07:24+01:00",
+  "cambio": "2026-11-08T21:07:24+01:00",
   "historial": [
+   {
+    "hora": "2026-11-08T21:07:24+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-08T20:40:15+01:00",
     "nuevos": 0,
@@ -16414,22 +16430,6 @@
    },
    {
     "hora": "2026-11-08T01:34:02+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-08T01:07:24+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
