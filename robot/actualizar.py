@@ -13,6 +13,7 @@ Reglas: nunca borra partidos; solo añade partidos nuevos de los próximos 10 d�
 actualiza los que ya existen. Si una fuente falla, se deja lo que había.
 Uso: python3 robot/actualizar.py [--seco] [--muestras DIR]
 """
+import collections
 import datetime as dt
 import html
 import json
@@ -573,6 +574,51 @@ def guardar_rfef(filas):
         log(f"1ª RFEF: {len(filas)} resultados de la temporada guardados")
 
 
+def tabla_rfef_resultados(rfef_nuevos, partidos, eq):
+    """Clasificación de cada grupo de 1ª RFEF calculada con todos los resultados conocidos:
+    historial data/h2h/rfef.json + lo leído hoy de VAVEL + los partidos terminados de la guía.
+    Cada pareja local-visitante se juega una vez por temporada, así que no se cuenta dos veces.
+    Solo devuelve un grupo si salen sus 20 equipos y la tabla cuadra."""
+    res = {}
+    try:
+        viejo = json.load(open(RFEF, encoding="utf-8")).get("resultados", []) if os.path.exists(RFEF) else []
+    except Exception:  # noqa: BLE001
+        viejo = []
+    for f in list(viejo) + list(rfef_nuevos or []):
+        try:
+            _, jor, g, li, vi, gl, gv = f
+            res[(li, vi)] = (f"Grupo {g}", int(re.sub(r"\D", "", str(jor)) or 0), int(gl), int(gv))
+        except (ValueError, TypeError):
+            continue
+    for p in partidos:
+        if p.get("liga") == 5 and p.get("estado") == "final" and isinstance(p.get("marcador"), list) \
+                and len(p["marcador"]) == 2 and p.get("etiqueta") in ("Grupo 1", "Grupo 2"):
+            jor = int(re.sub(r"\D", "", str(p.get("jornada", ""))) or 0)
+            res[(p["localId"], p["visitanteId"])] = (p["etiqueta"], jor, int(p["marcador"][0]), int(p["marcador"][1]))
+    salida = {}
+    for grupo in ("Grupo 1", "Grupo 2"):
+        t = {}
+        for (li, vi), (g, _, gl, gv) in res.items():
+            if g != grupo:
+                continue
+            for eqid, a, b in ((li, gl, gv), (vi, gv, gl)):
+                r = t.setdefault(eqid, [0, 0, 0, 0, 0, 0, 0])  # pj g e p gf gc pts
+                r[0] += 1; r[4] += a; r[5] += b
+                if a > b:
+                    r[1] += 1; r[6] += 3
+                elif a == b:
+                    r[2] += 1; r[6] += 1
+                else:
+                    r[3] += 1
+        filas = sorted(([k, *v] for k, v in t.items()), key=lambda f: (-f[7], -(f[5] - f[6]), -f[5], f[0]))
+        if not tabla_valida(filas, 20):
+            continue
+        jor = collections.Counter(f[1] for f in filas).most_common(1)[0][0]
+        salida[grupo] = {"tras": f"Jornada {jor}",
+                         "filas": [[*f, eq.nombres.get(f[0], f[0])] for f in filas]}
+    return salida
+
+
 def main():
     datos = json.load(open(DATOS, encoding="utf-8"))
     partidos = datos["partidos"]
@@ -874,6 +920,15 @@ def main():
                               "filas": [[eq.buscar(f[1], 5), *f[2:9], eq.nombres.get(eq.buscar(f[1], 5), f[1])] for f in filas]}
         else:
             log(f"⚠ Clasificación de {nombre} (1ª RFEF) incompleta o no cuadra: se deja la anterior")
+    # La tabla de VAVEL a veces va días por detrás. Se calcula también con todos los resultados que
+    # conocemos (historial de VAVEL + resultados de la guía) y se usa la que tenga más partidos contados.
+    for nombre, calc in tabla_rfef_resultados(rfef, partidos, eq).items():
+        actual = grupos.get(nombre) or ((clas.get("5") or {}).get("grupos", {}).get(nombre))
+        pj_actual = sum(f[1] for f in (actual or {}).get("filas", []))
+        pj_calc = sum(f[1] for f in calc["filas"])
+        if pj_calc > pj_actual or (pj_calc == pj_actual and nombre not in grupos):
+            grupos[nombre] = calc
+            log(f"1ª RFEF {nombre}: clasificación calculada con los resultados ({calc['tras']})")
     if grupos:
         viejo = (clas.get("5") or {}).get("grupos", {})
         nuevo = {"grupos": {**viejo, **grupos}}
