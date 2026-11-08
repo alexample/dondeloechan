@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T15:07:20+01:00",
+ "actualizado": "2026-11-08T16:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12828,7 +12828,32 @@
    "canales": [
     "daznll"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4804,
+     "j": "Rodrigo Riquelme",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5289,
+     "j": "Marc Bartra",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-13-and-mll",
@@ -14016,12 +14041,12 @@
     [
      "bet",
      12,
-     7,
-     3,
+     8,
      2,
-     18,
+     2,
+     20,
      15,
-     24
+     26
     ],
     [
      "rso",
@@ -14144,16 +14169,6 @@
      12
     ],
     [
-     "elc",
-     12,
-     2,
-     5,
-     5,
-     14,
-     18,
-     11
-    ],
-    [
      "lev",
      11,
      2,
@@ -14161,6 +14176,16 @@
      5,
      16,
      21,
+     10
+    ],
+    [
+     "elc",
+     12,
+     2,
+     4,
+     6,
+     14,
+     20,
      10
     ],
     [
@@ -15668,9 +15693,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-08T15:07:20+01:00",
-  "cambio": "2026-11-08T15:07:20+01:00",
+  "comprobado": "2026-11-08T16:07:20+01:00",
+  "cambio": "2026-11-08T16:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-08T16:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 1,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Resultado: Elche CF 0-2 Real Betis"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-12-elc-bet",
+       "t": "Elche CF 0-2 Real Betis"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-08T15:07:20+01:00",
     "nuevos": 0,
@@ -16128,76 +16178,6 @@
        "t": "CD Badajoz – Tenerife: 18/11 a las 20:00"
       }
      ],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-07T19:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 6,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: RCD Espanyol 0-0 RC Deportivo",
-     "Resultado: Cádiz CF 1-2 Real Oviedo",
-     "Canal confirmado: Calvo Sotelo Puertollano – Albacete",
-     "Canal confirmado: CD Tarancón – Levante",
-     "Resultado: Barakaldo CF 2-0 Real Unión",
-     "Resultado: Pontevedra 1-0 UD Ourense",
-     "Resultado: Alcorcón 4-3 Real Jaén",
-     "Resultado: Antequera 3-1 Rayo Majadahonda"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-12-esp-dep",
-       "t": "RCD Espanyol 0-0 RC Deportivo"
-      },
-      {
-       "id": "2627-2-13-cad-ovi",
-       "t": "Cádiz CF 1-2 Real Oviedo"
-      },
-      {
-       "id": "2627-5-11-barakaldo-cf-real-union",
-       "t": "Barakaldo CF 2-0 Real Unión"
-      },
-      {
-       "id": "2627-5-11-pontevedra-ud-ourense",
-       "t": "Pontevedra 1-0 UD Ourense"
-      },
-      {
-       "id": "2627-5-11-alcorcon-real-jaen",
-       "t": "Alcorcón 4-3 Real Jaén"
-      },
-      {
-       "id": "2627-5-11-antequera-rayo-majadahonda",
-       "t": "Antequera 3-1 Rayo Majadahonda"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
-       "t": "Calvo Sotelo Puertollano – Albacete · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
-       "t": "CDA Navalcarnero – Betis"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-tarancon-lev",
-       "t": "CD Tarancón – Levante · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-utebo-sab",
-       "t": "Utebo – CE Sabadell"
-      }
-     ],
-     "horas": [],
      "nuevos": []
     }
    }
