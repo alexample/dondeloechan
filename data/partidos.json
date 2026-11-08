@@ -15492,9 +15492,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-08T11:07:20+01:00",
+  "comprobado": "2026-11-08T12:07:20+01:00",
   "cambio": "2026-11-08T00:07:21+01:00",
   "historial": [
+   {
+    "hora": "2026-11-08T12:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-08T11:07:20+01:00",
     "nuevos": 0,
@@ -15980,37 +15996,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-07T16:07:24+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 2,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Málaga CF 1-2 Real Racing Club",
-     "Resultado: Burgos CF 2-1 Celta Fortuna"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-12-mal-rac",
-       "t": "Málaga CF 1-2 Real Racing Club"
-      },
-      {
-       "id": "2627-2-13-bur-clb",
-       "t": "Burgos CF 2-1 Celta Fortuna"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
