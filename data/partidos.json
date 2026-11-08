@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T17:07:22+01:00",
+ "actualizado": "2026-11-08T18:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12911,7 +12911,50 @@
    "provisional": false,
    "localAbbr": "RMC",
    "visitanteAbbr": "HER",
-   "etiqueta": "Grupo 2"
+   "etiqueta": "Grupo 2",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 420,
+     "j": "Antonio Cortés",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3540,
+     "j": "Diego Aguado",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "85'",
+     "seg": 5100,
+     "j": "Oriol Soldevila",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'",
+     "seg": 5400,
+     "j": "Jorge Cestero",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-12-rso-ray",
@@ -14051,12 +14094,12 @@
     [
      "rso",
      12,
-     6,
-     2,
+     7,
+     1,
      4,
+     21,
      20,
-     20,
-     20
+     22
     ],
     [
      "sev",
@@ -14109,16 +14152,6 @@
      13
     ],
     [
-     "ray",
-     11,
-     3,
-     4,
-     4,
-     15,
-     20,
-     13
-    ],
-    [
      "vil",
      11,
      3,
@@ -14146,6 +14179,16 @@
      6,
      13,
      14,
+     12
+    ],
+    [
+     "ray",
+     11,
+     3,
+     3,
+     5,
+     15,
+     21,
      12
     ],
     [
@@ -14214,6 +14257,16 @@
    "tras": "Jornada 13",
    "filas": [
     [
+     "alm",
+     13,
+     9,
+     2,
+     2,
+     24,
+     10,
+     29
+    ],
+    [
      "cas",
      12,
      8,
@@ -14221,16 +14274,6 @@
      1,
      23,
      5,
-     27
-    ],
-    [
-     "alm",
-     13,
-     8,
-     3,
-     2,
-     23,
-     10,
      27
     ],
     [
@@ -14264,16 +14307,6 @@
      23
     ],
     [
-     "gir",
-     13,
-     6,
-     4,
-     3,
-     22,
-     11,
-     22
-    ],
-    [
      "mll",
      12,
      6,
@@ -14292,6 +14325,16 @@
      13,
      13,
      22
+    ],
+    [
+     "gir",
+     13,
+     6,
+     3,
+     4,
+     22,
+     12,
+     21
     ],
     [
      "ovi",
@@ -15693,9 +15736,35 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-08T17:07:22+01:00",
-  "cambio": "2026-11-08T17:07:22+01:00",
+  "comprobado": "2026-11-08T18:07:20+01:00",
+  "cambio": "2026-11-08T18:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-08T18:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 1,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: Real Madrid Castilla 2-2 Hércules"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-11-real-madrid-castilla-hercules",
+       "t": "Real Madrid Castilla 2-2 Hércules"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-08T17:07:22+01:00",
     "nuevos": 0,
@@ -16110,24 +16179,6 @@
     "canales": 0,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-07T21:51:52+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera"
-    ],
     "detalle": [],
     "avisos": 0,
     "items": {
