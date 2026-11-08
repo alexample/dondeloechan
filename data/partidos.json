@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T00:07:21+01:00",
+ "actualizado": "2026-11-08T14:07:20+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -12562,7 +12562,32 @@
    "localAbbr": "AGU",
    "visitanteAbbr": "NAS",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "8'",
+     "seg": 480,
+     "j": "Javi Castedo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "64'",
+     "seg": 3840,
+     "j": "Pere",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-11-arenas-club-deportivo-fabril",
@@ -12581,7 +12606,41 @@
    "localAbbr": "ARE",
    "visitanteAbbr": "FAB",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 600,
+     "j": "Álvaro Arnedo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "35'",
+     "seg": 2100,
+     "j": "Noé",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4980,
+     "j": "Benat Arratibel",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-11-cd-teruel-ud-ibiza",
@@ -12600,7 +12659,41 @@
    "localAbbr": "TER",
    "visitanteAbbr": "IBI",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2880,
+     "j": "Pedro Ortiz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3120,
+     "j": "Sergio Moreno",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90+1'",
+     "seg": 5406,
+     "j": "Nathaniel Nicholas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-11-ce-europa-atletico-madrileno",
@@ -12620,7 +12713,59 @@
    "provisional": false,
    "localAbbr": "EUR",
    "visitanteAbbr": "ATM",
-   "etiqueta": "Grupo 2"
+   "etiqueta": "Grupo 2",
+   "marcador": [
+    3,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "3'",
+     "seg": 180,
+     "j": "Marc Domenech",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45+3'",
+     "seg": 2718,
+     "j": "Marc Domenech",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3240,
+     "j": "Khalid Noureddine",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "71'",
+     "seg": 4260,
+     "j": "Joan Mascaró",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+4'",
+     "seg": 5424,
+     "j": "Youssef Zayzoun",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-11-villarreal-b-juventud-torremolinos",
@@ -12639,7 +12784,41 @@
    "localAbbr": "VIB",
    "visitanteAbbr": "TOR",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "14'",
+     "seg": 840,
+     "j": "Albert Garcia",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "23'",
+     "seg": 1380,
+     "j": "Dioni Villalba",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "84'",
+     "seg": 5040,
+     "j": "Mahamoud Barry",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-12-elc-bet",
@@ -13839,13 +14018,13 @@
     ],
     [
      "bet",
-     11,
+     12,
      7,
-     2,
+     3,
      2,
      18,
      15,
-     23
+     24
     ],
     [
      "rso",
@@ -13969,13 +14148,13 @@
     ],
     [
      "elc",
-     11,
+     12,
      2,
-     4,
+     5,
      5,
      14,
      18,
-     10
+     11
     ],
     [
      "lev",
@@ -15492,9 +15671,54 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-08T13:07:19+01:00",
-  "cambio": "2026-11-08T00:07:21+01:00",
+  "comprobado": "2026-11-08T14:07:20+01:00",
+  "cambio": "2026-11-08T14:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-08T14:07:20+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 5,
+    "tablas": [
+     "Primera"
+    ],
+    "detalle": [
+     "Resultado: Arenas Club 2-1 Deportivo Fabril",
+     "Resultado: CD Teruel 1-1 UD Ibiza",
+     "Resultado: Águilas FC 1-1 Gimnàstic de Tarragona",
+     "Resultado: CE Europa 3-2 Atlético Madrileño",
+     "Resultado: Villarreal B 1-1 Juventud Torremolinos"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-11-arenas-club-deportivo-fabril",
+       "t": "Arenas Club 2-1 Deportivo Fabril"
+      },
+      {
+       "id": "2627-5-11-cd-teruel-ud-ibiza",
+       "t": "CD Teruel 1-1 UD Ibiza"
+      },
+      {
+       "id": "2627-5-11-aguilas-fc-gimnastic-de-tarragona",
+       "t": "Águilas FC 1-1 Gimnàstic de Tarragona"
+      },
+      {
+       "id": "2627-5-11-ce-europa-atletico-madrileno",
+       "t": "CE Europa 3-2 Atlético Madrileño"
+      },
+      {
+       "id": "2627-5-11-villarreal-b-juventud-torremolinos",
+       "t": "Villarreal B 1-1 Juventud Torremolinos"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-08T13:07:19+01:00",
     "nuevos": 0,
@@ -15973,22 +16197,6 @@
     "tablas": [
      "Segunda"
     ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-07T17:25:02+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
     "detalle": [],
     "avisos": 0,
     "items": {
