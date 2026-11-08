@@ -148,6 +148,36 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .foot{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
 .foot a{color:var(--accent);font-weight:600}
 
+/* Ficha del equipo (al pulsar un equipo en la ficha del partido o en la clasificación) */
+.eq-btn{appearance:none;border:0;background:none;padding:0;margin:0;font:inherit;color:inherit;text-align:inherit;cursor:pointer;max-width:100%}
+.eq-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.tabla td.eq .eq-btn{display:inline;white-space:nowrap;text-align:left}
+.tabla td.eq .eq-btn:hover,.vs .side .eq-btn:hover b{color:var(--accent)}
+.vs .side .eq-btn{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}
+.vs .side .eq-btn b{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:2px;text-underline-offset:5px}
+.eqf-cab{display:flex;align-items:center;gap:14px}
+.eqf-cab>div{display:flex;flex-direction:column;gap:6px;min-width:0;align-items:flex-start}
+.eqf-cab h2{margin:0;font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1.05;text-transform:uppercase;text-wrap:balance}
+.eqf-cab small{font-size:12.5px;color:var(--muted)}
+.eqf-comp{font-size:12px;color:var(--muted);margin:0 0 6px;font-weight:600}
+.eqf-pos{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.eqf-pos div{background:var(--bg);border-radius:10px;padding:8px 4px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.eqf-pos b{font-family:var(--f-display);font-weight:800;font-size:21px;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.eqf-pos small{font-size:10.5px;color:var(--muted)}
+.eqf-lista{display:flex;flex-direction:column;gap:6px}
+.eqf-lista button{appearance:none;width:100%;display:grid;grid-template-columns:58px minmax(0,1fr) auto;gap:10px;align-items:center;text-align:left;background:var(--bg);border:1px solid transparent;border-radius:10px;padding:8px 10px;font:inherit;color:inherit;cursor:pointer}
+.eqf-lista button:hover{border-color:var(--line)}
+.eqf-lista button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eqf-lista .f{font-size:11px;color:var(--muted);line-height:1.2}
+.eqf-lista .f b{display:block;font-family:var(--f-display);font-size:17px;color:var(--ink);font-weight:800}
+.eqf-lista .r{min-width:0;display:flex;flex-direction:column;gap:2px}
+.eqf-lista .r span{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eqf-lista .r small{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eqf-lista .res{font-family:var(--f-display);font-weight:800;font-size:18px;padding:2px 8px;border-radius:6px;white-space:nowrap;color:#fff}
+.eqf-lista .res.G{background:var(--pitch)} .eqf-lista .res.E{background:var(--done)} .eqf-lista .res.P{background:var(--accent)}
+.eqf-lista .chip{max-width:120px;overflow:hidden;text-overflow:ellipsis}
+.volver{appearance:none;border:0;background:none;color:var(--accent);font:inherit;font-weight:700;font-size:13.5px;cursor:pointer;padding:4px 0}
+.volver:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 /* Clasificación en la ficha */
 .tabla{--z1:#2F8A57;--z2:#8DBF9F;--z3:var(--live)}
 .tabla td.ps{white-space:nowrap}
@@ -577,7 +607,7 @@ function crest(t,big){
 }
 /* ---------- Clasificación ----------
    CLAS = {"1":{"tras":"Jornada 9","filas":[[id,pj,g,e,p,gf,gc,pts,(nombre)],…]}, "5":{"grupos":{"Grupo 1":{…}}}} */
-let CLAS=null, verTabla=false;
+let CLAS=null, verTabla=false, ctxTabla=null;
 const ZONAS={1:[[4,"z1","Champions"],[6,"z2","Europa"],[-3,"z3","Descenso"]],
   2:[[2,"z1","Ascenso"],[6,"z2","Play-off"],[-4,"z3","Descenso"]],
   5:[[1,"z1","Ascenso"],[5,"z2","Play-off"],[-5,"z3","Descenso"]],
@@ -623,6 +653,7 @@ function tablaViva(m,t){
 function zonaDe(liga,pos,n){for(const [h,c] of (ZONAS[liga]||[])){if(h>0&&pos<=h)return c;if(h<0&&pos>n+h)return c}return ""}
 function tablaHTML(m){
   const t=tablaDe(m);if(!t)return "";
+  ctxTabla=m;
   const tv=tablaViva(m,t);
   const F=tv.filas,n=F.length;
   const busca=(id,nom)=>F.findIndex(r=>r[0]===id||(r[8]&&nom&&norm(r[8])===norm(nom)));
@@ -639,7 +670,7 @@ function tablaHTML(m){
   for(const i of ver){
     if(prev>=0&&i>prev+1)filas+=`<tr class="gap" aria-hidden="true"><td colspan="5">···</td></tr>`;
     const r=F[i],dg=r[5]-r[6],tm=teamOf(r[0],r[8]),kk=r[0]||r[8],mv=tv.mov[kk]||0,jg=tv.jugando[kk];
-    filas+=`<tr class="${zonaDe(m.liga,i+1,n)}${i===iH||i===iA?" yo":""}${jg!=null?" jugando":""}"><td class="ps">${i+1}${mv?`<i class="mv ${mv>0?"up":"dn"}" aria-label="${mv>0?"sube "+mv:"baja "+(-mv)}">${mv>0?"▲":"▼"}${Math.abs(mv)}</i>`:""}</td><td class="eq">${esc(tm.name)}${jg?`<span class="tb-vivo">${jg}</span>`:""}</td><td class="pj">${r[1]}</td><td class="dg">${dg>0?"+"+dg:dg<0?"−"+(-dg):0}</td><td class="pt">${r[7]}</td></tr>`;
+    filas+=`<tr class="${zonaDe(m.liga,i+1,n)}${i===iH||i===iA?" yo":""}${jg!=null?" jugando":""}"><td class="ps">${i+1}${mv?`<i class="mv ${mv>0?"up":"dn"}" aria-label="${mv>0?"sube "+mv:"baja "+(-mv)}">${mv>0?"▲":"▼"}${Math.abs(mv)}</i>`:""}</td><td class="eq"><button type="button" class="eq-btn" data-eq="${esc(r[0]||"")}" data-nom="${esc(tm.name)}" data-ab="${esc(tm.abbr)}" title="Ver ficha de ${esc(tm.name)}">${esc(tm.name)}</button>${jg?`<span class="tb-vivo">${jg}</span>`:""}</td><td class="pj">${r[1]}</td><td class="dg">${dg>0?"+"+dg:dg<0?"−"+(-dg):0}</td><td class="pt">${r[7]}</td></tr>`;
     prev=i;
   }
   const z=ZONAS[m.liga]||[];
@@ -1699,16 +1730,17 @@ const sheet=document.getElementById("sheet"),scrim=document.getElementById("scri
 let lastFocus=null;
 function open(id){
   const m=matches&&matches.find(x=>x._id===id); if(!m)return;
-  if(!actual||actual._id!==id)verTabla=false;
+  if(!actual||actual._id!==id||equipoAbierto)verTabla=false;
+  equipoAbierto=null;
   const d=new Date(m.inicio),now=Date.now(),h=teamOf(m.localId,m.local,m.localAbbr),a=teamOf(m.visitanteId,m.visitante,m.visitanteAbbr),ch=m.canales||[];
   const canary=CANARY.has(m.localId);
   sheet.innerHTML=`<div class="wrap">
     <div class="grab"></div>
     <div class="sh-head"><span class="comp">${(COMP[m.liga]||{}).name||""} · ${esc(jornLabel(m.jornada))}</span><span class="sh-acc">${status(m,now)!=="done"&&m.estado!=="final"?`<button class="campana-b" id="sigue-partido" type="button" aria-pressed="${SIGUE.has(m._id)}" aria-label="${SIGUE.has(m._id)?"Quitar avisos de este partido":"Avisarme de este partido"}" title="${SIGUE.has(m._id)?"Quitar avisos de este partido":"Avisarme de este partido: goles de los dos equipos y resultado"}">${SVG_CAMP}<span>${SIGUE.has(m._id)?"Avisándote":"Avisarme"}</span></button>`:""}<button class="close" id="close" aria-label="Cerrar">×</button></span></div>
     <div class="vs">
-      <div class="side">${crest(h,1)}<b id="sh-title" class="${claseEquipo(m.localId,m.liga)}">${esc(h.name)}</b>${botonFav(m.localId,h.name)}</div>
+      <div class="side"><button type="button" class="eq-btn" data-eq="${esc(m.localId||"")}" data-nom="${esc(h.name)}" data-ab="${esc(h.abbr)}" title="Ver ficha de ${esc(h.name)}">${crest(h,1)}<b id="sh-title" class="${claseEquipo(m.localId,m.liga)}">${esc(h.name)}</b></button>${botonFav(m.localId,h.name)}</div>
       ${tieneMarcador(m)&&(status(m,now)==="live"||status(m,now)==="done")?`<div class="mid score${status(m,now)==="live"?" live":""}">${m.marcador[0]}<i>–</i>${m.marcador[1]}</div>`:`<div class="mid">VS</div>`}
-      <div class="side">${crest(a,1)}<b class="${claseEquipo(m.visitanteId,m.liga)}">${esc(a.name)}</b>${botonFav(m.visitanteId,a.name)}</div>
+      <div class="side"><button type="button" class="eq-btn" data-eq="${esc(m.visitanteId||"")}" data-nom="${esc(a.name)}" data-ab="${esc(a.abbr)}" title="Ver ficha de ${esc(a.name)}">${crest(a,1)}<b class="${claseEquipo(m.visitanteId,m.liga)}">${esc(a.name)}</b></button>${botonFav(m.visitanteId,a.name)}</div>
     </div>
     ${eventosHTML(m,now)}
     <div>
@@ -1783,7 +1815,7 @@ document.addEventListener("keydown",e=>{
   e.preventDefault();open(bs[i].dataset.id);bs[i].scrollIntoView({block:"nearest"});
 });
 function close(){
-  actual=null;marcar("");marcarSel(null);document.body.classList.remove("ficha-on");
+  actual=null;equipoAbierto=null;marcar("");marcarSel(null);document.body.classList.remove("ficha-on");
   if(esEscritorio()){panelVacio();return}
   scrim.classList.remove("on");sheet.classList.remove("on");
   setTimeout(()=>{scrim.hidden=true;sheet.hidden=true},230);
@@ -1792,15 +1824,81 @@ function close(){
 document.getElementById("app").addEventListener("click",e=>{const b=e.target.closest(".match");if(b)open(b.dataset.id)});
 sheet.addEventListener("click",e=>{
   if(e.target.id==="close"){close();return}
+  if(e.target.closest("#volver")&&equipoAbierto&&equipoAbierto.volver){open(equipoAbierto.volver);return}
+  const eb=e.target.closest("[data-eq]");
+  if(eb){abrirEquipo(eb.dataset.eq,eb.dataset.nom,eb.dataset.ab);return}
+  const pb=e.target.closest("[data-partido]");
+  if(pb){open(pb.dataset.partido);return}
   if(e.target.closest("#compartir")&&actual){compartir(actual);return}
   const sp=e.target.closest("#sigue-partido");
   if(sp&&actual){alternarSigue(actual);const on=SIGUE.has(actual._id);sp.setAttribute("aria-pressed",String(on));const t=on?"Quitar avisos de este partido":"Avisarme de este partido";sp.setAttribute("aria-label",t);sp.title=on?t:t+": goles de los dos equipos y resultado";const sl=sp.querySelector("span");if(sl)sl.textContent=on?"Avisándote":"Avisarme";render();return}
   if(e.target.id==="ck-coment"){guardarConsent(true);return}
-  if(e.target.closest("#vertabla")&&actual){verTabla=!verTabla;const tb=document.getElementById("tabla");if(tb){const y=tb.getBoundingClientRect().top;tb.outerHTML=tablaHTML(actual);const nt=document.getElementById("tabla");if(nt){sheet.scrollTop+=nt.getBoundingClientRect().top-y;const b=document.getElementById("vertabla");if(b)b.focus()}}return}
+  if(e.target.closest("#vertabla")&&ctxTabla){verTabla=!verTabla;const tb=document.getElementById("tabla");if(tb){const y=tb.getBoundingClientRect().top;tb.outerHTML=tablaHTML(ctxTabla);const nt=document.getElementById("tabla");if(nt){sheet.scrollTop+=nt.getBoundingClientRect().top-y;const b=document.getElementById("vertabla");if(b)b.focus()}}return}
   const f=e.target.closest(".fav");
   if(f){alternarFav(f.dataset.team,f.dataset.nombre);const on=FAV.has(f.dataset.team);f.setAttribute("aria-pressed",String(on));f.innerHTML=favTexto(on);f.setAttribute("aria-label",(on?"Dejar de seguir a ":"Seguir a ")+f.dataset.nombre+" (favorito y avisos)");const nb=f.closest(".side")&&f.closest(".side").querySelector("b");if(nb&&actual)nb.className=claseEquipo(f.dataset.team,actual.liga);render()}
 });
 function botonFav(id,nombre){if(!id)return "";const on=FAV.has(id);return `<button class="fav" type="button" data-team="${esc(id)}" data-nombre="${esc(nombre)}" aria-pressed="${on}" aria-label="${on?"Dejar de seguir a ":"Seguir a "}${esc(nombre)} (favorito y avisos)" title="Favorito: sus partidos destacados y avisos de canal, goles y resultado">${favTexto(on)}</button>`}
+/* ---------- Ficha del equipo: posición, racha, próximos partidos y resultados ---------- */
+let equipoAbierto=null;
+const ORDEN_COMP=[1,2,5,3,4,6];
+const esLocalDe=(m,id,nom)=>id?m.localId===id:norm(m.local)===norm(nom);
+function partidosDe(id,nom){
+  const n=norm(nom||"");
+  return (matches||[]).filter(m=>id?(m.localId===id||m.visitanteId===id):(n&&(norm(m.local)===n||norm(m.visitante)===n)));
+}
+function posicionesDe(id,nom){
+  const out=[];if(!CLAS)return out;
+  const mira=(liga,t,grupo)=>{if(!t||!Array.isArray(t.filas))return;const i=t.filas.findIndex(r=>(id&&r[0]===id)||(r[8]&&nom&&norm(r[8])===norm(nom)));if(i>=0)out.push({liga,grupo,t,i,r:t.filas[i],n:t.filas.length})};
+  for(const liga of ORDEN_COMP){const t=CLAS[liga];if(!t)continue;if(t.grupos){for(const g in t.grupos)mira(liga,t.grupos[g],g)}else mira(liga,t,null)}
+  return out;
+}
+function letraDe(m,local){const a=m.marcador[local?0:1],b=m.marcador[local?1:0];return resLetra(a,b)}
+function filaPartidoEquipo(m,id,nom,now){
+  const local=esLocalDe(m,id,nom),st=status(m,now),d=new Date(m.inicio);
+  const riv=local?teamOf(m.visitanteId,m.visitante,m.visitanteAbbr):teamOf(m.localId,m.local,m.localAbbr);
+  const jugado=tieneMarcador(m)&&(st==="done"||st==="live");
+  const comp=((COMP[m.liga]||{}).name||"")+(m.jornada?" · "+jornLabel(m.jornada):"");
+  let der;
+  if(jugado)der=`<span class="res ${st==="live"?"E":letraDe(m,local)}">${m.marcador[0]}-${m.marcador[1]}</span>`;
+  else if(st==="off")der=`<span class="chip pend">${m.estado==="suspendido"?"Suspendido":"Aplazado"}</span>`;
+  else der=(m.canales||[]).length?chip(m.canales[0]):`<span class="chip pend">${m.sinTV?"Sin TV":"Por confirmar"}</span>`;
+  return `<button type="button" data-partido="${esc(m._id)}" aria-label="${esc(m.local)} contra ${esc(m.visitante)}"><span class="f">${cap(fDayShort.format(d)).replace(".","")}<b>${jugado?(st==="live"?"Vivo":"Final"):m.horaPendiente?"--:--":fTime.format(d)}</b></span><span class="r"><span>${local?"vs ":"en casa del "}${esc(riv.name)}</span><small>${esc(comp)}</small></span>${der}</button>`;
+}
+function abrirEquipo(id,nom,ab,refresco){
+  if(!matches)return;
+  id=id||"";
+  const tm=T[id]?{...T[id],id}:teamOf(id,nom,ab),nombre=tm.name;
+  if(!refresco){
+    equipoAbierto={id,nom:nombre,ab:tm.abbr,volver:actual?actual._id:(equipoAbierto&&equipoAbierto.volver)||null};
+    verTabla=false;
+  }
+  actual=null;marcar("");
+  const now=Date.now(),ps=partidosDe(id,nombre);
+  const jug=ps.filter(m=>tieneMarcador(m)&&status(m,now)==="done").sort((a,b)=>new Date(b.inicio)-new Date(a.inicio));
+  const prox=ps.filter(m=>{const s=status(m,now);return s===null||s==="live"||(s==="off"&&new Date(m.inicio).getTime()>now)}).sort((a,b)=>new Date(a.inicio)-new Date(b.inicio));
+  const pos=posicionesDe(id,nombre);
+  const comps=[...new Set(ps.map(m=>m.liga).concat(pos.map(p=>p.liga)))].sort((a,b)=>ORDEN_COMP.indexOf(a)-ORDEN_COMP.indexOf(b)).map(l=>(COMP[l]||{}).name).filter(Boolean);
+  const racha=jug.slice(0,5).reverse().map(m=>{const k=letraDe(m,esLocalDe(m,id,nombre));return `<i class="${k}" title="${esc(m.local+" "+m.marcador[0]+"-"+m.marcador[1]+" "+m.visitante)}">${k}</i>`}).join("");
+  const bloques=pos.map(p=>{const r=p.r;return `<div><p class="eqf-comp">${esc((COMP[p.liga]||{}).name||"")}${p.grupo?" · "+esc(p.grupo):""}${p.t.tras?" · tras "+esc(String(p.t.tras).toLowerCase()):""}</p><div class="eqf-pos"><div><b>${p.i+1}º</b><small>de ${p.n}</small></div><div><b>${r[7]}</b><small>puntos</small></div><div><b>${r[2]}-${r[3]}-${r[4]}</b><small>G-E-P</small></div><div><b>${r[5]}:${r[6]}</b><small>goles</small></div></div></div>`}).join("");
+  const p0=pos[0];
+  const tabla=p0?tablaHTML({liga:p0.liga,etiqueta:p0.grupo||"",localId:p0.r[0],local:nombre,visitanteId:"",visitante:""}):"";
+  const vuelve=equipoAbierto&&equipoAbierto.volver&&matches.some(x=>x._id===equipoAbierto.volver);
+  sheet.innerHTML=`<div class="wrap">
+    <div class="grab"></div>
+    <div class="sh-head">${vuelve?`<button class="volver" id="volver" type="button">‹ Volver al partido</button>`:`<span class="comp">Ficha del equipo</span>`}<span class="sh-acc"><button class="close" id="close" aria-label="Cerrar">×</button></span></div>
+    <div class="eqf-cab">${crest(tm,1)}<div><h2 id="sh-title">${esc(nombre)}</h2>${comps.length?`<small>${esc(comps.join(" · "))}</small>`:""}${botonFav(id,nombre)}</div></div>
+    ${bloques||racha?`<div>${bloques}${racha?`<div class="forma"><span>Últimos partidos</span>${racha}</div>`:""}</div>`:""}
+    ${!pos.length&&ps.some(m=>m.liga!==3)?`<p class="note">La clasificación de este equipo aún no está cargada.</p>`:""}
+    ${tabla}
+    <div><h3 class="sec-t">Próximos partidos</h3>${prox.length?`<div class="eqf-lista">${prox.slice(0,5).map(m=>filaPartidoEquipo(m,id,nombre,now)).join("")}</div>`:`<p class="note">No tiene partidos cargados en los próximos días.</p>`}</div>
+    <div><h3 class="sec-t">Últimos resultados</h3>${jug.length?`<div class="eqf-lista">${jug.slice(0,8).map(m=>filaPartidoEquipo(m,id,nombre,now)).join("")}</div>`:`<p class="note">Aún no hay resultados guardados de este equipo.</p>`}</div>
+  </div>`;
+  document.body.classList.add("ficha-on");
+  if(!refresco)sheet.scrollTop=0;
+  if(esEscritorio()){scrim.hidden=true;sheet.hidden=false;sheet.classList.add("on");return}
+  if(sheet.hidden){lastFocus=document.activeElement;scrim.hidden=false;sheet.hidden=false;requestAnimationFrame(()=>{scrim.classList.add("on");sheet.classList.add("on")})}
+  if(!refresco){const c=document.getElementById("close");if(c)c.focus()}
+}
 scrim.addEventListener("click",close);
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!sheet.hidden)close()});
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
@@ -1888,6 +1986,7 @@ const firmaFicha=x=>JSON.stringify([x.marcador,x.estado,(x.eventos||[]).length,(
 let fichaPintada="";
 /* Si la ficha de un partido está abierta y cambia su marcador, estado o canal, se repinta sin moverla. */
 function refrescarFicha(){
+  if(equipoAbierto&&!sheet.hidden&&matches){const y=sheet.scrollTop;abrirEquipo(equipoAbierto.id,equipoAbierto.nom,equipoAbierto.ab,true);sheet.scrollTop=y;return}
   if(!actual||sheet.hidden||!matches)return;
   const m=matches.find(x=>x._id===actual._id);if(!m)return;
   // Se compara con lo que se pintó (el marcador en directo cambia el mismo objeto, no basta con mirar si es otro).
@@ -1897,7 +1996,7 @@ function refrescarFicha(){
 }
 window.alVolver=()=>{refrescar(Date.now()-ultima>Math.min(cadaCuanto(),5*60e3));if(!menuEl.hidden){const y=menuEl.scrollTop;pintarMenu();menuEl.scrollTop=y}};
 window.abrirPartido=id=>{if(!matches)return;const m=matches.find(x=>x._id===id);if(m){league=m.liga;render();open(id)}};
-window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cerrarMenu();return true}if(esEscritorio()){if(actual){close();return true}return false}if(!sheet.hidden){close();return true}return false};
+window.atras=()=>{if(!iaEl.hidden){iaCerrar();return true}if(!menuEl.hidden){cerrarMenu();return true}if(esEscritorio()){if(actual){close();return true}return false}if(!sheet.hidden){if(equipoAbierto&&equipoAbierto.volver&&matches&&matches.some(x=>x._id===equipoAbierto.volver)){open(equipoAbierto.volver);return true}close();return true}return false};
 
 (async()=>{
   try{const r=await fetch("escudos/lista.json");if(r.ok)ESCUDOS=new Set(await r.json())}catch(e){}
