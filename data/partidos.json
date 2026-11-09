@@ -15992,9 +15992,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T17:07:45+01:00",
+  "comprobado": "2026-11-09T18:07:44+01:00",
   "cambio": "2026-11-09T17:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-09T18:07:44+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T17:07:45+01:00",
     "nuevos": 0,
@@ -16422,63 +16438,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-08T20:40:15+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 6,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: RC Celta 0-0 Levante UD",
-     "Resultado: Villarreal CF 2-0 Getafe CF",
-     "Resultado: Real Sporting 1-2 Real Valladolid",
-     "Canal confirmado: CD Leganés – Burgos CF",
-     "Resultado: Mirandés 0-2 CD Coria",
-     "Resultado: Cultural Leonesa 1-1 Ponferradina",
-     "Resultado: Mérida 2-0 Bilbao Athletic"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-12-cel-lev",
-       "t": "RC Celta 0-0 Levante UD"
-      },
-      {
-       "id": "2627-1-12-vil-get",
-       "t": "Villarreal CF 2-0 Getafe CF"
-      },
-      {
-       "id": "2627-2-13-spo-vll",
-       "t": "Real Sporting 1-2 Real Valladolid"
-      },
-      {
-       "id": "2627-5-11-mirandes-cd-coria",
-       "t": "Mirandés 0-2 CD Coria"
-      },
-      {
-       "id": "2627-5-11-cultural-leonesa-ponferradina",
-       "t": "Cultural Leonesa 1-1 Ponferradina"
-      },
-      {
-       "id": "2627-5-11-merida-bilbao-athletic",
-       "t": "Mérida 2-0 Bilbao Athletic"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-2-14-leg-bur",
-       "t": "CD Leganés – Burgos CF · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
