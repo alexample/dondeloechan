@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09T13:07:42+01:00",
+ "actualizado": "2026-11-09T14:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13658,7 +13658,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-14-rsb-spo",
@@ -15992,9 +15992,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T13:07:42+01:00",
-  "cambio": "2026-11-09T13:07:42+01:00",
+  "comprobado": "2026-11-09T14:07:43+01:00",
+  "cambio": "2026-11-09T14:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-09T14:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Real Valladolid – CD Castellón"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-vll-cas",
+       "t": "Real Valladolid – CD Castellón · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T13:07:42+01:00",
     "nuevos": 0,
@@ -16473,25 +16496,6 @@
        "t": "Real Madrid Castilla 2-2 Hércules"
       }
      ],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-08T17:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [],
      "horas": [],
      "nuevos": []
