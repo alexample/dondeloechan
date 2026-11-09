@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09T21:07:44+01:00",
+ "actualizado": "2026-11-09T23:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13483,7 +13483,31 @@
     "daznhm"
    ],
    "provisional": false,
-   "goles": []
+   "goles": [
+    {
+     "t": "g",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "Álex Suárez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+8'",
+     "seg": 5400,
+     "j": "Jefté",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-2-13-sab-rsb",
@@ -13498,7 +13522,13 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-anaitasuna-ala",
@@ -14693,6 +14723,16 @@
      21
     ],
     [
+     "lpa",
+     13,
+     6,
+     2,
+     5,
+     19,
+     21,
+     20
+    ],
+    [
      "cor",
      13,
      6,
@@ -14723,16 +14763,6 @@
      18
     ],
     [
-     "lpa",
-     13,
-     5,
-     3,
-     5,
-     17,
-     21,
-     18
-    ],
-    [
      "ten",
      12,
      3,
@@ -14746,11 +14776,11 @@
      "eld",
      13,
      4,
-     3,
-     6,
+     2,
+     7,
      13,
-     17,
-     15
+     19,
+     14
     ],
     [
      "clb",
@@ -16082,9 +16112,39 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T22:07:44+01:00",
-  "cambio": "2026-11-09T21:07:44+01:00",
+  "comprobado": "2026-11-09T23:07:43+01:00",
+  "cambio": "2026-11-09T23:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-09T23:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 2,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: UD Las Palmas 2-0 CD Eldense",
+     "Resultado: CE Sabadell 0-0 Real Sociedad B"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-2-13-lpa-eld",
+       "t": "UD Las Palmas 2-0 CD Eldense"
+      },
+      {
+       "id": "2627-2-13-sab-rsb",
+       "t": "CE Sabadell 0-0 Real Sociedad B"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T22:07:44+01:00",
     "nuevos": 0,
@@ -16620,22 +16680,6 @@
    },
    {
     "hora": "2026-11-09T02:07:22+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-09T01:07:21+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
