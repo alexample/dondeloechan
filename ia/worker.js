@@ -568,15 +568,16 @@ async function canteraIA(request, env, origen) {
   try { d = await request.json(); } catch { return json({ error: "Petición no válida." }, 400, origen); }
   const pregunta = String(d.pregunta || "").trim().slice(0, 500);
   if (!pregunta) return json({ error: "Escribe una pregunta." }, 400, origen);
-  const contexto = String(d.contexto || "").slice(0, 24000);
-  const historial = (Array.isArray(d.historial) ? d.historial : []).slice(-6)
+  const contexto = String(d.contexto || "").slice(0, 8000);
+  const historial = (Array.isArray(d.historial) ? d.historial : []).slice(-4)
     .filter(h => h && (h.rol === "usuario" || h.rol === "asistente"))
-    .map(h => ({ role: h.rol === "usuario" ? "user" : "assistant", content: String(h.texto || "").slice(0, 1500) }));
+    .map(h => ({ role: h.rol === "usuario" ? "user" : "assistant", content: String(h.texto || "").slice(0, 800) }));
   const mensajes = [{ role: "system", content: SISTEMA_CM(contexto) }, ...historial, { role: "user", content: pregunta }];
   let ultimoError = "";
-  for (const modelo of MODELOS) {
+  // Cantera Madrid usa primero el modelo pequeño (gasta ~10 veces menos del cupo diario gratuito).
+  for (const modelo of [...MODELOS].reverse()) {
     try {
-      const r = await env.AI.run(modelo, { messages: mensajes, max_tokens: 500, temperature: 0.2 });
+      const r = await env.AI.run(modelo, { messages: mensajes, max_tokens: 350, temperature: 0.2 });
       const texto = (r && (r.response || (r.result && r.result.response))) || "";
       if (texto) return json({ respuesta: String(texto).trim(), modelo }, 200, origen);
     } catch (e) { ultimoError = String(e && e.message || e); }
