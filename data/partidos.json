@@ -15992,9 +15992,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T09:07:20+01:00",
+  "comprobado": "2026-11-09T10:07:43+01:00",
   "cambio": "2026-11-09T00:07:20+01:00",
   "historial": [
+   {
+    "hora": "2026-11-09T10:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T09:07:20+01:00",
     "nuevos": 0,
@@ -16478,51 +16494,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-08T14:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 5,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Resultado: Arenas Club 2-1 Deportivo Fabril",
-     "Resultado: CD Teruel 1-1 UD Ibiza",
-     "Resultado: Águilas FC 1-1 Gimnàstic de Tarragona",
-     "Resultado: CE Europa 3-2 Atlético Madrileño",
-     "Resultado: Villarreal B 1-1 Juventud Torremolinos"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-11-arenas-club-deportivo-fabril",
-       "t": "Arenas Club 2-1 Deportivo Fabril"
-      },
-      {
-       "id": "2627-5-11-cd-teruel-ud-ibiza",
-       "t": "CD Teruel 1-1 UD Ibiza"
-      },
-      {
-       "id": "2627-5-11-aguilas-fc-gimnastic-de-tarragona",
-       "t": "Águilas FC 1-1 Gimnàstic de Tarragona"
-      },
-      {
-       "id": "2627-5-11-ce-europa-atletico-madrileno",
-       "t": "CE Europa 3-2 Atlético Madrileño"
-      },
-      {
-       "id": "2627-5-11-villarreal-b-juventud-torremolinos",
-       "t": "Villarreal B 1-1 Juventud Torremolinos"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
