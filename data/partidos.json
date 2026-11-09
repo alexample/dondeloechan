@@ -15992,9 +15992,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T18:07:44+01:00",
+  "comprobado": "2026-11-09T18:27:47+01:00",
   "cambio": "2026-11-09T17:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-09T18:27:47+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T18:07:44+01:00",
     "nuevos": 0,
@@ -16420,24 +16436,6 @@
        "t": "Gimnàstic de Tarragona – Real Madrid Castilla · confirmado"
       }
      ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-08T21:07:24+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
      "horas": [],
      "nuevos": []
     }
