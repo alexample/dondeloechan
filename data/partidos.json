@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09T19:08:11+01:00",
+ "actualizado": "2026-11-09T20:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -9650,7 +9650,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-shakhtar-donetsk-sporting-cp",
@@ -9677,7 +9682,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-atm-bayern-munich",
@@ -9715,7 +9725,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-bar-aston-villa",
@@ -9760,7 +9775,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    3,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-bod-glimt-lille",
@@ -9778,7 +9798,12 @@
    "visitante": "Lille",
    "visitanteAbbr": "LIL",
    "visitanteId": "lille",
-   "goles": []
+   "goles": [],
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-feyenoord-inter",
@@ -9824,7 +9849,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-lask-slovan-bratislava",
@@ -9879,7 +9909,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    4,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-manchester-united-roma",
@@ -9952,7 +9987,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    3,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-vil-psg",
@@ -10024,7 +10064,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    6
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-aek-atenas-rma",
@@ -10095,7 +10140,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-fenerbahce-liverpool",
@@ -10158,7 +10208,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    3,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-borussia-dortmund-bet",
@@ -10203,7 +10258,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-porto-napoli",
@@ -10276,7 +10336,12 @@
      "pen": true,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    4,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-psv-club-brugge",
@@ -10322,7 +10387,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-rb-leipzig-manchester-city",
@@ -10386,7 +10456,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-rc-lens-como",
@@ -10495,7 +10570,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    9
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-slavia-praga-arsenal",
@@ -10541,7 +10621,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j4-viking-sabah",
@@ -10614,7 +10699,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    4,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j3-agf-aarhus-sc-braga",
@@ -14735,401 +14825,401 @@
    ]
   },
   "4": {
-   "tras": "Jornada 3",
+   "tras": "Jornada 4",
    "filas": [
     [
      "psg",
-     3,
-     3,
+     4,
+     4,
      0,
      0,
-     14,
+     20,
      5,
-     9,
+     12,
      "PSG"
     ],
     [
-     "aston-villa",
-     3,
-     3,
+     "rma",
+     4,
+     4,
      0,
      0,
+     13,
+     7,
      12,
+     "Real Madrid"
+    ],
+    [
+     "arsenal",
+     4,
      3,
+     1,
+     0,
+     8,
+     3,
+     10,
+     "Arsenal"
+    ],
+    [
+     "como",
+     4,
+     3,
+     0,
+     1,
+     19,
+     6,
+     9,
+     "Como"
+    ],
+    [
+     "bar",
+     4,
+     3,
+     0,
+     1,
+     14,
+     6,
+     9,
+     "FC Barcelona"
+    ],
+    [
+     "aston-villa",
+     4,
+     3,
+     0,
+     1,
+     12,
+     6,
      9,
      "Aston Villa"
     ],
     [
-     "liverpool",
-     3,
+     "manchester-city",
+     4,
      3,
      0,
-     0,
+     1,
      12,
      7,
+     9,
+     "Manchester City"
+    ],
+    [
+     "liverpool",
+     4,
+     3,
+     0,
+     1,
+     14,
+     10,
      9,
      "Liverpool"
     ],
     [
-     "rma",
-     3,
-     3,
-     0,
-     0,
-     10,
-     5,
-     9,
-     "Real Madrid"
-    ],
-    [
-     "bet",
-     3,
-     3,
-     0,
-     0,
-     7,
+     "club-brugge",
      4,
-     9,
-     "Real Betis"
-    ],
-    [
-     "stuttgart",
      3,
-     2,
-     1,
-     0,
-     7,
-     2,
-     7,
-     "Stuttgart"
-    ],
-    [
-     "arsenal",
-     3,
-     2,
-     1,
-     0,
-     6,
-     2,
-     7,
-     "Arsenal"
-    ],
-    [
-     "bar",
-     3,
-     2,
      0,
      1,
      11,
-     6,
-     6,
-     "FC Barcelona"
-    ],
-    [
-     "como",
-     3,
-     2,
-     0,
-     1,
-     10,
-     5,
-     6,
-     "Como"
-    ],
-    [
-     "manchester-city",
-     3,
-     2,
-     0,
-     1,
+     7,
      9,
-     5,
-     6,
-     "Manchester City"
-    ],
-    [
-     "club-brugge",
-     3,
-     2,
-     0,
-     1,
-     9,
-     6,
-     6,
      "Club Brugge"
     ],
     [
      "sporting-cp",
+     4,
      3,
-     2,
      0,
      1,
-     7,
+     8,
      4,
-     6,
+     9,
      "Sporting CP"
     ],
     [
-     "borussia-dortmund",
+     "bet",
+     4,
      3,
-     2,
      0,
      1,
-     5,
-     4,
+     8,
      6,
+     9,
+     "Real Betis"
+    ],
+    [
+     "borussia-dortmund",
+     4,
+     3,
+     0,
+     1,
+     7,
+     5,
+     9,
      "Borussia Dortmund"
     ],
     [
      "bayern-munich",
-     3,
-     1,
+     4,
+     2,
      2,
      0,
-     10,
+     12,
      5,
-     5,
+     8,
      "Bayern Múnich"
     ],
     [
-     "roma",
-     3,
+     "stuttgart",
+     4,
+     2,
      1,
      1,
-     1,
+     7,
+     4,
+     7,
+     "Stuttgart"
+    ],
+    [
+     "inter",
+     4,
+     2,
+     0,
+     2,
      8,
+     6,
+     6,
+     "Inter"
+    ],
+    [
+     "lask",
+     4,
+     2,
+     0,
+     2,
+     10,
+     9,
+     6,
+     "LASK"
+    ],
+    [
+     "manchester-united",
+     4,
+     2,
+     0,
+     2,
+     8,
+     8,
+     6,
+     "Manchester United"
+    ],
+    [
+     "galatasaray",
+     4,
+     2,
+     0,
+     2,
+     8,
+     9,
+     6,
+     "Galatasaray"
+    ],
+    [
+     "fenerbahce",
+     4,
+     1,
+     2,
+     1,
+     6,
+     11,
      5,
+     "Fenerbahçe"
+    ],
+    [
+     "roma",
+     4,
+     1,
+     1,
+     2,
+     10,
+     8,
      4,
      "Roma"
     ],
     [
-     "atm",
-     3,
-     1,
-     1,
-     1,
-     4,
-     3,
-     4,
-     "Atlético de Madrid"
-    ],
-    [
      "shakhtar-donetsk",
-     3,
-     1,
-     1,
-     1,
      4,
-     3,
+     1,
+     1,
+     2,
+     4,
+     4,
      4,
      "Shakhtar Donetsk"
     ],
     [
+     "viking",
+     4,
+     1,
+     1,
+     2,
+     9,
+     10,
+     4,
+     "Viking"
+    ],
+    [
+     "atm",
+     4,
+     1,
+     1,
+     2,
+     4,
+     5,
+     4,
+     "Atlético de Madrid"
+    ],
+    [
      "psv",
+     4,
+     1,
+     1,
+     2,
      3,
-     1,
-     1,
-     1,
-     2,
-     2,
+     4,
      4,
      "PSV"
     ],
     [
-     "vil",
-     3,
+     "bod-glimt",
+     4,
      1,
-     0,
+     1,
      2,
-     8,
-     8,
-     3,
-     "Villarreal CF"
+     4,
+     9,
+     4,
+     "Bodø/Glimt"
     ],
     [
-     "inter",
-     3,
+     "porto",
+     4,
      1,
      0,
-     2,
-     5,
+     3,
      6,
+     7,
      3,
-     "Inter"
-    ],
-    [
-     "manchester-united",
-     3,
-     1,
-     0,
-     2,
-     5,
-     6,
-     3,
-     "Manchester United"
+     "Porto"
     ],
     [
      "napoli",
-     3,
+     4,
      1,
      0,
-     2,
-     5,
-     7,
+     3,
+     6,
+     11,
      3,
      "Napoli"
     ],
     [
-     "galatasaray",
-     3,
-     1,
-     0,
-     2,
-     6,
-     9,
-     3,
-     "Galatasaray"
-    ],
-    [
-     "lask",
-     3,
-     1,
-     0,
-     2,
-     6,
-     9,
-     3,
-     "LASK"
-    ],
-    [
-     "sabah",
-     3,
-     1,
-     0,
-     2,
-     3,
-     6,
-     3,
-     "Sabah"
-    ],
-    [
-     "feyenoord",
-     3,
-     1,
-     0,
-     2,
+     "vil",
      4,
+     1,
+     0,
+     3,
      8,
+     14,
      3,
-     "Feyenoord"
-    ],
-    [
-     "rc-lens",
-     3,
-     1,
-     0,
-     2,
-     3,
-     7,
-     3,
-     "RC Lens"
-    ],
-    [
-     "bod-glimt",
-     3,
-     1,
-     0,
-     2,
-     4,
-     9,
-     3,
-     "Bodø/Glimt"
+     "Villarreal CF"
     ],
     [
      "aek-atenas",
-     3,
+     4,
      1,
      0,
-     2,
      3,
-     8,
+     5,
+     11,
      3,
      "AEK Atenas"
     ],
     [
      "rb-leipzig",
-     3,
+     4,
      1,
      0,
-     2,
      3,
-     8,
+     5,
+     11,
      3,
      "RB Leipzig"
     ],
     [
-     "fenerbahce",
-     3,
-     0,
-     2,
-     1,
-     3,
-     9,
-     2,
-     "Fenerbahçe"
-    ],
-    [
-     "slavia-praga",
-     3,
-     0,
-     1,
-     2,
+     "sabah",
      4,
-     7,
      1,
-     "Slavia Praga"
-    ],
-    [
-     "viking",
-     3,
-     0,
-     1,
-     2,
-     5,
-     9,
-     1,
-     "Viking"
-    ],
-    [
-     "porto",
-     3,
-     0,
-     0,
-     3,
-     2,
-     6,
-     0,
-     "Porto"
-    ],
-    [
-     "lille",
-     3,
-     0,
      0,
      3,
      4,
      10,
+     3,
+     "Sabah"
+    ],
+    [
+     "feyenoord",
+     4,
+     1,
      0,
+     3,
+     4,
+     11,
+     3,
+     "Feyenoord"
+    ],
+    [
+     "rc-lens",
+     4,
+     1,
+     0,
+     3,
+     4,
+     16,
+     3,
+     "RC Lens"
+    ],
+    [
+     "slavia-praga",
+     4,
+     0,
+     1,
+     3,
+     5,
+     9,
+     1,
+     "Slavia Praga"
+    ],
+    [
+     "lille",
+     4,
+     0,
+     1,
+     3,
+     4,
+     10,
+     1,
      "Lille"
     ],
     [
      "slovan-bratislava",
-     3,
+     4,
      0,
      0,
-     3,
+     4,
      1,
-     13,
+     17,
      0,
      "Slovan Bratislava"
     ]
@@ -15992,9 +16082,119 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T19:08:11+01:00",
-  "cambio": "2026-11-09T19:08:11+01:00",
+  "comprobado": "2026-11-09T20:07:43+01:00",
+  "cambio": "2026-11-09T20:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-09T20:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 18,
+    "tablas": [
+     "Champions"
+    ],
+    "detalle": [
+     "Resultado: RC Lens 1-9 Como",
+     "Resultado: PSV 1-2 Club Brugge",
+     "Resultado: Viking 4-1 Sabah",
+     "Resultado: Porto 4-1 Napoli",
+     "Resultado: Borussia Dortmund 2-1 Betis",
+     "Resultado: Slavia Praga 1-2 Arsenal",
+     "Resultado: RB Leipzig 2-3 Manchester City",
+     "Resultado: AEK Atenas 2-3 Real Madrid",
+     "Resultado: Fenerbahçe 3-2 Liverpool",
+     "Resultado: LASK 4-0 Slovan Bratislava",
+     "Resultado: Bodø/Glimt 0-0 Lille",
+     "Resultado: Feyenoord 0-3 Inter",
+     "Resultado: Villarreal 0-6 PSG",
+     "Resultado: Manchester United 3-2 Roma",
+     "Resultado: Atlético de Madrid 0-2 Bayern Múnich",
+     "Resultado: FC Barcelona 3-0 Aston Villa",
+     "Resultado: Shakhtar Donetsk 0-1 Sporting CP",
+     "Resultado: Galatasaray 2-0 Stuttgart"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-4-fase-liga-j4-rc-lens-como",
+       "t": "RC Lens 1-9 Como"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-psv-club-brugge",
+       "t": "PSV 1-2 Club Brugge"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-viking-sabah",
+       "t": "Viking 4-1 Sabah"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-porto-napoli",
+       "t": "Porto 4-1 Napoli"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-borussia-dortmund-bet",
+       "t": "Borussia Dortmund 2-1 Betis"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-slavia-praga-arsenal",
+       "t": "Slavia Praga 1-2 Arsenal"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-rb-leipzig-manchester-city",
+       "t": "RB Leipzig 2-3 Manchester City"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-aek-atenas-rma",
+       "t": "AEK Atenas 2-3 Real Madrid"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-fenerbahce-liverpool",
+       "t": "Fenerbahçe 3-2 Liverpool"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-lask-slovan-bratislava",
+       "t": "LASK 4-0 Slovan Bratislava"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-bod-glimt-lille",
+       "t": "Bodø/Glimt 0-0 Lille"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-feyenoord-inter",
+       "t": "Feyenoord 0-3 Inter"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-vil-psg",
+       "t": "Villarreal 0-6 PSG"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-manchester-united-roma",
+       "t": "Manchester United 3-2 Roma"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-atm-bayern-munich",
+       "t": "Atlético de Madrid 0-2 Bayern Múnich"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-bar-aston-villa",
+       "t": "FC Barcelona 3-0 Aston Villa"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-shakhtar-donetsk-sporting-cp",
+       "t": "Shakhtar Donetsk 0-1 Sporting CP"
+      },
+      {
+       "id": "2627-4-fase-liga-j4-galatasaray-stuttgart",
+       "t": "Galatasaray 2-0 Stuttgart"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T19:08:11+01:00",
     "nuevos": 0,
@@ -16433,36 +16633,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-08T23:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 2,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Resultado: Atlético de Madrid 1-2 FC Barcelona",
-     "Resultado: Real Murcia 1-1 Algeciras CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-12-atm-bar",
-       "t": "Atlético de Madrid 1-2 FC Barcelona"
-      },
-      {
-       "id": "2627-5-11-real-murcia-algeciras-cf",
-       "t": "Real Murcia 1-1 Algeciras CF"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
