@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09T20:07:43+01:00",
+ "actualizado": "2026-11-09T21:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13978,7 +13978,7 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-12-real-jaen-real-zaragoza",
@@ -13995,7 +13995,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "JAE",
    "visitanteAbbr": "ZAR",
    "etiqueta": "Grupo 2"
@@ -14714,23 +14714,23 @@
     ],
     [
      "sab",
-     12,
+     13,
      4,
-     5,
+     6,
      3,
      12,
      11,
-     17
+     18
     ],
     [
      "lpa",
-     12,
+     13,
      5,
-     2,
+     3,
      5,
      17,
      21,
-     17
+     18
     ],
     [
      "ten",
@@ -14744,13 +14744,13 @@
     ],
     [
      "eld",
-     12,
+     13,
      4,
-     2,
+     3,
      6,
      13,
      17,
-     14
+     15
     ],
     [
      "clb",
@@ -14761,6 +14761,16 @@
      19,
      25,
      13
+    ],
+    [
+     "rsb",
+     13,
+     3,
+     3,
+     7,
+     15,
+     22,
+     12
     ],
     [
      "leg",
@@ -14779,16 +14789,6 @@
      2,
      7,
      17,
-     22,
-     11
-    ],
-    [
-     "rsb",
-     12,
-     3,
-     2,
-     7,
-     15,
      22,
      11
     ],
@@ -16082,9 +16082,39 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T20:07:43+01:00",
-  "cambio": "2026-11-09T20:07:43+01:00",
+  "comprobado": "2026-11-09T21:07:44+01:00",
+  "cambio": "2026-11-09T21:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-09T21:07:44+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Canal confirmado: Real Oviedo – Girona FC",
+     "Canal confirmado: Real Jaén – Real Zaragoza"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-ovi-gir",
+       "t": "Real Oviedo – Girona FC · confirmado"
+      },
+      {
+       "id": "2627-5-12-real-jaen-real-zaragoza",
+       "t": "Real Jaén – Real Zaragoza · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T20:07:43+01:00",
     "nuevos": 0,
@@ -16611,24 +16641,6 @@
     "canales": 0,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-09T00:07:20+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
     "detalle": [],
     "avisos": 0,
     "items": {
