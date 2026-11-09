@@ -15992,9 +15992,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T15:07:46+01:00",
+  "comprobado": "2026-11-09T16:07:46+01:00",
   "cambio": "2026-11-09T14:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-09T16:07:46+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T15:07:46+01:00",
     "nuevos": 0,
@@ -16451,43 +16467,6 @@
        "t": "UD Las Palmas – CD Eldense: nueva fecha tras el aplazamiento"
       }
      ],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-08T19:07:19+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 2,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: Real Sociedad 1-0 Rayo Vallecano",
-     "Resultado: Girona FC 0-1 UD Almería",
-     "Canal confirmado: Ponferradina – CP Cacereño"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-12-rso-ray",
-       "t": "Real Sociedad 1-0 Rayo Vallecano"
-      },
-      {
-       "id": "2627-2-13-gir-alm",
-       "t": "Girona FC 0-1 UD Almería"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-5-12-ponferradina-cp-cacereno",
-       "t": "Ponferradina – CP Cacereño · confirmado"
-      }
-     ],
-     "horas": [],
      "nuevos": []
     }
    }
