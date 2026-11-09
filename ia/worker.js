@@ -544,6 +544,44 @@ async function escuchamotorIA(request, env, origen) {
   return json({ error: "La IA no ha podido responder ahora mismo. Inténtalo en un rato.", detalle: ultimoError.slice(0, 200) }, 502, origen);
 }
 
+// ---------- Cantera Madrid (fútbol base de Madrid) ----------
+// La app envía {pregunta, historial:[{rol,texto}], contexto:"…datos de la ficha del equipo…"} y recibe {respuesta}. No guarda nada.
+const SISTEMA_CM = contexto =>
+  "Eres el asistente de «Cantera Madrid», una app de fútbol base (infantil, cadete y juvenil) de la Comunidad de Madrid. " +
+  "Hablas en español de España, de forma cercana y breve, para familias y entrenadores.\n" +
+  "Reglas:\n" +
+  "- Responde SOLO con los DATOS de abajo (resultados, calendario, campos, clasificación, goleadores). Si un dato no está, dilo; no lo inventes.\n" +
+  "- Son menores: no des datos personales de jugadores más allá de nombre, dorsal y goles que aparezcan en los datos, y no hagas valoraciones negativas de niños.\n" +
+  "- Sé breve: 1–5 frases o una lista corta. Sin tablas. Puedes usar **negritas** y listas con «- ».\n" +
+  "- Si la pregunta no tiene que ver con el fútbol base de estos equipos, dilo amablemente.\n\n" +
+  "DATOS:\n" + contexto;
+
+async function canteraIA(request, env, origen) {
+  if (request.method !== "POST") return json({ error: "Usa POST." }, 405, origen);
+  if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+  if (!env.AI) return json({ error: "Sin Workers AI." }, 500, origen);
+  const ip = request.headers.get("CF-Connecting-IP") || "anon";
+  if (!permitirEM("cm:" + ip)) return json({ error: "Has hecho muchas preguntas seguidas. Espera un poco y vuelve a intentarlo." }, 429, origen);
+  let d;
+  try { d = await request.json(); } catch { return json({ error: "Petición no válida." }, 400, origen); }
+  const pregunta = String(d.pregunta || "").trim().slice(0, 500);
+  if (!pregunta) return json({ error: "Escribe una pregunta." }, 400, origen);
+  const contexto = String(d.contexto || "").slice(0, 24000);
+  const historial = (Array.isArray(d.historial) ? d.historial : []).slice(-6)
+    .filter(h => h && (h.rol === "usuario" || h.rol === "asistente"))
+    .map(h => ({ role: h.rol === "usuario" ? "user" : "assistant", content: String(h.texto || "").slice(0, 1500) }));
+  const mensajes = [{ role: "system", content: SISTEMA_CM(contexto) }, ...historial, { role: "user", content: pregunta }];
+  let ultimoError = "";
+  for (const modelo of MODELOS) {
+    try {
+      const r = await env.AI.run(modelo, { messages: mensajes, max_tokens: 500, temperature: 0.2 });
+      const texto = (r && (r.response || (r.result && r.result.response))) || "";
+      if (texto) return json({ respuesta: String(texto).trim(), modelo }, 200, origen);
+    } catch (e) { ultimoError = String(e && e.message || e); }
+  }
+  return json({ error: "La IA no ha podido responder ahora mismo. Inténtalo en un rato.", detalle: ultimoError.slice(0, 200) }, 502, origen);
+}
+
 export default {
   /** Cada hora (wrangler.jsonc → triggers.crons): pide a GitHub que pase el robot de datos.
    *  Necesita el secreto GH_TOKEN (llave de GitHub con permiso «Contents: Read and write» sobre dondeloechan). */
@@ -578,6 +616,7 @@ export default {
     if (new URL(request.url).pathname === "/valoraciones") return valoraciones(request, env, origen);
     if (new URL(request.url).pathname === "/runningspain-ia") return runningspainIA(request, env);
     if (new URL(request.url).pathname === "/escuchamotor-ia") return escuchamotorIA(request, env, origen);
+    if (new URL(request.url).pathname === "/cantera-ia") return canteraIA(request, env, origen);
     if (request.method === "GET" && new URL(request.url).pathname === "/alineaciones") {
       if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
       try { return await alineaciones(request, env, ctx, origen); }
