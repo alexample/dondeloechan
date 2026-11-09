@@ -22,6 +22,8 @@ const RUNNINGSPAIN_HORAS = [3, 14];
 // huella SHA-256 coincide (la URL real no está en el código, que es público).
 const MACRODROID_HUELLAS = ["62258f969a5362c26f8f632e3f6ffc3d83b78f81d9f14c5f900be5132bf6a178"];
 const MAX_CONTEXTO = 60000;
+// Segundo cron (wrangler.jsonc): pasadas rápidas de resultados de Cantera Madrid.
+const CRON_CANTERA_RAPIDO = "*/20 * * * *";
 const LIMITE_MIN = 6;      // preguntas por minuto y persona (IP)
 const LIMITE_DIA = 60;     // preguntas por día y persona (IP)
 
@@ -584,10 +586,11 @@ async function canteraIA(request, env, origen) {
 
 export default {
   /** Cada hora (wrangler.jsonc → triggers.crons): pide a GitHub que pase el robot de datos.
-   *  Necesita el secreto GH_TOKEN (llave de GitHub con permiso «Contents: Read and write» sobre dondeloechan). */
+   *  Necesita el secreto GH_TOKEN (llave de GitHub con permiso «Contents: Read and write» sobre dondeloechan,
+   *  RunningSpain y cantera-madrid). */
   async scheduled(evento, env, ctx) {
     if (!env.GH_TOKEN) { console.log("Falta el secreto GH_TOKEN: no se puede avisar al robot."); return; }
-    const avisar = async (repo) => {
+    const avisar = async (repo, payload) => {
       const r = await fetch(`https://api.github.com/repos/${repo}/dispatches`, {
         method: "POST",
         headers: {
@@ -597,11 +600,24 @@ export default {
           "User-Agent": "dondeloechan-ia",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ event_type: "robot" }),
+        body: JSON.stringify({ event_type: "robot", ...(payload ? { client_payload: payload } : {}) }),
       });
       console.log(`Aviso al robot de ${repo}:`, r.status, r.status === 204 ? "OK" : await r.text());
     };
+    // Cantera Madrid (fútbol base RFFM). Hora y día en Madrid.
+    const madrid = new Intl.DateTimeFormat("es-ES", { timeZone: "Europe/Madrid", hour: "numeric", hour12: false, weekday: "short" })
+      .formatToParts(new Date(evento.scheduledTime));
+    const hM = +madrid.find(x => x.type === "hour").value % 24;
+    const finde = /^(sáb|dom)/i.test(madrid.find(x => x.type === "weekday").value);
+    if (evento.cron === CRON_CANTERA_RAPIDO) {
+      // Cada 20 min en fin de semana de 10 a 23 h: solo grupos con resultados pendientes.
+      if (finde && hM >= 10 && hM <= 23) await avisar("alexample/cantera-madrid", { modo: "rapido" });
+      return;
+    }
     const tareas = [avisar("alexample/dondeloechan")];
+    // Pasada completa: fines de semana cada 2 h (8–22 h); entre semana a las 7, 15 y 21 h.
+    if (finde ? (hM >= 8 && hM <= 22 && hM % 2 === 0) : [7, 15, 21].includes(hM))
+      tareas.push(avisar("alexample/cantera-madrid", { modo: "completo" }));
     // RunningSpain (calendario de carreras): una vez al día a las 03 UTC.
     // RUNNINGSPAIN_HORAS = null → cada hora (modo pruebas temporal).
     const hora = new Date(evento.scheduledTime).getUTCHours();
