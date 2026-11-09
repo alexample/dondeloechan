@@ -16112,9 +16112,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T23:07:43+01:00",
+  "comprobado": "2026-11-10T00:07:45+01:00",
   "cambio": "2026-11-09T23:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-10T00:07:45+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T23:07:43+01:00",
     "nuevos": 0,
@@ -16664,22 +16680,6 @@
    },
    {
     "hora": "2026-11-09T03:07:19+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-09T02:07:22+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
