@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09T17:07:45+01:00",
+ "actualizado": "2026-11-09T19:08:11+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13746,7 +13746,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-14-mll-cor",
@@ -13762,7 +13762,7 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-12-ce-europa-ue-sant-andreu",
@@ -13784,7 +13784,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "EUR",
    "visitanteAbbr": "SAN",
    "etiqueta": "Grupo 2",
@@ -13803,7 +13803,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "COR",
    "visitanteAbbr": "UNI",
    "etiqueta": "Grupo 1",
@@ -13829,7 +13829,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "FAB",
    "visitanteAbbr": "BAR",
    "etiqueta": "Grupo 1",
@@ -13850,7 +13850,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "HER",
    "visitanteAbbr": "VIB",
    "etiqueta": "Grupo 2"
@@ -13868,7 +13868,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "TOR",
    "visitanteAbbr": "HUE",
    "etiqueta": "Grupo 2",
@@ -15992,9 +15992,62 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-09T18:27:47+01:00",
-  "cambio": "2026-11-09T17:07:45+01:00",
+  "comprobado": "2026-11-09T19:08:11+01:00",
+  "cambio": "2026-11-09T19:08:11+01:00",
   "historial": [
+   {
+    "hora": "2026-11-09T19:08:11+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 7,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: UD Almería – FC Andorra",
+     "Canal confirmado: RCD Mallorca – Córdoba CF",
+     "Canal confirmado: CE Europa – UE Sant Andreu",
+     "Canal confirmado: Hércules – Villarreal B",
+     "Canal confirmado: Deportivo Fabril – Barakaldo CF",
+     "Canal confirmado: CD Coria – Unionistas de Salamanca",
+     "Canal confirmado: Juventud Torremolinos – SD Huesca"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-alm-and",
+       "t": "UD Almería – FC Andorra · confirmado"
+      },
+      {
+       "id": "2627-2-14-mll-cor",
+       "t": "RCD Mallorca – Córdoba CF · confirmado"
+      },
+      {
+       "id": "2627-5-12-ce-europa-ue-sant-andreu",
+       "t": "CE Europa – UE Sant Andreu · confirmado"
+      },
+      {
+       "id": "2627-5-12-hercules-villarreal-b",
+       "t": "Hércules – Villarreal B · confirmado"
+      },
+      {
+       "id": "2627-5-12-deportivo-fabril-barakaldo-cf",
+       "t": "Deportivo Fabril – Barakaldo CF · confirmado"
+      },
+      {
+       "id": "2627-5-12-cd-coria-unionistas-de-salamanca",
+       "t": "CD Coria – Unionistas de Salamanca · confirmado"
+      },
+      {
+       "id": "2627-5-12-juventud-torremolinos-sd-huesca",
+       "t": "Juventud Torremolinos – SD Huesca · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-09T18:27:47+01:00",
     "nuevos": 0,
@@ -16411,31 +16464,6 @@
       }
      ],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-08T22:07:21+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 0,
-    "tablas": [
-     "Primera"
-    ],
-    "detalle": [
-     "Canal confirmado: Gimnàstic de Tarragona – Real Madrid Castilla"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-12-gimnastic-de-tarragona-real-madrid-castilla",
-       "t": "Gimnàstic de Tarragona – Real Madrid Castilla · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
