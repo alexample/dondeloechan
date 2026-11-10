@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-10T19:07:44+01:00",
+ "actualizado": "2026-11-10T21:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13543,7 +13543,77 @@
    "localId": "anaitasuna",
    "provisional": false,
    "visitante": "Alavés",
-   "visitanteId": "ala"
+   "visitanteId": "ala",
+   "marcador": [
+    1,
+    6
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "28'",
+     "seg": 1644,
+     "j": "Jonny",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "37'",
+     "seg": 2162,
+     "j": "Mariano Díaz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "43'",
+     "seg": 2547,
+     "j": "Carlos Juaristi Badiola",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3299,
+     "j": "Miguel Rodríguez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3401,
+     "j": "Mariano Díaz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "79'",
+     "seg": 4714,
+     "j": "Aitor Mañas",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5158,
+     "j": "Carles Aleñá",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cd-pamplona-eib",
@@ -13558,7 +13628,41 @@
    "localId": "cd-pamplona",
    "visitante": "SD Eibar",
    "visitanteId": "eib",
-   "provisional": true
+   "provisional": true,
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "2'",
+     "seg": 120,
+     "j": "Javier Martón",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "22'",
+     "seg": 1320,
+     "j": "Jon Magunacelaya",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "53'",
+     "seg": 3180,
+     "j": "Jon Magunacelaya",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
@@ -14438,6 +14542,56 @@
    "provisional": true,
    "localAbbr": "TER",
    "visitanteAbbr": "HER",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-2-15-and-leg",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-20T20:30:00+01:00",
+   "local": "FC Andorra",
+   "localId": "and",
+   "visitante": "CD Leganés",
+   "visitanteId": "leg",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-1-13-ath-esp",
+   "liga": 1,
+   "jornada": "13",
+   "inicio": "2026-11-20T21:00:00+01:00",
+   "local": "Athletic Club",
+   "localId": "ath",
+   "visitante": "RCD Espanyol",
+   "visitanteId": "esp",
+   "canales": [
+    "mliga",
+    "daznll",
+    "daznfree"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-20T21:00:00+01:00",
+   "local": "Villarreal B",
+   "localId": "villarreal-b",
+   "visitante": "Gimnàstic de Tarragona",
+   "visitanteId": "gimnastic-de-tarragona",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "VIB",
+   "visitanteAbbr": "NAS",
    "etiqueta": "Grupo 2",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
@@ -16131,9 +16285,66 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-10T20:07:43+01:00",
-  "cambio": "2026-11-10T19:07:44+01:00",
+  "comprobado": "2026-11-10T21:07:44+01:00",
+  "cambio": "2026-11-10T21:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-10T21:07:44+01:00",
+    "nuevos": 3,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 2,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Athletic Club – RCD Espanyol",
+     "Nuevo partido: FC Andorra – CD Leganés",
+     "Nuevo partido: Villarreal B – Gimnàstic de Tarragona",
+     "Resultado: Anaitasuna 1-6 Alavés",
+     "Resultado: CD Pamplona 0-3 SD Eibar"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-3-primera-ronda-anaitasuna-ala",
+       "t": "Anaitasuna 1-6 Alavés"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-pamplona-eib",
+       "t": "CD Pamplona 0-3 SD Eibar"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-2-15-and-leg",
+       "t": "FC Andorra – CD Leganés"
+      },
+      {
+       "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
+       "t": "Villarreal B – Gimnàstic de Tarragona"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol (Primera)"
+      },
+      {
+       "id": "2627-2-15-and-leg",
+       "t": "FC Andorra – CD Leganés (Segunda)"
+      },
+      {
+       "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
+       "t": "Villarreal B – Gimnàstic de Tarragona (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-10T20:07:43+01:00",
     "nuevos": 0,
@@ -16572,22 +16783,6 @@
    },
    {
     "hora": "2026-11-10T01:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-10T00:07:45+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
