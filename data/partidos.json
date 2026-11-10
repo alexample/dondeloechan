@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-10T21:07:44+01:00",
+ "actualizado": "2026-11-10T22:07:46+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13678,7 +13678,36 @@
    "visitante": "Real Jaén",
    "visitanteAbbr": "JAE",
    "visitanteId": "real-jaen",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "21'",
+     "seg": 1260,
+     "j": "Francisco Gallego",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3720,
+     "j": "Mouhamadou Keita",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5160,
+     "j": "Raúl Pérez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-sd-amorebieta-ud-logrones",
@@ -13694,7 +13723,18 @@
    "visitante": "UD Logroñés",
    "visitanteAbbr": "LOG",
    "visitanteId": "ud-logrones",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "77'",
+     "seg": 4588,
+     "j": "Xalbat Larralde Null",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-trival-valderas-leg",
@@ -13709,7 +13749,18 @@
    "localId": "trival-valderas",
    "visitante": "Leganés",
    "visitanteId": "leg",
-   "provisional": true
+   "provisional": true,
+   "goles": [
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2855,
+     "j": "Álex Millán",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-ue-tavernes-val",
@@ -14592,6 +14643,25 @@
    "provisional": true,
    "localAbbr": "VIB",
    "visitanteAbbr": "NAS",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-13-real-madrid-castilla-real-murcia",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-20T21:15:00+01:00",
+   "local": "Real Madrid Castilla",
+   "localId": "real-madrid-castilla",
+   "visitante": "Real Murcia",
+   "visitanteId": "real-murcia",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "RMC",
+   "visitanteAbbr": "MUR",
    "etiqueta": "Grupo 2",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
@@ -16285,9 +16355,41 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-10T21:07:44+01:00",
-  "cambio": "2026-11-10T21:07:44+01:00",
+  "comprobado": "2026-11-10T22:07:46+01:00",
+  "cambio": "2026-11-10T22:07:46+01:00",
   "historial": [
+   {
+    "hora": "2026-11-10T22:07:46+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Real Madrid Castilla – Real Murcia"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-5-13-real-madrid-castilla-real-murcia",
+       "t": "Real Madrid Castilla – Real Murcia"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-13-real-madrid-castilla-real-murcia",
+       "t": "Real Madrid Castilla – Real Murcia (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-10T21:07:44+01:00",
     "nuevos": 3,
@@ -16767,22 +16869,6 @@
    },
    {
     "hora": "2026-11-10T02:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-10T01:07:43+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
