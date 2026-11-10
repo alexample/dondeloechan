@@ -130,6 +130,7 @@ main .wrap{padding-block:0 40px;display:flex;flex-direction:column;gap:20px}
 .crest{flex:none;width:26px;height:26px;border-radius:50% 50% 46% 46%/42% 42% 58% 58%;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:9px;letter-spacing:0;color:#fff;position:relative;overflow:hidden}
 .crest img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--surface)}
 .crest.lg{width:64px;height:64px;font-size:20px}
+.crest.xs{display:inline-grid;width:18px;height:18px;font-size:6.5px;vertical-align:-4px;margin-right:7px}
 
 .chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:3px 8px 3px 4px;border-radius:999px;line-height:1.2;white-space:nowrap}
 .chip .lg{display:inline-grid;place-items:center;min-width:20px;height:16px;padding:0 4px;border-radius:4px;font-family:var(--f-display);font-weight:800;font-size:10px;letter-spacing:.02em}
@@ -600,7 +601,13 @@ function teamOf(id,name,ab){
   const n=name||id||"?";
   return {id:id||"",name:n,abbr:ab||siglas(n)};
 }
+function crestXs(t){
+  const h=hue(t.name);
+  const bg=`linear-gradient(160deg,hsl(${h} 45% 38%) 0 55%,hsl(${(h+40)%360} 40% 28%) 55%)`;
+  return `<span class="crest xs" style="background:${bg}" aria-hidden="true">${esc(t.abbr)}${t.id&&ESCUDOS.has(t.id)?`<img src="escudos/${esc(t.id)}.png" alt="" loading="lazy">`:""}</span>`;
+}
 function crest(t,big){
+  if(big==="xs")return crestXs(t);
   const h=hue(t.name);
   const bg=`linear-gradient(160deg,hsl(${h} 45% 38%) 0 55%,hsl(${(h+40)%360} 40% 28%) 55%)`;
   return `<span class="crest${big?" lg":""}" style="background:${bg}" aria-hidden="true">${esc(t.abbr)}${t.id&&ESCUDOS.has(t.id)?`<img src="escudos/${esc(t.id)}.png" alt="">`:""}</span>`;
@@ -670,7 +677,7 @@ function tablaHTML(m){
   for(const i of ver){
     if(prev>=0&&i>prev+1)filas+=`<tr class="gap" aria-hidden="true"><td colspan="5">···</td></tr>`;
     const r=F[i],dg=r[5]-r[6],tm=teamOf(r[0],r[8]),kk=r[0]||r[8],mv=tv.mov[kk]||0,jg=tv.jugando[kk];
-    filas+=`<tr class="${zonaDe(m.liga,i+1,n)}${i===iH||i===iA?" yo":""}${jg!=null?" jugando":""}"><td class="ps">${i+1}${mv?`<i class="mv ${mv>0?"up":"dn"}" aria-label="${mv>0?"sube "+mv:"baja "+(-mv)}">${mv>0?"▲":"▼"}${Math.abs(mv)}</i>`:""}</td><td class="eq"><button type="button" class="eq-btn" data-eq="${esc(r[0]||"")}" data-nom="${esc(tm.name)}" data-ab="${esc(tm.abbr)}" title="Ver ficha de ${esc(tm.name)}">${esc(tm.name)}</button>${jg?`<span class="tb-vivo">${jg}</span>`:""}</td><td class="pj">${r[1]}</td><td class="dg">${dg>0?"+"+dg:dg<0?"−"+(-dg):0}</td><td class="pt">${r[7]}</td></tr>`;
+    filas+=`<tr class="${zonaDe(m.liga,i+1,n)}${i===iH||i===iA?" yo":""}${jg!=null?" jugando":""}"><td class="ps">${i+1}${mv?`<i class="mv ${mv>0?"up":"dn"}" aria-label="${mv>0?"sube "+mv:"baja "+(-mv)}">${mv>0?"▲":"▼"}${Math.abs(mv)}</i>`:""}</td><td class="eq"><button type="button" class="eq-btn" data-eq="${esc(r[0]||"")}" data-nom="${esc(tm.name)}" data-ab="${esc(tm.abbr)}" title="Ver ficha de ${esc(tm.name)}">${crest({...tm,id:tm.id||r[0]||""},"xs")}${esc(tm.name)}</button>${jg?`<span class="tb-vivo">${jg}</span>`:""}</td><td class="pj">${r[1]}</td><td class="dg">${dg>0?"+"+dg:dg<0?"−"+(-dg):0}</td><td class="pt">${r[7]}</td></tr>`;
     prev=i;
   }
   const z=ZONAS[m.liga]||[];
@@ -1862,7 +1869,7 @@ function filaPartidoEquipo(m,id,nom,now){
   if(jugado)der=`<span class="res ${st==="live"?"E":letraDe(m,local)}">${m.marcador[0]}-${m.marcador[1]}</span>`;
   else if(st==="off")der=`<span class="chip pend">${m.estado==="suspendido"?"Suspendido":"Aplazado"}</span>`;
   else der=(m.canales||[]).length?chip(m.canales[0]):`<span class="chip pend">${m.sinTV?"Sin TV":"Por confirmar"}</span>`;
-  return `<button type="button" data-partido="${esc(m._id)}" aria-label="${esc(m.local)} contra ${esc(m.visitante)}"><span class="f">${cap(fDayShort.format(d)).replace(".","")}<b>${jugado?(st==="live"?"Vivo":"Final"):m.horaPendiente?"--:--":fTime.format(d)}</b></span><span class="r"><span>${local?"vs ":"en casa del "}${esc(riv.name)}</span><small>${esc(comp)}</small></span>${der}</button>`;
+  return `<button type="button" data-partido="${esc(m._id)}" aria-label="${esc(m.local)} contra ${esc(m.visitante)}"><span class="f">${cap(fDayShort.format(d)).replace(".","")}<b>${jugado?(st==="live"?"Vivo":"Final"):m.horaPendiente?"--:--":fTime.format(d)}</b></span><span class="r"><span>${crest({...riv,id:riv.id||(local?m.visitanteId:m.localId)||""},"xs")}${local?"vs ":"en casa del "}${esc(riv.name)}</span><small>${esc(comp)}</small></span>${der}</button>`;
 }
 function abrirEquipo(id,nom,ab,refresco){
   if(!matches)return;
