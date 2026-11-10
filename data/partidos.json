@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-10T18:48:24+01:00",
+ "actualizado": "2026-11-10T19:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14421,6 +14421,25 @@
    "visitanteAbbr": "BAR",
    "visitanteId": "barakaldo-cf",
    "provisional": true
+  },
+  {
+   "id": "2627-5-13-cd-teruel-hercules",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-20T19:00:00+01:00",
+   "local": "CD Teruel",
+   "localId": "cd-teruel",
+   "visitante": "Hércules",
+   "visitanteId": "hercules",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "TER",
+   "visitanteAbbr": "HER",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
  ],
  "clasificacion": {
@@ -16112,9 +16131,37 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-10T18:48:24+01:00",
-  "cambio": "2026-11-10T18:48:24+01:00",
+  "comprobado": "2026-11-10T19:07:44+01:00",
+  "cambio": "2026-11-10T19:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-10T19:07:44+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: CD Teruel – Hércules"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-13-cd-teruel-hercules",
+       "t": "CD Teruel – Hércules"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-13-cd-teruel-hercules",
+       "t": "CD Teruel – Hércules (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-10T18:48:24+01:00",
     "nuevos": 0,
@@ -16564,22 +16611,6 @@
        "t": "CE Sabadell 0-0 Real Sociedad B"
       }
      ],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-09T22:07:44+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [],
      "horas": [],
      "nuevos": []
