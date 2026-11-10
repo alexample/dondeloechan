@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-10T15:07:46+01:00",
+ "actualizado": "2026-11-10T17:07:49+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14171,7 +14171,7 @@
      "how": "Gratis por internet, en su web o aplicación."
     }
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-12-algeciras-cf-antequera",
@@ -14186,7 +14186,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "ALG",
    "visitanteAbbr": "ANT",
    "etiqueta": "Grupo 2",
@@ -14207,7 +14207,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "LUG",
    "visitanteAbbr": "MIR",
    "etiqueta": "Grupo 1"
@@ -14225,7 +14225,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "LOG",
    "visitanteAbbr": "ARE",
    "etiqueta": "Grupo 1",
@@ -16112,9 +16112,47 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-10T16:07:44+01:00",
-  "cambio": "2026-11-10T15:07:46+01:00",
+  "comprobado": "2026-11-10T17:07:49+01:00",
+  "cambio": "2026-11-10T17:07:49+01:00",
   "historial": [
+   {
+    "hora": "2026-11-10T17:07:49+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Granada CF – UD Las Palmas",
+     "Canal confirmado: CD Lugo – Mirandés",
+     "Canal confirmado: UD Logroñés – Arenas Club",
+     "Canal confirmado: Algeciras CF – Antequera"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-14-gra-lpa",
+       "t": "Granada CF – UD Las Palmas · confirmado"
+      },
+      {
+       "id": "2627-5-12-cd-lugo-mirandes",
+       "t": "CD Lugo – Mirandés · confirmado"
+      },
+      {
+       "id": "2627-5-12-ud-logrones-arenas-club",
+       "t": "UD Logroñés – Arenas Club · confirmado"
+      },
+      {
+       "id": "2627-5-12-algeciras-cf-antequera",
+       "t": "Algeciras CF – Antequera · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-10T16:07:44+01:00",
     "nuevos": 0,
@@ -16634,59 +16672,6 @@
       }
      ],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-09T19:08:11+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 7,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: UD Almería – FC Andorra",
-     "Canal confirmado: RCD Mallorca – Córdoba CF",
-     "Canal confirmado: CE Europa – UE Sant Andreu",
-     "Canal confirmado: Hércules – Villarreal B",
-     "Canal confirmado: Deportivo Fabril – Barakaldo CF",
-     "Canal confirmado: CD Coria – Unionistas de Salamanca",
-     "Canal confirmado: Juventud Torremolinos – SD Huesca"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-2-14-alm-and",
-       "t": "UD Almería – FC Andorra · confirmado"
-      },
-      {
-       "id": "2627-2-14-mll-cor",
-       "t": "RCD Mallorca – Córdoba CF · confirmado"
-      },
-      {
-       "id": "2627-5-12-ce-europa-ue-sant-andreu",
-       "t": "CE Europa – UE Sant Andreu · confirmado"
-      },
-      {
-       "id": "2627-5-12-hercules-villarreal-b",
-       "t": "Hércules – Villarreal B · confirmado"
-      },
-      {
-       "id": "2627-5-12-deportivo-fabril-barakaldo-cf",
-       "t": "Deportivo Fabril – Barakaldo CF · confirmado"
-      },
-      {
-       "id": "2627-5-12-cd-coria-unionistas-de-salamanca",
-       "t": "CD Coria – Unionistas de Salamanca · confirmado"
-      },
-      {
-       "id": "2627-5-12-juventud-torremolinos-sd-huesca",
-       "t": "Juventud Torremolinos – SD Huesca · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
