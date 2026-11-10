@@ -864,8 +864,11 @@ def main():
             canales = list(f["canales"])
             if not canales and liga == 6 and not m.get("canales"):
                 poner_canales(m, ["mconfpend"], exacto=False)   # toda la Conference va por Movistar Plus+
-            if not canales and liga == 3 and not m.get("canales") and f.get("por_confirmar"):
-                poner_canales(m, ["mcopa"], exacto=False)       # la Copa la emite Movistar Plus+ (salvo la que da RTVE); canal exacto, días antes
+            # Copa: si futbolenlatv pone «Canal por confirmar» no se da por hecho que vaya en Movistar Plus+:
+            # muchos partidos de las primeras rondas no se televisan. Se deja sin canal hasta que se publique.
+            if not canales and liga == 3 and m.get("canales") == ["mcopa"] and m.get("provisional"):
+                m["canales"] = []
+                cambios["canales"] += 1
             if not canales:
                 continue
             if liga in (1, 2):

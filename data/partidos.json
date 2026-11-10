@@ -6653,9 +6653,7 @@
   },
   {
    "id": "2627-3-primera-ronda-ud-sanse-cd-coria",
-   "canales": [
-    "mcopa"
-   ],
+   "canales": [],
    "inicio": "2026-10-29T19:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
@@ -13716,9 +13714,7 @@
   },
   {
    "id": "2627-3-primera-ronda-sd-amorebieta-ud-logrones",
-   "canales": [
-    "mcopa"
-   ],
+   "canales": [],
    "inicio": "2026-11-10T20:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
@@ -13748,9 +13744,7 @@
   },
   {
    "id": "2627-3-primera-ronda-trival-valderas-leg",
-   "canales": [
-    "mcopa"
-   ],
+   "canales": [],
    "inicio": "2026-11-10T20:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
@@ -13775,7 +13769,9 @@
     0,
     1
    ],
-   "estado": "final"
+   "estado": "final",
+   "sinTV": true,
+   "nota": "Sin emisión por televisión."
   },
   {
    "id": "2627-3-primera-ronda-ue-tavernes-val",
@@ -14530,9 +14526,7 @@
   },
   {
    "id": "2627-3-primera-ronda-portugalete-real-union",
-   "canales": [
-    "mcopa"
-   ],
+   "canales": [],
    "inicio": "2026-11-18T19:00:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
@@ -14623,9 +14617,7 @@
   },
   {
    "id": "2627-3-primera-ronda-deportiva-minera-cartagena",
-   "canales": [
-    "mcopa"
-   ],
+   "canales": [],
    "inicio": "2026-11-18T20:30:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
@@ -14639,9 +14631,7 @@
   },
   {
    "id": "2627-3-primera-ronda-reus-fc-reddis-barakaldo-cf",
-   "canales": [
-    "mcopa"
-   ],
+   "canales": [],
    "inicio": "2026-11-18T20:30:00+01:00",
    "jornada": "Primera ronda",
    "liga": 3,
