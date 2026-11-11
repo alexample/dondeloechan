@@ -16546,9 +16546,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-11T17:07:44+01:00",
+  "comprobado": "2026-11-11T18:07:43+01:00",
   "cambio": "2026-11-11T17:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-11T18:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-11T17:07:44+01:00",
     "nuevos": 4,
@@ -17132,63 +17153,6 @@
       {
        "id": "2627-5-13-real-madrid-castilla-real-murcia",
        "t": "Real Madrid Castilla – Real Murcia (1ª RFEF)"
-      }
-     ]
-    }
-   },
-   {
-    "hora": "2026-11-10T21:07:44+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 2,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Athletic Club – RCD Espanyol",
-     "Nuevo partido: FC Andorra – CD Leganés",
-     "Nuevo partido: Villarreal B – Gimnàstic de Tarragona",
-     "Resultado: Anaitasuna 1-6 Alavés",
-     "Resultado: CD Pamplona 0-3 SD Eibar"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-3-primera-ronda-anaitasuna-ala",
-       "t": "Anaitasuna 1-6 Alavés"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-pamplona-eib",
-       "t": "CD Pamplona 0-3 SD Eibar"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-2-15-and-leg",
-       "t": "FC Andorra – CD Leganés"
-      },
-      {
-       "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
-       "t": "Villarreal B – Gimnàstic de Tarragona"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol (Primera)"
-      },
-      {
-       "id": "2627-2-15-and-leg",
-       "t": "FC Andorra – CD Leganés (Segunda)"
-      },
-      {
-       "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
-       "t": "Villarreal B – Gimnàstic de Tarragona (1ª RFEF)"
       }
      ]
     }
