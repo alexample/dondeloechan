@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T17:07:44+01:00",
+ "actualizado": "2026-11-11T19:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14855,6 +14855,93 @@
    "visitanteAbbr": "MAJ",
    "etiqueta": "Grupo 2",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-1-13-sev-bet",
+   "liga": 1,
+   "jornada": "13",
+   "inicio": "2026-11-21T18:30:00+01:00",
+   "local": "Sevilla FC",
+   "localId": "sev",
+   "visitante": "Real Betis",
+   "visitanteId": "bet",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-15-cas-eld",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-21T18:30:00+01:00",
+   "local": "CD Castellón",
+   "localId": "cas",
+   "visitante": "CD Eldense",
+   "visitanteId": "eld",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-13-aguilas-fc-ce-europa",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-21T18:45:00+01:00",
+   "local": "Águilas FC",
+   "localId": "aguilas-fc",
+   "visitante": "CE Europa",
+   "visitanteId": "ce-europa",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "AGU",
+   "visitanteAbbr": "EUR",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-13-ponferradina-cd-extremadura",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-21T18:45:00+01:00",
+   "local": "Ponferradina",
+   "localId": "ponferradina",
+   "visitante": "CD Extremadura",
+   "visitanteId": "cd-extremadura",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "PFR",
+   "visitanteAbbr": "EXT",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-13-pontevedra-cd-lugo",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-21T18:45:00+01:00",
+   "local": "Pontevedra",
+   "localId": "pontevedra",
+   "visitante": "CD Lugo",
+   "visitanteId": "cd-lugo",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "PON",
+   "visitanteAbbr": "LUG",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
  ],
  "clasificacion": {
@@ -16546,9 +16633,77 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-11T18:07:43+01:00",
-  "cambio": "2026-11-11T17:07:44+01:00",
+  "comprobado": "2026-11-11T19:07:42+01:00",
+  "cambio": "2026-11-11T19:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-11T19:07:42+01:00",
+    "nuevos": 5,
+    "horas": 0,
+    "canales": 7,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Sevilla FC – Real Betis",
+     "Nuevo partido: CD Castellón – CD Eldense",
+     "Nuevo partido: Ponferradina – CD Extremadura",
+     "Nuevo partido: Pontevedra – CD Lugo",
+     "Nuevo partido: Águilas FC – CE Europa"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-1-13-sev-bet",
+       "t": "Sevilla FC – Real Betis"
+      },
+      {
+       "id": "2627-2-15-cas-eld",
+       "t": "CD Castellón – CD Eldense"
+      },
+      {
+       "id": "2627-5-13-ponferradina-cd-extremadura",
+       "t": "Ponferradina – CD Extremadura"
+      },
+      {
+       "id": "2627-5-13-pontevedra-cd-lugo",
+       "t": "Pontevedra – CD Lugo"
+      },
+      {
+       "id": "2627-5-13-aguilas-fc-ce-europa",
+       "t": "Águilas FC – CE Europa"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-13-sev-bet",
+       "t": "Sevilla FC – Real Betis (Primera)"
+      },
+      {
+       "id": "2627-2-15-cas-eld",
+       "t": "CD Castellón – CD Eldense (Segunda)"
+      },
+      {
+       "id": "2627-5-13-ponferradina-cd-extremadura",
+       "t": "Ponferradina – CD Extremadura (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-13-pontevedra-cd-lugo",
+       "t": "Pontevedra – CD Lugo (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-13-aguilas-fc-ce-europa",
+       "t": "Águilas FC – CE Europa (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-11T18:07:43+01:00",
     "nuevos": 0,
@@ -17123,38 +17278,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-10T22:07:46+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Real Madrid Castilla – Real Murcia"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-5-13-real-madrid-castilla-real-murcia",
-       "t": "Real Madrid Castilla – Real Murcia"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-13-real-madrid-castilla-real-murcia",
-       "t": "Real Madrid Castilla – Real Murcia (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
