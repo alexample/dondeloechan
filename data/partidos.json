@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T14:07:41+01:00",
+ "actualizado": "2026-11-11T17:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14788,6 +14788,73 @@
     "daznhm"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-1-13-ray-val",
+   "liga": 1,
+   "jornada": "13",
+   "inicio": "2026-11-21T16:15:00+01:00",
+   "local": "Rayo Vallecano",
+   "localId": "ray",
+   "visitante": "Valencia CF",
+   "visitanteId": "val",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-15-rsb-cad",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-21T16:15:00+01:00",
+   "local": "Real Sociedad B",
+   "localId": "rsb",
+   "visitante": "Cádiz CF",
+   "visitanteId": "cad",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-13-antequera-juventud-torremolinos",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-21T16:30:00+01:00",
+   "local": "Antequera",
+   "localId": "antequera",
+   "visitante": "Juventud Torremolinos",
+   "visitanteId": "juventud-torremolinos",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ANT",
+   "visitanteAbbr": "TOR",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-13-real-zaragoza-rayo-majadahonda",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-21T16:30:00+01:00",
+   "local": "Real Zaragoza",
+   "localId": "real-zaragoza",
+   "visitante": "Rayo Majadahonda",
+   "visitanteId": "rayo-majadahonda",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ZAR",
+   "visitanteAbbr": "MAJ",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
  ],
  "clasificacion": {
@@ -16479,9 +16546,68 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-11T16:07:46+01:00",
-  "cambio": "2026-11-11T14:07:41+01:00",
+  "comprobado": "2026-11-11T17:07:44+01:00",
+  "cambio": "2026-11-11T17:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-11T17:07:44+01:00",
+    "nuevos": 4,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Rayo Vallecano – Valencia CF",
+     "Nuevo partido: Real Sociedad B – Cádiz CF",
+     "Nuevo partido: Real Zaragoza – Rayo Majadahonda",
+     "Nuevo partido: Antequera – Juventud Torremolinos"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-1-13-ray-val",
+       "t": "Rayo Vallecano – Valencia CF"
+      },
+      {
+       "id": "2627-2-15-rsb-cad",
+       "t": "Real Sociedad B – Cádiz CF"
+      },
+      {
+       "id": "2627-5-13-real-zaragoza-rayo-majadahonda",
+       "t": "Real Zaragoza – Rayo Majadahonda"
+      },
+      {
+       "id": "2627-5-13-antequera-juventud-torremolinos",
+       "t": "Antequera – Juventud Torremolinos"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-13-ray-val",
+       "t": "Rayo Vallecano – Valencia CF (Primera)"
+      },
+      {
+       "id": "2627-2-15-rsb-cad",
+       "t": "Real Sociedad B – Cádiz CF (Segunda)"
+      },
+      {
+       "id": "2627-5-13-real-zaragoza-rayo-majadahonda",
+       "t": "Real Zaragoza – Rayo Majadahonda (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-13-antequera-juventud-torremolinos",
+       "t": "Antequera – Juventud Torremolinos (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-11T16:07:46+01:00",
     "nuevos": 0,
@@ -17065,22 +17191,6 @@
        "t": "Villarreal B – Gimnàstic de Tarragona (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-10T20:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
