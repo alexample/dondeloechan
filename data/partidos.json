@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T13:07:42+01:00",
+ "actualizado": "2026-11-11T14:07:41+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14759,6 +14759,35 @@
    "visitanteAbbr": "BIL",
    "etiqueta": "Grupo 1",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-1-13-ala-dep",
+   "liga": 1,
+   "jornada": "13",
+   "inicio": "2026-11-21T14:00:00+01:00",
+   "local": "Deportivo Alavés",
+   "localId": "ala",
+   "visitante": "RC Deportivo",
+   "visitanteId": "dep",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-15-sab-gra",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-21T14:00:00+01:00",
+   "local": "CE Sabadell",
+   "localId": "sab",
+   "visitante": "Granada CF",
+   "visitanteId": "gra",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
   }
  ],
  "clasificacion": {
@@ -16450,9 +16479,50 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-11T13:07:42+01:00",
-  "cambio": "2026-11-11T13:07:42+01:00",
+  "comprobado": "2026-11-11T14:07:41+01:00",
+  "cambio": "2026-11-11T14:07:41+01:00",
   "historial": [
+   {
+    "hora": "2026-11-11T14:07:41+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Deportivo Alavés – RC Deportivo",
+     "Nuevo partido: CE Sabadell – Granada CF"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-1-13-ala-dep",
+       "t": "Deportivo Alavés – RC Deportivo"
+      },
+      {
+       "id": "2627-2-15-sab-gra",
+       "t": "CE Sabadell – Granada CF"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-13-ala-dep",
+       "t": "Deportivo Alavés – RC Deportivo (Primera)"
+      },
+      {
+       "id": "2627-2-15-sab-gra",
+       "t": "CE Sabadell – Granada CF (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-11T13:07:42+01:00",
     "nuevos": 1,
@@ -17023,44 +17093,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-10T17:07:49+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: Granada CF – UD Las Palmas",
-     "Canal confirmado: CD Lugo – Mirandés",
-     "Canal confirmado: UD Logroñés – Arenas Club",
-     "Canal confirmado: Algeciras CF – Antequera"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-2-14-gra-lpa",
-       "t": "Granada CF – UD Las Palmas · confirmado"
-      },
-      {
-       "id": "2627-5-12-cd-lugo-mirandes",
-       "t": "CD Lugo – Mirandés · confirmado"
-      },
-      {
-       "id": "2627-5-12-ud-logrones-arenas-club",
-       "t": "UD Logroñés – Arenas Club · confirmado"
-      },
-      {
-       "id": "2627-5-12-algeciras-cf-antequera",
-       "t": "Algeciras CF – Antequera · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
