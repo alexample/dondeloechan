@@ -16479,9 +16479,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-11T15:27:34+01:00",
+  "comprobado": "2026-11-11T16:07:46+01:00",
   "cambio": "2026-11-11T14:07:41+01:00",
   "historial": [
+   {
+    "hora": "2026-11-11T16:07:46+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-11T15:27:34+01:00",
     "nuevos": 0,
@@ -17060,34 +17081,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-10T19:07:44+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: CD Teruel – Hércules"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-13-cd-teruel-hercules",
-       "t": "CD Teruel – Hércules"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-13-cd-teruel-hercules",
-       "t": "CD Teruel – Hércules (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
