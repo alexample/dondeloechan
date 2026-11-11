@@ -16633,9 +16633,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-11T19:07:42+01:00",
+  "comprobado": "2026-11-11T20:07:43+01:00",
   "cambio": "2026-11-11T19:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-11T20:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-11T19:07:42+01:00",
     "nuevos": 5,
@@ -17230,44 +17251,6 @@
       {
        "id": "2627-3-primera-ronda-ue-tavernes-val",
        "t": "UE Tavernes 0-6 Valencia CF"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-10T23:07:42+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 3,
-    "tablas": [],
-    "detalle": [
-     "Resultado: CP Mijas Las Lagunas 1-2 Real Jaén",
-     "Resultado: SD Amorebieta 1-0 UD Logroñés",
-     "Resultado: Trival Valderas 0-1 Leganés"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-3-primera-ronda-cp-mijas-las-lagunas-real-jaen",
-       "t": "CP Mijas Las Lagunas 1-2 Real Jaén"
-      },
-      {
-       "id": "2627-3-primera-ronda-sd-amorebieta-ud-logrones",
-       "t": "SD Amorebieta 1-0 UD Logroñés"
-      },
-      {
-       "id": "2627-3-primera-ronda-trival-valderas-leg",
-       "t": "Trival Valderas 0-1 Leganés"
       }
      ],
      "canales": [
