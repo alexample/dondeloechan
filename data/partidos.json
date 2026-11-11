@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T19:07:42+01:00",
+ "actualizado": "2026-11-11T21:07:45+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14526,7 +14526,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-3-primera-ronda-portugalete-real-union",
@@ -14941,6 +14941,57 @@
    "localAbbr": "PON",
    "visitanteAbbr": "LUG",
    "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-1-13-rma-cel",
+   "liga": 1,
+   "jornada": "13",
+   "inicio": "2026-11-21T21:00:00+01:00",
+   "local": "Real Madrid",
+   "localId": "rma",
+   "visitante": "RC Celta",
+   "visitanteId": "cel",
+   "canales": [
+    "mliga",
+    "mplus7",
+    "orange1"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-15-ten-mll",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-21T21:00:00+01:00",
+   "local": "CD Tenerife",
+   "localId": "ten",
+   "visitante": "RCD Mallorca",
+   "visitanteId": "mll",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-13-ue-sant-andreu-atletico-madrileno",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-21T21:00:00+01:00",
+   "local": "UE Sant Andreu",
+   "localId": "ue-sant-andreu",
+   "visitante": "Atlético Madrileño",
+   "visitanteId": "atletico-madrileno",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "SAN",
+   "visitanteAbbr": "ATM",
+   "etiqueta": "Grupo 2",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
  ],
@@ -16633,9 +16684,64 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-11T20:07:43+01:00",
-  "cambio": "2026-11-11T19:07:42+01:00",
+  "comprobado": "2026-11-11T21:07:45+01:00",
+  "cambio": "2026-11-11T21:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-11T21:07:45+01:00",
+    "nuevos": 3,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Real Madrid – RC Celta",
+     "Nuevo partido: CD Tenerife – RCD Mallorca",
+     "Nuevo partido: UE Sant Andreu – Atlético Madrileño",
+     "Canal confirmado: Albacete BP – Celta Fortuna"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-1-13-rma-cel",
+       "t": "Real Madrid – RC Celta"
+      },
+      {
+       "id": "2627-2-15-ten-mll",
+       "t": "CD Tenerife – RCD Mallorca"
+      },
+      {
+       "id": "2627-2-14-alb-clb",
+       "t": "Albacete BP – Celta Fortuna · confirmado"
+      },
+      {
+       "id": "2627-5-13-ue-sant-andreu-atletico-madrileno",
+       "t": "UE Sant Andreu – Atlético Madrileño"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-13-rma-cel",
+       "t": "Real Madrid – RC Celta (Primera)"
+      },
+      {
+       "id": "2627-2-15-ten-mll",
+       "t": "CD Tenerife – RCD Mallorca (Segunda)"
+      },
+      {
+       "id": "2627-5-13-ue-sant-andreu-atletico-madrileno",
+       "t": "UE Sant Andreu – Atlético Madrileño (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-11T20:07:43+01:00",
     "nuevos": 0,
@@ -17225,34 +17331,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-11T00:07:41+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 1,
-    "tablas": [],
-    "detalle": [
-     "Resultado: UE Tavernes 0-6 Valencia CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-3-primera-ronda-ue-tavernes-val",
-       "t": "UE Tavernes 0-6 Valencia CF"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-13-ath-esp",
