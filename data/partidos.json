@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T16:07:44+01:00",
+ "actualizado": "2026-11-12T17:07:45+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14663,14 +14663,15 @@
    "visitante": "Hércules",
    "visitanteId": "hercules",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "TER",
    "visitanteAbbr": "HER",
-   "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-2-15-and-leg",
@@ -14713,6 +14714,13 @@
    "visitante": "Gimnàstic de Tarragona",
    "visitanteId": "gimnastic-de-tarragona",
    "canales": [
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    },
     "fanplay",
     "fclub"
    ],
@@ -14720,7 +14728,7 @@
    "localAbbr": "VIB",
    "visitanteAbbr": "NAS",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Esport3; completo, en FANPLAY TV y FootballClub."
   },
   {
    "id": "2627-5-13-real-madrid-castilla-real-murcia",
@@ -14732,14 +14740,15 @@
    "visitante": "Real Murcia",
    "visitanteId": "real-murcia",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "RMC",
    "visitanteAbbr": "MUR",
-   "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-5-13-mirandes-bilbao-athletic",
@@ -14751,14 +14760,15 @@
    "visitante": "Bilbao Athletic",
    "visitanteId": "bilbao-athletic",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "MIR",
    "visitanteAbbr": "BIL",
-   "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 1"
   },
   {
    "id": "2627-1-13-ala-dep",
@@ -14847,14 +14857,15 @@
    "visitante": "Rayo Majadahonda",
    "visitanteId": "rayo-majadahonda",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "ZAR",
    "visitanteAbbr": "MAJ",
-   "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-1-13-sev-bet",
@@ -14915,14 +14926,15 @@
    "visitante": "CD Extremadura",
    "visitanteId": "cd-extremadura",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "PFR",
    "visitanteAbbr": "EXT",
-   "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 1"
   },
   {
    "id": "2627-5-13-pontevedra-cd-lugo",
@@ -14934,6 +14946,13 @@
    "visitante": "CD Lugo",
    "visitanteId": "cd-lugo",
    "canales": [
+    {
+     "name": "TVG",
+     "short": "TVG",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Galicia y en la web de la CRTVG."
+    },
     "fanplay",
     "fclub"
    ],
@@ -14941,7 +14960,7 @@
    "localAbbr": "PON",
    "visitanteAbbr": "LUG",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub."
   },
   {
    "id": "2627-1-13-rma-cel",
@@ -14985,14 +15004,22 @@
    "visitante": "Atlético Madrileño",
    "visitanteId": "atletico-madrileno",
    "canales": [
+    "rfef",
+    "daznrfef",
+    {
+     "name": "betevé",
+     "short": "BTV",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Barcelona y en beteve.cat."
+    },
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "SAN",
    "visitanteAbbr": "ATM",
-   "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-5-13-alcorcon-algeciras-cf",
@@ -15042,6 +15069,20 @@
    "visitante": "UD Ibiza",
    "visitanteId": "ud-ibiza",
    "canales": [
+    {
+     "name": "Aragón TV",
+     "short": "ARA",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Aragón y en Aragón Play."
+    },
+    {
+     "name": "Aragón Play",
+     "short": "ARP",
+     "op": "free",
+     "dial": "Web",
+     "how": "Gratis en la web y la app de Aragón Play (sin emisión en la TDT)."
+    },
     "fanplay",
     "fclub"
    ],
@@ -15049,7 +15090,7 @@
    "localAbbr": "HUE",
    "visitanteAbbr": "IBI",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Aragón TV; completo, en FANPLAY TV y FootballClub."
   },
   {
    "id": "2627-5-13-ud-ourense-racing-ferrol",
@@ -15061,14 +15102,15 @@
    "visitante": "Racing Ferrol",
    "visitanteId": "racing-ferrol",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "OUR",
    "visitanteAbbr": "RFE",
-   "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 1"
   },
   {
    "id": "2627-1-13-bar-vil",
@@ -15128,14 +15170,15 @@
    "visitante": "Real Jaén",
    "visitanteId": "real-jaen",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "CAR",
    "visitanteAbbr": "JAE",
-   "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-5-13-deportivo-fabril-cd-coria",
@@ -15155,6 +15198,36 @@
    "visitanteAbbr": "COR",
    "etiqueta": "Grupo 1",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-1-13-rac-rso",
+   "liga": 1,
+   "jornada": "13",
+   "inicio": "2026-11-22T16:15:00+01:00",
+   "local": "Real Racing Club",
+   "localId": "rac",
+   "visitante": "Real Sociedad",
+   "visitanteId": "rso",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-15-spo-lpa",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-22T16:15:00+01:00",
+   "local": "Real Sporting",
+   "localId": "spo",
+   "visitante": "UD Las Palmas",
+   "visitanteId": "lpa",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
   }
  ],
  "clasificacion": {
@@ -16846,9 +16919,94 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-12T16:07:44+01:00",
-  "cambio": "2026-11-12T16:07:44+01:00",
+  "comprobado": "2026-11-12T17:07:45+01:00",
+  "cambio": "2026-11-12T17:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-12T17:07:45+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 15,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Real Racing Club – Real Sociedad",
+     "Nuevo partido: Real Sporting – UD Las Palmas"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-1-13-rac-rso",
+       "t": "Real Racing Club – Real Sociedad"
+      },
+      {
+       "id": "2627-2-15-spo-lpa",
+       "t": "Real Sporting – UD Las Palmas"
+      },
+      {
+       "id": "2627-5-13-cd-teruel-hercules",
+       "t": "CD Teruel – Hércules"
+      },
+      {
+       "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
+       "t": "Villarreal B – Gimnàstic de Tarragona"
+      },
+      {
+       "id": "2627-5-13-real-madrid-castilla-real-murcia",
+       "t": "Real Madrid Castilla – Real Murcia"
+      },
+      {
+       "id": "2627-5-13-mirandes-bilbao-athletic",
+       "t": "Mirandés – Bilbao Athletic"
+      },
+      {
+       "id": "2627-5-13-real-zaragoza-rayo-majadahonda",
+       "t": "Real Zaragoza – Rayo Majadahonda"
+      },
+      {
+       "id": "2627-5-13-ponferradina-cd-extremadura",
+       "t": "Ponferradina – CD Extremadura"
+      },
+      {
+       "id": "2627-5-13-pontevedra-cd-lugo",
+       "t": "Pontevedra – CD Lugo"
+      },
+      {
+       "id": "2627-5-13-ue-sant-andreu-atletico-madrileno",
+       "t": "UE Sant Andreu – Atlético Madrileño"
+      },
+      {
+       "id": "2627-5-13-sd-huesca-ud-ibiza",
+       "t": "SD Huesca – UD Ibiza"
+      },
+      {
+       "id": "2627-5-13-ud-ourense-racing-ferrol",
+       "t": "UD Ourense – Racing Ferrol"
+      },
+      {
+       "id": "2627-5-13-cartagena-real-jaen",
+       "t": "Cartagena – Real Jaén"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-13-rac-rso",
+       "t": "Real Racing Club – Real Sociedad (Primera)"
+      },
+      {
+       "id": "2627-2-15-spo-lpa",
+       "t": "Real Sporting – UD Las Palmas (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-12T16:07:44+01:00",
     "nuevos": 3,
@@ -17451,27 +17609,6 @@
        "t": "UE Sant Andreu – Atlético Madrileño (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-11T20:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
