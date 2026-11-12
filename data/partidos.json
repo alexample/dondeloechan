@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T17:07:45+01:00",
+ "actualizado": "2026-11-12T19:07:45+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15228,6 +15228,103 @@
     "orange2"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-5-13-cultural-leonesa-zamora",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-22T18:15:00+01:00",
+   "local": "Cultural Leonesa",
+   "localId": "cultural-leonesa",
+   "visitante": "Zamora",
+   "visitanteId": "zamora",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "CUL",
+   "visitanteAbbr": "ZAM",
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-5-13-merida-real-union",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-22T18:15:00+01:00",
+   "local": "Mérida",
+   "localId": "merida",
+   "visitante": "Real Unión",
+   "visitanteId": "real-union",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "MER",
+   "visitanteAbbr": "RUN",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-1-13-osa-mal",
+   "liga": 1,
+   "jornada": "13",
+   "inicio": "2026-11-22T18:30:00+01:00",
+   "local": "CA Osasuna",
+   "localId": "osa",
+   "visitante": "Málaga CF",
+   "visitanteId": "mal",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-15-clb-vll",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-22T18:30:00+01:00",
+   "local": "Celta Fortuna",
+   "localId": "clb",
+   "visitante": "Real Valladolid",
+   "visitanteId": "vll",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-15-gir-eib",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-22T18:30:00+01:00",
+   "local": "Girona FC",
+   "localId": "gir",
+   "visitante": "SD Eibar",
+   "visitanteId": "eib",
+   "canales": [
+    "hyper",
+    "daznhm",
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    },
+    {
+     "name": "Replay",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
+    }
+   ],
+   "provisional": true
   }
  ],
  "clasificacion": {
@@ -16919,9 +17016,77 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-12T18:07:45+01:00",
-  "cambio": "2026-11-12T17:07:45+01:00",
+  "comprobado": "2026-11-12T19:07:45+01:00",
+  "cambio": "2026-11-12T19:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-12T19:07:45+01:00",
+    "nuevos": 5,
+    "horas": 0,
+    "canales": 8,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: CA Osasuna – Málaga CF",
+     "Nuevo partido: Celta Fortuna – Real Valladolid",
+     "Nuevo partido: Girona FC – SD Eibar",
+     "Nuevo partido: Cultural Leonesa – Zamora",
+     "Nuevo partido: Mérida – Real Unión"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-1-13-osa-mal",
+       "t": "CA Osasuna – Málaga CF"
+      },
+      {
+       "id": "2627-2-15-clb-vll",
+       "t": "Celta Fortuna – Real Valladolid"
+      },
+      {
+       "id": "2627-2-15-gir-eib",
+       "t": "Girona FC – SD Eibar"
+      },
+      {
+       "id": "2627-5-13-cultural-leonesa-zamora",
+       "t": "Cultural Leonesa – Zamora"
+      },
+      {
+       "id": "2627-5-13-merida-real-union",
+       "t": "Mérida – Real Unión"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-13-osa-mal",
+       "t": "CA Osasuna – Málaga CF (Primera)"
+      },
+      {
+       "id": "2627-2-15-clb-vll",
+       "t": "Celta Fortuna – Real Valladolid (Segunda)"
+      },
+      {
+       "id": "2627-2-15-gir-eib",
+       "t": "Girona FC – SD Eibar (Segunda)"
+      },
+      {
+       "id": "2627-5-13-cultural-leonesa-zamora",
+       "t": "Cultural Leonesa – Zamora (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-13-merida-real-union",
+       "t": "Mérida – Real Unión (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-12T18:07:45+01:00",
     "nuevos": 0,
@@ -17537,27 +17702,6 @@
    },
    {
     "hora": "2026-11-11T22:59:50+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-11T22:07:44+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
