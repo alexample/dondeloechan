@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T19:07:45+01:00",
+ "actualizado": "2026-11-12T21:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -13872,7 +13872,12 @@
    "localId": "calvo-sotelo-puertollano",
    "visitante": "Albacete",
    "visitanteId": "alb",
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-cd-tarancon-lev",
@@ -15323,6 +15328,55 @@
      "dial": "",
      "how": "Gratis por internet, en su web o aplicación."
     }
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-13-cp-cacereno-ud-logrones",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-22T20:30:00+01:00",
+   "local": "CP Cacereño",
+   "localId": "cp-cacereno",
+   "visitante": "UD Logroñés",
+   "visitanteId": "ud-logrones",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "CAC",
+   "visitanteAbbr": "LOG",
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-1-13-get-atm",
+   "liga": 1,
+   "jornada": "13",
+   "inicio": "2026-11-22T21:00:00+01:00",
+   "local": "Getafe CF",
+   "localId": "get",
+   "visitante": "Atlético de Madrid",
+   "visitanteId": "atm",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-15-bur-alb",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-22T21:00:00+01:00",
+   "local": "Burgos CF",
+   "localId": "bur",
+   "visitante": "Albacete BP",
+   "visitanteId": "alb",
+   "canales": [
+    "hyper",
+    "daznhm"
    ],
    "provisional": true
   }
@@ -17016,9 +17070,65 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-12T20:07:42+01:00",
-  "cambio": "2026-11-12T19:07:45+01:00",
+  "comprobado": "2026-11-12T21:07:44+01:00",
+  "cambio": "2026-11-12T21:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-12T21:07:44+01:00",
+    "nuevos": 3,
+    "horas": 0,
+    "canales": 5,
+    "resultados": 1,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Getafe CF – Atlético de Madrid",
+     "Nuevo partido: Burgos CF – Albacete BP",
+     "Nuevo partido: CP Cacereño – UD Logroñés",
+     "Resultado: Calvo Sotelo Puertollano 0-3 Albacete"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
+       "t": "Calvo Sotelo Puertollano 0-3 Albacete"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-1-13-get-atm",
+       "t": "Getafe CF – Atlético de Madrid"
+      },
+      {
+       "id": "2627-2-15-bur-alb",
+       "t": "Burgos CF – Albacete BP"
+      },
+      {
+       "id": "2627-5-13-cp-cacereno-ud-logrones",
+       "t": "CP Cacereño – UD Logroñés"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-13-get-atm",
+       "t": "Getafe CF – Atlético de Madrid (Primera)"
+      },
+      {
+       "id": "2627-2-15-bur-alb",
+       "t": "Burgos CF – Albacete BP (Segunda)"
+      },
+      {
+       "id": "2627-5-13-cp-cacereno-ud-logrones",
+       "t": "CP Cacereño – UD Logroñés (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-12T20:07:42+01:00",
     "nuevos": 0,
@@ -17681,27 +17791,6 @@
    },
    {
     "hora": "2026-11-12T01:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-12T00:07:46+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
