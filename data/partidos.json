@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T14:07:44+01:00",
+ "actualizado": "2026-11-12T16:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15098,6 +15098,63 @@
     "daznhm"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-5-13-barakaldo-cf-unionistas-de-salamanca",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-22T16:00:00+01:00",
+   "local": "Barakaldo CF",
+   "localId": "barakaldo-cf",
+   "visitante": "Unionistas de Salamanca",
+   "visitanteId": "unionistas-de-salamanca",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "BAR",
+   "visitanteAbbr": "UNI",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-13-cartagena-real-jaen",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-22T16:00:00+01:00",
+   "local": "Cartagena",
+   "localId": "cartagena",
+   "visitante": "Real Jaén",
+   "visitanteId": "real-jaen",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "CAR",
+   "visitanteAbbr": "JAE",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-13-deportivo-fabril-cd-coria",
+   "liga": 5,
+   "jornada": "13",
+   "inicio": "2026-11-22T16:00:00+01:00",
+   "local": "Deportivo Fabril",
+   "localId": "deportivo-fabril",
+   "visitante": "CD Coria",
+   "visitanteId": "cd-coria",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "FAB",
+   "visitanteAbbr": "COR",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   }
  ],
  "clasificacion": {
@@ -16789,9 +16846,59 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-12T15:07:43+01:00",
-  "cambio": "2026-11-12T14:07:44+01:00",
+  "comprobado": "2026-11-12T16:07:44+01:00",
+  "cambio": "2026-11-12T16:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-12T16:07:44+01:00",
+    "nuevos": 3,
+    "horas": 0,
+    "canales": 5,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Barakaldo CF – Unionistas de Salamanca",
+     "Nuevo partido: Deportivo Fabril – CD Coria",
+     "Nuevo partido: Cartagena – Real Jaén"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-5-13-barakaldo-cf-unionistas-de-salamanca",
+       "t": "Barakaldo CF – Unionistas de Salamanca"
+      },
+      {
+       "id": "2627-5-13-deportivo-fabril-cd-coria",
+       "t": "Deportivo Fabril – CD Coria"
+      },
+      {
+       "id": "2627-5-13-cartagena-real-jaen",
+       "t": "Cartagena – Real Jaén"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-13-barakaldo-cf-unionistas-de-salamanca",
+       "t": "Barakaldo CF – Unionistas de Salamanca (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-13-deportivo-fabril-cd-coria",
+       "t": "Deportivo Fabril – CD Coria (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-13-cartagena-real-jaen",
+       "t": "Cartagena – Real Jaén (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-12T15:07:43+01:00",
     "nuevos": 0,
@@ -17365,74 +17472,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-11T19:07:42+01:00",
-    "nuevos": 5,
-    "horas": 0,
-    "canales": 7,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Sevilla FC – Real Betis",
-     "Nuevo partido: CD Castellón – CD Eldense",
-     "Nuevo partido: Ponferradina – CD Extremadura",
-     "Nuevo partido: Pontevedra – CD Lugo",
-     "Nuevo partido: Águilas FC – CE Europa"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-1-13-sev-bet",
-       "t": "Sevilla FC – Real Betis"
-      },
-      {
-       "id": "2627-2-15-cas-eld",
-       "t": "CD Castellón – CD Eldense"
-      },
-      {
-       "id": "2627-5-13-ponferradina-cd-extremadura",
-       "t": "Ponferradina – CD Extremadura"
-      },
-      {
-       "id": "2627-5-13-pontevedra-cd-lugo",
-       "t": "Pontevedra – CD Lugo"
-      },
-      {
-       "id": "2627-5-13-aguilas-fc-ce-europa",
-       "t": "Águilas FC – CE Europa"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-13-sev-bet",
-       "t": "Sevilla FC – Real Betis (Primera)"
-      },
-      {
-       "id": "2627-2-15-cas-eld",
-       "t": "CD Castellón – CD Eldense (Segunda)"
-      },
-      {
-       "id": "2627-5-13-ponferradina-cd-extremadura",
-       "t": "Ponferradina – CD Extremadura (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-13-pontevedra-cd-lugo",
-       "t": "Pontevedra – CD Lugo (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-13-aguilas-fc-ce-europa",
-       "t": "Águilas FC – CE Europa (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
