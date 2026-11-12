@@ -16919,9 +16919,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-12T17:07:45+01:00",
+  "comprobado": "2026-11-12T18:07:45+01:00",
   "cambio": "2026-11-12T17:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-12T18:07:45+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-12T17:07:45+01:00",
     "nuevos": 2,
@@ -17554,61 +17575,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-11T21:07:45+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 6,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Real Madrid – RC Celta",
-     "Nuevo partido: CD Tenerife – RCD Mallorca",
-     "Nuevo partido: UE Sant Andreu – Atlético Madrileño",
-     "Canal confirmado: Albacete BP – Celta Fortuna"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-1-13-rma-cel",
-       "t": "Real Madrid – RC Celta"
-      },
-      {
-       "id": "2627-2-15-ten-mll",
-       "t": "CD Tenerife – RCD Mallorca"
-      },
-      {
-       "id": "2627-2-14-alb-clb",
-       "t": "Albacete BP – Celta Fortuna · confirmado"
-      },
-      {
-       "id": "2627-5-13-ue-sant-andreu-atletico-madrileno",
-       "t": "UE Sant Andreu – Atlético Madrileño"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-13-rma-cel",
-       "t": "Real Madrid – RC Celta (Primera)"
-      },
-      {
-       "id": "2627-2-15-ten-mll",
-       "t": "CD Tenerife – RCD Mallorca (Segunda)"
-      },
-      {
-       "id": "2627-5-13-ue-sant-andreu-atletico-madrileno",
-       "t": "UE Sant Andreu – Atlético Madrileño (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
