@@ -16684,9 +16684,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-12T10:07:43+01:00",
+  "comprobado": "2026-11-12T11:07:43+01:00",
   "cambio": "2026-11-11T21:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-12T11:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-12T10:07:43+01:00",
     "nuevos": 0,
@@ -17287,47 +17308,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-11T14:07:41+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Deportivo Alavés – RC Deportivo",
-     "Nuevo partido: CE Sabadell – Granada CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-1-13-ala-dep",
-       "t": "Deportivo Alavés – RC Deportivo"
-      },
-      {
-       "id": "2627-2-15-sab-gra",
-       "t": "CE Sabadell – Granada CF"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-13-ala-dep",
-       "t": "Deportivo Alavés – RC Deportivo (Primera)"
-      },
-      {
-       "id": "2627-2-15-sab-gra",
-       "t": "CE Sabadell – Granada CF (Segunda)"
-      }
-     ]
     }
    }
   ]
