@@ -17174,9 +17174,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-13T15:07:43+01:00",
+  "comprobado": "2026-11-13T16:07:43+01:00",
   "cambio": "2026-11-12T23:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-13T16:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-13T15:07:43+01:00",
     "nuevos": 0,
@@ -17705,74 +17726,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-12T19:07:45+01:00",
-    "nuevos": 5,
-    "horas": 0,
-    "canales": 8,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: CA Osasuna – Málaga CF",
-     "Nuevo partido: Celta Fortuna – Real Valladolid",
-     "Nuevo partido: Girona FC – SD Eibar",
-     "Nuevo partido: Cultural Leonesa – Zamora",
-     "Nuevo partido: Mérida – Real Unión"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-1-13-osa-mal",
-       "t": "CA Osasuna – Málaga CF"
-      },
-      {
-       "id": "2627-2-15-clb-vll",
-       "t": "Celta Fortuna – Real Valladolid"
-      },
-      {
-       "id": "2627-2-15-gir-eib",
-       "t": "Girona FC – SD Eibar"
-      },
-      {
-       "id": "2627-5-13-cultural-leonesa-zamora",
-       "t": "Cultural Leonesa – Zamora"
-      },
-      {
-       "id": "2627-5-13-merida-real-union",
-       "t": "Mérida – Real Unión"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-13-osa-mal",
-       "t": "CA Osasuna – Málaga CF (Primera)"
-      },
-      {
-       "id": "2627-2-15-clb-vll",
-       "t": "Celta Fortuna – Real Valladolid (Segunda)"
-      },
-      {
-       "id": "2627-2-15-gir-eib",
-       "t": "Girona FC – SD Eibar (Segunda)"
-      },
-      {
-       "id": "2627-5-13-cultural-leonesa-zamora",
-       "t": "Cultural Leonesa – Zamora (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-13-merida-real-union",
-       "t": "Mérida – Real Unión (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
