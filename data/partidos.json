@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-13T20:07:44+01:00",
+ "actualizado": "2026-11-13T21:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14033,7 +14033,59 @@
    "provisional": false,
    "localAbbr": "PFR",
    "visitanteAbbr": "CAC",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "r",
+     "min": "31'",
+     "seg": 1860,
+     "j": "Eneko Undabarrena",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "52'",
+     "seg": 3120,
+     "j": "Federico San Emeterio",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3600,
+     "j": "David Andújar",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "76'",
+     "seg": 4560,
+     "j": "Sergio Navarro",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4860,
+     "j": "Iván Martínez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-14-leg-bur",
@@ -15483,6 +15535,35 @@
     "daznhm"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-2-15-ceu-alm",
+   "liga": 2,
+   "jornada": "15",
+   "inicio": "2026-11-23T20:30:00+01:00",
+   "local": "AD Ceuta FC",
+   "localId": "ceu",
+   "visitante": "UD Almería",
+   "visitanteId": "alm",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-1-13-lev-elc",
+   "liga": 1,
+   "jornada": "13",
+   "inicio": "2026-11-23T21:00:00+01:00",
+   "local": "Levante UD",
+   "localId": "lev",
+   "visitante": "Elche CF",
+   "visitanteId": "elc",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
   }
  ],
  "clasificacion": {
@@ -15692,7 +15773,7 @@
    ]
   },
   "2": {
-   "tras": "Jornada 13",
+   "tras": "Jornada 14",
    "filas": [
     [
      "alm",
@@ -15716,12 +15797,12 @@
     ],
     [
      "bur",
-     13,
+     14,
      7,
      3,
-     3,
+     4,
      19,
-     14,
+     17,
      24
     ],
     [
@@ -15835,6 +15916,16 @@
      15
     ],
     [
+     "leg",
+     14,
+     4,
+     3,
+     7,
+     14,
+     23,
+     15
+    ],
+    [
      "eld",
      13,
      4,
@@ -15862,16 +15953,6 @@
      7,
      15,
      22,
-     12
-    ],
-    [
-     "leg",
-     13,
-     3,
-     3,
-     7,
-     11,
-     23,
      12
     ],
     [
@@ -17174,9 +17255,58 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-13T20:07:44+01:00",
-  "cambio": "2026-11-13T20:07:44+01:00",
+  "comprobado": "2026-11-13T21:07:42+01:00",
+  "cambio": "2026-11-13T21:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-13T21:07:42+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 1,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Nuevo partido: Levante UD – Elche CF",
+     "Nuevo partido: AD Ceuta FC – UD Almería",
+     "Resultado: Ponferradina 1-2 CP Cacereño"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-12-ponferradina-cp-cacereno",
+       "t": "Ponferradina 1-2 CP Cacereño"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-1-13-lev-elc",
+       "t": "Levante UD – Elche CF"
+      },
+      {
+       "id": "2627-2-15-ceu-alm",
+       "t": "AD Ceuta FC – UD Almería"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-13-lev-elc",
+       "t": "Levante UD – Elche CF (Primera)"
+      },
+      {
+       "id": "2627-2-15-ceu-alm",
+       "t": "AD Ceuta FC – UD Almería (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-13T20:07:44+01:00",
     "nuevos": 0,
@@ -17658,27 +17788,6 @@
    },
    {
     "hora": "2026-11-13T01:07:42+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-13T00:07:44+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
