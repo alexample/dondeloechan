@@ -17174,9 +17174,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-13T13:07:42+01:00",
+  "comprobado": "2026-11-13T14:07:46+01:00",
   "cambio": "2026-11-12T23:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-13T14:07:46+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-13T13:07:42+01:00",
     "nuevos": 0,
@@ -17752,91 +17773,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-12T17:07:45+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 15,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Real Racing Club – Real Sociedad",
-     "Nuevo partido: Real Sporting – UD Las Palmas"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-1-13-rac-rso",
-       "t": "Real Racing Club – Real Sociedad"
-      },
-      {
-       "id": "2627-2-15-spo-lpa",
-       "t": "Real Sporting – UD Las Palmas"
-      },
-      {
-       "id": "2627-5-13-cd-teruel-hercules",
-       "t": "CD Teruel – Hércules"
-      },
-      {
-       "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
-       "t": "Villarreal B – Gimnàstic de Tarragona"
-      },
-      {
-       "id": "2627-5-13-real-madrid-castilla-real-murcia",
-       "t": "Real Madrid Castilla – Real Murcia"
-      },
-      {
-       "id": "2627-5-13-mirandes-bilbao-athletic",
-       "t": "Mirandés – Bilbao Athletic"
-      },
-      {
-       "id": "2627-5-13-real-zaragoza-rayo-majadahonda",
-       "t": "Real Zaragoza – Rayo Majadahonda"
-      },
-      {
-       "id": "2627-5-13-ponferradina-cd-extremadura",
-       "t": "Ponferradina – CD Extremadura"
-      },
-      {
-       "id": "2627-5-13-pontevedra-cd-lugo",
-       "t": "Pontevedra – CD Lugo"
-      },
-      {
-       "id": "2627-5-13-ue-sant-andreu-atletico-madrileno",
-       "t": "UE Sant Andreu – Atlético Madrileño"
-      },
-      {
-       "id": "2627-5-13-sd-huesca-ud-ibiza",
-       "t": "SD Huesca – UD Ibiza"
-      },
-      {
-       "id": "2627-5-13-ud-ourense-racing-ferrol",
-       "t": "UD Ourense – Racing Ferrol"
-      },
-      {
-       "id": "2627-5-13-cartagena-real-jaen",
-       "t": "Cartagena – Real Jaén"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-13-rac-rso",
-       "t": "Real Racing Club – Real Sociedad (Primera)"
-      },
-      {
-       "id": "2627-2-15-spo-lpa",
-       "t": "Real Sporting – UD Las Palmas (Segunda)"
-      }
-     ]
     }
    }
   ]
