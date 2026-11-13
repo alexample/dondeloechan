@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-13T19:07:45+01:00",
+ "actualizado": "2026-11-13T20:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14707,7 +14707,7 @@
    "localId": "alcoyano",
    "visitante": "RCD Mallorca",
    "visitanteId": "mll",
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-3-primera-ronda-cd-badajoz-ten",
@@ -14728,7 +14728,7 @@
    "localId": "cd-badajoz",
    "visitante": "Tenerife",
    "visitanteId": "ten",
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-3-primera-ronda-deportiva-minera-cartagena",
@@ -17174,9 +17174,41 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-13T19:07:45+01:00",
-  "cambio": "2026-11-13T19:07:45+01:00",
+  "comprobado": "2026-11-13T20:07:44+01:00",
+  "cambio": "2026-11-13T20:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-13T20:07:44+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Alcoyano – RCD Mallorca",
+     "Canal confirmado: CD Badajoz – Tenerife"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-3-primera-ronda-alcoyano-mll",
+       "t": "Alcoyano – RCD Mallorca · confirmado"
+      },
+      {
+       "id": "2627-3-primera-ronda-cd-badajoz-ten",
+       "t": "CD Badajoz – Tenerife · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-13T19:07:45+01:00",
     "nuevos": 0,
@@ -17656,39 +17688,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-12T23:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 2,
-    "tablas": [],
-    "detalle": [
-     "Resultado: CDA Navalcarnero 2-3 Betis",
-     "Resultado: CD Tarancón 1-2 Levante"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-3-primera-ronda-cda-navalcarnero-bet",
-       "t": "CDA Navalcarnero 2-3 Betis"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-tarancon-lev",
-       "t": "CD Tarancón 1-2 Levante"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-13-ath-esp",
