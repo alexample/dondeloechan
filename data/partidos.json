@@ -17174,9 +17174,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-13T17:20:11+01:00",
+  "comprobado": "2026-11-13T18:07:48+01:00",
   "cambio": "2026-11-12T23:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-13T18:07:48+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-13T17:20:11+01:00",
     "nuevos": 0,
@@ -17670,62 +17691,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-12T21:07:44+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 5,
-    "resultados": 1,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Getafe CF – Atlético de Madrid",
-     "Nuevo partido: Burgos CF – Albacete BP",
-     "Nuevo partido: CP Cacereño – UD Logroñés",
-     "Resultado: Calvo Sotelo Puertollano 0-3 Albacete"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-3-primera-ronda-calvo-sotelo-puertollano-alb",
-       "t": "Calvo Sotelo Puertollano 0-3 Albacete"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-1-13-get-atm",
-       "t": "Getafe CF – Atlético de Madrid"
-      },
-      {
-       "id": "2627-2-15-bur-alb",
-       "t": "Burgos CF – Albacete BP"
-      },
-      {
-       "id": "2627-5-13-cp-cacereno-ud-logrones",
-       "t": "CP Cacereño – UD Logroñés"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-13-get-atm",
-       "t": "Getafe CF – Atlético de Madrid (Primera)"
-      },
-      {
-       "id": "2627-2-15-bur-alb",
-       "t": "Burgos CF – Albacete BP (Segunda)"
-      },
-      {
-       "id": "2627-5-13-cp-cacereno-ud-logrones",
-       "t": "CP Cacereño – UD Logroñés (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
