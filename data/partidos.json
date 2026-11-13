@@ -17174,9 +17174,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-13T12:07:42+01:00",
+  "comprobado": "2026-11-13T13:07:42+01:00",
   "cambio": "2026-11-12T23:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-13T13:07:42+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-13T12:07:42+01:00",
     "nuevos": 0,
@@ -17814,56 +17835,6 @@
       {
        "id": "2627-2-15-spo-lpa",
        "t": "Real Sporting – UD Las Palmas (Segunda)"
-      }
-     ]
-    }
-   },
-   {
-    "hora": "2026-11-12T16:07:44+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 5,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Barakaldo CF – Unionistas de Salamanca",
-     "Nuevo partido: Deportivo Fabril – CD Coria",
-     "Nuevo partido: Cartagena – Real Jaén"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-5-13-barakaldo-cf-unionistas-de-salamanca",
-       "t": "Barakaldo CF – Unionistas de Salamanca"
-      },
-      {
-       "id": "2627-5-13-deportivo-fabril-cd-coria",
-       "t": "Deportivo Fabril – CD Coria"
-      },
-      {
-       "id": "2627-5-13-cartagena-real-jaen",
-       "t": "Cartagena – Real Jaén"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-13-barakaldo-cf-unionistas-de-salamanca",
-       "t": "Barakaldo CF – Unionistas de Salamanca (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-13-deportivo-fabril-cd-coria",
-       "t": "Deportivo Fabril – CD Coria (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-13-cartagena-real-jaen",
-       "t": "Cartagena – Real Jaén (1ª RFEF)"
       }
      ]
     }
