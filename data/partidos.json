@@ -17174,9 +17174,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-13T08:07:43+01:00",
+  "comprobado": "2026-11-13T08:55:24+01:00",
   "cambio": "2026-11-12T23:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-13T08:55:24+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-13T08:07:43+01:00",
     "nuevos": 0,
@@ -17865,65 +17886,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-12T12:03:31+01:00",
-    "nuevos": 4,
-    "horas": 0,
-    "canales": 6,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Alcorcón – Algeciras CF",
-     "Nuevo partido: SD Huesca – UD Ibiza",
-     "Nuevo partido: Arenas Club – Real Avilés Industrial",
-     "Nuevo partido: UD Ourense – Racing Ferrol"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-5-13-alcorcon-algeciras-cf",
-       "t": "Alcorcón – Algeciras CF"
-      },
-      {
-       "id": "2627-5-13-sd-huesca-ud-ibiza",
-       "t": "SD Huesca – UD Ibiza"
-      },
-      {
-       "id": "2627-5-13-arenas-club-real-aviles-industrial",
-       "t": "Arenas Club – Real Avilés Industrial"
-      },
-      {
-       "id": "2627-5-13-ud-ourense-racing-ferrol",
-       "t": "UD Ourense – Racing Ferrol"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-13-alcorcon-algeciras-cf",
-       "t": "Alcorcón – Algeciras CF (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-13-sd-huesca-ud-ibiza",
-       "t": "SD Huesca – UD Ibiza (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-13-arenas-club-real-aviles-industrial",
-       "t": "Arenas Club – Real Avilés Industrial (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-13-ud-ourense-racing-ferrol",
-       "t": "UD Ourense – Racing Ferrol (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
