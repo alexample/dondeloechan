@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-13T21:07:42+01:00",
+ "actualizado": "2026-11-13T22:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16401,7 +16401,7 @@
   "5": {
    "grupos": {
     "Grupo 1": {
-     "tras": "Jornada 11",
+     "tras": "Jornada 12",
      "filas": [
       [
        "cd-lugo",
@@ -16435,6 +16435,17 @@
        11,
        18,
        "Pontevedra"
+      ],
+      [
+       "cp-cacereno",
+       12,
+       5,
+       3,
+       4,
+       11,
+       10,
+       18,
+       "CP Cacereño"
       ],
       [
        "real-aviles-industrial",
@@ -16503,24 +16514,13 @@
        "Bilbao Athletic"
       ],
       [
-       "cp-cacereno",
-       11,
-       4,
-       3,
-       4,
-       9,
-       9,
-       15,
-       "CP Cacereño"
-      ],
-      [
        "ponferradina",
-       11,
+       12,
        3,
        6,
-       2,
-       7,
-       7,
+       3,
+       8,
+       9,
        15,
        "Ponferradina"
       ],
@@ -17255,9 +17255,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-13T21:07:42+01:00",
-  "cambio": "2026-11-13T21:07:42+01:00",
+  "comprobado": "2026-11-13T22:07:43+01:00",
+  "cambio": "2026-11-13T22:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-13T22:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-13T21:07:42+01:00",
     "nuevos": 2,
@@ -17767,27 +17790,6 @@
    },
    {
     "hora": "2026-11-13T01:20:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-13T01:07:42+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
