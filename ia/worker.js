@@ -589,16 +589,17 @@ async function canteraIA(request, env, origen) {
 // Se guarda en KV por el contenido exacto de los datos: la misma previa sirve para todos los usuarios y solo se
 // vuelve a generar cuando cambian los datos (un resultado nuevo). Coste aproximado: ~85 neuronas por previa nueva con el modelo grande (~15 con el pequeño).
 const SISTEMA_PREVIA =
-  "Eres el analista de «Cantera Madrid», una app de fútbol base (infantil, cadete y juvenil) de la Comunidad de Madrid. " +
-  "Escribe la PREVIA del partido en español de España, en tono cercano y positivo, para familias y entrenadores.\n" +
+  "Eres comentarista de fútbol base de la Comunidad de Madrid y escribes la PREVIA de un partido para la app «Cantera Madrid». " +
+  "Tono: el de un comentarista profesional de radio o de un diario deportivo, sobrio y con criterio. Lenguaje futbolístico " +
+  "(«llega en buena dinámica», «se muestra sólido como local», «le está costando sumar lejos de casa», «encaja con facilidad»). " +
+  "Nada de exclamaciones, emoticonos ni frases de animación tipo «¡vamos!» o «¡gran día!». Español de España.\n" +
   "Reglas:\n" +
   "- Usa SOLO los números de los DATOS. No inventes lesiones, jugadores, alineaciones ni nada que no esté.\n" +
   "- Copia las rachas y los resultados tal cual vienen (victoria, empate, derrota); no conviertas empates en derrotas ni al revés.\n" +
+  "- Compara al LOCAL en casa con el VISITANTE fuera: puntos, goles a favor y en contra por partido. Comenta la tendencia, la evolución en la tabla y la regularidad.\n" +
+  "- Cierra con las claves del partido, sin dar un resultado. Son menores: análisis respetuoso, sin críticas duras.\n" +
   "- No digas «hoy» ni des fechas: no las conoces.\n" +
-  "- Compara al equipo LOCAL jugando en casa con el VISITANTE jugando fuera: puntos, goles a favor y en contra por partido.\n" +
-  "- Comenta la tendencia (últimos partidos y evolución en la tabla) y la regularidad de cada uno.\n" +
-  "- Termina con una frase sobre cómo puede ir el partido (claves, no un resultado exacto). Son niños: nada de críticas duras.\n" +
-  "- Formato: 4 a 6 frases cortas o una lista con «- ». Puedes usar **negritas**. Sin tablas ni títulos.";
+  "- Formato: 2 párrafos cortos (5 a 7 frases en total). Puedes usar **negritas** en los nombres de los equipos. Sin listas, tablas ni títulos.";
 
 async function canteraPrevia(request, env, origen) {
   if (request.method !== "POST") return json({ error: "Usa POST." }, 405, origen);
@@ -610,7 +611,7 @@ async function canteraPrevia(request, env, origen) {
   if (datos.length < 50) return json({ error: "Faltan datos del partido." }, 400, origen);
   const hash = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(datos)))]
     .map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 40);
-  const clave = "cmprevia:" + hash;
+  const clave = "cmprevia:v2:" + hash;  // v2: tono de comentarista (cambiar la versión si cambia SISTEMA_PREVIA)
   if (env.VALORA) {
     try { const ya = await env.VALORA.get(clave); if (ya) return json({ respuesta: ya, guardada: true }, 200, origen); } catch { }
   }
