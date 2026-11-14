@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T22:28:47+01:00",
+ "actualizado": "2026-11-14T23:07:41+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14982,7 +14982,41 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2802,
+     "j": "Alberto Reina",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3522,
+     "j": "Abel Ruiz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "64'",
+     "seg": 3798,
+     "j": "Oleksandr Pishchur",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-real-jaen-real-zaragoza",
@@ -15002,7 +15036,50 @@
    "provisional": false,
    "localAbbr": "JAE",
    "visitanteAbbr": "ZAR",
-   "etiqueta": "Grupo 2"
+   "etiqueta": "Grupo 2",
+   "marcador": [
+    0,
+    4
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "45+3'",
+     "seg": 2718,
+     "j": "Jaume Jardí",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3240,
+     "j": "Marcos Cuenca",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "78'",
+     "seg": 4680,
+     "j": "Pau Sans",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4800,
+     "j": "Óscar Ureña",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-atletico-madrileno-cd-teruel",
@@ -17964,9 +18041,42 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T22:28:47+01:00",
-  "cambio": "2026-11-14T22:28:47+01:00",
+  "comprobado": "2026-11-14T23:07:41+01:00",
+  "cambio": "2026-11-14T23:07:41+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T23:07:41+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 2,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Real Oviedo 1-2 Girona FC",
+     "Resultado: Real Jaén 0-4 Real Zaragoza"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-2-14-ovi-gir",
+       "t": "Real Oviedo 1-2 Girona FC"
+      },
+      {
+       "id": "2627-5-12-real-jaen-real-zaragoza",
+       "t": "Real Jaén 0-4 Real Zaragoza"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-14T22:28:47+01:00",
     "nuevos": 0,
@@ -18579,27 +18689,6 @@
    },
    {
     "hora": "2026-11-14T04:07:42+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T03:07:42+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
