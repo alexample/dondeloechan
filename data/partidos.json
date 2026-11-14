@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T18:05:25+01:00",
+ "actualizado": "2026-11-14T18:07:50+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14345,7 +14345,54 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "goles": [
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 404,
+     "j": "Àlex Corredera",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2784,
+     "j": "Alex Lebarbier",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3307,
+     "j": "Daniel Díaz",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3412,
+     "j": "Aimar Duñabeitia",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "80'",
+     "seg": 4769,
+     "j": "Àlex Corredera",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-rayo-majadahonda-aguilas-fc",
@@ -16786,7 +16833,7 @@
      ]
     },
     "Grupo 2": {
-     "tras": "Jornada 12",
+     "tras": "Jornada 11",
      "filas": [
       [
        "real-zaragoza",
@@ -16822,17 +16869,6 @@
        "Real Murcia"
       ],
       [
-       "real-madrid-castilla",
-       12,
-       5,
-       4,
-       3,
-       16,
-       13,
-       19,
-       "Real Madrid Castilla"
-      ],
-      [
        "real-jaen",
        11,
        5,
@@ -16842,6 +16878,17 @@
        15,
        19,
        "Real Jaén"
+      ],
+      [
+       "real-madrid-castilla",
+       12,
+       5,
+       4,
+       3,
+       16,
+       13,
+       19,
+       "Real Madrid Castilla"
       ],
       [
        "alcorcon",
@@ -17415,9 +17462,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T18:05:25+01:00",
-  "cambio": "2026-11-14T18:05:25+01:00",
+  "comprobado": "2026-11-14T18:07:50+01:00",
+  "cambio": "2026-11-14T18:07:50+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T18:07:50+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-14T18:05:25+01:00",
     "nuevos": 0,
@@ -17939,29 +18009,6 @@
        "t": "Salamanca UDS 0-5 Celta de Vigo"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-13T22:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-13-ath-esp",
