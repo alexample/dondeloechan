@@ -644,11 +644,13 @@ const AEMET = "https://opendata.aemet.es/opendata/api";
 // AEMET a veces sirve UTF-8 y a veces ISO-8859-15: se prueba UTF-8 y, si sale roto, Windows-1252
 const textoAemet = buf => { const u = new TextDecoder("utf-8").decode(buf); return u.includes("\uFFFD") ? new TextDecoder("windows-1252").decode(buf) : u; };
 async function aemetJSON(ruta, env) {
-  const r1 = await fetch(AEMET + ruta, { headers: { "api_key": env.AEMET_KEY, "Accept": "application/json" } });
+  // La clave limpia: sin espacios, saltos de línea ni comillas que se cuelan al pegarla
+  const key = String(env.AEMET_KEY || "").replace(/^\s*["']?|["']?\s*$/g, "").replace(/\s+/g, "");
+  const r1 = await fetch(AEMET + ruta + (ruta.includes("?") ? "&" : "?") + "api_key=" + encodeURIComponent(key), { headers: { "api_key": key, "Accept": "application/json" } });
   const t1 = textoAemet(await r1.arrayBuffer());
   const j1 = JSON.parse(t1);
   if (Array.isArray(j1)) return j1;
-  if (!j1.datos) throw new Error("AEMET: " + (j1.descripcion || j1.estado));
+  if (!j1.datos) throw new Error("AEMET " + (j1.estado || r1.status) + ": " + (j1.descripcion || "sin datos") + " (clave de " + key.length + " caracteres)");
   const r2 = await fetch(j1.datos);
   return JSON.parse(textoAemet(await r2.arrayBuffer()));
 }
