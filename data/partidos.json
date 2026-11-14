@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T18:07:50+01:00",
+ "actualizado": "2026-11-14T19:07:45+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14392,7 +14392,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-5-12-rayo-majadahonda-aguilas-fc",
@@ -14411,7 +14416,23 @@
    "localAbbr": "MAJ",
    "visitanteAbbr": "AGU",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4140,
+     "j": "Josema Raigal",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-real-union-cultural-leonesa",
@@ -14431,7 +14452,32 @@
    "provisional": false,
    "localAbbr": "RUN",
    "visitanteAbbr": "CUL",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2820,
+     "j": "Aitor Galarza",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "83'",
+     "seg": 4980,
+     "j": "Antxon Jaso",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-ud-ourense-merida",
@@ -14450,7 +14496,50 @@
    "localAbbr": "OUR",
    "visitanteAbbr": "MER",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    1,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "37'",
+     "seg": 2220,
+     "j": "Sigurður Hallsson",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2460,
+     "j": "Daniel Sandoval",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45+1'",
+     "seg": 2706,
+     "j": "Lacine Koné",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "79'",
+     "seg": 4740,
+     "j": "Diego Tejón",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-14-alm-and",
@@ -15771,6 +15860,34 @@
     "daznll"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j5-bod-glimt-lask",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-24T18:45:00+01:00",
+   "local": "Bodø/Glimt",
+   "localId": "bod-glimt",
+   "visitante": "LASK",
+   "visitanteId": "lask",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "BOD",
+   "visitanteAbbr": "LAS"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-galatasaray-aston-villa",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-24T18:45:00+01:00",
+   "local": "Galatasaray",
+   "localId": "galatasaray",
+   "visitante": "Aston Villa",
+   "visitanteId": "aston-villa",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "GAL",
+   "visitanteAbbr": "AVL"
   }
  ],
  "clasificacion": {
@@ -15983,6 +16100,16 @@
    "tras": "Jornada 14",
    "filas": [
     [
+     "alm",
+     14,
+     10,
+     2,
+     2,
+     25,
+     10,
+     32
+    ],
+    [
      "cas",
      13,
      9,
@@ -15991,16 +16118,6 @@
      24,
      5,
      30
-    ],
-    [
-     "alm",
-     13,
-     9,
-     2,
-     2,
-     24,
-     10,
-     29
     ],
     [
      "bur",
@@ -16044,12 +16161,22 @@
     ],
     [
      "mll",
-     12,
+     13,
      6,
      4,
-     2,
+     3,
      15,
+     8,
+     22
+    ],
+    [
+     "cor",
+     14,
      7,
+     1,
+     6,
+     23,
+     22,
      22
     ],
     [
@@ -16081,16 +16208,6 @@
      19,
      21,
      20
-    ],
-    [
-     "cor",
-     13,
-     6,
-     1,
-     6,
-     22,
-     22,
-     19
     ],
     [
      "vll",
@@ -16164,12 +16281,12 @@
     ],
     [
      "and",
-     12,
+     13,
      3,
      2,
-     7,
+     8,
      17,
-     22,
+     23,
      11
     ],
     [
@@ -16608,7 +16725,7 @@
   "5": {
    "grupos": {
     "Grupo 1": {
-     "tras": "Jornada 11",
+     "tras": "Jornada 12",
      "filas": [
       [
        "cd-lugo",
@@ -16631,6 +16748,17 @@
        14,
        23,
        "UD Logroñés"
+      ],
+      [
+       "merida",
+       12,
+       6,
+       1,
+       5,
+       21,
+       15,
+       19,
+       "Mérida"
       ],
       [
        "pontevedra",
@@ -16699,17 +16827,6 @@
        "CD Extremadura"
       ],
       [
-       "merida",
-       11,
-       5,
-       1,
-       5,
-       18,
-       14,
-       16,
-       "Mérida"
-      ],
-      [
        "bilbao-athletic",
        12,
        4,
@@ -16719,6 +16836,17 @@
        15,
        16,
        "Bilbao Athletic"
+      ],
+      [
+       "real-union",
+       12,
+       4,
+       4,
+       4,
+       20,
+       19,
+       16,
+       "Real Unión"
       ],
       [
        "ponferradina",
@@ -16743,24 +16871,13 @@
        "Barakaldo CF"
       ],
       [
-       "real-union",
-       11,
-       3,
-       4,
-       4,
-       19,
-       19,
-       13,
-       "Real Unión"
-      ],
-      [
        "cultural-leonesa",
-       11,
+       12,
        3,
        4,
-       4,
+       5,
        11,
-       11,
+       12,
        13,
        "Cultural Leonesa"
       ],
@@ -16821,12 +16938,12 @@
       ],
       [
        "ud-ourense",
-       11,
+       12,
        2,
        2,
-       7,
-       4,
-       16,
+       8,
+       5,
+       19,
        8,
        "UD Ourense"
       ]
@@ -16990,6 +17107,17 @@
        "UE Sant Andreu"
       ],
       [
+       "aguilas-fc",
+       12,
+       2,
+       6,
+       4,
+       11,
+       16,
+       12,
+       "Águilas FC"
+      ],
+      [
        "atletico-madrileno",
        11,
        2,
@@ -17012,17 +17140,6 @@
        "CE Europa"
       ],
       [
-       "aguilas-fc",
-       11,
-       1,
-       6,
-       4,
-       10,
-       16,
-       9,
-       "Águilas FC"
-      ],
-      [
        "juventud-torremolinos",
        11,
        1,
@@ -17035,12 +17152,12 @@
       ],
       [
        "rayo-majadahonda",
-       11,
+       12,
        2,
        1,
+       9,
        8,
-       8,
-       15,
+       16,
        7,
        "Rayo Majadahonda"
       ],
@@ -17462,9 +17579,66 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T18:07:50+01:00",
-  "cambio": "2026-11-14T18:07:50+01:00",
+  "comprobado": "2026-11-14T19:07:45+01:00",
+  "cambio": "2026-11-14T19:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T19:07:45+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 4,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Galatasaray – Aston Villa",
+     "Nuevo partido: Bodø/Glimt – LASK",
+     "Resultado: Real Sociedad B 2-2 Real Sporting",
+     "Resultado: UD Ourense 1-3 Mérida",
+     "Resultado: Real Unión 1-0 Cultural Leonesa",
+     "Resultado: Rayo Majadahonda 0-1 Águilas FC"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-2-14-rsb-spo",
+       "t": "Real Sociedad B 2-2 Real Sporting"
+      },
+      {
+       "id": "2627-5-12-ud-ourense-merida",
+       "t": "UD Ourense 1-3 Mérida"
+      },
+      {
+       "id": "2627-5-12-real-union-cultural-leonesa",
+       "t": "Real Unión 1-0 Cultural Leonesa"
+      },
+      {
+       "id": "2627-5-12-rayo-majadahonda-aguilas-fc",
+       "t": "Rayo Majadahonda 0-1 Águilas FC"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-4-fase-liga-j5-galatasaray-aston-villa",
+       "t": "Galatasaray – Aston Villa (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-bod-glimt-lask",
+       "t": "Bodø/Glimt – LASK (Champions)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-14T18:07:50+01:00",
     "nuevos": 0,
@@ -17972,41 +18146,6 @@
       {
        "id": "2627-5-12-gimnastic-de-tarragona-real-madrid-castilla",
        "t": "Gimnàstic de Tarragona 0-1 Real Madrid Castilla"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-13T23:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 2,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: CD Leganés 3-1 Burgos CF",
-     "Resultado: Salamanca UDS 0-5 Celta de Vigo"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-14-leg-bur",
-       "t": "CD Leganés 3-1 Burgos CF"
-      },
-      {
-       "id": "2627-3-primera-ronda-salamanca-uds-cel",
-       "t": "Salamanca UDS 0-5 Celta de Vigo"
       }
      ],
      "canales": [
