@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T14:07:41+01:00",
+ "actualizado": "2026-11-14T15:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14293,7 +14293,13 @@
    "provisional": false,
    "localAbbr": "BIL",
    "visitanteAbbr": "RFE",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-2-14-vll-cas",
@@ -17393,9 +17399,37 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T14:07:41+01:00",
-  "cambio": "2026-11-14T14:07:41+01:00",
+  "comprobado": "2026-11-14T15:07:43+01:00",
+  "cambio": "2026-11-14T15:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T15:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [],
+    "detalle": [
+     "Resultado: Bilbao Athletic 0-0 Racing Ferrol"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-12-bilbao-athletic-racing-ferrol",
+       "t": "Bilbao Athletic 0-0 Racing Ferrol"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-14T14:07:41+01:00",
     "nuevos": 0,
@@ -17947,27 +17981,6 @@
       {
        "id": "2627-3-primera-ronda-utebo-sab",
        "t": "Utebo – CE Sabadell · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-13T18:07:48+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
       }
      ],
      "horas": [],
