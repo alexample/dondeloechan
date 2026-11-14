@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T20:07:42+01:00",
+ "actualizado": "2026-11-14T21:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14552,7 +14552,50 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "26'",
+     "seg": 1503,
+     "j": "Sergio Arribas",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2284,
+     "j": "Miguel de la Fuente",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "66'",
+     "seg": 3917,
+     "j": "Hugo López",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'",
+     "seg": 5383,
+     "j": "Diego Alende",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-14-mll-cor",
@@ -14568,7 +14611,68 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    3,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "3'",
+     "seg": 125,
+     "j": "Adnane Ghailan",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3083,
+     "j": "Salim El Jebari",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3771,
+     "j": "Sergi Darder",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4471,
+     "j": "Adnane Ghailan",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "83'",
+     "seg": 4963,
+     "j": "Adam Buksa",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+4'",
+     "seg": 5400,
+     "j": "Sergi Darder",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-ce-europa-ue-sant-andreu",
@@ -14594,7 +14698,32 @@
    "localAbbr": "EUR",
    "visitanteAbbr": "SAN",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Esport3; completo, en FANPLAY TV y FootballClub."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Esport3; completo, en FANPLAY TV y FootballClub.",
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "65'",
+     "seg": 3900,
+     "j": "Alexis García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "84'",
+     "seg": 5040,
+     "j": "Alexis García",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-cd-coria-unionistas-de-salamanca",
@@ -14613,7 +14742,68 @@
    "localAbbr": "COR",
    "visitanteAbbr": "UNI",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    4,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "6'",
+     "seg": 360,
+     "j": "Alex Toper",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1920,
+     "j": "Iván Ramos",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "65'",
+     "seg": 3900,
+     "j": "Pau Ferrer",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "72'",
+     "seg": 4320,
+     "j": "Diego Morcillo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4500,
+     "j": "Rafa Núñez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5340,
+     "j": "Álvaro Gómez",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-deportivo-fabril-barakaldo-cf",
@@ -14639,7 +14829,50 @@
    "localAbbr": "FAB",
    "visitanteAbbr": "BAR",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub.",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "13'",
+     "seg": 780,
+     "j": "Kevin Sánchez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "22'",
+     "seg": 1320,
+     "j": "Markel Ruiz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4140,
+     "j": "Carlos Mattheus",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5340,
+     "j": "Noé",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-hercules-villarreal-b",
@@ -14659,7 +14892,50 @@
    "provisional": false,
    "localAbbr": "HER",
    "visitanteAbbr": "VIB",
-   "etiqueta": "Grupo 2"
+   "etiqueta": "Grupo 2",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "45+5'",
+     "seg": 2730,
+     "j": "Nizar El Jmili",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "66'",
+     "seg": 3960,
+     "j": "Víctor Narro",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4080,
+     "j": "Nico Barattucci",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+6'",
+     "seg": 5436,
+     "j": "Alberto Toril",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-juventud-torremolinos-sd-huesca",
@@ -14678,7 +14954,23 @@
    "localAbbr": "TOR",
    "visitanteAbbr": "HUE",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "84'",
+     "seg": 5040,
+     "j": "<TBD>",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-14-ovi-gir",
@@ -15886,6 +16178,105 @@
    "provisional": true,
    "localAbbr": "GAL",
    "visitanteAbbr": "AVL"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-arsenal-borussia-dortmund",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-24T21:00:00+01:00",
+   "local": "Arsenal",
+   "localId": "arsenal",
+   "visitante": "Borussia Dortmund",
+   "visitanteId": "borussia-dortmund",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "ARS",
+   "visitanteAbbr": "BVB"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-como-aek-atenas",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-24T21:00:00+01:00",
+   "local": "Como",
+   "localId": "como",
+   "visitante": "AEK Atenas",
+   "visitanteId": "aek-atenas",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "COM",
+   "visitanteAbbr": "AEK"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-feyenoord-porto",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-24T21:00:00+01:00",
+   "local": "Feyenoord",
+   "localId": "feyenoord",
+   "visitante": "Porto",
+   "visitanteId": "porto",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "FEY",
+   "visitanteAbbr": "POR"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-manchester-city-napoli",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-24T21:00:00+01:00",
+   "local": "Manchester City",
+   "localId": "manchester-city",
+   "visitante": "Napoli",
+   "visitanteId": "napoli",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "MCI",
+   "visitanteAbbr": "NAP"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-rb-leipzig-rc-lens",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-24T21:00:00+01:00",
+   "local": "RB Leipzig",
+   "localId": "rb-leipzig",
+   "visitante": "RC Lens",
+   "visitanteId": "rc-lens",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "RBL",
+   "visitanteAbbr": "LEN"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-rma-psv",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-24T21:00:00+01:00",
+   "local": "Real Madrid",
+   "localId": "rma",
+   "visitante": "PSV",
+   "visitanteId": "psv",
+   "canales": [
+    "mlc",
+    "mlcmulti",
+    "orange1"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-4-fase-liga-j5-slovan-bratislava-bet",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-24T21:00:00+01:00",
+   "local": "Slovan Bratislava",
+   "localId": "slovan-bratislava",
+   "visitante": "Real Betis",
+   "visitanteId": "bet",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "SLO"
   }
  ],
  "clasificacion": {
@@ -16128,6 +16519,16 @@
      24
     ],
     [
+     "mll",
+     13,
+     6,
+     5,
+     2,
+     18,
+     10,
+     23
+    ],
+    [
      "eib",
      12,
      7,
@@ -16158,44 +16559,34 @@
      23
     ],
     [
-     "mll",
-     13,
+     "gir",
+     14,
      6,
      4,
-     3,
+     4,
+     22,
+     12,
+     22
+    ],
+    [
+     "ovi",
+     14,
+     6,
+     4,
+     4,
+     19,
      16,
-     10,
      22
     ],
     [
      "cor",
      14,
-     7,
-     1,
+     6,
+     2,
      6,
      25,
-     23,
-     22
-    ],
-    [
-     "gir",
-     13,
-     6,
-     3,
-     4,
-     22,
-     12,
-     21
-    ],
-    [
-     "ovi",
-     13,
-     6,
-     3,
-     4,
-     19,
-     16,
-     21
+     25,
+     20
     ],
     [
      "lpa",
@@ -16948,7 +17339,7 @@
      ]
     },
     "Grupo 2": {
-     "tras": "Jornada 12",
+     "tras": "Jornada 11",
      "filas": [
       [
        "real-zaragoza",
@@ -16963,13 +17354,13 @@
       ],
       [
        "villarreal-b",
-       11,
+       12,
        6,
-       4,
+       5,
        1,
-       24,
-       13,
-       22,
+       26,
+       15,
+       23,
        "Villarreal B"
       ],
       [
@@ -16984,17 +17375,6 @@
        "Real Murcia"
       ],
       [
-       "real-madrid-castilla",
-       12,
-       5,
-       4,
-       3,
-       16,
-       13,
-       19,
-       "Real Madrid Castilla"
-      ],
-      [
        "real-jaen",
        11,
        5,
@@ -17004,6 +17384,17 @@
        15,
        19,
        "Real Jaén"
+      ],
+      [
+       "real-madrid-castilla",
+       12,
+       5,
+       4,
+       3,
+       16,
+       13,
+       19,
+       "Real Madrid Castilla"
       ],
       [
        "alcorcon",
@@ -17029,13 +17420,13 @@
       ],
       [
        "hercules",
-       11,
-       5,
-       2,
-       4,
        12,
-       13,
-       17,
+       5,
+       3,
+       4,
+       14,
+       15,
+       18,
        "Hércules"
       ],
       [
@@ -17050,13 +17441,24 @@
        "Cartagena"
       ],
       [
+       "ue-sant-andreu",
+       12,
+       4,
+       4,
+       4,
+       16,
+       14,
+       16,
+       "UE Sant Andreu"
+      ],
+      [
        "sd-huesca",
-       11,
+       12,
        3,
        6,
-       2,
+       3,
        13,
-       13,
+       14,
        15,
        "SD Huesca"
       ],
@@ -17094,17 +17496,6 @@
        "Algeciras CF"
       ],
       [
-       "ue-sant-andreu",
-       11,
-       3,
-       4,
-       4,
-       14,
-       14,
-       13,
-       "UE Sant Andreu"
-      ],
-      [
        "aguilas-fc",
        12,
        2,
@@ -17127,26 +17518,26 @@
        "Atlético Madrileño"
       ],
       [
-       "ce-europa",
+       "juventud-torremolinos",
+       12,
+       2,
+       5,
+       5,
+       13,
+       21,
        11,
-       3,
-       1,
-       7,
-       9,
-       20,
-       10,
-       "CE Europa"
+       "Juventud Torremolinos"
       ],
       [
-       "juventud-torremolinos",
-       11,
-       1,
-       5,
-       5,
+       "ce-europa",
        12,
-       21,
+       3,
+       1,
        8,
-       "Juventud Torremolinos"
+       9,
+       22,
+       10,
+       "CE Europa"
       ],
       [
        "rayo-majadahonda",
@@ -17577,9 +17968,110 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T20:07:42+01:00",
-  "cambio": "2026-11-14T20:07:42+01:00",
+  "comprobado": "2026-11-14T21:07:42+01:00",
+  "cambio": "2026-11-14T21:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T21:07:42+01:00",
+    "nuevos": 7,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 7,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Arsenal – Borussia Dortmund",
+     "Nuevo partido: Manchester City – Napoli",
+     "Nuevo partido: Real Madrid – PSV",
+     "Nuevo partido: Feyenoord – Porto",
+     "Nuevo partido: RB Leipzig – RC Lens",
+     "Nuevo partido: Slovan Bratislava – Real Betis",
+     "Nuevo partido: Como – AEK Atenas",
+     "Resultado: UD Almería 2-1 FC Andorra",
+     "Resultado: RCD Mallorca 3-3 Córdoba CF",
+     "Resultado: CE Europa 0-2 UE Sant Andreu",
+     "Resultado: Hércules 2-2 Villarreal B",
+     "Resultado: Juventud Torremolinos 1-0 SD Huesca",
+     "Resultado: CD Coria 4-2 Unionistas de Salamanca",
+     "Resultado: Deportivo Fabril 2-2 Barakaldo CF"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-2-14-alm-and",
+       "t": "UD Almería 2-1 FC Andorra"
+      },
+      {
+       "id": "2627-2-14-mll-cor",
+       "t": "RCD Mallorca 3-3 Córdoba CF"
+      },
+      {
+       "id": "2627-5-12-ce-europa-ue-sant-andreu",
+       "t": "CE Europa 0-2 UE Sant Andreu"
+      },
+      {
+       "id": "2627-5-12-hercules-villarreal-b",
+       "t": "Hércules 2-2 Villarreal B"
+      },
+      {
+       "id": "2627-5-12-juventud-torremolinos-sd-huesca",
+       "t": "Juventud Torremolinos 1-0 SD Huesca"
+      },
+      {
+       "id": "2627-5-12-cd-coria-unionistas-de-salamanca",
+       "t": "CD Coria 4-2 Unionistas de Salamanca"
+      },
+      {
+       "id": "2627-5-12-deportivo-fabril-barakaldo-cf",
+       "t": "Deportivo Fabril 2-2 Barakaldo CF"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-rma-psv",
+       "t": "Real Madrid – PSV"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-4-fase-liga-j5-arsenal-borussia-dortmund",
+       "t": "Arsenal – Borussia Dortmund (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-manchester-city-napoli",
+       "t": "Manchester City – Napoli (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-rma-psv",
+       "t": "Real Madrid – PSV (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-feyenoord-porto",
+       "t": "Feyenoord – Porto (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-rb-leipzig-rc-lens",
+       "t": "RB Leipzig – RC Lens (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-slovan-bratislava-bet",
+       "t": "Slovan Bratislava – Real Betis (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-como-aek-atenas",
+       "t": "Como – AEK Atenas (Champions)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-14T20:07:42+01:00",
     "nuevos": 0,
@@ -18115,29 +18607,6 @@
     "canales": 2,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T00:07:48+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
     "detalle": [],
     "avisos": 0,
     "items": {
