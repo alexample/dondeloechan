@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T22:07:44+01:00",
+ "actualizado": "2026-11-14T22:28:47+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16505,6 +16505,16 @@
      30
     ],
     [
+     "gir",
+     14,
+     7,
+     3,
+     4,
+     24,
+     13,
+     24
+    ],
+    [
      "bur",
      14,
      7,
@@ -16555,24 +16565,14 @@
      23
     ],
     [
-     "gir",
-     14,
-     6,
-     4,
-     4,
-     22,
-     12,
-     22
-    ],
-    [
      "ovi",
      14,
      6,
-     4,
-     4,
-     19,
-     16,
-     22
+     3,
+     5,
+     20,
+     18,
+     21
     ],
     [
      "cor",
@@ -17964,9 +17964,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T22:07:44+01:00",
-  "cambio": "2026-11-14T22:07:44+01:00",
+  "comprobado": "2026-11-14T22:28:47+01:00",
+  "cambio": "2026-11-14T22:28:47+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T22:28:47+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-14T22:07:44+01:00",
     "nuevos": 0,
@@ -18582,29 +18605,6 @@
     "canales": 2,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T02:07:54+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
     "detalle": [],
     "avisos": 0,
     "items": {
