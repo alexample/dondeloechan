@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T21:07:42+01:00",
+ "actualizado": "2026-11-14T22:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14698,7 +14698,6 @@
    "localAbbr": "EUR",
    "visitanteAbbr": "SAN",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Esport3; completo, en FANPLAY TV y FootballClub.",
    "marcador": [
     0,
     2
@@ -14742,7 +14741,6 @@
    "localAbbr": "COR",
    "visitanteAbbr": "UNI",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     4,
     2
@@ -14829,7 +14827,6 @@
    "localAbbr": "FAB",
    "visitanteAbbr": "BAR",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub.",
    "marcador": [
     2,
     2
@@ -14954,7 +14951,6 @@
    "localAbbr": "TOR",
    "visitanteAbbr": "HUE",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     1,
     0
@@ -17238,6 +17234,28 @@
        "Real Unión"
       ],
       [
+       "barakaldo-cf",
+       12,
+       3,
+       6,
+       3,
+       12,
+       12,
+       15,
+       "Barakaldo CF"
+      ],
+      [
+       "cd-coria",
+       12,
+       4,
+       3,
+       5,
+       18,
+       19,
+       15,
+       "CD Coria"
+      ],
+      [
        "ponferradina",
        12,
        3,
@@ -17247,17 +17265,6 @@
        9,
        15,
        "Ponferradina"
-      ],
-      [
-       "barakaldo-cf",
-       11,
-       3,
-       5,
-       3,
-       10,
-       10,
-       14,
-       "Barakaldo CF"
       ],
       [
        "cultural-leonesa",
@@ -17272,12 +17279,12 @@
       ],
       [
        "unionistas-de-salamanca",
-       11,
+       12,
        4,
        1,
-       6,
-       13,
-       18,
+       7,
+       15,
+       22,
        13,
        "Unionistas de Salamanca"
       ],
@@ -17293,25 +17300,14 @@
        "Zamora"
       ],
       [
-       "cd-coria",
-       11,
-       3,
-       3,
-       5,
-       14,
-       17,
-       12,
-       "CD Coria"
-      ],
-      [
        "deportivo-fabril",
-       11,
-       3,
-       2,
-       6,
        12,
-       19,
-       11,
+       3,
+       3,
+       6,
+       14,
+       21,
+       12,
        "Deportivo Fabril"
       ],
       [
@@ -17968,9 +17964,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T21:07:42+01:00",
-  "cambio": "2026-11-14T21:07:42+01:00",
+  "comprobado": "2026-11-14T22:07:44+01:00",
+  "cambio": "2026-11-14T22:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T22:07:44+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-14T21:07:42+01:00",
     "nuevos": 7,
@@ -18586,27 +18605,6 @@
     "tablas": [
      "Primera Federación"
     ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T01:07:47+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
     "detalle": [],
     "avisos": 0,
     "items": {
