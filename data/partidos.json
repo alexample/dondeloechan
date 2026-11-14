@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T15:07:43+01:00",
+ "actualizado": "2026-11-14T16:07:41+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14314,7 +14314,23 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 3991,
+     "j": "Adam Jakobsen",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-14-rsb-spo",
@@ -15920,6 +15936,16 @@
    "tras": "Jornada 14",
    "filas": [
     [
+     "cas",
+     13,
+     9,
+     3,
+     1,
+     24,
+     5,
+     30
+    ],
+    [
      "alm",
      13,
      9,
@@ -15928,16 +15954,6 @@
      24,
      10,
      29
-    ],
-    [
-     "cas",
-     13,
-     8,
-     4,
-     1,
-     23,
-     5,
-     28
     ],
     [
      "bur",
@@ -16020,16 +16036,6 @@
      20
     ],
     [
-     "vll",
-     14,
-     5,
-     4,
-     5,
-     22,
-     20,
-     19
-    ],
-    [
      "cor",
      13,
      6,
@@ -16038,6 +16044,16 @@
      22,
      22,
      19
+    ],
+    [
+     "vll",
+     14,
+     5,
+     3,
+     6,
+     22,
+     21,
+     18
     ],
     [
      "sab",
@@ -16545,7 +16561,7 @@
   "5": {
    "grupos": {
     "Grupo 1": {
-     "tras": "Jornada 12",
+     "tras": "Jornada 11",
      "filas": [
       [
        "cd-lugo",
@@ -16592,6 +16608,17 @@
        "CP Cacereño"
       ],
       [
+       "racing-ferrol",
+       12,
+       5,
+       3,
+       4,
+       10,
+       9,
+       18,
+       "Racing Ferrol"
+      ],
+      [
        "real-aviles-industrial",
        11,
        5,
@@ -16612,17 +16639,6 @@
        12,
        17,
        "Mirandés"
-      ],
-      [
-       "racing-ferrol",
-       11,
-       5,
-       2,
-       4,
-       10,
-       9,
-       17,
-       "Racing Ferrol"
       ],
       [
        "cd-extremadura",
@@ -16648,13 +16664,13 @@
       ],
       [
        "bilbao-athletic",
-       11,
+       12,
        4,
-       3,
+       4,
        4,
        17,
        15,
-       15,
+       16,
        "Bilbao Athletic"
       ],
       [
@@ -17399,9 +17415,40 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T15:07:43+01:00",
-  "cambio": "2026-11-14T15:07:43+01:00",
+  "comprobado": "2026-11-14T16:07:41+01:00",
+  "cambio": "2026-11-14T16:07:41+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T16:07:41+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Resultado: Real Valladolid 0-1 CD Castellón"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-2-14-vll-cas",
+       "t": "Real Valladolid 0-1 CD Castellón"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-14T15:07:43+01:00",
     "nuevos": 0,
@@ -17954,33 +18001,6 @@
       {
        "id": "2627-3-primera-ronda-cd-badajoz-ten",
        "t": "CD Badajoz – Tenerife · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-13T19:07:45+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: Utebo – CE Sabadell"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-3-primera-ronda-utebo-sab",
-       "t": "Utebo – CE Sabadell · confirmado"
       }
      ],
      "horas": [],
