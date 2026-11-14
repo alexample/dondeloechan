@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T17:07:42+01:00",
+ "actualizado": "2026-11-14T18:05:25+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15956,16 +15956,6 @@
      29
     ],
     [
-     "spo",
-     14,
-     8,
-     1,
-     5,
-     15,
-     15,
-     25
-    ],
-    [
      "bur",
      14,
      7,
@@ -15993,6 +15983,16 @@
      3,
      20,
      14,
+     23
+    ],
+    [
+     "spo",
+     14,
+     7,
+     2,
+     5,
+     16,
+     17,
      23
     ],
     [
@@ -16109,11 +16109,11 @@
      "rsb",
      14,
      3,
-     3,
-     8,
-     15,
-     23,
-     12
+     4,
+     7,
+     17,
+     24,
+     13
     ],
     [
      "and",
@@ -17415,9 +17415,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T17:07:42+01:00",
-  "cambio": "2026-11-14T17:07:42+01:00",
+  "comprobado": "2026-11-14T18:05:25+01:00",
+  "cambio": "2026-11-14T18:05:25+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T18:05:25+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-14T17:07:42+01:00",
     "nuevos": 0,
@@ -17947,55 +17970,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-13T21:07:42+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 1,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [
-     "Nuevo partido: Levante UD – Elche CF",
-     "Nuevo partido: AD Ceuta FC – UD Almería",
-     "Resultado: Ponferradina 1-2 CP Cacereño"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-12-ponferradina-cp-cacereno",
-       "t": "Ponferradina 1-2 CP Cacereño"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-1-13-lev-elc",
-       "t": "Levante UD – Elche CF"
-      },
-      {
-       "id": "2627-2-15-ceu-alm",
-       "t": "AD Ceuta FC – UD Almería"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-13-lev-elc",
-       "t": "Levante UD – Elche CF (Primera)"
-      },
-      {
-       "id": "2627-2-15-ceu-alm",
-       "t": "AD Ceuta FC – UD Almería (Segunda)"
-      }
-     ]
     }
    }
   ]
