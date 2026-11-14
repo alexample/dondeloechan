@@ -599,7 +599,7 @@ const SISTEMA_PREVIA =
   "- Compara al LOCAL en casa con el VISITANTE fuera: puntos, goles a favor y en contra por partido. Comenta la tendencia, la evolución en la tabla y la regularidad.\n" +
   "- Cierra con las claves del partido, sin dar un resultado. Son menores: análisis respetuoso, sin críticas duras.\n" +
   "- No digas «hoy» ni des fechas: no las conoces.\n" +
-  "- Formato: 2 párrafos cortos (5 a 7 frases en total). Puedes usar **negritas** en los nombres de los equipos. Sin listas, tablas ni títulos.";
+  "- Formato: 2 párrafos cortos, 5 o 6 frases y como máximo 130 palabras en total. Puedes usar **negritas** en los nombres de los equipos. Sin listas, tablas ni títulos.";
 
 async function canteraPrevia(request, env, origen) {
   if (request.method !== "POST") return json({ error: "Usa POST." }, 405, origen);
@@ -611,7 +611,7 @@ async function canteraPrevia(request, env, origen) {
   if (datos.length < 50) return json({ error: "Faltan datos del partido." }, 400, origen);
   const hash = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(datos)))]
     .map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 40);
-  const clave = "cmprevia:v2:" + hash;  // v2: tono de comentarista (cambiar la versión si cambia SISTEMA_PREVIA)
+  const clave = "cmprevia:v3:" + hash;  // v3: tono de comentarista y texto completo (cambiar la versión si cambia SISTEMA_PREVIA)
   if (env.VALORA) {
     try { const ya = await env.VALORA.get(clave); if (ya) return json({ respuesta: ya, guardada: true }, 200, origen); } catch { }
   }
@@ -623,8 +623,10 @@ async function canteraPrevia(request, env, origen) {
   // si no está disponible o se acaba el cupo, el pequeño.
   for (const modelo of MODELOS) {
     try {
-      const r = await env.AI.run(modelo, { messages: mensajes, max_tokens: 320, temperature: 0.2 });
-      const texto = String((r && (r.response || (r.result && r.result.response))) || "").trim();
+      const r = await env.AI.run(modelo, { messages: mensajes, max_tokens: 700, temperature: 0.2 });
+      let texto = String((r && (r.response || (r.result && r.result.response))) || "").trim();
+      // Si aun así se corta, se queda hasta la última frase completa
+      if (texto && !/[.!?»)]$/.test(texto)) { const i = Math.max(texto.lastIndexOf(". "), texto.lastIndexOf(".\n")); if (i > 80) texto = texto.slice(0, i + 1); }
       if (texto) {
         if (env.VALORA) { try { await env.VALORA.put(clave, texto, { expirationTtl: 14 * 86400 }); } catch { } }
         return json({ respuesta: texto, modelo }, 200, origen);
