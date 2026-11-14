@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T23:07:41+01:00",
+ "actualizado": "2026-11-15T00:07:40+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -17412,17 +17412,17 @@
      ]
     },
     "Grupo 2": {
-     "tras": "Jornada 11",
+     "tras": "Jornada 12",
      "filas": [
       [
        "real-zaragoza",
-       11,
-       7,
+       12,
+       8,
        3,
        1,
-       21,
+       25,
        12,
-       24,
+       27,
        "Real Zaragoza"
       ],
       [
@@ -17448,17 +17448,6 @@
        "Real Murcia"
       ],
       [
-       "real-jaen",
-       11,
-       5,
-       4,
-       2,
-       19,
-       15,
-       19,
-       "Real Jaén"
-      ],
-      [
        "real-madrid-castilla",
        12,
        5,
@@ -17468,6 +17457,17 @@
        13,
        19,
        "Real Madrid Castilla"
+      ],
+      [
+       "real-jaen",
+       12,
+       5,
+       4,
+       3,
+       19,
+       19,
+       19,
+       "Real Jaén"
       ],
       [
        "alcorcon",
@@ -18041,9 +18041,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T23:07:41+01:00",
-  "cambio": "2026-11-14T23:07:41+01:00",
+  "comprobado": "2026-11-15T00:07:40+01:00",
+  "cambio": "2026-11-15T00:07:40+01:00",
   "historial": [
+   {
+    "hora": "2026-11-15T00:07:40+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-14T23:07:41+01:00",
     "nuevos": 0,
@@ -18668,27 +18691,6 @@
    },
    {
     "hora": "2026-11-14T04:13:08+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T04:07:42+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
