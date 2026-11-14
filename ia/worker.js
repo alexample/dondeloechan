@@ -674,7 +674,9 @@ async function canteraTiempo(request, env, origen) {
   const u = new URL(request.url);
   const lat = parseFloat(u.searchParams.get("lat")), lon = parseFloat(u.searchParams.get("lon")), fecha = String(u.searchParams.get("fecha") || "");
   if (!isFinite(lat) || !isFinite(lon) || !/^\d{4}-\d{2}-\d{2}$/.test(fecha)) return json({ error: "Parámetros no válidos." }, 400, origen);
-  if (!env.AEMET_KEY) return json({ error: "Falta la clave de AEMET." }, 503, origen);
+  const claveAemet = Object.entries(env || {}).find(([k, v]) => /aemet/i.test(k) && typeof v === "string" && v.trim());
+  if (!claveAemet) return json({ error: "Falta la clave de AEMET.", variables_vistas: Object.keys(env || {}).filter(k => typeof env[k] === "string" && k !== "GH_TOKEN") }, 503, origen);
+  if (!env.AEMET_KEY) env = Object.assign({}, env, { AEMET_KEY: claveAemet[1] });
   try {
     const munis = await cacheado("aemet-municipios-v1", 30 * 86400, async () =>
       (await aemetJSON("/maestro/municipios", env)).map(m => [String(m.id).replace(/^id/, ""), m.nombre, +m.latitud_dec, +m.longitud_dec]).filter(m => isFinite(m[2]) && isFinite(m[3])));
