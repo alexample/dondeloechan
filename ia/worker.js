@@ -587,12 +587,14 @@ async function canteraIA(request, env, origen) {
 
 // Previa de un partido: la app manda los números de los dos equipos (calculados en el móvil) y la IA escribe la previa.
 // Se guarda en KV por el contenido exacto de los datos: la misma previa sirve para todos los usuarios y solo se
-// vuelve a generar cuando cambian los datos (un resultado nuevo). Coste aproximado: ~15 neuronas por previa nueva.
+// vuelve a generar cuando cambian los datos (un resultado nuevo). Coste aproximado: ~85 neuronas por previa nueva con el modelo grande (~15 con el pequeño).
 const SISTEMA_PREVIA =
   "Eres el analista de «Cantera Madrid», una app de fútbol base (infantil, cadete y juvenil) de la Comunidad de Madrid. " +
   "Escribe la PREVIA del partido en español de España, en tono cercano y positivo, para familias y entrenadores.\n" +
   "Reglas:\n" +
   "- Usa SOLO los números de los DATOS. No inventes lesiones, jugadores, alineaciones ni nada que no esté.\n" +
+  "- Copia las rachas y los resultados tal cual vienen (victoria, empate, derrota); no conviertas empates en derrotas ni al revés.\n" +
+  "- No digas «hoy» ni des fechas: no las conoces.\n" +
   "- Compara al equipo LOCAL jugando en casa con el VISITANTE jugando fuera: puntos, goles a favor y en contra por partido.\n" +
   "- Comenta la tendencia (últimos partidos y evolución en la tabla) y la regularidad de cada uno.\n" +
   "- Termina con una frase sobre cómo puede ir el partido (claves, no un resultado exacto). Son niños: nada de críticas duras.\n" +
@@ -616,9 +618,11 @@ async function canteraPrevia(request, env, origen) {
   if (!permitirEM("cmp:" + ip)) return json({ error: "Demasiadas previas seguidas. Espera un poco." }, 429, origen);
   const mensajes = [{ role: "system", content: SISTEMA_PREVIA }, { role: "user", content: "DATOS:\n" + datos + "\n\nEscribe la previa." }];
   let ultimoError = "";
-  for (const modelo of [...MODELOS].reverse()) {
+  // La previa se guarda y se comparte, así que se usa primero el modelo grande (más fiable con los números);
+  // si no está disponible o se acaba el cupo, el pequeño.
+  for (const modelo of MODELOS) {
     try {
-      const r = await env.AI.run(modelo, { messages: mensajes, max_tokens: 320, temperature: 0.3 });
+      const r = await env.AI.run(modelo, { messages: mensajes, max_tokens: 320, temperature: 0.2 });
       const texto = String((r && (r.response || (r.result && r.result.response))) || "").trim();
       if (texto) {
         if (env.VALORA) { try { await env.VALORA.put(clave, texto, { expirationTtl: 14 * 86400 }); } catch { } }
