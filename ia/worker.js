@@ -585,6 +585,50 @@ async function canteraIA(request, env, origen) {
   return json({ error: "La IA no ha podido responder ahora mismo. Inténtalo en un rato.", detalle: ultimoError.slice(0, 200) }, 502, origen);
 }
 
+// Previa de un partido: la app manda los números de los dos equipos (calculados en el móvil) y la IA escribe la previa.
+// Se guarda en KV por el contenido exacto de los datos: la misma previa sirve para todos los usuarios y solo se
+// vuelve a generar cuando cambian los datos (un resultado nuevo). Coste aproximado: ~15 neuronas por previa nueva.
+const SISTEMA_PREVIA =
+  "Eres el analista de «Cantera Madrid», una app de fútbol base (infantil, cadete y juvenil) de la Comunidad de Madrid. " +
+  "Escribe la PREVIA del partido en español de España, en tono cercano y positivo, para familias y entrenadores.\n" +
+  "Reglas:\n" +
+  "- Usa SOLO los números de los DATOS. No inventes lesiones, jugadores, alineaciones ni nada que no esté.\n" +
+  "- Compara al equipo LOCAL jugando en casa con el VISITANTE jugando fuera: puntos, goles a favor y en contra por partido.\n" +
+  "- Comenta la tendencia (últimos partidos y evolución en la tabla) y la regularidad de cada uno.\n" +
+  "- Termina con una frase sobre cómo puede ir el partido (claves, no un resultado exacto). Son niños: nada de críticas duras.\n" +
+  "- Formato: 4 a 6 frases cortas o una lista con «- ». Puedes usar **negritas**. Sin tablas ni títulos.";
+
+async function canteraPrevia(request, env, origen) {
+  if (request.method !== "POST") return json({ error: "Usa POST." }, 405, origen);
+  if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+  if (!env.AI) return json({ error: "Sin Workers AI." }, 500, origen);
+  let d;
+  try { d = await request.json(); } catch { return json({ error: "Petición no válida." }, 400, origen); }
+  const datos = String(d.datos || "").trim().slice(0, 4000);
+  if (datos.length < 50) return json({ error: "Faltan datos del partido." }, 400, origen);
+  const hash = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(datos)))]
+    .map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 40);
+  const clave = "cmprevia:" + hash;
+  if (env.VALORA) {
+    try { const ya = await env.VALORA.get(clave); if (ya) return json({ respuesta: ya, guardada: true }, 200, origen); } catch { }
+  }
+  const ip = request.headers.get("CF-Connecting-IP") || "anon";
+  if (!permitirEM("cmp:" + ip)) return json({ error: "Demasiadas previas seguidas. Espera un poco." }, 429, origen);
+  const mensajes = [{ role: "system", content: SISTEMA_PREVIA }, { role: "user", content: "DATOS:\n" + datos + "\n\nEscribe la previa." }];
+  let ultimoError = "";
+  for (const modelo of [...MODELOS].reverse()) {
+    try {
+      const r = await env.AI.run(modelo, { messages: mensajes, max_tokens: 320, temperature: 0.3 });
+      const texto = String((r && (r.response || (r.result && r.result.response))) || "").trim();
+      if (texto) {
+        if (env.VALORA) { try { await env.VALORA.put(clave, texto, { expirationTtl: 14 * 86400 }); } catch { } }
+        return json({ respuesta: texto, modelo }, 200, origen);
+      }
+    } catch (e) { ultimoError = String(e && e.message || e); }
+  }
+  return json({ error: "La IA no ha podido hacer la previa ahora mismo.", detalle: ultimoError.slice(0, 200) }, 502, origen);
+}
+
 export default {
   /** Cada hora (wrangler.jsonc → triggers.crons): pide a GitHub que pase el robot de datos.
    *  Necesita el secreto GH_TOKEN (llave de GitHub con permiso «Contents: Read and write» sobre dondeloechan,
@@ -634,6 +678,7 @@ export default {
     if (new URL(request.url).pathname === "/runningspain-ia") return runningspainIA(request, env);
     if (new URL(request.url).pathname === "/escuchamotor-ia") return escuchamotorIA(request, env, origen);
     if (new URL(request.url).pathname === "/cantera-ia") return canteraIA(request, env, origen);
+    if (new URL(request.url).pathname === "/cantera-previa") return canteraPrevia(request, env, origen);
     if (request.method === "GET" && new URL(request.url).pathname === "/alineaciones") {
       if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
       try { return await alineaciones(request, env, ctx, origen); }
