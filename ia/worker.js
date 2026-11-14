@@ -636,6 +636,70 @@ async function canteraPrevia(request, env, origen) {
   return json({ error: "La IA no ha podido hacer la previa ahora mismo.", detalle: ultimoError.slice(0, 200) }, 502, origen);
 }
 
+// ---------- Tiempo de AEMET para Cantera Madrid ----------
+// GET /cantera-tiempo?lat=..&lon=..&fecha=YYYY-MM-DD → previsión horaria de AEMET del municipio más cercano al campo,
+// con la misma forma que Open-Meteo (hourly.temperature_2m, …) para que la app la pinte igual.
+// Necesita el secreto AEMET_KEY (clave gratuita de https://opendata.aemet.es). Sin clave responde 503 y la app usa Open-Meteo.
+const AEMET = "https://opendata.aemet.es/opendata/api";
+// AEMET a veces sirve UTF-8 y a veces ISO-8859-15: se prueba UTF-8 y, si sale roto, Windows-1252
+const textoAemet = buf => { const u = new TextDecoder("utf-8").decode(buf); return u.includes("\uFFFD") ? new TextDecoder("windows-1252").decode(buf) : u; };
+async function aemetJSON(ruta, env) {
+  const r1 = await fetch(AEMET + ruta, { headers: { "api_key": env.AEMET_KEY, "Accept": "application/json" } });
+  const t1 = textoAemet(await r1.arrayBuffer());
+  const j1 = JSON.parse(t1);
+  if (Array.isArray(j1)) return j1;
+  if (!j1.datos) throw new Error("AEMET: " + (j1.descripcion || j1.estado));
+  const r2 = await fetch(j1.datos);
+  return JSON.parse(textoAemet(await r2.arrayBuffer()));
+}
+async function cacheado(clave, segundos, fn) {
+  const cache = caches.default, req = new Request("https://cache.cantera/" + clave);
+  const ya = await cache.match(req);
+  if (ya) return ya.json();
+  const datos = await fn();
+  await cache.put(req, new Response(JSON.stringify(datos), { headers: { "Cache-Control": "max-age=" + segundos, "Content-Type": "application/json" } }));
+  return datos;
+}
+// Estado del cielo de AEMET → código WMO (el que usa la app para los iconos)
+function aemetAWmo(c) {
+  const n = parseInt(String(c || ""), 10);
+  if (n === 11) return 0; if (n === 12 || n === 17) return 1; if (n === 13) return 2; if (n >= 14 && n <= 16) return 3;
+  if (n >= 23 && n <= 26) return 61; if (n >= 43 && n <= 46) return 51; if (n >= 33 && n <= 36) return 73; if (n >= 71 && n <= 74) return 71;
+  if ((n >= 51 && n <= 54) || (n >= 61 && n <= 64)) return 95; if (n === 81 || n === 82) return 45; if (n === 83) return 3;
+  return 2;
+}
+async function canteraTiempo(request, env, origen) {
+  const u = new URL(request.url);
+  const lat = parseFloat(u.searchParams.get("lat")), lon = parseFloat(u.searchParams.get("lon")), fecha = String(u.searchParams.get("fecha") || "");
+  if (!isFinite(lat) || !isFinite(lon) || !/^\d{4}-\d{2}-\d{2}$/.test(fecha)) return json({ error: "Parámetros no válidos." }, 400, origen);
+  if (!env.AEMET_KEY) return json({ error: "Falta la clave de AEMET." }, 503, origen);
+  try {
+    const munis = await cacheado("aemet-municipios-v1", 30 * 86400, async () =>
+      (await aemetJSON("/maestro/municipios", env)).map(m => [String(m.id).replace(/^id/, ""), m.nombre, +m.latitud_dec, +m.longitud_dec]).filter(m => isFinite(m[2]) && isFinite(m[3])));
+    let mejor = null, dmin = 1e9;
+    for (const m of munis) { const d = (m[2] - lat) ** 2 + ((m[3] - lon) * Math.cos(lat * Math.PI / 180)) ** 2; if (d < dmin) { dmin = d; mejor = m; } }
+    if (!mejor) return json({ error: "Sin municipio." }, 404, origen);
+    const pred = await cacheado("aemet-horaria-" + mejor[0], 3600, () => aemetJSON("/prediccion/especifica/municipio/horaria/" + mejor[0], env));
+    const dia = ((pred[0] && pred[0].prediccion && pred[0].prediccion.dia) || []).find(d => String(d.fecha).slice(0, 10) === fecha);
+    if (!dia) return json({ error: "AEMET aún no da la previsión por horas de ese día." }, 404, origen);
+    const porHora = (lista, f) => { const o = {}; for (const x of lista || []) { const p = String(x.periodo || ""); if (p.length === 2) o[+p] = f(x); } return o; };
+    const porTramo = lista => { const o = {}; for (const x of lista || []) { const p = String(x.periodo || ""); if (p.length === 4) { let a = +p.slice(0, 2), b = +p.slice(2); if (b <= a) b += 24; for (let h = a; h < b; h++) o[h % 24] = +x.value || 0; } } return o; };
+    const T = porHora(dia.temperatura, x => +x.value), C = porHora(dia.estadoCielo, x => aemetAWmo(x.value));
+    const MM = porHora(dia.precipitacion, x => x.value === "Ip" ? 0.1 : +x.value || 0), N = porHora(dia.nieve, x => x.value === "Ip" ? 0.1 : +x.value || 0);
+    const V = porHora((dia.vientoAndRachaMax || []).filter(x => x.velocidad), x => +(x.velocidad[0]) || 0);
+    const P = porTramo(dia.probPrecipitacion), PT = porTramo(dia.probTormenta);
+    const cubre = Object.keys(T).map(Number).sort((a, b) => a - b);
+    const lleno = o => { const r = []; let ult = null; for (let h = 0; h < 24; h++) { if (o[h] != null) ult = o[h]; r.push(ult); } let pri = r.find(v => v != null) ?? 0; return r.map(v => v ?? pri); };
+    const cod = lleno(C).map((c, h) => (N[h] || 0) > 0 ? 73 : (PT[h] || 0) >= 50 && c < 95 ? 95 : c);
+    return json({
+      fuente: "AEMET", municipio: mejor[1], cubre,
+      hourly: { temperature_2m: lleno(T), precipitation_probability: lleno(P), precipitation: lleno(MM), weather_code: cod, wind_speed_10m: lleno(V) },
+    }, 200, origen);
+  } catch (e) {
+    return json({ error: "AEMET no responde ahora mismo.", detalle: String(e && e.message || e).slice(0, 200) }, 502, origen);
+  }
+}
+
 export default {
   /** Cada hora (wrangler.jsonc → triggers.crons): pide a GitHub que pase el robot de datos.
    *  Necesita el secreto GH_TOKEN (llave de GitHub con permiso «Contents: Read and write» sobre dondeloechan,
@@ -685,6 +749,7 @@ export default {
     if (new URL(request.url).pathname === "/runningspain-ia") return runningspainIA(request, env);
     if (new URL(request.url).pathname === "/escuchamotor-ia") return escuchamotorIA(request, env, origen);
     if (new URL(request.url).pathname === "/cantera-ia") return canteraIA(request, env, origen);
+    if (new URL(request.url).pathname === "/cantera-tiempo") return canteraTiempo(request, env, origen);
     if (new URL(request.url).pathname === "/cantera-previa") return canteraPrevia(request, env, origen);
     if (request.method === "GET" && new URL(request.url).pathname === "/alineaciones") {
       if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
