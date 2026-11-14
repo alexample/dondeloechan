@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T16:07:41+01:00",
+ "actualizado": "2026-11-14T17:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15956,6 +15956,16 @@
      29
     ],
     [
+     "spo",
+     14,
+     8,
+     1,
+     5,
+     15,
+     15,
+     25
+    ],
+    [
      "bur",
      14,
      7,
@@ -15993,16 +16003,6 @@
      2,
      15,
      7,
-     22
-    ],
-    [
-     "spo",
-     13,
-     7,
-     1,
-     5,
-     14,
-     15,
      22
     ],
     [
@@ -16107,12 +16107,12 @@
     ],
     [
      "rsb",
-     13,
+     14,
      3,
      3,
-     7,
+     8,
      15,
-     22,
+     23,
      12
     ],
     [
@@ -17415,9 +17415,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-14T16:07:41+01:00",
-  "cambio": "2026-11-14T16:07:41+01:00",
+  "comprobado": "2026-11-14T17:07:42+01:00",
+  "cambio": "2026-11-14T17:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-14T17:07:42+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-14T16:07:41+01:00",
     "nuevos": 0,
@@ -17973,38 +17996,6 @@
        "t": "AD Ceuta FC – UD Almería (Segunda)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-13T20:07:44+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: Alcoyano – RCD Mallorca",
-     "Canal confirmado: CD Badajoz – Tenerife"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-3-primera-ronda-alcoyano-mll",
-       "t": "Alcoyano – RCD Mallorca · confirmado"
-      },
-      {
-       "id": "2627-3-primera-ronda-cd-badajoz-ten",
-       "t": "CD Badajoz – Tenerife · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
