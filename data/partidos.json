@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T14:07:41+01:00",
+ "actualizado": "2026-11-15T15:07:46+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15112,7 +15112,6 @@
    "localAbbr": "ATM",
    "visitanteAbbr": "TER",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Aragón TV; completo, en FANPLAY TV y FootballClub.",
    "marcador": [
     1,
     0
@@ -15219,7 +15218,6 @@
    "localAbbr": "IBI",
    "visitanteAbbr": "CAR",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     0,
     1
@@ -16778,12 +16776,12 @@
     [
      "ten",
      13,
+     4,
+     6,
      3,
-     7,
-     3,
-     15,
+     16,
      17,
-     16
+     18
     ],
     [
      "leg",
@@ -16859,11 +16857,11 @@
      "ceu",
      14,
      1,
-     3,
+     2,
+     11,
      10,
-     10,
-     30,
-     6
+     31,
+     5
     ]
    ]
   },
@@ -17296,6 +17294,17 @@
        "UD Logroñés"
       ],
       [
+       "pontevedra",
+       12,
+       6,
+       3,
+       3,
+       16,
+       13,
+       21,
+       "Pontevedra"
+      ],
+      [
        "merida",
        12,
        6,
@@ -17305,17 +17314,6 @@
        15,
        19,
        "Mérida"
-      ],
-      [
-       "pontevedra",
-       11,
-       5,
-       3,
-       3,
-       13,
-       11,
-       18,
-       "Pontevedra"
       ],
       [
        "cp-cacereno",
@@ -17363,12 +17361,12 @@
       ],
       [
        "cd-extremadura",
-       11,
+       12,
        5,
        1,
-       5,
-       21,
-       15,
+       6,
+       23,
+       18,
        16,
        "CD Extremadura"
       ],
@@ -17631,17 +17629,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "atletico-madrileno",
-       12,
-       3,
-       5,
-       4,
-       21,
-       19,
-       14,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        11,
        3,
@@ -17662,6 +17649,17 @@
        17,
        14,
        "Algeciras CF"
+      ],
+      [
+       "atletico-madrileno",
+       12,
+       3,
+       5,
+       4,
+       21,
+       19,
+       14,
+       "Atlético Madrileño"
       ],
       [
        "aguilas-fc",
@@ -18125,9 +18123,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-15T14:07:41+01:00",
-  "cambio": "2026-11-15T14:07:41+01:00",
+  "comprobado": "2026-11-15T15:07:46+01:00",
+  "cambio": "2026-11-15T15:07:46+01:00",
   "historial": [
+   {
+    "hora": "2026-11-15T15:07:46+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-15T14:07:41+01:00",
     "nuevos": 0,
@@ -18766,29 +18788,6 @@
        "t": "Bodø/Glimt – LASK (Champions)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-14T18:07:50+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
