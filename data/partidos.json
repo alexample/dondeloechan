@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T19:07:43+01:00",
+ "actualizado": "2026-11-15T20:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15434,7 +15434,6 @@
    "localAbbr": "ALG",
    "visitanteAbbr": "ANT",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     2,
     1
@@ -15559,7 +15558,6 @@
    "localAbbr": "LOG",
    "visitanteAbbr": "ARE",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     2,
     2
@@ -16964,8 +16962,8 @@
      7,
      3,
      3,
-     21,
-     14,
+     22,
+     15,
      24
     ],
     [
@@ -17055,7 +17053,7 @@
      6,
      4,
      12,
-     12,
+     13,
      18
     ],
     [
@@ -17064,7 +17062,7 @@
      5,
      2,
      7,
-     14,
+     15,
      19,
      17
     ],
@@ -17104,8 +17102,8 @@
      2,
      5,
      7,
-     16,
-     18,
+     17,
+     19,
      11
     ],
     [
@@ -17915,17 +17913,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "atletico-madrileno",
-       12,
-       3,
-       5,
-       4,
-       21,
-       19,
-       14,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        12,
        3,
@@ -17935,6 +17922,17 @@
        17,
        14,
        "Antequera"
+      ],
+      [
+       "atletico-madrileno",
+       12,
+       3,
+       5,
+       4,
+       21,
+       19,
+       14,
+       "Atlético Madrileño"
       ],
       [
        "aguilas-fc",
@@ -18398,9 +18396,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-15T19:07:43+01:00",
-  "cambio": "2026-11-15T19:07:43+01:00",
+  "comprobado": "2026-11-15T20:07:42+01:00",
+  "cambio": "2026-11-15T20:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-15T20:07:42+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-15T19:07:43+01:00",
     "nuevos": 2,
@@ -18973,29 +18995,6 @@
        "t": "Real Jaén 0-4 Real Zaragoza"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T22:28:47+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-13-ath-esp",
