@@ -18041,9 +18041,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-15T06:07:41+01:00",
+  "comprobado": "2026-11-15T07:07:40+01:00",
   "cambio": "2026-11-15T00:07:40+01:00",
   "historial": [
+   {
+    "hora": "2026-11-15T07:07:40+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-15T06:07:41+01:00",
     "nuevos": 0,
@@ -18670,27 +18691,6 @@
    },
    {
     "hora": "2026-11-14T11:27:28+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T11:07:41+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 2,
