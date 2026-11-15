@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T16:07:42+01:00",
+ "actualizado": "2026-11-15T17:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15293,7 +15293,68 @@
    "provisional": false,
    "localAbbr": "ZAM",
    "visitanteAbbr": "AVI",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "r",
+     "min": "33'",
+     "seg": 1980,
+     "j": "Andres Lopez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "54'",
+     "seg": 3240,
+     "j": "Izan Yurrieta",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3720,
+     "j": "José Albert",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "64'",
+     "seg": 3840,
+     "j": "Daniel Liduena",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90+8'",
+     "seg": 5448,
+     "j": "José Albert",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+11'",
+     "seg": 5466,
+     "j": "Álvaro Santamaría",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-14-gra-lpa",
@@ -16699,6 +16760,16 @@
      24
     ],
     [
+     "gra",
+     13,
+     7,
+     3,
+     3,
+     20,
+     14,
+     24
+    ],
+    [
      "bur",
      14,
      7,
@@ -16729,16 +16800,6 @@
      23
     ],
     [
-     "gra",
-     12,
-     7,
-     2,
-     3,
-     20,
-     14,
-     23
-    ],
-    [
      "spo",
      14,
      7,
@@ -16759,6 +16820,16 @@
      21
     ],
     [
+     "lpa",
+     14,
+     6,
+     3,
+     5,
+     19,
+     21,
+     21
+    ],
+    [
      "cor",
      14,
      6,
@@ -16766,16 +16837,6 @@
      6,
      25,
      25,
-     20
-    ],
-    [
-     "lpa",
-     13,
-     6,
-     2,
-     5,
-     19,
-     21,
      20
     ],
     [
@@ -17341,6 +17402,17 @@
        "Mérida"
       ],
       [
+       "real-aviles-industrial",
+       12,
+       5,
+       3,
+       4,
+       25,
+       17,
+       18,
+       "Real Avilés Industrial"
+      ],
+      [
        "cp-cacereno",
        12,
        5,
@@ -17361,17 +17433,6 @@
        9,
        18,
        "Racing Ferrol"
-      ],
-      [
-       "real-aviles-industrial",
-       11,
-       5,
-       2,
-       4,
-       23,
-       15,
-       17,
-       "Real Avilés Industrial"
       ],
       [
        "mirandes",
@@ -17462,6 +17523,17 @@
        "Cultural Leonesa"
       ],
       [
+       "zamora",
+       12,
+       3,
+       4,
+       5,
+       13,
+       15,
+       13,
+       "Zamora"
+      ],
+      [
        "unionistas-de-salamanca",
        12,
        4,
@@ -17471,17 +17543,6 @@
        22,
        13,
        "Unionistas de Salamanca"
-      ],
-      [
-       "zamora",
-       11,
-       3,
-       3,
-       5,
-       11,
-       13,
-       12,
-       "Zamora"
       ],
       [
        "deportivo-fabril",
@@ -18148,9 +18209,40 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-15T16:07:42+01:00",
-  "cambio": "2026-11-15T16:07:42+01:00",
+  "comprobado": "2026-11-15T17:07:42+01:00",
+  "cambio": "2026-11-15T17:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-15T17:07:42+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Resultado: Zamora 2-2 Real Avilés Industrial"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-12-zamora-real-aviles-industrial",
+       "t": "Zamora 2-2 Real Avilés Industrial"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-15T16:07:42+01:00",
     "nuevos": 0,
@@ -18762,30 +18854,6 @@
        "t": "Como – AEK Atenas (Champions)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-14T20:07:42+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Segunda",
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
