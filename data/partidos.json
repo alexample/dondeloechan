@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T20:07:42+01:00",
+ "actualizado": "2026-11-15T21:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15625,7 +15625,32 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3663,
+     "j": "Jon Guruzeta",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4461,
+     "j": "Borja Vázquez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-14-eld-sab",
@@ -15640,7 +15665,41 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "11'",
+     "seg": 631,
+     "j": "Mariano Carmona",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "35'",
+     "seg": 2069,
+     "j": "José Luis Català Vázquez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "45'+4'",
+     "seg": 2700,
+     "j": "Jesus Clemente",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-real-murcia-alcorcon",
@@ -15660,7 +15719,50 @@
    "provisional": false,
    "localAbbr": "MUR",
    "visitanteAbbr": "ALC",
-   "etiqueta": "Grupo 2"
+   "etiqueta": "Grupo 2",
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "r",
+     "min": "36'",
+     "seg": 2160,
+     "j": "Joel Jorquera",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "43'",
+     "seg": 2580,
+     "j": "David Bosilj",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3300,
+     "j": "Javi Lancho",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "68'",
+     "seg": 4080,
+     "j": "Xabi Irurita",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-14-alb-clb",
@@ -15835,7 +15937,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-1-13-ath-esp",
@@ -15851,7 +15953,7 @@
     "daznll",
     "daznfree"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
@@ -15873,7 +15975,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "VIB",
    "visitanteAbbr": "NAS",
    "etiqueta": "Grupo 2",
@@ -16705,6 +16807,102 @@
    "canales": [],
    "provisional": true,
    "localAbbr": "SLA"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-atm-viking",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-25T21:00:00+01:00",
+   "local": "Atlético de Madrid",
+   "localId": "atm",
+   "visitante": "Viking",
+   "visitanteId": "viking",
+   "canales": [],
+   "provisional": true,
+   "visitanteAbbr": "VIK"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-club-brugge-liverpool",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-25T21:00:00+01:00",
+   "local": "Club Brugge",
+   "localId": "club-brugge",
+   "visitante": "Liverpool",
+   "visitanteId": "liverpool",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "BRU",
+   "visitanteAbbr": "LIV"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-inter-stuttgart",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-25T21:00:00+01:00",
+   "local": "Inter",
+   "localId": "inter",
+   "visitante": "Stuttgart",
+   "visitanteId": "stuttgart",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "INT",
+   "visitanteAbbr": "STU"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-lille-bayern-munich",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-25T21:00:00+01:00",
+   "local": "Lille",
+   "localId": "lille",
+   "visitante": "Bayern Múnich",
+   "visitanteId": "bayern-munich",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "LIL",
+   "visitanteAbbr": "BAY"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-psg-roma",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-25T21:00:00+01:00",
+   "local": "PSG",
+   "localId": "psg",
+   "visitante": "Roma",
+   "visitanteId": "roma",
+   "canales": [],
+   "provisional": true,
+   "visitanteAbbr": "ROM"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-shakhtar-donetsk-fenerbahce",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-25T21:00:00+01:00",
+   "local": "Shakhtar Donetsk",
+   "localId": "shakhtar-donetsk",
+   "visitante": "Fenerbahçe",
+   "visitanteId": "fenerbahce",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "SHA",
+   "visitanteAbbr": "FEN"
+  },
+  {
+   "id": "2627-4-fase-liga-j5-sporting-cp-manchester-united",
+   "liga": 4,
+   "jornada": "Fase liga · J5",
+   "inicio": "2026-11-25T21:00:00+01:00",
+   "local": "Sporting CP",
+   "localId": "sporting-cp",
+   "visitante": "Manchester United",
+   "visitanteId": "manchester-united",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "SCP",
+   "visitanteAbbr": "MUN"
   }
  ],
  "clasificacion": {
@@ -17792,13 +17990,24 @@
        "Villarreal B"
       ],
       [
+       "alcorcon",
+       12,
+       5,
+       6,
+       1,
+       24,
+       14,
+       21,
+       "Alcorcón"
+      ],
+      [
        "real-murcia",
-       11,
+       12,
        6,
        2,
-       3,
-       13,
-       9,
+       4,
+       14,
+       11,
        20,
        "Real Murcia"
       ],
@@ -17834,17 +18043,6 @@
        19,
        19,
        "Real Jaén"
-      ],
-      [
-       "alcorcon",
-       11,
-       4,
-       6,
-       1,
-       22,
-       13,
-       18,
-       "Alcorcón"
       ],
       [
        "ud-ibiza",
@@ -17913,17 +18111,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "antequera",
-       12,
-       3,
-       5,
-       4,
-       18,
-       17,
-       14,
-       "Antequera"
-      ],
-      [
        "atletico-madrileno",
        12,
        3,
@@ -17933,6 +18120,17 @@
        19,
        14,
        "Atlético Madrileño"
+      ],
+      [
+       "antequera",
+       12,
+       3,
+       5,
+       4,
+       18,
+       17,
+       14,
+       "Antequera"
       ],
       [
        "aguilas-fc",
@@ -18396,9 +18594,96 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-15T20:07:42+01:00",
-  "cambio": "2026-11-15T20:07:42+01:00",
+  "comprobado": "2026-11-15T21:07:43+01:00",
+  "cambio": "2026-11-15T21:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-15T21:07:43+01:00",
+    "nuevos": 7,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 3,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: PSG – Roma",
+     "Nuevo partido: Atlético de Madrid – Viking",
+     "Nuevo partido: Inter – Stuttgart",
+     "Nuevo partido: Sporting CP – Manchester United",
+     "Nuevo partido: Shakhtar Donetsk – Fenerbahçe",
+     "Nuevo partido: Club Brugge – Liverpool",
+     "Nuevo partido: Lille – Bayern Múnich",
+     "Resultado: SD Eibar 1-1 Cádiz CF",
+     "Resultado: CD Eldense 2-0 CE Sabadell",
+     "Canal confirmado: Athletic Club – RCD Espanyol",
+     "Canal confirmado: FC Andorra – CD Leganés",
+     "Canal confirmado: Villarreal B – Gimnàstic de Tarragona",
+     "Resultado: Real Murcia 1-2 Alcorcón"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-2-14-eib-cad",
+       "t": "SD Eibar 1-1 Cádiz CF"
+      },
+      {
+       "id": "2627-2-14-eld-sab",
+       "t": "CD Eldense 2-0 CE Sabadell"
+      },
+      {
+       "id": "2627-5-12-real-murcia-alcorcon",
+       "t": "Real Murcia 1-2 Alcorcón"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      },
+      {
+       "id": "2627-2-15-and-leg",
+       "t": "FC Andorra – CD Leganés · confirmado"
+      },
+      {
+       "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
+       "t": "Villarreal B – Gimnàstic de Tarragona · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-4-fase-liga-j5-psg-roma",
+       "t": "PSG – Roma (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-atm-viking",
+       "t": "Atlético de Madrid – Viking (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-inter-stuttgart",
+       "t": "Inter – Stuttgart (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-sporting-cp-manchester-united",
+       "t": "Sporting CP – Manchester United (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-shakhtar-donetsk-fenerbahce",
+       "t": "Shakhtar Donetsk – Fenerbahçe (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-club-brugge-liverpool",
+       "t": "Club Brugge – Liverpool (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-lille-bayern-munich",
+       "t": "Lille – Bayern Múnich (Champions)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-15T20:07:42+01:00",
     "nuevos": 0,
@@ -18962,39 +19247,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T23:07:41+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 2,
-    "tablas": [],
-    "detalle": [
-     "Resultado: Real Oviedo 1-2 Girona FC",
-     "Resultado: Real Jaén 0-4 Real Zaragoza"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-14-ovi-gir",
-       "t": "Real Oviedo 1-2 Girona FC"
-      },
-      {
-       "id": "2627-5-12-real-jaen-real-zaragoza",
-       "t": "Real Jaén 0-4 Real Zaragoza"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-13-ath-esp",
