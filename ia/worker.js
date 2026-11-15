@@ -717,6 +717,76 @@ async function canteraTiempo(request, env, origen) {
   }
 }
 
+// ---------- Actas compartidas de Cantera Madrid ----------
+// Cuando un móvil lee un acta de la RFFM, sube aquí SOLO los datos deportivos sin nombres: códigos de jugador, dorsales,
+// minutos de goles, tarjetas y cambios. Los demás móviles la descargan de aquí y ponen los nombres desde la federación.
+// Se valida que el marcador cuadre con el resultado publicado por el robot y que no venga ningún texto (ni nombres).
+const COD = /^[a-z]\d{1,12}$|^[a-z]\d{1,3}$/;  // c123456 (código RFFM) · d9 (dorsal) · x3 (posición en la lista)
+function limpiarLado(l) {
+  if (!l || typeof l !== "object") return null;
+  const num = v => (v === null || v === undefined || v === "") ? null : (Number.isInteger(+v) && +v >= 0 && +v < 200 ? +v : NaN);
+  const cod = v => (typeof v === "string" && COD.test(v)) ? v : null;
+  const out = { jug: [], gol: [], tar: [], cam: [] };
+  for (const j of (Array.isArray(l.jug) ? l.jug : []).slice(0, 40)) { const c = cod(j[0]); const d = num(j[1]); if (!c || Number.isNaN(d)) return null; out.jug.push([c, d, j[2] ? 1 : 0, j[3] ? 1 : 0, j[4] ? 1 : 0]); }
+  for (const g of (Array.isArray(l.gol) ? l.gol : []).slice(0, 40)) { const c = g[0] === null ? null : cod(g[0]); const m = num(g[1]); if ((g[0] !== null && !c) || Number.isNaN(m)) return null; out.gol.push([c, m, g[2] ? 1 : 0]); }
+  for (const t of (Array.isArray(l.tar) ? l.tar : []).slice(0, 40)) { const c = cod(t[0]); const m = num(t[1]); const tipo = ["a", "r", "d"].includes(t[2]) ? t[2] : null; if (!c || Number.isNaN(m) || !tipo) return null; out.tar.push([c, m, tipo]); }
+  for (const x of (Array.isArray(l.cam) ? l.cam : []).slice(0, 40)) { const m = num(x[0]); const e = x[1] === null ? null : cod(x[1]); const s = x[2] === null ? null : cod(x[2]); if (Number.isNaN(m) || (x[1] !== null && !e) || (x[2] !== null && !s)) return null; out.cam.push([m, e, s]); }
+  return out;
+}
+async function resultadoOficial(gid, codacta) {
+  const cache = caches.default, req = new Request("https://cache.cantera/grupo-" + gid);
+  let r = await cache.match(req);
+  if (!r) {
+    const g = await fetch("https://raw.githubusercontent.com/alexample/cantera-madrid/main/data/g/" + gid + ".json");
+    if (!g.ok) return null;
+    r = new Response(await g.text(), { headers: { "Cache-Control": "max-age=600" } });
+    await cache.put(req, r.clone());
+  }
+  const d = await r.json();
+  const p = (d.part || []).find(x => String(x[11]) === String(codacta));
+  return p && p[7] !== null && p[8] !== null ? [p[7], p[8]] : null;
+}
+async function canteraActas(request, env, origen) {
+  if (!env.CANTERA_DB) return json({ error: "Sin base de datos." }, 503, origen);
+  const u = new URL(request.url);
+  if (request.method === "GET") {
+    const gid = String(u.searchParams.get("gid") || "");
+    if (!/^\d{1,12}$/.test(gid)) return json({ error: "Grupo no válido." }, 400, origen);
+    const { results } = await env.CANTERA_DB.prepare("SELECT codacta, datos FROM actas WHERE gid = ?").bind(gid).all();
+    const actas = {}; for (const r of results || []) actas[r.codacta] = JSON.parse(r.datos);
+    return json({ actas }, 200, origen);
+  }
+  if (request.method !== "POST") return json({ error: "Método no válido." }, 405, origen);
+  if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+  const ip = request.headers.get("CF-Connecting-IP") || "anon";
+  if (!permitirEM("cma:" + ip)) return json({ error: "Demasiadas subidas seguidas." }, 429, origen);
+  let b; try { b = await request.json(); } catch { return json({ error: "Petición no válida." }, 400, origen); }
+  const codacta = String(b.codacta || ""), gid = String(b.gid || "");
+  if (!/^\d{1,12}$/.test(codacta) || !/^\d{1,12}$/.test(gid)) return json({ error: "Datos no válidos." }, 400, origen);
+  const l = limpiarLado(b.l), v = limpiarLado(b.v);
+  if (!l || !v) return json({ error: "Formato no válido." }, 400, origen);
+  const hg = l.gol.filter(g => !g[2]).length + v.gol.filter(g => g[2]).length, ag = v.gol.filter(g => !g[2]).length + l.gol.filter(g => g[2]).length;
+  const of = await resultadoOficial(gid, codacta);
+  if (!of) return json({ error: "Ese partido aún no tiene resultado publicado." }, 409, origen);
+  if (of[0] !== hg || of[1] !== ag) return json({ error: "El acta no cuadra con el resultado." }, 409, origen);
+  const datos = JSON.stringify({ l, v });
+  const ahora = Date.now();
+  const ya = await env.CANTERA_DB.prepare("SELECT datos, hg, ag FROM actas WHERE codacta = ?").bind(codacta).first();
+  if (ya && ya.datos === datos) await env.CANTERA_DB.prepare("UPDATE actas SET confirmaciones = confirmaciones + 1, actualizado = ? WHERE codacta = ?").bind(ahora, codacta).run();
+  else if (!ya || ya.hg !== hg || ya.ag !== ag || datos.length > ya.datos.length)
+    await env.CANTERA_DB.prepare("INSERT OR REPLACE INTO actas (codacta, gid, datos, hg, ag, confirmaciones, creado, actualizado) VALUES (?, ?, ?, ?, ?, 1, ?, ?)").bind(codacta, gid, datos, hg, ag, ahora, ahora).run();
+  return json({ ok: true }, 200, origen);
+}
+// Estructura (solo nombres de campos, sin valores) de las páginas de la RFFM que lee el móvil, para ajustar la app.
+async function canteraEsquema(request, env, origen) {
+  if (request.method !== "POST" || !ORIGENES.includes(origen) || !env.CANTERA_DB) return json({ error: "No." }, 400, origen);
+  let b; try { b = await request.json(); } catch { return json({ error: "Petición no válida." }, 400, origen); }
+  const clave = String(b.clave || "").slice(0, 40), contenido = String(b.contenido || "").slice(0, 6000);
+  if (!/^[a-z_]{3,40}$/.test(clave)) return json({ error: "Clave no válida." }, 400, origen);
+  await env.CANTERA_DB.prepare("INSERT OR REPLACE INTO esquema (clave, contenido, visto) VALUES (?, ?, ?)").bind(clave, contenido, Date.now()).run();
+  return json({ ok: true }, 200, origen);
+}
+
 export default {
   /** Cada hora (wrangler.jsonc → triggers.crons): pide a GitHub que pase el robot de datos.
    *  Necesita el secreto GH_TOKEN (llave de GitHub con permiso «Contents: Read and write» sobre dondeloechan,
@@ -766,6 +836,8 @@ export default {
     if (new URL(request.url).pathname === "/runningspain-ia") return runningspainIA(request, env);
     if (new URL(request.url).pathname === "/escuchamotor-ia") return escuchamotorIA(request, env, origen);
     if (new URL(request.url).pathname === "/cantera-ia") return canteraIA(request, env, origen);
+    if (new URL(request.url).pathname === "/cantera-actas") return canteraActas(request, env, origen);
+    if (new URL(request.url).pathname === "/cantera-esquema") return canteraEsquema(request, env, origen);
     if (new URL(request.url).pathname === "/cantera-tiempo") return canteraTiempo(request, env, origen);
     if (new URL(request.url).pathname === "/cantera-previa") return canteraPrevia(request, env, origen);
     if (request.method === "GET" && new URL(request.url).pathname === "/alineaciones") {
