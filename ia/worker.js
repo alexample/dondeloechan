@@ -601,6 +601,16 @@ const SISTEMA_PREVIA =
   "- No digas «hoy» ni des fechas: no las conoces.\n" +
   "- Formato: 2 párrafos cortos, 5 o 6 frases y como máximo 130 palabras en total. Puedes usar **negritas** en los nombres de los equipos. Sin listas, tablas ni títulos.";
 
+const SISTEMA_PRONOSTICO =
+  "Eres comentarista de fútbol base de la Comunidad de Madrid en la app «Cantera Madrid». Te paso el PRONÓSTICO de final de liga " +
+  "de un equipo, ya calculado por la app (cuentas exactas y miles de simulaciones). Explícalo con palabras claras y tono sobrio de comentarista.\n" +
+  "Reglas:\n" +
+  "- NO hagas cuentas propias ni inventes cifras: usa solo los números y porcentajes de los DATOS, tal cual.\n" +
+  "- Lo marcado como ASEGURADO o YA NO ES POSIBLE es seguro; todo lo demás son probabilidades, dilo así (nunca prometas).\n" +
+  "- Explica qué necesita el equipo (por ejemplo, qué rivales de la clasificación tiene cerca por arriba y por abajo) usando los puntos y máximos posibles.\n" +
+  "- Si quedan muchas jornadas, recuerda que el pronóstico es orientativo.\n" +
+  "- Son menores: tono respetuoso. 2 párrafos cortos, máximo 130 palabras, sin listas ni títulos. Español de España.";
+
 async function canteraPrevia(request, env, origen) {
   if (request.method !== "POST") return json({ error: "Usa POST." }, 405, origen);
   if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
@@ -611,13 +621,16 @@ async function canteraPrevia(request, env, origen) {
   if (datos.length < 50) return json({ error: "Faltan datos del partido." }, 400, origen);
   const hash = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(datos)))]
     .map(b => b.toString(16).padStart(2, "0")).join("").slice(0, 40);
-  const clave = "cmprevia:v3:" + hash;  // v3: tono de comentarista y texto completo (cambiar la versión si cambia SISTEMA_PREVIA)
+  const tipo = d.tipo === "pronostico" ? "pronostico" : "previa";
+  const clave = "cmprevia:v3:" + (tipo === "pronostico" ? "pron:" : "") + hash;  // v3: tono de comentarista y texto completo (cambiar la versión si cambia SISTEMA_PREVIA)
   if (env.VALORA) {
     try { const ya = await env.VALORA.get(clave); if (ya) return json({ respuesta: ya, guardada: true }, 200, origen); } catch { }
   }
   const ip = request.headers.get("CF-Connecting-IP") || "anon";
   if (!permitirEM("cmp:" + ip)) return json({ error: "Demasiadas previas seguidas. Espera un poco." }, 429, origen);
-  const mensajes = [{ role: "system", content: SISTEMA_PREVIA }, { role: "user", content: "DATOS:\n" + datos + "\n\nEscribe la previa." }];
+  const mensajes = tipo === "pronostico"
+    ? [{ role: "system", content: SISTEMA_PRONOSTICO }, { role: "user", content: "DATOS:\n" + datos + "\n\nExplica el pronóstico." }]
+    : [{ role: "system", content: SISTEMA_PREVIA }, { role: "user", content: "DATOS:\n" + datos + "\n\nEscribe la previa." }];
   let ultimoError = "";
   // La previa se guarda y se comparte, así que se usa primero el modelo grande (más fiable con los números);
   // si no está disponible o se acaba el cupo, el pequeño.
