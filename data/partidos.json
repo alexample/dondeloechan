@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T00:07:40+01:00",
+ "actualizado": "2026-11-15T14:07:41+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15112,7 +15112,23 @@
    "localAbbr": "ATM",
    "visitanteAbbr": "TER",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Aragón TV; completo, en FANPLAY TV y FootballClub."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Aragón TV; completo, en FANPLAY TV y FootballClub.",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4860,
+     "j": "<TBD>",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-cd-extremadura-pontevedra",
@@ -15132,7 +15148,59 @@
    "provisional": false,
    "localAbbr": "EXT",
    "visitanteAbbr": "PON",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 720,
+     "j": "Papa Magueye Gaye",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1440,
+     "j": "Rodrigo Escudero",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "40'",
+     "seg": 2400,
+     "j": "Papa Magueye Gaye",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "75'",
+     "seg": 4500,
+     "j": "Domingo Ayecaba",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+1'",
+     "seg": 5406,
+     "j": "Iker Burgos",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-ud-ibiza-cartagena",
@@ -15151,7 +15219,23 @@
    "localAbbr": "IBI",
    "visitanteAbbr": "CAR",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2280,
+     "j": "<TBD>",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-14-ten-ceu",
@@ -16693,13 +16777,13 @@
     ],
     [
      "ten",
-     12,
+     13,
      3,
-     6,
+     7,
      3,
      15,
      17,
-     15
+     16
     ],
     [
      "leg",
@@ -16773,13 +16857,13 @@
     ],
     [
      "ceu",
-     13,
+     14,
      1,
-     2,
+     3,
      10,
      10,
      30,
-     5
+     6
     ]
    ]
   },
@@ -17448,6 +17532,17 @@
        "Real Murcia"
       ],
       [
+       "cartagena",
+       12,
+       5,
+       4,
+       3,
+       17,
+       13,
+       19,
+       "Cartagena"
+      ],
+      [
        "real-madrid-castilla",
        12,
        5,
@@ -17482,12 +17577,12 @@
       ],
       [
        "ud-ibiza",
-       11,
+       12,
        5,
        3,
-       3,
+       4,
        18,
-       14,
+       15,
        18,
        "UD Ibiza"
       ],
@@ -17501,17 +17596,6 @@
        15,
        18,
        "Hércules"
-      ],
-      [
-       "cartagena",
-       11,
-       4,
-       4,
-       3,
-       16,
-       13,
-       16,
-       "Cartagena"
       ],
       [
        "ue-sant-andreu",
@@ -17547,6 +17631,17 @@
        "Gimnàstic de Tarragona"
       ],
       [
+       "atletico-madrileno",
+       12,
+       3,
+       5,
+       4,
+       21,
+       19,
+       14,
+       "Atlético Madrileño"
+      ],
+      [
        "antequera",
        11,
        3,
@@ -17578,17 +17673,6 @@
        16,
        12,
        "Águilas FC"
-      ],
-      [
-       "atletico-madrileno",
-       11,
-       2,
-       5,
-       4,
-       20,
-       19,
-       11,
-       "Atlético Madrileño"
       ],
       [
        "juventud-torremolinos",
@@ -17625,12 +17709,12 @@
       ],
       [
        "cd-teruel",
-       11,
+       12,
        1,
        4,
-       6,
+       7,
        5,
-       18,
+       19,
        7,
        "CD Teruel"
       ]
@@ -18041,9 +18125,50 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-15T13:07:46+01:00",
-  "cambio": "2026-11-15T00:07:40+01:00",
+  "comprobado": "2026-11-15T14:07:41+01:00",
+  "cambio": "2026-11-15T14:07:41+01:00",
   "historial": [
+   {
+    "hora": "2026-11-15T14:07:41+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 3,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Resultado: Atlético Madrileño 1-0 CD Teruel",
+     "Resultado: UD Ibiza 0-1 Cartagena",
+     "Resultado: CD Extremadura 2-3 Pontevedra"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-12-atletico-madrileno-cd-teruel",
+       "t": "Atlético Madrileño 1-0 CD Teruel"
+      },
+      {
+       "id": "2627-5-12-ud-ibiza-cartagena",
+       "t": "UD Ibiza 0-1 Cartagena"
+      },
+      {
+       "id": "2627-5-12-cd-extremadura-pontevedra",
+       "t": "CD Extremadura 2-3 Pontevedra"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-15T13:07:46+01:00",
     "nuevos": 0,
@@ -18654,29 +18779,6 @@
     ],
     "detalle": [],
     "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T18:05:25+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [],
-    "avisos": 0,
     "items": {
      "resultados": [],
      "canales": [
