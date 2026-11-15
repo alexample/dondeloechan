@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T15:07:46+01:00",
+ "actualizado": "2026-11-15T16:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15122,7 +15122,7 @@
      "t": "g",
      "min": "81'",
      "seg": 4860,
-     "j": "<TBD>",
+     "j": "David Garcia",
      "lado": "L",
      "pen": false,
      "pp": false
@@ -15228,7 +15228,7 @@
      "t": "g",
      "min": "38'",
      "seg": 2280,
-     "j": "<TBD>",
+     "j": "Ibán Ribeiro",
      "lado": "V",
      "pen": true,
      "pp": false
@@ -15248,7 +15248,32 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "40'",
+     "seg": 2386,
+     "j": "Nacho Gil",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5116,
+     "j": "Neal Viereck",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-12-zamora-real-aviles-industrial",
@@ -16779,7 +16804,7 @@
      4,
      6,
      3,
-     16,
+     17,
      17,
      18
     ],
@@ -16860,7 +16885,7 @@
      2,
      11,
      10,
-     31,
+     32,
      5
     ]
    ]
@@ -18123,9 +18148,39 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-15T15:07:46+01:00",
-  "cambio": "2026-11-15T15:07:46+01:00",
+  "comprobado": "2026-11-15T16:07:42+01:00",
+  "cambio": "2026-11-15T16:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-15T16:07:42+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 1,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Resultado: CD Tenerife 2-0 AD Ceuta FC"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-2-14-ten-ceu",
+       "t": "CD Tenerife 2-0 AD Ceuta FC"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-15T15:07:46+01:00",
     "nuevos": 0,
@@ -18731,63 +18786,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T19:07:45+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 4,
-    "tablas": [
-     "Segunda",
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Galatasaray – Aston Villa",
-     "Nuevo partido: Bodø/Glimt – LASK",
-     "Resultado: Real Sociedad B 2-2 Real Sporting",
-     "Resultado: UD Ourense 1-3 Mérida",
-     "Resultado: Real Unión 1-0 Cultural Leonesa",
-     "Resultado: Rayo Majadahonda 0-1 Águilas FC"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-14-rsb-spo",
-       "t": "Real Sociedad B 2-2 Real Sporting"
-      },
-      {
-       "id": "2627-5-12-ud-ourense-merida",
-       "t": "UD Ourense 1-3 Mérida"
-      },
-      {
-       "id": "2627-5-12-real-union-cultural-leonesa",
-       "t": "Real Unión 1-0 Cultural Leonesa"
-      },
-      {
-       "id": "2627-5-12-rayo-majadahonda-aguilas-fc",
-       "t": "Rayo Majadahonda 0-1 Águilas FC"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-4-fase-liga-j5-galatasaray-aston-villa",
-       "t": "Galatasaray – Aston Villa (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-bod-glimt-lask",
-       "t": "Bodø/Glimt – LASK (Champions)"
-      }
-     ]
     }
    }
   ]
