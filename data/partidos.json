@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T17:07:42+01:00",
+ "actualizado": "2026-11-15T18:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16750,6 +16750,16 @@
      30
     ],
     [
+     "gra",
+     13,
+     8,
+     2,
+     3,
+     21,
+     14,
+     26
+    ],
+    [
      "gir",
      14,
      7,
@@ -16757,16 +16767,6 @@
      4,
      24,
      13,
-     24
-    ],
-    [
-     "gra",
-     13,
-     7,
-     3,
-     3,
-     20,
-     14,
      24
     ],
     [
@@ -16820,16 +16820,6 @@
      21
     ],
     [
-     "lpa",
-     14,
-     6,
-     3,
-     5,
-     19,
-     21,
-     21
-    ],
-    [
      "cor",
      14,
      6,
@@ -16837,6 +16827,16 @@
      6,
      25,
      25,
+     20
+    ],
+    [
+     "lpa",
+     14,
+     6,
+     2,
+     6,
+     19,
+     22,
      20
     ],
     [
@@ -18209,9 +18209,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-15T17:07:42+01:00",
-  "cambio": "2026-11-15T17:07:42+01:00",
+  "comprobado": "2026-11-15T18:07:44+01:00",
+  "cambio": "2026-11-15T18:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-15T18:07:44+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-ath-esp",
+       "t": "Athletic Club – RCD Espanyol"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-15T17:07:42+01:00",
     "nuevos": 0,
@@ -18753,107 +18776,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-14T21:07:42+01:00",
-    "nuevos": 7,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 7,
-    "tablas": [
-     "Segunda",
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Arsenal – Borussia Dortmund",
-     "Nuevo partido: Manchester City – Napoli",
-     "Nuevo partido: Real Madrid – PSV",
-     "Nuevo partido: Feyenoord – Porto",
-     "Nuevo partido: RB Leipzig – RC Lens",
-     "Nuevo partido: Slovan Bratislava – Real Betis",
-     "Nuevo partido: Como – AEK Atenas",
-     "Resultado: UD Almería 2-1 FC Andorra",
-     "Resultado: RCD Mallorca 3-3 Córdoba CF",
-     "Resultado: CE Europa 0-2 UE Sant Andreu",
-     "Resultado: Hércules 2-2 Villarreal B",
-     "Resultado: Juventud Torremolinos 1-0 SD Huesca",
-     "Resultado: CD Coria 4-2 Unionistas de Salamanca",
-     "Resultado: Deportivo Fabril 2-2 Barakaldo CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-14-alm-and",
-       "t": "UD Almería 2-1 FC Andorra"
-      },
-      {
-       "id": "2627-2-14-mll-cor",
-       "t": "RCD Mallorca 3-3 Córdoba CF"
-      },
-      {
-       "id": "2627-5-12-ce-europa-ue-sant-andreu",
-       "t": "CE Europa 0-2 UE Sant Andreu"
-      },
-      {
-       "id": "2627-5-12-hercules-villarreal-b",
-       "t": "Hércules 2-2 Villarreal B"
-      },
-      {
-       "id": "2627-5-12-juventud-torremolinos-sd-huesca",
-       "t": "Juventud Torremolinos 1-0 SD Huesca"
-      },
-      {
-       "id": "2627-5-12-cd-coria-unionistas-de-salamanca",
-       "t": "CD Coria 4-2 Unionistas de Salamanca"
-      },
-      {
-       "id": "2627-5-12-deportivo-fabril-barakaldo-cf",
-       "t": "Deportivo Fabril 2-2 Barakaldo CF"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-rma-psv",
-       "t": "Real Madrid – PSV"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-4-fase-liga-j5-arsenal-borussia-dortmund",
-       "t": "Arsenal – Borussia Dortmund (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-manchester-city-napoli",
-       "t": "Manchester City – Napoli (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-rma-psv",
-       "t": "Real Madrid – PSV (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-feyenoord-porto",
-       "t": "Feyenoord – Porto (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-rb-leipzig-rc-lens",
-       "t": "RB Leipzig – RC Lens (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-slovan-bratislava-bet",
-       "t": "Slovan Bratislava – Real Betis (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-como-aek-atenas",
-       "t": "Como – AEK Atenas (Champions)"
-      }
-     ]
     }
    }
   ]
