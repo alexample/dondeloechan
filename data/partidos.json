@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-16T11:07:44+01:00",
+ "actualizado": "2026-11-16T13:07:49+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16016,7 +16016,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "MIR",
    "visitanteAbbr": "BIL",
    "etiqueta": "Grupo 1"
@@ -18594,9 +18594,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-16T12:07:45+01:00",
-  "cambio": "2026-11-16T11:07:44+01:00",
+  "comprobado": "2026-11-16T13:07:49+01:00",
+  "cambio": "2026-11-16T13:07:49+01:00",
   "historial": [
+   {
+    "hora": "2026-11-16T13:07:49+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Mirandés – Bilbao Athletic"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-13-mirandes-bilbao-athletic",
+       "t": "Mirandés – Bilbao Athletic · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-16T12:07:45+01:00",
     "nuevos": 0,
@@ -19125,36 +19148,6 @@
       {
        "id": "2627-5-12-zamora-real-aviles-industrial",
        "t": "Zamora 2-2 Real Avilés Industrial"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-15T16:07:42+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 1,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [
-     "Resultado: CD Tenerife 2-0 AD Ceuta FC"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-14-ten-ceu",
-       "t": "CD Tenerife 2-0 AD Ceuta FC"
       }
      ],
      "canales": [
