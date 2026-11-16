@@ -18594,9 +18594,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-16T14:07:43+01:00",
+  "comprobado": "2026-11-16T15:07:44+01:00",
   "cambio": "2026-11-16T14:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-16T15:07:44+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-16T14:07:43+01:00",
     "nuevos": 0,
@@ -19132,29 +19148,6 @@
        "t": "Sabah – FC Barcelona (Champions)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-15T18:07:44+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
