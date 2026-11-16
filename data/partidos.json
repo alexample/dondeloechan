@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-16T14:07:43+01:00",
+ "actualizado": "2026-11-16T16:07:49+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15185,7 +15185,7 @@
      "t": "g",
      "min": "75'",
      "seg": 4500,
-     "j": "Domingo Ayecaba",
+     "j": "Domingo Mba",
      "lado": "V",
      "pen": false,
      "pp": false
@@ -18594,9 +18594,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-16T15:07:44+01:00",
-  "cambio": "2026-11-16T14:07:43+01:00",
+  "comprobado": "2026-11-16T16:07:49+01:00",
+  "cambio": "2026-11-16T16:07:49+01:00",
   "historial": [
+   {
+    "hora": "2026-11-16T16:07:49+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-16T15:07:44+01:00",
     "nuevos": 0,
@@ -19086,68 +19102,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-15T19:07:43+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 4,
-    "tablas": [
-     "Segunda",
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Slavia Praga – Villarreal CF",
-     "Nuevo partido: Sabah – FC Barcelona",
-     "Resultado: Granada CF 1-0 UD Las Palmas",
-     "Canal confirmado: CD Teruel – Hércules",
-     "Resultado: CD Lugo 1-3 Mirandés",
-     "Resultado: UD Logroñés 2-2 Arenas Club",
-     "Resultado: Algeciras CF 2-1 Antequera"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-14-gra-lpa",
-       "t": "Granada CF 1-0 UD Las Palmas"
-      },
-      {
-       "id": "2627-5-12-cd-lugo-mirandes",
-       "t": "CD Lugo 1-3 Mirandés"
-      },
-      {
-       "id": "2627-5-12-ud-logrones-arenas-club",
-       "t": "UD Logroñés 2-2 Arenas Club"
-      },
-      {
-       "id": "2627-5-12-algeciras-cf-antequera",
-       "t": "Algeciras CF 2-1 Antequera"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-5-13-cd-teruel-hercules",
-       "t": "CD Teruel – Hércules · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-4-fase-liga-j5-slavia-praga-vil",
-       "t": "Slavia Praga – Villarreal CF (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-sabah-bar",
-       "t": "Sabah – FC Barcelona (Champions)"
-      }
-     ]
     }
    }
   ]
