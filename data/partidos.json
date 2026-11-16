@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-16T18:07:45+01:00",
+ "actualizado": "2026-11-16T19:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16130,7 +16130,7 @@
    "canales": [
     "daznll"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-15-cas-eld",
@@ -16146,7 +16146,7 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-13-aguilas-fc-ce-europa",
@@ -16161,7 +16161,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "AGU",
    "visitanteAbbr": "EUR",
    "etiqueta": "Grupo 2",
@@ -16182,7 +16182,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "PFR",
    "visitanteAbbr": "EXT",
    "etiqueta": "Grupo 1"
@@ -16207,7 +16207,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "PON",
    "visitanteAbbr": "LUG",
    "etiqueta": "Grupo 1",
@@ -16919,6 +16919,149 @@
    "provisional": true,
    "localAbbr": "KAI",
    "visitanteAbbr": "MJA"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-ajax-fc-thun",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T18:45:00+01:00",
+   "local": "Ajax",
+   "localId": "ajax",
+   "visitante": "FC Thun",
+   "visitanteId": "fc-thun",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "AJA",
+   "visitanteAbbr": "THU"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-brighton-fcu-craiova-1948",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T18:45:00+01:00",
+   "local": "Brighton",
+   "localId": "brighton",
+   "visitante": "FCU Craiova 1948",
+   "visitanteId": "fcu-craiova-1948",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "BRI",
+   "visitanteAbbr": "FCU"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-fc-iberia-1999-get",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T18:45:00+01:00",
+   "local": "FC Iberia 1999",
+   "localId": "fc-iberia-1999",
+   "visitante": "Getafe CF",
+   "visitanteId": "get",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "IBE"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-fkb-jablonec-lugano",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T18:45:00+01:00",
+   "local": "FKB Jablonec",
+   "localId": "fkb-jablonec",
+   "visitante": "Lugano",
+   "visitanteId": "lugano",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "FKB",
+   "visitanteAbbr": "LUG"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-hearts-as-monaco",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T18:45:00+01:00",
+   "local": "Hearts",
+   "localId": "hearts",
+   "visitante": "AS Monaco",
+   "visitanteId": "as-monaco",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "HEA",
+   "visitanteAbbr": "MON"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-kauno-zalgiris-riga-fc",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T18:45:00+01:00",
+   "local": "Kauno Žalgiris",
+   "localId": "kauno-zalgiris",
+   "visitante": "Riga FC",
+   "visitanteId": "riga-fc",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "KAU",
+   "visitanteAbbr": "RIG"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-klubi-sportiv-egnatia-lincoln-red-imps",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T18:45:00+01:00",
+   "local": "Klubi Sportiv Egnatia",
+   "localId": "klubi-sportiv-egnatia",
+   "visitante": "Lincoln Red Imps",
+   "visitanteId": "lincoln-red-imps",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "KLU",
+   "visitanteAbbr": "LIN"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-pafos-fc-fc-midtjylland",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T18:45:00+01:00",
+   "local": "Pafos FC",
+   "localId": "pafos-fc",
+   "visitante": "FC Midtjylland",
+   "visitanteId": "fc-midtjylland",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "PAF",
+   "visitanteAbbr": "MID"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-sk-brann-agf-aarhus",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T18:45:00+01:00",
+   "local": "SK Brann",
+   "localId": "sk-brann",
+   "visitante": "AGF Aarhus",
+   "visitanteId": "agf-aarhus",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "BRA",
+   "visitanteAbbr": "AGF"
   }
  ],
  "clasificacion": {
@@ -18610,9 +18753,134 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-16T18:07:45+01:00",
-  "cambio": "2026-11-16T18:07:45+01:00",
+  "comprobado": "2026-11-16T19:07:42+01:00",
+  "cambio": "2026-11-16T19:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-16T19:07:42+01:00",
+    "nuevos": 9,
+    "horas": 0,
+    "canales": 14,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Ajax – FC Thun",
+     "Nuevo partido: Brighton – FCU Craiova 1948",
+     "Nuevo partido: FKB Jablonec – Lugano",
+     "Nuevo partido: Hearts – AS Monaco",
+     "Nuevo partido: SK Brann – AGF Aarhus",
+     "Nuevo partido: Pafos FC – FC Midtjylland",
+     "Nuevo partido: Klubi Sportiv Egnatia – Lincoln Red Imps",
+     "Nuevo partido: FC Iberia 1999 – Getafe CF",
+     "Nuevo partido: Kauno Žalgiris – Riga FC",
+     "Canal confirmado: Sevilla FC – Real Betis",
+     "Canal confirmado: CD Castellón – CD Eldense",
+     "Canal confirmado: Ponferradina – CD Extremadura",
+     "Canal confirmado: Pontevedra – CD Lugo",
+     "Canal confirmado: Águilas FC – CE Europa"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-sev-bet",
+       "t": "Sevilla FC – Real Betis · confirmado"
+      },
+      {
+       "id": "2627-2-15-cas-eld",
+       "t": "CD Castellón – CD Eldense · confirmado"
+      },
+      {
+       "id": "2627-5-13-ponferradina-cd-extremadura",
+       "t": "Ponferradina – CD Extremadura · confirmado"
+      },
+      {
+       "id": "2627-5-13-pontevedra-cd-lugo",
+       "t": "Pontevedra – CD Lugo · confirmado"
+      },
+      {
+       "id": "2627-5-13-aguilas-fc-ce-europa",
+       "t": "Águilas FC – CE Europa · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-ajax-fc-thun",
+       "t": "Ajax – FC Thun"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-brighton-fcu-craiova-1948",
+       "t": "Brighton – FCU Craiova 1948"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-fkb-jablonec-lugano",
+       "t": "FKB Jablonec – Lugano"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-hearts-as-monaco",
+       "t": "Hearts – AS Monaco"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-sk-brann-agf-aarhus",
+       "t": "SK Brann – AGF Aarhus"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-pafos-fc-fc-midtjylland",
+       "t": "Pafos FC – FC Midtjylland"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-klubi-sportiv-egnatia-lincoln-red-imps",
+       "t": "Klubi Sportiv Egnatia – Lincoln Red Imps"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-fc-iberia-1999-get",
+       "t": "FC Iberia 1999 – Getafe CF"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-kauno-zalgiris-riga-fc",
+       "t": "Kauno Žalgiris – Riga FC"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-6-fase-liga-j4-ajax-fc-thun",
+       "t": "Ajax – FC Thun (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-brighton-fcu-craiova-1948",
+       "t": "Brighton – FCU Craiova 1948 (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-fkb-jablonec-lugano",
+       "t": "FKB Jablonec – Lugano (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-hearts-as-monaco",
+       "t": "Hearts – AS Monaco (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-sk-brann-agf-aarhus",
+       "t": "SK Brann – AGF Aarhus (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-pafos-fc-fc-midtjylland",
+       "t": "Pafos FC – FC Midtjylland (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-klubi-sportiv-egnatia-lincoln-red-imps",
+       "t": "Klubi Sportiv Egnatia – Lincoln Red Imps (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-fc-iberia-1999-get",
+       "t": "FC Iberia 1999 – Getafe CF (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-kauno-zalgiris-riga-fc",
+       "t": "Kauno Žalgiris – Riga FC (Conference)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-16T18:07:45+01:00",
     "nuevos": 0,
@@ -19044,31 +19312,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-15T22:07:41+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Canal confirmado: Real Madrid Castilla – Real Murcia"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-13-real-madrid-castilla-real-murcia",
-       "t": "Real Madrid Castilla – Real Murcia · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
