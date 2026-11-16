@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-16T17:07:50+01:00",
+ "actualizado": "2026-11-16T18:07:45+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -14961,7 +14961,7 @@
      "t": "g",
      "min": "84'",
      "seg": 5040,
-     "j": "<TBD>",
+     "j": "Ibrahim Matiti",
      "lado": "L",
      "pen": false,
      "pp": false
@@ -18610,9 +18610,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-16T17:07:50+01:00",
-  "cambio": "2026-11-16T17:07:50+01:00",
+  "comprobado": "2026-11-16T18:07:45+01:00",
+  "cambio": "2026-11-16T18:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-16T18:07:45+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-16T17:07:50+01:00",
     "nuevos": 1,
@@ -19055,93 +19071,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-15T21:07:43+01:00",
-    "nuevos": 7,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 3,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: PSG – Roma",
-     "Nuevo partido: Atlético de Madrid – Viking",
-     "Nuevo partido: Inter – Stuttgart",
-     "Nuevo partido: Sporting CP – Manchester United",
-     "Nuevo partido: Shakhtar Donetsk – Fenerbahçe",
-     "Nuevo partido: Club Brugge – Liverpool",
-     "Nuevo partido: Lille – Bayern Múnich",
-     "Resultado: SD Eibar 1-1 Cádiz CF",
-     "Resultado: CD Eldense 2-0 CE Sabadell",
-     "Canal confirmado: Athletic Club – RCD Espanyol",
-     "Canal confirmado: FC Andorra – CD Leganés",
-     "Canal confirmado: Villarreal B – Gimnàstic de Tarragona",
-     "Resultado: Real Murcia 1-2 Alcorcón"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-14-eib-cad",
-       "t": "SD Eibar 1-1 Cádiz CF"
-      },
-      {
-       "id": "2627-2-14-eld-sab",
-       "t": "CD Eldense 2-0 CE Sabadell"
-      },
-      {
-       "id": "2627-5-12-real-murcia-alcorcon",
-       "t": "Real Murcia 1-2 Alcorcón"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-13-ath-esp",
-       "t": "Athletic Club – RCD Espanyol"
-      },
-      {
-       "id": "2627-2-15-and-leg",
-       "t": "FC Andorra – CD Leganés · confirmado"
-      },
-      {
-       "id": "2627-5-13-villarreal-b-gimnastic-de-tarragona",
-       "t": "Villarreal B – Gimnàstic de Tarragona · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-4-fase-liga-j5-psg-roma",
-       "t": "PSG – Roma (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-atm-viking",
-       "t": "Atlético de Madrid – Viking (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-inter-stuttgart",
-       "t": "Inter – Stuttgart (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-sporting-cp-manchester-united",
-       "t": "Sporting CP – Manchester United (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-shakhtar-donetsk-fenerbahce",
-       "t": "Shakhtar Donetsk – Fenerbahçe (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-club-brugge-liverpool",
-       "t": "Club Brugge – Liverpool (Champions)"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-lille-bayern-munich",
-       "t": "Lille – Bayern Múnich (Champions)"
-      }
-     ]
     }
    }
   ]
