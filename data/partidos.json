@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-16T20:07:54+01:00",
+ "actualizado": "2026-11-16T21:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16227,7 +16227,7 @@
     "mplus7",
     "orange1"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-15-ten-mll",
@@ -16243,7 +16243,7 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-13-ue-sant-andreu-atletico-madrileno",
@@ -16267,7 +16267,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "SAN",
    "visitanteAbbr": "ATM",
    "etiqueta": "Grupo 2"
@@ -17062,6 +17062,134 @@
    "provisional": true,
    "localAbbr": "BRA",
    "visitanteAbbr": "AGF"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-borac-banja-luka-atalanta",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T21:00:00+01:00",
+   "local": "Borac Banja Luka",
+   "localId": "borac-banja-luka",
+   "visitante": "Atalanta",
+   "visitanteId": "atalanta",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "BOR",
+   "visitanteAbbr": "ATA"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-cska-sofia-trabzonspor",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T21:00:00+01:00",
+   "local": "CSKA Sofia",
+   "localId": "cska-sofia",
+   "visitante": "Trabzonspor",
+   "visitanteId": "trabzonspor",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "CSK",
+   "visitanteAbbr": "TRA"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-freiburg-twente",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T21:00:00+01:00",
+   "local": "Freiburg",
+   "localId": "freiburg",
+   "visitante": "Twente",
+   "visitanteId": "twente",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "FRE",
+   "visitanteAbbr": "TWE"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-gent-crvena-zvezda",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T21:00:00+01:00",
+   "local": "Gent",
+   "localId": "gent",
+   "visitante": "Crvena Zvezda",
+   "visitanteId": "crvena-zvezda",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "GEN",
+   "visitanteAbbr": "CRV"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-hajduk-split-sint-truiden-vv",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T21:00:00+01:00",
+   "local": "Hajduk Split",
+   "localId": "hajduk-split",
+   "visitante": "Sint-Truiden VV",
+   "visitanteId": "sint-truiden-vv",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "HAJ",
+   "visitanteAbbr": "SIN"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-inter-club-d-escaldes-kobenhavn",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T21:00:00+01:00",
+   "local": "Inter Club d'Escaldes",
+   "localId": "inter-club-d-escaldes",
+   "visitante": "København",
+   "visitanteId": "kobenhavn",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "INT",
+   "visitanteAbbr": "KOB"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-nordsjaelland-panathinaikos",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T21:00:00+01:00",
+   "local": "Nordsjælland",
+   "localId": "nordsjaelland",
+   "visitante": "Panathinaikos",
+   "visitanteId": "panathinaikos",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "NOR",
+   "visitanteAbbr": "PAN"
+  },
+  {
+   "id": "2627-6-fase-liga-j4-sc-braga-kups",
+   "liga": 6,
+   "jornada": "Fase liga · J4",
+   "inicio": "2026-11-26T21:00:00+01:00",
+   "local": "SC Braga",
+   "localId": "sc-braga",
+   "visitante": "KuPS",
+   "visitanteId": "kups",
+   "canales": [
+    "mconfpend"
+   ],
+   "provisional": true,
+   "localAbbr": "BRA",
+   "visitanteAbbr": "KUP"
   }
  ],
  "clasificacion": {
@@ -17435,12 +17563,12 @@
     ],
     [
      "clb",
-     13,
+     14,
      3,
      4,
-     6,
+     7,
      19,
-     25,
+     26,
      13
     ],
     [
@@ -17450,6 +17578,16 @@
      4,
      7,
      17,
+     24,
+     13
+    ],
+    [
+     "alb",
+     14,
+     4,
+     1,
+     9,
+     14,
      24,
      13
     ],
@@ -17472,16 +17610,6 @@
      18,
      24,
      11
-    ],
-    [
-     "alb",
-     13,
-     3,
-     1,
-     9,
-     13,
-     24,
-     10
     ],
     [
      "ceu",
@@ -18270,17 +18398,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "atletico-madrileno",
-       12,
-       3,
-       5,
-       4,
-       21,
-       19,
-       14,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        12,
        3,
@@ -18290,6 +18407,17 @@
        17,
        14,
        "Antequera"
+      ],
+      [
+       "atletico-madrileno",
+       12,
+       3,
+       5,
+       4,
+       21,
+       19,
+       14,
+       "Atlético Madrileño"
       ],
       [
        "aguilas-fc",
@@ -18753,9 +18881,118 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-16T20:07:54+01:00",
-  "cambio": "2026-11-16T20:07:54+01:00",
+  "comprobado": "2026-11-16T21:07:43+01:00",
+  "cambio": "2026-11-16T21:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-16T21:07:43+01:00",
+    "nuevos": 8,
+    "horas": 0,
+    "canales": 11,
+    "resultados": 0,
+    "tablas": [
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Freiburg – Twente",
+     "Nuevo partido: SC Braga – KuPS",
+     "Nuevo partido: Gent – Crvena Zvezda",
+     "Nuevo partido: Nordsjælland – Panathinaikos",
+     "Nuevo partido: CSKA Sofia – Trabzonspor",
+     "Nuevo partido: Hajduk Split – Sint-Truiden VV",
+     "Nuevo partido: Borac Banja Luka – Atalanta",
+     "Nuevo partido: Inter Club d'Escaldes – København",
+     "Canal confirmado: Real Madrid – RC Celta",
+     "Canal confirmado: CD Tenerife – RCD Mallorca",
+     "Canal confirmado: UE Sant Andreu – Atlético Madrileño"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-rma-cel",
+       "t": "Real Madrid – RC Celta · confirmado"
+      },
+      {
+       "id": "2627-2-15-ten-mll",
+       "t": "CD Tenerife – RCD Mallorca · confirmado"
+      },
+      {
+       "id": "2627-5-13-ue-sant-andreu-atletico-madrileno",
+       "t": "UE Sant Andreu – Atlético Madrileño · confirmado"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-freiburg-twente",
+       "t": "Freiburg – Twente"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-sc-braga-kups",
+       "t": "SC Braga – KuPS"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-gent-crvena-zvezda",
+       "t": "Gent – Crvena Zvezda"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-nordsjaelland-panathinaikos",
+       "t": "Nordsjælland – Panathinaikos"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-cska-sofia-trabzonspor",
+       "t": "CSKA Sofia – Trabzonspor"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-hajduk-split-sint-truiden-vv",
+       "t": "Hajduk Split – Sint-Truiden VV"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-borac-banja-luka-atalanta",
+       "t": "Borac Banja Luka – Atalanta"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-inter-club-d-escaldes-kobenhavn",
+       "t": "Inter Club d'Escaldes – København"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-6-fase-liga-j4-freiburg-twente",
+       "t": "Freiburg – Twente (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-sc-braga-kups",
+       "t": "SC Braga – KuPS (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-gent-crvena-zvezda",
+       "t": "Gent – Crvena Zvezda (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-nordsjaelland-panathinaikos",
+       "t": "Nordsjælland – Panathinaikos (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-cska-sofia-trabzonspor",
+       "t": "CSKA Sofia – Trabzonspor (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-hajduk-split-sint-truiden-vv",
+       "t": "Hajduk Split – Sint-Truiden VV (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-borac-banja-luka-atalanta",
+       "t": "Borac Banja Luka – Atalanta (Conference)"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-inter-club-d-escaldes-kobenhavn",
+       "t": "Inter Club d'Escaldes – København (Conference)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-16T20:07:54+01:00",
     "nuevos": 0,
@@ -19293,24 +19530,6 @@
     ],
     "detalle": [],
     "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-15T23:07:47+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 13,
     "items": {
      "resultados": [],
      "canales": [],
