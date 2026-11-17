@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T20:07:50+01:00",
+ "actualizado": "2026-11-17T21:07:48+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16536,7 +16536,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "CAC",
    "visitanteAbbr": "LOG",
    "etiqueta": "Grupo 1"
@@ -16553,7 +16553,7 @@
    "canales": [
     "mliga"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-15-bur-alb",
@@ -16568,7 +16568,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-15-ceu-alm",
@@ -17154,6 +17154,35 @@
    "localAbbr": "BIL",
    "visitanteAbbr": "CUL",
    "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-2-16-leg-sab",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-27T20:30:00+01:00",
+   "local": "CD Leganés",
+   "localId": "leg",
+   "visitante": "CE Sabadell",
+   "visitanteId": "sab",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-1-14-lev-rac",
+   "liga": 1,
+   "jornada": "14",
+   "inicio": "2026-11-27T21:00:00+01:00",
+   "local": "Levante UD",
+   "localId": "lev",
+   "visitante": "Real Racing Club",
+   "visitanteId": "rac",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
   },
   {
    "id": "2627-2-13-and-mll",
@@ -18431,17 +18460,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "atletico-madrileno",
-       12,
-       3,
-       5,
-       4,
-       21,
-       19,
-       14,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        12,
        3,
@@ -18451,6 +18469,17 @@
        17,
        14,
        "Antequera"
+      ],
+      [
+       "atletico-madrileno",
+       12,
+       3,
+       5,
+       4,
+       21,
+       19,
+       14,
+       "Atlético Madrileño"
       ],
       [
        "aguilas-fc",
@@ -18914,9 +18943,63 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-17T20:07:50+01:00",
-  "cambio": "2026-11-17T20:07:50+01:00",
+  "comprobado": "2026-11-17T21:07:48+01:00",
+  "cambio": "2026-11-17T21:07:48+01:00",
   "historial": [
+   {
+    "hora": "2026-11-17T21:07:48+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 5,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Levante UD – Real Racing Club",
+     "Nuevo partido: CD Leganés – CE Sabadell",
+     "Canal confirmado: Getafe CF – Atlético de Madrid",
+     "Canal confirmado: Burgos CF – Albacete BP",
+     "Canal confirmado: CP Cacereño – UD Logroñés"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-lev-rac",
+       "t": "Levante UD – Real Racing Club"
+      },
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell"
+      },
+      {
+       "id": "2627-1-13-get-atm",
+       "t": "Getafe CF – Atlético de Madrid · confirmado"
+      },
+      {
+       "id": "2627-2-15-bur-alb",
+       "t": "Burgos CF – Albacete BP · confirmado"
+      },
+      {
+       "id": "2627-5-13-cp-cacereno-ud-logrones",
+       "t": "CP Cacereño – UD Logroñés · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-14-lev-rac",
+       "t": "Levante UD – Real Racing Club (Primera)"
+      },
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-17T20:07:50+01:00",
     "nuevos": 0,
@@ -19418,29 +19501,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-16T23:07:50+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 1,
-    "tablas": [],
-    "detalle": [
-     "Resultado: Albacete BP 1-0 Celta Fortuna"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-2-14-alb-clb",
-       "t": "Albacete BP 1-0 Celta Fortuna"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
