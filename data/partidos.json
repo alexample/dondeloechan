@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T14:07:45+01:00",
+ "actualizado": "2026-11-17T16:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16349,7 +16349,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "BAR",
    "visitanteAbbr": "UNI",
    "etiqueta": "Grupo 1",
@@ -16370,7 +16370,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "CAR",
    "visitanteAbbr": "JAE",
    "etiqueta": "Grupo 2"
@@ -16388,7 +16388,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "FAB",
    "visitanteAbbr": "COR",
    "etiqueta": "Grupo 1",
@@ -18894,9 +18894,42 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-17T15:07:44+01:00",
-  "cambio": "2026-11-17T14:07:45+01:00",
+  "comprobado": "2026-11-17T16:07:43+01:00",
+  "cambio": "2026-11-17T16:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-17T16:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Barakaldo CF – Unionistas de Salamanca",
+     "Canal confirmado: Deportivo Fabril – CD Coria",
+     "Canal confirmado: Cartagena – Real Jaén"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-13-barakaldo-cf-unionistas-de-salamanca",
+       "t": "Barakaldo CF – Unionistas de Salamanca · confirmado"
+      },
+      {
+       "id": "2627-5-13-deportivo-fabril-cd-coria",
+       "t": "Deportivo Fabril – CD Coria · confirmado"
+      },
+      {
+       "id": "2627-5-13-cartagena-real-jaen",
+       "t": "Cartagena – Real Jaén · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-17T15:07:44+01:00",
     "nuevos": 0,
@@ -19428,131 +19461,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-16T19:07:42+01:00",
-    "nuevos": 9,
-    "horas": 0,
-    "canales": 14,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Ajax – FC Thun",
-     "Nuevo partido: Brighton – FCU Craiova 1948",
-     "Nuevo partido: FKB Jablonec – Lugano",
-     "Nuevo partido: Hearts – AS Monaco",
-     "Nuevo partido: SK Brann – AGF Aarhus",
-     "Nuevo partido: Pafos FC – FC Midtjylland",
-     "Nuevo partido: Klubi Sportiv Egnatia – Lincoln Red Imps",
-     "Nuevo partido: FC Iberia 1999 – Getafe CF",
-     "Nuevo partido: Kauno Žalgiris – Riga FC",
-     "Canal confirmado: Sevilla FC – Real Betis",
-     "Canal confirmado: CD Castellón – CD Eldense",
-     "Canal confirmado: Ponferradina – CD Extremadura",
-     "Canal confirmado: Pontevedra – CD Lugo",
-     "Canal confirmado: Águilas FC – CE Europa"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-sev-bet",
-       "t": "Sevilla FC – Real Betis · confirmado"
-      },
-      {
-       "id": "2627-2-15-cas-eld",
-       "t": "CD Castellón – CD Eldense · confirmado"
-      },
-      {
-       "id": "2627-5-13-ponferradina-cd-extremadura",
-       "t": "Ponferradina – CD Extremadura · confirmado"
-      },
-      {
-       "id": "2627-5-13-pontevedra-cd-lugo",
-       "t": "Pontevedra – CD Lugo · confirmado"
-      },
-      {
-       "id": "2627-5-13-aguilas-fc-ce-europa",
-       "t": "Águilas FC – CE Europa · confirmado"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-ajax-fc-thun",
-       "t": "Ajax – FC Thun"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-brighton-fcu-craiova-1948",
-       "t": "Brighton – FCU Craiova 1948"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-fkb-jablonec-lugano",
-       "t": "FKB Jablonec – Lugano"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-hearts-as-monaco",
-       "t": "Hearts – AS Monaco"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-sk-brann-agf-aarhus",
-       "t": "SK Brann – AGF Aarhus"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-pafos-fc-fc-midtjylland",
-       "t": "Pafos FC – FC Midtjylland"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-klubi-sportiv-egnatia-lincoln-red-imps",
-       "t": "Klubi Sportiv Egnatia – Lincoln Red Imps"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-fc-iberia-1999-get",
-       "t": "FC Iberia 1999 – Getafe CF"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-kauno-zalgiris-riga-fc",
-       "t": "Kauno Žalgiris – Riga FC"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-6-fase-liga-j4-ajax-fc-thun",
-       "t": "Ajax – FC Thun (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-brighton-fcu-craiova-1948",
-       "t": "Brighton – FCU Craiova 1948 (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-fkb-jablonec-lugano",
-       "t": "FKB Jablonec – Lugano (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-hearts-as-monaco",
-       "t": "Hearts – AS Monaco (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-sk-brann-agf-aarhus",
-       "t": "SK Brann – AGF Aarhus (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-pafos-fc-fc-midtjylland",
-       "t": "Pafos FC – FC Midtjylland (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-klubi-sportiv-egnatia-lincoln-red-imps",
-       "t": "Klubi Sportiv Egnatia – Lincoln Red Imps (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-fc-iberia-1999-get",
-       "t": "FC Iberia 1999 – Getafe CF (Conference)"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-kauno-zalgiris-riga-fc",
-       "t": "Kauno Žalgiris – Riga FC (Conference)"
-      }
-     ]
     }
    }
   ]
