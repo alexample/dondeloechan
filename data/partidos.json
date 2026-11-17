@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T16:07:43+01:00",
+ "actualizado": "2026-11-17T17:07:52+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16406,7 +16406,7 @@
    "canales": [
     "mliga"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-15-spo-lpa",
@@ -16422,7 +16422,7 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-13-cultural-leonesa-zamora",
@@ -18411,17 +18411,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "antequera",
-       12,
-       3,
-       5,
-       4,
-       18,
-       17,
-       14,
-       "Antequera"
-      ],
-      [
        "atletico-madrileno",
        12,
        3,
@@ -18431,6 +18420,17 @@
        19,
        14,
        "Atlético Madrileño"
+      ],
+      [
+       "antequera",
+       12,
+       3,
+       5,
+       4,
+       18,
+       17,
+       14,
+       "Antequera"
       ],
       [
        "aguilas-fc",
@@ -18894,9 +18894,39 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-17T16:07:43+01:00",
-  "cambio": "2026-11-17T16:07:43+01:00",
+  "comprobado": "2026-11-17T17:07:52+01:00",
+  "cambio": "2026-11-17T17:07:52+01:00",
   "historial": [
+   {
+    "hora": "2026-11-17T17:07:52+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Canal confirmado: Real Racing Club – Real Sociedad",
+     "Canal confirmado: Real Sporting – UD Las Palmas"
+    ],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-rac-rso",
+       "t": "Real Racing Club – Real Sociedad · confirmado"
+      },
+      {
+       "id": "2627-2-15-spo-lpa",
+       "t": "Real Sporting – UD Las Palmas · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-17T16:07:43+01:00",
     "nuevos": 0,
@@ -19443,24 +19473,6 @@
        "t": "Inter Club d'Escaldes – København (Conference)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-16T20:07:54+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
