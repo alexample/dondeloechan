@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T10:07:56+01:00",
+ "actualizado": "2026-11-17T12:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16229,7 +16229,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "ALC",
    "visitanteAbbr": "ALG",
    "etiqueta": "Grupo 2",
@@ -16248,7 +16248,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "ARE",
    "visitanteAbbr": "AVI",
    "etiqueta": "Grupo 1",
@@ -16281,7 +16281,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "HUE",
    "visitanteAbbr": "IBI",
    "etiqueta": "Grupo 2",
@@ -16302,7 +16302,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "OUR",
    "visitanteAbbr": "RFE",
    "etiqueta": "Grupo 1"
@@ -18894,9 +18894,47 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-17T11:07:42+01:00",
-  "cambio": "2026-11-17T10:07:56+01:00",
+  "comprobado": "2026-11-17T12:07:43+01:00",
+  "cambio": "2026-11-17T12:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-17T12:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Canal confirmado: Alcorcón – Algeciras CF",
+     "Canal confirmado: SD Huesca – UD Ibiza",
+     "Canal confirmado: Arenas Club – Real Avilés Industrial",
+     "Canal confirmado: UD Ourense – Racing Ferrol"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-13-alcorcon-algeciras-cf",
+       "t": "Alcorcón – Algeciras CF · confirmado"
+      },
+      {
+       "id": "2627-5-13-sd-huesca-ud-ibiza",
+       "t": "SD Huesca – UD Ibiza · confirmado"
+      },
+      {
+       "id": "2627-5-13-arenas-club-real-aviles-industrial",
+       "t": "Arenas Club – Real Avilés Industrial · confirmado"
+      },
+      {
+       "id": "2627-5-13-ud-ourense-racing-ferrol",
+       "t": "UD Ourense – Racing Ferrol · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-17T11:07:42+01:00",
     "nuevos": 0,
@@ -19529,34 +19567,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-16T14:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: Deportivo Alavés – RC Deportivo",
-     "Canal confirmado: CE Sabadell – Granada CF"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-ala-dep",
-       "t": "Deportivo Alavés – RC Deportivo · confirmado"
-      },
-      {
-       "id": "2627-2-15-sab-gra",
-       "t": "CE Sabadell – Granada CF · confirmado"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
