@@ -727,7 +727,7 @@ function limpiarLado(l) {
   const num = v => (v === null || v === undefined || v === "") ? null : (Number.isInteger(+v) && +v >= 0 && +v < 200 ? +v : NaN);
   const cod = v => (typeof v === "string" && COD.test(v)) ? v : null;
   const out = { jug: [], gol: [], tar: [], cam: [] };
-  for (const j of (Array.isArray(l.jug) ? l.jug : []).slice(0, 40)) { const c = cod(j[0]); const d = num(j[1]); if (!c || Number.isNaN(d)) return null; out.jug.push([c, d, j[2] ? 1 : 0, j[3] ? 1 : 0, j[4] ? 1 : 0]); }
+  for (const j of (Array.isArray(l.jug) ? l.jug : []).slice(0, 40)) { const c = cod(j[0]); const d = num(j[1]); if (!c || Number.isNaN(d)) return null; out.jug.push([c, d, j[2] ? 1 : 0, j[3] ? 1 : 0, j[4] ? 1 : 0, j[5] ? 1 : 0]); }
   for (const g of (Array.isArray(l.gol) ? l.gol : []).slice(0, 40)) { const c = g[0] === null ? null : cod(g[0]); const m = num(g[1]); if ((g[0] !== null && !c) || Number.isNaN(m)) return null; out.gol.push([c, m, g[2] ? 1 : 0]); }
   for (const t of (Array.isArray(l.tar) ? l.tar : []).slice(0, 40)) { const c = cod(t[0]); const m = num(t[1]); const tipo = ["a", "r", "d"].includes(t[2]) ? t[2] : null; if (!c || Number.isNaN(m) || !tipo) return null; out.tar.push([c, m, tipo]); }
   for (const x of (Array.isArray(l.cam) ? l.cam : []).slice(0, 40)) { const m = num(x[0]); const e = x[1] === null ? null : cod(x[1]); const s = x[2] === null ? null : cod(x[2]); if (Number.isNaN(m) || (x[1] !== null && !e) || (x[2] !== null && !s)) return null; out.cam.push([m, e, s]); }
@@ -782,7 +782,9 @@ async function canteraEsquema(request, env, origen) {
   if (request.method !== "POST" || !ORIGENES.includes(origen) || !env.CANTERA_DB) return json({ error: "No." }, 400, origen);
   let b; try { b = await request.json(); } catch { return json({ error: "Petición no válida." }, 400, origen); }
   const clave = String(b.clave || "").slice(0, 40), contenido = String(b.contenido || "").slice(0, 6000);
-  if (!/^[a-z_]{3,40}$/.test(clave)) return json({ error: "Clave no válida." }, 400, origen);
+  if (!/^[a-z_0-9]{3,40}$/.test(clave)) return json({ error: "Clave no válida." }, 400, origen);
+  const n = await env.CANTERA_DB.prepare("SELECT COUNT(*) AS n FROM esquema").first();
+  if (n && n.n > 60) return json({ ok: true }, 200, origen);  // tope: es solo para diagnosticar
   await env.CANTERA_DB.prepare("INSERT OR REPLACE INTO esquema (clave, contenido, visto) VALUES (?, ?, ?)").bind(clave, contenido, Date.now()).run();
   return json({ ok: true }, 200, origen);
 }
