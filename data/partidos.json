@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T21:07:48+01:00",
+ "actualizado": "2026-11-17T22:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -17185,6 +17185,26 @@
    "provisional": true
   },
   {
+   "id": "2627-5-14-hercules-antequera",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-27T21:15:00+01:00",
+   "local": "Hércules",
+   "localId": "hercules",
+   "visitante": "Antequera",
+   "visitanteId": "antequera",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "HER",
+   "visitanteAbbr": "ANT",
+   "etiqueta": "Grupo 2"
+  },
+  {
    "id": "2627-2-13-and-mll",
    "liga": 2,
    "jornada": "13",
@@ -18943,9 +18963,37 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-17T21:07:48+01:00",
-  "cambio": "2026-11-17T21:07:48+01:00",
+  "comprobado": "2026-11-17T22:07:44+01:00",
+  "cambio": "2026-11-17T22:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-17T22:07:44+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Hércules – Antequera"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-14-hercules-antequera",
+       "t": "Hércules – Antequera"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-14-hercules-antequera",
+       "t": "Hércules – Antequera (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-17T21:07:48+01:00",
     "nuevos": 2,
@@ -19476,22 +19524,6 @@
    },
    {
     "hora": "2026-11-17T01:07:45+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-17T00:07:43+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
