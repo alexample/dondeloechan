@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T06:07:46+01:00",
+ "actualizado": "2026-11-17T10:07:56+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -11595,23 +11595,6 @@
    ]
   },
   {
-   "id": "2627-2-13-cas-eib",
-   "liga": 2,
-   "jornada": "13",
-   "inicio": "2026-11-06T20:30:00+01:00",
-   "local": "CD Castellón",
-   "localId": "cas",
-   "visitante": "SD Eibar",
-   "visitanteId": "eib",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "provisional": false,
-   "estado": "aplazado",
-   "goles": []
-  },
-  {
    "id": "2627-1-12-sev-ala",
    "liga": 1,
    "jornada": "12",
@@ -12551,23 +12534,6 @@
    ]
   },
   {
-   "id": "2627-2-13-gra-ten",
-   "liga": 2,
-   "jornada": "13",
-   "inicio": "2026-11-07T21:00:00+01:00",
-   "local": "Granada CF",
-   "localId": "gra",
-   "visitante": "CD Tenerife",
-   "visitanteId": "ten",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "provisional": false,
-   "estado": "aplazado",
-   "goles": []
-  },
-  {
    "id": "2627-5-11-real-zaragoza-sd-huesca",
    "liga": 5,
    "jornada": "11",
@@ -12944,44 +12910,6 @@
      "pp": false
     }
    ]
-  },
-  {
-   "id": "2627-2-13-and-mll",
-   "liga": 2,
-   "jornada": "13",
-   "inicio": "2026-11-08T14:00:00+01:00",
-   "local": "FC Andorra",
-   "localId": "and",
-   "visitante": "RCD Mallorca",
-   "visitanteId": "mll",
-   "canales": [
-    "hyper",
-    "daznhm",
-    {
-     "name": "IB3",
-     "short": "IB3",
-     "op": "free",
-     "dial": "TDT",
-     "how": "Gratis en la TDT de las Illes Balears y en ib3.org."
-    },
-    {
-     "name": "Replay YouTube",
-     "short": "REP",
-     "op": "free",
-     "dial": "TDT",
-     "how": "Gratis en la TDT de ver en directo y en su web."
-    },
-    {
-     "name": "Replay",
-     "short": "REP",
-     "op": "free",
-     "dial": "",
-     "how": "Gratis por internet, en su web o aplicación."
-    }
-   ],
-   "provisional": false,
-   "estado": "aplazado",
-   "goles": []
   },
   {
    "id": "2627-5-11-real-madrid-castilla-hercules",
@@ -17206,6 +17134,75 @@
    "provisional": true,
    "localAbbr": "BRA",
    "visitanteAbbr": "KUP"
+  },
+  {
+   "id": "2627-2-13-and-mll",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-12-09T21:00:00+01:00",
+   "local": "FC Andorra",
+   "localId": "and",
+   "visitante": "RCD Mallorca",
+   "visitanteId": "mll",
+   "canales": [
+    "hyper",
+    "daznhm",
+    {
+     "name": "IB3",
+     "short": "IB3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de las Illes Balears y en ib3.org."
+    },
+    {
+     "name": "Replay YouTube",
+     "short": "REP",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de ver en directo y en su web."
+    },
+    {
+     "name": "Replay",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
+    }
+   ],
+   "provisional": false,
+   "goles": []
+  },
+  {
+   "id": "2627-2-13-cas-eib",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-12-09T21:00:00+01:00",
+   "local": "CD Castellón",
+   "localId": "cas",
+   "visitante": "SD Eibar",
+   "visitanteId": "eib",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": false,
+   "goles": []
+  },
+  {
+   "id": "2627-2-13-gra-ten",
+   "liga": 2,
+   "jornada": "13",
+   "inicio": "2026-12-09T21:00:00+01:00",
+   "local": "Granada CF",
+   "localId": "gra",
+   "visitante": "CD Tenerife",
+   "visitanteId": "ten",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": false,
+   "goles": []
   }
  ],
  "clasificacion": {
@@ -18897,9 +18894,42 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-17T09:07:43+01:00",
-  "cambio": "2026-11-17T06:07:46+01:00",
+  "comprobado": "2026-11-17T10:07:56+01:00",
+  "cambio": "2026-11-17T10:07:56+01:00",
   "historial": [
+   {
+    "hora": "2026-11-17T10:07:56+01:00",
+    "nuevos": 0,
+    "horas": 3,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nueva hora: FC Andorra – RCD Mallorca, 09/12 21:00",
+     "Nueva hora: CD Castellón – SD Eibar, 09/12 21:00",
+     "Nueva hora: Granada CF – CD Tenerife, 09/12 21:00"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [
+      {
+       "id": "2627-2-13-and-mll",
+       "t": "FC Andorra – RCD Mallorca: nueva fecha tras el aplazamiento"
+      },
+      {
+       "id": "2627-2-13-cas-eib",
+       "t": "CD Castellón – SD Eibar: nueva fecha tras el aplazamiento"
+      },
+      {
+       "id": "2627-2-13-gra-ten",
+       "t": "Granada CF – CD Tenerife: nueva fecha tras el aplazamiento"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-17T09:07:43+01:00",
     "nuevos": 0,
@@ -19534,22 +19564,6 @@
        "t": "Mirandés – Bilbao Athletic · confirmado"
       }
      ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-16T12:07:45+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
      "horas": [],
      "nuevos": []
     }
