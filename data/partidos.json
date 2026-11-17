@@ -18894,9 +18894,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-17T10:07:56+01:00",
+  "comprobado": "2026-11-17T11:07:42+01:00",
   "cambio": "2026-11-17T10:07:56+01:00",
   "historial": [
+   {
+    "hora": "2026-11-17T11:07:42+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-17T10:07:56+01:00",
     "nuevos": 0,
@@ -19539,29 +19555,6 @@
       {
        "id": "2627-2-15-sab-gra",
        "t": "CE Sabadell – Granada CF · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-16T13:07:49+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Canal confirmado: Mirandés – Bilbao Athletic"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-13-mirandes-bilbao-athletic",
-       "t": "Mirandés – Bilbao Athletic · confirmado"
       }
      ],
      "horas": [],
