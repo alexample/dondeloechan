@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T18:07:50+01:00",
+ "actualizado": "2026-11-17T19:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16439,7 +16439,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "CUL",
    "visitanteAbbr": "ZAM",
    "etiqueta": "Grupo 1"
@@ -16457,7 +16457,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "MER",
    "visitanteAbbr": "RUN",
    "etiqueta": "Grupo 1",
@@ -16475,7 +16475,7 @@
    "canales": [
     "daznll"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-15-clb-vll",
@@ -16490,7 +16490,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-2-15-gir-eib",
@@ -16519,7 +16519,7 @@
      "how": "Gratis por internet, en su web o aplicación."
     }
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-13-cp-cacereno-ud-logrones",
@@ -17136,6 +17136,26 @@
    "visitanteAbbr": "KUP"
   },
   {
+   "id": "2627-5-14-bilbao-athletic-cultural-leonesa",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-27T19:00:00+01:00",
+   "local": "Bilbao Athletic",
+   "localId": "bilbao-athletic",
+   "visitante": "Cultural Leonesa",
+   "visitanteId": "cultural-leonesa",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "BIL",
+   "visitanteAbbr": "CUL",
+   "etiqueta": "Grupo 1"
+  },
+  {
    "id": "2627-2-13-and-mll",
    "liga": 2,
    "jornada": "13",
@@ -17460,8 +17480,8 @@
      7,
      3,
      3,
-     21,
-     14,
+     22,
+     15,
      24
     ],
     [
@@ -17576,12 +17596,12 @@
     ],
     [
      "clb",
-     13,
+     14,
      3,
      4,
-     6,
+     7,
      19,
-     25,
+     26,
      13
     ],
     [
@@ -17595,13 +17615,23 @@
      13
     ],
     [
+     "alb",
+     14,
+     4,
+     1,
+     9,
+     14,
+     24,
+     13
+    ],
+    [
      "cad",
      14,
      2,
      5,
      7,
-     16,
-     18,
+     17,
+     19,
      11
     ],
     [
@@ -17613,16 +17643,6 @@
      18,
      24,
      11
-    ],
-    [
-     "alb",
-     13,
-     3,
-     1,
-     9,
-     13,
-     24,
-     10
     ],
     [
      "ceu",
@@ -18894,9 +18914,64 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-17T18:07:50+01:00",
-  "cambio": "2026-11-17T18:07:50+01:00",
+  "comprobado": "2026-11-17T19:07:44+01:00",
+  "cambio": "2026-11-17T19:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-17T19:07:44+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [
+     "Segunda"
+    ],
+    "detalle": [
+     "Nuevo partido: Bilbao Athletic – Cultural Leonesa",
+     "Canal confirmado: CA Osasuna – Málaga CF",
+     "Canal confirmado: Girona FC – SD Eibar",
+     "Canal confirmado: Celta Fortuna – Real Valladolid",
+     "Canal confirmado: Cultural Leonesa – Zamora",
+     "Canal confirmado: Mérida – Real Unión"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-13-osa-mal",
+       "t": "CA Osasuna – Málaga CF · confirmado"
+      },
+      {
+       "id": "2627-2-15-gir-eib",
+       "t": "Girona FC – SD Eibar · confirmado"
+      },
+      {
+       "id": "2627-2-15-clb-vll",
+       "t": "Celta Fortuna – Real Valladolid · confirmado"
+      },
+      {
+       "id": "2627-5-13-cultural-leonesa-zamora",
+       "t": "Cultural Leonesa – Zamora · confirmado"
+      },
+      {
+       "id": "2627-5-13-merida-real-union",
+       "t": "Mérida – Real Unión · confirmado"
+      },
+      {
+       "id": "2627-5-14-bilbao-athletic-cultural-leonesa",
+       "t": "Bilbao Athletic – Cultural Leonesa"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-14-bilbao-athletic-cultural-leonesa",
+       "t": "Bilbao Athletic – Cultural Leonesa (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-17T18:07:50+01:00",
     "nuevos": 0,
@@ -19355,22 +19430,6 @@
    },
    {
     "hora": "2026-11-16T22:07:51+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-16T21:27:43+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
