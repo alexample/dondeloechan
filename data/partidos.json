@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T17:07:55+01:00",
+ "actualizado": "2026-11-18T18:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -17231,6 +17231,102 @@
    "provisional": true
   },
   {
+   "id": "2627-5-14-algeciras-cf-sd-huesca",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T16:30:00+01:00",
+   "local": "Algeciras CF",
+   "localId": "algeciras-cf",
+   "visitante": "SD Huesca",
+   "visitanteId": "sd-huesca",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ALG",
+   "visitanteAbbr": "HUE",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-14-real-jaen-aguilas-fc",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T16:30:00+01:00",
+   "local": "Real Jaén",
+   "localId": "real-jaen",
+   "visitante": "Águilas FC",
+   "visitanteId": "aguilas-fc",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "JAE",
+   "visitanteAbbr": "AGU",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-14-ud-ibiza-atletico-madrileno",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T16:30:00+01:00",
+   "local": "UD Ibiza",
+   "localId": "ud-ibiza",
+   "visitante": "Atlético Madrileño",
+   "visitanteId": "atletico-madrileno",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "IBI",
+   "visitanteAbbr": "ATM",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-14-ud-logrones-barakaldo-cf",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T16:30:00+01:00",
+   "local": "UD Logroñés",
+   "localId": "ud-logrones",
+   "visitante": "Barakaldo CF",
+   "visitanteId": "barakaldo-cf",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "LOG",
+   "visitanteAbbr": "BAR",
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-5-14-unionistas-de-salamanca-deportivo-fabril",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T16:30:00+01:00",
+   "local": "Unionistas de Salamanca",
+   "localId": "unionistas-de-salamanca",
+   "visitante": "Deportivo Fabril",
+   "visitanteId": "deportivo-fabril",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "UNI",
+   "visitanteAbbr": "FAB",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
    "id": "2627-2-16-alb-ten",
    "liga": 2,
    "jornada": "16",
@@ -18587,17 +18683,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "atletico-madrileno",
-       12,
-       3,
-       5,
-       4,
-       21,
-       19,
-       14,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        12,
        3,
@@ -18607,6 +18692,17 @@
        17,
        14,
        "Antequera"
+      ],
+      [
+       "atletico-madrileno",
+       12,
+       3,
+       5,
+       4,
+       21,
+       19,
+       14,
+       "Atlético Madrileño"
       ],
       [
        "aguilas-fc",
@@ -19070,9 +19166,104 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-18T17:07:55+01:00",
-  "cambio": "2026-11-18T17:07:55+01:00",
+  "comprobado": "2026-11-18T18:07:43+01:00",
+  "cambio": "2026-11-18T18:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-18T18:07:43+01:00",
+    "nuevos": 5,
+    "horas": 8,
+    "canales": 7,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: UD Logroñés – Barakaldo CF",
+     "Nuevo partido: Real Jaén – Águilas FC",
+     "Nuevo partido: Algeciras CF – SD Huesca",
+     "Nuevo partido: Unionistas de Salamanca – Deportivo Fabril",
+     "Nuevo partido: UD Ibiza – Atlético Madrileño",
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
+     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      },
+      {
+       "id": "2627-5-14-ud-logrones-barakaldo-cf",
+       "t": "UD Logroñés – Barakaldo CF"
+      },
+      {
+       "id": "2627-5-14-real-jaen-aguilas-fc",
+       "t": "Real Jaén – Águilas FC"
+      },
+      {
+       "id": "2627-5-14-algeciras-cf-sd-huesca",
+       "t": "Algeciras CF – SD Huesca"
+      },
+      {
+       "id": "2627-5-14-unionistas-de-salamanca-deportivo-fabril",
+       "t": "Unionistas de Salamanca – Deportivo Fabril"
+      },
+      {
+       "id": "2627-5-14-ud-ibiza-atletico-madrileno",
+       "t": "UD Ibiza – Atlético Madrileño"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      }
+     ],
+     "nuevos": [
+      {
+       "id": "2627-5-14-ud-logrones-barakaldo-cf",
+       "t": "UD Logroñés – Barakaldo CF (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-14-real-jaen-aguilas-fc",
+       "t": "Real Jaén – Águilas FC (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-14-algeciras-cf-sd-huesca",
+       "t": "Algeciras CF – SD Huesca (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-14-unionistas-de-salamanca-deportivo-fabril",
+       "t": "Unionistas de Salamanca – Deportivo Fabril (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-14-ud-ibiza-atletico-madrileno",
+       "t": "UD Ibiza – Atlético Madrileño (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-18T17:07:55+01:00",
     "nuevos": 3,
@@ -19551,60 +19742,6 @@
       {
        "id": "2627-5-14-hercules-antequera",
        "t": "Hércules – Antequera (1ª RFEF)"
-      }
-     ]
-    }
-   },
-   {
-    "hora": "2026-11-17T21:07:48+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 5,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Levante UD – Real Racing Club",
-     "Nuevo partido: CD Leganés – CE Sabadell",
-     "Canal confirmado: Getafe CF – Atlético de Madrid",
-     "Canal confirmado: Burgos CF – Albacete BP",
-     "Canal confirmado: CP Cacereño – UD Logroñés"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-14-lev-rac",
-       "t": "Levante UD – Real Racing Club"
-      },
-      {
-       "id": "2627-2-16-leg-sab",
-       "t": "CD Leganés – CE Sabadell"
-      },
-      {
-       "id": "2627-1-13-get-atm",
-       "t": "Getafe CF – Atlético de Madrid · confirmado"
-      },
-      {
-       "id": "2627-2-15-bur-alb",
-       "t": "Burgos CF – Albacete BP · confirmado"
-      },
-      {
-       "id": "2627-5-13-cp-cacereno-ud-logrones",
-       "t": "CP Cacereño – UD Logroñés · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-14-lev-rac",
-       "t": "Levante UD – Real Racing Club (Primera)"
-      },
-      {
-       "id": "2627-2-16-leg-sab",
-       "t": "CD Leganés – CE Sabadell (Segunda)"
       }
      ]
     }
