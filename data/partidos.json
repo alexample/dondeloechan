@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T19:07:51+01:00",
+ "actualizado": "2026-11-18T20:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -17343,6 +17343,90 @@
    "provisional": true
   },
   {
+   "id": "2627-5-14-alcorcon-real-zaragoza",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T18:45:00+01:00",
+   "local": "Alcorcón",
+   "localId": "alcorcon",
+   "visitante": "Real Zaragoza",
+   "visitanteId": "real-zaragoza",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ALC",
+   "visitanteAbbr": "ZAR",
+   "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-5-14-cd-lugo-ud-ourense",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T18:45:00+01:00",
+   "local": "CD Lugo",
+   "localId": "cd-lugo",
+   "visitante": "UD Ourense",
+   "visitanteId": "ud-ourense",
+   "canales": [
+    {
+     "name": "TVG",
+     "short": "TVG",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Galicia y en la web de la CRTVG."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "LUG",
+   "visitanteAbbr": "OUR",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub."
+  },
+  {
+   "id": "2627-5-14-real-union-arenas-club",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T18:45:00+01:00",
+   "local": "Real Unión",
+   "localId": "real-union",
+   "visitante": "Arenas Club",
+   "visitanteId": "arenas-club",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "RUN",
+   "visitanteAbbr": "ARE",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-14-zamora-pontevedra",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T18:45:00+01:00",
+   "local": "Zamora",
+   "localId": "zamora",
+   "visitante": "Pontevedra",
+   "visitanteId": "pontevedra",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ZAM",
+   "visitanteAbbr": "PON",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
    "id": "2627-2-16-alb-ten",
    "liga": 2,
    "jornada": "16",
@@ -18714,17 +18798,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "atletico-madrileno",
-       12,
-       3,
-       5,
-       4,
-       21,
-       19,
-       14,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        12,
        3,
@@ -18734,6 +18807,17 @@
        17,
        14,
        "Antequera"
+      ],
+      [
+       "atletico-madrileno",
+       12,
+       3,
+       5,
+       4,
+       21,
+       19,
+       14,
+       "Atlético Madrileño"
       ],
       [
        "aguilas-fc",
@@ -19197,9 +19281,101 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-18T19:07:51+01:00",
-  "cambio": "2026-11-18T19:07:51+01:00",
+  "comprobado": "2026-11-18T20:07:42+01:00",
+  "cambio": "2026-11-18T20:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-18T20:07:42+01:00",
+    "nuevos": 4,
+    "horas": 10,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Alcorcón – Real Zaragoza",
+     "Nuevo partido: Real Unión – Arenas Club",
+     "Nuevo partido: CD Lugo – UD Ourense",
+     "Nuevo partido: Zamora – Pontevedra",
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
+     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
+     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      },
+      {
+       "id": "2627-5-14-alcorcon-real-zaragoza",
+       "t": "Alcorcón – Real Zaragoza"
+      },
+      {
+       "id": "2627-5-14-real-union-arenas-club",
+       "t": "Real Unión – Arenas Club"
+      },
+      {
+       "id": "2627-5-14-cd-lugo-ud-ourense",
+       "t": "CD Lugo – UD Ourense"
+      },
+      {
+       "id": "2627-5-14-zamora-pontevedra",
+       "t": "Zamora – Pontevedra"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
+      }
+     ],
+     "nuevos": [
+      {
+       "id": "2627-5-14-alcorcon-real-zaragoza",
+       "t": "Alcorcón – Real Zaragoza (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-14-real-union-arenas-club",
+       "t": "Real Unión – Arenas Club (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-14-cd-lugo-ud-ourense",
+       "t": "CD Lugo – UD Ourense (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-14-zamora-pontevedra",
+       "t": "Zamora – Pontevedra (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-18T19:07:51+01:00",
     "nuevos": 2,
@@ -19792,22 +19968,6 @@
    },
    {
     "hora": "2026-11-17T23:21:09+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-17T23:07:44+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
