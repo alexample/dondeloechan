@@ -19004,9 +19004,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-18T15:07:50+01:00",
+  "comprobado": "2026-11-18T16:07:55+01:00",
   "cambio": "2026-11-18T14:56:13+01:00",
   "historial": [
+   {
+    "hora": "2026-11-18T16:07:55+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-18T15:07:50+01:00",
     "nuevos": 0,
@@ -19472,61 +19488,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-17T19:07:44+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 6,
-    "resultados": 0,
-    "tablas": [
-     "Segunda"
-    ],
-    "detalle": [
-     "Nuevo partido: Bilbao Athletic – Cultural Leonesa",
-     "Canal confirmado: CA Osasuna – Málaga CF",
-     "Canal confirmado: Girona FC – SD Eibar",
-     "Canal confirmado: Celta Fortuna – Real Valladolid",
-     "Canal confirmado: Cultural Leonesa – Zamora",
-     "Canal confirmado: Mérida – Real Unión"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-13-osa-mal",
-       "t": "CA Osasuna – Málaga CF · confirmado"
-      },
-      {
-       "id": "2627-2-15-gir-eib",
-       "t": "Girona FC – SD Eibar · confirmado"
-      },
-      {
-       "id": "2627-2-15-clb-vll",
-       "t": "Celta Fortuna – Real Valladolid · confirmado"
-      },
-      {
-       "id": "2627-5-13-cultural-leonesa-zamora",
-       "t": "Cultural Leonesa – Zamora · confirmado"
-      },
-      {
-       "id": "2627-5-13-merida-real-union",
-       "t": "Mérida – Real Unión · confirmado"
-      },
-      {
-       "id": "2627-5-14-bilbao-athletic-cultural-leonesa",
-       "t": "Bilbao Athletic – Cultural Leonesa"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-14-bilbao-athletic-cultural-leonesa",
-       "t": "Bilbao Athletic – Cultural Leonesa (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
