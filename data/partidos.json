@@ -18955,9 +18955,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-18T03:07:42+01:00",
+  "comprobado": "2026-11-18T04:07:42+01:00",
   "cambio": "2026-11-18T02:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-18T04:07:42+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-18T03:07:42+01:00",
     "nuevos": 0,
@@ -19501,24 +19517,6 @@
     "canales": 0,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-17T06:07:46+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
     "detalle": [],
     "avisos": 0,
     "items": {
