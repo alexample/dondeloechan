@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T21:07:53+01:00",
+ "actualizado": "2026-11-18T22:07:45+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15733,7 +15733,13 @@
    "visitante": "Real Unión",
    "visitanteAbbr": "RUN",
    "visitanteId": "real-union",
-   "provisional": true
+   "provisional": true,
+   "marcador": [
+    0,
+    0
+   ],
+   "estado": "final",
+   "goles": []
   },
   {
    "id": "2627-3-primera-ronda-utebo-sab",
@@ -15799,7 +15805,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    0,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-3-primera-ronda-alcoyano-mll",
@@ -15848,7 +15859,81 @@
    "localId": "cd-badajoz",
    "visitante": "Tenerife",
    "visitanteId": "ten",
-   "provisional": false
+   "provisional": false,
+   "goles": [
+    {
+     "t": "g",
+     "min": "6'",
+     "seg": 360,
+     "j": "Grant-Leon Ranos",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 420,
+     "j": "Juanjo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2280,
+     "j": "Grant-Leon Ranos",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2880,
+     "j": "Carlos Beitia",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "57'",
+     "seg": 3420,
+     "j": "Roko Jureskin",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4140,
+     "j": "Iván Chapela",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "74'",
+     "seg": 4440,
+     "j": "Jorge Barba",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+5'",
+     "seg": 5400,
+     "j": "Víctor Moreno",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-deportiva-minera-cartagena",
@@ -17479,6 +17564,26 @@
    "provisional": true
   },
   {
+   "id": "2627-5-14-cd-extremadura-cp-cacereno",
+   "liga": 5,
+   "jornada": "14",
+   "inicio": "2026-11-28T21:00:00+01:00",
+   "local": "CD Extremadura",
+   "localId": "cd-extremadura",
+   "visitante": "CP Cacereño",
+   "visitanteId": "cp-cacereno",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "EXT",
+   "visitanteAbbr": "CAC",
+   "etiqueta": "Grupo 1"
+  },
+  {
    "id": "2627-2-16-alb-ten",
    "liga": 2,
    "jornada": "16",
@@ -18865,17 +18970,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "atletico-madrileno",
-       12,
-       3,
-       5,
-       4,
-       21,
-       19,
-       14,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        12,
        3,
@@ -18885,6 +18979,17 @@
        17,
        14,
        "Antequera"
+      ],
+      [
+       "atletico-madrileno",
+       12,
+       3,
+       5,
+       4,
+       21,
+       19,
+       14,
+       "Atlético Madrileño"
       ],
       [
        "aguilas-fc",
@@ -19348,9 +19453,91 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-18T21:07:53+01:00",
-  "cambio": "2026-11-18T21:07:53+01:00",
+  "comprobado": "2026-11-18T22:07:45+01:00",
+  "cambio": "2026-11-18T22:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-18T22:07:45+01:00",
+    "nuevos": 1,
+    "horas": 12,
+    "canales": 3,
+    "resultados": 2,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: CD Extremadura – CP Cacereño",
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
+     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
+     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00",
+     "Resultado: Utebo 0-3 CE Sabadell",
+     "Resultado: Portugalete 0-0 Real Unión"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-3-primera-ronda-utebo-sab",
+       "t": "Utebo 0-3 CE Sabadell"
+      },
+      {
+       "id": "2627-3-primera-ronda-portugalete-real-union",
+       "t": "Portugalete 0-0 Real Unión"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      },
+      {
+       "id": "2627-5-14-cd-extremadura-cp-cacereno",
+       "t": "CD Extremadura – CP Cacereño"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
+      }
+     ],
+     "nuevos": [
+      {
+       "id": "2627-5-14-cd-extremadura-cp-cacereno",
+       "t": "CD Extremadura – CP Cacereño (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-18T21:07:53+01:00",
     "nuevos": 2,
@@ -20099,22 +20286,6 @@
     ],
     "detalle": [],
     "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-18T00:07:51+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
     "items": {
      "resultados": [],
      "canales": [],
