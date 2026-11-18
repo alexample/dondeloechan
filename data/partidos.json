@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T14:56:13+01:00",
+ "actualizado": "2026-11-18T17:07:55+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -17148,21 +17148,6 @@
    "etiqueta": "Grupo 1"
   },
   {
-   "id": "2627-2-16-leg-sab",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-27T20:30:00+01:00",
-   "local": "CD Leganés",
-   "localId": "leg",
-   "visitante": "CE Sabadell",
-   "visitanteId": "sab",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "provisional": true
-  },
-  {
    "id": "2627-1-14-lev-rac",
    "liga": 1,
    "jornada": "14",
@@ -17231,10 +17216,91 @@
    "provisional": true
   },
   {
+   "id": "2627-1-14-mal-ath",
+   "liga": 1,
+   "jornada": "14",
+   "inicio": "2026-11-28T16:15:00+01:00",
+   "local": "Málaga CF",
+   "localId": "mal",
+   "visitante": "Athletic Club",
+   "visitanteId": "ath",
+   "canales": [
+    "daznll",
+    "daznfree"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-16-alb-ten",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T17:00:00+01:00",
+   "local": "Albacete BP",
+   "localId": "alb",
+   "visitante": "CD Tenerife",
+   "visitanteId": "ten",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-16-eld-gir",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T17:00:00+01:00",
+   "local": "CD Eldense",
+   "localId": "eld",
+   "visitante": "Girona FC",
+   "visitanteId": "gir",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-16-leg-sab",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T17:00:00+01:00",
+   "local": "CD Leganés",
+   "localId": "leg",
+   "visitante": "CE Sabadell",
+   "visitanteId": "sab",
+   "canales": [
+    "hyper",
+    "daznhm",
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    },
+    {
+     "name": "Replay YouTube",
+     "short": "REP",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de ver en directo y en su web."
+    },
+    {
+     "name": "Replay",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
+    }
+   ],
+   "provisional": true
+  },
+  {
    "id": "2627-2-16-lpa-and",
    "liga": 2,
    "jornada": "16",
-   "inicio": "2026-11-28T14:00:00+01:00",
+   "inicio": "2026-11-29T17:00:00+01:00",
    "local": "UD Las Palmas",
    "localId": "lpa",
    "visitante": "FC Andorra",
@@ -19004,9 +19070,80 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-18T16:07:55+01:00",
-  "cambio": "2026-11-18T14:56:13+01:00",
+  "comprobado": "2026-11-18T17:07:55+01:00",
+  "cambio": "2026-11-18T17:07:55+01:00",
   "historial": [
+   {
+    "hora": "2026-11-18T17:07:55+01:00",
+    "nuevos": 3,
+    "horas": 4,
+    "canales": 5,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Málaga CF – Athletic Club",
+     "Nuevo partido: Albacete BP – CD Tenerife",
+     "Nuevo partido: CD Eldense – Girona FC",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
+     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00"
+    ],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC"
+      },
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 29/11 a las 17:00"
+      },
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 29/11 a las 17:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 29/11 a las 17:00"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 29/11 a las 17:00"
+      }
+     ],
+     "nuevos": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club (Primera)"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife (Segunda)"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-18T16:07:55+01:00",
     "nuevos": 0,
@@ -19470,24 +19607,6 @@
        "t": "CD Leganés – CE Sabadell (Segunda)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-17T20:07:50+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
