@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T20:07:42+01:00",
+ "actualizado": "2026-11-18T21:07:53+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -15761,7 +15761,45 @@
    "localId": "utebo",
    "visitante": "CE Sabadell",
    "visitanteId": "sab",
-   "provisional": false
+   "provisional": false,
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 576,
+     "j": "Nikolai Óbolo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "25'",
+     "seg": 1469,
+     "j": "Alain Ribeiro",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2278,
+     "j": "Yanis Rahmani",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+2'",
+     "seg": 5400,
+     "j": "Royo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-3-primera-ronda-alcoyano-mll",
@@ -16575,7 +16613,7 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-1-13-lev-elc",
@@ -16589,7 +16627,7 @@
    "canales": [
     "daznll"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-4-fase-liga-j5-bod-glimt-lask",
@@ -17427,6 +17465,20 @@
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
+   "id": "2627-1-14-rma-ala",
+   "liga": 1,
+   "jornada": "14",
+   "inicio": "2026-11-28T21:00:00+01:00",
+   "local": "Real Madrid",
+   "localId": "rma",
+   "visitante": "Deportivo Alavés",
+   "visitanteId": "ala",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
    "id": "2627-2-16-alb-ten",
    "liga": 2,
    "jornada": "16",
@@ -17516,6 +17568,21 @@
    "localId": "lpa",
    "visitante": "FC Andorra",
    "visitanteId": "and",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-16-vll-rsb",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T17:00:00+01:00",
+   "local": "Real Valladolid",
+   "localId": "vll",
+   "visitante": "Real Sociedad B",
+   "visitanteId": "rsb",
    "canales": [
     "hyper",
     "daznhm"
@@ -18798,17 +18865,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "antequera",
-       12,
-       3,
-       5,
-       4,
-       18,
-       17,
-       14,
-       "Antequera"
-      ],
-      [
        "atletico-madrileno",
        12,
        3,
@@ -18818,6 +18874,17 @@
        19,
        14,
        "Atlético Madrileño"
+      ],
+      [
+       "antequera",
+       12,
+       3,
+       5,
+       4,
+       18,
+       17,
+       14,
+       "Antequera"
       ],
       [
        "aguilas-fc",
@@ -19281,9 +19348,98 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-18T20:07:42+01:00",
-  "cambio": "2026-11-18T20:07:42+01:00",
+  "comprobado": "2026-11-18T21:07:53+01:00",
+  "cambio": "2026-11-18T21:07:53+01:00",
   "historial": [
+   {
+    "hora": "2026-11-18T21:07:53+01:00",
+    "nuevos": 2,
+    "horas": 11,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Real Madrid – Deportivo Alavés",
+     "Nuevo partido: Real Valladolid – Real Sociedad B",
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
+     "Canal confirmado: Levante UD – Elche CF",
+     "Canal confirmado: AD Ceuta FC – UD Almería",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
+     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
+     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00"
+    ],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      },
+      {
+       "id": "2627-1-14-rma-ala",
+       "t": "Real Madrid – Deportivo Alavés"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B"
+      },
+      {
+       "id": "2627-1-13-lev-elc",
+       "t": "Levante UD – Elche CF · confirmado"
+      },
+      {
+       "id": "2627-2-15-ceu-alm",
+       "t": "AD Ceuta FC – UD Almería · confirmado"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B: 29/11 a las 17:00"
+      }
+     ],
+     "nuevos": [
+      {
+       "id": "2627-1-14-rma-ala",
+       "t": "Real Madrid – Deportivo Alavés (Primera)"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-18T20:07:42+01:00",
     "nuevos": 4,
@@ -19952,22 +20108,6 @@
    },
    {
     "hora": "2026-11-18T00:07:51+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-17T23:21:09+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
