@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T18:07:43+01:00",
+ "actualizado": "2026-11-18T19:07:51+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -17327,6 +17327,22 @@
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
+   "id": "2627-1-14-elc-atm",
+   "liga": 1,
+   "jornada": "14",
+   "inicio": "2026-11-28T18:30:00+01:00",
+   "local": "Elche CF",
+   "localId": "elc",
+   "visitante": "Atlético de Madrid",
+   "visitanteId": "atm",
+   "canales": [
+    "mliga",
+    "mplus7",
+    "orange1"
+   ],
+   "provisional": true
+  },
+  {
    "id": "2627-2-16-alb-ten",
    "liga": 2,
    "jornada": "16",
@@ -17335,6 +17351,21 @@
    "localId": "alb",
    "visitante": "CD Tenerife",
    "visitanteId": "ten",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-16-eib-bur",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T17:00:00+01:00",
+   "local": "SD Eibar",
+   "localId": "eib",
+   "visitante": "Burgos CF",
+   "visitanteId": "bur",
    "canales": [
     "hyper",
     "daznhm"
@@ -18683,17 +18714,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "antequera",
-       12,
-       3,
-       5,
-       4,
-       18,
-       17,
-       14,
-       "Antequera"
-      ],
-      [
        "atletico-madrileno",
        12,
        3,
@@ -18703,6 +18723,17 @@
        19,
        14,
        "Atlético Madrileño"
+      ],
+      [
+       "antequera",
+       12,
+       3,
+       5,
+       4,
+       18,
+       17,
+       14,
+       "Antequera"
       ],
       [
        "aguilas-fc",
@@ -19166,9 +19197,82 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-18T18:07:43+01:00",
-  "cambio": "2026-11-18T18:07:43+01:00",
+  "comprobado": "2026-11-18T19:07:51+01:00",
+  "cambio": "2026-11-18T19:07:51+01:00",
   "historial": [
+   {
+    "hora": "2026-11-18T19:07:51+01:00",
+    "nuevos": 2,
+    "horas": 9,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Elche CF – Atlético de Madrid",
+     "Nuevo partido: SD Eibar – Burgos CF",
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
+     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00"
+    ],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      },
+      {
+       "id": "2627-1-14-elc-atm",
+       "t": "Elche CF – Atlético de Madrid"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 29/11 a las 17:00"
+      }
+     ],
+     "nuevos": [
+      {
+       "id": "2627-1-14-elc-atm",
+       "t": "Elche CF – Atlético de Madrid (Primera)"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-18T18:07:43+01:00",
     "nuevos": 5,
@@ -19716,34 +19820,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-17T22:07:44+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 1,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Hércules – Antequera"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-14-hercules-antequera",
-       "t": "Hércules – Antequera"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-14-hercules-antequera",
-       "t": "Hércules – Antequera (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
