@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T02:07:42+01:00",
+ "actualizado": "2026-11-18T07:07:48+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -18472,17 +18472,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "antequera",
-       12,
-       3,
-       5,
-       4,
-       18,
-       17,
-       14,
-       "Antequera"
-      ],
-      [
        "atletico-madrileno",
        12,
        3,
@@ -18492,6 +18481,17 @@
        19,
        14,
        "Atlético Madrileño"
+      ],
+      [
+       "antequera",
+       12,
+       3,
+       5,
+       4,
+       18,
+       17,
+       14,
+       "Antequera"
       ],
       [
        "aguilas-fc",
@@ -18955,9 +18955,27 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-18T06:07:41+01:00",
-  "cambio": "2026-11-18T02:07:42+01:00",
+  "comprobado": "2026-11-18T07:07:48+01:00",
+  "cambio": "2026-11-18T07:07:48+01:00",
   "historial": [
+   {
+    "hora": "2026-11-18T07:07:48+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-18T06:07:41+01:00",
     "nuevos": 0,
@@ -19490,39 +19508,6 @@
      "resultados": [],
      "canales": [],
      "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-17T10:07:56+01:00",
-    "nuevos": 0,
-    "horas": 3,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nueva hora: FC Andorra – RCD Mallorca, 09/12 21:00",
-     "Nueva hora: CD Castellón – SD Eibar, 09/12 21:00",
-     "Nueva hora: Granada CF – CD Tenerife, 09/12 21:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [
-      {
-       "id": "2627-2-13-and-mll",
-       "t": "FC Andorra – RCD Mallorca: nueva fecha tras el aplazamiento"
-      },
-      {
-       "id": "2627-2-13-cas-eib",
-       "t": "CD Castellón – SD Eibar: nueva fecha tras el aplazamiento"
-      },
-      {
-       "id": "2627-2-13-gra-ten",
-       "t": "Granada CF – CD Tenerife: nueva fecha tras el aplazamiento"
-      }
-     ],
      "nuevos": []
     }
    }
