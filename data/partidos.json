@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-19T12:07:48+01:00",
+ "actualizado": "2026-11-19T13:07:51+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16872,7 +16872,8 @@
    "visitante": "Borussia Dortmund",
    "visitanteId": "borussia-dortmund",
    "canales": [
-    "mlc3"
+    "mlc3",
+    "mlcmulti"
    ],
    "provisional": true,
    "localAbbr": "ARS",
@@ -16888,7 +16889,8 @@
    "visitante": "AEK Atenas",
    "visitanteId": "aek-atenas",
    "canales": [
-    "mlc7"
+    "mlc7",
+    "mlcmulti"
    ],
    "provisional": true,
    "localAbbr": "COM",
@@ -16904,7 +16906,8 @@
    "visitante": "Porto",
    "visitanteId": "porto",
    "canales": [
-    "mlc6"
+    "mlc6",
+    "mlcmulti"
    ],
    "provisional": true,
    "localAbbr": "FEY",
@@ -16920,7 +16923,8 @@
    "visitante": "Napoli",
    "visitanteId": "napoli",
    "canales": [
-    "mlc5"
+    "mlc5",
+    "mlcmulti"
    ],
    "provisional": true,
    "localAbbr": "MCI",
@@ -16936,7 +16940,8 @@
    "visitante": "RC Lens",
    "visitanteId": "rc-lens",
    "canales": [
-    "mlc8"
+    "mlc8",
+    "mlcmulti"
    ],
    "provisional": true,
    "localAbbr": "RBL",
@@ -16968,7 +16973,8 @@
    "visitante": "Real Betis",
    "visitanteId": "bet",
    "canales": [
-    "mlc2"
+    "mlc2",
+    "mlcmulti"
    ],
    "provisional": true,
    "localAbbr": "SLO"
@@ -16982,7 +16988,9 @@
    "localId": "sabah",
    "visitante": "FC Barcelona",
    "visitanteId": "bar",
-   "canales": [],
+   "canales": [
+    "mlc"
+   ],
    "provisional": true,
    "localAbbr": "SBH"
   },
@@ -16995,7 +17003,9 @@
    "localId": "slavia-praga",
    "visitante": "Villarreal CF",
    "visitanteId": "vil",
-   "canales": [],
+   "canales": [
+    "mlc3"
+   ],
    "provisional": true,
    "localAbbr": "SLA"
   },
@@ -17008,7 +17018,10 @@
    "localId": "atm",
    "visitante": "Viking",
    "visitanteId": "viking",
-   "canales": [],
+   "canales": [
+    "mlc2",
+    "mlcmulti"
+   ],
    "provisional": true,
    "visitanteAbbr": "VIK"
   },
@@ -17021,7 +17034,10 @@
    "localId": "club-brugge",
    "visitante": "Liverpool",
    "visitanteId": "liverpool",
-   "canales": [],
+   "canales": [
+    "mlc5",
+    "mlcmulti"
+   ],
    "provisional": true,
    "localAbbr": "BRU",
    "visitanteAbbr": "LIV"
@@ -17035,7 +17051,10 @@
    "localId": "inter",
    "visitante": "Stuttgart",
    "visitanteId": "stuttgart",
-   "canales": [],
+   "canales": [
+    "mlc6",
+    "mlcmulti"
+   ],
    "provisional": true,
    "localAbbr": "INT",
    "visitanteAbbr": "STU"
@@ -17049,7 +17068,10 @@
    "localId": "lille",
    "visitante": "Bayern Múnich",
    "visitanteId": "bayern-munich",
-   "canales": [],
+   "canales": [
+    "mlc7",
+    "mlcmulti"
+   ],
    "provisional": true,
    "localAbbr": "LIL",
    "visitanteAbbr": "BAY"
@@ -17063,7 +17085,10 @@
    "localId": "psg",
    "visitante": "Roma",
    "visitanteId": "roma",
-   "canales": [],
+   "canales": [
+    "mlc3",
+    "mlcmulti"
+   ],
    "provisional": true,
    "visitanteAbbr": "ROM"
   },
@@ -17076,7 +17101,10 @@
    "localId": "shakhtar-donetsk",
    "visitante": "Fenerbahçe",
    "visitanteId": "fenerbahce",
-   "canales": [],
+   "canales": [
+    "mlc9",
+    "mlcmulti"
+   ],
    "provisional": true,
    "localAbbr": "SHA",
    "visitanteAbbr": "FEN"
@@ -17090,7 +17118,10 @@
    "localId": "sporting-cp",
    "visitante": "Manchester United",
    "visitanteId": "manchester-united",
-   "canales": [],
+   "canales": [
+    "mlc8",
+    "mlcmulti"
+   ],
    "provisional": true,
    "localAbbr": "SCP",
    "visitanteAbbr": "MUN"
@@ -19160,17 +19191,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "antequera",
-       12,
-       3,
-       5,
-       4,
-       18,
-       17,
-       14,
-       "Antequera"
-      ],
-      [
        "atletico-madrileno",
        12,
        3,
@@ -19180,6 +19200,17 @@
        19,
        14,
        "Atlético Madrileño"
+      ],
+      [
+       "antequera",
+       12,
+       3,
+       5,
+       4,
+       18,
+       17,
+       14,
+       "Antequera"
       ],
       [
        "aguilas-fc",
@@ -19643,9 +19674,130 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-19T12:07:48+01:00",
-  "cambio": "2026-11-19T12:07:48+01:00",
+  "comprobado": "2026-11-19T13:07:51+01:00",
+  "cambio": "2026-11-19T13:07:51+01:00",
   "historial": [
+   {
+    "hora": "2026-11-19T13:07:51+01:00",
+    "nuevos": 0,
+    "horas": 12,
+    "canales": 17,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
+     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
+     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00"
+    ],
+    "avisos": 14,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-arsenal-borussia-dortmund",
+       "t": "Arsenal – Borussia Dortmund"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-manchester-city-napoli",
+       "t": "Manchester City – Napoli"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-feyenoord-porto",
+       "t": "Feyenoord – Porto"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-rb-leipzig-rc-lens",
+       "t": "RB Leipzig – RC Lens"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-slovan-bratislava-bet",
+       "t": "Slovan Bratislava – Real Betis"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-como-aek-atenas",
+       "t": "Como – AEK Atenas"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-slavia-praga-vil",
+       "t": "Slavia Praga – Villarreal CF"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-sabah-bar",
+       "t": "Sabah – FC Barcelona"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-psg-roma",
+       "t": "PSG – Roma"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-atm-viking",
+       "t": "Atlético de Madrid – Viking"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-inter-stuttgart",
+       "t": "Inter – Stuttgart"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-sporting-cp-manchester-united",
+       "t": "Sporting CP – Manchester United"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-shakhtar-donetsk-fenerbahce",
+       "t": "Shakhtar Donetsk – Fenerbahçe"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-club-brugge-liverpool",
+       "t": "Club Brugge – Liverpool"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-lille-bayern-munich",
+       "t": "Lille – Bayern Múnich"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-19T12:07:48+01:00",
     "nuevos": 3,
@@ -21193,22 +21345,6 @@
    },
    {
     "hora": "2026-11-18T16:07:55+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-18T15:07:50+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
