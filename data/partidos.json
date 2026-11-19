@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-19T16:07:43+01:00",
+ "actualizado": "2026-11-19T17:07:46+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -17872,6 +17872,20 @@
    "etiqueta": "Grupo 2"
   },
   {
+   "id": "2627-1-14-dep-bar",
+   "liga": 1,
+   "jornada": "14",
+   "inicio": "2026-11-29T16:15:00+01:00",
+   "local": "RC Deportivo",
+   "localId": "dep",
+   "visitante": "FC Barcelona",
+   "visitanteId": "bar",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
+  },
+  {
    "id": "2627-2-16-alb-ten",
    "liga": 2,
    "jornada": "16",
@@ -17979,6 +17993,22 @@
    "canales": [
     "hyper",
     "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-16-mll-cas",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T17:00:00+01:00",
+   "local": "RCD Mallorca",
+   "localId": "mll",
+   "visitante": "CD Castellón",
+   "visitanteId": "cas",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
    ],
    "provisional": true
   },
@@ -19756,9 +19786,98 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-19T16:07:43+01:00",
-  "cambio": "2026-11-19T16:07:43+01:00",
+  "comprobado": "2026-11-19T17:07:46+01:00",
+  "cambio": "2026-11-19T17:07:46+01:00",
   "historial": [
+   {
+    "hora": "2026-11-19T17:07:46+01:00",
+    "nuevos": 2,
+    "horas": 15,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: RC Deportivo – FC Barcelona",
+     "Nuevo partido: RCD Mallorca – CD Castellón",
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
+     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
+     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
+     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
+     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      },
+      {
+       "id": "2627-2-16-mll-cas",
+       "t": "RCD Mallorca – CD Castellón"
+      },
+      {
+       "id": "2627-1-14-dep-bar",
+       "t": "RC Deportivo – FC Barcelona"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
+      },
+      {
+       "id": "2627-2-16-gra-ceu",
+       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-mll-cas",
+       "t": "RCD Mallorca – CD Castellón: 29/11 a las 17:00"
+      }
+     ],
+     "nuevos": [
+      {
+       "id": "2627-1-14-dep-bar",
+       "t": "RC Deportivo – FC Barcelona (Primera)"
+      },
+      {
+       "id": "2627-2-16-mll-cas",
+       "t": "RCD Mallorca – CD Castellón (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-19T16:07:43+01:00",
     "nuevos": 2,
@@ -21389,98 +21508,6 @@
       {
        "id": "2627-2-16-vll-rsb",
        "t": "Real Valladolid – Real Sociedad B (Segunda)"
-      }
-     ]
-    }
-   },
-   {
-    "hora": "2026-11-18T20:07:42+01:00",
-    "nuevos": 4,
-    "horas": 10,
-    "canales": 6,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Alcorcón – Real Zaragoza",
-     "Nuevo partido: Real Unión – Arenas Club",
-     "Nuevo partido: CD Lugo – UD Ourense",
-     "Nuevo partido: Zamora – Pontevedra",
-     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
-     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
-     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
-     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
-     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
-     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
-     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
-     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-14-mal-ath",
-       "t": "Málaga CF – Athletic Club"
-      },
-      {
-       "id": "2627-5-14-alcorcon-real-zaragoza",
-       "t": "Alcorcón – Real Zaragoza"
-      },
-      {
-       "id": "2627-5-14-real-union-arenas-club",
-       "t": "Real Unión – Arenas Club"
-      },
-      {
-       "id": "2627-5-14-cd-lugo-ud-ourense",
-       "t": "CD Lugo – UD Ourense"
-      },
-      {
-       "id": "2627-5-14-zamora-pontevedra",
-       "t": "Zamora – Pontevedra"
-      }
-     ],
-     "horas": [
-      {
-       "id": "2627-2-16-leg-sab",
-       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
-      },
-      {
-       "id": "2627-2-16-lpa-and",
-       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-alb-ten",
-       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eld-gir",
-       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eib-bur",
-       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
-      }
-     ],
-     "nuevos": [
-      {
-       "id": "2627-5-14-alcorcon-real-zaragoza",
-       "t": "Alcorcón – Real Zaragoza (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-14-real-union-arenas-club",
-       "t": "Real Unión – Arenas Club (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-14-cd-lugo-ud-ourense",
-       "t": "CD Lugo – UD Ourense (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-14-zamora-pontevedra",
-       "t": "Zamora – Pontevedra (1ª RFEF)"
       }
      ]
     }
