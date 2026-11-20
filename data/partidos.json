@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T19:07:43+01:00",
+ "actualizado": "2026-11-20T21:07:53+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16097,7 +16097,23 @@
    "provisional": false,
    "localAbbr": "TER",
    "visitanteAbbr": "HER",
-   "etiqueta": "Grupo 2"
+   "etiqueta": "Grupo 2",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "31'",
+     "seg": 1860,
+     "j": "Hamza Abdelilah",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-15-and-leg",
@@ -17022,7 +17038,7 @@
     "mlc2",
     "mlcmulti"
    ],
-   "provisional": true,
+   "provisional": false,
    "visitanteAbbr": "VIK"
   },
   {
@@ -17038,7 +17054,7 @@
     "mlc5",
     "mlcmulti"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "BRU",
    "visitanteAbbr": "LIV"
   },
@@ -17055,7 +17071,7 @@
     "mlc6",
     "mlcmulti"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "INT",
    "visitanteAbbr": "STU"
   },
@@ -17072,7 +17088,7 @@
     "mlc7",
     "mlcmulti"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "LIL",
    "visitanteAbbr": "BAY"
   },
@@ -17089,7 +17105,7 @@
     "mlc3",
     "mlcmulti"
    ],
-   "provisional": true,
+   "provisional": false,
    "visitanteAbbr": "ROM"
   },
   {
@@ -17105,7 +17121,7 @@
     "mlc9",
     "mlcmulti"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "SHA",
    "visitanteAbbr": "FEN"
   },
@@ -17122,7 +17138,7 @@
     "mlc8",
     "mlcmulti"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "SCP",
    "visitanteAbbr": "MUN"
   },
@@ -18045,6 +18061,21 @@
    "provisional": true
   },
   {
+   "id": "2627-2-16-ovi-clb",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T17:00:00+01:00",
+   "local": "Real Oviedo",
+   "localId": "ovi",
+   "visitante": "Celta Fortuna",
+   "visitanteId": "clb",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
    "id": "2627-2-16-vll-rsb",
    "liga": 2,
    "jornada": "16",
@@ -18135,6 +18166,20 @@
    "provisional": true
   },
   {
+   "id": "2627-1-14-esp-get",
+   "liga": 1,
+   "jornada": "14",
+   "inicio": "2026-11-30T21:00:00+01:00",
+   "local": "RCD Espanyol",
+   "localId": "esp",
+   "visitante": "Getafe CF",
+   "visitanteId": "get",
+   "canales": [
+    "daznll"
+   ],
+   "provisional": true
+  },
+  {
    "id": "2627-2-13-and-mll",
    "liga": 2,
    "jornada": "13",
@@ -18206,7 +18251,7 @@
  ],
  "clasificacion": {
   "1": {
-   "tras": "Jornada 12",
+   "tras": "Jornada 13",
    "filas": [
     [
      "bar",
@@ -18270,13 +18315,13 @@
     ],
     [
      "ath",
-     11,
+     12,
      4,
-     4,
+     5,
      3,
      15,
      11,
-     16
+     17
     ],
     [
      "vil",
@@ -18319,6 +18364,16 @@
      13
     ],
     [
+     "esp",
+     13,
+     3,
+     4,
+     6,
+     13,
+     14,
+     13
+    ],
+    [
      "ala",
      12,
      3,
@@ -18327,16 +18382,6 @@
      15,
      17,
      13
-    ],
-    [
-     "esp",
-     12,
-     3,
-     3,
-     6,
-     13,
-     14,
-     12
     ],
     [
      "ray",
@@ -18411,7 +18456,7 @@
    ]
   },
   "2": {
-   "tras": "Jornada 14",
+   "tras": "Jornada 15",
    "filas": [
     [
      "alm",
@@ -18565,13 +18610,23 @@
     ],
     [
      "leg",
-     14,
+     15,
      4,
      3,
-     7,
+     8,
      14,
-     24,
+     25,
      15
+    ],
+    [
+     "and",
+     14,
+     4,
+     2,
+     8,
+     19,
+     24,
+     14
     ],
     [
      "clb",
@@ -18611,16 +18666,6 @@
      7,
      17,
      19,
-     11
-    ],
-    [
-     "and",
-     13,
-     3,
-     2,
-     8,
-     18,
-     24,
      11
     ],
     [
@@ -19410,17 +19455,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "antequera",
-       12,
-       3,
-       5,
-       4,
-       18,
-       17,
-       14,
-       "Antequera"
-      ],
-      [
        "atletico-madrileno",
        12,
        3,
@@ -19430,6 +19464,17 @@
        19,
        14,
        "Atlético Madrileño"
+      ],
+      [
+       "antequera",
+       12,
+       3,
+       5,
+       4,
+       18,
+       17,
+       14,
+       "Antequera"
       ],
       [
        "aguilas-fc",
@@ -19893,9 +19938,152 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-20T20:07:47+01:00",
-  "cambio": "2026-11-20T19:07:43+01:00",
+  "comprobado": "2026-11-20T21:07:53+01:00",
+  "cambio": "2026-11-20T21:07:53+01:00",
   "historial": [
+   {
+    "hora": "2026-11-20T21:07:53+01:00",
+    "nuevos": 2,
+    "horas": 21,
+    "canales": 11,
+    "resultados": 1,
+    "tablas": [
+     "Primera",
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: RCD Espanyol – Getafe CF",
+     "Nuevo partido: Real Oviedo – Celta Fortuna",
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
+     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
+     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
+     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
+     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
+     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
+     "Nueva hora: UD Almería – Real Sporting, 29/11 17:00",
+     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
+     "Nueva hora: Real Oviedo – Celta Fortuna, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
+     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 17:00"
+    ],
+    "avisos": 14,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-13-cd-teruel-hercules",
+       "t": "CD Teruel 0-1 Hércules"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      },
+      {
+       "id": "2627-2-16-ovi-clb",
+       "t": "Real Oviedo – Celta Fortuna"
+      },
+      {
+       "id": "2627-1-14-esp-get",
+       "t": "RCD Espanyol – Getafe CF"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-psg-roma",
+       "t": "PSG – Roma · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-atm-viking",
+       "t": "Atlético de Madrid – Viking · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-inter-stuttgart",
+       "t": "Inter – Stuttgart · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-sporting-cp-manchester-united",
+       "t": "Sporting CP – Manchester United · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-shakhtar-donetsk-fenerbahce",
+       "t": "Shakhtar Donetsk – Fenerbahçe · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-club-brugge-liverpool",
+       "t": "Club Brugge – Liverpool · confirmado"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-lille-bayern-munich",
+       "t": "Lille – Bayern Múnich · confirmado"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
+      },
+      {
+       "id": "2627-2-16-gra-ceu",
+       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-mll-cas",
+       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-cad-cor",
+       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-alm-spo",
+       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
+      },
+      {
+       "id": "2627-2-16-ovi-clb",
+       "t": "Real Oviedo – Celta Fortuna: 29/11 a las 17:00"
+      }
+     ],
+     "nuevos": [
+      {
+       "id": "2627-1-14-esp-get",
+       "t": "RCD Espanyol – Getafe CF (Primera)"
+      },
+      {
+       "id": "2627-2-16-ovi-clb",
+       "t": "Real Oviedo – Celta Fortuna (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-20T20:07:47+01:00",
     "nuevos": 0,
@@ -21756,89 +21944,6 @@
    },
    {
     "hora": "2026-11-20T00:07:49+01:00",
-    "nuevos": 0,
-    "horas": 20,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
-     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
-     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
-     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
-     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
-     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 17:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
-     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
-     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00",
-     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 17:00",
-     "Nueva hora: CD Eldense – Girona FC, 29/11 17:00"
-    ],
-    "avisos": 1,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-14-mal-ath",
-       "t": "Málaga CF – Athletic Club"
-      }
-     ],
-     "horas": [
-      {
-       "id": "2627-2-16-leg-sab",
-       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
-      },
-      {
-       "id": "2627-2-16-lpa-and",
-       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-alb-ten",
-       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eld-gir",
-       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eib-bur",
-       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-vll-rsb",
-       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-gra-ceu",
-       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-mll-cas",
-       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-cad-cor",
-       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-alm-spo",
-       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
-      }
-     ],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-19T23:07:47+01:00",
     "nuevos": 0,
     "horas": 20,
     "canales": 2,
