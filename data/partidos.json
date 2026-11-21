@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T20:07:44+01:00",
+ "actualizado": "2026-11-21T21:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -16686,7 +16686,32 @@
    "canales": [
     "daznll"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2970,
+     "j": "Antony",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Enrique Salas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-15-cas-eld",
@@ -16702,7 +16727,32 @@
     "daznhm",
     "orange2"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2312,
+     "j": "Agustín Sienra",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5203,
+     "j": "Álvaro Martín",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-13-aguilas-fc-ce-europa",
@@ -16721,7 +16771,32 @@
    "localAbbr": "AGU",
    "visitanteAbbr": "EUR",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "42'",
+     "seg": 2520,
+     "j": "Albert Tolosa",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "76'",
+     "seg": 4560,
+     "j": "Flavio Guimaraes",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-13-ponferradina-cd-extremadura",
@@ -16741,7 +16816,41 @@
    "provisional": false,
    "localAbbr": "PFR",
    "visitanteAbbr": "EXT",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "2'",
+     "seg": 120,
+     "j": "Giovani Zarfino",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "34'",
+     "seg": 2040,
+     "j": "Koke",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 4020,
+     "j": "Óscar Vacas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-13-pontevedra-cd-lugo",
@@ -16767,7 +16876,50 @@
    "localAbbr": "PON",
    "visitanteAbbr": "LUG",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite TVG; completo, en FANPLAY TV y FootballClub.",
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "11'",
+     "seg": 660,
+     "j": "Simon Luca Perez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "30'",
+     "seg": 1800,
+     "j": "Álex Gallar",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "45'",
+     "seg": 2700,
+     "j": "Alberto Ulloa",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "60'",
+     "seg": 3600,
+     "j": "Yelko Pino",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-13-rma-cel",
@@ -18639,16 +18791,6 @@
      30
     ],
     [
-     "bet",
-     13,
-     9,
-     2,
-     2,
-     21,
-     15,
-     29
-    ],
-    [
      "atm",
      12,
      9,
@@ -18657,6 +18799,16 @@
      23,
      10,
      28
+    ],
+    [
+     "bet",
+     13,
+     8,
+     3,
+     2,
+     21,
+     16,
+     27
     ],
     [
      "rso",
@@ -18672,11 +18824,11 @@
      "sev",
      13,
      5,
-     3,
-     5,
-     17,
+     4,
+     4,
+     18,
      20,
-     18
+     19
     ],
     [
      "ath",
@@ -18829,7 +18981,7 @@
      10,
      3,
      1,
-     25,
+     26,
      5,
      33
     ],
@@ -18864,6 +19016,16 @@
      24
     ],
     [
+     "mll",
+     14,
+     6,
+     6,
+     2,
+     18,
+     10,
+     24
+    ],
+    [
      "eib",
      13,
      7,
@@ -18882,16 +19044,6 @@
      20,
      17,
      24
-    ],
-    [
-     "mll",
-     13,
-     6,
-     5,
-     2,
-     18,
-     10,
-     23
     ],
     [
      "spo",
@@ -18934,6 +19086,16 @@
      20
     ],
     [
+     "ten",
+     14,
+     4,
+     7,
+     3,
+     17,
+     17,
+     19
+    ],
+    [
      "sab",
      15,
      4,
@@ -18954,16 +19116,6 @@
      18
     ],
     [
-     "ten",
-     13,
-     4,
-     6,
-     3,
-     17,
-     17,
-     18
-    ],
-    [
      "leg",
      15,
      5,
@@ -18980,7 +19132,7 @@
      2,
      8,
      15,
-     20,
+     21,
      17
     ],
     [
@@ -19453,13 +19605,13 @@
      "filas": [
       [
        "cd-lugo",
-       12,
-       9,
+       13,
+       10,
        1,
        2,
-       20,
+       22,
        12,
-       28,
+       31,
        "CD Lugo"
       ],
       [
@@ -19475,12 +19627,12 @@
       ],
       [
        "pontevedra",
-       12,
+       13,
        6,
        3,
-       3,
+       4,
        16,
-       13,
+       15,
        21,
        "Pontevedra"
       ],
@@ -19551,13 +19703,24 @@
        "Racing Ferrol"
       ],
       [
+       "ponferradina",
+       13,
+       4,
+       6,
+       3,
+       10,
+       10,
+       18,
+       "Ponferradina"
+      ],
+      [
        "cd-extremadura",
-       12,
+       13,
        5,
        1,
-       6,
-       23,
-       18,
+       7,
+       24,
+       20,
        16,
        "CD Extremadura"
       ],
@@ -19593,17 +19756,6 @@
        19,
        15,
        "CD Coria"
-      ],
-      [
-       "ponferradina",
-       12,
-       3,
-       6,
-       3,
-       8,
-       9,
-       15,
-       "Ponferradina"
       ],
       [
        "cultural-leonesa",
@@ -20303,9 +20455,121 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-21T20:07:44+01:00",
-  "cambio": "2026-11-21T20:07:44+01:00",
+  "comprobado": "2026-11-21T21:07:42+01:00",
+  "cambio": "2026-11-21T21:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-21T21:07:42+01:00",
+    "nuevos": 0,
+    "horas": 22,
+    "canales": 2,
+    "resultados": 5,
+    "tablas": [
+     "Primera",
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Resultado: Sevilla FC 1-1 Real Betis",
+     "Resultado: CD Castellón 2-0 CD Eldense",
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
+     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
+     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
+     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
+     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
+     "Nueva hora: Real Oviedo – Celta Fortuna, 30/11 20:30",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
+     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
+     "Nueva hora: UD Almería – Real Sporting, 29/11 17:00",
+     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
+     "Nueva hora: Real Oviedo – Celta Fortuna, 29/11 17:00"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-13-sev-bet",
+       "t": "Sevilla FC 1-1 Real Betis"
+      },
+      {
+       "id": "2627-2-15-cas-eld",
+       "t": "CD Castellón 2-0 CD Eldense"
+      },
+      {
+       "id": "2627-5-13-pontevedra-cd-lugo",
+       "t": "Pontevedra 0-2 CD Lugo"
+      },
+      {
+       "id": "2627-5-13-ponferradina-cd-extremadura",
+       "t": "Ponferradina 2-1 CD Extremadura"
+      },
+      {
+       "id": "2627-5-13-aguilas-fc-ce-europa",
+       "t": "Águilas FC 0-2 CE Europa"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF – Athletic Club"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
+      },
+      {
+       "id": "2627-2-16-gra-ceu",
+       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-mll-cas",
+       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-cad-cor",
+       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-alm-spo",
+       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
+      },
+      {
+       "id": "2627-2-16-ovi-clb",
+       "t": "Real Oviedo – Celta Fortuna: 30/11 a las 20:30"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-21T20:07:44+01:00",
     "nuevos": 0,
@@ -22325,100 +22589,6 @@
     "avisos": 1,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-14-mal-ath",
-       "t": "Málaga CF – Athletic Club"
-      }
-     ],
-     "horas": [
-      {
-       "id": "2627-2-16-leg-sab",
-       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
-      },
-      {
-       "id": "2627-2-16-lpa-and",
-       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-alb-ten",
-       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eld-gir",
-       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eib-bur",
-       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-vll-rsb",
-       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-gra-ceu",
-       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-mll-cas",
-       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-cad-cor",
-       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-alm-spo",
-       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-ovi-clb",
-       "t": "Real Oviedo – Celta Fortuna: 30/11 a las 20:30"
-      }
-     ],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-21T00:07:50+01:00",
-    "nuevos": 0,
-    "horas": 22,
-    "canales": 2,
-    "resultados": 1,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
-     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
-     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
-     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
-     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 30/11 20:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
-     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 17:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
-     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 29/11 17:00",
-     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00"
-    ],
-    "avisos": 1,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-13-real-madrid-castilla-real-murcia",
-       "t": "Real Madrid Castilla 0-2 Real Murcia"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-14-mal-ath",
