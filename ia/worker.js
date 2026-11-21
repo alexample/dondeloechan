@@ -667,6 +667,50 @@ async function aemetJSON(ruta, env) {
   const r2 = await fetch(j1.datos);
   return JSON.parse(textoAemet(await r2.arrayBuffer()));
 }
+// Historia de un club: busca su artículo en Wikipedia en español y devuelve la introducción y el apartado «Historia».
+// Solo texto de Wikipedia (con enlace), nada inventado: si no hay un artículo que encaje, responde sin texto.
+const WIKI_UA = { "User-Agent": "CanteraMadrid/1.0 (app de fútbol base; https://github.com/alexample/cantera-madrid)" };
+function normWiki(t) { return String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim(); }
+const VACIAS_CLUB = new Set("a b c d e f ad cd cf ud sd sad cp ef ce ac rc rcd at atl atletico agrupacion asociacion club deportivo deportiva de del la las los el futbol escuela sociedad union real asoc cultural recreativo recreativa i ii fem femenino".split(" "));
+function cortarFrases(t, max) { if (t.length <= max) return t; const c = t.slice(0, max); const i = Math.max(c.lastIndexOf(". "), c.lastIndexOf(".\n")); return i > 200 ? c.slice(0, i + 1) : c + "…"; }
+async function canteraClub(request, env, origen) {
+  const u = new URL(request.url);
+  const club = String(u.searchParams.get("club") || "").slice(0, 80), pueblo = String(u.searchParams.get("pueblo") || "").slice(0, 60);
+  if (club.length < 3) return json({ error: "Falta el club." }, 400, origen);
+  const clave = "cmclub:v1:" + normWiki(club) + "|" + normWiki(pueblo);
+  if (env.VALORA) { try { const ya = await env.VALORA.get(clave); if (ya) return json(JSON.parse(ya), 200, origen); } catch { } }
+  const fuertes = normWiki(club).split(" ").filter(w => w.length > 2 && !VACIAS_CLUB.has(w));
+  let res = { texto: null };
+  try {
+    if (fuertes.length) {
+      const q = club.replace(/\b(S\.?A\.?D\.?|[A-Z]\.)\s*$/i, "") + " fútbol";
+      const bus = await (await fetch("https://es.wikipedia.org/w/api.php?action=query&list=search&format=json&srlimit=8&srsearch=" + encodeURIComponent(q), { headers: WIKI_UA })).json();
+      let mejor = null, top = 0;
+      for (const r of (bus.query && bus.query.search) || []) {
+        const tit = normWiki(r.title), frag = normWiki(r.snippet);
+        const enTitulo = fuertes.filter(w => (" " + tit + " ").includes(" " + w + " ")).length;
+        if (!enTitulo) continue;
+        let pt = enTitulo * 3 + (/futbol|club/.test(tit + " " + frag) ? 2 : -5) + (pueblo && (tit + " " + frag).includes(normWiki(pueblo)) ? 1 : 0);
+        if (/^(anexo|categoria)/.test(tit)) pt -= 10;
+        if (pt > top) { top = pt; mejor = r.title; }
+      }
+      if (mejor && top >= 4) {
+        const ex = await (await fetch("https://es.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exsectionformat=wiki&redirects=1&format=json&titles=" + encodeURIComponent(mejor), { headers: WIKI_UA })).json();
+        const pg = Object.values((ex.query && ex.query.pages) || {})[0] || {};
+        const todo = String(pg.extract || "");
+        if (/f[uú]tbol/i.test(todo.slice(0, 1500))) {
+          const intro = todo.split(/\n==[^=]/)[0].trim();
+          const mh = todo.match(/\n==\s*Historia\s*==\s*\n([\s\S]*?)(?=\n==[^=]|$)/i);
+          const hist = mh ? mh[1].replace(/\n===\s*(.+?)\s*===\s*\n/g, "\n$1. ").replace(/\n{2,}/g, "\n").trim() : "";
+          res = { titulo: pg.title || mejor, texto: cortarFrases(intro, 900), historia: hist ? cortarFrases(hist, 1800) : "", url: "https://es.wikipedia.org/wiki/" + encodeURIComponent(String(pg.title || mejor).replace(/ /g, "_")), fuente: "Wikipedia" };
+        }
+      }
+    }
+  } catch (e) { return json({ texto: null, error: "Wikipedia no responde." }, 200, origen); }
+  if (env.VALORA) { try { await env.VALORA.put(clave, JSON.stringify(res), { expirationTtl: (res.texto ? 30 : 7) * 86400 }); } catch { } }
+  return json(res, 200, origen);
+}
+
 async function cacheado(clave, segundos, fn) {
   const cache = caches.default, req = new Request("https://cache.cantera/" + clave);
   const ya = await cache.match(req);
@@ -842,6 +886,7 @@ export default {
     if (new URL(request.url).pathname === "/cantera-esquema") return canteraEsquema(request, env, origen);
     if (new URL(request.url).pathname === "/cantera-tiempo") return canteraTiempo(request, env, origen);
     if (new URL(request.url).pathname === "/cantera-previa") return canteraPrevia(request, env, origen);
+    if (new URL(request.url).pathname === "/cantera-club") return canteraClub(request, env, origen);
     if (request.method === "GET" && new URL(request.url).pathname === "/alineaciones") {
       if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
       try { return await alineaciones(request, env, ctx, origen); }
