@@ -671,7 +671,7 @@ async function aemetJSON(ruta, env) {
 // Solo texto de Wikipedia (con enlace), nada inventado: si no hay un artículo que encaje, responde sin texto.
 const WIKI_UA = { "User-Agent": "CanteraMadrid/1.0 (app de fútbol base; https://github.com/alexample/cantera-madrid)" };
 function normWiki(t) { return String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim(); }
-const VACIAS_CLUB = new Set("a b c d e f ad cd cf ud sd sad cp ef ce ac rc rcd at atl atletico agrupacion asociacion club deportivo deportiva de del la las los el futbol escuela sociedad union real asoc cultural recreativo recreativa i ii fem femenino".split(" "));
+const VACIAS_CLUB = new Set("a b c d e f ad cd cf ud sd sad cp ef ce ac rc rcd at agrupacion asociacion club deportivo deportiva de del la las los el futbol escuela sociedad asoc i ii fem femenino".split(" "));
 function cortarFrases(t, max) { if (t.length <= max) return t; const c = t.slice(0, max); const i = Math.max(c.lastIndexOf(". "), c.lastIndexOf(".\n")); return i > 200 ? c.slice(0, i + 1) : c + "…"; }
 async function canteraClub(request, env, origen) {
   const u = new URL(request.url);
@@ -689,7 +689,7 @@ async function canteraClub(request, env, origen) {
       for (const r of (bus.query && bus.query.search) || []) {
         const tit = normWiki(r.title), frag = normWiki(r.snippet);
         const enTitulo = fuertes.filter(w => (" " + tit + " ").includes(" " + w + " ")).length;
-        if (!enTitulo) continue;
+        if (enTitulo < fuertes.length) continue;   // todas las palabras propias del club en el título (evita confundir clubes del mismo pueblo)
         let pt = enTitulo * 3 + (/futbol|club/.test(tit + " " + frag) ? 2 : -5) + (pueblo && (tit + " " + frag).includes(normWiki(pueblo)) ? 1 : 0);
         if (/^(anexo|categoria)/.test(tit)) pt -= 10;
         if (pt > top) { top = pt; mejor = r.title; }
