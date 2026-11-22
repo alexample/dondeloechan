@@ -685,7 +685,7 @@ async function canteraClub(request, env, origen) {
   try {
     if (fuertes.length) {
       const q = club.replace(/\b(S\.?A\.?D\.?|[A-Z]\.)\s*$/i, "") + " fútbol";
-      const bus = await (await fetch("https://es.wikipedia.org/w/api.php?action=query&list=search&format=json&srlimit=8&srsearch=" + encodeURIComponent(q), { headers: WIKI_UA })).json();
+      const bus = await (await fetch("https://es.wikipedia.org/w/api.php?action=query&list=search&format=json&srlimit=8&srsearch=" + encodeURIComponent(q), { headers: WIKI_UA, signal: AbortSignal.timeout(6000) })).json();
       let mejor = null, top = 0;
       for (const r of (bus.query && bus.query.search) || []) {
         const tit = normWiki(r.title), frag = normWiki(r.snippet);
@@ -696,7 +696,7 @@ async function canteraClub(request, env, origen) {
         if (pt > top) { top = pt; mejor = r.title; }
       }
       if (mejor && top >= 4) {
-        const ex = await (await fetch("https://es.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exsectionformat=wiki&redirects=1&format=json&titles=" + encodeURIComponent(mejor), { headers: WIKI_UA })).json();
+        const ex = await (await fetch("https://es.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&exsectionformat=wiki&redirects=1&format=json&titles=" + encodeURIComponent(mejor), { headers: WIKI_UA, signal: AbortSignal.timeout(6000) })).json();
         const pg = Object.values((ex.query && ex.query.pages) || {})[0] || {};
         const todo = String(pg.extract || "").slice(0, 40000);
         if (/f[uú]tbol/i.test(todo.slice(0, 1500))) {
