@@ -678,7 +678,7 @@ async function canteraClub(request, env, origen) {
   const club = String(u.searchParams.get("club") || "").slice(0, 80), pueblo = String(u.searchParams.get("pueblo") || "").slice(0, 60);
   const webClub = String(u.searchParams.get("web") || "").trim().slice(0, 120);
   if (club.length < 3) return json({ error: "Falta el club." }, 400, origen);
-  const clave = "cmclub:v2:" + normWiki(club) + "|" + normWiki(pueblo) + "|" + normWiki(webClub);
+  const clave = "cmclub:v3:" + normWiki(club) + "|" + normWiki(pueblo) + "|" + normWiki(webClub);
   if (env.VALORA) { try { const ya = await env.VALORA.get(clave); if (ya) return json(JSON.parse(ya), 200, origen); } catch { } }
   const fuertes = normWiki(club).split(" ").filter(w => w.length > 2 && !VACIAS_CLUB.has(w));
   let res = { texto: null };
@@ -708,12 +708,28 @@ async function canteraClub(request, env, origen) {
       }
     }
   } catch (e) { }
+  // Redes sociales enlazadas desde la web del club (la federación no guarda TikTok ni YouTube)
+  if (webClub) { try { res.redes = await redesWebClub(webClub); } catch (e) { } }
   // Sin artículo en Wikipedia: la propia web del club (la que figura en la federación), resumida solo con lo que dice
   if (!res.texto && webClub) { try { const w = await historiaWebClub(webClub, club, env); if (w) res = w; } catch (e) { } }
   if (env.VALORA) { try { await env.VALORA.put(clave, JSON.stringify(res), { expirationTtl: (res.texto ? 30 : 7) * 86400 }); } catch { } }
   return json(res, 200, origen);
 }
 
+async function redesWebClub(web) {
+  let u; try { u = new URL(/^https?:\/\//i.test(web) ? web : "https://" + web); } catch { return {}; }
+  if (!/^[a-z0-9.-]+\.[a-z]{2,}$/i.test(u.hostname)) return {};
+  const r = await fetch(u.href, { headers: { "User-Agent": "Mozilla/5.0 (Linux; Android 14) CanteraMadrid/1.0" }, redirect: "follow", signal: AbortSignal.timeout(8000) });
+  if (!r.ok) return {};
+  const h = (await r.text()).slice(0, 600000), red = {};
+  const pat = { instagram: /instagram\.com\/[A-Za-z0-9_.]{2,}/, tiktok: /tiktok\.com\/@[A-Za-z0-9_.]{2,}/, facebook: /facebook\.com\/[A-Za-z0-9_.\-]{3,}/, x: /(?:twitter|x)\.com\/[A-Za-z0-9_]{2,}/, youtube: /youtube\.com\/(?:@|c\/|channel\/|user\/)[A-Za-z0-9_.\-]{2,}/ };
+  for (const m of h.matchAll(/href=["'](https?:\/\/[^"']+)["']/gi)) {
+    const url = m[1];
+    if (/sharer|share\?|intent\/|\/share\b|\/p\/|\/reel\/|\/status\/|\/watch|\/posts\/|\/video\//i.test(url)) continue;
+    for (const [k, re] of Object.entries(pat)) if (!red[k] && re.test(url)) red[k] = url.split(/[?#]/)[0];
+  }
+  return red;
+}
 function textoDeHtml(h) {
   return String(h || "").replace(/<(script|style|noscript|svg|nav|footer|header)[\s\S]*?<\/\1>/gi, " ").replace(/<br\s*\/?>|<\/p>|<\/h\d>|<\/li>/gi, "\n")
     .replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'")
