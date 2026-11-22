@@ -676,8 +676,9 @@ function cortarFrases(t, max) { if (t.length <= max) return t; const c = t.slice
 async function canteraClub(request, env, origen) {
   const u = new URL(request.url);
   const club = String(u.searchParams.get("club") || "").slice(0, 80), pueblo = String(u.searchParams.get("pueblo") || "").slice(0, 60);
+  const webClub = String(u.searchParams.get("web") || "").trim().slice(0, 120);
   if (club.length < 3) return json({ error: "Falta el club." }, 400, origen);
-  const clave = "cmclub:v1:" + normWiki(club) + "|" + normWiki(pueblo);
+  const clave = "cmclub:v2:" + normWiki(club) + "|" + normWiki(pueblo) + "|" + normWiki(webClub);
   if (env.VALORA) { try { const ya = await env.VALORA.get(clave); if (ya) return json(JSON.parse(ya), 200, origen); } catch { } }
   const fuertes = normWiki(club).split(" ").filter(w => w.length > 2 && !VACIAS_CLUB.has(w));
   let res = { texto: null };
@@ -706,9 +707,60 @@ async function canteraClub(request, env, origen) {
         }
       }
     }
-  } catch (e) { return json({ texto: null, error: "Wikipedia no responde." }, 200, origen); }
+  } catch (e) { }
+  // Sin artículo en Wikipedia: la propia web del club (la que figura en la federación), resumida solo con lo que dice
+  if (!res.texto && webClub) { try { const w = await historiaWebClub(webClub, club, env); if (w) res = w; } catch (e) { } }
   if (env.VALORA) { try { await env.VALORA.put(clave, JSON.stringify(res), { expirationTtl: (res.texto ? 30 : 7) * 86400 }); } catch { } }
   return json(res, 200, origen);
+}
+
+function textoDeHtml(h) {
+  return String(h || "").replace(/<(script|style|noscript|svg|nav|footer|header)[\s\S]*?<\/\1>/gi, " ").replace(/<br\s*\/?>|<\/p>|<\/h\d>|<\/li>/gi, "\n")
+    .replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'")
+    .replace(/&[a-z]+;/gi, " ").replace(/[ \t]+/g, " ").replace(/\n\s*/g, "\n").trim();
+}
+async function historiaWebClub(web, club, env) {
+  let base;
+  try { base = new URL(/^https?:\/\//i.test(web) ? web : "https://" + web); } catch { return null; }
+  if (!/^[a-z0-9.-]+\.[a-z]{2,}$/i.test(base.hostname)) return null;
+  const UA = { "User-Agent": "Mozilla/5.0 (Linux; Android 14) CanteraMadrid/1.0", "Accept": "text/html" };
+  const traer = async url => { const r = await fetch(url, { headers: UA, redirect: "follow", signal: AbortSignal.timeout(8000) }); if (!r.ok || !/html/i.test(r.headers.get("content-type") || "")) return null; return { html: (await r.text()).slice(0, 600000), url: r.url }; };
+  let ini = await traer(base.href);
+  if (!ini && base.protocol === "https:") { base.protocol = "http:"; ini = await traer(base.href); }
+  if (!ini) return null;
+  const host = new URL(ini.url).hostname.replace(/^www\./, "");
+  const cand = [];
+  for (const m of ini.html.matchAll(/<a\b[^>]*href=["']([^"'#]+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    let url; try { url = new URL(m[1], ini.url); } catch { continue; }
+    if (url.hostname.replace(/^www\./, "") !== host) continue;
+    const t = normWiki(textoDeHtml(m[2]) + " " + url.pathname.replace(/[-_/]/g, " "));
+    const pt = /histori/.test(t) ? 6 : /quienes somos|nosotros|sobre nosotros|el club|nuestro club|club/.test(t) ? 3 : 0;
+    if (pt && !cand.some(c => c.url === url.href)) cand.push({ url: url.href, pt });
+  }
+  cand.sort((a, b) => b.pt - a.pt);
+  const paginas = [];
+  for (const c of cand.slice(0, 2)) { try { const p = await traer(c.url); if (p) paginas.push(p); } catch { } }
+  paginas.push(ini);
+  let elegido = null;
+  for (const p of paginas) {
+    const t = textoDeHtml(p.html);
+    const i = t.search(/fund[oóa]|histori|naci[oó]|se cre[oó]|\b(19[0-9]{2}|20[0-2][0-9])\b/i);
+    if (i >= 0 && /fund|histori|temporada|naci|cre[oó]/i.test(t)) { elegido = { texto: t.slice(Math.max(0, i - 600), i + 5000), url: p.url }; break; }
+  }
+  if (!elegido || !env.AI) return null;
+  const sistema = "Eres un redactor de una app de fútbol base. Resume en español, en 60-150 palabras y en tono neutro, la historia del club «" + club + "» usando SOLO lo que dice el texto de su web. No añadas datos, fechas, nombres ni logros que no aparezcan en el texto. No incluyas nombres de menores ni datos de contacto. Si el texto no cuenta nada de la historia del club, responde exactamente: NADA";
+  for (const modelo of MODELOS) {
+    try {
+      const r = await env.AI.run(modelo, { messages: [{ role: "system", content: sistema }, { role: "user", content: elegido.texto }], max_tokens: 400, temperature: 0 });
+      let t = String((r && (r.response || (r.result && r.result.response))) || "").trim();
+      if (!t) continue;
+      if (/^NADA\b/i.test(t) || t.length < 60) return null;
+      const fin = Math.max(t.lastIndexOf("."), t.lastIndexOf("!"));
+      if (fin > 40) t = t.slice(0, fin + 1);
+      return { titulo: "Web del club", texto: t, historia: "", url: elegido.url, fuente: "web del club", resumen: true };
+    } catch (e) { }
+  }
+  return null;
 }
 
 async function cacheado(clave, segundos, fn) {
