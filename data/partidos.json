@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23T20:07:47+01:00",
+ "actualizado": "2026-11-23T21:07:52+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -19067,7 +19067,7 @@
    "canales": [
     "mliga"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-5-14-cd-extremadura-cp-cacereno",
@@ -19084,7 +19084,7 @@
     "fanplay",
     "fclub"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "EXT",
    "visitanteAbbr": "CAC",
    "etiqueta": "Grupo 1"
@@ -20080,6 +20080,16 @@
      13
     ],
     [
+     "lev",
+     13,
+     2,
+     6,
+     5,
+     16,
+     21,
+     12
+    ],
+    [
      "ray",
      12,
      3,
@@ -20110,24 +20120,14 @@
      12
     ],
     [
-     "lev",
-     12,
-     2,
-     5,
-     5,
-     16,
-     21,
-     11
-    ],
-    [
      "elc",
-     12,
+     13,
      2,
-     4,
+     5,
      6,
      14,
      20,
-     10
+     11
     ],
     [
      "mal",
@@ -20145,6 +20145,16 @@
    "tras": "Jornada 15",
    "filas": [
     [
+     "alm",
+     15,
+     11,
+     2,
+     2,
+     28,
+     12,
+     35
+    ],
+    [
      "cas",
      14,
      10,
@@ -20153,16 +20163,6 @@
      26,
      5,
      33
-    ],
-    [
-     "alm",
-     14,
-     10,
-     2,
-     2,
-     26,
-     11,
-     32
     ],
     [
      "gir",
@@ -20356,12 +20356,12 @@
     ],
     [
      "ceu",
-     14,
+     15,
      1,
      2,
+     12,
      11,
-     10,
-     32,
+     34,
      5
     ]
    ]
@@ -21624,9 +21624,103 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-23T20:07:47+01:00",
-  "cambio": "2026-11-23T20:07:47+01:00",
+  "comprobado": "2026-11-23T21:07:52+01:00",
+  "cambio": "2026-11-23T21:07:52+01:00",
   "historial": [
+   {
+    "hora": "2026-11-23T21:07:52+01:00",
+    "nuevos": 0,
+    "horas": 22,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
+     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
+     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
+     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
+     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
+     "Nueva hora: Real Oviedo – Celta Fortuna, 30/11 20:30",
+     "Canal confirmado: Real Madrid – Deportivo Alavés",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
+     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
+     "Nueva hora: UD Almería – Real Sporting, 29/11 17:00",
+     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
+     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
+     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
+     "Nueva hora: Real Oviedo – Celta Fortuna, 29/11 17:00",
+     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00"
+    ],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-rma-ala",
+       "t": "Real Madrid – Deportivo Alavés · confirmado"
+      },
+      {
+       "id": "2627-5-14-cd-extremadura-cp-cacereno",
+       "t": "CD Extremadura – CP Cacereño · confirmado"
+      }
+     ],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
+      },
+      {
+       "id": "2627-2-16-gra-ceu",
+       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-mll-cas",
+       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-cad-cor",
+       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-alm-spo",
+       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
+      },
+      {
+       "id": "2627-2-16-ovi-clb",
+       "t": "Real Oviedo – Celta Fortuna: 30/11 a las 20:30"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-23T20:07:47+01:00",
     "nuevos": 0,
@@ -23936,110 +24030,6 @@
     "avisos": 1,
     "items": {
      "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-14-mal-ath",
-       "t": "Málaga CF – Athletic Club"
-      }
-     ],
-     "horas": [
-      {
-       "id": "2627-2-16-leg-sab",
-       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
-      },
-      {
-       "id": "2627-2-16-lpa-and",
-       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-alb-ten",
-       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eld-gir",
-       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eib-bur",
-       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-vll-rsb",
-       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-gra-ceu",
-       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-mll-cas",
-       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-cad-cor",
-       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-alm-spo",
-       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-ovi-clb",
-       "t": "Real Oviedo – Celta Fortuna: 30/11 a las 20:30"
-      }
-     ],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-22T23:07:44+01:00",
-    "nuevos": 0,
-    "horas": 22,
-    "canales": 2,
-    "resultados": 3,
-    "tablas": [
-     "Primera",
-     "Segunda",
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Resultado: Getafe CF 0-3 Atlético de Madrid",
-     "Resultado: Burgos CF 1-0 Albacete BP",
-     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
-     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
-     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
-     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
-     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 30/11 20:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
-     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 17:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
-     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 29/11 17:00"
-    ],
-    "avisos": 1,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-1-13-get-atm",
-       "t": "Getafe CF 0-3 Atlético de Madrid"
-      },
-      {
-       "id": "2627-2-15-bur-alb",
-       "t": "Burgos CF 1-0 Albacete BP"
-      },
-      {
-       "id": "2627-5-13-cp-cacereno-ud-logrones",
-       "t": "CP Cacereño 0-2 UD Logroñés"
-      }
-     ],
      "canales": [
       {
        "id": "2627-1-14-mal-ath",
