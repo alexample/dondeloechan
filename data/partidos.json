@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-24T22:07:48+01:00",
+ "actualizado": "2026-11-24T23:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -18321,7 +18321,32 @@
    ],
    "provisional": false,
    "localAbbr": "ARS",
-   "visitanteAbbr": "BVB"
+   "visitanteAbbr": "BVB",
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 549,
+     "j": "Viktor Gyökeres",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3265,
+     "j": "Maximilian Beier",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-como-aek-atenas",
@@ -18338,7 +18363,18 @@
    ],
    "provisional": false,
    "localAbbr": "COM",
-   "visitanteAbbr": "AEK"
+   "visitanteAbbr": "AEK",
+   "goles": [
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3397,
+     "j": "Luis Milla",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-feyenoord-porto",
@@ -18355,7 +18391,18 @@
    ],
    "provisional": false,
    "localAbbr": "FEY",
-   "visitanteAbbr": "POR"
+   "visitanteAbbr": "POR",
+   "goles": [
+    {
+     "t": "g",
+     "min": "2'",
+     "seg": 119,
+     "j": "Oussama Targhaline",
+     "lado": "V",
+     "pen": false,
+     "pp": true
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-manchester-city-napoli",
@@ -18372,7 +18419,50 @@
    ],
    "provisional": false,
    "localAbbr": "MCI",
-   "visitanteAbbr": "NAP"
+   "visitanteAbbr": "NAP",
+   "marcador": [
+    2,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3290,
+     "j": "Rasmus Højlund",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "67'",
+     "seg": 3971,
+     "j": "Ayyoub Bouaddi",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "76'",
+     "seg": 4530,
+     "j": "Noa Lang",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5130,
+     "j": "Rayan Cherki",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-rb-leipzig-rc-lens",
@@ -18389,7 +18479,50 @@
    ],
    "provisional": false,
    "localAbbr": "RBL",
-   "visitanteAbbr": "LEN"
+   "visitanteAbbr": "LEN",
+   "marcador": [
+    3,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "6'",
+     "seg": 337,
+     "j": "David Raum",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "9'",
+     "seg": 507,
+     "j": "Antonio Nusa",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "58'",
+     "seg": 3475,
+     "j": "Matthieu Udol",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+4'",
+     "seg": 5400,
+     "j": "Antonio Nusa",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-rma-psv",
@@ -18405,7 +18538,63 @@
     "mlcmulti",
     "orange1"
    ],
-   "provisional": false
+   "provisional": false,
+   "goles": [
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1876,
+     "j": "Ivan Perisic",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2943,
+     "j": "Federico Valverde",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3580,
+     "j": "Jude Bellingham",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "64'",
+     "seg": 3812,
+     "j": "Kylian Mbappé",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "84'",
+     "seg": 4997,
+     "j": "Kylian Mbappé",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5194,
+     "j": "Vinícius Júnior",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-slovan-bratislava-bet",
@@ -18421,7 +18610,32 @@
     "mlcmulti"
    ],
    "provisional": false,
-   "localAbbr": "SLO"
+   "localAbbr": "SLO",
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "43'",
+     "seg": 2572,
+     "j": "Cucho Hernández",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3401,
+     "j": "Cucho Hernández",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-sabah-bar",
@@ -21808,9 +22022,47 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-24T22:07:48+01:00",
-  "cambio": "2026-11-24T22:07:48+01:00",
+  "comprobado": "2026-11-24T23:07:43+01:00",
+  "cambio": "2026-11-24T23:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-24T23:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 4,
+    "tablas": [],
+    "detalle": [
+     "Resultado: RB Leipzig 3-1 RC Lens",
+     "Resultado: Slovan Bratislava 0-2 Real Betis",
+     "Resultado: Arsenal 1-1 Borussia Dortmund",
+     "Resultado: Manchester City 2-2 Napoli"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-4-fase-liga-j5-rb-leipzig-rc-lens",
+       "t": "RB Leipzig 3-1 RC Lens"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-slovan-bratislava-bet",
+       "t": "Slovan Bratislava 0-2 Real Betis"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-arsenal-borussia-dortmund",
+       "t": "Arsenal 1-1 Borussia Dortmund"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-manchester-city-napoli",
+       "t": "Manchester City 2-2 Napoli"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-24T22:07:48+01:00",
     "nuevos": 0,
@@ -23854,88 +24106,6 @@
      "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00"
     ],
     "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [
-      {
-       "id": "2627-2-16-leg-sab",
-       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
-      },
-      {
-       "id": "2627-2-16-lpa-and",
-       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-alb-ten",
-       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eld-gir",
-       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eib-bur",
-       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-vll-rsb",
-       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-gra-ceu",
-       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-mll-cas",
-       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-cad-cor",
-       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-alm-spo",
-       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-ovi-clb",
-       "t": "Real Oviedo – Celta Fortuna: 30/11 a las 20:30"
-      }
-     ],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-24T01:07:46+01:00",
-    "nuevos": 0,
-    "horas": 22,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
-     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
-     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
-     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
-     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 30/11 20:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
-     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 17:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
-     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 29/11 17:00",
-     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00"
-    ],
-    "avisos": 0,
     "items": {
      "resultados": [],
      "canales": [],
