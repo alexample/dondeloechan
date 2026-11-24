@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-24T21:07:44+01:00",
+ "actualizado": "2026-11-24T22:07:48+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -18895,6 +18895,42 @@
    "etiqueta": "Grupo 1"
   },
   {
+   "id": "2627-2-16-leg-sab",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-27T20:30:00+01:00",
+   "local": "CD Leganés",
+   "localId": "leg",
+   "visitante": "CE Sabadell",
+   "visitanteId": "sab",
+   "canales": [
+    "hyper",
+    "daznhm",
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    },
+    {
+     "name": "Replay YouTube",
+     "short": "REP",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de ver en directo y en su web."
+    },
+    {
+     "name": "Replay",
+     "short": "REP",
+     "op": "free",
+     "dial": "",
+     "how": "Gratis por internet, en su web o aplicación."
+    }
+   ],
+   "provisional": false
+  },
+  {
    "id": "2627-1-14-lev-rac",
    "liga": 1,
    "jornada": "14",
@@ -18963,6 +18999,21 @@
    "provisional": false
   },
   {
+   "id": "2627-2-16-lpa-and",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-28T14:00:00+01:00",
+   "local": "UD Las Palmas",
+   "localId": "lpa",
+   "visitante": "FC Andorra",
+   "visitanteId": "and",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": false
+  },
+  {
    "id": "2627-1-14-mal-ath",
    "liga": 1,
    "jornada": "14",
@@ -18974,6 +19025,36 @@
    "canales": [
     "daznll",
     "daznfree"
+   ],
+   "provisional": false
+  },
+  {
+   "id": "2627-2-16-alb-ten",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-28T16:15:00+01:00",
+   "local": "Albacete BP",
+   "localId": "alb",
+   "visitante": "CD Tenerife",
+   "visitanteId": "ten",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": false
+  },
+  {
+   "id": "2627-2-16-eld-gir",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-28T16:15:00+01:00",
+   "local": "CD Eldense",
+   "localId": "eld",
+   "visitante": "Girona FC",
+   "visitanteId": "gir",
+   "canales": [
+    "hyper",
+    "daznhm"
    ],
    "provisional": false
   },
@@ -19086,6 +19167,21 @@
     "mliga",
     "mplus7",
     "orange1"
+   ],
+   "provisional": false
+  },
+  {
+   "id": "2627-2-16-eib-bur",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-28T18:30:00+01:00",
+   "local": "SD Eibar",
+   "localId": "eib",
+   "visitante": "Burgos CF",
+   "visitanteId": "bur",
+   "canales": [
+    "hyper",
+    "daznhm"
    ],
    "provisional": false
   },
@@ -19226,6 +19322,21 @@
    "provisional": false
   },
   {
+   "id": "2627-2-16-vll-rsb",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-28T21:00:00+01:00",
+   "local": "Real Valladolid",
+   "localId": "vll",
+   "visitante": "Real Sociedad B",
+   "visitanteId": "rsb",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": false
+  },
+  {
    "id": "2627-5-14-cd-extremadura-cp-cacereno",
    "liga": 5,
    "jornada": "14",
@@ -19276,6 +19387,21 @@
    "visitanteId": "osa",
    "canales": [
     "daznll"
+   ],
+   "provisional": false
+  },
+  {
+   "id": "2627-2-16-gra-ceu",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T14:00:00+01:00",
+   "local": "Granada CF",
+   "localId": "gra",
+   "visitante": "AD Ceuta FC",
+   "visitanteId": "ceu",
+   "canales": [
+    "hyper",
+    "daznhm"
    ],
    "provisional": false
   },
@@ -19347,153 +19473,10 @@
    "provisional": false
   },
   {
-   "id": "2627-2-16-alb-ten",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "Albacete BP",
-   "localId": "alb",
-   "visitante": "CD Tenerife",
-   "visitanteId": "ten",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "provisional": false
-  },
-  {
-   "id": "2627-2-16-alm-spo",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "UD Almería",
-   "localId": "alm",
-   "visitante": "Real Sporting",
-   "visitanteId": "spo",
-   "canales": [
-    "hyper",
-    "daznhm",
-    "orange2"
-   ],
-   "provisional": false
-  },
-  {
-   "id": "2627-2-16-cad-cor",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "Cádiz CF",
-   "localId": "cad",
-   "visitante": "Córdoba CF",
-   "visitanteId": "cor",
-   "canales": [
-    "hyper",
-    "daznhm",
-    "orange2"
-   ],
-   "provisional": false
-  },
-  {
-   "id": "2627-2-16-eib-bur",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "SD Eibar",
-   "localId": "eib",
-   "visitante": "Burgos CF",
-   "visitanteId": "bur",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "provisional": false
-  },
-  {
-   "id": "2627-2-16-eld-gir",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "CD Eldense",
-   "localId": "eld",
-   "visitante": "Girona FC",
-   "visitanteId": "gir",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "provisional": false
-  },
-  {
-   "id": "2627-2-16-gra-ceu",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "Granada CF",
-   "localId": "gra",
-   "visitante": "AD Ceuta FC",
-   "visitanteId": "ceu",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "provisional": false
-  },
-  {
-   "id": "2627-2-16-leg-sab",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "CD Leganés",
-   "localId": "leg",
-   "visitante": "CE Sabadell",
-   "visitanteId": "sab",
-   "canales": [
-    "hyper",
-    "daznhm",
-    {
-     "name": "Esport3",
-     "short": "E3",
-     "op": "free",
-     "dial": "TDT",
-     "how": "Gratis en la TDT de Cataluña y en 3Cat."
-    },
-    {
-     "name": "Replay YouTube",
-     "short": "REP",
-     "op": "free",
-     "dial": "TDT",
-     "how": "Gratis en la TDT de ver en directo y en su web."
-    },
-    {
-     "name": "Replay",
-     "short": "REP",
-     "op": "free",
-     "dial": "",
-     "how": "Gratis por internet, en su web o aplicación."
-    }
-   ],
-   "provisional": false
-  },
-  {
-   "id": "2627-2-16-lpa-and",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "UD Las Palmas",
-   "localId": "lpa",
-   "visitante": "FC Andorra",
-   "visitanteId": "and",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "provisional": false
-  },
-  {
    "id": "2627-2-16-mll-cas",
    "liga": 2,
    "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
+   "inicio": "2026-11-29T16:15:00+01:00",
    "local": "RCD Mallorca",
    "localId": "mll",
    "visitante": "CD Castellón",
@@ -19502,36 +19485,6 @@
     "hyper",
     "daznhm",
     "orange2"
-   ],
-   "provisional": false
-  },
-  {
-   "id": "2627-2-16-ovi-clb",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "Real Oviedo",
-   "localId": "ovi",
-   "visitante": "Celta Fortuna",
-   "visitanteId": "clb",
-   "canales": [
-    "hyper",
-    "daznhm"
-   ],
-   "provisional": false
-  },
-  {
-   "id": "2627-2-16-vll-rsb",
-   "liga": 2,
-   "jornada": "16",
-   "inicio": "2026-11-29T17:00:00+01:00",
-   "local": "Real Valladolid",
-   "localId": "vll",
-   "visitante": "Real Sociedad B",
-   "visitanteId": "rsb",
-   "canales": [
-    "hyper",
-    "daznhm"
    ],
    "provisional": false
   },
@@ -19566,6 +19519,22 @@
    "visitanteId": "vil",
    "canales": [
     "mliga"
+   ],
+   "provisional": false
+  },
+  {
+   "id": "2627-2-16-cad-cor",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T18:30:00+01:00",
+   "local": "Cádiz CF",
+   "localId": "cad",
+   "visitante": "Córdoba CF",
+   "visitanteId": "cor",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
    ],
    "provisional": false
   },
@@ -19607,6 +19576,37 @@
    "visitanteId": "sev",
    "canales": [
     "daznll"
+   ],
+   "provisional": false
+  },
+  {
+   "id": "2627-2-16-alm-spo",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-29T21:00:00+01:00",
+   "local": "UD Almería",
+   "localId": "alm",
+   "visitante": "Real Sporting",
+   "visitanteId": "spo",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": false
+  },
+  {
+   "id": "2627-2-16-ovi-clb",
+   "liga": 2,
+   "jornada": "16",
+   "inicio": "2026-11-30T20:30:00+01:00",
+   "local": "Real Oviedo",
+   "localId": "ovi",
+   "visitante": "Celta Fortuna",
+   "visitanteId": "clb",
+   "canales": [
+    "hyper",
+    "daznhm"
    ],
    "provisional": false
   },
@@ -21808,9 +21808,82 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-24T21:07:44+01:00",
-  "cambio": "2026-11-24T21:07:44+01:00",
+  "comprobado": "2026-11-24T22:07:48+01:00",
+  "cambio": "2026-11-24T22:07:48+01:00",
   "historial": [
+   {
+    "hora": "2026-11-24T22:07:48+01:00",
+    "nuevos": 0,
+    "horas": 11,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
+     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
+     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
+     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
+     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
+     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
+     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
+     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
+     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
+     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
+     "Nueva hora: Real Oviedo – Celta Fortuna, 30/11 20:30"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [
+      {
+       "id": "2627-2-16-leg-sab",
+       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-eib-bur",
+       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-vll-rsb",
+       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
+      },
+      {
+       "id": "2627-2-16-gra-ceu",
+       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
+      },
+      {
+       "id": "2627-2-16-mll-cas",
+       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
+      },
+      {
+       "id": "2627-2-16-cad-cor",
+       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
+      },
+      {
+       "id": "2627-2-16-alm-spo",
+       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
+      },
+      {
+       "id": "2627-2-16-ovi-clb",
+       "t": "Real Oviedo – Celta Fortuna: 30/11 a las 20:30"
+      }
+     ],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-24T21:07:44+01:00",
     "nuevos": 2,
@@ -23840,90 +23913,6 @@
     "canales": 0,
     "resultados": 0,
     "tablas": [],
-    "detalle": [
-     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
-     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
-     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
-     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
-     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 30/11 20:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
-     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 17:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
-     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 29/11 17:00",
-     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [
-      {
-       "id": "2627-2-16-leg-sab",
-       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
-      },
-      {
-       "id": "2627-2-16-lpa-and",
-       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-alb-ten",
-       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eld-gir",
-       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eib-bur",
-       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-vll-rsb",
-       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-gra-ceu",
-       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-mll-cas",
-       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-cad-cor",
-       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-alm-spo",
-       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-ovi-clb",
-       "t": "Real Oviedo – Celta Fortuna: 30/11 a las 20:30"
-      }
-     ],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-24T00:07:41+01:00",
-    "nuevos": 0,
-    "horas": 22,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
     "detalle": [
      "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
      "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
