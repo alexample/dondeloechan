@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T22:07:51+01:00",
+ "actualizado": "2026-11-25T23:07:46+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -18764,7 +18764,36 @@
     "mlcmulti"
    ],
    "provisional": false,
-   "visitanteAbbr": "VIK"
+   "visitanteAbbr": "VIK",
+   "goles": [
+    {
+     "t": "g",
+     "min": "19'",
+     "seg": 1117,
+     "j": "Alexander Sørloth",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "24'",
+     "seg": 1420,
+     "j": "Julián Álvarez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+1'",
+     "seg": 5400,
+     "j": "Henrik Falchener",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-club-brugge-liverpool",
@@ -18781,7 +18810,36 @@
    ],
    "provisional": false,
    "localAbbr": "BRU",
-   "visitanteAbbr": "LIV"
+   "visitanteAbbr": "LIV",
+   "goles": [
+    {
+     "t": "g",
+     "min": "13'",
+     "seg": 723,
+     "j": "Alexander Isak",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "79'",
+     "seg": 4697,
+     "j": "Florian Wirtz",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4918,
+     "j": "Alexander Isak",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-inter-stuttgart",
@@ -18798,7 +18856,27 @@
    ],
    "provisional": false,
    "localAbbr": "INT",
-   "visitanteAbbr": "STU"
+   "visitanteAbbr": "STU",
+   "goles": [
+    {
+     "t": "g",
+     "min": "57'",
+     "seg": 3371,
+     "j": "Petar Sucic",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "74'",
+     "seg": 4423,
+     "j": "Lautaro Martínez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-lille-bayern-munich",
@@ -18815,7 +18893,36 @@
    ],
    "provisional": false,
    "localAbbr": "LIL",
-   "visitanteAbbr": "BAY"
+   "visitanteAbbr": "BAY",
+   "goles": [
+    {
+     "t": "g",
+     "min": "15'",
+     "seg": 850,
+     "j": "Dayot Upamecano",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3677,
+     "j": "Ayase Ueda",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "65'",
+     "seg": 3890,
+     "j": "Aleksandar Pavlovic",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-psg-roma",
@@ -18831,7 +18938,45 @@
     "mlcmulti"
    ],
    "provisional": false,
-   "visitanteAbbr": "ROM"
+   "visitanteAbbr": "ROM",
+   "goles": [
+    {
+     "t": "g",
+     "min": "5'",
+     "seg": 285,
+     "j": "Mario Hermoso",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "31'",
+     "seg": 1853,
+     "j": "Illia Zabarnyi",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3684,
+     "j": "Ousmane Dembélé",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "78'",
+     "seg": 4646,
+     "j": "Donyell Malen",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-shakhtar-donetsk-fenerbahce",
@@ -18848,7 +18993,18 @@
    ],
    "provisional": false,
    "localAbbr": "SHA",
-   "visitanteAbbr": "FEN"
+   "visitanteAbbr": "FEN",
+   "goles": [
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3335,
+     "j": "Vedat Muriqi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-sporting-cp-manchester-united",
@@ -18865,7 +19021,54 @@
    ],
    "provisional": false,
    "localAbbr": "SCP",
-   "visitanteAbbr": "MUN"
+   "visitanteAbbr": "MUN",
+   "goles": [
+    {
+     "t": "g",
+     "min": "33'",
+     "seg": 1936,
+     "j": "Luis Suárez",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2867,
+     "j": "Bruno Fernandes",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 2984,
+     "j": "Bruno Fernandes",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4763,
+     "j": "Luis Suárez",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Youri Tielemans",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-6-fase-liga-j4-fc-kairat-mjallby-aif",
@@ -21096,6 +21299,17 @@
      "Como"
     ],
     [
+     "bar",
+     5,
+     4,
+     0,
+     1,
+     18,
+     7,
+     12,
+     "FC Barcelona"
+    ],
+    [
      "bet",
      5,
      4,
@@ -21138,17 +21352,6 @@
      6,
      10,
      "Borussia Dortmund"
-    ],
-    [
-     "bar",
-     4,
-     3,
-     0,
-     1,
-     14,
-     6,
-     9,
-     "FC Barcelona"
     ],
     [
      "aston-villa",
@@ -21294,6 +21497,17 @@
      "RB Leipzig"
     ],
     [
+     "vil",
+     5,
+     2,
+     0,
+     3,
+     9,
+     14,
+     6,
+     "Villarreal CF"
+    ],
+    [
      "fenerbahce",
      4,
      1,
@@ -21371,28 +21585,6 @@
      "PSV"
     ],
     [
-     "vil",
-     4,
-     1,
-     0,
-     3,
-     8,
-     14,
-     3,
-     "Villarreal CF"
-    ],
-    [
-     "sabah",
-     4,
-     1,
-     0,
-     3,
-     4,
-     10,
-     3,
-     "Sabah"
-    ],
-    [
      "aek-atenas",
      5,
      1,
@@ -21415,6 +21607,17 @@
      "Feyenoord"
     ],
     [
+     "sabah",
+     5,
+     1,
+     0,
+     4,
+     5,
+     14,
+     3,
+     "Sabah"
+    ],
+    [
      "rc-lens",
      5,
      1,
@@ -21427,12 +21630,12 @@
     ],
     [
      "slavia-praga",
-     4,
+     5,
      0,
      1,
-     3,
+     4,
      5,
-     9,
+     10,
      1,
      "Slavia Praga"
     ],
@@ -21702,17 +21905,6 @@
        "Real Zaragoza"
       ],
       [
-       "villarreal-b",
-       13,
-       6,
-       6,
-       1,
-       28,
-       17,
-       24,
-       "Villarreal B"
-      ],
-      [
        "alcorcon",
        13,
        6,
@@ -21722,6 +21914,17 @@
        14,
        24,
        "Alcorcón"
+      ],
+      [
+       "villarreal-b",
+       13,
+       6,
+       6,
+       1,
+       28,
+       17,
+       24,
+       "Villarreal B"
       ],
       [
        "real-murcia",
@@ -21790,17 +21993,6 @@
        "Real Jaén"
       ],
       [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        13,
        4,
@@ -21821,6 +22013,17 @@
        19,
        17,
        "Algeciras CF"
+      ],
+      [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -22317,9 +22520,28 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-25T22:07:51+01:00",
-  "cambio": "2026-11-25T22:07:51+01:00",
+  "comprobado": "2026-11-25T23:07:46+01:00",
+  "cambio": "2026-11-25T23:07:46+01:00",
   "historial": [
+   {
+    "hora": "2026-11-25T23:07:46+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación",
+     "Champions"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-25T22:07:51+01:00",
     "nuevos": 0,
@@ -22972,42 +23194,6 @@
     "avisos": 0,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T01:07:46+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 3,
-    "tablas": [
-     "Primera Federación",
-     "Champions"
-    ],
-    "detalle": [
-     "Resultado: Como 1-0 AEK Atenas",
-     "Resultado: Feyenoord 0-1 Porto",
-     "Resultado: Real Madrid 5-1 PSV"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-4-fase-liga-j5-como-aek-atenas",
-       "t": "Como 1-0 AEK Atenas"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-feyenoord-porto",
-       "t": "Feyenoord 0-1 Porto"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-rma-psv",
-       "t": "Real Madrid 5-1 PSV"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
