@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T23:07:46+01:00",
+ "actualizado": "2026-11-25T23:29:47+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -18793,7 +18793,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j5-club-brugge-liverpool",
@@ -18876,7 +18881,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j5-lille-bayern-munich",
@@ -18922,7 +18932,12 @@
      "pen": false,
      "pp": true
     }
-   ]
+   ],
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-4-fase-liga-j5-psg-roma",
@@ -21278,13 +21293,13 @@
     ],
     [
      "psg",
-     4,
-     4,
-     0,
-     0,
-     20,
      5,
-     12,
+     4,
+     1,
+     0,
+     22,
+     7,
+     13,
      "PSG"
     ],
     [
@@ -21308,6 +21323,17 @@
      7,
      12,
      "FC Barcelona"
+    ],
+    [
+     "liverpool",
+     5,
+     4,
+     0,
+     1,
+     17,
+     10,
+     12,
+     "Liverpool"
     ],
     [
      "bet",
@@ -21343,6 +21369,17 @@
      "Manchester City"
     ],
     [
+     "sporting-cp",
+     5,
+     3,
+     1,
+     1,
+     10,
+     6,
+     10,
+     "Sporting CP"
+    ],
+    [
      "borussia-dortmund",
      5,
      3,
@@ -21365,37 +21402,26 @@
      "Aston Villa"
     ],
     [
-     "liverpool",
-     4,
+     "inter",
+     5,
      3,
      0,
-     1,
-     14,
+     2,
      10,
+     6,
      9,
-     "Liverpool"
+     "Inter"
     ],
     [
      "club-brugge",
-     4,
+     5,
      3,
      0,
-     1,
+     2,
      11,
-     7,
+     10,
      9,
      "Club Brugge"
-    ],
-    [
-     "sporting-cp",
-     4,
-     3,
-     0,
-     1,
-     8,
-     4,
-     9,
-     "Sporting CP"
     ],
     [
      "galatasaray",
@@ -21410,25 +21436,58 @@
     ],
     [
      "bayern-munich",
-     4,
-     2,
-     2,
-     0,
-     12,
      5,
+     2,
+     2,
+     1,
+     13,
+     7,
      8,
      "Bayern Múnich"
     ],
     [
-     "stuttgart",
-     4,
+     "fenerbahce",
+     5,
+     2,
      2,
      1,
-     1,
      7,
-     4,
+     11,
+     8,
+     "Fenerbahçe"
+    ],
+    [
+     "stuttgart",
+     5,
+     2,
+     1,
+     2,
+     7,
+     6,
      7,
      "Stuttgart"
+    ],
+    [
+     "atm",
+     5,
+     2,
+     1,
+     2,
+     6,
+     5,
+     7,
+     "Atlético de Madrid"
+    ],
+    [
+     "manchester-united",
+     5,
+     2,
+     1,
+     2,
+     10,
+     10,
+     7,
+     "Manchester United"
     ],
     [
      "bod-glimt",
@@ -21442,17 +21501,6 @@
      "Bodø/Glimt"
     ],
     [
-     "inter",
-     4,
-     2,
-     0,
-     2,
-     8,
-     6,
-     6,
-     "Inter"
-    ],
-    [
      "lask",
      5,
      2,
@@ -21462,17 +21510,6 @@
      10,
      6,
      "LASK"
-    ],
-    [
-     "manchester-united",
-     4,
-     2,
-     0,
-     2,
-     8,
-     8,
-     6,
-     "Manchester United"
     ],
     [
      "porto",
@@ -21508,59 +21545,37 @@
      "Villarreal CF"
     ],
     [
-     "fenerbahce",
-     4,
-     1,
-     2,
-     1,
-     6,
-     11,
-     5,
-     "Fenerbahçe"
-    ],
-    [
      "roma",
-     4,
-     1,
+     5,
      1,
      2,
+     2,
+     12,
      10,
-     8,
-     4,
+     5,
      "Roma"
     ],
     [
      "shakhtar-donetsk",
-     4,
+     5,
      1,
      1,
-     2,
+     3,
      4,
-     4,
+     5,
      4,
      "Shakhtar Donetsk"
     ],
     [
      "viking",
-     4,
+     5,
      1,
      1,
-     2,
+     3,
      9,
-     10,
+     12,
      4,
      "Viking"
-    ],
-    [
-     "atm",
-     4,
-     1,
-     1,
-     2,
-     4,
-     5,
-     4,
-     "Atlético de Madrid"
     ],
     [
      "napoli",
@@ -21572,6 +21587,17 @@
      13,
      4,
      "Napoli"
+    ],
+    [
+     "lille",
+     5,
+     1,
+     1,
+     3,
+     6,
+     11,
+     4,
+     "Lille"
     ],
     [
      "psv",
@@ -21638,17 +21664,6 @@
      10,
      1,
      "Slavia Praga"
-    ],
-    [
-     "lille",
-     4,
-     0,
-     1,
-     3,
-     4,
-     10,
-     1,
-     "Lille"
     ],
     [
      "slovan-bratislava",
@@ -22520,9 +22535,44 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-25T23:07:46+01:00",
-  "cambio": "2026-11-25T23:07:46+01:00",
+  "comprobado": "2026-11-25T23:29:47+01:00",
+  "cambio": "2026-11-25T23:29:47+01:00",
   "historial": [
+   {
+    "hora": "2026-11-25T23:29:47+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 3,
+    "tablas": [
+     "Champions"
+    ],
+    "detalle": [
+     "Resultado: Inter 2-0 Stuttgart",
+     "Resultado: Atlético de Madrid 2-0 Viking",
+     "Resultado: Lille 2-1 Bayern Múnich"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-4-fase-liga-j5-inter-stuttgart",
+       "t": "Inter 2-0 Stuttgart"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-atm-viking",
+       "t": "Atlético de Madrid 2-0 Viking"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-lille-bayern-munich",
+       "t": "Lille 2-1 Bayern Múnich"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-25T23:07:46+01:00",
     "nuevos": 0,
@@ -23169,22 +23219,6 @@
    },
    {
     "hora": "2026-11-25T03:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T02:07:42+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
