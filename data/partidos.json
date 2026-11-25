@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T16:07:50+01:00",
+ "actualizado": "2026-11-25T17:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -19282,7 +19282,7 @@
    "visitante": "Girona FC",
    "visitanteId": "gir",
    "canales": [
-    "hyper",
+    "hyper2",
     "daznhm"
    ],
    "provisional": false
@@ -19615,7 +19615,8 @@
    "visitante": "CA Osasuna",
    "visitanteId": "osa",
    "canales": [
-    "daznll"
+    "daznll",
+    "daznll2"
    ],
    "provisional": false
   },
@@ -20304,6 +20305,73 @@
     "daznhm"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-1-15-ray-lev",
+   "liga": 1,
+   "jornada": "15",
+   "inicio": "2026-12-05T16:15:00+01:00",
+   "local": "Rayo Vallecano",
+   "localId": "ray",
+   "visitante": "Levante UD",
+   "visitanteId": "lev",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-17-sab-eib",
+   "liga": 2,
+   "jornada": "17",
+   "inicio": "2026-12-05T16:15:00+01:00",
+   "local": "CE Sabadell",
+   "localId": "sab",
+   "visitante": "SD Eibar",
+   "visitanteId": "eib",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-15-barakaldo-cf-bilbao-athletic",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-05T16:30:00+01:00",
+   "local": "Barakaldo CF",
+   "localId": "barakaldo-cf",
+   "visitante": "Bilbao Athletic",
+   "visitanteId": "bilbao-athletic",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "BAR",
+   "visitanteAbbr": "BIL",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-15-cd-teruel-juventud-torremolinos",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-05T16:30:00+01:00",
+   "local": "CD Teruel",
+   "localId": "cd-teruel",
+   "visitante": "Juventud Torremolinos",
+   "visitanteId": "juventud-torremolinos",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "TER",
+   "visitanteAbbr": "TOR",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
    "id": "2627-2-13-and-mll",
@@ -21449,17 +21517,6 @@
        "Real Zaragoza"
       ],
       [
-       "villarreal-b",
-       13,
-       6,
-       6,
-       1,
-       28,
-       17,
-       24,
-       "Villarreal B"
-      ],
-      [
        "alcorcon",
        13,
        6,
@@ -21469,6 +21526,17 @@
        14,
        24,
        "Alcorcón"
+      ],
+      [
+       "villarreal-b",
+       13,
+       6,
+       6,
+       1,
+       28,
+       17,
+       24,
+       "Villarreal B"
       ],
       [
        "real-murcia",
@@ -21537,17 +21605,6 @@
        "Real Jaén"
       ],
       [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        13,
        4,
@@ -21568,6 +21625,17 @@
        19,
        17,
        "Algeciras CF"
+      ],
+      [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -22064,9 +22132,74 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-25T16:07:50+01:00",
-  "cambio": "2026-11-25T16:07:50+01:00",
+  "comprobado": "2026-11-25T17:07:42+01:00",
+  "cambio": "2026-11-25T17:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-25T17:07:42+01:00",
+    "nuevos": 4,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Rayo Vallecano – Levante UD",
+     "Nuevo partido: CE Sabadell – SD Eibar",
+     "Nuevo partido: Barakaldo CF – Bilbao Athletic",
+     "Nuevo partido: CD Teruel – Juventud Torremolinos"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-15-ray-lev",
+       "t": "Rayo Vallecano – Levante UD"
+      },
+      {
+       "id": "2627-2-17-sab-eib",
+       "t": "CE Sabadell – SD Eibar"
+      },
+      {
+       "id": "2627-1-14-val-osa",
+       "t": "Valencia CF – CA Osasuna"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense – Girona FC"
+      },
+      {
+       "id": "2627-5-15-barakaldo-cf-bilbao-athletic",
+       "t": "Barakaldo CF – Bilbao Athletic"
+      },
+      {
+       "id": "2627-5-15-cd-teruel-juventud-torremolinos",
+       "t": "CD Teruel – Juventud Torremolinos"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-15-ray-lev",
+       "t": "Rayo Vallecano – Levante UD (Primera)"
+      },
+      {
+       "id": "2627-2-17-sab-eib",
+       "t": "CE Sabadell – SD Eibar (Segunda)"
+      },
+      {
+       "id": "2627-5-15-barakaldo-cf-bilbao-athletic",
+       "t": "Barakaldo CF – Bilbao Athletic (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-15-cd-teruel-juventud-torremolinos",
+       "t": "CD Teruel – Juventud Torremolinos (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-25T16:07:50+01:00",
     "nuevos": 0,
@@ -22780,88 +22913,6 @@
    },
    {
     "hora": "2026-11-24T20:07:48+01:00",
-    "nuevos": 0,
-    "horas": 22,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nueva hora: CD Leganés – CE Sabadell, 27/11 20:30",
-     "Nueva hora: UD Las Palmas – FC Andorra, 28/11 14:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 28/11 16:15",
-     "Nueva hora: CD Eldense – Girona FC, 28/11 16:15",
-     "Nueva hora: SD Eibar – Burgos CF, 28/11 18:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 28/11 21:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 14:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 16:15",
-     "Nueva hora: Cádiz CF – Córdoba CF, 29/11 18:30",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 21:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 30/11 20:30",
-     "Nueva hora: Real Valladolid – Real Sociedad B, 29/11 17:00",
-     "Nueva hora: SD Eibar – Burgos CF, 29/11 17:00",
-     "Nueva hora: UD Almería – Real Sporting, 29/11 17:00",
-     "Nueva hora: RCD Mallorca – CD Castellón, 29/11 17:00",
-     "Nueva hora: UD Las Palmas – FC Andorra, 29/11 17:00",
-     "Nueva hora: Granada CF – AD Ceuta FC, 29/11 17:00",
-     "Nueva hora: Real Oviedo – Celta Fortuna, 29/11 17:00",
-     "Nueva hora: CD Leganés – CE Sabadell, 29/11 17:00",
-     "Nueva hora: Albacete BP – CD Tenerife, 29/11 17:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [
-      {
-       "id": "2627-2-16-leg-sab",
-       "t": "CD Leganés – CE Sabadell: 27/11 a las 20:30"
-      },
-      {
-       "id": "2627-2-16-lpa-and",
-       "t": "UD Las Palmas – FC Andorra: 28/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-alb-ten",
-       "t": "Albacete BP – CD Tenerife: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eld-gir",
-       "t": "CD Eldense – Girona FC: 28/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-eib-bur",
-       "t": "SD Eibar – Burgos CF: 28/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-vll-rsb",
-       "t": "Real Valladolid – Real Sociedad B: 28/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-gra-ceu",
-       "t": "Granada CF – AD Ceuta FC: 29/11 a las 14:00"
-      },
-      {
-       "id": "2627-2-16-mll-cas",
-       "t": "RCD Mallorca – CD Castellón: 29/11 a las 16:15"
-      },
-      {
-       "id": "2627-2-16-cad-cor",
-       "t": "Cádiz CF – Córdoba CF: 29/11 a las 18:30"
-      },
-      {
-       "id": "2627-2-16-alm-spo",
-       "t": "UD Almería – Real Sporting: 29/11 a las 21:00"
-      },
-      {
-       "id": "2627-2-16-ovi-clb",
-       "t": "Real Oviedo – Celta Fortuna: 30/11 a las 20:30"
-      }
-     ],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-24T19:07:43+01:00",
     "nuevos": 0,
     "horas": 22,
     "canales": 0,
