@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T19:07:44+01:00",
+ "actualizado": "2026-11-25T21:07:47+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -18665,7 +18665,59 @@
     "mlc"
    ],
    "provisional": false,
-   "localAbbr": "SBH"
+   "localAbbr": "SBH",
+   "marcador": [
+    1,
+    4
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "31'",
+     "seg": 1847,
+     "j": "Anthony Gordon",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "51'",
+     "seg": 3013,
+     "j": "Anthony Gordon",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3259,
+     "j": "Karim Adeyemi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3569,
+     "j": "Gabriel Jesus",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3754,
+     "j": "Joy-Lance Mickels",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-slavia-praga-vil",
@@ -18680,7 +18732,23 @@
     "mlc3"
    ],
    "provisional": false,
-   "localAbbr": "SLA"
+   "localAbbr": "SLA",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3703,
+     "j": "Tajon Buchanan",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-4-fase-liga-j5-atm-viking",
@@ -19852,7 +19920,7 @@
    "canales": [
     "daznll"
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-3-segunda-ronda-antequera-lev",
@@ -20437,6 +20505,56 @@
    "provisional": true,
    "localAbbr": "SAN",
    "visitanteAbbr": "ALG",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-1-15-bar-cel",
+   "liga": 1,
+   "jornada": "15",
+   "inicio": "2026-12-05T21:00:00+01:00",
+   "local": "FC Barcelona",
+   "localId": "bar",
+   "visitante": "RC Celta",
+   "visitanteId": "cel",
+   "canales": [
+    "mliga",
+    "mplus7",
+    "orange1"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-17-ten-eld",
+   "liga": 2,
+   "jornada": "17",
+   "inicio": "2026-12-05T21:00:00+01:00",
+   "local": "CD Tenerife",
+   "localId": "ten",
+   "visitante": "CD Eldense",
+   "visitanteId": "eld",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-15-cartagena-hercules",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-05T21:00:00+01:00",
+   "local": "Cartagena",
+   "localId": "cartagena",
+   "visitante": "Hércules",
+   "visitanteId": "hercules",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "CAR",
+   "visitanteAbbr": "HER",
    "etiqueta": "Grupo 2",
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
@@ -22199,9 +22317,71 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-25T20:07:43+01:00",
-  "cambio": "2026-11-25T19:07:44+01:00",
+  "comprobado": "2026-11-25T21:07:47+01:00",
+  "cambio": "2026-11-25T21:07:47+01:00",
   "historial": [
+   {
+    "hora": "2026-11-25T21:07:47+01:00",
+    "nuevos": 3,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 2,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: FC Barcelona – RC Celta",
+     "Nuevo partido: CD Tenerife – CD Eldense",
+     "Nuevo partido: Cartagena – Hércules",
+     "Canal confirmado: RCD Espanyol – Getafe CF",
+     "Resultado: Slavia Praga 0-1 Villarreal CF",
+     "Resultado: Sabah 1-4 FC Barcelona"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-4-fase-liga-j5-slavia-praga-vil",
+       "t": "Slavia Praga 0-1 Villarreal CF"
+      },
+      {
+       "id": "2627-4-fase-liga-j5-sabah-bar",
+       "t": "Sabah 1-4 FC Barcelona"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-15-bar-cel",
+       "t": "FC Barcelona – RC Celta"
+      },
+      {
+       "id": "2627-2-17-ten-eld",
+       "t": "CD Tenerife – CD Eldense"
+      },
+      {
+       "id": "2627-1-14-esp-get",
+       "t": "RCD Espanyol – Getafe CF · confirmado"
+      },
+      {
+       "id": "2627-5-15-cartagena-hercules",
+       "t": "Cartagena – Hércules"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-15-bar-cel",
+       "t": "FC Barcelona – RC Celta (Primera)"
+      },
+      {
+       "id": "2627-2-17-ten-eld",
+       "t": "CD Tenerife – CD Eldense (Segunda)"
+      },
+      {
+       "id": "2627-5-15-cartagena-hercules",
+       "t": "Cartagena – Hércules (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-25T20:07:43+01:00",
     "nuevos": 0,
@@ -22828,44 +23008,6 @@
     "avisos": 13,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-24T23:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 4,
-    "tablas": [],
-    "detalle": [
-     "Resultado: RB Leipzig 3-1 RC Lens",
-     "Resultado: Slovan Bratislava 0-2 Real Betis",
-     "Resultado: Arsenal 1-1 Borussia Dortmund",
-     "Resultado: Manchester City 2-2 Napoli"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-4-fase-liga-j5-rb-leipzig-rc-lens",
-       "t": "RB Leipzig 3-1 RC Lens"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-slovan-bratislava-bet",
-       "t": "Slovan Bratislava 0-2 Real Betis"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-arsenal-borussia-dortmund",
-       "t": "Arsenal 1-1 Borussia Dortmund"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-manchester-city-napoli",
-       "t": "Manchester City 2-2 Napoli"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
