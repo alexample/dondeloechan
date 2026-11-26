@@ -22653,9 +22653,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T14:07:47+01:00",
+  "comprobado": "2026-11-26T15:07:50+01:00",
   "cambio": "2026-11-26T14:07:47+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T15:07:50+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-26T14:07:47+01:00",
     "nuevos": 2,
@@ -23241,71 +23257,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T17:07:42+01:00",
-    "nuevos": 4,
-    "horas": 0,
-    "canales": 6,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Rayo Vallecano – Levante UD",
-     "Nuevo partido: CE Sabadell – SD Eibar",
-     "Nuevo partido: Barakaldo CF – Bilbao Athletic",
-     "Nuevo partido: CD Teruel – Juventud Torremolinos"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-15-ray-lev",
-       "t": "Rayo Vallecano – Levante UD"
-      },
-      {
-       "id": "2627-2-17-sab-eib",
-       "t": "CE Sabadell – SD Eibar"
-      },
-      {
-       "id": "2627-1-14-val-osa",
-       "t": "Valencia CF – CA Osasuna"
-      },
-      {
-       "id": "2627-2-16-eld-gir",
-       "t": "CD Eldense – Girona FC"
-      },
-      {
-       "id": "2627-5-15-barakaldo-cf-bilbao-athletic",
-       "t": "Barakaldo CF – Bilbao Athletic"
-      },
-      {
-       "id": "2627-5-15-cd-teruel-juventud-torremolinos",
-       "t": "CD Teruel – Juventud Torremolinos"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-15-ray-lev",
-       "t": "Rayo Vallecano – Levante UD (Primera)"
-      },
-      {
-       "id": "2627-2-17-sab-eib",
-       "t": "CE Sabadell – SD Eibar (Segunda)"
-      },
-      {
-       "id": "2627-5-15-barakaldo-cf-bilbao-athletic",
-       "t": "Barakaldo CF – Bilbao Athletic (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-15-cd-teruel-juventud-torremolinos",
-       "t": "CD Teruel – Juventud Torremolinos (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
