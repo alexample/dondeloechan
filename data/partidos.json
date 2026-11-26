@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T11:07:48+01:00",
+ "actualizado": "2026-11-26T12:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20802,6 +20802,63 @@
    "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
   },
   {
+   "id": "2627-5-15-arenas-club-cd-lugo",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T12:00:00+01:00",
+   "local": "Arenas Club",
+   "localId": "arenas-club",
+   "visitante": "CD Lugo",
+   "visitanteId": "cd-lugo",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ARE",
+   "visitanteAbbr": "LUG",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-15-real-madrid-castilla-real-jaen",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T12:00:00+01:00",
+   "local": "Real Madrid Castilla",
+   "localId": "real-madrid-castilla",
+   "visitante": "Real Jaén",
+   "visitanteId": "real-jaen",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "RMC",
+   "visitanteAbbr": "JAE",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-15-ud-ourense-cd-coria",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T12:00:00+01:00",
+   "local": "UD Ourense",
+   "localId": "ud-ourense",
+   "visitante": "CD Coria",
+   "visitanteId": "cd-coria",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "OUR",
+   "visitanteAbbr": "COR",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
    "id": "2627-2-13-and-mll",
    "liga": 2,
    "jornada": "13",
@@ -21945,17 +22002,6 @@
        "Real Zaragoza"
       ],
       [
-       "villarreal-b",
-       13,
-       6,
-       6,
-       1,
-       28,
-       17,
-       24,
-       "Villarreal B"
-      ],
-      [
        "alcorcon",
        13,
        6,
@@ -21965,6 +22011,17 @@
        14,
        24,
        "Alcorcón"
+      ],
+      [
+       "villarreal-b",
+       13,
+       6,
+       6,
+       1,
+       28,
+       17,
+       24,
+       "Villarreal B"
       ],
       [
        "real-murcia",
@@ -22033,17 +22090,6 @@
        "Real Jaén"
       ],
       [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        13,
        4,
@@ -22064,6 +22110,17 @@
        19,
        17,
        "Algeciras CF"
+      ],
+      [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -22560,9 +22617,57 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T11:07:48+01:00",
-  "cambio": "2026-11-26T11:07:48+01:00",
+  "comprobado": "2026-11-26T12:07:44+01:00",
+  "cambio": "2026-11-26T12:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T12:07:44+01:00",
+    "nuevos": 3,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Real Madrid Castilla – Real Jaén",
+     "Nuevo partido: Arenas Club – CD Lugo",
+     "Nuevo partido: UD Ourense – CD Coria"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-15-real-madrid-castilla-real-jaen",
+       "t": "Real Madrid Castilla – Real Jaén"
+      },
+      {
+       "id": "2627-5-15-arenas-club-cd-lugo",
+       "t": "Arenas Club – CD Lugo"
+      },
+      {
+       "id": "2627-5-15-ud-ourense-cd-coria",
+       "t": "UD Ourense – CD Coria"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-15-real-madrid-castilla-real-jaen",
+       "t": "Real Madrid Castilla – Real Jaén (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-15-arenas-club-cd-lugo",
+       "t": "Arenas Club – CD Lugo (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-15-ud-ourense-cd-coria",
+       "t": "UD Ourense – CD Coria (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-26T11:07:48+01:00",
     "nuevos": 0,
@@ -23146,43 +23251,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T14:07:47+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Real Racing Club – RC Deportivo",
-     "Nuevo partido: Real Sociedad B – CD Leganés"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-15-rac-dep",
-       "t": "Real Racing Club – RC Deportivo"
-      },
-      {
-       "id": "2627-2-17-rsb-leg",
-       "t": "Real Sociedad B – CD Leganés"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-15-rac-dep",
-       "t": "Real Racing Club – RC Deportivo (Primera)"
-      },
-      {
-       "id": "2627-2-17-rsb-leg",
-       "t": "Real Sociedad B – CD Leganés (Segunda)"
-      }
-     ]
     }
    }
   ]
