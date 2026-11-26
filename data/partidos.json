@@ -22717,9 +22717,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T16:07:44+01:00",
+  "comprobado": "2026-11-26T16:12:05+01:00",
   "cambio": "2026-11-26T16:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T16:12:05+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-26T16:07:44+01:00",
     "nuevos": 3,
@@ -23296,61 +23312,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T19:07:44+01:00",
-    "nuevos": 4,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Villarreal CF – Real Sociedad",
-     "Nuevo partido: FC Andorra – Real Oviedo",
-     "Nuevo partido: UE Sant Andreu – Algeciras CF",
-     "Nuevo partido: Cultural Leonesa – Racing Ferrol"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-15-vil-rso",
-       "t": "Villarreal CF – Real Sociedad"
-      },
-      {
-       "id": "2627-2-17-and-ovi",
-       "t": "FC Andorra – Real Oviedo"
-      },
-      {
-       "id": "2627-5-15-ue-sant-andreu-algeciras-cf",
-       "t": "UE Sant Andreu – Algeciras CF"
-      },
-      {
-       "id": "2627-5-15-cultural-leonesa-racing-ferrol",
-       "t": "Cultural Leonesa – Racing Ferrol"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-15-vil-rso",
-       "t": "Villarreal CF – Real Sociedad (Primera)"
-      },
-      {
-       "id": "2627-2-17-and-ovi",
-       "t": "FC Andorra – Real Oviedo (Segunda)"
-      },
-      {
-       "id": "2627-5-15-ue-sant-andreu-algeciras-cf",
-       "t": "UE Sant Andreu – Algeciras CF (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-15-cultural-leonesa-racing-ferrol",
-       "t": "Cultural Leonesa – Racing Ferrol (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
