@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T02:07:48+01:00",
+ "actualizado": "2026-11-26T03:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -21940,17 +21940,6 @@
        "Real Zaragoza"
       ],
       [
-       "villarreal-b",
-       13,
-       6,
-       6,
-       1,
-       28,
-       17,
-       24,
-       "Villarreal B"
-      ],
-      [
        "alcorcon",
        13,
        6,
@@ -21960,6 +21949,17 @@
        14,
        24,
        "Alcorcón"
+      ],
+      [
+       "villarreal-b",
+       13,
+       6,
+       6,
+       1,
+       28,
+       17,
+       24,
+       "Villarreal B"
       ],
       [
        "real-murcia",
@@ -22028,17 +22028,6 @@
        "Real Jaén"
       ],
       [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        13,
        4,
@@ -22059,6 +22048,17 @@
        19,
        17,
        "Algeciras CF"
+      ],
+      [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -22555,9 +22555,27 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T02:07:48+01:00",
-  "cambio": "2026-11-26T02:07:48+01:00",
+  "comprobado": "2026-11-26T03:07:43+01:00",
+  "cambio": "2026-11-26T03:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T03:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-26T02:07:48+01:00",
     "nuevos": 0,
@@ -23247,22 +23265,6 @@
    },
    {
     "hora": "2026-11-25T06:07:50+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T05:07:44+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
