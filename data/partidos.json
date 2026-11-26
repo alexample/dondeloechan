@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T20:07:44+01:00",
+ "actualizado": "2026-11-26T21:07:47+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -19152,7 +19152,50 @@
    ],
    "provisional": false,
    "localAbbr": "AJA",
-   "visitanteAbbr": "THU"
+   "visitanteAbbr": "THU",
+   "goles": [
+    {
+     "t": "g",
+     "min": "6'",
+     "seg": 307,
+     "j": "Rayane Bounida",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2441,
+     "j": "Marcos Leonardo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "70'",
+     "seg": 4168,
+     "j": "Rayane Bounida",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "89'",
+     "seg": 5318,
+     "j": "Steven Berghuis",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    4,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-brighton-fcu-craiova-1948",
@@ -19169,7 +19212,59 @@
    ],
    "provisional": false,
    "localAbbr": "BRI",
-   "visitanteAbbr": "FCU"
+   "visitanteAbbr": "FCU",
+   "goles": [
+    {
+     "t": "g",
+     "min": "3'",
+     "seg": 175,
+     "j": "Ibrahim Osman",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "33'",
+     "seg": 1930,
+     "j": "Maxim De Cuyper",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "39'",
+     "seg": 2321,
+     "j": "Vladimir Screciu",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3641,
+     "j": "Charalambos Kostoulas",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3770,
+     "j": "Ibrahim Osman",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    4,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-fc-iberia-1999-get",
@@ -19185,7 +19280,32 @@
     "mlc3"
    ],
    "provisional": false,
-   "localAbbr": "IBE"
+   "localAbbr": "IBE",
+   "goles": [
+    {
+     "t": "g",
+     "min": "25'",
+     "seg": 1496,
+     "j": "Giorgi Kobuladze",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "59'",
+     "seg": 3516,
+     "j": "Orel Mangala",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-fkb-jablonec-lugano",
@@ -19202,7 +19322,32 @@
    ],
    "provisional": false,
    "localAbbr": "FKB",
-   "visitanteAbbr": "LUG"
+   "visitanteAbbr": "LUG",
+   "goles": [
+    {
+     "t": "g",
+     "min": "70'",
+     "seg": 4161,
+     "j": "Martin Cedidla",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "85'",
+     "seg": 5082,
+     "j": "Lamin Jawo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-hearts-as-monaco",
@@ -19219,7 +19364,59 @@
    ],
    "provisional": false,
    "localAbbr": "HEA",
-   "visitanteAbbr": "MON"
+   "visitanteAbbr": "MON",
+   "goles": [
+    {
+     "t": "g",
+     "min": "15'",
+     "seg": 898,
+     "j": "Jordi Altena",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "25'",
+     "seg": 1441,
+     "j": "Folarin Balogun",
+     "lado": "V",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "41'",
+     "seg": 2405,
+     "j": "Edan Diop",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "44'",
+     "seg": 2581,
+     "j": "Sabah Kerjota",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+4'",
+     "seg": 5400,
+     "j": "Folarin Balogun",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-kauno-zalgiris-riga-fc",
@@ -19236,7 +19433,50 @@
    ],
    "provisional": false,
    "localAbbr": "KAU",
-   "visitanteAbbr": "RIG"
+   "visitanteAbbr": "RIG",
+   "goles": [
+    {
+     "t": "r",
+     "min": "40'",
+     "seg": 2377,
+     "j": "Iago Siqueira",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "45'+4'",
+     "seg": 2700,
+     "j": "Kenan Piric",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3345,
+     "j": "Anthony Kalik",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3612,
+     "j": "Gabriel Debeljuh",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-klubi-sportiv-egnatia-lincoln-red-imps",
@@ -19253,7 +19493,41 @@
    ],
    "provisional": false,
    "localAbbr": "KLU",
-   "visitanteAbbr": "LIN"
+   "visitanteAbbr": "LIN",
+   "goles": [
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2816,
+     "j": "Alessandro Albanese",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "79'",
+     "seg": 4681,
+     "j": "Yussef Flalhi Idrissi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "81'",
+     "seg": 4817,
+     "j": "Fernando Medeiros",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-pafos-fc-fc-midtjylland",
@@ -19270,7 +19544,32 @@
    ],
    "provisional": false,
    "localAbbr": "PAF",
-   "visitanteAbbr": "MID"
+   "visitanteAbbr": "MID",
+   "goles": [
+    {
+     "t": "g",
+     "min": "43'",
+     "seg": 2577,
+     "j": "Mileta Rajovic",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4886,
+     "j": "Mikel Gogorza",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-sk-brann-agf-aarhus",
@@ -19287,7 +19586,59 @@
    ],
    "provisional": false,
    "localAbbr": "BRA",
-   "visitanteAbbr": "AGF"
+   "visitanteAbbr": "AGF",
+   "goles": [
+    {
+     "t": "g",
+     "min": "25'",
+     "seg": 1494,
+     "j": "Tobias Bech",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2338,
+     "j": "Daniel Grétarsson",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "51'",
+     "seg": 3027,
+     "j": "Niklas Castro",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "56'",
+     "seg": 3340,
+     "j": "Stefen Tchamche",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3562,
+     "j": "Magnus Knudsen",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    1,
+    4
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-borac-banja-luka-atalanta",
@@ -20258,7 +20609,7 @@
     "mliga3",
     "mcopa"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "CAR"
   },
   {
@@ -20274,7 +20625,7 @@
     "tdp",
     "rtveplay"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "EXT"
   },
   {
@@ -20306,7 +20657,7 @@
     "mlc2",
     "mcopa"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "EUR"
   },
   {
@@ -20322,7 +20673,7 @@
     "mliga4",
     "mcopa"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "GIM"
   },
   {
@@ -21111,6 +21462,35 @@
     "hyper",
     "daznhm",
     "orange2"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-1-15-atm-bet",
+   "liga": 1,
+   "jornada": "15",
+   "inicio": "2026-12-06T21:00:00+01:00",
+   "local": "Atlético de Madrid",
+   "localId": "atm",
+   "visitante": "Real Betis",
+   "visitanteId": "bet",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-17-gir-vll",
+   "liga": 2,
+   "jornada": "17",
+   "inicio": "2026-12-06T21:00:00+01:00",
+   "local": "Girona FC",
+   "localId": "gir",
+   "visitante": "Real Valladolid",
+   "visitanteId": "vll",
+   "canales": [
+    "hyper",
+    "daznhm"
    ],
    "provisional": true
   },
@@ -22474,15 +22854,37 @@
    "tras": "Jornada 4",
    "filas": [
     [
-     "lugano",
-     3,
-     3,
-     0,
-     0,
-     11,
+     "as-monaco",
      4,
+     4,
+     0,
+     0,
+     10,
+     3,
+     12,
+     "AS Monaco"
+    ],
+    [
+     "brighton",
+     4,
+     3,
+     1,
+     0,
      9,
-     "Lugano"
+     0,
+     10,
+     "Brighton"
+    ],
+    [
+     "ajax",
+     4,
+     3,
+     0,
+     1,
+     13,
+     3,
+     9,
+     "Ajax"
     ],
     [
      "panathinaikos",
@@ -22507,37 +22909,15 @@
      "Twente"
     ],
     [
-     "as-monaco",
-     3,
+     "lugano",
+     4,
      3,
      0,
-     0,
-     7,
      1,
+     11,
+     6,
      9,
-     "AS Monaco"
-    ],
-    [
-     "brighton",
-     3,
-     2,
-     1,
-     0,
-     5,
-     0,
-     7,
-     "Brighton"
-    ],
-    [
-     "sk-brann",
-     3,
-     2,
-     1,
-     0,
-     7,
-     3,
-     7,
-     "SK Brann"
+     "Lugano"
     ],
     [
      "kobenhavn",
@@ -22549,17 +22929,6 @@
      3,
      7,
      "København"
-    ],
-    [
-     "fcu-craiova-1948",
-     3,
-     2,
-     1,
-     0,
-     6,
-     2,
-     7,
-     "FCU Craiova 1948"
     ],
     [
      "mjallby-aif",
@@ -22584,15 +22953,26 @@
      "Sint-Truiden VV"
     ],
     [
-     "ajax",
-     3,
+     "sk-brann",
+     4,
      2,
-     0,
      1,
-     9,
-     3,
+     1,
+     8,
+     7,
+     7,
+     "SK Brann"
+    ],
+    [
+     "fcu-craiova-1948",
+     4,
+     2,
+     1,
+     1,
      6,
-     "Ajax"
+     6,
+     7,
+     "FCU Craiova 1948"
     ],
     [
      "trabzonspor",
@@ -22626,6 +23006,39 @@
      5,
      6,
      "Freiburg"
+    ],
+    [
+     "agf-aarhus",
+     4,
+     1,
+     2,
+     1,
+     5,
+     3,
+     5,
+     "AGF Aarhus"
+    ],
+    [
+     "fkb-jablonec",
+     4,
+     1,
+     2,
+     1,
+     5,
+     4,
+     5,
+     "FKB Jablonec"
+    ],
+    [
+     "klubi-sportiv-egnatia",
+     4,
+     1,
+     2,
+     1,
+     4,
+     5,
+     5,
+     "Klubi Sportiv Egnatia"
     ],
     [
      "fc-kairat",
@@ -22683,26 +23096,26 @@
      "Gent"
     ],
     [
-     "riga-fc",
-     3,
-     0,
-     3,
-     0,
-     3,
-     3,
-     3,
-     "Riga FC"
-    ],
-    [
-     "fc-thun",
-     3,
+     "fc-iberia-1999",
+     4,
      1,
-     0,
+     1,
      2,
      3,
-     3,
-     3,
-     "FC Thun"
+     5,
+     4,
+     "FC Iberia 1999"
+    ],
+    [
+     "fc-midtjylland",
+     4,
+     1,
+     1,
+     2,
+     4,
+     8,
+     4,
+     "FC Midtjylland"
     ],
     [
      "borac-banja-luka",
@@ -22716,37 +23129,48 @@
      "Borac Banja Luka"
     ],
     [
-     "lincoln-red-imps",
+     "riga-fc",
+     4,
+     0,
      3,
      1,
-     0,
-     2,
      3,
-     6,
+     5,
+     3,
+     "Riga FC"
+    ],
+    [
+     "lincoln-red-imps",
+     4,
+     1,
+     0,
+     3,
+     4,
+     8,
      3,
      "Lincoln Red Imps"
     ],
     [
-     "fkb-jablonec",
-     3,
-     0,
-     2,
-     1,
-     3,
+     "fc-thun",
      4,
-     2,
-     "FKB Jablonec"
+     1,
+     0,
+     3,
+     3,
+     7,
+     3,
+     "FC Thun"
     ],
     [
-     "agf-aarhus",
-     3,
+     "kauno-zalgiris",
+     4,
+     1,
      0,
-     2,
-     1,
-     1,
-     2,
-     2,
-     "AGF Aarhus"
+     3,
+     3,
+     11,
+     3,
+     "Kauno Žalgiris"
     ],
     [
      "nordsjaelland",
@@ -22760,17 +23184,6 @@
      "Nordsjælland"
     ],
     [
-     "klubi-sportiv-egnatia",
-     3,
-     0,
-     2,
-     1,
-     2,
-     4,
-     2,
-     "Klubi Sportiv Egnatia"
-    ],
-    [
      "cska-sofia",
      3,
      0,
@@ -22780,50 +23193,6 @@
      6,
      1,
      "CSKA Sofia"
-    ],
-    [
-     "fc-iberia-1999",
-     3,
-     0,
-     1,
-     2,
-     2,
-     5,
-     1,
-     "FC Iberia 1999"
-    ],
-    [
-     "pafos-fc",
-     3,
-     0,
-     1,
-     2,
-     3,
-     7,
-     1,
-     "Pafos FC"
-    ],
-    [
-     "get",
-     3,
-     0,
-     1,
-     2,
-     3,
-     7,
-     1,
-     "Getafe CF"
-    ],
-    [
-     "hearts",
-     3,
-     0,
-     1,
-     2,
-     2,
-     6,
-     1,
-     "Hearts"
     ],
     [
      "kups",
@@ -22837,15 +23206,37 @@
      "KuPS"
     ],
     [
-     "fc-midtjylland",
-     3,
+     "hearts",
+     4,
      0,
      1,
-     2,
-     2,
+     3,
+     4,
+     9,
+     1,
+     "Hearts"
+    ],
+    [
+     "get",
+     4,
+     0,
+     1,
+     3,
+     3,
      8,
      1,
-     "FC Midtjylland"
+     "Getafe CF"
+    ],
+    [
+     "pafos-fc",
+     4,
+     0,
+     1,
+     3,
+     3,
+     9,
+     1,
+     "Pafos FC"
     ],
     [
      "inter-club-d-escaldes",
@@ -22857,25 +23248,119 @@
      7,
      0,
      "Inter Club d'Escaldes"
-    ],
-    [
-     "kauno-zalgiris",
-     3,
-     0,
-     0,
-     3,
-     1,
-     11,
-     0,
-     "Kauno Žalgiris"
     ]
    ]
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T20:07:44+01:00",
-  "cambio": "2026-11-26T20:07:44+01:00",
+  "comprobado": "2026-11-26T21:07:47+01:00",
+  "cambio": "2026-11-26T21:07:47+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T21:07:47+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 9,
+    "tablas": [
+     "Conference"
+    ],
+    "detalle": [
+     "Nuevo partido: Atlético de Madrid – Real Betis",
+     "Nuevo partido: Girona FC – Real Valladolid",
+     "Canal confirmado: Gimnástica Torrelavega – Deportivo Alavés",
+     "Canal confirmado: Cartagena – Elche CF",
+     "Canal confirmado: CE Europa – Rayo Vallecano",
+     "Canal confirmado: CD Extremadura – Real Betis",
+     "Resultado: Ajax 4-0 FC Thun",
+     "Resultado: Brighton 4-0 FCU Craiova 1948",
+     "Resultado: Klubi Sportiv Egnatia 2-1 Lincoln Red Imps",
+     "Resultado: Hearts 2-3 AS Monaco",
+     "Resultado: FC Iberia 1999 1-0 Getafe CF",
+     "Resultado: FKB Jablonec 2-0 Lugano",
+     "Resultado: Kauno Žalgiris 2-0 Riga FC",
+     "Resultado: Pafos FC 0-2 FC Midtjylland",
+     "Resultado: SK Brann 1-4 AGF Aarhus"
+    ],
+    "avisos": 13,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-6-fase-liga-j4-ajax-fc-thun",
+       "t": "Ajax 4-0 FC Thun"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-brighton-fcu-craiova-1948",
+       "t": "Brighton 4-0 FCU Craiova 1948"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-klubi-sportiv-egnatia-lincoln-red-imps",
+       "t": "Klubi Sportiv Egnatia 2-1 Lincoln Red Imps"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-hearts-as-monaco",
+       "t": "Hearts 2-3 AS Monaco"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-fc-iberia-1999-get",
+       "t": "FC Iberia 1999 1-0 Getafe CF"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-fkb-jablonec-lugano",
+       "t": "FKB Jablonec 2-0 Lugano"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-kauno-zalgiris-riga-fc",
+       "t": "Kauno Žalgiris 2-0 Riga FC"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-pafos-fc-fc-midtjylland",
+       "t": "Pafos FC 0-2 FC Midtjylland"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-sk-brann-agf-aarhus",
+       "t": "SK Brann 1-4 AGF Aarhus"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-15-atm-bet",
+       "t": "Atlético de Madrid – Real Betis"
+      },
+      {
+       "id": "2627-2-17-gir-vll",
+       "t": "Girona FC – Real Valladolid"
+      },
+      {
+       "id": "2627-3-segunda-ronda-gimnastica-torrelavega-ala",
+       "t": "Gimnástica Torrelavega – Deportivo Alavés · confirmado"
+      },
+      {
+       "id": "2627-3-segunda-ronda-cartagena-elc",
+       "t": "Cartagena – Elche CF · confirmado"
+      },
+      {
+       "id": "2627-3-segunda-ronda-ce-europa-ray",
+       "t": "CE Europa – Rayo Vallecano · confirmado"
+      },
+      {
+       "id": "2627-3-segunda-ronda-cd-extremadura-bet",
+       "t": "CD Extremadura – Real Betis · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-15-atm-bet",
+       "t": "Atlético de Madrid – Real Betis (Primera)"
+      },
+      {
+       "id": "2627-2-17-gir-vll",
+       "t": "Girona FC – Real Valladolid (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-26T20:07:44+01:00",
     "nuevos": 0,
@@ -23486,41 +23971,6 @@
     "avisos": 13,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T23:29:47+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 3,
-    "tablas": [
-     "Champions"
-    ],
-    "detalle": [
-     "Resultado: Inter 2-0 Stuttgart",
-     "Resultado: Atlético de Madrid 2-0 Viking",
-     "Resultado: Lille 2-1 Bayern Múnich"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-4-fase-liga-j5-inter-stuttgart",
-       "t": "Inter 2-0 Stuttgart"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-atm-viking",
-       "t": "Atlético de Madrid 2-0 Viking"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-lille-bayern-munich",
-       "t": "Lille 2-1 Bayern Múnich"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
