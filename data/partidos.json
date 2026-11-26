@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T14:07:47+01:00",
+ "actualizado": "2026-11-26T16:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20895,6 +20895,70 @@
    "provisional": true
   },
   {
+   "id": "2627-5-15-antequera-ce-europa",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T16:00:00+01:00",
+   "local": "Antequera",
+   "localId": "antequera",
+   "visitante": "CE Europa",
+   "visitanteId": "ce-europa",
+   "canales": [
+    {
+     "name": "betevé",
+     "short": "BTV",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Barcelona y en beteve.cat."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ANT",
+   "visitanteAbbr": "EUR",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite betevé; completo, en FANPLAY TV y FootballClub."
+  },
+  {
+   "id": "2627-5-15-deportivo-fabril-real-aviles-industrial",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T16:00:00+01:00",
+   "local": "Deportivo Fabril",
+   "localId": "deportivo-fabril",
+   "visitante": "Real Avilés Industrial",
+   "visitanteId": "real-aviles-industrial",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "FAB",
+   "visitanteAbbr": "AVI",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-15-ponferradina-ud-logrones",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T16:00:00+01:00",
+   "local": "Ponferradina",
+   "localId": "ponferradina",
+   "visitante": "UD Logroñés",
+   "visitanteId": "ud-logrones",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "PFR",
+   "visitanteAbbr": "LOG",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
    "id": "2627-2-13-and-mll",
    "liga": 2,
    "jornada": "13",
@@ -22653,9 +22717,55 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T15:07:50+01:00",
-  "cambio": "2026-11-26T14:07:47+01:00",
+  "comprobado": "2026-11-26T16:07:44+01:00",
+  "cambio": "2026-11-26T16:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T16:07:44+01:00",
+    "nuevos": 3,
+    "horas": 0,
+    "canales": 3,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [
+     "Nuevo partido: Ponferradina – UD Logroñés",
+     "Nuevo partido: Deportivo Fabril – Real Avilés Industrial",
+     "Nuevo partido: Antequera – CE Europa"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-15-ponferradina-ud-logrones",
+       "t": "Ponferradina – UD Logroñés"
+      },
+      {
+       "id": "2627-5-15-deportivo-fabril-real-aviles-industrial",
+       "t": "Deportivo Fabril – Real Avilés Industrial"
+      },
+      {
+       "id": "2627-5-15-antequera-ce-europa",
+       "t": "Antequera – CE Europa"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-15-ponferradina-ud-logrones",
+       "t": "Ponferradina – UD Logroñés (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-15-deportivo-fabril-real-aviles-industrial",
+       "t": "Deportivo Fabril – Real Avilés Industrial (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-15-antequera-ce-europa",
+       "t": "Antequera – CE Europa (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-26T15:07:50+01:00",
     "nuevos": 0,
@@ -23241,22 +23351,6 @@
        "t": "Cultural Leonesa – Racing Ferrol (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-25T18:07:42+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
