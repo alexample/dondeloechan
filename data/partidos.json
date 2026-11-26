@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T22:07:47+01:00",
+ "actualizado": "2026-11-26T23:07:41+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -19655,7 +19655,77 @@
    ],
    "provisional": false,
    "localAbbr": "BOR",
-   "visitanteAbbr": "ATA"
+   "visitanteAbbr": "ATA",
+   "goles": [
+    {
+     "t": "g",
+     "min": "22'",
+     "seg": 1292,
+     "j": "Luka Juricic",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "29'",
+     "seg": 1739,
+     "j": "Matej Deket",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "75'",
+     "seg": 4443,
+     "j": "Abel Pascual",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "86'",
+     "seg": 5144,
+     "j": "Nikola Krstovic",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "88'",
+     "seg": 5232,
+     "j": "Sebastián Herrera",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'",
+     "seg": 5365,
+     "j": "Sead Kolasinac",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Davide Zappacosta",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    3
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-cska-sofia-trabzonspor",
@@ -19672,7 +19742,41 @@
    ],
    "provisional": false,
    "localAbbr": "CSK",
-   "visitanteAbbr": "TRA"
+   "visitanteAbbr": "TRA",
+   "goles": [
+    {
+     "t": "g",
+     "min": "32'",
+     "seg": 1919,
+     "j": "Sidny Lopes Cabral",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "69'",
+     "seg": 4113,
+     "j": "Mohamed Salah",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Noah Saviolo",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    1,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-freiburg-twente",
@@ -19689,7 +19793,41 @@
    ],
    "provisional": false,
    "localAbbr": "FRE",
-   "visitanteAbbr": "TWE"
+   "visitanteAbbr": "TWE",
+   "goles": [
+    {
+     "t": "g",
+     "min": "11'",
+     "seg": 630,
+     "j": "Cyriaque Irié",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3679,
+     "j": "Younes Taha",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90'+3'",
+     "seg": 5400,
+     "j": "Niklas Beste",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-gent-crvena-zvezda",
@@ -19706,7 +19844,32 @@
    ],
    "provisional": false,
    "localAbbr": "GEN",
-   "visitanteAbbr": "CRV"
+   "visitanteAbbr": "CRV",
+   "goles": [
+    {
+     "t": "g",
+     "min": "26'",
+     "seg": 1549,
+     "j": "Tiago Araújo",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "85'",
+     "seg": 5053,
+     "j": "Matej Gashtarov",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    1,
+    1
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-hajduk-split-sint-truiden-vv",
@@ -19723,7 +19886,32 @@
    ],
    "provisional": false,
    "localAbbr": "HAJ",
-   "visitanteAbbr": "SIN"
+   "visitanteAbbr": "SIN",
+   "goles": [
+    {
+     "t": "g",
+     "min": "45'+1'",
+     "seg": 2700,
+     "j": "Samed Bazdar",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "51'",
+     "seg": 3011,
+     "j": "Shion Shinkawa",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-inter-club-d-escaldes-kobenhavn",
@@ -19740,7 +19928,50 @@
    ],
    "provisional": false,
    "localAbbr": "INT",
-   "visitanteAbbr": "KOB"
+   "visitanteAbbr": "KOB",
+   "goles": [
+    {
+     "t": "g",
+     "min": "19'",
+     "seg": 1106,
+     "j": "David López",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "54'",
+     "seg": 3189,
+     "j": "Thomas Delaney",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "57'",
+     "seg": 3387,
+     "j": "Ákos Markgráf",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "59'",
+     "seg": 3496,
+     "j": "Faysal Choaib",
+     "lado": "L",
+     "pen": true,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    2,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-nordsjaelland-panathinaikos",
@@ -19757,7 +19988,59 @@
    ],
    "provisional": false,
    "localAbbr": "NOR",
-   "visitanteAbbr": "PAN"
+   "visitanteAbbr": "PAN",
+   "goles": [
+    {
+     "t": "g",
+     "min": "45'",
+     "seg": 2641,
+     "j": "Adriano Jagusic",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "55'",
+     "seg": 3274,
+     "j": "Elmin Rastoder",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "61'",
+     "seg": 3656,
+     "j": "Alexander Lind",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "78'",
+     "seg": 4638,
+     "j": "Victor Kristiansen",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4748,
+     "j": "Alexander Lind",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    3,
+    2
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-sc-braga-kups",
@@ -19774,7 +20057,50 @@
    ],
    "provisional": false,
    "localAbbr": "BRA",
-   "visitanteAbbr": "KUP"
+   "visitanteAbbr": "KUP",
+   "goles": [
+    {
+     "t": "g",
+     "min": "18'",
+     "seg": 1026,
+     "j": "Pau Víctor",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "31'",
+     "seg": 1816,
+     "j": "Fran Navarro",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "71'",
+     "seg": 4234,
+     "j": "Mario Dorgeles",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4889,
+     "j": "Jovan Milosevic",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    4,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-5-14-bilbao-athletic-cultural-leonesa",
@@ -23007,6 +23333,17 @@
      "Brighton"
     ],
     [
+     "sint-truiden-vv",
+     4,
+     3,
+     1,
+     0,
+     6,
+     1,
+     10,
+     "Sint-Truiden VV"
+    ],
+    [
      "ajax",
      4,
      3,
@@ -23019,25 +23356,14 @@
     ],
     [
      "panathinaikos",
-     3,
+     4,
      3,
      0,
-     0,
-     9,
-     3,
+     1,
+     11,
+     6,
      9,
      "Panathinaikos"
-    ],
-    [
-     "twente",
-     3,
-     3,
-     0,
-     0,
-     8,
-     2,
-     9,
-     "Twente"
     ],
     [
      "lugano",
@@ -23051,15 +23377,48 @@
      "Lugano"
     ],
     [
-     "kobenhavn",
+     "twente",
+     4,
      3,
+     0,
+     1,
+     9,
+     4,
+     9,
+     "Twente"
+    ],
+    [
+     "trabzonspor",
+     4,
+     3,
+     0,
+     1,
+     8,
+     4,
+     9,
+     "Trabzonspor"
+    ],
+    [
+     "freiburg",
+     4,
+     3,
+     0,
+     1,
+     6,
+     6,
+     9,
+     "Freiburg"
+    ],
+    [
+     "sc-braga",
+     4,
      2,
      1,
-     0,
-     7,
+     1,
+     6,
      3,
      7,
-     "København"
+     "SC Braga"
     ],
     [
      "mjallby-aif",
@@ -23073,15 +23432,15 @@
      "Mjällby AIF"
     ],
     [
-     "sint-truiden-vv",
-     3,
+     "kobenhavn",
+     4,
      2,
      1,
-     0,
-     4,
      1,
      7,
-     "Sint-Truiden VV"
+     5,
+     7,
+     "København"
     ],
     [
      "sk-brann",
@@ -23095,6 +23454,17 @@
      "SK Brann"
     ],
     [
+     "atalanta",
+     4,
+     2,
+     1,
+     1,
+     7,
+     6,
+     7,
+     "Atalanta"
+    ],
+    [
      "universitatea-craiova",
      4,
      2,
@@ -23106,37 +23476,15 @@
      "Universitatea Craiova"
     ],
     [
-     "trabzonspor",
-     3,
-     2,
-     0,
-     1,
-     6,
-     3,
-     6,
-     "Trabzonspor"
-    ],
-    [
      "hajduk-split",
-     3,
+     4,
      2,
      0,
-     1,
-     3,
      2,
+     3,
+     4,
      6,
      "Hajduk Split"
-    ],
-    [
-     "freiburg",
-     3,
-     2,
-     0,
-     1,
-     4,
-     5,
-     6,
-     "Freiburg"
     ],
     [
      "agf-aarhus",
@@ -23161,6 +23509,28 @@
      "FKB Jablonec"
     ],
     [
+     "crvena-zvezda",
+     4,
+     1,
+     2,
+     1,
+     7,
+     7,
+     5,
+     "Crvena Zvezda"
+    ],
+    [
+     "nordsjaelland",
+     4,
+     1,
+     2,
+     1,
+     6,
+     7,
+     5,
+     "Nordsjælland"
+    ],
+    [
      "klubi-sportiv-egnatia",
      4,
      1,
@@ -23172,6 +23542,17 @@
      "Klubi Sportiv Egnatia"
     ],
     [
+     "gent",
+     4,
+     1,
+     2,
+     1,
+     2,
+     3,
+     5,
+     "Gent"
+    ],
+    [
      "fc-kairat",
      4,
      1,
@@ -23181,50 +23562,6 @@
      7,
      5,
      "FC Kairat"
-    ],
-    [
-     "crvena-zvezda",
-     3,
-     1,
-     1,
-     1,
-     6,
-     6,
-     4,
-     "Crvena Zvezda"
-    ],
-    [
-     "atalanta",
-     3,
-     1,
-     1,
-     1,
-     4,
-     4,
-     4,
-     "Atalanta"
-    ],
-    [
-     "sc-braga",
-     3,
-     1,
-     1,
-     1,
-     2,
-     3,
-     4,
-     "SC Braga"
-    ],
-    [
-     "gent",
-     3,
-     1,
-     1,
-     1,
-     1,
-     2,
-     4,
-     "Gent"
     ],
     [
      "fc-iberia-1999",
@@ -23250,12 +23587,12 @@
     ],
     [
      "borac-banja-luka",
-     3,
+     4,
      1,
      0,
-     2,
      3,
-     4,
+     5,
+     7,
      3,
      "Borac Banja Luka"
     ],
@@ -23269,6 +23606,17 @@
      5,
      3,
      "Riga FC"
+    ],
+    [
+     "inter-club-d-escaldes",
+     4,
+     1,
+     0,
+     3,
+     4,
+     7,
+     3,
+     "Inter Club d'Escaldes"
     ],
     [
      "lincoln-red-imps",
@@ -23304,37 +23652,15 @@
      "Kauno Žalgiris"
     ],
     [
-     "nordsjaelland",
-     3,
+     "cska-sofia",
+     4,
      0,
-     2,
      1,
      3,
      5,
-     2,
-     "Nordsjælland"
-    ],
-    [
-     "cska-sofia",
-     3,
-     0,
-     1,
-     2,
-     4,
-     6,
+     8,
      1,
      "CSKA Sofia"
-    ],
-    [
-     "kups",
-     3,
-     0,
-     1,
-     2,
-     2,
-     6,
-     1,
-     "KuPS"
     ],
     [
      "hearts",
@@ -23370,23 +23696,83 @@
      "Pafos FC"
     ],
     [
-     "inter-club-d-escaldes",
-     3,
+     "kups",
+     4,
      0,
-     0,
+     1,
      3,
      2,
-     7,
-     0,
-     "Inter Club d'Escaldes"
+     10,
+     1,
+     "KuPS"
     ]
    ]
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T22:07:47+01:00",
-  "cambio": "2026-11-26T22:07:47+01:00",
+  "comprobado": "2026-11-26T23:07:41+01:00",
+  "cambio": "2026-11-26T23:07:41+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T23:07:41+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 8,
+    "tablas": [
+     "Conference"
+    ],
+    "detalle": [
+     "Resultado: Borac Banja Luka 2-3 Atalanta",
+     "Resultado: SC Braga 4-0 KuPS",
+     "Resultado: CSKA Sofia 1-2 Trabzonspor",
+     "Resultado: Nordsjælland 3-2 Panathinaikos",
+     "Resultado: Hajduk Split 0-2 Sint-Truiden VV",
+     "Resultado: Inter Club d'Escaldes 2-0 København",
+     "Resultado: Gent 1-1 Crvena Zvezda",
+     "Resultado: Freiburg 2-1 Twente"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-6-fase-liga-j4-borac-banja-luka-atalanta",
+       "t": "Borac Banja Luka 2-3 Atalanta"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-sc-braga-kups",
+       "t": "SC Braga 4-0 KuPS"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-cska-sofia-trabzonspor",
+       "t": "CSKA Sofia 1-2 Trabzonspor"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-nordsjaelland-panathinaikos",
+       "t": "Nordsjælland 3-2 Panathinaikos"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-hajduk-split-sint-truiden-vv",
+       "t": "Hajduk Split 0-2 Sint-Truiden VV"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-inter-club-d-escaldes-kobenhavn",
+       "t": "Inter Club d'Escaldes 2-0 København"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-gent-crvena-zvezda",
+       "t": "Gent 1-1 Crvena Zvezda"
+      },
+      {
+       "id": "2627-6-fase-liga-j4-freiburg-twente",
+       "t": "Freiburg 2-1 Twente"
+      }
+     ],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-26T22:07:47+01:00",
     "nuevos": 2,
@@ -24122,46 +24508,6 @@
     "avisos": 13,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-26T01:07:41+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 4,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Resultado: Shakhtar Donetsk 0-1 Fenerbahçe",
-     "Resultado: PSG 2-2 Roma",
-     "Resultado: Club Brugge 0-3 Liverpool",
-     "Resultado: Sporting CP 2-2 Manchester United"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-4-fase-liga-j5-shakhtar-donetsk-fenerbahce",
-       "t": "Shakhtar Donetsk 0-1 Fenerbahçe"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-psg-roma",
-       "t": "PSG 2-2 Roma"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-club-brugge-liverpool",
-       "t": "Club Brugge 0-3 Liverpool"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-sporting-cp-manchester-united",
-       "t": "Sporting CP 2-2 Manchester United"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
