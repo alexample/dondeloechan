@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T16:07:44+01:00",
+ "actualizado": "2026-11-26T17:07:49+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20579,14 +20579,15 @@
    "visitante": "Alcorcón",
    "visitanteId": "alcorcon",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "VIB",
    "visitanteAbbr": "ALC",
-   "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-1-15-rac-dep",
@@ -20723,14 +20724,22 @@
    "visitante": "Racing Ferrol",
    "visitanteId": "racing-ferrol",
    "canales": [
+    "rfef",
+    "daznrfef",
+    {
+     "name": "TVG",
+     "short": "TVG",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Galicia y en la web de la CRTVG."
+    },
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "CUL",
    "visitanteAbbr": "RFE",
-   "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 1"
   },
   {
    "id": "2627-5-15-ue-sant-andreu-algeciras-cf",
@@ -20792,14 +20801,15 @@
    "visitante": "Hércules",
    "visitanteId": "hercules",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "CAR",
    "visitanteAbbr": "HER",
-   "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-5-15-arenas-club-cd-lugo",
@@ -20830,14 +20840,15 @@
    "visitante": "Real Jaén",
    "visitanteId": "real-jaen",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "RMC",
    "visitanteAbbr": "JAE",
-   "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 2"
   },
   {
    "id": "2627-5-15-ud-ourense-cd-coria",
@@ -20949,14 +20960,45 @@
    "visitante": "UD Logroñés",
    "visitanteId": "ud-logrones",
    "canales": [
+    "rfef",
+    "daznrfef",
     "fanplay",
     "fclub"
    ],
    "provisional": true,
    "localAbbr": "PFR",
    "visitanteAbbr": "LOG",
-   "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "etiqueta": "Grupo 1"
+  },
+  {
+   "id": "2627-1-15-ath-rma",
+   "liga": 1,
+   "jornada": "15",
+   "inicio": "2026-12-06T16:15:00+01:00",
+   "local": "Athletic Club",
+   "localId": "ath",
+   "visitante": "Real Madrid",
+   "visitanteId": "rma",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-17-cas-alm",
+   "liga": 2,
+   "jornada": "17",
+   "inicio": "2026-12-06T16:15:00+01:00",
+   "local": "CD Castellón",
+   "localId": "cas",
+   "visitante": "UD Almería",
+   "visitanteId": "alm",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
   },
   {
    "id": "2627-2-13-and-mll",
@@ -22102,17 +22144,6 @@
        "Real Zaragoza"
       ],
       [
-       "alcorcon",
-       13,
-       6,
-       6,
-       1,
-       25,
-       14,
-       24,
-       "Alcorcón"
-      ],
-      [
        "villarreal-b",
        13,
        6,
@@ -22122,6 +22153,17 @@
        17,
        24,
        "Villarreal B"
+      ],
+      [
+       "alcorcon",
+       13,
+       6,
+       6,
+       1,
+       25,
+       14,
+       24,
+       "Alcorcón"
       ],
       [
        "real-murcia",
@@ -22190,6 +22232,17 @@
        "Real Jaén"
       ],
       [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
+      ],
+      [
        "antequera",
        13,
        4,
@@ -22210,17 +22263,6 @@
        19,
        17,
        "Algeciras CF"
-      ],
-      [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -22717,9 +22759,68 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T16:12:05+01:00",
-  "cambio": "2026-11-26T16:07:44+01:00",
+  "comprobado": "2026-11-26T17:07:49+01:00",
+  "cambio": "2026-11-26T17:07:49+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T17:07:49+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 7,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Athletic Club – Real Madrid",
+     "Nuevo partido: CD Castellón – UD Almería"
+    ],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-15-ath-rma",
+       "t": "Athletic Club – Real Madrid"
+      },
+      {
+       "id": "2627-2-17-cas-alm",
+       "t": "CD Castellón – UD Almería"
+      },
+      {
+       "id": "2627-5-15-villarreal-b-alcorcon",
+       "t": "Villarreal B – Alcorcón"
+      },
+      {
+       "id": "2627-5-15-cultural-leonesa-racing-ferrol",
+       "t": "Cultural Leonesa – Racing Ferrol"
+      },
+      {
+       "id": "2627-5-15-cartagena-hercules",
+       "t": "Cartagena – Hércules"
+      },
+      {
+       "id": "2627-5-15-real-madrid-castilla-real-jaen",
+       "t": "Real Madrid Castilla – Real Jaén"
+      },
+      {
+       "id": "2627-5-15-ponferradina-ud-logrones",
+       "t": "Ponferradina – UD Logroñés"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-15-ath-rma",
+       "t": "Athletic Club – Real Madrid (Primera)"
+      },
+      {
+       "id": "2627-2-17-cas-alm",
+       "t": "CD Castellón – UD Almería (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-26T16:12:05+01:00",
     "nuevos": 0,
@@ -23296,22 +23397,6 @@
        "t": "Cartagena – Hércules (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-25T20:07:43+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
