@@ -22759,9 +22759,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T17:07:49+01:00",
+  "comprobado": "2026-11-26T18:07:46+01:00",
   "cambio": "2026-11-26T17:07:49+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T18:07:46+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-26T17:07:49+01:00",
     "nuevos": 2,
@@ -23335,68 +23351,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T21:07:47+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 2,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: FC Barcelona – RC Celta",
-     "Nuevo partido: CD Tenerife – CD Eldense",
-     "Nuevo partido: Cartagena – Hércules",
-     "Canal confirmado: RCD Espanyol – Getafe CF",
-     "Resultado: Slavia Praga 0-1 Villarreal CF",
-     "Resultado: Sabah 1-4 FC Barcelona"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-4-fase-liga-j5-slavia-praga-vil",
-       "t": "Slavia Praga 0-1 Villarreal CF"
-      },
-      {
-       "id": "2627-4-fase-liga-j5-sabah-bar",
-       "t": "Sabah 1-4 FC Barcelona"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-15-bar-cel",
-       "t": "FC Barcelona – RC Celta"
-      },
-      {
-       "id": "2627-2-17-ten-eld",
-       "t": "CD Tenerife – CD Eldense"
-      },
-      {
-       "id": "2627-1-14-esp-get",
-       "t": "RCD Espanyol – Getafe CF · confirmado"
-      },
-      {
-       "id": "2627-5-15-cartagena-hercules",
-       "t": "Cartagena – Hércules"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-15-bar-cel",
-       "t": "FC Barcelona – RC Celta (Primera)"
-      },
-      {
-       "id": "2627-2-17-ten-eld",
-       "t": "CD Tenerife – CD Eldense (Segunda)"
-      },
-      {
-       "id": "2627-5-15-cartagena-hercules",
-       "t": "Cartagena – Hércules (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
