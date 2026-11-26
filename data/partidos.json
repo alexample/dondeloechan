@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T17:07:49+01:00",
+ "actualizado": "2026-11-26T19:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -19119,7 +19119,23 @@
    ],
    "provisional": false,
    "localAbbr": "KAI",
-   "visitanteAbbr": "MJA"
+   "visitanteAbbr": "MJA",
+   "goles": [
+    {
+     "t": "g",
+     "min": "14'",
+     "seg": 826,
+     "j": "Erkin Tapalov",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ],
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-6-fase-liga-j4-ajax-fc-thun",
@@ -20173,7 +20189,7 @@
     "mliga2",
     "mcopa"
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "ANT"
   },
   {
@@ -20993,6 +21009,104 @@
    "localId": "cas",
    "visitante": "UD Almería",
    "visitanteId": "alm",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-5-15-cp-cacereno-real-union",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T18:15:00+01:00",
+   "local": "CP Cacereño",
+   "localId": "cp-cacereno",
+   "visitante": "Real Unión",
+   "visitanteId": "real-union",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "CAC",
+   "visitanteAbbr": "RUN",
+   "etiqueta": "Grupo 1",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
+   "id": "2627-5-15-sd-huesca-real-murcia",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T18:15:00+01:00",
+   "local": "SD Huesca",
+   "localId": "sd-huesca",
+   "visitante": "Real Murcia",
+   "visitanteId": "real-murcia",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    {
+     "name": "Aragón TV",
+     "short": "ARA",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Aragón y en Aragón Play."
+    },
+    {
+     "name": "Aragón Play",
+     "short": "ARP",
+     "op": "free",
+     "dial": "Web",
+     "how": "Gratis en la web y la app de Aragón Play (sin emisión en la TDT)."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "HUE",
+   "visitanteAbbr": "MUR",
+   "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-1-15-get-val",
+   "liga": 1,
+   "jornada": "15",
+   "inicio": "2026-12-06T18:30:00+01:00",
+   "local": "Getafe CF",
+   "localId": "get",
+   "visitante": "Valencia CF",
+   "visitanteId": "val",
+   "canales": [
+    "mliga"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-17-ceu-alb",
+   "liga": 2,
+   "jornada": "17",
+   "inicio": "2026-12-06T18:30:00+01:00",
+   "local": "AD Ceuta FC",
+   "localId": "ceu",
+   "visitante": "Albacete BP",
+   "visitanteId": "alb",
+   "canales": [
+    "hyper",
+    "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-17-spo-gra",
+   "liga": 2,
+   "jornada": "17",
+   "inicio": "2026-12-06T18:30:00+01:00",
+   "local": "Real Sporting",
+   "localId": "spo",
+   "visitante": "Granada CF",
+   "visitanteId": "gra",
    "canales": [
     "hyper",
     "daznhm",
@@ -22144,17 +22258,6 @@
        "Real Zaragoza"
       ],
       [
-       "villarreal-b",
-       13,
-       6,
-       6,
-       1,
-       28,
-       17,
-       24,
-       "Villarreal B"
-      ],
-      [
        "alcorcon",
        13,
        6,
@@ -22164,6 +22267,17 @@
        14,
        24,
        "Alcorcón"
+      ],
+      [
+       "villarreal-b",
+       13,
+       6,
+       6,
+       1,
+       28,
+       17,
+       24,
+       "Villarreal B"
       ],
       [
        "real-murcia",
@@ -22232,17 +22346,6 @@
        "Real Jaén"
       ],
       [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        13,
        4,
@@ -22263,6 +22366,17 @@
        19,
        17,
        "Algeciras CF"
+      ],
+      [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -22357,7 +22471,7 @@
    }
   },
   "6": {
-   "tras": "Jornada 3",
+   "tras": "Jornada 4",
    "filas": [
     [
      "lugano",
@@ -22449,12 +22563,12 @@
     ],
     [
      "mjallby-aif",
-     3,
+     4,
      2,
      1,
-     0,
-     5,
      1,
+     5,
+     2,
      7,
      "Mjällby AIF"
     ],
@@ -22512,6 +22626,17 @@
      5,
      6,
      "Freiburg"
+    ],
+    [
+     "fc-kairat",
+     4,
+     1,
+     2,
+     1,
+     4,
+     7,
+     5,
+     "FC Kairat"
     ],
     [
      "crvena-zvezda",
@@ -22646,17 +22771,6 @@
      "Klubi Sportiv Egnatia"
     ],
     [
-     "fc-kairat",
-     3,
-     0,
-     2,
-     1,
-     3,
-     7,
-     2,
-     "FC Kairat"
-    ],
-    [
      "cska-sofia",
      3,
      0,
@@ -22759,9 +22873,87 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T18:07:46+01:00",
-  "cambio": "2026-11-26T17:07:49+01:00",
+  "comprobado": "2026-11-26T19:07:42+01:00",
+  "cambio": "2026-11-26T19:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T19:07:42+01:00",
+    "nuevos": 5,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 1,
+    "tablas": [
+     "Primera Federación",
+     "Conference"
+    ],
+    "detalle": [
+     "Nuevo partido: Getafe CF – Valencia CF",
+     "Nuevo partido: AD Ceuta FC – Albacete BP",
+     "Nuevo partido: Real Sporting – Granada CF",
+     "Nuevo partido: SD Huesca – Real Murcia",
+     "Nuevo partido: CP Cacereño – Real Unión",
+     "Canal confirmado: Antequera – Levante UD",
+     "Resultado: FC Kairat 1-0 Mjällby AIF"
+    ],
+    "avisos": 0,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-6-fase-liga-j4-fc-kairat-mjallby-aif",
+       "t": "FC Kairat 1-0 Mjällby AIF"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-15-get-val",
+       "t": "Getafe CF – Valencia CF"
+      },
+      {
+       "id": "2627-2-17-ceu-alb",
+       "t": "AD Ceuta FC – Albacete BP"
+      },
+      {
+       "id": "2627-2-17-spo-gra",
+       "t": "Real Sporting – Granada CF"
+      },
+      {
+       "id": "2627-5-15-sd-huesca-real-murcia",
+       "t": "SD Huesca – Real Murcia"
+      },
+      {
+       "id": "2627-5-15-cp-cacereno-real-union",
+       "t": "CP Cacereño – Real Unión"
+      },
+      {
+       "id": "2627-3-segunda-ronda-antequera-lev",
+       "t": "Antequera – Levante UD · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-15-get-val",
+       "t": "Getafe CF – Valencia CF (Primera)"
+      },
+      {
+       "id": "2627-2-17-ceu-alb",
+       "t": "AD Ceuta FC – Albacete BP (Segunda)"
+      },
+      {
+       "id": "2627-2-17-spo-gra",
+       "t": "Real Sporting – Granada CF (Segunda)"
+      },
+      {
+       "id": "2627-5-15-sd-huesca-real-murcia",
+       "t": "SD Huesca – Real Murcia (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-15-cp-cacereno-real-union",
+       "t": "CP Cacereño – Real Unión (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-26T18:07:46+01:00",
     "nuevos": 0,
@@ -23328,24 +23520,6 @@
     ],
     "detalle": [],
     "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T22:07:51+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 13,
     "items": {
      "resultados": [],
      "canales": [],
