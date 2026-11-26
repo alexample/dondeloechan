@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T07:07:45+01:00",
+ "actualizado": "2026-11-26T08:07:48+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20170,6 +20170,7 @@
    "visitante": "Levante UD",
    "visitanteId": "lev",
    "canales": [
+    "mliga2",
     "mcopa"
    ],
    "provisional": true,
@@ -20238,6 +20239,7 @@
    "visitante": "Elche CF",
    "visitanteId": "elc",
    "canales": [
+    "mliga3",
     "mcopa"
    ],
    "provisional": true,
@@ -20284,6 +20286,8 @@
    "visitante": "Rayo Vallecano",
    "visitanteId": "ray",
    "canales": [
+    "mliga2",
+    "mlc2",
     "mcopa"
    ],
    "provisional": true,
@@ -20299,6 +20303,7 @@
    "visitante": "Deportivo Alavés",
    "visitanteId": "ala",
    "canales": [
+    "mliga4",
     "mcopa"
    ],
    "provisional": true,
@@ -22555,9 +22560,42 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T07:07:45+01:00",
-  "cambio": "2026-11-26T07:07:45+01:00",
+  "comprobado": "2026-11-26T08:07:48+01:00",
+  "cambio": "2026-11-26T08:07:48+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T08:07:48+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-3-segunda-ronda-antequera-lev",
+       "t": "Antequera – Levante UD"
+      },
+      {
+       "id": "2627-3-segunda-ronda-gimnastica-torrelavega-ala",
+       "t": "Gimnástica Torrelavega – Deportivo Alavés"
+      },
+      {
+       "id": "2627-3-segunda-ronda-cartagena-elc",
+       "t": "Cartagena – Elche CF"
+      },
+      {
+       "id": "2627-3-segunda-ronda-ce-europa-ray",
+       "t": "CE Europa – Rayo Vallecano"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-26T07:07:45+01:00",
     "nuevos": 0,
@@ -23140,22 +23178,6 @@
     ],
     "detalle": [],
     "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T11:07:44+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
     "items": {
      "resultados": [],
      "canales": [],
