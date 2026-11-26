@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T21:07:47+01:00",
+ "actualizado": "2026-11-26T22:07:47+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20567,8 +20567,23 @@
    "localId": "sd-huesca",
    "visitante": "Girona FC",
    "visitanteId": "gir",
-   "canales": [],
-   "provisional": true,
+   "canales": [
+    {
+     "name": "Aragón TV",
+     "short": "ARA",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Aragón y en Aragón Play."
+    },
+    {
+     "name": "Aragón Play",
+     "short": "ARP",
+     "op": "free",
+     "dial": "Web",
+     "how": "Gratis en la web y la app de Aragón Play (sin emisión en la TDT)."
+    }
+   ],
+   "provisional": false,
    "localAbbr": "HUE"
   },
   {
@@ -20580,8 +20595,23 @@
    "localId": "alb",
    "visitante": "UD Las Palmas",
    "visitanteId": "lpa",
-   "canales": [],
-   "provisional": true
+   "canales": [
+    {
+     "name": "CMM",
+     "short": "CMM",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Castilla-La Mancha Media: gratis en la TDT de Castilla-La Mancha y en CMMPlay."
+    },
+    {
+     "name": "Televisión Canaria",
+     "short": "TVC",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Canarias y en la web de RTVC."
+    }
+   ],
+   "provisional": false
   },
   {
    "id": "2627-3-segunda-ronda-ponferradina-and",
@@ -20623,6 +20653,13 @@
    "visitanteId": "bet",
    "canales": [
     "tdp",
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    },
     "rtveplay"
    ],
    "provisional": false,
@@ -20712,7 +20749,15 @@
    "localId": "ue-sant-andreu",
    "visitante": "SD Eibar",
    "visitanteId": "eib",
-   "canales": [],
+   "canales": [
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    }
+   ],
    "provisional": true,
    "localAbbr": "SAN"
   },
@@ -20725,7 +20770,15 @@
    "localId": "alm",
    "visitante": "Granada CF",
    "visitanteId": "gra",
-   "canales": [],
+   "canales": [
+    {
+     "name": "Canal Sur",
+     "short": "CS",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Andalucía y en Canal Sur Más."
+    }
+   ],
    "provisional": true
   },
   {
@@ -20737,7 +20790,15 @@
    "localId": "cultural-leonesa",
    "visitante": "CD Castellón",
    "visitanteId": "cas",
-   "canales": [],
+   "canales": [
+    {
+     "name": "À Punt",
+     "short": "APT",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de la Comunitat Valenciana y en apuntmedia.es."
+    }
+   ],
    "provisional": true,
    "localAbbr": "CUL"
   },
@@ -20750,7 +20811,15 @@
    "localId": "eld",
    "visitante": "CD Tenerife",
    "visitanteId": "ten",
-   "canales": [],
+   "canales": [
+    {
+     "name": "Televisión Canaria",
+     "short": "TVC",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Canarias y en la web de RTVC."
+    }
+   ],
    "provisional": true
   },
   {
@@ -20775,7 +20844,15 @@
    "localId": "sab",
    "visitante": "Real Sporting",
    "visitanteId": "spo",
-   "canales": [],
+   "canales": [
+    {
+     "name": "TPA",
+     "short": "TPA",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Televisión del Principado de Asturias: gratis en la TDT asturiana y en su web."
+    }
+   ],
    "provisional": true
   },
   {
@@ -20815,7 +20892,15 @@
    "localId": "rayo-majadahonda",
    "visitante": "RCD Mallorca",
    "visitanteId": "mll",
-   "canales": [],
+   "canales": [
+    {
+     "name": "IB3",
+     "short": "IB3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de las Illes Balears y en ib3.org."
+    }
+   ],
    "provisional": true,
    "localAbbr": "MAJ"
   },
@@ -21464,6 +21549,52 @@
     "orange2"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-5-15-ud-ibiza-gimnastic-de-tarragona",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T19:30:00+01:00",
+   "local": "UD Ibiza",
+   "localId": "ud-ibiza",
+   "visitante": "Gimnàstic de Tarragona",
+   "visitanteId": "gimnastic-de-tarragona",
+   "canales": [
+    {
+     "name": "Esport3",
+     "short": "E3",
+     "op": "free",
+     "dial": "TDT",
+     "how": "Gratis en la TDT de Cataluña y en 3Cat."
+    },
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "IBI",
+   "visitanteAbbr": "NAS",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN. En abierto lo emite Esport3; completo, en FANPLAY TV y FootballClub."
+  },
+  {
+   "id": "2627-5-15-pontevedra-unionistas-de-salamanca",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-06T20:30:00+01:00",
+   "local": "Pontevedra",
+   "localId": "pontevedra",
+   "visitante": "Unionistas de Salamanca",
+   "visitanteId": "unionistas-de-salamanca",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "PON",
+   "visitanteAbbr": "UNI",
+   "etiqueta": "Grupo 1"
   },
   {
    "id": "2627-1-15-atm-bet",
@@ -22638,17 +22769,6 @@
        "Real Zaragoza"
       ],
       [
-       "villarreal-b",
-       13,
-       6,
-       6,
-       1,
-       28,
-       17,
-       24,
-       "Villarreal B"
-      ],
-      [
        "alcorcon",
        13,
        6,
@@ -22658,6 +22778,17 @@
        14,
        24,
        "Alcorcón"
+      ],
+      [
+       "villarreal-b",
+       13,
+       6,
+       6,
+       1,
+       28,
+       17,
+       24,
+       "Villarreal B"
       ],
       [
        "real-murcia",
@@ -22726,17 +22857,6 @@
        "Real Jaén"
       ],
       [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        13,
        4,
@@ -22757,6 +22877,17 @@
        19,
        17,
        "Algeciras CF"
+      ],
+      [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -22964,7 +23095,7 @@
      "SK Brann"
     ],
     [
-     "fcu-craiova-1948",
+     "universitatea-craiova",
      4,
      2,
      1,
@@ -22972,7 +23103,7 @@
      6,
      6,
      7,
-     "FCU Craiova 1948"
+     "Universitatea Craiova"
     ],
     [
      "trabzonspor",
@@ -23253,9 +23384,87 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T21:07:47+01:00",
-  "cambio": "2026-11-26T21:07:47+01:00",
+  "comprobado": "2026-11-26T22:07:47+01:00",
+  "cambio": "2026-11-26T22:07:47+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T22:07:47+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 11,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación",
+     "Conference"
+    ],
+    "detalle": [
+     "Nuevo partido: UD Ibiza – Gimnàstic de Tarragona",
+     "Nuevo partido: Pontevedra – Unionistas de Salamanca",
+     "Canal confirmado: SD Huesca – Girona FC",
+     "Canal confirmado: Albacete BP – UD Las Palmas"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-15-ud-ibiza-gimnastic-de-tarragona",
+       "t": "UD Ibiza – Gimnàstic de Tarragona"
+      },
+      {
+       "id": "2627-5-15-pontevedra-unionistas-de-salamanca",
+       "t": "Pontevedra – Unionistas de Salamanca"
+      },
+      {
+       "id": "2627-3-segunda-ronda-sd-huesca-gir",
+       "t": "SD Huesca – Girona FC · confirmado"
+      },
+      {
+       "id": "2627-3-segunda-ronda-alb-lpa",
+       "t": "Albacete BP – UD Las Palmas · confirmado"
+      },
+      {
+       "id": "2627-3-segunda-ronda-cd-extremadura-bet",
+       "t": "CD Extremadura – Real Betis"
+      },
+      {
+       "id": "2627-3-segunda-ronda-ue-sant-andreu-eib",
+       "t": "UE Sant Andreu – SD Eibar"
+      },
+      {
+       "id": "2627-3-segunda-ronda-alm-gra",
+       "t": "UD Almería – Granada CF"
+      },
+      {
+       "id": "2627-3-segunda-ronda-sab-spo",
+       "t": "CE Sabadell – Real Sporting"
+      },
+      {
+       "id": "2627-3-segunda-ronda-cultural-leonesa-cas",
+       "t": "Cultural Leonesa – CD Castellón"
+      },
+      {
+       "id": "2627-3-segunda-ronda-eld-ten",
+       "t": "CD Eldense – CD Tenerife"
+      },
+      {
+       "id": "2627-3-segunda-ronda-rayo-majadahonda-mll",
+       "t": "Rayo Majadahonda – RCD Mallorca"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-15-ud-ibiza-gimnastic-de-tarragona",
+       "t": "UD Ibiza – Gimnàstic de Tarragona (1ª RFEF)"
+      },
+      {
+       "id": "2627-5-15-pontevedra-unionistas-de-salamanca",
+       "t": "Pontevedra – Unionistas de Salamanca (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-26T21:07:47+01:00",
     "nuevos": 2,
@@ -23953,24 +24162,6 @@
        "t": "Sporting CP 2-2 Manchester United"
       }
      ],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-26T00:07:51+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
      "canales": [],
      "horas": [],
      "nuevos": []
