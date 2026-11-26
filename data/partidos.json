@@ -22555,9 +22555,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-26T05:07:44+01:00",
+  "comprobado": "2026-11-26T06:00:49+01:00",
   "cambio": "2026-11-26T04:07:47+01:00",
   "historial": [
+   {
+    "hora": "2026-11-26T06:00:49+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 13,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-26T05:07:44+01:00",
     "nuevos": 0,
@@ -23140,144 +23156,6 @@
      "resultados": [],
      "canales": [],
      "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-25T08:07:44+01:00",
-    "nuevos": 0,
-    "horas": 25,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nueva hora: Antequera – Levante UD, 01/12 19:00",
-     "Nueva hora: Reus FC Reddis – Real Racing Club, 01/12 19:00",
-     "Nueva hora: SD Huesca – Girona FC, 01/12 19:30",
-     "Nueva hora: Ponferradina – FC Andorra, 01/12 20:00",
-     "Nueva hora: Albacete BP – UD Las Palmas, 01/12 20:00",
-     "Nueva hora: CD Numancia – Athletic Club, 01/12 21:00",
-     "Nueva hora: Gimnástica Torrelavega – Deportivo Alavés, 01/12 21:00",
-     "Nueva hora: Cartagena – Elche CF, 01/12 21:00",
-     "Nueva hora: CE Europa – Rayo Vallecano, 01/12 21:00",
-     "Nueva hora: CD Extremadura – Real Betis, 01/12 21:00",
-     "Nueva hora: AD Ceuta FC – Cádiz CF, 02/12 18:30",
-     "Nueva hora: UE Sant Andreu – SD Eibar, 02/12 19:00",
-     "Nueva hora: Portugalete – RC Deportivo, 02/12 19:00",
-     "Nueva hora: UD Almería – Granada CF, 02/12 20:00",
-     "Nueva hora: CE Sabadell – Real Sporting, 02/12 20:00",
-     "Nueva hora: Mirandés – CD Leganés, 02/12 20:00",
-     "Nueva hora: Zamora – Real Valladolid, 02/12 20:00",
-     "Nueva hora: Cultural Leonesa – CD Castellón, 02/12 20:00",
-     "Nueva hora: CD Eldense – CD Tenerife, 02/12 20:00",
-     "Nueva hora: Real Ávila – Getafe CF, 03/12 19:00"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [
-      {
-       "id": "2627-3-segunda-ronda-antequera-lev",
-       "t": "Antequera – Levante UD: 01/12 a las 19:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-reus-fc-reddis-rac",
-       "t": "Reus FC Reddis – Real Racing Club: 01/12 a las 19:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-sd-huesca-gir",
-       "t": "SD Huesca – Girona FC: 01/12 a las 19:30"
-      },
-      {
-       "id": "2627-3-segunda-ronda-ponferradina-and",
-       "t": "Ponferradina – FC Andorra: 01/12 a las 20:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-alb-lpa",
-       "t": "Albacete BP – UD Las Palmas: 01/12 a las 20:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cd-numancia-ath",
-       "t": "CD Numancia – Athletic Club: 01/12 a las 21:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-gimnastica-torrelavega-ala",
-       "t": "Gimnástica Torrelavega – Deportivo Alavés: 01/12 a las 21:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cartagena-elc",
-       "t": "Cartagena – Elche CF: 01/12 a las 21:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-ce-europa-ray",
-       "t": "CE Europa – Rayo Vallecano: 01/12 a las 21:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cd-extremadura-bet",
-       "t": "CD Extremadura – Real Betis: 01/12 a las 21:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-ceu-cad",
-       "t": "AD Ceuta FC – Cádiz CF: 02/12 a las 18:30"
-      },
-      {
-       "id": "2627-3-segunda-ronda-ue-sant-andreu-eib",
-       "t": "UE Sant Andreu – SD Eibar: 02/12 a las 19:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-portugalete-dep",
-       "t": "Portugalete – RC Deportivo: 02/12 a las 19:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-alm-gra",
-       "t": "UD Almería – Granada CF: 02/12 a las 20:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-sab-spo",
-       "t": "CE Sabadell – Real Sporting: 02/12 a las 20:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-mirandes-leg",
-       "t": "Mirandés – CD Leganés: 02/12 a las 20:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-zamora-vll",
-       "t": "Zamora – Real Valladolid: 02/12 a las 20:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cultural-leonesa-cas",
-       "t": "Cultural Leonesa – CD Castellón: 02/12 a las 20:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-eld-ten",
-       "t": "CD Eldense – CD Tenerife: 02/12 a las 20:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-real-avila-get",
-       "t": "Real Ávila – Getafe CF: 03/12 a las 19:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cd-atletico-paso-sev",
-       "t": "CD Atlético Paso – Sevilla FC: 03/12 a las 19:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-real-zaragoza-bur",
-       "t": "Real Zaragoza – Burgos CF: 03/12 a las 21:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-sd-amorebieta-osa",
-       "t": "SD Amorebieta – CA Osasuna: 03/12 a las 21:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-real-jaen-val",
-       "t": "Real Jaén – Valencia CF: 03/12 a las 21:00"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cd-coria-mal",
-       "t": "CD Coria – Málaga CF: 03/12 a las 21:00"
-      }
-     ],
      "nuevos": []
     }
    }
