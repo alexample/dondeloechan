@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T21:07:46+01:00",
+ "actualizado": "2026-11-27T22:07:47+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -22255,11 +22255,11 @@
      "rac",
      14,
      5,
-     3,
-     6,
+     2,
+     7,
      20,
-     32,
-     18
+     33,
+     17
     ],
     [
      "ath",
@@ -22312,6 +22312,16 @@
      15
     ],
     [
+     "lev",
+     14,
+     3,
+     6,
+     5,
+     18,
+     22,
+     15
+    ],
+    [
      "osa",
      13,
      4,
@@ -22329,16 +22339,6 @@
      4,
      11,
      12,
-     13
-    ],
-    [
-     "lev",
-     14,
-     2,
-     7,
-     5,
-     17,
-     22,
      13
     ],
     [
@@ -23047,6 +23047,17 @@
        "UD Logroñés"
       ],
       [
+       "bilbao-athletic",
+       14,
+       6,
+       4,
+       4,
+       19,
+       15,
+       22,
+       "Bilbao Athletic"
+      ],
+      [
        "real-aviles-industrial",
        13,
        6,
@@ -23100,17 +23111,6 @@
        14,
        20,
        "Mirandés"
-      ],
-      [
-       "bilbao-athletic",
-       13,
-       5,
-       4,
-       4,
-       18,
-       15,
-       19,
-       "Bilbao Athletic"
       ],
       [
        "barakaldo-cf",
@@ -23169,12 +23169,12 @@
       ],
       [
        "cultural-leonesa",
-       13,
+       14,
        4,
        4,
-       5,
+       6,
        13,
-       12,
+       13,
        16,
        "Cultural Leonesa"
       ],
@@ -23261,17 +23261,6 @@
        "Real Zaragoza"
       ],
       [
-       "alcorcon",
-       13,
-       6,
-       6,
-       1,
-       25,
-       14,
-       24,
-       "Alcorcón"
-      ],
-      [
        "villarreal-b",
        13,
        6,
@@ -23281,6 +23270,17 @@
        17,
        24,
        "Villarreal B"
+      ],
+      [
+       "alcorcon",
+       13,
+       6,
+       6,
+       1,
+       25,
+       14,
+       24,
+       "Alcorcón"
       ],
       [
        "real-murcia",
@@ -23349,6 +23349,17 @@
        "Real Jaén"
       ],
       [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
+      ],
+      [
        "antequera",
        13,
        4,
@@ -23369,17 +23380,6 @@
        19,
        17,
        "Algeciras CF"
-      ],
-      [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -23876,9 +23876,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T21:07:46+01:00",
-  "cambio": "2026-11-27T21:07:46+01:00",
+  "comprobado": "2026-11-27T22:07:47+01:00",
+  "cambio": "2026-11-27T22:07:47+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T22:07:47+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 14,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-27T21:07:46+01:00",
     "nuevos": 2,
@@ -24395,22 +24419,6 @@
    },
    {
     "hora": "2026-11-27T01:07:45+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 1,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-27T00:51:01+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
