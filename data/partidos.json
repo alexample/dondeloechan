@@ -23729,9 +23729,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T12:07:42+01:00",
+  "comprobado": "2026-11-27T13:07:41+01:00",
   "cambio": "2026-11-27T12:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T13:07:41+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-27T12:07:42+01:00",
     "nuevos": 1,
@@ -24424,52 +24440,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-26T16:07:44+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [
-     "Nuevo partido: Ponferradina – UD Logroñés",
-     "Nuevo partido: Deportivo Fabril – Real Avilés Industrial",
-     "Nuevo partido: Antequera – CE Europa"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-15-ponferradina-ud-logrones",
-       "t": "Ponferradina – UD Logroñés"
-      },
-      {
-       "id": "2627-5-15-deportivo-fabril-real-aviles-industrial",
-       "t": "Deportivo Fabril – Real Avilés Industrial"
-      },
-      {
-       "id": "2627-5-15-antequera-ce-europa",
-       "t": "Antequera – CE Europa"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-15-ponferradina-ud-logrones",
-       "t": "Ponferradina – UD Logroñés (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-15-deportivo-fabril-real-aviles-industrial",
-       "t": "Deportivo Fabril – Real Avilés Industrial (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-15-antequera-ce-europa",
-       "t": "Antequera – CE Europa (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
