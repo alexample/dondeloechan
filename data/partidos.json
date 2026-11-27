@@ -23786,9 +23786,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T19:07:48+01:00",
+  "comprobado": "2026-11-27T19:56:43+01:00",
   "cambio": "2026-11-27T19:07:48+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T19:56:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 14,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-27T19:07:48+01:00",
     "nuevos": 1,
@@ -24292,84 +24308,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-26T22:07:47+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 11,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación",
-     "Conference"
-    ],
-    "detalle": [
-     "Nuevo partido: UD Ibiza – Gimnàstic de Tarragona",
-     "Nuevo partido: Pontevedra – Unionistas de Salamanca",
-     "Canal confirmado: SD Huesca – Girona FC",
-     "Canal confirmado: Albacete BP – UD Las Palmas"
-    ],
-    "avisos": 1,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-15-ud-ibiza-gimnastic-de-tarragona",
-       "t": "UD Ibiza – Gimnàstic de Tarragona"
-      },
-      {
-       "id": "2627-5-15-pontevedra-unionistas-de-salamanca",
-       "t": "Pontevedra – Unionistas de Salamanca"
-      },
-      {
-       "id": "2627-3-segunda-ronda-sd-huesca-gir",
-       "t": "SD Huesca – Girona FC · confirmado"
-      },
-      {
-       "id": "2627-3-segunda-ronda-alb-lpa",
-       "t": "Albacete BP – UD Las Palmas · confirmado"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cd-extremadura-bet",
-       "t": "CD Extremadura – Real Betis"
-      },
-      {
-       "id": "2627-3-segunda-ronda-ue-sant-andreu-eib",
-       "t": "UE Sant Andreu – SD Eibar"
-      },
-      {
-       "id": "2627-3-segunda-ronda-alm-gra",
-       "t": "UD Almería – Granada CF"
-      },
-      {
-       "id": "2627-3-segunda-ronda-sab-spo",
-       "t": "CE Sabadell – Real Sporting"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cultural-leonesa-cas",
-       "t": "Cultural Leonesa – CD Castellón"
-      },
-      {
-       "id": "2627-3-segunda-ronda-eld-ten",
-       "t": "CD Eldense – CD Tenerife"
-      },
-      {
-       "id": "2627-3-segunda-ronda-rayo-majadahonda-mll",
-       "t": "Rayo Majadahonda – RCD Mallorca"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-15-ud-ibiza-gimnastic-de-tarragona",
-       "t": "UD Ibiza – Gimnàstic de Tarragona (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-15-pontevedra-unionistas-de-salamanca",
-       "t": "Pontevedra – Unionistas de Salamanca (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
