@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T11:07:46+01:00",
+ "actualizado": "2026-11-27T12:07:42+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -21952,6 +21952,25 @@
    "provisional": true
   },
   {
+   "id": "2627-5-15-atletico-madrileno-rayo-majadahonda",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-07T12:00:00+01:00",
+   "local": "Atlético Madrileño",
+   "localId": "atletico-madrileno",
+   "visitante": "Rayo Majadahonda",
+   "visitanteId": "rayo-majadahonda",
+   "canales": [
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ATM",
+   "visitanteAbbr": "MAJ",
+   "etiqueta": "Grupo 2",
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+  },
+  {
    "id": "2627-2-13-and-mll",
    "liga": 2,
    "jornada": "13",
@@ -23095,17 +23114,6 @@
        "Real Zaragoza"
       ],
       [
-       "villarreal-b",
-       13,
-       6,
-       6,
-       1,
-       28,
-       17,
-       24,
-       "Villarreal B"
-      ],
-      [
        "alcorcon",
        13,
        6,
@@ -23115,6 +23123,17 @@
        14,
        24,
        "Alcorcón"
+      ],
+      [
+       "villarreal-b",
+       13,
+       6,
+       6,
+       1,
+       28,
+       17,
+       24,
+       "Villarreal B"
       ],
       [
        "real-murcia",
@@ -23183,17 +23202,6 @@
        "Real Jaén"
       ],
       [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        13,
        4,
@@ -23214,6 +23222,17 @@
        19,
        17,
        "Algeciras CF"
+      ],
+      [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -23710,9 +23729,39 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T11:07:46+01:00",
-  "cambio": "2026-11-27T11:07:46+01:00",
+  "comprobado": "2026-11-27T12:07:42+01:00",
+  "cambio": "2026-11-27T12:07:42+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T12:07:42+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 1,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Atlético Madrileño – Rayo Majadahonda"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-15-atletico-madrileno-rayo-majadahonda",
+       "t": "Atlético Madrileño – Rayo Majadahonda"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-15-atletico-madrileno-rayo-majadahonda",
+       "t": "Atlético Madrileño – Rayo Majadahonda (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-27T11:07:46+01:00",
     "nuevos": 0,
@@ -24421,22 +24470,6 @@
        "t": "Antequera – CE Europa (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-26T15:07:50+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
