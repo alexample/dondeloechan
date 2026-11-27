@@ -23710,9 +23710,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T08:07:46+01:00",
+  "comprobado": "2026-11-27T09:07:44+01:00",
   "cambio": "2026-11-27T08:07:46+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T09:07:44+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-27T08:07:46+01:00",
     "nuevos": 0,
@@ -24472,24 +24488,6 @@
        "t": "UD Ourense – CD Coria (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-26T11:07:48+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
