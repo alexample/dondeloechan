@@ -23710,9 +23710,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T09:07:44+01:00",
+  "comprobado": "2026-11-27T09:26:31+01:00",
   "cambio": "2026-11-27T08:07:46+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T09:26:31+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-27T09:07:44+01:00",
     "nuevos": 0,
@@ -24440,54 +24456,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-26T12:07:44+01:00",
-    "nuevos": 3,
-    "horas": 0,
-    "canales": 3,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Real Madrid Castilla – Real Jaén",
-     "Nuevo partido: Arenas Club – CD Lugo",
-     "Nuevo partido: UD Ourense – CD Coria"
-    ],
-    "avisos": 0,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-15-real-madrid-castilla-real-jaen",
-       "t": "Real Madrid Castilla – Real Jaén"
-      },
-      {
-       "id": "2627-5-15-arenas-club-cd-lugo",
-       "t": "Arenas Club – CD Lugo"
-      },
-      {
-       "id": "2627-5-15-ud-ourense-cd-coria",
-       "t": "UD Ourense – CD Coria"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-15-real-madrid-castilla-real-jaen",
-       "t": "Real Madrid Castilla – Real Jaén (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-15-arenas-club-cd-lugo",
-       "t": "Arenas Club – CD Lugo (1ª RFEF)"
-      },
-      {
-       "id": "2627-5-15-ud-ourense-cd-coria",
-       "t": "UD Ourense – CD Coria (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
