@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T23:07:46+01:00",
+ "actualizado": "2026-11-28T00:07:50+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -23382,14 +23382,25 @@
       ],
       [
        "hercules",
-       13,
+       14,
        6,
        3,
-       4,
+       5,
        15,
-       15,
+       16,
        21,
        "Hércules"
+      ],
+      [
+       "antequera",
+       14,
+       5,
+       5,
+       4,
+       21,
+       18,
+       20,
+       "Antequera"
       ],
       [
        "real-madrid-castilla",
@@ -23423,17 +23434,6 @@
        20,
        17,
        "Atlético Madrileño"
-      ],
-      [
-       "antequera",
-       13,
-       4,
-       5,
-       4,
-       20,
-       18,
-       17,
-       "Antequera"
       ],
       [
        "algeciras-cf",
@@ -23941,9 +23941,32 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T23:07:46+01:00",
-  "cambio": "2026-11-27T23:07:46+01:00",
+  "comprobado": "2026-11-28T00:07:50+01:00",
+  "cambio": "2026-11-28T00:07:50+01:00",
   "historial": [
+   {
+    "hora": "2026-11-28T00:07:50+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 14,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-27T23:07:46+01:00",
     "nuevos": 0,
@@ -24495,24 +24518,6 @@
     "canales": 0,
     "resultados": 0,
     "tablas": [],
-    "detalle": [],
-    "avisos": 14,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-27T02:07:45+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
     "detalle": [],
     "avisos": 14,
     "items": {
