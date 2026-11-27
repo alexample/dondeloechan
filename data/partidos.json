@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T17:07:43+01:00",
+ "actualizado": "2026-11-27T19:07:48+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -21090,7 +21090,7 @@
      "how": "Gratis en la TDT de Cataluña y en 3Cat."
     }
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "SAN"
   },
   {
@@ -22008,6 +22008,22 @@
    "canales": [
     "hyper",
     "daznhm"
+   ],
+   "provisional": true
+  },
+  {
+   "id": "2627-2-17-cor-lpa",
+   "liga": 2,
+   "jornada": "17",
+   "inicio": "2026-12-07T18:30:00+01:00",
+   "local": "Córdoba CF",
+   "localId": "cor",
+   "visitante": "UD Las Palmas",
+   "visitanteId": "lpa",
+   "canales": [
+    "hyper",
+    "daznhm",
+    "orange2"
    ],
    "provisional": true
   },
@@ -23155,17 +23171,6 @@
        "Real Zaragoza"
       ],
       [
-       "alcorcon",
-       13,
-       6,
-       6,
-       1,
-       25,
-       14,
-       24,
-       "Alcorcón"
-      ],
-      [
        "villarreal-b",
        13,
        6,
@@ -23175,6 +23180,17 @@
        17,
        24,
        "Villarreal B"
+      ],
+      [
+       "alcorcon",
+       13,
+       6,
+       6,
+       1,
+       25,
+       14,
+       24,
+       "Alcorcón"
       ],
       [
        "real-murcia",
@@ -23243,6 +23259,17 @@
        "Real Jaén"
       ],
       [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
+      ],
+      [
        "antequera",
        13,
        4,
@@ -23263,17 +23290,6 @@
        19,
        17,
        "Algeciras CF"
-      ],
-      [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -23770,9 +23786,44 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T18:07:48+01:00",
-  "cambio": "2026-11-27T17:07:43+01:00",
+  "comprobado": "2026-11-27T19:07:48+01:00",
+  "cambio": "2026-11-27T19:07:48+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T19:07:48+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Córdoba CF – UD Las Palmas",
+     "Canal confirmado: UE Sant Andreu – SD Eibar"
+    ],
+    "avisos": 14,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-2-17-cor-lpa",
+       "t": "Córdoba CF – UD Las Palmas"
+      },
+      {
+       "id": "2627-3-segunda-ronda-ue-sant-andreu-eib",
+       "t": "UE Sant Andreu – SD Eibar · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-2-17-cor-lpa",
+       "t": "Córdoba CF – UD Las Palmas (Segunda)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-27T18:07:48+01:00",
     "nuevos": 0,
@@ -24317,111 +24368,6 @@
       {
        "id": "2627-5-15-pontevedra-unionistas-de-salamanca",
        "t": "Pontevedra – Unionistas de Salamanca (1ª RFEF)"
-      }
-     ]
-    }
-   },
-   {
-    "hora": "2026-11-26T21:07:47+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 6,
-    "resultados": 9,
-    "tablas": [
-     "Conference"
-    ],
-    "detalle": [
-     "Nuevo partido: Atlético de Madrid – Real Betis",
-     "Nuevo partido: Girona FC – Real Valladolid",
-     "Canal confirmado: Gimnástica Torrelavega – Deportivo Alavés",
-     "Canal confirmado: Cartagena – Elche CF",
-     "Canal confirmado: CE Europa – Rayo Vallecano",
-     "Canal confirmado: CD Extremadura – Real Betis",
-     "Resultado: Ajax 4-0 FC Thun",
-     "Resultado: Brighton 4-0 FCU Craiova 1948",
-     "Resultado: Klubi Sportiv Egnatia 2-1 Lincoln Red Imps",
-     "Resultado: Hearts 2-3 AS Monaco",
-     "Resultado: FC Iberia 1999 1-0 Getafe CF",
-     "Resultado: FKB Jablonec 2-0 Lugano",
-     "Resultado: Kauno Žalgiris 2-0 Riga FC",
-     "Resultado: Pafos FC 0-2 FC Midtjylland",
-     "Resultado: SK Brann 1-4 AGF Aarhus"
-    ],
-    "avisos": 13,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-6-fase-liga-j4-ajax-fc-thun",
-       "t": "Ajax 4-0 FC Thun"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-brighton-fcu-craiova-1948",
-       "t": "Brighton 4-0 FCU Craiova 1948"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-klubi-sportiv-egnatia-lincoln-red-imps",
-       "t": "Klubi Sportiv Egnatia 2-1 Lincoln Red Imps"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-hearts-as-monaco",
-       "t": "Hearts 2-3 AS Monaco"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-fc-iberia-1999-get",
-       "t": "FC Iberia 1999 1-0 Getafe CF"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-fkb-jablonec-lugano",
-       "t": "FKB Jablonec 2-0 Lugano"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-kauno-zalgiris-riga-fc",
-       "t": "Kauno Žalgiris 2-0 Riga FC"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-pafos-fc-fc-midtjylland",
-       "t": "Pafos FC 0-2 FC Midtjylland"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-sk-brann-agf-aarhus",
-       "t": "SK Brann 1-4 AGF Aarhus"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-15-atm-bet",
-       "t": "Atlético de Madrid – Real Betis"
-      },
-      {
-       "id": "2627-2-17-gir-vll",
-       "t": "Girona FC – Real Valladolid"
-      },
-      {
-       "id": "2627-3-segunda-ronda-gimnastica-torrelavega-ala",
-       "t": "Gimnástica Torrelavega – Deportivo Alavés · confirmado"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cartagena-elc",
-       "t": "Cartagena – Elche CF · confirmado"
-      },
-      {
-       "id": "2627-3-segunda-ronda-ce-europa-ray",
-       "t": "CE Europa – Rayo Vallecano · confirmado"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cd-extremadura-bet",
-       "t": "CD Extremadura – Real Betis · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-15-atm-bet",
-       "t": "Atlético de Madrid – Real Betis (Primera)"
-      },
-      {
-       "id": "2627-2-17-gir-vll",
-       "t": "Girona FC – Real Valladolid (Segunda)"
       }
      ]
     }
