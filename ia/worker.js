@@ -265,6 +265,47 @@ async function valoraciones(request, env, origen) {
   return json({ k: clave, v: todas[clave] }, 200, origen);
 }
 
+// ---------------------------------------------------------------- RunningSpain: visitas de cada ficha
+// Contador anónimo (D1 «runningspain-visitas», tabla vistas(k, n)). Cada dispositivo cuenta una visita por ficha y día
+// (lo controla la web); aquí solo se suma, con tope por IP. No se guarda nada del visitante.
+const usoVistas = new Map();
+function permitirVistas(ip) {
+  const ahora = Date.now();
+  const u = usoVistas.get(ip) || { min: 0, tMin: ahora, dia: 0, tDia: ahora };
+  if (ahora - u.tMin > 60_000) { u.min = 0; u.tMin = ahora; }
+  if (ahora - u.tDia > 86_400_000) { u.dia = 0; u.tDia = ahora; }
+  if (u.min >= 20 || u.dia >= 400) return false;
+  u.min++; u.dia++;
+  usoVistas.set(ip, u);
+  if (usoVistas.size > 5000) usoVistas.clear();
+  return true;
+}
+
+async function visitas(request, env, origen, ctx) {
+  if (!env.VISTAS_DB) return json({ error: "Falta la base de visitas." }, 500, origen);
+  if (request.method === "GET") {   // todas las cuentas, 5 min en caché (para no leer la base en cada visita)
+    const cache = caches.default, clave = new Request("https://cache.local/runningspain-visitas");
+    let r = await cache.match(clave);
+    if (!r) {
+      const { results } = await env.VISTAS_DB.prepare("SELECT k, n FROM vistas").all();
+      const obj = {};
+      for (const f of results || []) obj[f.k] = f.n;
+      r = new Response(JSON.stringify(obj), { headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "public, max-age=300" } });
+      ctx && ctx.waitUntil ? ctx.waitUntil(cache.put(clave, r.clone())) : await cache.put(clave, r.clone());
+    }
+    return new Response(r.body, { status: 200, headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "public, max-age=120", ...cors(origen) } });
+  }
+  if (!ORIGENES.includes(origen)) return json({ error: "Origen no permitido." }, 403, origen);
+  if (!permitirVistas(request.headers.get("CF-Connecting-IP") || "anon")) return json({ error: "Demasiadas." }, 429, origen);
+  let d;
+  try { d = await request.json(); } catch { return json({ error: "Petición no válida." }, 400, origen); }
+  const ks = [...new Set((Array.isArray(d.ks) ? d.ks : []).map(String))].filter(k => /^[a-z0-9-]{3,90}$/.test(k)).slice(0, 40);
+  if (!ks.length) return json({ ok: 0 }, 200, origen);
+  const st = env.VISTAS_DB.prepare("INSERT INTO vistas (k, n) VALUES (?1, 1) ON CONFLICT(k) DO UPDATE SET n = n + 1");
+  await env.VISTAS_DB.batch(ks.map(k => st.bind(k)));
+  return json({ ok: ks.length }, 200, origen);
+}
+
 async function macrodroid(request) {
   const hook = request.headers.get("X-Hook") || "";
   if (!hook.startsWith("https://trigger.macrodroid.com/")) return new Response("Destino no válido", { status: 400 });
@@ -907,6 +948,7 @@ export default {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origen) });
     if (request.method === "POST" && new URL(request.url).pathname === "/macrodroid") return macrodroid(request);
     if (new URL(request.url).pathname === "/valoraciones") return valoraciones(request, env, origen);
+    if (new URL(request.url).pathname === "/visitas") return visitas(request, env, origen, ctx);
     if (new URL(request.url).pathname === "/runningspain-ia") return runningspainIA(request, env);
     if (new URL(request.url).pathname === "/escuchamotor-ia") return escuchamotorIA(request, env, origen);
     if (new URL(request.url).pathname === "/cantera-ia") return canteraIA(request, env, origen);
