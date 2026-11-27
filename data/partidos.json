@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T12:07:42+01:00",
+ "actualizado": "2026-11-27T15:07:45+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20222,7 +20222,8 @@
    "visitante": "Rayo Vallecano",
    "visitanteId": "ray",
    "canales": [
-    "mliga"
+    "mliga",
+    "mliga2"
    ],
    "provisional": false
   },
@@ -20393,6 +20394,7 @@
    "visitanteId": "atm",
    "canales": [
     "mliga",
+    "mliga2",
     "mplus7",
     "orange1"
    ],
@@ -20545,7 +20547,8 @@
    "visitante": "Deportivo Alavés",
    "visitanteId": "ala",
    "canales": [
-    "mliga"
+    "mliga",
+    "mliga2"
    ],
    "provisional": false
   },
@@ -20747,7 +20750,8 @@
    "visitante": "Villarreal CF",
    "visitanteId": "vil",
    "canales": [
-    "mliga"
+    "mliga",
+    "mliga2"
    ],
    "provisional": false
   },
@@ -20819,6 +20823,7 @@
    "visitanteId": "spo",
    "canales": [
     "hyper",
+    "hyper2",
     "daznhm",
     "orange2"
    ],
@@ -20835,6 +20840,7 @@
    "visitanteId": "clb",
    "canales": [
     "hyper",
+    "hyper2",
     "daznhm"
    ],
    "provisional": false
@@ -23729,9 +23735,50 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T14:07:50+01:00",
-  "cambio": "2026-11-27T12:07:42+01:00",
+  "comprobado": "2026-11-27T15:07:45+01:00",
+  "cambio": "2026-11-27T15:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T15:07:45+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 6,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-14-bet-ray",
+       "t": "Real Betis – Rayo Vallecano"
+      },
+      {
+       "id": "2627-1-14-elc-atm",
+       "t": "Elche CF – Atlético de Madrid"
+      },
+      {
+       "id": "2627-1-14-rma-ala",
+       "t": "Real Madrid – Deportivo Alavés"
+      },
+      {
+       "id": "2627-1-14-cel-vil",
+       "t": "RC Celta – Villarreal CF"
+      },
+      {
+       "id": "2627-2-16-alm-spo",
+       "t": "UD Almería – Real Sporting"
+      },
+      {
+       "id": "2627-2-16-ovi-clb",
+       "t": "Real Oviedo – Celta Fortuna"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-27T14:07:50+01:00",
     "nuevos": 0,
@@ -24381,65 +24428,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-26T17:07:49+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 7,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Athletic Club – Real Madrid",
-     "Nuevo partido: CD Castellón – UD Almería"
-    ],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-1-15-ath-rma",
-       "t": "Athletic Club – Real Madrid"
-      },
-      {
-       "id": "2627-2-17-cas-alm",
-       "t": "CD Castellón – UD Almería"
-      },
-      {
-       "id": "2627-5-15-villarreal-b-alcorcon",
-       "t": "Villarreal B – Alcorcón"
-      },
-      {
-       "id": "2627-5-15-cultural-leonesa-racing-ferrol",
-       "t": "Cultural Leonesa – Racing Ferrol"
-      },
-      {
-       "id": "2627-5-15-cartagena-hercules",
-       "t": "Cartagena – Hércules"
-      },
-      {
-       "id": "2627-5-15-real-madrid-castilla-real-jaen",
-       "t": "Real Madrid Castilla – Real Jaén"
-      },
-      {
-       "id": "2627-5-15-ponferradina-ud-logrones",
-       "t": "Ponferradina – UD Logroñés"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-15-ath-rma",
-       "t": "Athletic Club – Real Madrid (Primera)"
-      },
-      {
-       "id": "2627-2-17-cas-alm",
-       "t": "CD Castellón – UD Almería (Segunda)"
-      }
-     ]
     }
    }
   ]
