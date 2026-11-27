@@ -23710,9 +23710,25 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T05:07:44+01:00",
+  "comprobado": "2026-11-27T06:07:47+01:00",
   "cambio": "2026-11-27T04:07:39+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T06:07:47+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 0,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-27T05:07:44+01:00",
     "nuevos": 0,
@@ -24470,39 +24486,6 @@
     "items": {
      "resultados": [],
      "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-26T08:07:48+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 13,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-3-segunda-ronda-antequera-lev",
-       "t": "Antequera – Levante UD"
-      },
-      {
-       "id": "2627-3-segunda-ronda-gimnastica-torrelavega-ala",
-       "t": "Gimnástica Torrelavega – Deportivo Alavés"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cartagena-elc",
-       "t": "Cartagena – Elche CF"
-      },
-      {
-       "id": "2627-3-segunda-ronda-ce-europa-ray",
-       "t": "CE Europa – Rayo Vallecano"
-      }
-     ],
      "horas": [],
      "nuevos": []
     }
