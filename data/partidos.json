@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T20:07:44+01:00",
+ "actualizado": "2026-11-27T21:07:46+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20120,7 +20120,41 @@
    "provisional": false,
    "localAbbr": "BIL",
    "visitanteAbbr": "CUL",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    1,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 420,
+     "j": "Igor Oyono",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "24'",
+     "seg": 1440,
+     "j": "Bogdan Tîru",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "42'",
+     "seg": 2520,
+     "j": "Igor Oyono",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-16-leg-sab",
@@ -21233,7 +21267,7 @@
      "how": "Gratis en la TDT de las Illes Balears y en ib3.org."
     }
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "MAJ"
   },
   {
@@ -22048,6 +22082,42 @@
    "provisional": true
   },
   {
+   "id": "2627-5-15-real-zaragoza-aguilas-fc",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-07T20:30:00+01:00",
+   "local": "Real Zaragoza",
+   "localId": "real-zaragoza",
+   "visitante": "Águilas FC",
+   "visitanteId": "aguilas-fc",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "ZAR",
+   "visitanteAbbr": "AGU",
+   "etiqueta": "Grupo 2"
+  },
+  {
+   "id": "2627-1-15-sev-mal",
+   "liga": 1,
+   "jornada": "15",
+   "inicio": "2026-12-07T21:00:00+01:00",
+   "local": "Sevilla FC",
+   "localId": "sev",
+   "visitante": "Málaga CF",
+   "visitanteId": "mal",
+   "canales": [
+    "mliga",
+    "daznll",
+    "daznfree"
+   ],
+   "provisional": true
+  },
+  {
    "id": "2627-2-13-and-mll",
    "liga": 2,
    "jornada": "13",
@@ -22119,7 +22189,7 @@
  ],
  "clasificacion": {
   "1": {
-   "tras": "Jornada 13",
+   "tras": "Jornada 14",
    "filas": [
     [
      "bar",
@@ -22183,13 +22253,13 @@
     ],
     [
      "rac",
-     13,
+     14,
      5,
-     2,
+     3,
      6,
      20,
      32,
-     17
+     18
     ],
     [
      "ath",
@@ -22263,13 +22333,13 @@
     ],
     [
      "lev",
-     13,
+     14,
      2,
-     6,
+     7,
      5,
      17,
      22,
-     12
+     13
     ],
     [
      "ray",
@@ -22324,7 +22394,7 @@
    ]
   },
   "2": {
-   "tras": "Jornada 15",
+   "tras": "Jornada 16",
    "filas": [
     [
      "alm",
@@ -22437,6 +22507,16 @@
      21
     ],
     [
+     "sab",
+     16,
+     4,
+     8,
+     4,
+     13,
+     14,
+     20
+    ],
+    [
      "vll",
      15,
      5,
@@ -22457,24 +22537,14 @@
      19
     ],
     [
-     "sab",
-     15,
-     4,
-     7,
-     4,
-     13,
-     14,
-     19
-    ],
-    [
      "leg",
-     15,
+     16,
      5,
-     3,
+     4,
      7,
      17,
      25,
-     18
+     19
     ],
     [
      "eld",
@@ -23806,9 +23876,60 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T20:07:44+01:00",
-  "cambio": "2026-11-27T20:07:44+01:00",
+  "comprobado": "2026-11-27T21:07:46+01:00",
+  "cambio": "2026-11-27T21:07:46+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T21:07:46+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 4,
+    "resultados": 1,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [
+     "Nuevo partido: Sevilla FC – Málaga CF",
+     "Nuevo partido: Real Zaragoza – Águilas FC",
+     "Canal confirmado: Rayo Majadahonda – RCD Mallorca",
+     "Resultado: Bilbao Athletic 1-0 Cultural Leonesa"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-5-14-bilbao-athletic-cultural-leonesa",
+       "t": "Bilbao Athletic 1-0 Cultural Leonesa"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF"
+      },
+      {
+       "id": "2627-5-15-real-zaragoza-aguilas-fc",
+       "t": "Real Zaragoza – Águilas FC"
+      },
+      {
+       "id": "2627-3-segunda-ronda-rayo-majadahonda-mll",
+       "t": "Rayo Majadahonda – RCD Mallorca · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF (Primera)"
+      },
+      {
+       "id": "2627-5-15-real-zaragoza-aguilas-fc",
+       "t": "Real Zaragoza – Águilas FC (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-27T20:07:44+01:00",
     "nuevos": 1,
@@ -24290,22 +24411,6 @@
    },
    {
     "hora": "2026-11-27T00:51:01+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [],
-    "detalle": [],
-    "avisos": 1,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-27T00:07:45+01:00",
     "nuevos": 0,
     "horas": 0,
     "canales": 0,
