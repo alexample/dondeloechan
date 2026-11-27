@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T19:07:48+01:00",
+ "actualizado": "2026-11-27T20:07:44+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -21111,7 +21111,7 @@
      "how": "Gratis en la TDT de Andalucía y en Canal Sur Más."
     }
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-3-segunda-ronda-cultural-leonesa-cas",
@@ -21131,7 +21131,7 @@
      "how": "Gratis en la TDT de la Comunitat Valenciana y en apuntmedia.es."
     }
    ],
-   "provisional": true,
+   "provisional": false,
    "localAbbr": "CUL"
   },
   {
@@ -21152,7 +21152,7 @@
      "how": "Gratis en la TDT de Canarias y en la web de RTVC."
     }
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-3-segunda-ronda-mirandes-leg",
@@ -21185,7 +21185,7 @@
      "how": "Televisión del Principado de Asturias: gratis en la TDT asturiana y en su web."
     }
    ],
-   "provisional": true
+   "provisional": false
   },
   {
    "id": "2627-3-segunda-ronda-zamora-vll",
@@ -22010,6 +22010,26 @@
     "daznhm"
    ],
    "provisional": true
+  },
+  {
+   "id": "2627-5-15-mirandes-cd-extremadura",
+   "liga": 5,
+   "jornada": "15",
+   "inicio": "2026-12-07T18:15:00+01:00",
+   "local": "Mirandés",
+   "localId": "mirandes",
+   "visitante": "CD Extremadura",
+   "visitanteId": "cd-extremadura",
+   "canales": [
+    "rfef",
+    "daznrfef",
+    "fanplay",
+    "fclub"
+   ],
+   "provisional": true,
+   "localAbbr": "MIR",
+   "visitanteAbbr": "EXT",
+   "etiqueta": "Grupo 1"
   },
   {
    "id": "2627-2-17-cor-lpa",
@@ -23171,17 +23191,6 @@
        "Real Zaragoza"
       ],
       [
-       "villarreal-b",
-       13,
-       6,
-       6,
-       1,
-       28,
-       17,
-       24,
-       "Villarreal B"
-      ],
-      [
        "alcorcon",
        13,
        6,
@@ -23191,6 +23200,17 @@
        14,
        24,
        "Alcorcón"
+      ],
+      [
+       "villarreal-b",
+       13,
+       6,
+       6,
+       1,
+       28,
+       17,
+       24,
+       "Villarreal B"
       ],
       [
        "real-murcia",
@@ -23259,17 +23279,6 @@
        "Real Jaén"
       ],
       [
-       "atletico-madrileno",
-       13,
-       4,
-       5,
-       4,
-       23,
-       20,
-       17,
-       "Atlético Madrileño"
-      ],
-      [
        "antequera",
        13,
        4,
@@ -23290,6 +23299,17 @@
        19,
        17,
        "Algeciras CF"
+      ],
+      [
+       "atletico-madrileno",
+       13,
+       4,
+       5,
+       4,
+       23,
+       20,
+       17,
+       "Atlético Madrileño"
       ],
       [
        "ue-sant-andreu",
@@ -23786,9 +23806,59 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-27T19:56:43+01:00",
-  "cambio": "2026-11-27T19:07:48+01:00",
+  "comprobado": "2026-11-27T20:07:44+01:00",
+  "cambio": "2026-11-27T20:07:44+01:00",
   "historial": [
+   {
+    "hora": "2026-11-27T20:07:44+01:00",
+    "nuevos": 1,
+    "horas": 0,
+    "canales": 5,
+    "resultados": 0,
+    "tablas": [
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Mirandés – CD Extremadura",
+     "Canal confirmado: UD Almería – Granada CF",
+     "Canal confirmado: CE Sabadell – Real Sporting",
+     "Canal confirmado: Cultural Leonesa – CD Castellón",
+     "Canal confirmado: CD Eldense – CD Tenerife"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-5-15-mirandes-cd-extremadura",
+       "t": "Mirandés – CD Extremadura"
+      },
+      {
+       "id": "2627-3-segunda-ronda-alm-gra",
+       "t": "UD Almería – Granada CF · confirmado"
+      },
+      {
+       "id": "2627-3-segunda-ronda-sab-spo",
+       "t": "CE Sabadell – Real Sporting · confirmado"
+      },
+      {
+       "id": "2627-3-segunda-ronda-cultural-leonesa-cas",
+       "t": "Cultural Leonesa – CD Castellón · confirmado"
+      },
+      {
+       "id": "2627-3-segunda-ronda-eld-ten",
+       "t": "CD Eldense – CD Tenerife · confirmado"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-5-15-mirandes-cd-extremadura",
+       "t": "Mirandés – CD Extremadura (1ª RFEF)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-27T19:56:43+01:00",
     "nuevos": 0,
@@ -24245,66 +24315,6 @@
     "avisos": 1,
     "items": {
      "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-26T23:07:41+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 8,
-    "tablas": [
-     "Conference"
-    ],
-    "detalle": [
-     "Resultado: Borac Banja Luka 2-3 Atalanta",
-     "Resultado: SC Braga 4-0 KuPS",
-     "Resultado: CSKA Sofia 1-2 Trabzonspor",
-     "Resultado: Nordsjælland 3-2 Panathinaikos",
-     "Resultado: Hajduk Split 0-2 Sint-Truiden VV",
-     "Resultado: Inter Club d'Escaldes 2-0 København",
-     "Resultado: Gent 1-1 Crvena Zvezda",
-     "Resultado: Freiburg 2-1 Twente"
-    ],
-    "avisos": 1,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-6-fase-liga-j4-borac-banja-luka-atalanta",
-       "t": "Borac Banja Luka 2-3 Atalanta"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-sc-braga-kups",
-       "t": "SC Braga 4-0 KuPS"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-cska-sofia-trabzonspor",
-       "t": "CSKA Sofia 1-2 Trabzonspor"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-nordsjaelland-panathinaikos",
-       "t": "Nordsjælland 3-2 Panathinaikos"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-hajduk-split-sint-truiden-vv",
-       "t": "Hajduk Split 0-2 Sint-Truiden VV"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-inter-club-d-escaldes-kobenhavn",
-       "t": "Inter Club d'Escaldes 2-0 København"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-gent-crvena-zvezda",
-       "t": "Gent 1-1 Crvena Zvezda"
-      },
-      {
-       "id": "2627-6-fase-liga-j4-freiburg-twente",
-       "t": "Freiburg 2-1 Twente"
-      }
-     ],
      "canales": [],
      "horas": [],
      "nuevos": []
