@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T12:07:41+01:00",
+ "actualizado": "2026-11-28T14:07:48+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -22288,13 +22288,13 @@
     ],
     [
      "bet",
-     13,
+     14,
      8,
-     3,
+     4,
      2,
      21,
      16,
-     27
+     28
     ],
     [
      "rso",
@@ -22397,6 +22397,16 @@
      13
     ],
     [
+     "ray",
+     13,
+     3,
+     4,
+     6,
+     15,
+     22,
+     13
+    ],
+    [
      "lev",
      14,
      2,
@@ -22404,16 +22414,6 @@
      6,
      18,
      25,
-     12
-    ],
-    [
-     "ray",
-     12,
-     3,
-     3,
-     6,
-     15,
-     22,
      12
     ],
     [
@@ -22532,6 +22532,16 @@
      24
     ],
     [
+     "lpa",
+     16,
+     7,
+     3,
+     6,
+     21,
+     22,
+     24
+    ],
+    [
      "cor",
      15,
      7,
@@ -22539,16 +22549,6 @@
      6,
      28,
      25,
-     23
-    ],
-    [
-     "lpa",
-     15,
-     7,
-     2,
-     6,
-     21,
-     22,
      23
     ],
     [
@@ -22663,13 +22663,13 @@
     ],
     [
      "and",
-     14,
+     15,
      3,
-     2,
+     3,
      9,
      19,
      27,
-     11
+     12
     ],
     [
      "ceu",
@@ -23087,7 +23087,7 @@
   "5": {
    "grupos": {
     "Grupo 1": {
-     "tras": "Jornada 14",
+     "tras": "Jornada 13",
      "filas": [
       [
        "cd-lugo",
@@ -23312,7 +23312,7 @@
      ]
     },
     "Grupo 2": {
-     "tras": "Jornada 14",
+     "tras": "Jornada 13",
      "filas": [
       [
        "real-zaragoza",
@@ -23326,17 +23326,6 @@
        "Real Zaragoza"
       ],
       [
-       "alcorcon",
-       13,
-       6,
-       6,
-       1,
-       25,
-       14,
-       24,
-       "Alcorcón"
-      ],
-      [
        "villarreal-b",
        13,
        6,
@@ -23346,6 +23335,17 @@
        17,
        24,
        "Villarreal B"
+      ],
+      [
+       "alcorcon",
+       13,
+       6,
+       6,
+       1,
+       25,
+       14,
+       24,
+       "Alcorcón"
       ],
       [
        "real-murcia",
@@ -23425,17 +23425,6 @@
        "Real Jaén"
       ],
       [
-       "algeciras-cf",
-       13,
-       5,
-       2,
-       6,
-       18,
-       19,
-       17,
-       "Algeciras CF"
-      ],
-      [
        "atletico-madrileno",
        13,
        4,
@@ -23445,6 +23434,17 @@
        20,
        17,
        "Atlético Madrileño"
+      ],
+      [
+       "algeciras-cf",
+       13,
+       5,
+       2,
+       6,
+       18,
+       19,
+       17,
+       "Algeciras CF"
       ],
       [
        "ue-sant-andreu",
@@ -23941,9 +23941,34 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-28T13:07:45+01:00",
-  "cambio": "2026-11-28T12:07:41+01:00",
+  "comprobado": "2026-11-28T14:07:48+01:00",
+  "cambio": "2026-11-28T14:07:48+01:00",
   "historial": [
+   {
+    "hora": "2026-11-28T14:07:48+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [],
+    "avisos": 14,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-28T13:07:45+01:00",
     "nuevos": 0,
@@ -24530,45 +24555,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-27T17:07:43+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Burgos CF – Cádiz CF",
-     "Nuevo partido: Mérida – Zamora"
-    ],
-    "avisos": 1,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-2-17-bur-cad",
-       "t": "Burgos CF – Cádiz CF"
-      },
-      {
-       "id": "2627-5-15-merida-zamora",
-       "t": "Mérida – Zamora"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-2-17-bur-cad",
-       "t": "Burgos CF – Cádiz CF (Segunda)"
-      },
-      {
-       "id": "2627-5-15-merida-zamora",
-       "t": "Mérida – Zamora (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
