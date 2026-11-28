@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T17:07:43+01:00",
+ "actualizado": "2026-11-28T18:07:41+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20489,7 +20489,45 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "goles": [
+    {
+     "t": "g",
+     "min": "12'",
+     "seg": 677,
+     "j": "Víctor Valverde Da Silva",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "52'",
+     "seg": 3074,
+     "j": "Roberto González",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "62'",
+     "seg": 3667,
+     "j": "Roberto González",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "70'",
+     "seg": 4144,
+     "j": "Álex Rubio",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-16-eld-gir",
@@ -22443,7 +22481,7 @@
      4,
      4,
      19,
-     13,
+     15,
      19
     ],
     [
@@ -22572,7 +22610,7 @@
      0,
      5,
      9,
-     10,
+     12,
      28,
      5
     ]
@@ -22608,7 +22646,7 @@
      3,
      5,
      27,
-     16,
+     17,
      27
     ],
     [
@@ -22707,7 +22745,7 @@
      6,
      2,
      8,
-     17,
+     18,
      22,
      20
     ],
@@ -22728,7 +22766,7 @@
      7,
      4,
      17,
-     18,
+     21,
      19
     ],
     [
@@ -22747,7 +22785,7 @@
      5,
      1,
      10,
-     15,
+     18,
      25,
      16
     ],
@@ -24061,9 +24099,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-28T17:07:43+01:00",
-  "cambio": "2026-11-28T17:07:43+01:00",
+  "comprobado": "2026-11-28T18:07:41+01:00",
+  "cambio": "2026-11-28T18:07:41+01:00",
   "historial": [
+   {
+    "hora": "2026-11-28T18:07:41+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-28T17:07:43+01:00",
     "nuevos": 0,
@@ -24649,56 +24711,6 @@
       {
        "id": "2627-5-15-real-zaragoza-aguilas-fc",
        "t": "Real Zaragoza – Águilas FC (1ª RFEF)"
-      }
-     ]
-    }
-   },
-   {
-    "hora": "2026-11-27T20:07:44+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 5,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Mirandés – CD Extremadura",
-     "Canal confirmado: UD Almería – Granada CF",
-     "Canal confirmado: CE Sabadell – Real Sporting",
-     "Canal confirmado: Cultural Leonesa – CD Castellón",
-     "Canal confirmado: CD Eldense – CD Tenerife"
-    ],
-    "avisos": 1,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-5-15-mirandes-cd-extremadura",
-       "t": "Mirandés – CD Extremadura"
-      },
-      {
-       "id": "2627-3-segunda-ronda-alm-gra",
-       "t": "UD Almería – Granada CF · confirmado"
-      },
-      {
-       "id": "2627-3-segunda-ronda-sab-spo",
-       "t": "CE Sabadell – Real Sporting · confirmado"
-      },
-      {
-       "id": "2627-3-segunda-ronda-cultural-leonesa-cas",
-       "t": "Cultural Leonesa – CD Castellón · confirmado"
-      },
-      {
-       "id": "2627-3-segunda-ronda-eld-ten",
-       "t": "CD Eldense – CD Tenerife · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-5-15-mirandes-cd-extremadura",
-       "t": "Mirandés – CD Extremadura (1ª RFEF)"
       }
      ]
     }
