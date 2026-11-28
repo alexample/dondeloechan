@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T15:07:48+01:00",
+ "actualizado": "2026-11-28T16:07:43+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20376,7 +20376,23 @@
     "mliga",
     "mliga2"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "72'",
+     "seg": 4270,
+     "j": "Jorge de Frutos",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-16-lpa-and",
@@ -20391,7 +20407,59 @@
     "hyper",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    4,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "7'",
+     "seg": 376,
+     "j": "Moró Sidibe",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2856,
+     "j": "Manu Fuster",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "63'",
+     "seg": 3769,
+     "j": "Valentín Pezzolesi",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "74'",
+     "seg": 4412,
+     "j": "Jefté",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "80'",
+     "seg": 4791,
+     "j": "Taisei Miyashiro",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-14-mal-ath",
@@ -22342,11 +22410,11 @@
      "bet",
      14,
      8,
-     4,
-     2,
+     3,
+     3,
      21,
-     16,
-     28
+     17,
+     27
     ],
     [
      "rso",
@@ -22429,6 +22497,16 @@
      15
     ],
     [
+     "ray",
+     13,
+     4,
+     3,
+     6,
+     16,
+     22,
+     15
+    ],
+    [
      "osa",
      13,
      4,
@@ -22446,16 +22524,6 @@
      4,
      11,
      12,
-     13
-    ],
-    [
-     "ray",
-     13,
-     3,
-     4,
-     6,
-     15,
-     22,
      13
     ],
     [
@@ -22564,6 +22632,16 @@
      27
     ],
     [
+     "lpa",
+     16,
+     8,
+     2,
+     6,
+     25,
+     23,
+     26
+    ],
+    [
      "mll",
      14,
      6,
@@ -22591,16 +22669,6 @@
      6,
      28,
      25,
-     23
-    ],
-    [
-     "lpa",
-     16,
-     7,
-     2,
-     7,
-     21,
-     23,
      23
     ],
     [
@@ -22694,16 +22762,6 @@
      14
     ],
     [
-     "and",
-     15,
-     4,
-     2,
-     9,
-     20,
-     27,
-     14
-    ],
-    [
      "rsb",
      15,
      3,
@@ -22722,6 +22780,16 @@
      14,
      25,
      13
+    ],
+    [
+     "and",
+     15,
+     3,
+     2,
+     10,
+     20,
+     31,
+     11
     ],
     [
      "ceu",
@@ -23139,7 +23207,7 @@
   "5": {
    "grupos": {
     "Grupo 1": {
-     "tras": "Jornada 14",
+     "tras": "Jornada 13",
      "filas": [
       [
        "cd-lugo",
@@ -23208,6 +23276,17 @@
        "Pontevedra"
       ],
       [
+       "ponferradina",
+       14,
+       5,
+       6,
+       3,
+       12,
+       11,
+       21,
+       "Ponferradina"
+      ],
+      [
        "merida",
        13,
        6,
@@ -23239,17 +23318,6 @@
        12,
        18,
        "Barakaldo CF"
-      ],
-      [
-       "ponferradina",
-       13,
-       4,
-       6,
-       3,
-       10,
-       10,
-       18,
-       "Ponferradina"
       ],
       [
        "cp-cacereno",
@@ -23297,12 +23365,12 @@
       ],
       [
        "cd-coria",
-       13,
+       14,
        4,
        4,
-       5,
-       21,
+       6,
        22,
+       24,
        16,
        "CD Coria"
       ],
@@ -23993,9 +24061,46 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-28T15:07:48+01:00",
-  "cambio": "2026-11-28T15:07:48+01:00",
+  "comprobado": "2026-11-28T16:07:43+01:00",
+  "cambio": "2026-11-28T16:07:43+01:00",
   "historial": [
+   {
+    "hora": "2026-11-28T16:07:43+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 2,
+    "tablas": [
+     "Primera",
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Resultado: Real Betis 0-1 Rayo Vallecano",
+     "Resultado: UD Las Palmas 4-1 FC Andorra"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-14-bet-ray",
+       "t": "Real Betis 0-1 Rayo Vallecano"
+      },
+      {
+       "id": "2627-2-16-lpa-and",
+       "t": "UD Las Palmas 4-1 FC Andorra"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-28T15:07:48+01:00",
     "nuevos": 0,
@@ -24587,41 +24692,6 @@
      "canales": [],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-27T19:07:48+01:00",
-    "nuevos": 1,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [
-     "Nuevo partido: Córdoba CF – UD Las Palmas",
-     "Canal confirmado: UE Sant Andreu – SD Eibar"
-    ],
-    "avisos": 14,
-    "items": {
-     "resultados": [],
-     "canales": [
-      {
-       "id": "2627-2-17-cor-lpa",
-       "t": "Córdoba CF – UD Las Palmas"
-      },
-      {
-       "id": "2627-3-segunda-ronda-ue-sant-andreu-eib",
-       "t": "UE Sant Andreu – SD Eibar · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-2-17-cor-lpa",
-       "t": "Córdoba CF – UD Las Palmas (Segunda)"
-      }
-     ]
     }
    }
   ]
