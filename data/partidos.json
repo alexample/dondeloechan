@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T19:07:40+01:00",
+ "actualizado": "2026-11-28T19:55:40+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20697,7 +20697,6 @@
    "localAbbr": "ALG",
    "visitanteAbbr": "HUE",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     0,
     2
@@ -20741,7 +20740,6 @@
    "localAbbr": "JAE",
    "visitanteAbbr": "AGU",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     4,
     2
@@ -20821,7 +20819,6 @@
    "localAbbr": "IBI",
    "visitanteAbbr": "ATM",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     3,
     0
@@ -20910,7 +20907,6 @@
    "localAbbr": "UNI",
    "visitanteAbbr": "FAB",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
    "marcador": [
     2,
     1
@@ -22772,8 +22768,8 @@
      11,
      1,
      2,
-     28,
-     11,
+     29,
+     12,
      34
     ],
     [
@@ -22942,8 +22938,8 @@
      2,
      5,
      7,
-     16,
-     23,
+     17,
+     24,
      11
     ],
     [
@@ -22997,7 +22993,7 @@
      8,
      3,
      4,
-     24,
+     26,
      17,
      27
     ],
@@ -23018,7 +23014,7 @@
      3,
      5,
      21,
-     18,
+     20,
      27
     ],
     [
@@ -24441,9 +24437,33 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-28T19:07:40+01:00",
-  "cambio": "2026-11-28T19:07:40+01:00",
+  "comprobado": "2026-11-28T19:55:40+01:00",
+  "cambio": "2026-11-28T19:55:40+01:00",
   "historial": [
+   {
+    "hora": "2026-11-28T19:55:40+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [
+     "Primera",
+     "Segunda"
+    ],
+    "detalle": [],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-28T19:07:40+01:00",
     "nuevos": 2,
@@ -25050,30 +25070,6 @@
        "t": "Hércules 0-1 Antequera"
       }
      ],
-     "canales": [
-      {
-       "id": "2627-1-15-sev-mal",
-       "t": "Sevilla FC – Málaga CF"
-      }
-     ],
-     "horas": [],
-     "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-27T22:07:47+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 2,
-    "resultados": 0,
-    "tablas": [
-     "Primera",
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 14,
-    "items": {
-     "resultados": [],
      "canales": [
       {
        "id": "2627-1-15-sev-mal",
