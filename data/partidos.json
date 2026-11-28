@@ -23941,9 +23941,30 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-28T08:07:42+01:00",
+  "comprobado": "2026-11-28T09:07:44+01:00",
   "cambio": "2026-11-28T07:07:45+01:00",
   "historial": [
+   {
+    "hora": "2026-11-28T09:07:44+01:00",
+    "nuevos": 0,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 0,
+    "tablas": [],
+    "detalle": [],
+    "avisos": 1,
+    "items": {
+     "resultados": [],
+     "canales": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF"
+      }
+     ],
+     "horas": [],
+     "nuevos": []
+    }
+   },
    {
     "hora": "2026-11-28T08:07:42+01:00",
     "nuevos": 0,
@@ -24560,24 +24581,6 @@
        "t": "Atlético Madrileño – Rayo Majadahonda (1ª RFEF)"
       }
      ]
-    }
-   },
-   {
-    "hora": "2026-11-27T11:07:46+01:00",
-    "nuevos": 0,
-    "horas": 0,
-    "canales": 0,
-    "resultados": 0,
-    "tablas": [
-     "Primera Federación"
-    ],
-    "detalle": [],
-    "avisos": 14,
-    "items": {
-     "resultados": [],
-     "canales": [],
-     "horas": [],
-     "nuevos": []
     }
    }
   ]
