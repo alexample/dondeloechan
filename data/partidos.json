@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T18:07:41+01:00",
+ "actualizado": "2026-11-28T19:07:40+01:00",
  "partidos": [
   {
    "id": "2627-2-10-leg-cor",
@@ -20474,7 +20474,77 @@
     "daznll",
     "daznfree"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    3,
+    4
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "27'",
+     "seg": 1588,
+     "j": "Oihan Sancet",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "34'",
+     "seg": 1993,
+     "j": "Álex Berenguer",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "36'",
+     "seg": 2143,
+     "j": "Jens Cajuste",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "38'",
+     "seg": 2222,
+     "j": "Nico Williams",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "44'",
+     "seg": 2622,
+     "j": "Hugo Rincón",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "49'",
+     "seg": 2920,
+     "j": "Adrián Niño",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4900,
+     "j": "Adrián Niño",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-2-16-alb-ten",
@@ -20527,7 +20597,12 @@
      "pen": false,
      "pp": false
     }
-   ]
+   ],
+   "marcador": [
+    4,
+    0
+   ],
+   "estado": "final"
   },
   {
    "id": "2627-2-16-eld-gir",
@@ -20542,7 +20617,68 @@
     "hyper2",
     "daznhm"
    ],
-   "provisional": false
+   "provisional": false,
+   "marcador": [
+    3,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "2'",
+     "seg": 90,
+     "j": "Vladyslav Vanat",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "9'",
+     "seg": 488,
+     "j": "Roberto López",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "25'",
+     "seg": 1483,
+     "j": "Oleksandr Pishchur",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "36'",
+     "seg": 2159,
+     "j": "Roberto López",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "47'",
+     "seg": 2770,
+     "j": "Manuel Nieto",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5218,
+     "j": "Álex Moreno",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-14-algeciras-cf-sd-huesca",
@@ -20561,7 +20697,32 @@
    "localAbbr": "ALG",
    "visitanteAbbr": "HUE",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    0,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "48'",
+     "seg": 2880,
+     "j": "Diego Gómez",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "50'",
+     "seg": 3000,
+     "j": "Douglas Aurélio",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-14-real-jaen-aguilas-fc",
@@ -20580,7 +20741,68 @@
    "localAbbr": "JAE",
    "visitanteAbbr": "AGU",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    4,
+    2
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "10'",
+     "seg": 600,
+     "j": "Marco Siverio",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "39'",
+     "seg": 2340,
+     "j": "Fromsa",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3600,
+     "j": "Josema Raigal",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "71'",
+     "seg": 4260,
+     "j": "Moha Keita",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+4'",
+     "seg": 5424,
+     "j": "Moha Keita",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+6'",
+     "seg": 5436,
+     "j": "Marco Siverio",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-14-ud-ibiza-atletico-madrileno",
@@ -20599,7 +20821,41 @@
    "localAbbr": "IBI",
    "visitanteAbbr": "ATM",
    "etiqueta": "Grupo 2",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    3,
+    0
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "1'",
+     "seg": 60,
+     "j": "Iker Varela",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "60'",
+     "seg": 3600,
+     "j": "David García",
+     "lado": "L",
+     "pen": false,
+     "pp": true
+    },
+    {
+     "t": "g",
+     "min": "90+6'",
+     "seg": 5436,
+     "j": "Javier Eslava",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-14-ud-logrones-barakaldo-cf",
@@ -20619,7 +20875,23 @@
    "provisional": false,
    "localAbbr": "LOG",
    "visitanteAbbr": "BAR",
-   "etiqueta": "Grupo 1"
+   "etiqueta": "Grupo 1",
+   "marcador": [
+    0,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "82'",
+     "seg": 4920,
+     "j": "Xemi",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-5-14-unionistas-de-salamanca-deportivo-fabril",
@@ -20638,7 +20910,50 @@
    "localAbbr": "UNI",
    "visitanteAbbr": "FAB",
    "etiqueta": "Grupo 1",
-   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago)."
+   "nota": "No está entre los 10 de Movistar Plus+ y DAZN: solo se puede ver en FANPLAY TV o FootballClub (de pago).",
+   "marcador": [
+    2,
+    1
+   ],
+   "estado": "final",
+   "goles": [
+    {
+     "t": "g",
+     "min": "37'",
+     "seg": 2220,
+     "j": "Pau Ferrer",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "r",
+     "min": "66'",
+     "seg": 3960,
+     "j": "Rubén López",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "87'",
+     "seg": 5220,
+     "j": "Mikel Serrano",
+     "lado": "L",
+     "pen": false,
+     "pp": false
+    },
+    {
+     "t": "g",
+     "min": "90+1'",
+     "seg": 5406,
+     "j": "Martín Ochoa",
+     "lado": "V",
+     "pen": false,
+     "pp": false
+    }
+   ]
   },
   {
    "id": "2627-1-14-elc-atm",
@@ -22341,6 +22656,33 @@
    "provisional": true
   },
   {
+   "id": "2627-4-fase-liga-j6-viking-feyenoord",
+   "liga": 4,
+   "jornada": "Fase liga · J6",
+   "inicio": "2026-12-08T18:45:00+01:00",
+   "local": "Viking",
+   "localId": "viking",
+   "visitante": "Feyenoord",
+   "visitanteId": "feyenoord",
+   "canales": [],
+   "provisional": true,
+   "localAbbr": "VIK",
+   "visitanteAbbr": "FEY"
+  },
+  {
+   "id": "2627-4-fase-liga-j6-vil-sabah",
+   "liga": 4,
+   "jornada": "Fase liga · J6",
+   "inicio": "2026-12-08T18:45:00+01:00",
+   "local": "Villarreal CF",
+   "localId": "vil",
+   "visitante": "Sabah",
+   "visitanteId": "sabah",
+   "canales": [],
+   "provisional": true,
+   "visitanteAbbr": "SBH"
+  },
+  {
    "id": "2627-2-13-and-mll",
    "liga": 2,
    "jornada": "13",
@@ -22425,6 +22767,16 @@
      36
     ],
     [
+     "atm",
+     14,
+     11,
+     1,
+     2,
+     28,
+     11,
+     34
+    ],
+    [
      "rma",
      13,
      11,
@@ -22433,16 +22785,6 @@
      33,
      11,
      33
-    ],
-    [
-     "atm",
-     13,
-     10,
-     1,
-     2,
-     26,
-     10,
-     31
     ],
     [
      "bet",
@@ -22596,12 +22938,12 @@
     ],
     [
      "elc",
-     13,
+     14,
      2,
      5,
-     6,
-     15,
-     21,
+     7,
+     16,
+     23,
      11
     ],
     [
@@ -22645,7 +22987,17 @@
      8,
      3,
      5,
-     27,
+     28,
+     17,
+     27
+    ],
+    [
+     "eib",
+     15,
+     8,
+     3,
+     4,
+     24,
      17,
      27
     ],
@@ -22661,12 +23013,12 @@
     ],
     [
      "bur",
-     15,
+     16,
      8,
      3,
-     4,
+     5,
      21,
-     17,
+     18,
      27
     ],
     [
@@ -22687,16 +23039,6 @@
      2,
      18,
      10,
-     24
-    ],
-    [
-     "eib",
-     14,
-     7,
-     3,
-     4,
-     23,
-     17,
      24
     ],
     [
@@ -22746,7 +23088,7 @@
      2,
      8,
      18,
-     22,
+     23,
      20
     ],
     [
@@ -23260,12 +23602,12 @@
       ],
       [
        "ud-logrones",
-       13,
+       14,
        8,
        3,
-       2,
+       3,
        26,
-       16,
+       17,
        27,
        "UD Logroñés"
       ],
@@ -23290,6 +23632,17 @@
        18,
        21,
        "Real Avilés Industrial"
+      ],
+      [
+       "barakaldo-cf",
+       14,
+       5,
+       6,
+       3,
+       14,
+       12,
+       21,
+       "Barakaldo CF"
       ],
       [
        "racing-ferrol",
@@ -23347,17 +23700,6 @@
        "Mirandés"
       ],
       [
-       "barakaldo-cf",
-       13,
-       4,
-       6,
-       3,
-       13,
-       12,
-       18,
-       "Barakaldo CF"
-      ],
-      [
        "cp-cacereno",
        13,
        5,
@@ -23413,6 +23755,17 @@
        "CD Coria"
       ],
       [
+       "unionistas-de-salamanca",
+       14,
+       5,
+       1,
+       8,
+       17,
+       24,
+       16,
+       "Unionistas de Salamanca"
+      ],
+      [
        "zamora",
        13,
        3,
@@ -23425,25 +23778,14 @@
       ],
       [
        "deportivo-fabril",
-       13,
+       14,
        3,
        4,
-       6,
-       17,
-       24,
+       7,
+       18,
+       26,
        13,
        "Deportivo Fabril"
-      ],
-      [
-       "unionistas-de-salamanca",
-       13,
-       4,
-       1,
-       8,
-       15,
-       23,
-       13,
-       "Unionistas de Salamanca"
       ],
       [
        "arenas-club",
@@ -23495,6 +23837,17 @@
        "Alcorcón"
       ],
       [
+       "ud-ibiza",
+       14,
+       7,
+       3,
+       4,
+       25,
+       15,
+       24,
+       "UD Ibiza"
+      ],
+      [
        "villarreal-b",
        13,
        6,
@@ -23528,15 +23881,15 @@
        "Cartagena"
       ],
       [
-       "ud-ibiza",
-       13,
+       "real-jaen",
+       14,
        6,
-       3,
        4,
+       4,
+       25,
+       25,
        22,
-       15,
-       21,
-       "UD Ibiza"
+       "Real Jaén"
       ],
       [
        "hercules",
@@ -23572,35 +23925,35 @@
        "Real Madrid Castilla"
       ],
       [
-       "real-jaen",
-       13,
-       5,
+       "sd-huesca",
+       14,
        4,
+       6,
        4,
-       21,
-       23,
-       19,
-       "Real Jaén"
+       15,
+       18,
+       18,
+       "SD Huesca"
       ],
       [
        "algeciras-cf",
-       13,
+       14,
        5,
        2,
-       6,
+       7,
        18,
-       19,
+       21,
        17,
        "Algeciras CF"
       ],
       [
        "atletico-madrileno",
-       13,
+       14,
        4,
        5,
-       4,
+       5,
        23,
-       20,
+       23,
        17,
        "Atlético Madrileño"
       ],
@@ -23627,17 +23980,6 @@
        "Gimnàstic de Tarragona"
       ],
       [
-       "sd-huesca",
-       13,
-       3,
-       6,
-       4,
-       13,
-       18,
-       15,
-       "SD Huesca"
-      ],
-      [
        "ce-europa",
        13,
        4,
@@ -23650,12 +23992,12 @@
       ],
       [
        "aguilas-fc",
-       13,
+       14,
        2,
        6,
-       5,
-       11,
-       18,
+       6,
+       13,
+       22,
        12,
        "Águilas FC"
       ],
@@ -24099,9 +24441,87 @@
   }
  },
  "robot": {
-  "comprobado": "2026-11-28T18:07:41+01:00",
-  "cambio": "2026-11-28T18:07:41+01:00",
+  "comprobado": "2026-11-28T19:07:40+01:00",
+  "cambio": "2026-11-28T19:07:40+01:00",
   "historial": [
+   {
+    "hora": "2026-11-28T19:07:40+01:00",
+    "nuevos": 2,
+    "horas": 0,
+    "canales": 2,
+    "resultados": 8,
+    "tablas": [
+     "Primera",
+     "Segunda",
+     "Primera Federación"
+    ],
+    "detalle": [
+     "Nuevo partido: Villarreal CF – Sabah",
+     "Nuevo partido: Viking – Feyenoord",
+     "Resultado: Málaga CF 3-4 Athletic Club",
+     "Resultado: Albacete BP 4-0 CD Tenerife",
+     "Resultado: CD Eldense 3-2 Girona FC",
+     "Resultado: UD Logroñés 0-1 Barakaldo CF",
+     "Resultado: Unionistas de Salamanca 2-1 Deportivo Fabril",
+     "Resultado: Algeciras CF 0-2 SD Huesca",
+     "Resultado: UD Ibiza 3-0 Atlético Madrileño",
+     "Resultado: Real Jaén 4-2 Águilas FC"
+    ],
+    "avisos": 1,
+    "items": {
+     "resultados": [
+      {
+       "id": "2627-1-14-mal-ath",
+       "t": "Málaga CF 3-4 Athletic Club"
+      },
+      {
+       "id": "2627-2-16-alb-ten",
+       "t": "Albacete BP 4-0 CD Tenerife"
+      },
+      {
+       "id": "2627-2-16-eld-gir",
+       "t": "CD Eldense 3-2 Girona FC"
+      },
+      {
+       "id": "2627-5-14-ud-logrones-barakaldo-cf",
+       "t": "UD Logroñés 0-1 Barakaldo CF"
+      },
+      {
+       "id": "2627-5-14-unionistas-de-salamanca-deportivo-fabril",
+       "t": "Unionistas de Salamanca 2-1 Deportivo Fabril"
+      },
+      {
+       "id": "2627-5-14-algeciras-cf-sd-huesca",
+       "t": "Algeciras CF 0-2 SD Huesca"
+      },
+      {
+       "id": "2627-5-14-ud-ibiza-atletico-madrileno",
+       "t": "UD Ibiza 3-0 Atlético Madrileño"
+      },
+      {
+       "id": "2627-5-14-real-jaen-aguilas-fc",
+       "t": "Real Jaén 4-2 Águilas FC"
+      }
+     ],
+     "canales": [
+      {
+       "id": "2627-1-15-sev-mal",
+       "t": "Sevilla FC – Málaga CF"
+      }
+     ],
+     "horas": [],
+     "nuevos": [
+      {
+       "id": "2627-4-fase-liga-j6-vil-sabah",
+       "t": "Villarreal CF – Sabah (Champions)"
+      },
+      {
+       "id": "2627-4-fase-liga-j6-viking-feyenoord",
+       "t": "Viking – Feyenoord (Champions)"
+      }
+     ]
+    }
+   },
    {
     "hora": "2026-11-28T18:07:41+01:00",
     "nuevos": 0,
@@ -24662,57 +25082,6 @@
      ],
      "horas": [],
      "nuevos": []
-    }
-   },
-   {
-    "hora": "2026-11-27T21:07:46+01:00",
-    "nuevos": 2,
-    "horas": 0,
-    "canales": 4,
-    "resultados": 1,
-    "tablas": [
-     "Primera",
-     "Segunda"
-    ],
-    "detalle": [
-     "Nuevo partido: Sevilla FC – Málaga CF",
-     "Nuevo partido: Real Zaragoza – Águilas FC",
-     "Canal confirmado: Rayo Majadahonda – RCD Mallorca",
-     "Resultado: Bilbao Athletic 1-0 Cultural Leonesa"
-    ],
-    "avisos": 1,
-    "items": {
-     "resultados": [
-      {
-       "id": "2627-5-14-bilbao-athletic-cultural-leonesa",
-       "t": "Bilbao Athletic 1-0 Cultural Leonesa"
-      }
-     ],
-     "canales": [
-      {
-       "id": "2627-1-15-sev-mal",
-       "t": "Sevilla FC – Málaga CF"
-      },
-      {
-       "id": "2627-5-15-real-zaragoza-aguilas-fc",
-       "t": "Real Zaragoza – Águilas FC"
-      },
-      {
-       "id": "2627-3-segunda-ronda-rayo-majadahonda-mll",
-       "t": "Rayo Majadahonda – RCD Mallorca · confirmado"
-      }
-     ],
-     "horas": [],
-     "nuevos": [
-      {
-       "id": "2627-1-15-sev-mal",
-       "t": "Sevilla FC – Málaga CF (Primera)"
-      },
-      {
-       "id": "2627-5-15-real-zaragoza-aguilas-fc",
-       "t": "Real Zaragoza – Águilas FC (1ª RFEF)"
-      }
-     ]
     }
    }
   ]
